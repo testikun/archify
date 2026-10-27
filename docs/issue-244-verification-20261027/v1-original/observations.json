@@ -1,0 +1,3702 @@
+{
+  "environment": {
+    "rendererSha": "2bfb47132c057195d8dddb3e25ae966dd7c7a72e",
+    "version": "2.16.0",
+    "node": "v20.20.2",
+    "viewport": "1440x900 @1",
+    "input": "native CDP pointer and Tab; original issue JSON unchanged",
+    "browser": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.48",
+      "revision": "@d0c02bfad08ec92a6ffcf989e53cd995e6381a4c",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.19"
+    }
+  },
+  "records": [
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "read",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases"
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "node-hover",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "a"
+      },
+      "focus": null,
+      "intent": "a",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "node-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "a"
+      },
+      "focus": null,
+      "intent": "a",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "relationship-hover",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "relationship-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "committed-focus",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(0px, 0px) scale(1.9); clip-path: inset(0px 637.579px 429.158px 0px);",
+        "data-focus-active": "a"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "reach-downstream",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "2.15",
+        "style": "transform: translate(0px, -46.3641px) scale(2.15); clip-path: inset(21.565px 719.953px 463.04px 0px);",
+        "data-focus-active": "a",
+        "data-reach-active": "downstream"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": {
+        "direction": "downstream",
+        "originId": "a",
+        "nodeIds": [
+          "a",
+          "b"
+        ],
+        "edgeKeys": [
+          "0"
+        ],
+        "maxDepth": 1
+      },
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": "",
+            "data-reach-match": "",
+            "data-reach-depth": "0",
+            "data-reach-origin": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-reach-match": "",
+            "data-reach-depth": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "dark",
+      "scenario": "focus-url",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-focus-active": "a",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(0px, 0px) scale(1.9); clip-path: inset(0px 637.579px 429.158px 0px);"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "read",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases"
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "node-hover",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "a"
+      },
+      "focus": null,
+      "intent": "a",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "node-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "a"
+      },
+      "focus": null,
+      "intent": "a",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "relationship-hover",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "relationship-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "committed-focus",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(0px, 0px) scale(1.9); clip-path: inset(0px 637.579px 429.158px 0px);",
+        "data-focus-active": "a"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "reach-downstream",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "2.15",
+        "style": "transform: translate(0px, -46.3641px) scale(2.15); clip-path: inset(21.565px 719.953px 463.04px 0px);",
+        "data-focus-active": "a",
+        "data-reach-active": "downstream"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": {
+        "direction": "downstream",
+        "originId": "a",
+        "nodeIds": [
+          "a",
+          "b"
+        ],
+        "edgeKeys": [
+          "0"
+        ],
+        "maxDepth": 1
+      },
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": "",
+            "data-reach-match": "",
+            "data-reach-depth": "0",
+            "data-reach-origin": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-reach-match": "",
+            "data-reach-depth": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 243,
+      "theme": "light",
+      "scenario": "focus-url",
+      "svg": {
+        "viewBox": "0 0 980 660",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-focus-active": "a",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(0px, 0px) scale(1.9); clip-path: inset(0px 637.579px 429.158px 0px);"
+      },
+      "focus": "a",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 286 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 286 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 132,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-a",
+            "data-node-id": "a",
+            "data-node-label": "A",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus A, Phases",
+            "aria-pressed": "true",
+            "data-node-kind": "start",
+            "data-node-context": "Phases",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "b",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-b",
+            "data-node-id": "b",
+            "data-node-label": "B",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus B, Phases",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Phases",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "a",
+          "to": "b",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "read",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "node-hover",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "reviewing"
+      },
+      "focus": null,
+      "intent": "reviewing",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "node-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "reviewing"
+      },
+      "focus": null,
+      "intent": "reviewing",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "relationship-hover",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "relationship-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "committed-focus",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(-587.438px, -221.077px) scale(1.9); clip-path: inset(116.356px 313.243px 243.17px 309.178px);",
+        "data-focus-active": "reviewing"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "reach-downstream",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "2.04",
+        "style": "transform: translate(-691.808px, -264.446px) scale(2.04); clip-path: inset(129.63px 330.761px 257.311px 339.121px);",
+        "data-focus-active": "reviewing",
+        "data-reach-active": "downstream"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": {
+        "direction": "downstream",
+        "originId": "reviewing",
+        "nodeIds": [
+          "reviewing",
+          "blocked"
+        ],
+        "edgeKeys": [
+          "0"
+        ],
+        "maxDepth": 1
+      },
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": "",
+            "data-reach-match": "",
+            "data-reach-depth": "0",
+            "data-reach-origin": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": "",
+            "data-reach-match": "",
+            "data-reach-depth": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "dark",
+      "scenario": "focus-url",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-focus-active": "reviewing",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(-592.618px, -222.437px) scale(1.9); clip-path: inset(117.072px 314.78px 244.823px 311.904px);"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "read",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "node-hover",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "reviewing"
+      },
+      "focus": null,
+      "intent": "reviewing",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "node-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-intent-trace-active": "reviewing"
+      },
+      "focus": null,
+      "intent": "reviewing",
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-intent-trace-match": "",
+            "data-intent-trace-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.2",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-intent-trace-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "relationship-hover",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "relationship-keyboard",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1",
+        "style": "transform: translate(0px, 0px) scale(1);",
+        "data-relationship-preview-active": "0",
+        "data-relationship-direct-active": "0"
+      },
+      "focus": null,
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-source": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.16",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-relationship-preview-node": "",
+            "data-relationship-preview-target": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "committed-focus",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(-587.438px, -221.077px) scale(1.9); clip-path: inset(116.356px 313.243px 243.17px 309.178px);",
+        "data-focus-active": "reviewing"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "reach-downstream",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-view-scale": "2.04",
+        "style": "transform: translate(-691.808px, -264.446px) scale(2.04); clip-path: inset(129.63px 330.761px 257.311px 339.121px);",
+        "data-focus-active": "reviewing",
+        "data-reach-active": "downstream"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": {
+        "direction": "downstream",
+        "originId": "reviewing",
+        "nodeIds": [
+          "reviewing",
+          "blocked"
+        ],
+        "edgeKeys": [
+          "0"
+        ],
+        "maxDepth": 1
+      },
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": "",
+            "data-reach-match": "",
+            "data-reach-depth": "0",
+            "data-reach-origin": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.09",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": "",
+            "data-reach-match": "",
+            "data-reach-depth": "1"
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    },
+    {
+      "number": 244,
+      "theme": "light",
+      "scenario": "focus-url",
+      "svg": {
+        "viewBox": "0 0 980 566",
+        "role": "img",
+        "lang": "en",
+        "aria-labelledby": "archify-diagram-title archify-diagram-description",
+        "data-preset": "classic",
+        "data-quality-profile": "showcase",
+        "data-focus-active": "reviewing",
+        "data-view-scale": "1.9",
+        "style": "transform: translate(-592.618px, -222.437px) scale(1.9); clip-path: inset(117.072px 314.78px 244.823px 311.904px);"
+      },
+      "focus": "reviewing",
+      "intent": null,
+      "reach": null,
+      "rail": {
+        "markup": "<path d=\"M 154 157 L 748 157\" class=\"a-emphasis\" stroke-width=\"2.2\" marker-end=\"url(#arrowhead-emphasis)\"></path>",
+        "attrs": {
+          "d": "M 154 157 L 748 157",
+          "class": "a-emphasis",
+          "stroke-width": "2.2",
+          "marker-end": "url(#arrowhead-emphasis)"
+        },
+        "opacity": "1",
+        "display": "inline",
+        "visibility": "visible",
+        "bbox": {
+          "x": 154,
+          "y": 157,
+          "width": 594,
+          "height": 0
+        }
+      },
+      "nodes": [
+        {
+          "id": "queued",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-queued",
+            "data-node-id": "queued",
+            "data-node-label": "Queued",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Queued, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "start",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "planning",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-planning",
+            "data-node-id": "planning",
+            "data-node-label": "Planning",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Planning, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "executing",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-executing",
+            "data-node-id": "executing",
+            "data-node-label": "Executing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Executing, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "active",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "reviewing",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-reviewing",
+            "data-node-id": "reviewing",
+            "data-node-label": "Reviewing",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Reviewing, Main lifecycle",
+            "aria-pressed": "true",
+            "data-node-kind": "decision",
+            "data-node-context": "Main lifecycle",
+            "data-focus-match": "",
+            "data-focus-selected": ""
+          }
+        },
+        {
+          "id": "completed",
+          "opacity": "0.13",
+          "attrs": {
+            "id": "node-completed",
+            "data-node-id": "completed",
+            "data-node-label": "Completed",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Completed, Main lifecycle",
+            "aria-pressed": "false",
+            "data-node-kind": "success",
+            "data-node-context": "Main lifecycle"
+          }
+        },
+        {
+          "id": "blocked",
+          "opacity": "1",
+          "attrs": {
+            "id": "node-blocked",
+            "data-node-id": "blocked",
+            "data-node-label": "Blocked",
+            "tabindex": "0",
+            "role": "button",
+            "aria-label": "Focus Blocked, Interruptions",
+            "aria-pressed": "false",
+            "data-node-kind": "waiting",
+            "data-node-context": "Interruptions",
+            "data-focus-match": ""
+          }
+        }
+      ],
+      "edges": [
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        },
+        {
+          "from": "reviewing",
+          "to": "blocked",
+          "key": "0",
+          "opacity": "1"
+        }
+      ]
+    }
+  ]
+}

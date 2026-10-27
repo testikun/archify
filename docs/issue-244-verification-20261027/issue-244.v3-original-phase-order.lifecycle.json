@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Lifecycle Rail Interaction Reproduction",
+    "quality_profile": "showcase",
+    "output": "issue-244.v3.html"
+  },
+  "mainPath": [
+    "queued",
+    "planning",
+    "executing",
+    "reviewing",
+    "completed"
+  ],
+  "states": [
+    {
+      "id": "queued",
+      "type": "start",
+      "label": "Queued"
+    },
+    {
+      "id": "planning",
+      "type": "active",
+      "label": "Planning"
+    },
+    {
+      "id": "executing",
+      "type": "active",
+      "label": "Executing"
+    },
+    {
+      "id": "reviewing",
+      "type": "decision",
+      "label": "Reviewing"
+    },
+    {
+      "id": "completed",
+      "type": "success",
+      "label": "Completed"
+    },
+    {
+      "id": "blocked",
+      "type": "waiting",
+      "label": "Blocked"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "review-blocked",
+      "from": "reviewing",
+      "to": "blocked",
+      "label": "missing input"
+    }
+  ]
+}

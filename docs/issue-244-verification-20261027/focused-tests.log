@@ -1,0 +1,140 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/lifecycle-layout.test.mjs test/authored-reachability.test.mjs test/relationship-lens.test.mjs
+
+Repository tests: 3 files, concurrency 4
+TAP version 13
+# Subtest: authored reachability is available in every typed artifact without entering canonical SVG
+ok 1 - authored reachability is available in every typed artifact without entering canonical SVG
+  ---
+  duration_ms: 586.662792
+  ...
+# Subtest: reachability uses stable breadth-first depth, supports cycles, and deduplicates edge fragments
+ok 2 - reachability uses stable breadth-first depth, supports cycles, and deduplicates edge fragments
+  ---
+  duration_ms: 1.437458
+  ...
+# Subtest: reachability stays explicit, deep-linkable, keyboard reachable, and export-clean
+ok 3 - reachability stays explicit, deep-linkable, keyboard reachable, and export-clean
+  ---
+  duration_ms: 0.712708
+  ...
+# Subtest: bundled examples pass the showcase artifact check without crossings
+ok 4 - bundled examples pass the showcase artifact check without crossings
+  ---
+  duration_ms: 363.593709
+  ...
+# Subtest: a lower state aligns its eligible complete return-port group
+ok 5 - a lower state aligns its eligible complete return-port group
+  ---
+  duration_ms: 169.175791
+  ...
+# Subtest: main path is one row, loops arc above it and other states sit one row per step below
+ok 6 - main path is one row, loops arc above it and other states sit one row per step below
+  ---
+  duration_ms: 154.298041
+  ...
+# Subtest: an exit shared by consecutive phases leaves one composite frame
+ok 7 - an exit shared by consecutive phases leaves one composite frame
+  ---
+  duration_ms: 159.71575
+  ...
+# Subtest: an exit shared by non-consecutive phases uses a declared bus that passes the corridor gate
+ok 8 - an exit shared by non-consecutive phases uses a declared bus that passes the corridor gate
+  ---
+  duration_ms: 154.497625
+  ...
+# Subtest: parallel transitions between two neighbours each get their own lane
+ok 9 - parallel transitions between two neighbours each get their own lane
+  ---
+  duration_ms: 313.09925
+  ...
+# Subtest: a reciprocal pair still lands just above and below the shared edge
+ok 10 - a reciprocal pair still lands just above and below the shared edge
+  ---
+  duration_ms: 181.78875
+  ...
+# Subtest: dense neighbour transitions keep every label and note clear in its own lane
+ok 11 - dense neighbour transitions keep every label and note clear in its own lane
+  ---
+  duration_ms: 710.985458
+  ...
+# Subtest: one lower row accommodates the tallest of several parallel neighbour groups
+ok 12 - one lower row accommodates the tallest of several parallel neighbour groups
+  ---
+  duration_ms: 157.442041
+  ...
+# Subtest: more than five parallel transitions between neighbours are a typed error
+ok 13 - more than five parallel transitions between neighbours are a typed error
+  ---
+  duration_ms: 62.704083
+  ...
+# Subtest: exits to one target with different labels or variants stay separate connectors
+ok 14 - exits to one target with different labels or variants stay separate connectors
+  ---
+  duration_ms: 159.869
+  ...
+# Subtest: one eligible shared-exit subgroup preserves the independent note and every relationship
+ok 15 - one eligible shared-exit subgroup preserves the independent note and every relationship
+  ---
+  duration_ms: 147.625
+  ...
+# Subtest: multiple eligible shared-exit signatures fall back to complete independent connectors
+ok 16 - multiple eligible shared-exit signatures fall back to complete independent connectors
+  ---
+  duration_ms: 163.978083
+  ...
+# Subtest: the artifact checker flags identical overlapping lifecycle routes
+ok 17 - the artifact checker flags identical overlapping lifecycle routes
+  ---
+  duration_ms: 220.419
+  ...
+# Subtest: note-only transitions keep their text
+ok 18 - note-only transitions keep their text
+  ---
+  duration_ms: 145.221709
+  ...
+# Subtest: structure errors are typed diagnostics with fixes
+ok 19 - structure errors are typed diagnostics with fixes
+  ---
+  duration_ms: 129.338292
+  ...
+# Subtest: only states a reader should notice get a default corner sigil
+ok 20 - only states a reader should notice get a default corner sigil
+  ---
+  duration_ms: 160.502334
+  ...
+# Subtest: nodeLabelLayout reserves the source badge footprint on the right rail
+ok 21 - nodeLabelLayout reserves the source badge footprint on the right rail
+  ---
+  duration_ms: 0.344333
+  ...
+# Subtest: dense automatic exit notes pass public readability validation without losing authored content
+ok 22 - dense automatic exit notes pass public readability validation without losing authored content
+  ---
+  duration_ms: 409.522667
+  ...
+# Subtest: long transition notes are identified in width and placement diagnostics without discarding conditions
+ok 23 - long transition notes are identified in width and placement diagnostics without discarding conditions
+  ---
+  duration_ms: 120.8405
+  ...
+# Subtest: an inherently too-wide lifecycle reports its budget and bounded spacing advice
+ok 24 - an inherently too-wide lifecycle reports its budget and bounded spacing advice
+  ---
+  duration_ms: 134.136959
+  ...
+# Subtest: all typed renderers expose named, stable relationships without changing geometry
+ok 25 - all typed renderers expose named, stable relationships without changing geometry
+  ---
+  duration_ms: 590.504333
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 25
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4288.002584

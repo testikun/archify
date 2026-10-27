@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c36991bf-2a26-4ab3-bdf4-1dc9957c2e24",
+  "ok": true,
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-244.v3.lifecycle.json",
+  "output": "$EVIDENCE/issue-244.v3.html",
+  "specification": {
+    "sha256": "8a14bf9a3c2f85b6f9a4e66b7805be5cfc1ec0c26b265d688af46301d34f5c04",
+    "bytes": 941
+  },
+  "artifact": {
+    "sha256": "d114957155d94225c774167c0c363b90d81c48010a15e11040bd0c32255bd907",
+    "bytes": 857214
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

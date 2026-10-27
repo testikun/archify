@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-243.lifecycle.json",
+  "error": "lifecycle schema validation failed:\n  / must have required property 'mainPath' {\"missingProperty\":\"mainPath\"}\n  / must NOT have additional properties {\"additionalProperty\":\"lanes\"}\n  /schema_version must be equal to constant {\"allowedValue\":3}\n  /meta must have required property 'output' {\"missingProperty\":\"output\"}\n  /states/0 (id/label: \"a\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/0 (id/label: \"a\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/1 (id/label: \"b\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/1 (id/label: \"b\") must NOT have additional properties {\"additionalProperty\":\"col\"}",
+  "diagnostics": [
+    {
+      "code": "schema/required",
+      "severity": "error",
+      "message": "/ must have required property 'mainPath'",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/"
+      },
+      "evidence": {
+        "keyword": "required",
+        "missingProperty": "mainPath"
+      },
+      "supportedFixes": [
+        "add required property \"mainPath\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/ must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lanes"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lanes\""
+      ]
+    },
+    {
+      "code": "schema/const",
+      "severity": "error",
+      "message": "/schema_version must be equal to constant",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/schema_version"
+      },
+      "evidence": {
+        "keyword": "const",
+        "allowedValue": 3
+      },
+      "supportedFixes": []
+    },
+    {
+      "code": "schema/required",
+      "severity": "error",
+      "message": "/meta must have required property 'output'",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/meta"
+      },
+      "evidence": {
+        "keyword": "required",
+        "missingProperty": "output"
+      },
+      "supportedFixes": [
+        "add required property \"output\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/0 (id/label: \"a\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/0",
+        "identity": "a"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/0 (id/label: \"a\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/0",
+        "identity": "a"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/1 (id/label: \"b\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/1",
+        "identity": "b"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/1 (id/label: \"b\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/1",
+        "identity": "b"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "testedSha": "500d4a65211ffe607fde6b3ce7505027b45bb59e",
+  "runs": [
+    {
+      "name": "243-original-validate",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/issue-243.lifecycle.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 1
+    },
+    {
+      "name": "243-original-deliver",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/issue-243.lifecycle.json",
+        "$EVIDENCE/issue-243.original.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 1
+    },
+    {
+      "name": "243-v3-validate",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/issue-243.v3.lifecycle.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 0
+    },
+    {
+      "name": "243-v3-deliver",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/issue-243.v3.lifecycle.json",
+        "$EVIDENCE/issue-243.v3.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 0
+    },
+    {
+      "name": "244-original-validate",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/issue-244.lifecycle.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 1
+    },
+    {
+      "name": "244-original-deliver",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/issue-244.lifecycle.json",
+        "$EVIDENCE/issue-244.original.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 1
+    },
+    {
+      "name": "244-v3-validate",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/issue-244.v3.lifecycle.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 0
+    },
+    {
+      "name": "244-v3-deliver",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/issue-244.v3.lifecycle.json",
+        "$EVIDENCE/issue-244.v3.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 0
+    },
+    {
+      "name": "244-v3-original-phase-order-validate",
+      "executable": "node",
+      "args": [
+        "$DEV/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/issue-244.v3-original-phase-order.lifecycle.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$DEV",
+      "exitCode": 1
+    }
+  ]
+}

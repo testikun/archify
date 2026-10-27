@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Lifecycle Rail Interaction Reproduction",
+    "viewBox": [980, 566],
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    { "id": "main", "label": "Main lifecycle" },
+    { "id": "interruptions", "label": "Interruptions" }
+  ],
+  "states": [
+    { "id": "queued", "type": "start", "label": "Queued", "lane": "main", "col": 0 },
+    { "id": "planning", "type": "active", "label": "Planning", "lane": "main", "col": 1 },
+    { "id": "executing", "type": "active", "label": "Executing", "lane": "main", "col": 2 },
+    { "id": "reviewing", "type": "decision", "label": "Reviewing", "lane": "main", "col": 3 },
+    { "id": "completed", "type": "success", "label": "Completed", "lane": "main", "col": 4 },
+    { "id": "blocked", "type": "waiting", "label": "Blocked", "lane": "interruptions", "col": 1 }
+  ],
+  "transitions": [
+    {
+      "id": "review-blocked",
+      "from": "reviewing",
+      "to": "blocked",
+      "label": "missing input",
+      "route": "drop"
+    }
+  ]
+}

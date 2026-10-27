@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-244.lifecycle.json",
+  "output": "$EVIDENCE/v1-original/issue-244.html",
+  "specification": {
+    "sha256": "665e6a49a931ee515ee670fc42b69184adb5d5fae8e0819563b867650fe087aa",
+    "bytes": 1060
+  },
+  "artifact": {
+    "sha256": "070d14096060dafaae24eb278f29931ae9136591f473c30170024abda5b1ad17",
+    "bytes": 702417
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}
