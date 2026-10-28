@@ -1,0 +1,29 @@
+{
+  "origin": "Synthetic author-declared scenario inspired by issue 452 prose; not the reporter's real input or a captured execution trace.",
+  "scope": "One invocation of page's PDF ingest path; successful path only.",
+  "boundaries": {
+    "app": "Application",
+    "inference": "Inference provider",
+    "storage": "Storage services"
+  },
+  "components": [
+    {"id":"page","label":"Page handler","type":"backend","boundary":"app"},
+    {"id":"classify","label":"Classify API","type":"backend","boundary":"inference"},
+    {"id":"extract","label":"Extract API","type":"backend","boundary":"inference"},
+    {"id":"record","label":"Record DB","type":"database","boundary":"storage"},
+    {"id":"object","label":"Object store","type":"cloud","boundary":"storage"},
+    {"id":"store-a","label":"Store A","type":"database","boundary":"storage"},
+    {"id":"store-b","label":"Store B","type":"database","boundary":"storage"}
+  ],
+  "calls": [
+    {"id":"classify-call","from":"page","to":"classify","text":"classify PDF","stage":1},
+    {"id":"extract-call","from":"page","to":"extract","text":"extract PDF","stage":2},
+    {"id":"save-record","from":"page","to":"record","text":"save record","stage":3},
+    {"id":"upload-file","from":"page","to":"object","text":"upload file","stage":4},
+    {"id":"write-a","from":"page","to":"store-a","text":"write A","stage":5,"parallelGroup":"P","member":"a"},
+    {"id":"write-b","from":"page","to":"store-b","text":"write B","stage":5,"parallelGroup":"P","member":"b"}
+  ],
+  "stageMeaning": "Stages 1-4 complete before the next stage is invoked. After stage 4 completes, both members of P are launched as one parallel batch; no completion order, duration, exact simultaneous start, or relative causality is asserted for A and B.",
+  "scenarios": {"serial":[1,2,3],"parallel":[1,2,3,4,5]},
+  "notProductSchema": "stage/parallelGroup/member exist only in this research fact sheet, never in the Archify input schema."
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "title": "PDF ingest — parallel (synthetic)",
+    "subtitle": "Author-declared calls; no runtime measurements.",
+    "output": "parallel.html",
+    "quality_profile": "standard",
+    "visual_preset": "classic",
+    "viewBox": [
+      1260,
+      660
+    ]
+  },
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Author facts",
+      "items": [
+        "Synthetic successful path, not captured execution.",
+        "Each numbered stage completes before the next is invoked.",
+        "Parallel P starts after stage 4; A and B have no declared relative or completion order.",
+        "Component ownership: Application / Inference provider / Storage services."
+      ]
+    }
+  ],
+  "diagram_type": "sequence",
+  "participants": [
+    {
+      "id": "page",
+      "type": "backend",
+      "label": "Page handler",
+      "sublabel": "Application"
+    },
+    {
+      "id": "classify",
+      "type": "backend",
+      "label": "Classify API",
+      "sublabel": "Inference provider"
+    },
+    {
+      "id": "extract",
+      "type": "backend",
+      "label": "Extract API",
+      "sublabel": "Inference provider"
+    },
+    {
+      "id": "record",
+      "type": "database",
+      "label": "Record DB",
+      "sublabel": "Storage services"
+    },
+    {
+      "id": "object",
+      "type": "cloud",
+      "label": "Object store",
+      "sublabel": "Storage services"
+    },
+    {
+      "id": "store-a",
+      "type": "database",
+      "label": "Store A",
+      "sublabel": "Storage services"
+    },
+    {
+      "id": "store-b",
+      "type": "database",
+      "label": "Store B",
+      "sublabel": "Storage services"
+    }
+  ],
+  "messages": [
+    {
+      "id": "classify-call",
+      "from": "page",
+      "to": "classify",
+      "label": "1 · await classify PDF",
+      "y": 185
+    },
+    {
+      "id": "extract-call",
+      "from": "page",
+      "to": "extract",
+      "label": "2 · await extract PDF",
+      "y": 249
+    },
+    {
+      "id": "save-record",
+      "from": "page",
+      "to": "record",
+      "label": "3 · await save record",
+      "y": 313
+    },
+    {
+      "id": "upload-file",
+      "from": "page",
+      "to": "object",
+      "label": "4 · await upload file",
+      "y": 377
+    },
+    {
+      "id": "write-a",
+      "from": "page",
+      "to": "store-a",
+      "label": "5.a · write A",
+      "y": 441
+    },
+    {
+      "id": "write-b",
+      "from": "page",
+      "to": "store-b",
+      "label": "5.b · write B",
+      "y": 505
+    }
+  ],
+  "segments": []
+}

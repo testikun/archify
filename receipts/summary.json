@@ -1,0 +1,1059 @@
+{
+  "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e",
+  "environment": {
+    "environment": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.48",
+      "revision": "@d0c02bfad08ec92a6ffcf989e53cd995e6381a4c",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.19"
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1
+    },
+    "node": "v20.20.2",
+    "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e"
+  },
+  "cases": [
+    {
+      "name": "serial-architecture",
+      "nodeCount": 4,
+      "edgeCount": 3,
+      "viewBox": "0 0 856 495",
+      "screenEdgeFontPx": [
+        12,
+        12,
+        12
+      ],
+      "svgRect": {
+        "x": 78,
+        "y": 144.09375,
+        "width": 1284,
+        "height": 742.5
+      },
+      "phases": {
+        "default": {
+          "mode": "still",
+          "animations": 0
+        },
+        "live": {
+          "mode": "live",
+          "animations": 24
+        },
+        "still": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced-after-motion-click": {
+          "mode": "still",
+          "animations": 0
+        }
+      },
+      "focusMatches": [
+        "classify-call",
+        "extract-call",
+        "save-record"
+      ],
+      "focusedExportByteIdentical": true,
+      "pngSize": [
+        3840,
+        2692
+      ]
+    },
+    {
+      "name": "serial-sequence",
+      "nodeCount": 4,
+      "edgeCount": 3,
+      "viewBox": "0 0 800 480",
+      "screenEdgeFontPx": [
+        14.141015625000001,
+        14.141015625000001,
+        14.141015625000001
+      ],
+      "svgRect": {
+        "x": 91.5,
+        "y": 132.6875,
+        "width": 1257,
+        "height": 754.1875
+      },
+      "phases": {
+        "default": {
+          "mode": "still",
+          "animations": 0
+        },
+        "live": {
+          "mode": "live",
+          "animations": 24
+        },
+        "still": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced-after-motion-click": {
+          "mode": "still",
+          "animations": 0
+        }
+      },
+      "focusMatches": [
+        "classify-call",
+        "extract-call",
+        "save-record"
+      ],
+      "focusedExportByteIdentical": true,
+      "pngSize": [
+        3616,
+        2632
+      ]
+    },
+    {
+      "name": "parallel-architecture",
+      "nodeCount": 7,
+      "edgeCount": 6,
+      "viewBox": "0 0 856 825",
+      "screenEdgeFontPx": [
+        7.317727272727272,
+        7.317727272727272,
+        7.317727272727272,
+        7.317727272727272,
+        7.317727272727272,
+        7.317727272727272
+      ],
+      "svgRect": {
+        "x": 328.5,
+        "y": 132.6875,
+        "width": 783,
+        "height": 754.640625
+      },
+      "phases": {
+        "default": {
+          "mode": "still",
+          "animations": 0
+        },
+        "live": {
+          "mode": "live",
+          "animations": 45
+        },
+        "still": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced-after-motion-click": {
+          "mode": "still",
+          "animations": 0
+        }
+      },
+      "focusMatches": [
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b"
+      ],
+      "focusedExportByteIdentical": true,
+      "pngSize": [
+        3840,
+        4012
+      ]
+    },
+    {
+      "name": "parallel-sequence",
+      "nodeCount": 7,
+      "edgeCount": 6,
+      "viewBox": "0 0 1260 660",
+      "screenEdgeFontPx": [
+        9.614275568181819,
+        9.614275568181819,
+        9.614275568181819,
+        9.614275568181819,
+        9.614275568181819,
+        9.614275568181819
+      ],
+      "svgRect": {
+        "x": 47,
+        "y": 132.6875,
+        "width": 1346,
+        "height": 705.046875
+      },
+      "phases": {
+        "default": {
+          "mode": "still",
+          "animations": 0
+        },
+        "live": {
+          "mode": "live",
+          "animations": 45
+        },
+        "still": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced": {
+          "mode": "still",
+          "animations": 0
+        },
+        "reduced-after-motion-click": {
+          "mode": "still",
+          "animations": 0
+        }
+      },
+      "focusMatches": [
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b"
+      ],
+      "focusedExportByteIdentical": true,
+      "pngSize": [
+        4092,
+        2514
+      ]
+    }
+  ],
+  "exports": [
+    {
+      "file": "exports/ablation-architecture-no-cards.svg",
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/ablation-architecture-no-numbers.svg",
+      "sha256": "3a7995db66f482b8125f7d591909930f096297da18fd6e87328d18c20b082c2b",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/ablation-sequence-no-parallel-prose.svg",
+      "sha256": "8481718011b847774d6bc4cc69377060cf5693c1a2b9782536f7a1d765091f62",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/parallel-architecture-focused.svg",
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/parallel-architecture.svg",
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/parallel-sequence-focused.svg",
+      "sha256": "37ae3554388b6ee4c6bdab276ed9752511167b00fb47dcefd611513e34eb6ba1",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/parallel-sequence.svg",
+      "sha256": "37ae3554388b6ee4c6bdab276ed9752511167b00fb47dcefd611513e34eb6ba1",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/probe-retired-views.svg",
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/serial-architecture-focused.svg",
+      "sha256": "9be0eb9f9d5811146ae9e3ae19033a41100005f013f51bdb14e5cf0cf228d6e6",
+      "nodes": 4,
+      "edges": 3,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/serial-architecture.svg",
+      "sha256": "9be0eb9f9d5811146ae9e3ae19033a41100005f013f51bdb14e5cf0cf228d6e6",
+      "nodes": 4,
+      "edges": 3,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/serial-sequence-focused.svg",
+      "sha256": "da2966ce34907b5787f2f34f755ec7a123be6923b68bc85059b4ffb6c896064b",
+      "nodes": 4,
+      "edges": 3,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/serial-sequence.svg",
+      "sha256": "da2966ce34907b5787f2f34f755ec7a123be6923b68bc85059b4ffb6c896064b",
+      "nodes": 4,
+      "edges": 3,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/story-normal.svg",
+      "sha256": "a7df67da3ffa0aa68c1f6e1d76d388bb430977268f372fc5480c42f676d0eb14",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    },
+    {
+      "file": "exports/story-reduced.svg",
+      "sha256": "a7df67da3ffa0aa68c1f6e1d76d388bb430977268f372fc5480c42f676d0eb14",
+      "nodes": 7,
+      "edges": 6,
+      "runtimeElementLeaks": []
+    }
+  ],
+  "ablations": {
+    "ablation-architecture-no-cards": true,
+    "probe-retired-views": true
+  },
+  "story": [
+    {
+      "mode": "normal",
+      "displayStartTimesSeconds": {
+        "classify-call": 8.2,
+        "extract-call": 15.200000000000001,
+        "save-record": 22.2,
+        "upload-file": 29.2,
+        "write-a": 36.2,
+        "write-b": 36.2
+      },
+      "duration": 49.949999999999996,
+      "flowElements": 36,
+      "hiddenFlowElements": 0,
+      "nativeAnimationCount": 36,
+      "startedPlaying": true,
+      "canonicalExportBytesEqual": false,
+      "canonicalExportDifferenceIsStyleOnly": true
+    },
+    {
+      "mode": "reduced",
+      "displayStartTimesSeconds": {
+        "classify-call": 8.2,
+        "extract-call": 15.200000000000001,
+        "save-record": 22.2,
+        "upload-file": 29.2,
+        "write-a": 36.2,
+        "write-b": 36.2
+      },
+      "duration": 49.949999999999996,
+      "flowElements": 36,
+      "hiddenFlowElements": 36,
+      "nativeAnimationCount": 0,
+      "startedPlaying": true,
+      "canonicalExportBytesEqual": false,
+      "canonicalExportDifferenceIsStyleOnly": true
+    }
+  ],
+  "cli": {
+    "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e",
+    "time": "2026-10-28T02:15:03.000716+00:00",
+    "commands": [
+      {
+        "name": "ablation-architecture-no-cards.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-architecture-no-cards.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "architecture",
+          "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+          "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-architecture-no-cards.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-architecture-no-numbers.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-architecture-no-numbers.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "architecture",
+          "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+          "$EVIDENCE/artifacts/ablation-architecture-no-numbers.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-architecture-no-numbers.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/ablation-architecture-no-numbers.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-sequence-no-parallel-prose.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "sequence",
+          "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-sequence-no-parallel-prose.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "sequence",
+          "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+          "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "ablation-sequence-no-parallel-prose.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "control-architecture-reversed-array.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/control-architecture-reversed-array.json",
+          "--json"
+        ],
+        "exit": 1
+      },
+      {
+        "name": "parallel-architecture.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/parallel-architecture.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "parallel-architecture.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "architecture",
+          "$EVIDENCE/inputs/parallel-architecture.json",
+          "$EVIDENCE/artifacts/parallel-architecture.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "parallel-architecture.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/parallel-architecture.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "parallel-sequence.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "sequence",
+          "$EVIDENCE/inputs/parallel-sequence.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "parallel-sequence.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "sequence",
+          "$EVIDENCE/inputs/parallel-sequence.json",
+          "$EVIDENCE/artifacts/parallel-sequence.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "parallel-sequence.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/parallel-sequence.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "probe-retired-views.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/probe-retired-views.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "probe-retired-views.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "architecture",
+          "$EVIDENCE/inputs/probe-retired-views.json",
+          "$EVIDENCE/artifacts/probe-retired-views.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "probe-retired-views.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/probe-retired-views.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "probe-sequence-same-y.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "sequence",
+          "$EVIDENCE/inputs/probe-sequence-same-y.json",
+          "--json"
+        ],
+        "exit": 1
+      },
+      {
+        "name": "probe-unapproved-order.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/probe-unapproved-order.json",
+          "--json"
+        ],
+        "exit": 1
+      },
+      {
+        "name": "serial-architecture.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "architecture",
+          "$EVIDENCE/inputs/serial-architecture.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "serial-architecture.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "architecture",
+          "$EVIDENCE/inputs/serial-architecture.json",
+          "$EVIDENCE/artifacts/serial-architecture.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "serial-architecture.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/serial-architecture.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "serial-sequence.validate",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "validate",
+          "sequence",
+          "$EVIDENCE/inputs/serial-sequence.json",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "serial-sequence.deliver",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "deliver",
+          "sequence",
+          "$EVIDENCE/inputs/serial-sequence.json",
+          "$EVIDENCE/artifacts/serial-sequence.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "serial-sequence.check",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "check",
+          "$EVIDENCE/artifacts/serial-sequence.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "story-scan",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "story",
+          "scan",
+          "$EVIDENCE/artifacts/parallel-architecture.html",
+          "--json"
+        ],
+        "exit": 0
+      },
+      {
+        "name": "story-attach",
+        "command": [
+          "node",
+          "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+          "story",
+          "attach",
+          "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+          "$EVIDENCE/inputs/parallel-story-brief.json",
+          "$EVIDENCE/artifacts/parallel-story.html",
+          "--json"
+        ],
+        "exit": 0
+      }
+    ]
+  },
+  "probes": [
+    {
+      "environment": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/156.0.8078.48",
+        "revision": "@d0c02bfad08ec92a6ffcf989e53cd995e6381a4c",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+        "jsVersion": "15.6.75.19"
+      },
+      "viewport": {
+        "width": 1440,
+        "height": 1000,
+        "deviceScaleFactor": 1
+      },
+      "node": "v20.20.2",
+      "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e"
+    },
+    {
+      "name": "parallel-architecture-live-schedule",
+      "choreography": "relay",
+      "flows": [
+        {
+          "id": "classify-call",
+          "label": "1 · await classify PDF",
+          "step": "0",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "extract-call",
+          "label": "2 · await extract PDF",
+          "step": "1",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "save-record",
+          "label": "3 · await save record",
+          "step": "2",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "upload-file",
+          "label": "4 · await upload file",
+          "step": "3",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "write-a",
+          "label": "5.a · write A [parallel P]",
+          "step": "4",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "write-b",
+          "label": "5.b · write B [parallel P]",
+          "step": "5",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        }
+      ]
+    },
+    {
+      "name": "parallel-architecture-hover",
+      "active": "page",
+      "edges": [
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b",
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b"
+      ],
+      "focus": null
+    },
+    {
+      "name": "parallel-architecture-focus-without-row-hover",
+      "focus": "page",
+      "edges": [
+        {
+          "id": "classify-call",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "extract-call",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "save-record",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "upload-file",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-a",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-b",
+          "tag": "path",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "classify-call",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "extract-call",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "save-record",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "upload-file",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-a",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-b",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        }
+      ],
+      "rows": [
+        {
+          "id": "classify-call",
+          "text": "OUT →\nClassify API\n1 · await classify PDF"
+        },
+        {
+          "id": "extract-call",
+          "text": "OUT →\nExtract API\n2 · await extract PDF"
+        },
+        {
+          "id": "save-record",
+          "text": "OUT →\nRecord DB\n3 · await save record"
+        },
+        {
+          "id": "upload-file",
+          "text": "OUT →\nObject store\n4 · await upload file"
+        },
+        {
+          "id": "write-a",
+          "text": "OUT →\nStore A\n5.a · write A [parallel P]"
+        },
+        {
+          "id": "write-b",
+          "text": "OUT →\nStore B\n5.b · write B [parallel P]"
+        }
+      ]
+    },
+    {
+      "name": "parallel-architecture-passport-keyboard-preview",
+      "before": "write-a",
+      "after": "write-b"
+    },
+    {
+      "name": "parallel-sequence-live-schedule",
+      "choreography": "sequence",
+      "flows": [
+        {
+          "id": "classify-call",
+          "label": "1 · await classify PDF",
+          "step": "0",
+          "delay": "0.000s",
+          "animationDelay": "0s"
+        },
+        {
+          "id": "extract-call",
+          "label": "2 · await extract PDF",
+          "step": "1",
+          "delay": "0.657s",
+          "animationDelay": "0.657s"
+        },
+        {
+          "id": "save-record",
+          "label": "3 · await save record",
+          "step": "2",
+          "delay": "1.921s",
+          "animationDelay": "1.921s"
+        },
+        {
+          "id": "upload-file",
+          "label": "4 · await upload file",
+          "step": "3",
+          "delay": "3.521s",
+          "animationDelay": "3.521s"
+        },
+        {
+          "id": "write-a",
+          "label": "5.a · write A [parallel P]",
+          "step": "4",
+          "delay": "5.121s",
+          "animationDelay": "5.121s"
+        },
+        {
+          "id": "write-b",
+          "label": "5.b · write B [parallel P]",
+          "step": "5",
+          "delay": "6.721s",
+          "animationDelay": "6.721s"
+        }
+      ]
+    },
+    {
+      "name": "parallel-sequence-hover",
+      "active": "page",
+      "edges": [
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b"
+      ],
+      "focus": null
+    },
+    {
+      "name": "parallel-sequence-focus-without-row-hover",
+      "focus": "page",
+      "edges": [
+        {
+          "id": "classify-call",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "extract-call",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "save-record",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "upload-file",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-a",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        },
+        {
+          "id": "write-b",
+          "tag": "g",
+          "match": true,
+          "opacity": "1"
+        }
+      ],
+      "rows": [
+        {
+          "id": "classify-call",
+          "text": "OUT →\nClassify API\n1 · await classify PDF"
+        },
+        {
+          "id": "extract-call",
+          "text": "OUT →\nExtract API\n2 · await extract PDF"
+        },
+        {
+          "id": "save-record",
+          "text": "OUT →\nRecord DB\n3 · await save record"
+        },
+        {
+          "id": "upload-file",
+          "text": "OUT →\nObject store\n4 · await upload file"
+        },
+        {
+          "id": "write-a",
+          "text": "OUT →\nStore A\n5.a · write A [parallel P]"
+        },
+        {
+          "id": "write-b",
+          "text": "OUT →\nStore B\n5.b · write B [parallel P]"
+        }
+      ]
+    },
+    {
+      "name": "parallel-sequence-passport-keyboard-preview",
+      "before": "write-a",
+      "after": "write-b"
+    },
+    {
+      "name": "retired-views",
+      "ui": false
+    }
+  ]
+}

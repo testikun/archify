@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "command": "story",
+  "action": "attach",
+  "output": "$EVIDENCE/artifacts/parallel-story.html",
+  "bytes": 1528417,
+  "duration": 49.949999999999996,
+  "source": "PDF ingest — parallel (synthetic) Diagram",
+  "nodes": 7,
+  "edges": 6,
+  "briefCharacters": 1383,
+  "planCharacters": 3169
+}

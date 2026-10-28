@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "21361840-760f-4365-bfa2-4c5d2a2c562c",
+  "ok": true,
+  "command": "deliver",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+  "output": "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+  "specification": {
+    "sha256": "691ee9860ac565536486e002ff1b1d1b772c49e13cdce945b322b725c6275e82",
+    "bytes": 2528
+  },
+  "artifact": {
+    "sha256": "765f05e1a7f4fb08d9c1641aced9bcad672ec4ca8c955d4fae2ac3fa8f8d6c2f",
+    "bytes": 861561
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "standard",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 1,
+    "compositionIssues": [
+      {
+        "severity": "warning",
+        "code": "composition/desktop-readability",
+        "nodeId": "page",
+        "owner": {
+          "kind": "node",
+          "id": "page"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": null,
+        "requestedTargetMet": null,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1260,
+        "scale": 0.7380952380952381,
+        "text": "Application",
+        "detail": "context",
+        "sourceFontPx": 7,
+        "projectedFontPx": 5.166666666666667,
+        "minimumProjectedFontPx": 6
+      }
+    ]
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e",
+  "time": "2026-10-28T02:15:03.000716+00:00",
+  "commands": [
+    {
+      "name": "ablation-architecture-no-cards.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-architecture-no-cards.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+        "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-architecture-no-cards.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-architecture-no-numbers.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-architecture-no-numbers.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+        "$EVIDENCE/artifacts/ablation-architecture-no-numbers.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-architecture-no-numbers.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/ablation-architecture-no-numbers.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-sequence-no-parallel-prose.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-sequence-no-parallel-prose.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "sequence",
+        "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+        "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "ablation-sequence-no-parallel-prose.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "control-architecture-reversed-array.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/control-architecture-reversed-array.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "parallel-architecture.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/parallel-architecture.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "parallel-architecture.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "$EVIDENCE/inputs/parallel-architecture.json",
+        "$EVIDENCE/artifacts/parallel-architecture.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "parallel-architecture.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/parallel-architecture.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "parallel-sequence.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/parallel-sequence.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "parallel-sequence.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "sequence",
+        "$EVIDENCE/inputs/parallel-sequence.json",
+        "$EVIDENCE/artifacts/parallel-sequence.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "parallel-sequence.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/parallel-sequence.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "probe-retired-views.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/probe-retired-views.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "probe-retired-views.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "$EVIDENCE/inputs/probe-retired-views.json",
+        "$EVIDENCE/artifacts/probe-retired-views.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "probe-retired-views.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/probe-retired-views.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "probe-sequence-same-y.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/probe-sequence-same-y.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "probe-unapproved-order.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/probe-unapproved-order.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "serial-architecture.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/serial-architecture.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "serial-architecture.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "$EVIDENCE/inputs/serial-architecture.json",
+        "$EVIDENCE/artifacts/serial-architecture.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "serial-architecture.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/serial-architecture.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "serial-sequence.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/serial-sequence.json",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "serial-sequence.deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "deliver",
+        "sequence",
+        "$EVIDENCE/inputs/serial-sequence.json",
+        "$EVIDENCE/artifacts/serial-sequence.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "serial-sequence.check",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "check",
+        "$EVIDENCE/artifacts/serial-sequence.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "story-scan",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "story",
+        "scan",
+        "$EVIDENCE/artifacts/parallel-architecture.html",
+        "--json"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "story-attach",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "story",
+        "attach",
+        "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+        "$EVIDENCE/inputs/parallel-story-brief.json",
+        "$EVIDENCE/artifacts/parallel-story.html",
+        "--json"
+      ],
+      "exit": 0
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+  "candidate": {
+    "path": "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+    "sha256": "691ee9860ac565536486e002ff1b1d1b772c49e13cdce945b322b725c6275e82",
+    "bytes": 2528
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "sequence",
+      "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+      "<output.html>",
+      "--quality",
+      "standard",
+      "--candidate-sha256",
+      "691ee9860ac565536486e002ff1b1d1b772c49e13cdce945b322b725c6275e82",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "standard",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 1
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 44,
+      "desktopReadabilityIssues": 1,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 5.166666666666667,
+      "maxBends": 0,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 156,
+      "minInteriorSegmentPx": null,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": false,
+      "reviewSuggested": false
+    },
+    "sequenceColumnSpace": {
+      "measured": true,
+      "columnFit": "spread",
+      "participantCount": 7,
+      "occupiedRight": 1220,
+      "viewBoxLeft": 0,
+      "canvasWidth": 1260,
+      "emptyRightPx": 40,
+      "emptyRightRatio": 0.032,
+      "typicalParticipantWidth": 138,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": null,
+      "requestedTargetMet": null,
+      "hardFloorPx": 6,
+      "hardFloorMet": false,
+      "minimumOwner": {
+        "kind": "node",
+        "id": "page"
+      },
+      "minimumSourceTextPx": 7,
+      "minimumProjectedTextPx": 5.166666666666667,
+      "semanticTextCount": 20
+    },
+    "issues": [
+      {
+        "severity": "warning",
+        "code": "composition/desktop-readability",
+        "nodeId": "page",
+        "owner": {
+          "kind": "node",
+          "id": "page"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": null,
+        "requestedTargetMet": null,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1260,
+        "scale": 0.7380952380952381,
+        "text": "Application",
+        "detail": "context",
+        "sourceFontPx": 7,
+        "projectedFontPx": 5.166666666666667,
+        "minimumProjectedFontPx": 6
+      }
+    ]
+  }
+}

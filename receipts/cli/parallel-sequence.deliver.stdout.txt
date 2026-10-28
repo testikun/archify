@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d16fe22e-55f9-4e98-b660-d14b144de266",
+  "ok": true,
+  "command": "deliver",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/parallel-sequence.json",
+  "output": "$EVIDENCE/artifacts/parallel-sequence.html",
+  "specification": {
+    "sha256": "97d5e92392dca49cc4548a61ca51ec0106da3b47275f0fea21b20b828b2ec758",
+    "bytes": 2668
+  },
+  "artifact": {
+    "sha256": "8188e447c27aad54837373ab206cb0eb940d9267d485ce6045fda94775217ad9",
+    "bytes": 862101
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "standard",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 1,
+    "compositionIssues": [
+      {
+        "severity": "warning",
+        "code": "composition/desktop-readability",
+        "nodeId": "page",
+        "owner": {
+          "kind": "node",
+          "id": "page"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": null,
+        "requestedTargetMet": null,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1260,
+        "scale": 0.7380952380952381,
+        "text": "Application",
+        "detail": "context",
+        "sourceFontPx": 7,
+        "projectedFontPx": 5.166666666666667,
+        "minimumProjectedFontPx": 6
+      }
+    ]
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

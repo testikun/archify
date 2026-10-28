@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e9da385a-3037-4ff7-9018-3ec09b01e1b9",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/probe-retired-views.json",
+  "output": "$EVIDENCE/artifacts/probe-retired-views.html",
+  "specification": {
+    "sha256": "ab7d310a876397b80a3369ed7d48c39da22f14af04c4a55475b2d9402e1ed7f5",
+    "bytes": 4073
+  },
+  "artifact": {
+    "sha256": "e8401080ae5ed94ce85e382fa23a1db2300a9dc7ff9bad8f642e654c711cb985",
+    "bytes": 870742
+  }
+}

@@ -1,0 +1,225 @@
+{
+  "ok": true,
+  "command": "story",
+  "action": "scan",
+  "title": "PDF ingest — parallel (synthetic) Diagram",
+  "viewBox": "0 0 856 825",
+  "sequence": false,
+  "choreography": "relay",
+  "defaultAction": "trace",
+  "nodes": [
+    {
+      "id": "page",
+      "label": "Page handler",
+      "kind": "backend",
+      "sublabel": "Application",
+      "context": "Application",
+      "details": [
+        "Page handler",
+        "Application"
+      ],
+      "incoming": [],
+      "outgoing": [
+        "classify-call",
+        "extract-call",
+        "save-record",
+        "upload-file",
+        "write-a",
+        "write-b"
+      ],
+      "sources": []
+    },
+    {
+      "id": "classify",
+      "label": "Classify API",
+      "kind": "backend",
+      "sublabel": "Inference provider",
+      "context": "Inference provider",
+      "details": [
+        "Classify API",
+        "Inference provider"
+      ],
+      "incoming": [
+        "classify-call"
+      ],
+      "outgoing": [],
+      "sources": []
+    },
+    {
+      "id": "extract",
+      "label": "Extract API",
+      "kind": "backend",
+      "sublabel": "Inference provider",
+      "context": "Inference provider",
+      "details": [
+        "Extract API",
+        "Inference provider"
+      ],
+      "incoming": [
+        "extract-call"
+      ],
+      "outgoing": [],
+      "sources": []
+    },
+    {
+      "id": "record",
+      "label": "Record DB",
+      "kind": "database",
+      "sublabel": "Storage services",
+      "context": "Storage services",
+      "details": [
+        "Record DB",
+        "Storage services"
+      ],
+      "incoming": [
+        "save-record"
+      ],
+      "outgoing": [],
+      "sources": []
+    },
+    {
+      "id": "object",
+      "label": "Object store",
+      "kind": "cloud",
+      "sublabel": "Storage services",
+      "context": "Storage services",
+      "details": [
+        "Object store",
+        "Storage services"
+      ],
+      "incoming": [
+        "upload-file"
+      ],
+      "outgoing": [],
+      "sources": []
+    },
+    {
+      "id": "store-a",
+      "label": "Store A",
+      "kind": "database",
+      "sublabel": "Storage services",
+      "context": "Storage services",
+      "details": [
+        "Store A",
+        "Storage services"
+      ],
+      "incoming": [
+        "write-a"
+      ],
+      "outgoing": [],
+      "sources": []
+    },
+    {
+      "id": "store-b",
+      "label": "Store B",
+      "kind": "database",
+      "sublabel": "Storage services",
+      "context": "Storage services",
+      "details": [
+        "Store B",
+        "Storage services"
+      ],
+      "incoming": [
+        "write-b"
+      ],
+      "outgoing": [],
+      "sources": []
+    }
+  ],
+  "edges": [
+    {
+      "id": "classify-call",
+      "key": "0",
+      "from": "page",
+      "to": "classify",
+      "label": "1 · await classify PDF",
+      "animated": true
+    },
+    {
+      "id": "extract-call",
+      "key": "1",
+      "from": "page",
+      "to": "extract",
+      "label": "2 · await extract PDF",
+      "animated": true
+    },
+    {
+      "id": "save-record",
+      "key": "2",
+      "from": "page",
+      "to": "record",
+      "label": "3 · await save record",
+      "animated": true
+    },
+    {
+      "id": "upload-file",
+      "key": "3",
+      "from": "page",
+      "to": "object",
+      "label": "4 · await upload file",
+      "animated": true
+    },
+    {
+      "id": "write-a",
+      "key": "4",
+      "from": "page",
+      "to": "store-a",
+      "label": "5.a · write A [parallel P]",
+      "animated": true
+    },
+    {
+      "id": "write-b",
+      "key": "5",
+      "from": "page",
+      "to": "store-b",
+      "label": "5.b · write B [parallel P]",
+      "animated": true
+    }
+  ],
+  "lanes": [],
+  "frames": [
+    {
+      "id": "0",
+      "kind": "region",
+      "label": "Application",
+      "x": 54,
+      "y": 366,
+      "width": 222,
+      "height": 116
+    },
+    {
+      "id": "1",
+      "kind": "region",
+      "label": "Inference provider",
+      "x": 594,
+      "y": 91,
+      "width": 222,
+      "height": 226
+    },
+    {
+      "id": "2",
+      "kind": "region",
+      "label": "Storage services",
+      "x": 594,
+      "y": 311,
+      "width": 222,
+      "height": 446
+    }
+  ],
+  "phases": [],
+  "legend": [
+    {
+      "kind": "backend",
+      "label": "Backend"
+    },
+    {
+      "kind": "database",
+      "label": "Database"
+    },
+    {
+      "kind": "cloud",
+      "label": "Cloud"
+    }
+  ],
+  "repository": null
+}

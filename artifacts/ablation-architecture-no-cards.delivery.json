@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "7ae879c9-3189-4860-be0c-4a145c6fe0a1",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+  "output": "$EVIDENCE/artifacts/ablation-architecture-no-cards.html",
+  "specification": {
+    "sha256": "7f8491102424f26018084f6402ba9f07daab55d0489ed35cec1f2d4b9aefb77f",
+    "bytes": 3456
+  },
+  "artifact": {
+    "sha256": "ca28b68ec7e83c0ecf20f4a1b326ad9529c55d3f763b735aaa21d6e6195d1d6f",
+    "bytes": 870206
+  }
+}

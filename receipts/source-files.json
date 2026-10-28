@@ -1,0 +1,1315 @@
+{
+  "tree": "be74fa4b0cbbe653fb7b5ccc7d33fef06d89db94",
+  "files": [
+    {
+      "path": ".coderabbit.yaml",
+      "sha": "c1afeb6b78f42c463cb51e00ddc253d9b632886b",
+      "fetched": false
+    },
+    {
+      "path": ".gitattributes",
+      "sha": "2327916e33021390da828f613e42e8d161941416",
+      "fetched": false
+    },
+    {
+      "path": ".gitignore",
+      "sha": "f5fda7db4b12757788a3ae5f3cc22cdf0692b3e4",
+      "fetched": false
+    },
+    {
+      "path": "AGENTS.md",
+      "sha": "562788125a8bd393392eff656a31109e94485833",
+      "fetched": false
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha": "34e19b759f9f6c89db86cb6bfe26b6cbac91a0d6",
+      "fetched": false
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha": "1f02e0c93dc814a59ffb633f9d8a50ce859edb99",
+      "fetched": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "sha": "58aa469d6a9dc226cf134341da1e94fb6713f1c2",
+      "fetched": false
+    },
+    {
+      "path": "DESIGN.md",
+      "sha": "eaf1c8bc3dc1deaa529e83a0f627f27192a0674a",
+      "fetched": false
+    },
+    {
+      "path": "LICENSE",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "fetched": false
+    },
+    {
+      "path": "LICENSE-MIT",
+      "sha": "0f9f9397a0496ef63c7d555d36b40c3f932aff84",
+      "fetched": false
+    },
+    {
+      "path": "NOTICE",
+      "sha": "c9e0c0446c91b02c49e2b9c5479878ae24b0a052",
+      "fetched": false
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha": "c8f0b9679bc1d3c907c40ae8c44ef983d3a07d32",
+      "fetched": false
+    },
+    {
+      "path": "README.md",
+      "sha": "01403442f31e6a63cc6c2b2528a0858dda0eaeb0",
+      "fetched": false
+    },
+    {
+      "path": "README_EN.md",
+      "sha": "01403442f31e6a63cc6c2b2528a0858dda0eaeb0",
+      "fetched": false
+    },
+    {
+      "path": "README_JA.md",
+      "sha": "4a96e32160282ad8c94afd7c8f15eadb070fcee0",
+      "fetched": false
+    },
+    {
+      "path": "README_KO.md",
+      "sha": "8f5b22be5bec1d0fc151fbb848fa1c01080920a8",
+      "fetched": false
+    },
+    {
+      "path": "README_ZH.md",
+      "sha": "46643d0a7aadd2332788e98f6714f11fa3166088",
+      "fetched": false
+    },
+    {
+      "path": "REVIEWING.md",
+      "sha": "722909dc91702b4d84c8b74306901e79a453012c",
+      "fetched": false
+    },
+    {
+      "path": "ROADMAP.md",
+      "sha": "118623d3b86346980dc0e6f983ca2df623f5df02",
+      "fetched": false
+    },
+    {
+      "path": "SECURITY.md",
+      "sha": "d0513681f817593543ece09f21514f47e052515e",
+      "fetched": false
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha": "27891363f71aa6776c1d94bcfcbe1859652c4058",
+      "fetched": false
+    },
+    {
+      "path": "archify/LICENSE",
+      "sha": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "fetched": false
+    },
+    {
+      "path": "archify/LICENSE-MIT",
+      "sha": "0f9f9397a0496ef63c7d555d36b40c3f932aff84",
+      "fetched": false
+    },
+    {
+      "path": "archify/NOTICE",
+      "sha": "c9e0c0446c91b02c49e2b9c5479878ae24b0a052",
+      "fetched": false
+    },
+    {
+      "path": "archify/SKILL.md",
+      "sha": "0175a177c065cd378c8dba9cca9242259944886d",
+      "fetched": false
+    },
+    {
+      "path": "archify/THIRD_PARTY_NOTICES.md",
+      "sha": "27891363f71aa6776c1d94bcfcbe1859652c4058",
+      "fetched": false
+    },
+    {
+      "path": "archify/assets/JetBrainsMono-OFL.txt",
+      "sha": "675d198b74b6f10b5ca149e6a21cf06dcc46b676",
+      "fetched": false
+    },
+    {
+      "path": "archify/assets/template.html",
+      "sha": "f44341a992213adc1c3ec5c24ad4fd3241701273",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/archify.mjs",
+      "sha": "dc9ae00dbfc3fbd2e769cc63cc8c277259f57a43",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/delivery-update.mjs",
+      "sha": "bb516f5b5e4779db24072d321882e7daca3e7542",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/finalize.mjs",
+      "sha": "a135f950b70b885d2864704da4c9627a35aebdc4",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/open-artifact.mjs",
+      "sha": "5a042b73919bc59c90dcdf6653317a8d9ee55e03",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/preview.mjs",
+      "sha": "944413f60de826638b0b12b5249f018bf0e7f1f5",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/recover-output.mjs",
+      "sha": "9b8426136d86bb42f35ae849a0559359cc99f0b9",
+      "fetched": false
+    },
+    {
+      "path": "archify/bin/visual-check.mjs",
+      "sha": "e6b762a4cf5d6c7f54fd44b17f949b033f6ae1f1",
+      "fetched": false
+    },
+    {
+      "path": "archify/brand-marks/README.md",
+      "sha": "83578f6f6cb3d10bc48c3044c46c7b7d46e84be7",
+      "fetched": false
+    },
+    {
+      "path": "archify/brand-marks/catalog.json",
+      "sha": "ac5698939b0baba2582e3b65556b1ebdbeea8fe6",
+      "fetched": false
+    },
+    {
+      "path": "archify/delta/architecture-delta.mjs",
+      "sha": "fdf2661122d0ddf816693962ab7dc619f91f3510",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/agent-run.lifecycle.json",
+      "sha": "f2fd14d71fe6f6fde3fdc66ca10f372beffa788d",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/agent-tool-call.workflow.json",
+      "sha": "a46254951451bbef8fca90ef209862929c890958",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/archify-dev-activity.timeline.json",
+      "sha": "d799c85e6c305670fb9307fa3b1fca3c62ccb9b2",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/archify-repository.tree.json",
+      "sha": "923b8ad43b7c346a7c07b2338567f90588151dae",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/async-job-roundtrip.sequence.json",
+      "sha": "d124c700af31c64cef02942114d769e3dc9b1ac8",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/brand-aware-delivery.architecture.json",
+      "sha": "9d841f43732e9f9a448a7aeb61ce245fffe3fddb",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/cache-miss-request.sequence.json",
+      "sha": "4ef2fab5ef81ac82081a6c5a8735806d5380bcbd",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/checkout-platform.base.architecture.json",
+      "sha": "0f4537f43472b92d54a4ccf54845928fdc1e2642",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/checkout-platform.head.architecture.json",
+      "sha": "ba384386eb0d0296cdee8ad5b61f36dc4d50c104",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/checkout-request.waterfall.json",
+      "sha": "d3cb44167b36e4112fa3c1e28f309dca4cd08303",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/delivery.explainer.json",
+      "sha": "48eb24564d0c45a09640884238737bf65bd8bc69",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/deployment-release.lifecycle.json",
+      "sha": "db659ccf3d458d21f1f075d784f5139e43bb686b",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/drilldown-api.dataflow.json",
+      "sha": "63adfced275b2f72df07e332bba418a6b81ece8b",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/drilldown-api.sequence.json",
+      "sha": "cc8a79e53945d06733a5a33ff029408d3a8610e8",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/drilldown-integrations.architecture.json",
+      "sha": "75a71159da487d4a0f574a8818f8008b0cf3654c",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/drilldown-overview.architecture.json",
+      "sha": "27339c0b64220ffe9d56557263355f7f8dc617ab",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/drilldown-platform.architecture.json",
+      "sha": "a6211bc93de0cc51a916a66bb89683658c852653",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/event-stream.dataflow.json",
+      "sha": "3f653daa207f4c80081977239ef4d4198a677961",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/example-rebuild.waterfall.json",
+      "sha": "56f2fdc2c1d9a043841513e1c971cbd54f4e1c76",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/holiday-planning.workflow.json",
+      "sha": "60dd6417704fd1ee67bc943a8bf78ca8b0d5b1f2",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/incident-response.workflow.json",
+      "sha": "dac074f3f1be45068098a8c8746a79302e53cd7b",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/de.json",
+      "sha": "7fdebf22b389bc652741ee45966fd88585ed758a",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/fr.json",
+      "sha": "f2ff1aa14378f03c92369633af33c321529de417",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/fr.partial.json",
+      "sha": "4a442c8faba5c12056d02de9fd69e0283f552df3",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/it.json",
+      "sha": "57df42adc9408540e7e3d95a9ec15b2a2ce3b7f2",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/ja.json",
+      "sha": "d49ce3a201d7188ccceeb3599e3edc63d9ea4869",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/pt.json",
+      "sha": "166c308917214c4d0428304442eac8fecae443df",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/locales/ru.json",
+      "sha": "8fab5fff47010adc19d311043d81c3c6a15e7b6f",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/orders.erd.json",
+      "sha": "f79065f37029898d5cc88ff68010d12b460a9485",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/payment-incident.timeline.json",
+      "sha": "29d77a08337a9ef89a8f39282883f63e6dd037e4",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/payment-platform.tree.json",
+      "sha": "8eaa590c483b40e67bf152a25db5bdbbc8039d6d",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/payment-processors.class.json",
+      "sha": "3368f6f67ca795154a13037feb677b1a34801a6d",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/payments.class.json",
+      "sha": "9c9daf19d5476f9ee2af884a4b924e8a5c8ee4b8",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/product-analytics.dataflow.json",
+      "sha": "6cc4db67730b242b30d612451824ca4924572f03",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/production-deployment.architecture.json",
+      "sha": "0e4e7ef8533e19d6e840a16774e402f165550212",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/release-delivery.workflow.json",
+      "sha": "09dc8ccf130cc6a313b79e9cff88172e4e492e0f",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/subscription-billing.erd.json",
+      "sha": "ac75e30e94db67bfee8eedab9095e7ba8c18e6b0",
+      "fetched": false
+    },
+    {
+      "path": "archify/examples/web-app.architecture.json",
+      "sha": "f370a41262113cdce1d1376efc0b32235c16f58f",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/browser-check.mjs",
+      "sha": "72f8f8b07a7bbb585463d8b7995e83b434d79427",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/charts.mjs",
+      "sha": "c067c0f50a3ef606890fb2ecccf684586d48cb90",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/check.mjs",
+      "sha": "e4e45cd22a9377d16725c2f4796bcb79754c1e01",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/diagrams.mjs",
+      "sha": "65537d1c52d79d669d3e40cec5c4553572620fd6",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/diff.mjs",
+      "sha": "02679b14d6f386bb2c42b84be87389cf4e9e1586",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/inline.mjs",
+      "sha": "cdaa58c7408ecc0668e7490442bc84000bc82a2c",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/layout.mjs",
+      "sha": "dddc7095478019d737b942844fbe91e5695edba3",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/page-bundle.mjs",
+      "sha": "32bb7c7b29d041bd28559652f5741a7e28d71198",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/parse.mjs",
+      "sha": "11b8f7beeabb423eaa2401ec7946eea4017feb38",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/patch.mjs",
+      "sha": "a07d0df6991b39416ac7e32d1362962e126f16d8",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/prepare.mjs",
+      "sha": "a5edf3d70cb072fcdaba04b2fd714d8db3d043d7",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/reader.css",
+      "sha": "cc5a78320071bef10fc4e3c7799a91160562b86e",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/reader.js",
+      "sha": "7cabf7bcd59b389a31c43c53174bddccac4eee0e",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/render.mjs",
+      "sha": "9eebbb264665fb99984789822cd9ab98d6f684d5",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/revision.mjs",
+      "sha": "cef50adc22bef429e9212978df2c98e2920eeaa6",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/sources.mjs",
+      "sha": "3caff3488e17cbaccd1e05e9f481ab2ee30768ab",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/validate.mjs",
+      "sha": "c7ae478a618cce19d42bc628379881d487343e85",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/LICENSE",
+      "sha": "fd6f9c893d2feb140f6d1e853a8bc0908b3bdf5b",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/README.md",
+      "sha": "99da26a8e41ad97c057c5eabebc7b963e7ce1ba3",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/3DKXF73K.js",
+      "sha": "a34e6786c15219957d1506fa6f1b2bc337b1a28e",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/42UTT654.js",
+      "sha": "f65681462b318b300eca567878c9e1c00e58d9c4",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/DKTLEL5E.js",
+      "sha": "d0f45a9f876a042df5e99a28ff4736380c3983fb",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/EEIX5ZYH.js",
+      "sha": "a0ebc5679c427c46d83a6367b47c7eec6c2b1ec9",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/EJ5KOXYD.js",
+      "sha": "a424acd6d1d7655fe8eb9e6c668b365c6a816a6f",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/GUJTEFZK.js",
+      "sha": "e63fb1b2009159c77683824f6d62ee58a5ec2a2c",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/IZOKQ2GT.js",
+      "sha": "e33d93ea9589ec190514ccaff232086bdba5ca07",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/L4LY553T.js",
+      "sha": "0ca62840c100fb9e72143484550636ad0d6edd81",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/MSKIJHB2.js",
+      "sha": "4d965a60feaf9661aa3bd9cacacc722faf075b6a",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/RVARI57O.js",
+      "sha": "e068f148a2dbe605027324c0d5f62578a28f9b28",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/UKSIWDDN.js",
+      "sha": "bbb8b563223a87fc85db6f74833e955bacf8ee2f",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/UPTXNAXN.js",
+      "sha": "729d0cebd568a0701756a568c46a27f5d8a574a5",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/XTDUIGUI.js",
+      "sha": "d734d0fc9209b01429b3ff03da99ca621d15c672",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/chunks/YAYTP6L5.js",
+      "sha": "f3d641cd77eff30a82f98d058a6be5cf3991adba",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/core.js",
+      "sha": "24938e1a76196890cb80fde599f07e9878e167c0",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/pie.js",
+      "sha": "79d1511756b87826c07c3408c12e67179559618a",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/quadrantChart.js",
+      "sha": "d9b1f52c4d15c5c77fa09952db621fd1ce665455",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/radar.js",
+      "sha": "6699fbba898a49b1ffa8d2cf25db9c8686a9afd4",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/sankey.js",
+      "sha": "41d33a4a0e8ca22c0daad4d45bb5b43cdd885158",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/venn.js",
+      "sha": "3cb40deec5c8364871a05fdb967e5dd83de6f5da",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/vendor/pele/diagrams/xychart.js",
+      "sha": "8a62c964ed2482d4d9879f5fb507b99953b20a70",
+      "fetched": false
+    },
+    {
+      "path": "archify/explainer/writing.mjs",
+      "sha": "a534249fd1eefa5cbf20a2b005eeef08562a361b",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/README.md",
+      "sha": "07941272af11d7d49750a134bdbc26b588d2fc47",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/ar.json",
+      "sha": "14ddc6edfe055bb9518d15c4209240490e732820",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/en.json",
+      "sha": "b84817649ecfad6a46f5f33eee23d40738fa6dfc",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/es.json",
+      "sha": "d171960f396c155c080d08f2a47fae9ef31a98d7",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/ko.json",
+      "sha": "a3cf4dda7897b04ba4f37631413396a5f9ab8454",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/manifest.json",
+      "sha": "34080e03359e03ce46cae8fde4b7a8732bf14ac1",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/zh-CN.json",
+      "sha": "eb7fa452845e4030ad6b1e31363cfb9890e07715",
+      "fetched": false
+    },
+    {
+      "path": "archify/locales/zh-TW.json",
+      "sha": "6ed434dce9c5d8e7479332dcf3a9392e0f05c7e9",
+      "fetched": false
+    },
+    {
+      "path": "archify/migrations/workflow-v2.mjs",
+      "sha": "e9731fcd4c94d9217c4945980ca808dc40938c59",
+      "fetched": false
+    },
+    {
+      "path": "archify/package-lock.json",
+      "sha": "75ad233b45bf0c0d2d621d2c4ea1c7b805100f6d",
+      "fetched": false
+    },
+    {
+      "path": "archify/package.json",
+      "sha": "45c071e55098086843aa76c66ee41d37f0e379d8",
+      "fetched": false
+    },
+    {
+      "path": "archify/recipes/scenarios.mjs",
+      "sha": "bfa764d3cd0dcafb466c7447b0ce7578e9e06871",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/architecture-layout-repair.md",
+      "sha": "d7792cff9de3b6b462b1feab78347f97c2d45e2d",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/authoring-contract.md",
+      "sha": "2fbf25ebfce66bd542fd8c9ee405fdb67b3236a0",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/authoring-defaults.md",
+      "sha": "4e7f30d6c684b7d1737854c29a645448771f4ca1",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/brand-marks.md",
+      "sha": "46c64f82cac359128d9c519a5178b584c7c3e0bc",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/delivery-contract.md",
+      "sha": "c0734fd93c071c51bfbe82533737a311dfd8de35",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/explainer-authoring.md",
+      "sha": "a11d087078037474a1900f47ad49bcea8e92273d",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/repository-authoring.md",
+      "sha": "38d06a6173042da3557e4d447330a7c3a56ad60c",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/story-authoring.md",
+      "sha": "ad97d4a7e52d6b41a48480b99532c302c823df3a",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/update-awareness.md",
+      "sha": "50e6bdeb6980b00f6b50359e9b4f805592dcf875",
+      "fetched": false
+    },
+    {
+      "path": "archify/references/viewer-runtime.md",
+      "sha": "7a23e09888c39ff2771364d525fd06a7a8e042d8",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/architecture/grid.mjs",
+      "sha": "807a1b860f531bab0ee217af19e6887fbbade398",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/architecture/labels.mjs",
+      "sha": "6f0076b10c1d7163d215f3c0f1ebff8e671bf6e2",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/architecture/render-architecture.mjs",
+      "sha": "a84b47e0beaae0d9125d25a01a661274a1938bbb",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/architecture/routing.mjs",
+      "sha": "93c22606ecb657b8faa6f642b4b5546d5264271b",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/class/README.md",
+      "sha": "efaea675ab7fb46b9042b63c9f25274bc1325a23",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/class/render-class.mjs",
+      "sha": "b791da46b6a9494b6a8747f9b82f983ba1484f24",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/dataflow/README.md",
+      "sha": "6388fcbbb1b51ea2628d62eeee31a633885b905b",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/dataflow/dataflow-compiler.mjs",
+      "sha": "5c58edd98c76e6ee507dafa49c9d564d06bb09a3",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/dataflow/joint-label-routing.mjs",
+      "sha": "1954204aa1bcdff97837b09a0c7ce534bb35f445",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/dataflow/label-capacity.mjs",
+      "sha": "a7d4246e181e4cfbbc09cb77fa291d65ef2a72e7",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/dataflow/render-dataflow.mjs",
+      "sha": "573b96980a9b7993dfa3aad2af70fe89c8927c92",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/erd/README.md",
+      "sha": "1713bd684bec22235c401a2d02972a103d9501e3",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/erd/grid.mjs",
+      "sha": "3233d2934aaccb7c5b7bb02ad8908f39069cf541",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/erd/render-erd.mjs",
+      "sha": "252ae347252c1e234ff13504d84bc6f8a36897fb",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/explainer/render-explainer.mjs",
+      "sha": "c83ace5f6f2b8dd7cc1151c94e2ffed91fa50e9f",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/lifecycle/README.md",
+      "sha": "397d169c86ddeee00fc8b790b552cf6b3d4ec956",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/lifecycle/render-lifecycle.mjs",
+      "sha": "0b4af6171a1b937dda79c3e14715b50f38a08912",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/sequence/README.md",
+      "sha": "27f778eb3694bb5780deb94419f81bd4fc177465",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/sequence/render-sequence.mjs",
+      "sha": "2192e3a643c1cc3f60442339a93c20a3d1db98ac",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/atomic-output.md",
+      "sha": "67aac906ba5fca0452d23ac060a51b907fd453d1",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/atomic-output.mjs",
+      "sha": "a45ae5b13cebed3450d8b21532e034f379a90483",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/automatic-labels.mjs",
+      "sha": "85b1bd17f4b1cb0fd759bf40d0ed1022210167eb",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/brand-marks.mjs",
+      "sha": "671def2f357435a8a065af2fb9cff7cc845158cf",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/cli.mjs",
+      "sha": "27172b7567dd52faa5133f2118978314284d9f35",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/desktop-readability.mjs",
+      "sha": "d4d1d0ec5bee5c4b1062c7a108c6bbab41ac74bf",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/diagnostics.mjs",
+      "sha": "9fbd25d557f47f64b142b2d5393ee921d6f337cd",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/engineering-profiles.mjs",
+      "sha": "76e3166aa19cbd23cc2187f16b0c120280ef4d48",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/generated-brand-marks.mjs",
+      "sha": "69dbb7c1c290f28620705486ecacba4d2184f634",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/generated-validators.mjs",
+      "sha": "3a75210e020eb8f58324929fd11f5a6338e134d6",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/geometry.mjs",
+      "sha": "2568540140f1964307d7dbe3a1619c3f6d315339",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/i18n.mjs",
+      "sha": "6eee0b506c4c05f5ec144b24d56c1ea557fcf812",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/layout-report.mjs",
+      "sha": "6043316d5e4a6754d0af6975db7bf55e7d0a197d",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/legend.mjs",
+      "sha": "13bf15e9eb8335e3c053ee4b30d7f348e49ec34d",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/node-card-style.mjs",
+      "sha": "f3446ad0d7e2036e1671e9734a748c7ae1faad29",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/output-path.mjs",
+      "sha": "372249d628f400a76951d0178cc88a20c062687c",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/owned-temp-directory.mjs",
+      "sha": "cc910f094828fac6beb150d40f6af4a3bdf71ebd",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/path-semantics.mjs",
+      "sha": "59dc039c1737122b0fd116f40a51155cf267ffd8",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/portable-path.mjs",
+      "sha": "e9f8df9dbf097a165cdde67cba9d60b96553294d",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/repository-evidence.mjs",
+      "sha": "fb3a385285f85b6ea5e90bc0317e57652fce6d12",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/repository-location.mjs",
+      "sha": "7a36226d2144cdbe0ded72e2bfb192c0e209771f",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/route-quality.mjs",
+      "sha": "01f585f7c3b9f71285172ab8dc02305c6b04798c",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/sidecar-path.mjs",
+      "sha": "32e73601f9f05d4ff0e5fbd432dd5ebabfe8a0c4",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/software-notices.mjs",
+      "sha": "4e2802fe332b5a9660c8576ccac3f487332fc86b",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/spatial-grid.mjs",
+      "sha": "d2eb43961110be72a34d92804299de60e6d03126",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/svg-path-analysis.mjs",
+      "sha": "e77c2b691a86850e8bdad3c4c01070fd46822ed3",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/text-fit.mjs",
+      "sha": "860356a4c9709af3175e4f6e51393c772b0e8616",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/utils.mjs",
+      "sha": "f10d89bef79a15e8db49a7ec3e6b4150e64392c0",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/shared/validator.mjs",
+      "sha": "ad0a331c3d69024096ecf77a3a2baf1c569ce9ce",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/timeline/README.md",
+      "sha": "7718ced3fa6db0129513d368f291c1688602fe74",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/timeline/render-timeline.mjs",
+      "sha": "2bf4934abfefe1bc2e5ccf07b63a424f97954421",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/tree/README.md",
+      "sha": "87b1b9ade6baf73bbb03ab3dfd3f697aaf4dd9a8",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/tree/render-tree.mjs",
+      "sha": "72b10002051fd2dc5bc4ee9ae58dbd54ef89f5b2",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/waterfall/README.md",
+      "sha": "410f9bf6f8b2c780cb7c5f7c4a5a3b3824f1d871",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/waterfall/render-waterfall.mjs",
+      "sha": "e0428d19dd9e767cade8bd624d7d42115aec3e0f",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/workflow/README.md",
+      "sha": "cd20dc8a2d22725c6cc10ce320717c0871fbcdca",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/workflow/render-workflow.mjs",
+      "sha": "05f025ee166ad5da9822ae811bd907c8022c7738",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/workflow/workflow-compiler.mjs",
+      "sha": "3e73783bf5eb4664504a6ed6c20bfd68f110b3e5",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/workflow/workflow-migration-geometry.mjs",
+      "sha": "0a4bb2e1f0ad36dd140bcb822ad13d6293b2544c",
+      "fetched": false
+    },
+    {
+      "path": "archify/renderers/workflow/workflow-placement-repair.mjs",
+      "sha": "ff43b50d0666fb434d75058fcddfdc9552e0da74",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/README.md",
+      "sha": "ce10b0af2990b51092fe00c6fa15b50aae01dd45",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/architecture.schema.json",
+      "sha": "1f94e5837fd6a2ec52b4938a84d27fb8d1d75032",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/class.schema.json",
+      "sha": "2ef8b84266fe98dc4b1b1a04b828cf343f7a18bf",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/common.schema.json",
+      "sha": "572496a4476dfcc08eebd73347cc771253d7039b",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/dataflow.schema.json",
+      "sha": "81d6922bfb81bcc2bab367924c59c69220fedddd",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/erd.schema.json",
+      "sha": "0153501ebb7f8032c67e4fe65c060c7f6a55404e",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/explainer.schema.json",
+      "sha": "03deceab6b3a0e82598fb42fbbd95865a6a62af5",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/lifecycle.schema.json",
+      "sha": "541ed703d2addf5224af1705745e58a5cecffe6b",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/sequence.schema.json",
+      "sha": "79410675e940605a5177c96e81be7c69e294cb90",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/timeline.schema.json",
+      "sha": "7cc4b7ce168ac7ee5e058d22383a5a4388b94db4",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/tree.schema.json",
+      "sha": "05106a1c2f945c44c15111fb0994f912f0bf865c",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/waterfall.schema.json",
+      "sha": "f6a37397d83dba739b273f6ffba0f1df3129203c",
+      "fetched": false
+    },
+    {
+      "path": "archify/schemas/workflow.schema.json",
+      "sha": "71886133dca7bb6e6df7a102d4286e9cd31c1df6",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/check-render-output.mjs",
+      "sha": "6b4c46f9ac5e65c50b772dcfb70e8f971f84c9a8",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/check-update.mjs",
+      "sha": "24f54f2988cb4072054de6f7f7bf726ad1301380",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/delivery-update-child.mjs",
+      "sha": "7c998f0ab32dd0720cb92ea60a81050481b15043",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/generate-brand-marks.mjs",
+      "sha": "73490babbbbde02ffd6f657ab9edb5538bee5cca",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/generate-validators.mjs",
+      "sha": "72a0120ec0d060056101730fb68e65ca2f47ac41",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/render-examples.mjs",
+      "sha": "78b7ef1bc1c7909429ddb31520d5fa4ea0050488",
+      "fetched": false
+    },
+    {
+      "path": "archify/scripts/update-contract.mjs",
+      "sha": "b35d0f8d6b5308250adedbce837f1a174ec1e505",
+      "fetched": false
+    },
+    {
+      "path": "archify/skill-release.json",
+      "sha": "48df2b8f31a3d87e5cbe1a239957da860697ebf1",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/brand.svg",
+      "sha": "77268223a66446f25cd75b20d219117213065149",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/cli.mjs",
+      "sha": "51e398ead280fb0cc6914bf1f0cc286da3dde6f1",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/messages.json",
+      "sha": "6faf9bbc8c7ba350f209cbeeb6ddafa9681549c4",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/native-motion.js",
+      "sha": "f57b3a8ca26eba4717b1365549754ce43fb3a892",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/output.mjs",
+      "sha": "7ec3f7853eaeb9080c50132f53209d219243d21c",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/scope-field.js",
+      "sha": "341e941065505ae16259f4d99e5eb46dbe4b6d77",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-attachment.css",
+      "sha": "44a2e22644b40265fd9dd1d8458e20d2b1960f2b",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-attachment.js",
+      "sha": "e6624f9ac4c3e26cfa99b2d5c1f0ec01fad23703",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-attachment.mjs",
+      "sha": "3e668404ee56a4647b53642475afbed07f75bc20",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-audio.js",
+      "sha": "2a49302fec201fd2e80242b44e81b36374aeaec2",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-export.js",
+      "sha": "b49b7b7c27072fe6d2e1d3e847654c15f9a270d9",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-plan.mjs",
+      "sha": "e243b8b1be355db2c62a6e425b661c3ca2918d14",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story-webm.js",
+      "sha": "45baac6eab9b5664770810bb5c4d5cb4c5e8b366",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story.css",
+      "sha": "8cc5258aa5573acd2b0fd6c39a7a4c2bc5d1d2d2",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/story.js",
+      "sha": "3f720d9e2bbfc9df379af372e46512541050fe39",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/tool.mjs",
+      "sha": "a560fe48175c6e79b63fc47084f58319034f166c",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/vendor/README.md",
+      "sha": "60f645c711a11cfe4c3f3fed393663b57c4eedfe",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/vendor/entities-LICENSE.txt",
+      "sha": "c464f863ea2b18a15ca3883bc5d98065ed5d039a",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/vendor/html-parser.mjs",
+      "sha": "8c20db5504baf4e675ba83d481664ae63e3972eb",
+      "fetched": false
+    },
+    {
+      "path": "archify/story/vendor/parse5-LICENSE.txt",
+      "sha": "f3265d4b88f7aac271ec21679195adff8446855e",
+      "fetched": false
+    },
+    {
+      "path": "llms.txt",
+      "sha": "08cede7a80ec7e261634117b140e05b3141376ca",
+      "fetched": false
+    },
+    {
+      "path": "package-lock.json",
+      "sha": "fb4c8a51f80f6db7873de179b59223fbaa5d75c0",
+      "fetched": false
+    },
+    {
+      "path": "package.json",
+      "sha": "949a99831569bbb1ef8021f91984c8e1ff41d448",
+      "fetched": false
+    },
+    {
+      "path": "test/helpers/desktop-browser.mjs",
+      "sha": "c4da421bf200344fe22d49b4f3d16ab926199e6d",
+      "fetched": false
+    },
+    {
+      "path": "test/story-browser.test.mjs",
+      "sha": "edb3062149f76141f5b1f2e19b12ceea84f65378",
+      "fetched": false
+    },
+    {
+      "path": "viewer/README.md",
+      "sha": "8909fedbcdf5cb9e23127d26dc7e606bc1d3ae78",
+      "fetched": false
+    },
+    {
+      "path": "viewer/export-cleanup.js",
+      "sha": "40d8658e01f8d96940ee4b9df8bac24aa74bf6cf",
+      "fetched": false
+    },
+    {
+      "path": "viewer/export.js",
+      "sha": "d2a48d0d64267ca2fe0822a4473d49356c81d449",
+      "fetched": false
+    },
+    {
+      "path": "viewer/focus.js",
+      "sha": "6a61c202b4077f4fe5ddcf3f8e291fe668456465",
+      "fetched": true
+    },
+    {
+      "path": "viewer/guided-views.js",
+      "sha": "7ceeeb4cd0d36aee03db87769965da5133ca8b06",
+      "fetched": true
+    },
+    {
+      "path": "viewer/intent-trace.js",
+      "sha": "763f5abe57378a77becaf82c64ca9bd334336c7c",
+      "fetched": false
+    },
+    {
+      "path": "viewer/motion-governor.js",
+      "sha": "f57b3a8ca26eba4717b1365549754ce43fb3a892",
+      "fetched": false
+    },
+    {
+      "path": "viewer/node-finder.js",
+      "sha": "ffa46ba9651d33c550219ad17c50363de4258125",
+      "fetched": true
+    },
+    {
+      "path": "viewer/node-outline.js",
+      "sha": "2fb7682e3664b5d7b5c8ce4ac3c4f0cf5997fc83",
+      "fetched": false
+    },
+    {
+      "path": "viewer/reader-layout.js",
+      "sha": "76959b83a3f1a9a24f955d63f7afb080796b923f",
+      "fetched": false
+    },
+    {
+      "path": "viewer/route-probe.js",
+      "sha": "304c6a60df0670afbc1ba55986bfe3dfb7ca1ceb",
+      "fetched": false
+    },
+    {
+      "path": "viewer/semantic-lens.js",
+      "sha": "09fe1a1928e7dd444b26e301c391e517b991ab99",
+      "fetched": true
+    },
+    {
+      "path": "viewer/semantic-radar.js",
+      "sha": "85d6b8cd08f4e37c2045dd5ae07b2fbe2ce3d355",
+      "fetched": false
+    },
+    {
+      "path": "viewer/template.source.html",
+      "sha": "c014621b85e8fe03a9fa9aa560244894387c49c8",
+      "fetched": true
+    },
+    {
+      "path": "viewer/tree-branches.js",
+      "sha": "fd48afe73254261c82eee93ebee26888da97c974",
+      "fetched": false
+    },
+    {
+      "path": "viewer/viewer-camera.js",
+      "sha": "6afc3f16cbef5fc6900a9fa5d66ef9f4ab805fd8",
+      "fetched": true
+    },
+    {
+      "path": "viewer/viewer-chrome-layout.js",
+      "sha": "06d15935a0f4e1d9e60adae5d1a68a309d1ba22e",
+      "fetched": false
+    },
+    {
+      "path": "viewer/viewer.css",
+      "sha": "2b147f8a3320dc5e209ca7bcf03e1f7989ea09c4",
+      "fetched": true
+    }
+  ]
+}

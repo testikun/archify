@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+  "candidate": {
+    "path": "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+    "sha256": "9023b6b180818b37433470fa69cac8a3d37a5f86d157d9b60b835f1f43d6f764",
+    "bytes": 3843
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+      "<output.html>",
+      "--quality",
+      "standard",
+      "--candidate-sha256",
+      "9023b6b180818b37433470fa69cac8a3d37a5f86d157d9b60b835f1f43d6f764",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": [
+        "[composition/label-route-clearance] standard label \"await classify PDF\" on relationship id \"classify-call\" (\"page\" -> \"classify\") is 0px from relationship id \"extract-call\" (\"page\" -> \"extract\") segment 2 [284, 261] -> [610, 261] with 96.4px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel.",
+        "[composition/label-route-clearance] standard label \"await save record\" on relationship id \"save-record\" (\"page\" -> \"record\") is 0px from relationship id \"classify-call\" (\"page\" -> \"classify\") segment 1 [435, 406] -> [435, 151] with 14px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel.",
+        "[composition/label-route-clearance] standard label \"await upload file\" on relationship id \"upload-file\" (\"page\" -> \"object\") is 0px from relationship id \"write-b\" (\"page\" -> \"store-b\") segment 0 [260, 446] -> [435, 446] with 45.8px hidden by the mask (minimum 2px) — use renderer-supported label controls (message y for sequence; otherwise labelAt, labelDx, labelDy, or labelSegment), or adjust the other relationship route/via/channel."
+      ]
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": [
+        "[composition/ambiguous-corridor] standard relationship id \"classify-call\" (\"page\" -> \"classify\") shares a 35px corridor with relationship id \"save-record\" (\"page\" -> \"record\") at [435, 371] -> [435, 406]",
+        "[composition/ambiguous-corridor] standard relationship id \"upload-file\" (\"page\" -> \"object\") shares a 35px corridor with relationship id \"write-b\" (\"page\" -> \"store-b\") at [435, 446] -> [435, 481]"
+      ]
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "standard",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 5
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 2,
+      "ambiguousCorridors": 2,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 3,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 0,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 8,
+      "maxBends": 2,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 24,
+      "minInteriorSegmentPx": 51,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [
+        {
+          "left": {
+            "id": "classify-call",
+            "from": "page",
+            "to": "classify",
+            "label": "await classify PDF",
+            "collectionIndex": 0,
+            "artifactIndex": 1
+          },
+          "right": {
+            "id": "extract-call",
+            "from": "page",
+            "to": "extract",
+            "label": "await extract PDF",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "point": [
+            435,
+            261
+          ],
+          "sharedNode": "page"
+        },
+        {
+          "left": {
+            "id": "write-a",
+            "from": "page",
+            "to": "store-a",
+            "label": "write A [parallel P]",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "write-b",
+            "from": "page",
+            "to": "store-b",
+            "label": "write B [parallel P]",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "point": [
+            435,
+            591
+          ],
+          "sharedNode": "page"
+        }
+      ],
+      "crowdedSides": [
+        {
+          "node": "page",
+          "label": "Page handler",
+          "side": "right",
+          "relationships": 6,
+          "sidePx": 72,
+          "neededPx": 102
+        }
+      ],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 91,
+      "emptyTopRatio": 0.11,
+      "occupiedTop": 91,
+      "viewBoxTop": 0,
+      "canvasHeight": 825,
+      "typicalNodeHeight": 72,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "classify-call",
+        "from": "page",
+        "to": "classify"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 8,
+      "semanticTextCount": 23
+    },
+    "issues": [
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await classify PDF",
+        "labelRelationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "otherRelationship": {
+          "id": "extract-call",
+          "from": "page",
+          "to": "extract",
+          "label": "await extract PDF",
+          "collectionIndex": 1,
+          "artifactIndex": 2
+        },
+        "segmentIndex": 2,
+        "labelRect": {
+          "x": 386.8,
+          "y": 258.5,
+          "width": 96.4,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 96.4,
+        "threshold": 2,
+        "from": [
+          284,
+          261
+        ],
+        "to": [
+          610,
+          261
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await save record",
+        "labelRelationship": {
+          "id": "save-record",
+          "from": "page",
+          "to": "record",
+          "label": "await save record",
+          "collectionIndex": 2,
+          "artifactIndex": 3
+        },
+        "otherRelationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "segmentIndex": 1,
+        "labelRect": {
+          "x": 389.2,
+          "y": 376.5,
+          "width": 91.6,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 14,
+        "threshold": 2,
+        "from": [
+          435,
+          406
+        ],
+        "to": [
+          435,
+          151
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await upload file",
+        "labelRelationship": {
+          "id": "upload-file",
+          "from": "page",
+          "to": "object",
+          "label": "await upload file",
+          "collectionIndex": 3,
+          "artifactIndex": 4
+        },
+        "otherRelationship": {
+          "id": "write-b",
+          "from": "page",
+          "to": "store-b",
+          "label": "write B [parallel P]",
+          "collectionIndex": 5,
+          "artifactIndex": 6
+        },
+        "segmentIndex": 0,
+        "labelRect": {
+          "x": 389.2,
+          "y": 435.5,
+          "width": 91.6,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 45.8,
+        "threshold": 2,
+        "from": [
+          260,
+          446
+        ],
+        "to": [
+          435,
+          446
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/ambiguous-corridor",
+        "relationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "otherRelationship": {
+          "id": "save-record",
+          "from": "page",
+          "to": "record",
+          "label": "await save record",
+          "collectionIndex": 2,
+          "artifactIndex": 3
+        },
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1,
+        "overlapLength": 35,
+        "from": [
+          435,
+          371
+        ],
+        "to": [
+          435,
+          406
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/ambiguous-corridor",
+        "relationship": {
+          "id": "upload-file",
+          "from": "page",
+          "to": "object",
+          "label": "await upload file",
+          "collectionIndex": 3,
+          "artifactIndex": 4
+        },
+        "otherRelationship": {
+          "id": "write-b",
+          "from": "page",
+          "to": "store-b",
+          "label": "write B [parallel P]",
+          "collectionIndex": 5,
+          "artifactIndex": 6
+        },
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1,
+        "overlapLength": 35,
+        "from": [
+          435,
+          446
+        ],
+        "to": [
+          435,
+          481
+        ]
+      }
+    ]
+  }
+}

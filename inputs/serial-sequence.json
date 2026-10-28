@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "meta": {
+    "title": "PDF ingest — serial (synthetic)",
+    "subtitle": "Author-declared calls; no runtime measurements.",
+    "output": "serial.html",
+    "quality_profile": "standard",
+    "visual_preset": "classic",
+    "viewBox": [
+      800,
+      480
+    ]
+  },
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Author facts",
+      "items": [
+        "Synthetic successful path, not captured execution.",
+        "Each numbered stage completes before the next is invoked.",
+        "The page handler calls classify, extract, then record storage.",
+        "Component ownership: Application / Inference provider / Storage services."
+      ]
+    }
+  ],
+  "diagram_type": "sequence",
+  "participants": [
+    {
+      "id": "page",
+      "type": "backend",
+      "label": "Page handler",
+      "sublabel": "Application"
+    },
+    {
+      "id": "classify",
+      "type": "backend",
+      "label": "Classify API",
+      "sublabel": "Inference provider"
+    },
+    {
+      "id": "extract",
+      "type": "backend",
+      "label": "Extract API",
+      "sublabel": "Inference provider"
+    },
+    {
+      "id": "record",
+      "type": "database",
+      "label": "Record DB",
+      "sublabel": "Storage services"
+    }
+  ],
+  "messages": [
+    {
+      "id": "classify-call",
+      "from": "page",
+      "to": "classify",
+      "label": "1 · await classify PDF",
+      "y": 185
+    },
+    {
+      "id": "extract-call",
+      "from": "page",
+      "to": "extract",
+      "label": "2 · await extract PDF",
+      "y": 249
+    },
+    {
+      "id": "save-record",
+      "from": "page",
+      "to": "record",
+      "label": "3 · await save record",
+      "y": 313
+    }
+  ],
+  "segments": []
+}

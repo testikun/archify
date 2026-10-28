@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/probe-unapproved-order.json",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"classify-call\") must NOT have additional properties {\"additionalProperty\":\"order\"}\n  /connections/1 (id/label: \"extract-call\") must NOT have additional properties {\"additionalProperty\":\"order\"}\n  /connections/2 (id/label: \"save-record\") must NOT have additional properties {\"additionalProperty\":\"order\"}\n  /connections/3 (id/label: \"upload-file\") must NOT have additional properties {\"additionalProperty\":\"order\"}\n  /connections/4 (id/label: \"write-a\") must NOT have additional properties {\"additionalProperty\":\"order\"}\n  /connections/5 (id/label: \"write-b\") must NOT have additional properties {\"additionalProperty\":\"order\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"classify-call\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "classify-call"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"extract-call\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "extract-call"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"save-record\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "save-record"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/3 (id/label: \"upload-file\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/3",
+        "identity": "upload-file"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/4 (id/label: \"write-a\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/4",
+        "identity": "write-a"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/5 (id/label: \"write-b\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/5",
+        "identity": "write-b"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "order"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"order\""
+      ]
+    }
+  ]
+}

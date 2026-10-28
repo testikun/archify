@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "input",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/serial-architecture.json",
+  "error": "Cannot find module '$EVIDENCE/source-pinned/archify/renderers/shared/generated-validators.mjs' imported from $EVIDENCE/source-pinned/archify/renderers/shared/validator.mjs",
+  "diagnostics": [
+    {
+      "code": "input/read",
+      "severity": "error",
+      "message": "Input could not be read: Cannot find module '$EVIDENCE/source-pinned/archify/renderers/shared/generated-validators.mjs' imported from $EVIDENCE/source-pinned/archify/renderers/shared/validator.mjs",
+      "subject": {
+        "input": "$EVIDENCE/inputs/serial-architecture.json"
+      },
+      "evidence": {
+        "systemCode": "ERR_MODULE_NOT_FOUND",
+        "reason": "Cannot find module '$EVIDENCE/source-pinned/archify/renderers/shared/generated-validators.mjs' imported from $EVIDENCE/source-pinned/archify/renderers/shared/validator.mjs"
+      },
+      "supportedFixes": [
+        "provide one readable JSON input file"
+      ]
+    }
+  ]
+}

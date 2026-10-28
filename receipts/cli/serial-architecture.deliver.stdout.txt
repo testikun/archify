@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "662ed92a-d3fd-437c-a6b9-2efb249d5af6",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/serial-architecture.json",
+  "output": "$EVIDENCE/artifacts/serial-architecture.html",
+  "specification": {
+    "sha256": "d7663777ea0cfbd8fc809da200bdb0ac0592483add38ee844c7463f397d339ab",
+    "bytes": 2593
+  },
+  "artifact": {
+    "sha256": "7fe2207a4e44c1273f5b374b25f16cb5a06d87ae0770c6294f7af39907968139",
+    "bytes": 863090
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "standard",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

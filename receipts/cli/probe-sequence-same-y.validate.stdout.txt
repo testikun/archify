@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/probe-sequence-same-y.json",
+  "error": "Sequence layout validation failed:\n- Messages \"5.a · write A [parallel P]\" and \"5.b · write B [parallel P]\" are less than 28px apart and share horizontal space — spread their y values.\n- Labels \"5.a · write A [parallel P]\" and \"5.b · write B [parallel P]\" overlap — spread their message y values or shorten the labels.",
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Messages \"5.a · write A [parallel P]\" and \"5.b · write B [parallel P]\" are less than 28px apart and share horizontal space — spread their y values.",
+      "subject": {
+        "diagramType": "sequence"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Labels \"5.a · write A [parallel P]\" and \"5.b · write B [parallel P]\" overlap — spread their message y values or shorten the labels.",
+      "subject": {
+        "diagramType": "sequence"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ]
+}

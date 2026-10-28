@@ -1,0 +1,40 @@
+{
+  "fetchedAt": "2026-10-28T01:48:36.533005+00:00",
+  "requests": [
+    {
+      "name": "issue-452",
+      "endpoint": "repos/tt-a1i/archify/issues/452",
+      "exit": 0
+    },
+    {
+      "name": "comments-452",
+      "endpoint": "repos/tt-a1i/archify/issues/452/comments?per_page=100",
+      "exit": 0
+    },
+    {
+      "name": "timeline-452",
+      "endpoint": "repos/tt-a1i/archify/issues/452/timeline?per_page=100",
+      "exit": 0
+    },
+    {
+      "name": "dev",
+      "endpoint": "repos/tt-a1i/archify/branches/dev",
+      "exit": 0
+    },
+    {
+      "name": "related-prs",
+      "endpoint": "search/issues?q=repo%3Att-a1i%2Farchify+is%3Apr+%22452%22&per_page=100",
+      "exit": 0
+    },
+    {
+      "name": "ordered-prs",
+      "endpoint": "search/issues?q=repo%3Att-a1i%2Farchify+is%3Apr+%22ordered%22&per_page=100",
+      "exit": 0
+    },
+    {
+      "name": "open-prs",
+      "endpoint": "repos/tt-a1i/archify/pulls?state=open&per_page=100",
+      "exit": 0
+    }
+  ]
+}

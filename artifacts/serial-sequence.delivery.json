@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "dae244b7-222c-40c9-9270-1a16da7d494a",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/serial-sequence.json",
+  "output": "$EVIDENCE/artifacts/serial-sequence.html",
+  "specification": {
+    "sha256": "806c3155f39c8ddc5dc929df32f5151500425173bc3c2ca636924c4ca0285623",
+    "bytes": 1724
+  },
+  "artifact": {
+    "sha256": "1793f4ffc8a2d75edfe58ea2eb65bde853998a6628d7a8d287b947d12948468d",
+    "bytes": 855961
+  }
+}

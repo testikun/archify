@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c69e0b9a-18e0-43ac-b83c-22a361e8a3ba",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/parallel-architecture.json",
+  "output": "$EVIDENCE/artifacts/parallel-architecture.html",
+  "specification": {
+    "sha256": "3efc7b6f9481a6a35042037a3dca91197315a25d4ce831fb4ffc16703fd59115",
+    "bytes": 3877
+  },
+  "artifact": {
+    "sha256": "e8401080ae5ed94ce85e382fa23a1db2300a9dc7ff9bad8f642e654c711cb985",
+    "bytes": 870742
+  }
+}

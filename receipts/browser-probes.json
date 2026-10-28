@@ -1,0 +1,332 @@
+[
+  {
+    "environment": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.48",
+      "revision": "@d0c02bfad08ec92a6ffcf989e53cd995e6381a4c",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.19"
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 1000,
+      "deviceScaleFactor": 1
+    },
+    "node": "v20.20.2",
+    "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e"
+  },
+  {
+    "name": "parallel-architecture-live-schedule",
+    "choreography": "relay",
+    "flows": [
+      {
+        "id": "classify-call",
+        "label": "1 · await classify PDF",
+        "step": "0",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "extract-call",
+        "label": "2 · await extract PDF",
+        "step": "1",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "save-record",
+        "label": "3 · await save record",
+        "step": "2",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "upload-file",
+        "label": "4 · await upload file",
+        "step": "3",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "write-a",
+        "label": "5.a · write A [parallel P]",
+        "step": "4",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "write-b",
+        "label": "5.b · write B [parallel P]",
+        "step": "5",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      }
+    ]
+  },
+  {
+    "name": "parallel-architecture-hover",
+    "active": "page",
+    "edges": [
+      "classify-call",
+      "extract-call",
+      "save-record",
+      "upload-file",
+      "write-a",
+      "write-b",
+      "classify-call",
+      "extract-call",
+      "save-record",
+      "upload-file",
+      "write-a",
+      "write-b"
+    ],
+    "focus": null
+  },
+  {
+    "name": "parallel-architecture-focus-without-row-hover",
+    "focus": "page",
+    "edges": [
+      {
+        "id": "classify-call",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "extract-call",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "save-record",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "upload-file",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-a",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-b",
+        "tag": "path",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "classify-call",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "extract-call",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "save-record",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "upload-file",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-a",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-b",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      }
+    ],
+    "rows": [
+      {
+        "id": "classify-call",
+        "text": "OUT →\nClassify API\n1 · await classify PDF"
+      },
+      {
+        "id": "extract-call",
+        "text": "OUT →\nExtract API\n2 · await extract PDF"
+      },
+      {
+        "id": "save-record",
+        "text": "OUT →\nRecord DB\n3 · await save record"
+      },
+      {
+        "id": "upload-file",
+        "text": "OUT →\nObject store\n4 · await upload file"
+      },
+      {
+        "id": "write-a",
+        "text": "OUT →\nStore A\n5.a · write A [parallel P]"
+      },
+      {
+        "id": "write-b",
+        "text": "OUT →\nStore B\n5.b · write B [parallel P]"
+      }
+    ]
+  },
+  {
+    "name": "parallel-architecture-passport-keyboard-preview",
+    "before": "write-a",
+    "after": "write-b"
+  },
+  {
+    "name": "parallel-sequence-live-schedule",
+    "choreography": "sequence",
+    "flows": [
+      {
+        "id": "classify-call",
+        "label": "1 · await classify PDF",
+        "step": "0",
+        "delay": "0.000s",
+        "animationDelay": "0s"
+      },
+      {
+        "id": "extract-call",
+        "label": "2 · await extract PDF",
+        "step": "1",
+        "delay": "0.657s",
+        "animationDelay": "0.657s"
+      },
+      {
+        "id": "save-record",
+        "label": "3 · await save record",
+        "step": "2",
+        "delay": "1.921s",
+        "animationDelay": "1.921s"
+      },
+      {
+        "id": "upload-file",
+        "label": "4 · await upload file",
+        "step": "3",
+        "delay": "3.521s",
+        "animationDelay": "3.521s"
+      },
+      {
+        "id": "write-a",
+        "label": "5.a · write A [parallel P]",
+        "step": "4",
+        "delay": "5.121s",
+        "animationDelay": "5.121s"
+      },
+      {
+        "id": "write-b",
+        "label": "5.b · write B [parallel P]",
+        "step": "5",
+        "delay": "6.721s",
+        "animationDelay": "6.721s"
+      }
+    ]
+  },
+  {
+    "name": "parallel-sequence-hover",
+    "active": "page",
+    "edges": [
+      "classify-call",
+      "extract-call",
+      "save-record",
+      "upload-file",
+      "write-a",
+      "write-b"
+    ],
+    "focus": null
+  },
+  {
+    "name": "parallel-sequence-focus-without-row-hover",
+    "focus": "page",
+    "edges": [
+      {
+        "id": "classify-call",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "extract-call",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "save-record",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "upload-file",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-a",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      },
+      {
+        "id": "write-b",
+        "tag": "g",
+        "match": true,
+        "opacity": "1"
+      }
+    ],
+    "rows": [
+      {
+        "id": "classify-call",
+        "text": "OUT →\nClassify API\n1 · await classify PDF"
+      },
+      {
+        "id": "extract-call",
+        "text": "OUT →\nExtract API\n2 · await extract PDF"
+      },
+      {
+        "id": "save-record",
+        "text": "OUT →\nRecord DB\n3 · await save record"
+      },
+      {
+        "id": "upload-file",
+        "text": "OUT →\nObject store\n4 · await upload file"
+      },
+      {
+        "id": "write-a",
+        "text": "OUT →\nStore A\n5.a · write A [parallel P]"
+      },
+      {
+        "id": "write-b",
+        "text": "OUT →\nStore B\n5.b · write B [parallel P]"
+      }
+    ]
+  },
+  {
+    "name": "parallel-sequence-passport-keyboard-preview",
+    "before": "write-a",
+    "after": "write-b"
+  },
+  {
+    "name": "retired-views",
+    "ui": false
+  }
+]

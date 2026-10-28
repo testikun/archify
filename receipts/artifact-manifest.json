@@ -1,0 +1,416 @@
+{
+  "createdAt": "2026-10-28T02:25:29.944090+00:00",
+  "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e",
+  "files": [
+    {
+      "path": "inputs/ablation-architecture-no-cards.json",
+      "bytes": 3456,
+      "sha256": "7f8491102424f26018084f6402ba9f07daab55d0489ed35cec1f2d4b9aefb77f"
+    },
+    {
+      "path": "inputs/ablation-architecture-no-numbers.json",
+      "bytes": 3843,
+      "sha256": "9023b6b180818b37433470fa69cac8a3d37a5f86d157d9b60b835f1f43d6f764"
+    },
+    {
+      "path": "inputs/ablation-sequence-no-parallel-prose.json",
+      "bytes": 2528,
+      "sha256": "691ee9860ac565536486e002ff1b1d1b772c49e13cdce945b322b725c6275e82"
+    },
+    {
+      "path": "inputs/control-architecture-reversed-array.json",
+      "bytes": 3877,
+      "sha256": "9ba5e2d834e53c4691b9869352b28f8cdc5ccf7238a2cdc13606a744cc9f0f9c"
+    },
+    {
+      "path": "inputs/parallel-architecture.json",
+      "bytes": 3877,
+      "sha256": "3efc7b6f9481a6a35042037a3dca91197315a25d4ce831fb4ffc16703fd59115"
+    },
+    {
+      "path": "inputs/parallel-sequence.json",
+      "bytes": 2668,
+      "sha256": "97d5e92392dca49cc4548a61ca51ec0106da3b47275f0fea21b20b828b2ec758"
+    },
+    {
+      "path": "inputs/parallel-story-brief.json",
+      "bytes": 1939,
+      "sha256": "42b51b181e66632251cad22352a9bc6dec3fdb49e9b955227bd06ef97b0278cd"
+    },
+    {
+      "path": "inputs/probe-retired-views.json",
+      "bytes": 4073,
+      "sha256": "ab7d310a876397b80a3369ed7d48c39da22f14af04c4a55475b2d9402e1ed7f5"
+    },
+    {
+      "path": "inputs/probe-sequence-same-y.json",
+      "bytes": 2668,
+      "sha256": "cd6b1f60cf2ba2c3cd775ff6da43906f7edde4fc4f08918e042029ba83aa3ee2"
+    },
+    {
+      "path": "inputs/probe-unapproved-order.json",
+      "bytes": 4001,
+      "sha256": "072330f6b2850be1f8ee81b25879ef596ebf15915fd7464415ccb63da3f959c3"
+    },
+    {
+      "path": "inputs/serial-architecture.json",
+      "bytes": 2593,
+      "sha256": "d7663777ea0cfbd8fc809da200bdb0ac0592483add38ee844c7463f397d339ab"
+    },
+    {
+      "path": "inputs/serial-sequence.json",
+      "bytes": 1724,
+      "sha256": "806c3155f39c8ddc5dc929df32f5151500425173bc3c2ca636924c4ca0285623"
+    },
+    {
+      "path": "artifacts/ablation-architecture-no-cards.delivery.json",
+      "bytes": 640,
+      "sha256": "74d197f766a9d97d07082df9af0a4cf93156c1c7d9c2169edc0101220b942208"
+    },
+    {
+      "path": "artifacts/ablation-architecture-no-cards.html",
+      "bytes": 870206,
+      "sha256": "ca28b68ec7e83c0ecf20f4a1b326ad9529c55d3f763b735aaa21d6e6195d1d6f"
+    },
+    {
+      "path": "artifacts/ablation-architecture-no-numbers.delivery.json",
+      "bytes": 644,
+      "sha256": "47942a25726dc32a5161cfbeeda64ec3bb75f6b4aaa3a8a8c552dfab0fc0e58f"
+    },
+    {
+      "path": "artifacts/ablation-architecture-no-numbers.html",
+      "bytes": 870641,
+      "sha256": "e5d1cd05b02af23094cdbd6078f9dedee28ba97eb239f727a178d26de9fd250b"
+    },
+    {
+      "path": "artifacts/ablation-sequence-no-parallel-prose.delivery.json",
+      "bytes": 646,
+      "sha256": "87c3ea2276fd59d7b0537ec2c016db77d36bf17282b20834f2806822a728213e"
+    },
+    {
+      "path": "artifacts/ablation-sequence-no-parallel-prose.html",
+      "bytes": 861561,
+      "sha256": "765f05e1a7f4fb08d9c1641aced9bcad672ec4ca8c955d4fae2ac3fa8f8d6c2f"
+    },
+    {
+      "path": "artifacts/parallel-architecture.delivery.json",
+      "bytes": 622,
+      "sha256": "88b195fe5bdad3eb64f22ffb324d508bbff5e8f6d6d9aabb05dd4f3aef2d14e7"
+    },
+    {
+      "path": "artifacts/parallel-architecture.html",
+      "bytes": 870742,
+      "sha256": "e8401080ae5ed94ce85e382fa23a1db2300a9dc7ff9bad8f642e654c711cb985"
+    },
+    {
+      "path": "artifacts/parallel-sequence.delivery.json",
+      "bytes": 610,
+      "sha256": "5670b605a56c658795fbfddee7b02b4728aa60a0dd7f18fa03f545dd481bae6b"
+    },
+    {
+      "path": "artifacts/parallel-sequence.html",
+      "bytes": 862101,
+      "sha256": "8188e447c27aad54837373ab206cb0eb940d9267d485ce6045fda94775217ad9"
+    },
+    {
+      "path": "artifacts/parallel-story.html",
+      "bytes": 1528417,
+      "sha256": "9dc23c076fcf60b4ec0c1960d1a98907bff6d653b81162ac804c411e30b29249"
+    },
+    {
+      "path": "artifacts/probe-retired-views.delivery.json",
+      "bytes": 618,
+      "sha256": "39fedb89d1fef168e18b04b07fe35fb086c1968b449688f863cbc374f6640e39"
+    },
+    {
+      "path": "artifacts/probe-retired-views.html",
+      "bytes": 870742,
+      "sha256": "e8401080ae5ed94ce85e382fa23a1db2300a9dc7ff9bad8f642e654c711cb985"
+    },
+    {
+      "path": "artifacts/serial-architecture.delivery.json",
+      "bytes": 618,
+      "sha256": "2edac7448e9c856161bae480ff00af9dfc3190b6f89179f9473bec5cac699765"
+    },
+    {
+      "path": "artifacts/serial-architecture.html",
+      "bytes": 863090,
+      "sha256": "7fe2207a4e44c1273f5b374b25f16cb5a06d87ae0770c6294f7af39907968139"
+    },
+    {
+      "path": "artifacts/serial-sequence.delivery.json",
+      "bytes": 606,
+      "sha256": "e4d4810e9344885349a055d261be5afdeab76d3e935ced7db4b775f26958e23b"
+    },
+    {
+      "path": "artifacts/serial-sequence.html",
+      "bytes": 855961,
+      "sha256": "1793f4ffc8a2d75edfe58ea2eb65bde853998a6628d7a8d287b947d12948468d"
+    },
+    {
+      "path": "exports/ablation-architecture-no-cards.svg",
+      "bytes": 188784,
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84"
+    },
+    {
+      "path": "exports/ablation-architecture-no-numbers.svg",
+      "bytes": 188683,
+      "sha256": "3a7995db66f482b8125f7d591909930f096297da18fd6e87328d18c20b082c2b"
+    },
+    {
+      "path": "exports/ablation-sequence-no-parallel-prose.svg",
+      "bytes": 176926,
+      "sha256": "8481718011b847774d6bc4cc69377060cf5693c1a2b9782536f7a1d765091f62"
+    },
+    {
+      "path": "exports/parallel-architecture-focused.svg",
+      "bytes": 188784,
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84"
+    },
+    {
+      "path": "exports/parallel-architecture.png",
+      "bytes": 767527,
+      "sha256": "d573b6c75f7256cdfd7bef9b6eb8c8d0eba3ce51b13132404fd4277fe4479a18"
+    },
+    {
+      "path": "exports/parallel-architecture.svg",
+      "bytes": 188784,
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84"
+    },
+    {
+      "path": "exports/parallel-sequence-focused.svg",
+      "bytes": 177466,
+      "sha256": "37ae3554388b6ee4c6bdab276ed9752511167b00fb47dcefd611513e34eb6ba1"
+    },
+    {
+      "path": "exports/parallel-sequence.png",
+      "bytes": 486788,
+      "sha256": "c4505767f9971bf9d78d6b875f857d662d7a78be1d844a209ad24989d693e5ad"
+    },
+    {
+      "path": "exports/parallel-sequence.svg",
+      "bytes": 177466,
+      "sha256": "37ae3554388b6ee4c6bdab276ed9752511167b00fb47dcefd611513e34eb6ba1"
+    },
+    {
+      "path": "exports/probe-retired-views.svg",
+      "bytes": 188784,
+      "sha256": "119c922004a135b125d6390c0893bf972b28cded5ce441f86234a72cda525b84"
+    },
+    {
+      "path": "exports/serial-architecture-focused.svg",
+      "bytes": 178174,
+      "sha256": "9be0eb9f9d5811146ae9e3ae19033a41100005f013f51bdb14e5cf0cf228d6e6"
+    },
+    {
+      "path": "exports/serial-architecture.png",
+      "bytes": 507010,
+      "sha256": "7ca4dc4d041bd7e72d1e7710b067cf26b467ce160adeea31b95eaf3fddccc1f8"
+    },
+    {
+      "path": "exports/serial-architecture.svg",
+      "bytes": 178174,
+      "sha256": "9be0eb9f9d5811146ae9e3ae19033a41100005f013f51bdb14e5cf0cf228d6e6"
+    },
+    {
+      "path": "exports/serial-sequence-focused.svg",
+      "bytes": 167610,
+      "sha256": "da2966ce34907b5787f2f34f755ec7a123be6923b68bc85059b4ffb6c896064b"
+    },
+    {
+      "path": "exports/serial-sequence.png",
+      "bytes": 422885,
+      "sha256": "ba048f6ffef54e438cf4537b8d942752523a63506d448d62fd46471daf821863"
+    },
+    {
+      "path": "exports/serial-sequence.svg",
+      "bytes": 167610,
+      "sha256": "da2966ce34907b5787f2f34f755ec7a123be6923b68bc85059b4ffb6c896064b"
+    },
+    {
+      "path": "exports/story-normal.svg",
+      "bytes": 189043,
+      "sha256": "a7df67da3ffa0aa68c1f6e1d76d388bb430977268f372fc5480c42f676d0eb14"
+    },
+    {
+      "path": "exports/story-reduced.svg",
+      "bytes": 189043,
+      "sha256": "a7df67da3ffa0aa68c1f6e1d76d388bb430977268f372fc5480c42f676d0eb14"
+    },
+    {
+      "path": "screenshots/ablation-architecture-no-cards.png",
+      "bytes": 87577,
+      "sha256": "2af60beec24f6adb65e84bd882366f49d0665f0afa7832ca065041e804cbc024"
+    },
+    {
+      "path": "screenshots/ablation-architecture-no-numbers.png",
+      "bytes": 87989,
+      "sha256": "60e8cb139bb5f9849fcffaeac38e604b35ddabac2a69f25b0c4454c5269f9ca5"
+    },
+    {
+      "path": "screenshots/ablation-sequence-no-parallel-prose.png",
+      "bytes": 87398,
+      "sha256": "599e7d7a4c9ad160d35e9289767b4a3228550f8945d2ddfa615291a7aec338c7"
+    },
+    {
+      "path": "screenshots/parallel-architecture-default.png",
+      "bytes": 88855,
+      "sha256": "e0219377b75d4e5c507e7757e8e1f1aba5673032a68149a89d7a0386fb78b0e0"
+    },
+    {
+      "path": "screenshots/parallel-architecture-focus-without-row-hover.png",
+      "bytes": 139568,
+      "sha256": "a2cdaf948813ad09e214581d35a24633c3d0caa26d6c9a38d1a3a6e8babfbf98"
+    },
+    {
+      "path": "screenshots/parallel-architecture-focus.png",
+      "bytes": 144123,
+      "sha256": "229a3727fd3d0364cc4762176a3d5aba25768641d8ba1021a544083de9d9dcfe"
+    },
+    {
+      "path": "screenshots/parallel-architecture-hover.png",
+      "bytes": 100158,
+      "sha256": "4d0e3bf59b347d6266902bdf3629e4177462ff99796d3eaf5b2c4da3f176b488"
+    },
+    {
+      "path": "screenshots/parallel-architecture-reduced.png",
+      "bytes": 88858,
+      "sha256": "b94392fbbeb358d2f3cf4a1c75d4bba45a6bd8d5614113e0f0ed46bfdf1f2e3c"
+    },
+    {
+      "path": "screenshots/parallel-sequence-default.png",
+      "bytes": 96002,
+      "sha256": "515bf7be17cc1dfa8c46bef8c18d4f1f4f372be6c9cb651324e36eaec7ddbed2"
+    },
+    {
+      "path": "screenshots/parallel-sequence-focus-without-row-hover.png",
+      "bytes": 146672,
+      "sha256": "cc28b57241ad88d66e86dd750b2f41a5c5409b2105ea3c87dc7d0852ed747906"
+    },
+    {
+      "path": "screenshots/parallel-sequence-focus.png",
+      "bytes": 146674,
+      "sha256": "7ca0d1d2cb4f91e6acbae1dad517cde87d0200b8e3979d3c415d552369472172"
+    },
+    {
+      "path": "screenshots/parallel-sequence-hover.png",
+      "bytes": 110121,
+      "sha256": "33e83fc4b9a60fca531e31026381905dbe718208079a262c516856b349093f82"
+    },
+    {
+      "path": "screenshots/parallel-sequence-reduced.png",
+      "bytes": 96003,
+      "sha256": "be71bfeafbb00296c85420e0a8fea71dd05d8f4ae6d0ca2eb180509eb0ef84ea"
+    },
+    {
+      "path": "screenshots/probe-retired-views.png",
+      "bytes": 88855,
+      "sha256": "e0219377b75d4e5c507e7757e8e1f1aba5673032a68149a89d7a0386fb78b0e0"
+    },
+    {
+      "path": "screenshots/serial-architecture-default.png",
+      "bytes": 91914,
+      "sha256": "1f2c09efb82f2bbbe734387cfe500ed458b9d7ff95ac15eed23cc17899634de5"
+    },
+    {
+      "path": "screenshots/serial-architecture-focus.png",
+      "bytes": 141990,
+      "sha256": "c8affb6494a910763c6eb00c2502ed01c1ab3568eac24a81b282e08243df9ed8"
+    },
+    {
+      "path": "screenshots/serial-architecture-reduced.png",
+      "bytes": 91858,
+      "sha256": "e39aef4402b77fe8118ae2448c9f6dbbfbe075ce9bb3ab53a43c5ca8454e1c2f"
+    },
+    {
+      "path": "screenshots/serial-sequence-default.png",
+      "bytes": 75830,
+      "sha256": "4c9891e48008e0084f5f0c0ae436a3f31c602fdb3d3e92784778ceb484a70651"
+    },
+    {
+      "path": "screenshots/serial-sequence-focus.png",
+      "bytes": 121088,
+      "sha256": "a0e060187e54a02da9f129682b6feaae9afa183f17a1ab77630f7f2cd41370fb"
+    },
+    {
+      "path": "screenshots/serial-sequence-reduced.png",
+      "bytes": 75807,
+      "sha256": "67f60d72de4f8015444cc9ea3caed00d3c64fee638064a8d6aec167a20a3a9d4"
+    },
+    {
+      "path": "screenshots/story-normal-back-to-still.png",
+      "bytes": 87577,
+      "sha256": "2af60beec24f6adb65e84bd882366f49d0665f0afa7832ca065041e804cbc024"
+    },
+    {
+      "path": "screenshots/story-normal-classify-call.png",
+      "bytes": 248380,
+      "sha256": "097a6e2b9551c83847f23161b5a5ad339fe7200b71927e9f2caee37abbdca43d"
+    },
+    {
+      "path": "screenshots/story-normal-extract-call.png",
+      "bytes": 247224,
+      "sha256": "3cb988aa09657b1e9d05872987bb8eabf85fe786d3fbbb26658fa8e8632d1ab2"
+    },
+    {
+      "path": "screenshots/story-normal-write-a.png",
+      "bytes": 254941,
+      "sha256": "608ad33fb396f72a1b0172aa73727536ee8be06277447706a42ff03a82391083"
+    },
+    {
+      "path": "screenshots/story-reduced-back-to-still.png",
+      "bytes": 87577,
+      "sha256": "2af60beec24f6adb65e84bd882366f49d0665f0afa7832ca065041e804cbc024"
+    },
+    {
+      "path": "screenshots/story-reduced-classify-call.png",
+      "bytes": 247935,
+      "sha256": "c1b14747ad7294f5bf70641a7fcc92bb585fbc4e23d2af0da3ae7108ade30106"
+    },
+    {
+      "path": "screenshots/story-reduced-extract-call.png",
+      "bytes": 245374,
+      "sha256": "67ab01281cfec2e22d91f5b3d1ca9a2b31a4d0983cc46784b7be5685e61dc41e"
+    },
+    {
+      "path": "screenshots/story-reduced-write-a.png",
+      "bytes": 252813,
+      "sha256": "4165eeece032d553ae870ff3dba2e0771cb397be85c0732ac8228aca08ef6942"
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "bytes": 12539,
+      "sha256": "527980eecceb3f004f5aebad52a0e3a53b52951e6db794c86062d281419799d9"
+    },
+    {
+      "path": "scripts/hydrate-source.py",
+      "bytes": 2340,
+      "sha256": "b8e0b89bfc61dcbe91745818dabc8cb2df4bfcb688062c0c6716a30675b7f712"
+    },
+    {
+      "path": "scripts/make-inputs.py",
+      "bytes": 5469,
+      "sha256": "45ce380be15a3f28020b8c1cc5f7846cd768cdd95562a2fd95a0c3e07c82408d"
+    },
+    {
+      "path": "scripts/refresh-github.py",
+      "bytes": 1915,
+      "sha256": "eb43ee2fe65da780e9a9fbd6467958f46453e918ea1b9a8c33636d8374d265f9"
+    },
+    {
+      "path": "scripts/render.py",
+      "bytes": 1776,
+      "sha256": "62c73ae94f596fff9b77bd6cd2ec78735efddcba983a9d12e814569c9f9c2edb"
+    },
+    {
+      "path": "scripts/summarize.py",
+      "bytes": 5172,
+      "sha256": "a23a0c380ad4ebc0a678aad85f3e49b64bdeaf31d3d2359e1ef80343c8645d8d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 28876,
+      "sha256": "36a9249cb9c30da682641c93a0490bf70dbfb6f5a711d1a5a94aa458da415f19"
+    }
+  ]
+}

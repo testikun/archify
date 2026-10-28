@@ -1,0 +1,164 @@
+{
+  "sourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e",
+  "time": "2026-10-28T02:00:59.497800+00:00",
+  "commands": [
+    {
+      "name": "ablation-architecture-no-cards.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-cards.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "ablation-architecture-no-numbers.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "ablation-sequence-no-parallel-prose.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "control-architecture-reversed-array.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/control-architecture-reversed-array.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "parallel-architecture.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/parallel-architecture.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "parallel-sequence.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/parallel-sequence.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "probe-retired-views.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/probe-retired-views.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "probe-sequence-same-y.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/probe-sequence-same-y.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "probe-unapproved-order.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/probe-unapproved-order.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "serial-architecture.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "architecture",
+        "$EVIDENCE/inputs/serial-architecture.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "serial-sequence.validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "validate",
+        "sequence",
+        "$EVIDENCE/inputs/serial-sequence.json",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "story-scan",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "story",
+        "scan",
+        "$EVIDENCE/artifacts/parallel-architecture.html",
+        "--json"
+      ],
+      "exit": 1
+    },
+    {
+      "name": "story-attach",
+      "command": [
+        "node",
+        "$EVIDENCE/source-pinned/archify/bin/archify.mjs",
+        "story",
+        "attach",
+        "$EVIDENCE/artifacts/parallel-architecture.html",
+        "$EVIDENCE/inputs/parallel-story-brief.json",
+        "$EVIDENCE/artifacts/parallel-story.html",
+        "--json"
+      ],
+      "exit": 1
+    }
+  ]
+}

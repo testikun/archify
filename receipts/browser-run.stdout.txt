@@ -1,0 +1,6 @@
+serial-architecture captured
+serial-sequence captured
+parallel-architecture captured
+parallel-sequence captured
+story-normal captured
+story-reduced captured

@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "bfe03f33-7a4f-4b4f-b069-a04912eba24a",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/ablation-architecture-no-numbers.json",
+  "output": "$EVIDENCE/artifacts/ablation-architecture-no-numbers.html",
+  "specification": {
+    "sha256": "9023b6b180818b37433470fa69cac8a3d37a5f86d157d9b60b835f1f43d6f764",
+    "bytes": 3843
+  },
+  "artifact": {
+    "sha256": "e5d1cd05b02af23094cdbd6078f9dedee28ba97eb239f727a178d26de9fd250b",
+    "bytes": 870641
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "standard",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 5,
+    "compositionIssues": [
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await classify PDF",
+        "labelRelationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "otherRelationship": {
+          "id": "extract-call",
+          "from": "page",
+          "to": "extract",
+          "label": "await extract PDF",
+          "collectionIndex": 1,
+          "artifactIndex": 2
+        },
+        "segmentIndex": 2,
+        "labelRect": {
+          "x": 386.8,
+          "y": 258.5,
+          "width": 96.4,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 96.4,
+        "threshold": 2,
+        "from": [
+          284,
+          261
+        ],
+        "to": [
+          610,
+          261
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await save record",
+        "labelRelationship": {
+          "id": "save-record",
+          "from": "page",
+          "to": "record",
+          "label": "await save record",
+          "collectionIndex": 2,
+          "artifactIndex": 3
+        },
+        "otherRelationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "segmentIndex": 1,
+        "labelRect": {
+          "x": 389.2,
+          "y": 376.5,
+          "width": 91.6,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 14,
+        "threshold": 2,
+        "from": [
+          435,
+          406
+        ],
+        "to": [
+          435,
+          151
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/label-route-clearance",
+        "label": "await upload file",
+        "labelRelationship": {
+          "id": "upload-file",
+          "from": "page",
+          "to": "object",
+          "label": "await upload file",
+          "collectionIndex": 3,
+          "artifactIndex": 4
+        },
+        "otherRelationship": {
+          "id": "write-b",
+          "from": "page",
+          "to": "store-b",
+          "label": "write B [parallel P]",
+          "collectionIndex": 5,
+          "artifactIndex": 6
+        },
+        "segmentIndex": 0,
+        "labelRect": {
+          "x": 389.2,
+          "y": 435.5,
+          "width": 91.6,
+          "height": 14
+        },
+        "clearance": 0,
+        "intersectionLength": 45.8,
+        "threshold": 2,
+        "from": [
+          260,
+          446
+        ],
+        "to": [
+          435,
+          446
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/ambiguous-corridor",
+        "relationship": {
+          "id": "classify-call",
+          "from": "page",
+          "to": "classify",
+          "label": "await classify PDF",
+          "collectionIndex": 0,
+          "artifactIndex": 1
+        },
+        "otherRelationship": {
+          "id": "save-record",
+          "from": "page",
+          "to": "record",
+          "label": "await save record",
+          "collectionIndex": 2,
+          "artifactIndex": 3
+        },
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1,
+        "overlapLength": 35,
+        "from": [
+          435,
+          371
+        ],
+        "to": [
+          435,
+          406
+        ]
+      },
+      {
+        "severity": "warning",
+        "code": "composition/ambiguous-corridor",
+        "relationship": {
+          "id": "upload-file",
+          "from": "page",
+          "to": "object",
+          "label": "await upload file",
+          "collectionIndex": 3,
+          "artifactIndex": 4
+        },
+        "otherRelationship": {
+          "id": "write-b",
+          "from": "page",
+          "to": "store-b",
+          "label": "write B [parallel P]",
+          "collectionIndex": 5,
+          "artifactIndex": 6
+        },
+        "segmentIndex": 1,
+        "otherSegmentIndex": 1,
+        "overlapLength": 35,
+        "from": [
+          435,
+          446
+        ],
+        "to": [
+          435,
+          481
+        ]
+      }
+    ]
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d16fe22e-55f9-4e98-b660-d14b144de266",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/parallel-sequence.json",
+  "output": "$EVIDENCE/artifacts/parallel-sequence.html",
+  "specification": {
+    "sha256": "97d5e92392dca49cc4548a61ca51ec0106da3b47275f0fea21b20b828b2ec758",
+    "bytes": 2668
+  },
+  "artifact": {
+    "sha256": "8188e447c27aad54837373ab206cb0eb940d9267d485ce6045fda94775217ad9",
+    "bytes": 862101
+  }
+}

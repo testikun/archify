@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "$EVIDENCE/inputs/control-architecture-reversed-array.json",
+  "error": "Architecture layout validation failed:\n- Label \"5.b · write B [parallel P]\" overlaps component \"store-a\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [519, 554, 135, 14]\n  component \"store-a\" rect: [610, 555, 190, 72]\n  Suggested fix: set labelAt [586, 641] or set labelDy 78 (below); or set labelAt [586, 547] or set labelDy -16 (above)",
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Label \"5.b · write B [parallel P]\" overlaps component \"store-a\" — adjust labelDx/labelDy/labelSegment or set labelAt.\n  label rect: [519, 554, 135, 14]\n  component \"store-a\" rect: [610, 555, 190, 72]\n  Suggested fix: set labelAt [586, 641] or set labelDy 78 (below); or set labelAt [586, 547] or set labelDy -16 (above)",
+      "subject": {
+        "diagramType": "architecture"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "21361840-760f-4365-bfa2-4c5d2a2c562c",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "$EVIDENCE/inputs/ablation-sequence-no-parallel-prose.json",
+  "output": "$EVIDENCE/artifacts/ablation-sequence-no-parallel-prose.html",
+  "specification": {
+    "sha256": "691ee9860ac565536486e002ff1b1d1b772c49e13cdce945b322b725c6275e82",
+    "bytes": 2528
+  },
+  "artifact": {
+    "sha256": "765f05e1a7f4fb08d9c1641aced9bcad672ec4ca8c955d4fae2ac3fa8f8d6c2f",
+    "bytes": 861561
+  }
+}
