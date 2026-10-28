@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "5934a319-79df-44cb-875e-3a6f8882f9b4",
+  "ok": true,
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/minimal.json",
+  "output": "$EVIDENCE/runs/baseline/artifacts/minimal.html",
+  "specification": {
+    "sha256": "dafff278af774925409e6e7318a5d771815d39ce11fb16794c3bc6583549fe9e",
+    "bytes": 502
+  },
+  "artifact": {
+    "sha256": "834caa2194eef79029315aff674af11b8f6de5ab859f2325abed0a3b68e652fa",
+    "bytes": 851855
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "timeout"
+  }
+}

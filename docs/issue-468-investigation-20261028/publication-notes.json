@@ -1,0 +1,39 @@
+{
+  "redactedPathFiles": [
+    "runs/baseline/manifest.json",
+    "runs/baseline/artifacts/synthetic-11-no-cards.delivery.json",
+    "runs/baseline/artifacts/public-deployment.delivery.json",
+    "runs/baseline/artifacts/synthetic-11-cards.delivery.json",
+    "runs/baseline/artifacts/minimal.delivery.json",
+    "runs/baseline/logs/invalid-viewbox.validate.stdout.json",
+    "runs/baseline/logs/synthetic-11-cards.visual-check.stdout.json",
+    "runs/baseline/logs/synthetic-11-no-cards.validate.stdout.json",
+    "runs/baseline/logs/synthetic-11-all-main.validate.stdout.json",
+    "runs/baseline/logs/minimal.validate.stdout.json",
+    "runs/baseline/logs/public-deployment.deliver.stdout.json",
+    "runs/baseline/logs/minimal.visual-check.stdout.json",
+    "runs/baseline/logs/synthetic-11-cards.deliver.stdout.json",
+    "runs/baseline/logs/synthetic-11-no-cards.deliver.stdout.json",
+    "runs/baseline/logs/minimal.deliver.stdout.json",
+    "runs/baseline/logs/synthetic-11-no-cards.visual-check.stdout.json",
+    "runs/baseline/logs/invalid-yoffset.validate.stdout.json",
+    "runs/baseline/logs/public-deployment.validate.stdout.json",
+    "runs/baseline/logs/public-deployment.visual-check.stdout.json",
+    "runs/baseline/logs/synthetic-11-cards.validate.stdout.json",
+    "runs/baseline/browser/minimal/minimal.visual-check.json",
+    "runs/baseline/browser/public-deployment/public-deployment.visual-check.json",
+    "runs/baseline/browser/synthetic-11-no-cards/synthetic-11-no-cards.visual-check.json",
+    "runs/baseline/browser/synthetic-11-cards/synthetic-11-cards.visual-check.json",
+    "runs/tall-no-cards/manifest.json",
+    "runs/tall-no-cards/artifacts/synthetic-tall.delivery.json",
+    "runs/tall-no-cards/logs/synthetic-tall.visual-check.stdout.json",
+    "runs/tall-no-cards/logs/synthetic-tall.validate.stdout.json",
+    "runs/tall-no-cards/logs/synthetic-tall.deliver.stdout.json",
+    "runs/tall-no-cards/browser/synthetic-tall/synthetic-tall.visual-check.json"
+  ],
+  "unchangedBytes": "All input JSON, rendered HTML, and PNG screenshots. Only local path strings in the listed text evidence are redacted.",
+  "excludedRuns": [
+    "tall-control (exploratory card prose did not match the tall topology)",
+    "runner-smoke (script smoke only)"
+  ]
+}

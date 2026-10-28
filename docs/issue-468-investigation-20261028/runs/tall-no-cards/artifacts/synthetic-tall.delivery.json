@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "f86da095-57ea-41d6-8b42-8100adaa7f31",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/synthetic-tall.json",
+  "output": "$EVIDENCE/runs/tall-no-cards/artifacts/synthetic-tall.html",
+  "specification": {
+    "sha256": "5243c91f192440b78de6e64b2e880b5a68fda70bc5f7ac8701d54a3af574db8f",
+    "bytes": 2613
+  },
+  "artifact": {
+    "sha256": "e16624f872d75d0cb904b28f605a2ff7927a4068fc4d2f7b49f2985602968859",
+    "bytes": 869582
+  }
+}

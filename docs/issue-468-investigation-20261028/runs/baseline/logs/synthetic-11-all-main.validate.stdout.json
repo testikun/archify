@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/synthetic-11-all-main.json",
+  "error": "Lifecycle layout validation failed:\n- The lifecycle is 2452px wide; at 9px text it stays readable on a desktop only up to 1395px. Transition labels or notes widen their main-path gaps.",
+  "diagnostics": [
+    {
+      "code": "lifecycle/too-wide",
+      "severity": "error",
+      "message": "The lifecycle is 2452px wide; at 9px text it stays readable on a desktop only up to 1395px. Transition labels or notes widen their main-path gaps.",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/mainPath"
+      },
+      "evidence": {
+        "viewBoxWidth": 2452,
+        "budgetPx": 1395,
+        "mainPathStates": 11,
+        "lowerRowStates": 0,
+        "wideStepLabels": [
+          {
+            "from": "queued",
+            "to": "checked",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "checked",
+            "to": "ready",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "ready",
+            "to": "running",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "running",
+            "to": "done",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "done",
+            "to": "audit",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "audit",
+            "to": "archive",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "archive",
+            "to": "retained",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "retained",
+            "to": "expired",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "expired",
+            "to": "purging",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          },
+          {
+            "from": "purging",
+            "to": "removed",
+            "label": "advance",
+            "excessPx": 8,
+            "widthDriver": "label"
+          }
+        ],
+        "spacingWideners": []
+      },
+      "supportedFixes": [
+        "review the width-driving main-path transition text: \"queued\" -> \"checked\" label (+8px), \"checked\" -> \"ready\" label (+8px), \"ready\" -> \"running\" label (+8px), \"running\" -> \"done\" label (+8px), \"done\" -> \"audit\" label (+8px), \"audit\" -> \"archive\" label (+8px), \"archive\" -> \"retained\" label (+8px), \"retained\" -> \"expired\" label (+8px), \"expired\" -> \"purging\" label (+8px), \"purging\" -> \"removed\" label (+8px); preserve every condition; shorten wording only, or move complete detail to a card explicitly associated with the same transition; shorter wording may not resolve other layout constraints",
+        "shorten state labels and sublabels",
+        "move secondary phases off mainPath or merge adjacent phases",
+        "split the lifecycle into two diagrams"
+      ]
+    }
+  ]
+}

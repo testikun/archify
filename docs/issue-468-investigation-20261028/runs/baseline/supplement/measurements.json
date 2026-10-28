@@ -1,0 +1,5777 @@
+{
+  "measuredAt": "2026-10-28T01:55:20.464Z",
+  "note": "Agent-operated DOM and reachability measurements; no human or screen-reader review.",
+  "observations": [
+    {
+      "name": "minimal",
+      "width": 1440,
+      "height": 900,
+      "artifactSha256": "834caa2194eef79029315aff674af11b8f6de5ab859f2325abed0a3b68e652fa",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 40,
+          "headerPx": 58,
+          "diagramChromePx": 535,
+          "svgPx": 255,
+          "cardsPx": 0,
+          "viewBoxHeight": 170
+        },
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1376,
+        "diagramWidth": 960,
+        "viewBoxWidth": 640,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 10,
+        "minimumProjectedNonEdgeTextPx": 12,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "finish",
+        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "edge",
+          "id": null,
+          "from": "queued",
+          "to": "done"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 208.5,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 0,
+        "viewerChromeActive": false
+      },
+      "measured": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "rawScrollHeight": 1001,
+        "rawScrollWidth": 1440,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 240,
+          "y": 345.5,
+          "width": 960,
+          "height": 255,
+          "bottom": 600.5
+        },
+        "viewBox": "0 0 640 170",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 18,
+            "visible": true,
+            "box": {
+              "x": 396.59375,
+              "y": 425,
+              "width": 64.8125,
+              "height": 23,
+              "bottom": 448
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 18,
+            "visible": true,
+            "box": {
+              "x": 728.3984375,
+              "y": 425,
+              "width": 43.203125,
+              "height": 23,
+              "bottom": 448
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "finish",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 15,
+            "visible": true,
+            "box": {
+              "x": 562.5,
+              "y": 404.75,
+              "width": 54,
+              "height": 20,
+              "bottom": 424.75
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "done"
+        ],
+        "edgeIds": [],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "done"
+          }
+        ],
+        "cards": [],
+        "cardItems": [],
+        "railBox": {
+          "x": 32,
+          "y": 884,
+          "width": 1376,
+          "height": 97.484375,
+          "bottom": 981.484375
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 2,
+          "edges": 1,
+          "cards": 0,
+          "items": 0
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "minimal",
+      "width": 1920,
+      "height": 1080,
+      "artifactSha256": "834caa2194eef79029315aff674af11b8f6de5ab859f2325abed0a3b68e652fa",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 689,
+          "svgPx": 255,
+          "cardsPx": 0,
+          "viewBoxHeight": 170
+        },
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1856,
+        "diagramWidth": 960,
+        "viewBoxWidth": 640,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 10,
+        "minimumProjectedNonEdgeTextPx": 12,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "finish",
+        "minimumProjectedNodeTextDetail": "edge",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "edge",
+          "id": null,
+          "from": "queued",
+          "to": "done"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 285.5,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 0,
+        "viewerChromeActive": false
+      },
+      "measured": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "rawScrollHeight": 1181,
+        "rawScrollWidth": 1920,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 480,
+          "y": 436.5,
+          "width": 960,
+          "height": 255,
+          "bottom": 691.5
+        },
+        "viewBox": "0 0 640 170",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 18,
+            "visible": true,
+            "box": {
+              "x": 636.59375,
+              "y": 516,
+              "width": 64.8125,
+              "height": 23,
+              "bottom": 539
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 18,
+            "visible": true,
+            "box": {
+              "x": 968.3984375,
+              "y": 516,
+              "width": 43.203125,
+              "height": 23,
+              "bottom": 539
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "finish",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 15,
+            "visible": true,
+            "box": {
+              "x": 802.5,
+              "y": 495.75,
+              "width": 54,
+              "height": 20,
+              "bottom": 515.75
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "done"
+        ],
+        "edgeIds": [],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "done"
+          }
+        ],
+        "cards": [],
+        "cardItems": [],
+        "railBox": {
+          "x": 32,
+          "y": 1052,
+          "width": 1856,
+          "height": 97.484375,
+          "bottom": 1149.484375
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 2,
+          "edges": 1,
+          "cards": 0,
+          "items": 0
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "public-deployment",
+      "width": 1440,
+      "height": 900,
+      "artifactSha256": "75fdb5a9df6204d55cc1592d70a5cc122c73d7004871f8c2626ab5d4b9f73e61",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 713,
+          "cardsPx": 0,
+          "viewBoxHeight": 680
+        },
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1376,
+        "diagramWidth": 1346,
+        "viewBoxWidth": 1284,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "change accepted",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "rawScrollHeight": 1163,
+        "rawScrollWidth": 1440,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 47,
+          "y": 67,
+          "width": 1346,
+          "height": 712.828125,
+          "bottom": 779.828125
+        },
+        "viewBox": "0 0 1284 680",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 156.4564208984375,
+              "y": 151.48973083496094,
+              "width": 45.265625,
+              "height": 17,
+              "bottom": 168.48973083496094
+            }
+          },
+          {
+            "text": "Building",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 379.5382385253906,
+              "y": 151.48973083496094,
+              "width": 60.343780517578125,
+              "height": 17,
+              "bottom": 168.48973083496094
+            }
+          },
+          {
+            "text": "Verifying",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 631.5443115234375,
+              "y": 151.48973083496094,
+              "width": 67.890625,
+              "height": 17,
+              "bottom": 168.48973083496094
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 902.4097900390625,
+              "y": 151.48973083496094,
+              "width": 37.71875,
+              "height": 17,
+              "bottom": 168.48973083496094
+            }
+          },
+          {
+            "text": "Live",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 1137.8524169921875,
+              "y": 151.48973083496094,
+              "width": 30.171875,
+              "height": 17,
+              "bottom": 168.48973083496094
+            }
+          },
+          {
+            "text": "Needs Approval",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 740.5824584960938,
+              "y": 315.0208740234375,
+              "width": 105.59375,
+              "height": 17,
+              "bottom": 332.0208740234375
+            }
+          },
+          {
+            "text": "Cancelled",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 759.4340209960938,
+              "y": 478.55206298828125,
+              "width": 67.89068603515625,
+              "height": 17.000030517578125,
+              "bottom": 495.5520935058594
+            }
+          },
+          {
+            "text": "Health Paused",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 1103.914794921875,
+              "y": 315.0208740234375,
+              "width": 98.046875,
+              "height": 17,
+              "bottom": 332.0208740234375
+            }
+          },
+          {
+            "text": "Rolling Back",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 1107.680419921875,
+              "y": 478.55206298828125,
+              "width": 90.5157470703125,
+              "height": 17.000030517578125,
+              "bottom": 495.5520935058594
+            }
+          },
+          {
+            "text": "Rolled Back",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 1026.54345703125,
+              "y": 642.0831909179688,
+              "width": 82.96875,
+              "height": 17,
+              "bottom": 659.0831909179688
+            }
+          },
+          {
+            "text": "Failed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 1238.2779541015625,
+              "y": 642.0831909179688,
+              "width": 45.2657470703125,
+              "height": 17,
+              "bottom": 659.0831909179688
+            }
+          },
+          {
+            "text": "Aborted",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 12.579319852941177,
+            "visible": true,
+            "box": {
+              "x": 511.2013854980469,
+              "y": 315.0208740234375,
+              "width": 52.796905517578125,
+              "height": 17,
+              "bottom": 332.0208740234375
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "change accepted",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 136.6517333984375,
+              "y": 172.3104248046875,
+              "width": 84.87501525878906,
+              "height": 13,
+              "bottom": 185.3104248046875
+            }
+          },
+          {
+            "text": "immutable image",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 367.2726135253906,
+              "y": 172.3104248046875,
+              "width": 84.875,
+              "height": 13,
+              "bottom": 185.3104248046875
+            }
+          },
+          {
+            "text": "tests + policy",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 625.8802490234375,
+              "y": 172.3104248046875,
+              "width": 79.21875,
+              "height": 13,
+              "bottom": 185.3104248046875
+            }
+          },
+          {
+            "text": "promotion pending",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 873.1754150390625,
+              "y": 172.3104248046875,
+              "width": 96.1875,
+              "height": 13,
+              "bottom": 185.3104248046875
+            }
+          },
+          {
+            "text": "production healthy",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 1102.0086669921875,
+              "y": 172.3104248046875,
+              "width": 101.8592529296875,
+              "height": 13,
+              "bottom": 185.3104248046875
+            }
+          },
+          {
+            "text": "release owner",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 756.59814453125,
+              "y": 335.8415832519531,
+              "width": 73.56243896484375,
+              "height": 13,
+              "bottom": 348.8415832519531
+            }
+          },
+          {
+            "text": "approval denied",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 750.94189453125,
+              "y": 499.37274169921875,
+              "width": 84.875,
+              "height": 13,
+              "bottom": 512.3727416992188
+            }
+          },
+          {
+            "text": "SLO regression",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 1113.328857421875,
+              "y": 335.8415832519531,
+              "width": 79.2188720703125,
+              "height": 13,
+              "bottom": 348.8415832519531
+            }
+          },
+          {
+            "text": "last good image",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 1110.500732421875,
+              "y": 499.37274169921875,
+              "width": 84.8751220703125,
+              "height": 13,
+              "bottom": 512.3727416992188
+            }
+          },
+          {
+            "text": "service restored",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 1022.7622680664062,
+              "y": 662.9039306640625,
+              "width": 90.53118896484375,
+              "height": 13,
+              "bottom": 675.9039306640625
+            }
+          },
+          {
+            "text": "rollback failed",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 1218.473388671875,
+              "y": 662.9039306640625,
+              "width": 84.8748779296875,
+              "height": 13,
+              "bottom": 675.9039306640625
+            }
+          },
+          {
+            "text": "change withdrawn",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 9.434489889705883,
+            "visible": true,
+            "box": {
+              "x": 492.3341979980469,
+              "y": 335.8415832519531,
+              "width": 90.53128051757812,
+              "height": 13,
+              "bottom": 348.8415832519531
+            }
+          },
+          {
+            "text": "pick up",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 272.384033203125,
+              "y": 151.9173126220703,
+              "width": 44.03125,
+              "height": 14,
+              "bottom": 165.9173126220703
+            }
+          },
+          {
+            "text": "image built",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 503.0138854980469,
+              "y": 151.9173126220703,
+              "width": 69.17190551757812,
+              "height": 14,
+              "bottom": 165.9173126220703
+            }
+          },
+          {
+            "text": "checks pass",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 758.79345703125,
+              "y": 151.9173126220703,
+              "width": 69.171875,
+              "height": 14,
+              "bottom": 165.9173126220703
+            }
+          },
+          {
+            "text": "promote",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1014.5639038085938,
+              "y": 151.9173126220703,
+              "width": 44.03131103515625,
+              "height": 14,
+              "bottom": 165.9173126220703
+            }
+          },
+          {
+            "text": "tests fail",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 506.1545104980469,
+              "y": 101.60003662109375,
+              "width": 62.890594482421875,
+              "height": 14,
+              "bottom": 115.60003662109375
+            }
+          },
+          {
+            "text": "needs sign-off",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 679.1213989257812,
+              "y": 266.1794738769531,
+              "width": 88.04681396484375,
+              "height": 14,
+              "bottom": 280.1794738769531
+            }
+          },
+          {
+            "text": "approved",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 819.588623046875,
+              "y": 266.1794738769531,
+              "width": 50.3125,
+              "height": 14,
+              "bottom": 280.1794738769531
+            }
+          },
+          {
+            "text": "denied",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 743.0639038085938,
+              "y": 411.8899230957031,
+              "width": 37.734375,
+              "height": 14,
+              "bottom": 425.8899230957031
+            }
+          },
+          {
+            "text": "SLO alert",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1070.1309814453125,
+              "y": 248.3587646484375,
+              "width": 56.59375,
+              "height": 14,
+              "bottom": 262.3587646484375
+            }
+          },
+          {
+            "text": "recovered",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1179.15185546875,
+              "y": 248.3587646484375,
+              "width": 56.59375,
+              "height": 14,
+              "bottom": 262.3587646484375
+            }
+          },
+          {
+            "text": "breach persists",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1046.0223388671875,
+              "y": 411.8899230957031,
+              "width": 94.328125,
+              "height": 14,
+              "bottom": 425.8899230957031
+            }
+          },
+          {
+            "text": "restored",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1005.1336669921875,
+              "y": 593.2417602539062,
+              "width": 50.3125,
+              "height": 14,
+              "bottom": 607.2417602539062
+            }
+          },
+          {
+            "text": "rollback error",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 1160.2803955078125,
+              "y": 593.2417602539062,
+              "width": 88.0469970703125,
+              "height": 14,
+              "bottom": 607.2417602539062
+            }
+          },
+          {
+            "text": "abort",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 10.482766544117649,
+            "visible": true,
+            "box": {
+              "x": 493.5698547363281,
+              "y": 253.6001434326172,
+              "width": 31.453094482421875,
+              "height": 14.000015258789062,
+              "bottom": 267.60015869140625
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "building",
+          "verifying",
+          "ready",
+          "live",
+          "approval",
+          "cancelled",
+          "paused",
+          "rollback",
+          "rolled_back",
+          "failed",
+          "aborted"
+        ],
+        "edgeIds": [
+          "queued-building",
+          "building-verifying",
+          "verifying-ready",
+          "ready-live",
+          "verifying-building",
+          "verifying-approval",
+          "approval-ready",
+          "approval-cancelled",
+          "live-paused",
+          "paused-live",
+          "paused-rollback",
+          "rollback-rolled-back",
+          "rollback-failed",
+          "building-aborted",
+          "verifying-aborted"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "building"
+          },
+          {
+            "from": "building",
+            "to": "verifying"
+          },
+          {
+            "from": "verifying",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "live"
+          },
+          {
+            "from": "verifying",
+            "to": "building"
+          },
+          {
+            "from": "verifying",
+            "to": "approval"
+          },
+          {
+            "from": "approval",
+            "to": "ready"
+          },
+          {
+            "from": "approval",
+            "to": "cancelled"
+          },
+          {
+            "from": "live",
+            "to": "paused"
+          },
+          {
+            "from": "paused",
+            "to": "live"
+          },
+          {
+            "from": "paused",
+            "to": "rollback"
+          },
+          {
+            "from": "rollback",
+            "to": "rolled_back"
+          },
+          {
+            "from": "rollback",
+            "to": "failed"
+          },
+          {
+            "from": "building",
+            "to": "aborted"
+          },
+          {
+            "from": "verifying",
+            "to": "aborted"
+          }
+        ],
+        "cards": [
+          {
+            "text": "Promotion Path\nThe release object moves through five ordered phases\nVerification and approval remain distinct states\nLive means production health is currently proven",
+            "box": {
+              "x": 32,
+              "y": 864.828125,
+              "width": 448,
+              "height": 136.984375,
+              "bottom": 1001.8125
+            },
+            "visible": true
+          },
+          {
+            "text": "Wait States\nHuman approval can pause without consuming a worker\nA health regression pauses further rollout\nEvery wait exposes the event required to continue",
+            "box": {
+              "x": 496,
+              "y": 864.828125,
+              "width": 448,
+              "height": 136.984375,
+              "bottom": 1001.8125
+            },
+            "visible": true
+          },
+          {
+            "text": "Explicit Endings\nDenied approval ends as Cancelled\nRollback controller failure ends as Failed\nSuccessful rollback is a terminal restored outcome",
+            "box": {
+              "x": 960,
+              "y": 864.828125,
+              "width": 448,
+              "height": 136.984375,
+              "bottom": 1001.8125
+            },
+            "visible": true
+          }
+        ],
+        "cardItems": [
+          {
+            "text": "The release object moves through five ordered phases",
+            "fontPx": 13,
+            "box": {
+              "x": 49,
+              "y": 912.828125,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 933.625
+            }
+          },
+          {
+            "text": "Verification and approval remain distinct states",
+            "fontPx": 13,
+            "box": {
+              "x": 49,
+              "y": 938.421875,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 959.21875
+            }
+          },
+          {
+            "text": "Live means production health is currently proven",
+            "fontPx": 13,
+            "box": {
+              "x": 49,
+              "y": 964.015625,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 984.8125
+            }
+          },
+          {
+            "text": "Human approval can pause without consuming a worker",
+            "fontPx": 13,
+            "box": {
+              "x": 513,
+              "y": 912.828125,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 933.625
+            }
+          },
+          {
+            "text": "A health regression pauses further rollout",
+            "fontPx": 13,
+            "box": {
+              "x": 513,
+              "y": 938.421875,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 959.21875
+            }
+          },
+          {
+            "text": "Every wait exposes the event required to continue",
+            "fontPx": 13,
+            "box": {
+              "x": 513,
+              "y": 964.015625,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 984.8125
+            }
+          },
+          {
+            "text": "Denied approval ends as Cancelled",
+            "fontPx": 13,
+            "box": {
+              "x": 977,
+              "y": 912.828125,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 933.625
+            }
+          },
+          {
+            "text": "Rollback controller failure ends as Failed",
+            "fontPx": 13,
+            "box": {
+              "x": 977,
+              "y": 938.421875,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 959.21875
+            }
+          },
+          {
+            "text": "Successful rollback is a terminal restored outcome",
+            "fontPx": 13,
+            "box": {
+              "x": 977,
+              "y": 964.015625,
+              "width": 414,
+              "height": 20.796875,
+              "bottom": 984.8125
+            }
+          }
+        ],
+        "railBox": {
+          "x": 32,
+          "y": 864.828125,
+          "width": 1376,
+          "height": 292.46875,
+          "bottom": 1157.296875
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 12,
+          "edges": 15,
+          "cards": 3,
+          "items": 9
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Building",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Verifying",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Live",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Needs Approval",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Cancelled",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 37
+          },
+          {
+            "text": "Health Paused",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Rolling Back",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 37
+          },
+          {
+            "text": "Rolled Back",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 201
+          },
+          {
+            "text": "Failed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 201
+          },
+          {
+            "text": "Aborted",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "pick up",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "image built",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "checks pass",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "promote",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "tests fail",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "needs sign-off",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "approved",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "denied",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "SLO alert",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "recovered",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "breach persists",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "restored",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 150
+          },
+          {
+            "text": "rollback error",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 150
+          },
+          {
+            "text": "abort",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Promotion Path",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "The release object moves through five ordered phases",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Verification and approval remain distinct states",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Live means production health is currently proven",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Wait States",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Human approval can pause without consuming a worker",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "A health regression pauses further rollout",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Every wait exposes the event required to continue",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Explicit Endings",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Denied approval ends as Cancelled",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Rollback controller failure ends as Failed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          },
+          {
+            "text": "Successful rollback is a terminal restored outcome",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 263
+          }
+        ]
+      }
+    },
+    {
+      "name": "public-deployment",
+      "width": 1920,
+      "height": 1080,
+      "artifactSha256": "75fdb5a9df6204d55cc1592d70a5cc122c73d7004871f8c2626ab5d4b9f73e61",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 680
+        },
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1654,
+        "diagramWidth": 1624,
+        "viewBoxWidth": 1284,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "change accepted",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "rawScrollHeight": 1377,
+        "rawScrollWidth": 1920,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 148,
+          "y": 107,
+          "width": 1624,
+          "height": 860.046875,
+          "bottom": 967.046875
+        },
+        "viewBox": "0 0 1284 680",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 280.0636901855469,
+              "y": 209.62405395507812,
+              "width": 54.625030517578125,
+              "height": 20,
+              "bottom": 229.62405395507812
+            }
+          },
+          {
+            "text": "Building",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 549.212646484375,
+              "y": 209.62405395507812,
+              "width": 72.828125,
+              "height": 20,
+              "bottom": 229.62405395507812
+            }
+          },
+          {
+            "text": "Verifying",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 853.270751953125,
+              "y": 209.62405395507812,
+              "width": 81.921875,
+              "height": 20,
+              "bottom": 229.62405395507812
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1180.0789794921875,
+              "y": 209.62405395507812,
+              "width": 45.5155029296875,
+              "height": 20,
+              "bottom": 229.62405395507812
+            }
+          },
+          {
+            "text": "Live",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1464.14111328125,
+              "y": 209.62405395507812,
+              "width": 36.421875,
+              "height": 20,
+              "bottom": 229.62405395507812
+            }
+          },
+          {
+            "text": "Needs Approval",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 984.8154907226562,
+              "y": 406.9289245605469,
+              "width": 127.43743896484375,
+              "height": 20,
+              "bottom": 426.9289245605469
+            }
+          },
+          {
+            "text": "Cancelled",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1007.5733642578125,
+              "y": 604.2337646484375,
+              "width": 81.921875,
+              "height": 20,
+              "bottom": 624.2337646484375
+            }
+          },
+          {
+            "text": "Health Paused",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1423.18798828125,
+              "y": 406.9289245605469,
+              "width": 118.3280029296875,
+              "height": 20,
+              "bottom": 426.9289245605469
+            }
+          },
+          {
+            "text": "Rolling Back",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1427.7347412109375,
+              "y": 604.2337646484375,
+              "width": 109.2344970703125,
+              "height": 20,
+              "bottom": 624.2337646484375
+            }
+          },
+          {
+            "text": "Rolled Back",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1329.8427734375,
+              "y": 801.5386352539062,
+              "width": 100.125,
+              "height": 20,
+              "bottom": 821.5386352539062
+            }
+          },
+          {
+            "text": "Failed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 1585.311279296875,
+              "y": 801.5386352539062,
+              "width": 54.625,
+              "height": 20,
+              "bottom": 821.5386352539062
+            }
+          },
+          {
+            "text": "Aborted",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 15.17729779411765,
+            "visible": true,
+            "box": {
+              "x": 708.06982421875,
+              "y": 406.9289245605469,
+              "width": 63.71875,
+              "height": 20,
+              "bottom": 426.9289245605469
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "change accepted",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 256.16522216796875,
+              "y": 234.12522888183594,
+              "width": 102.421875,
+              "height": 15,
+              "bottom": 249.12522888183594
+            }
+          },
+          {
+            "text": "immutable image",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 534.415771484375,
+              "y": 234.12522888183594,
+              "width": 102.421875,
+              "height": 15,
+              "bottom": 249.12522888183594
+            }
+          },
+          {
+            "text": "tests + policy",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 846.434814453125,
+              "y": 234.12522888183594,
+              "width": 95.59368896484375,
+              "height": 15,
+              "bottom": 249.12522888183594
+            }
+          },
+          {
+            "text": "promotion pending",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1144.797607421875,
+              "y": 234.12522888183594,
+              "width": 116.0782470703125,
+              "height": 15,
+              "bottom": 249.12522888183594
+            }
+          },
+          {
+            "text": "production healthy",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1420.89892578125,
+              "y": 234.12522888183594,
+              "width": 122.9061279296875,
+              "height": 15,
+              "bottom": 249.12522888183594
+            }
+          },
+          {
+            "text": "release owner",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1004.1514282226562,
+              "y": 431.43011474609375,
+              "width": 88.76556396484375,
+              "height": 15,
+              "bottom": 446.43011474609375
+            }
+          },
+          {
+            "text": "approval denied",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 997.3233032226562,
+              "y": 628.7349853515625,
+              "width": 102.42181396484375,
+              "height": 15.00006103515625,
+              "bottom": 643.7350463867188
+            }
+          },
+          {
+            "text": "SLO regression",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1434.5550537109375,
+              "y": 431.43011474609375,
+              "width": 95.59375,
+              "height": 15,
+              "bottom": 446.43011474609375
+            }
+          },
+          {
+            "text": "last good image",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1431.1409912109375,
+              "y": 628.7349853515625,
+              "width": 102.421875,
+              "height": 15.00006103515625,
+              "bottom": 643.7350463867188
+            }
+          },
+          {
+            "text": "service restored",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1325.2802734375,
+              "y": 826.0398559570312,
+              "width": 109.25,
+              "height": 14.99993896484375,
+              "bottom": 841.039794921875
+            }
+          },
+          {
+            "text": "rollback failed",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 1561.4129638671875,
+              "y": 826.0398559570312,
+              "width": 102.421875,
+              "height": 14.99993896484375,
+              "bottom": 841.039794921875
+            }
+          },
+          {
+            "text": "change withdrawn",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 11.382973345588237,
+            "visible": true,
+            "box": {
+              "x": 685.30419921875,
+              "y": 431.43011474609375,
+              "width": 109.25,
+              "height": 15,
+              "bottom": 446.43011474609375
+            }
+          },
+          {
+            "text": "pick up",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 419.9545593261719,
+              "y": 209.72689819335938,
+              "width": 53.09375,
+              "height": 17,
+              "bottom": 226.72689819335938
+            }
+          },
+          {
+            "text": "image built",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 698.21044921875,
+              "y": 209.72689819335938,
+              "width": 83.4375,
+              "height": 17,
+              "bottom": 226.72689819335938
+            }
+          },
+          {
+            "text": "checks pass",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1006.8154907226562,
+              "y": 209.72689819335938,
+              "width": 83.43743896484375,
+              "height": 17,
+              "bottom": 226.72689819335938
+            }
+          },
+          {
+            "text": "promote",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1315.4150390625,
+              "y": 209.72689819335938,
+              "width": 53.09375,
+              "height": 17,
+              "bottom": 226.72689819335938
+            }
+          },
+          {
+            "text": "tests fail",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 702.00732421875,
+              "y": 149.0177001953125,
+              "width": 75.84375,
+              "height": 17,
+              "bottom": 166.0177001953125
+            }
+          },
+          {
+            "text": "needs sign-off",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 910.7005615234375,
+              "y": 347.58734130859375,
+              "width": 106.1875,
+              "height": 17,
+              "bottom": 364.58734130859375
+            }
+          },
+          {
+            "text": "approved",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1080.16455078125,
+              "y": 347.58734130859375,
+              "width": 60.6875,
+              "height": 17,
+              "bottom": 364.58734130859375
+            }
+          },
+          {
+            "text": "denied",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 987.833251953125,
+              "y": 523.3910522460938,
+              "width": 45.515625,
+              "height": 17,
+              "bottom": 540.3910522460938
+            }
+          },
+          {
+            "text": "SLO alert",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1382.4508056640625,
+              "y": 326.086181640625,
+              "width": 68.265625,
+              "height": 17,
+              "bottom": 343.086181640625
+            }
+          },
+          {
+            "text": "recovered",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1513.987548828125,
+              "y": 326.086181640625,
+              "width": 68.265625,
+              "height": 17,
+              "bottom": 343.086181640625
+            }
+          },
+          {
+            "text": "breach persists",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1353.376953125,
+              "y": 523.3910522460938,
+              "width": 113.765625,
+              "height": 17,
+              "bottom": 540.3910522460938
+            }
+          },
+          {
+            "text": "restored",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1304.0296630859375,
+              "y": 742.1970825195312,
+              "width": 60.6875,
+              "height": 17,
+              "bottom": 759.1970825195312
+            }
+          },
+          {
+            "text": "rollback error",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 1491.2322998046875,
+              "y": 742.1970825195312,
+              "width": 106.1875,
+              "height": 17,
+              "bottom": 759.1970825195312
+            }
+          },
+          {
+            "text": "abort",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 12.647748161764707,
+            "visible": true,
+            "box": {
+              "x": 686.8193359375,
+              "y": 332.4100646972656,
+              "width": 37.921875,
+              "height": 17,
+              "bottom": 349.4100646972656
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "building",
+          "verifying",
+          "ready",
+          "live",
+          "approval",
+          "cancelled",
+          "paused",
+          "rollback",
+          "rolled_back",
+          "failed",
+          "aborted"
+        ],
+        "edgeIds": [
+          "queued-building",
+          "building-verifying",
+          "verifying-ready",
+          "ready-live",
+          "verifying-building",
+          "verifying-approval",
+          "approval-ready",
+          "approval-cancelled",
+          "live-paused",
+          "paused-live",
+          "paused-rollback",
+          "rollback-rolled-back",
+          "rollback-failed",
+          "building-aborted",
+          "verifying-aborted"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "building"
+          },
+          {
+            "from": "building",
+            "to": "verifying"
+          },
+          {
+            "from": "verifying",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "live"
+          },
+          {
+            "from": "verifying",
+            "to": "building"
+          },
+          {
+            "from": "verifying",
+            "to": "approval"
+          },
+          {
+            "from": "approval",
+            "to": "ready"
+          },
+          {
+            "from": "approval",
+            "to": "cancelled"
+          },
+          {
+            "from": "live",
+            "to": "paused"
+          },
+          {
+            "from": "paused",
+            "to": "live"
+          },
+          {
+            "from": "paused",
+            "to": "rollback"
+          },
+          {
+            "from": "rollback",
+            "to": "rolled_back"
+          },
+          {
+            "from": "rollback",
+            "to": "failed"
+          },
+          {
+            "from": "building",
+            "to": "aborted"
+          },
+          {
+            "from": "verifying",
+            "to": "aborted"
+          }
+        ],
+        "cards": [
+          {
+            "text": "Promotion Path\nThe release object moves through five ordered phases\nVerification and approval remain distinct states\nLive means production health is currently proven",
+            "box": {
+              "x": 133,
+              "y": 1052.046875,
+              "width": 540.65625,
+              "height": 136.984375,
+              "bottom": 1189.03125
+            },
+            "visible": true
+          },
+          {
+            "text": "Wait States\nHuman approval can pause without consuming a worker\nA health regression pauses further rollout\nEvery wait exposes the event required to continue",
+            "box": {
+              "x": 689.65625,
+              "y": 1052.046875,
+              "width": 540.671875,
+              "height": 136.984375,
+              "bottom": 1189.03125
+            },
+            "visible": true
+          },
+          {
+            "text": "Explicit Endings\nDenied approval ends as Cancelled\nRollback controller failure ends as Failed\nSuccessful rollback is a terminal restored outcome",
+            "box": {
+              "x": 1246.328125,
+              "y": 1052.046875,
+              "width": 540.671875,
+              "height": 136.984375,
+              "bottom": 1189.03125
+            },
+            "visible": true
+          }
+        ],
+        "cardItems": [
+          {
+            "text": "The release object moves through five ordered phases",
+            "fontPx": 13,
+            "box": {
+              "x": 150,
+              "y": 1100.046875,
+              "width": 506.65625,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "Verification and approval remain distinct states",
+            "fontPx": 13,
+            "box": {
+              "x": 150,
+              "y": 1125.640625,
+              "width": 506.65625,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          },
+          {
+            "text": "Live means production health is currently proven",
+            "fontPx": 13,
+            "box": {
+              "x": 150,
+              "y": 1151.234375,
+              "width": 506.65625,
+              "height": 20.796875,
+              "bottom": 1172.03125
+            }
+          },
+          {
+            "text": "Human approval can pause without consuming a worker",
+            "fontPx": 13,
+            "box": {
+              "x": 706.65625,
+              "y": 1100.046875,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "A health regression pauses further rollout",
+            "fontPx": 13,
+            "box": {
+              "x": 706.65625,
+              "y": 1125.640625,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          },
+          {
+            "text": "Every wait exposes the event required to continue",
+            "fontPx": 13,
+            "box": {
+              "x": 706.65625,
+              "y": 1151.234375,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1172.03125
+            }
+          },
+          {
+            "text": "Denied approval ends as Cancelled",
+            "fontPx": 13,
+            "box": {
+              "x": 1263.328125,
+              "y": 1100.046875,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "Rollback controller failure ends as Failed",
+            "fontPx": 13,
+            "box": {
+              "x": 1263.328125,
+              "y": 1125.640625,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          },
+          {
+            "text": "Successful rollback is a terminal restored outcome",
+            "fontPx": 13,
+            "box": {
+              "x": 1263.328125,
+              "y": 1151.234375,
+              "width": 506.671875,
+              "height": 20.796875,
+              "bottom": 1172.03125
+            }
+          }
+        ],
+        "railBox": {
+          "x": 133,
+          "y": 1052.046875,
+          "width": 1654,
+          "height": 292.46875,
+          "bottom": 1344.515625
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 12,
+          "edges": 15,
+          "cards": 3,
+          "items": 9
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Building",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Verifying",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Live",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Needs Approval",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Cancelled",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 74
+          },
+          {
+            "text": "Health Paused",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Rolling Back",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 74
+          },
+          {
+            "text": "Rolled Back",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 272
+          },
+          {
+            "text": "Failed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 272
+          },
+          {
+            "text": "Aborted",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "pick up",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "image built",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "checks pass",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "promote",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "tests fail",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "needs sign-off",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "approved",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "denied",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "SLO alert",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "recovered",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "breach persists",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "restored",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 211
+          },
+          {
+            "text": "rollback error",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 211
+          },
+          {
+            "text": "abort",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Promotion Path",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "The release object moves through five ordered phases",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Verification and approval remain distinct states",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Live means production health is currently proven",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Wait States",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Human approval can pause without consuming a worker",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "A health regression pauses further rollout",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Every wait exposes the event required to continue",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Explicit Endings",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Denied approval ends as Cancelled",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Rollback controller failure ends as Failed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          },
+          {
+            "text": "Successful rollback is a terminal restored outcome",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 297
+          }
+        ]
+      }
+    },
+    {
+      "name": "synthetic-11-cards",
+      "width": 1440,
+      "height": 900,
+      "artifactSha256": "0076a22d8a921630f8caf4292e28eb7bf3dbe8ae1e5a48700b96ae8ac097d6fb",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 746,
+          "cardsPx": 0,
+          "viewBoxHeight": 638
+        },
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1354,
+        "diagramWidth": 1324,
+        "viewBoxWidth": 1132,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "record phase",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "rawScrollHeight": 1171,
+        "rawScrollWidth": 1440,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 58,
+          "y": 67,
+          "width": 1324,
+          "height": 746.203125,
+          "bottom": 813.203125
+        },
+        "viewBox": "0 0 1132 638",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 180.11935424804688,
+              "y": 117.3278579711914,
+              "width": 50.51560974121094,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Checked",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 433.2198181152344,
+              "y": 117.3278579711914,
+              "width": 58.9375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 698.953125,
+              "y": 117.3278579711914,
+              "width": 42.09368896484375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Running",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 947.8426513671875,
+              "y": 117.3278579711914,
+              "width": 58.9375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1217.786865234375,
+              "y": 117.3278579711914,
+              "width": 33.671875,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Audit",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1213.5760498046875,
+              "y": 299.7850341796875,
+              "width": 42.09375,
+              "height": 18,
+              "bottom": 317.7850341796875
+            }
+          },
+          {
+            "text": "Archive",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1205.1541748046875,
+              "y": 482.24224853515625,
+              "width": 58.9375,
+              "height": 18.000030517578125,
+              "bottom": 500.2422790527344
+            }
+          },
+          {
+            "text": "Retained",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1200.9510498046875,
+              "y": 664.699462890625,
+              "width": 67.34375,
+              "height": 17.99993896484375,
+              "bottom": 682.6994018554688
+            }
+          },
+          {
+            "text": "Expired",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 664.699462890625,
+              "width": 58.9375,
+              "height": 17.99993896484375,
+              "bottom": 682.6994018554688
+            }
+          },
+          {
+            "text": "Purging",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 482.24224853515625,
+              "width": 58.9375,
+              "height": 18.000030517578125,
+              "bottom": 500.2422790527344
+            }
+          },
+          {
+            "text": "Removed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 299.7850341796875,
+              "width": 58.9375,
+              "height": 18,
+              "bottom": 317.7850341796875
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 141.380615234375,
+              "width": 75.74998474121094,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 424.8135681152344,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 682.125,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 939.4364013671875,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 323.8377990722656,
+              "width": 75.75,
+              "height": 13.999969482421875,
+              "bottom": 337.8377685546875
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 506.2949523925781,
+              "width": 75.75,
+              "height": 14.000030517578125,
+              "bottom": 520.2949829101562
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 688.752197265625,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 702.752197265625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 688.752197265625,
+              "width": 75.74998474121094,
+              "height": 14,
+              "bottom": 702.752197265625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 506.2949523925781,
+              "width": 75.74998474121094,
+              "height": 14.000030517578125,
+              "bottom": 520.2949829101562
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 323.8377990722656,
+              "width": 75.74998474121094,
+              "height": 13.999969482421875,
+              "bottom": 337.8377685546875
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 309.47821044921875,
+              "y": 112.89506530761719,
+              "width": 49.109344482421875,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 566.7896728515625,
+              "y": 112.89506530761719,
+              "width": 49.10931396484375,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 824.1010131835938,
+              "y": 112.89506530761719,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1081.412353515625,
+              "y": 112.89506530761719,
+              "width": 49.1094970703125,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 220.49803161621094,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 236.49803161621094
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 402.9552307128906,
+              "width": 49.109375,
+              "height": 16.000030517578125,
+              "bottom": 418.95526123046875
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 585.4124145507812,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 601.4124145507812
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 695.4453125,
+              "y": 660.2666625976562,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 676.2666625976562
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 142.22576904296875,
+              "y": 585.4124145507812,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 601.4124145507812
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 142.22576904296875,
+              "y": 402.9552307128906,
+              "width": 49.109375,
+              "height": 16.000030517578125,
+              "bottom": 418.95526123046875
+            }
+          },
+          {
+            "text": "new cycle",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 128.1925506591797,
+              "y": 220.49803161621094,
+              "width": 63.140625,
+              "height": 16,
+              "bottom": 236.49803161621094
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "checked",
+          "ready",
+          "running",
+          "done",
+          "audit",
+          "archive",
+          "retained",
+          "expired",
+          "purging",
+          "removed"
+        ],
+        "edgeIds": [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "restart"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "checked"
+          },
+          {
+            "from": "checked",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "running"
+          },
+          {
+            "from": "running",
+            "to": "done"
+          },
+          {
+            "from": "done",
+            "to": "audit"
+          },
+          {
+            "from": "audit",
+            "to": "archive"
+          },
+          {
+            "from": "archive",
+            "to": "retained"
+          },
+          {
+            "from": "retained",
+            "to": "expired"
+          },
+          {
+            "from": "expired",
+            "to": "purging"
+          },
+          {
+            "from": "purging",
+            "to": "removed"
+          },
+          {
+            "from": "removed",
+            "to": "queued"
+          }
+        ],
+        "cards": [
+          {
+            "text": "Primary path\nQueued through Done is the primary reading path.\nEvery record phase remains in the diagram.",
+            "box": {
+              "x": 43,
+              "y": 898.203125,
+              "width": 440.65625,
+              "height": 111.390625,
+              "bottom": 1009.59375
+            },
+            "visible": true
+          },
+          {
+            "text": "Retention detail\nAudit, archive and expiry are secondary phases.\nThe automatic layout places them below the primary path.",
+            "box": {
+              "x": 499.65625,
+              "y": 898.203125,
+              "width": 440.671875,
+              "height": 111.390625,
+              "bottom": 1009.59375
+            },
+            "visible": true
+          },
+          {
+            "text": "Cycle boundary\nRemoved starts a new cycle through the explicit return.\nThis is a synthetic investigation fixture.",
+            "box": {
+              "x": 956.328125,
+              "y": 898.203125,
+              "width": 440.65625,
+              "height": 111.390625,
+              "bottom": 1009.59375
+            },
+            "visible": true
+          }
+        ],
+        "cardItems": [
+          {
+            "text": "Queued through Done is the primary reading path.",
+            "fontPx": 13,
+            "box": {
+              "x": 60,
+              "y": 946.203125,
+              "width": 406.65625,
+              "height": 20.796875,
+              "bottom": 967
+            }
+          },
+          {
+            "text": "Every record phase remains in the diagram.",
+            "fontPx": 13,
+            "box": {
+              "x": 60,
+              "y": 971.796875,
+              "width": 406.65625,
+              "height": 20.796875,
+              "bottom": 992.59375
+            }
+          },
+          {
+            "text": "Audit, archive and expiry are secondary phases.",
+            "fontPx": 13,
+            "box": {
+              "x": 516.65625,
+              "y": 946.203125,
+              "width": 406.671875,
+              "height": 20.796875,
+              "bottom": 967
+            }
+          },
+          {
+            "text": "The automatic layout places them below the primary path.",
+            "fontPx": 13,
+            "box": {
+              "x": 516.65625,
+              "y": 971.796875,
+              "width": 406.671875,
+              "height": 20.796875,
+              "bottom": 992.59375
+            }
+          },
+          {
+            "text": "Removed starts a new cycle through the explicit return.",
+            "fontPx": 13,
+            "box": {
+              "x": 973.328125,
+              "y": 946.203125,
+              "width": 406.65625,
+              "height": 20.796875,
+              "bottom": 967
+            }
+          },
+          {
+            "text": "This is a synthetic investigation fixture.",
+            "fontPx": 13,
+            "box": {
+              "x": 973.328125,
+              "y": 971.796875,
+              "width": 406.65625,
+              "height": 20.796875,
+              "bottom": 992.59375
+            }
+          }
+        ],
+        "railBox": {
+          "x": 43,
+          "y": 898.203125,
+          "width": 1354,
+          "height": 266.875,
+          "bottom": 1165.078125
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 11,
+          "edges": 11,
+          "cards": 3,
+          "items": 6
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Checked",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Running",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Audit",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Archive",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 41
+          },
+          {
+            "text": "Retained",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 224
+          },
+          {
+            "text": "Expired",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 224
+          },
+          {
+            "text": "Purging",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 41
+          },
+          {
+            "text": "Removed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 143
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 218
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 143
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "new cycle",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Primary path",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Queued through Done is the primary reading path.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Every record phase remains in the diagram.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Retention detail",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Audit, archive and expiry are secondary phases.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "The automatic layout places them below the primary path.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Cycle boundary",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Removed starts a new cycle through the explicit return.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "This is a synthetic investigation fixture.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          }
+        ]
+      }
+    },
+    {
+      "name": "synthetic-11-cards",
+      "width": 1920,
+      "height": 1080,
+      "artifactSha256": "0076a22d8a921630f8caf4292e28eb7bf3dbe8ae1e5a48700b96ae8ac097d6fb",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 638
+        },
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1556,
+        "diagramWidth": 1526,
+        "viewBoxWidth": 1132,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "record phase",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "rawScrollHeight": 1351,
+        "rawScrollWidth": 1920,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 197,
+          "y": 107,
+          "width": 1526,
+          "height": 860.046875,
+          "bottom": 967.046875
+        },
+        "viewBox": "0 0 1132 638",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 337.75482177734375,
+              "y": 165.1419677734375,
+              "width": 58.21875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Checked",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 629.4711303710938,
+              "y": 165.1419677734375,
+              "width": 67.921875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 935.7421875,
+              "y": 165.1419677734375,
+              "width": 48.515625,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Running",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1222.60693359375,
+              "y": 165.1419677734375,
+              "width": 67.921875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1533.7294921875,
+              "y": 165.1419677734375,
+              "width": 38.8123779296875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Audit",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1528.8779296875,
+              "y": 375.435546875,
+              "width": 48.515625,
+              "height": 21,
+              "bottom": 396.435546875
+            }
+          },
+          {
+            "text": "Archive",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1519.1748046875,
+              "y": 585.7291870117188,
+              "width": 67.921875,
+              "height": 20.99993896484375,
+              "bottom": 606.7291259765625
+            }
+          },
+          {
+            "text": "Retained",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1514.3232421875,
+              "y": 796.022705078125,
+              "width": 77.625,
+              "height": 21.00006103515625,
+              "bottom": 817.0227661132812
+            }
+          },
+          {
+            "text": "Expired",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 796.022705078125,
+              "width": 67.92190551757812,
+              "height": 21.00006103515625,
+              "bottom": 817.0227661132812
+            }
+          },
+          {
+            "text": "Purging",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 585.7291870117188,
+              "width": 67.92190551757812,
+              "height": 20.99993896484375,
+              "bottom": 606.7291259765625
+            }
+          },
+          {
+            "text": "Removed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 375.435546875,
+              "width": 67.92190551757812,
+              "height": 21,
+              "bottom": 396.435546875
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 193.4066162109375,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 619.7601928710938,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 916.328125,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1212.89599609375,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 403.7001953125,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 419.7001953125
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 613.9937744140625,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 629.9937744140625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 824.287353515625,
+              "width": 87.34375,
+              "height": 16.00006103515625,
+              "bottom": 840.2874145507812
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 824.287353515625,
+              "width": 87.34371948242188,
+              "height": 16.00006103515625,
+              "bottom": 840.2874145507812
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 613.9937744140625,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 629.9937744140625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 403.7001953125,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 419.7001953125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 486.8356628417969,
+              "y": 159.727783203125,
+              "width": 56.625030517578125,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 783.403564453125,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1079.971435546875,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1376.539306640625,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 283.7470703125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 301.7470703125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 494.0406494140625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 512.0406494140625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 704.334228515625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 722.334228515625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 931.6874389648438,
+              "y": 790.6085205078125,
+              "width": 56.625,
+              "height": 18.00006103515625,
+              "bottom": 808.6085815429688
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 294.0665283203125,
+              "y": 704.334228515625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 722.334228515625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 294.0665283203125,
+              "y": 494.0406494140625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 512.0406494140625
+            }
+          },
+          {
+            "text": "new cycle",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 277.89239501953125,
+              "y": 283.7470703125,
+              "width": 72.796875,
+              "height": 18,
+              "bottom": 301.7470703125
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "checked",
+          "ready",
+          "running",
+          "done",
+          "audit",
+          "archive",
+          "retained",
+          "expired",
+          "purging",
+          "removed"
+        ],
+        "edgeIds": [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "restart"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "checked"
+          },
+          {
+            "from": "checked",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "running"
+          },
+          {
+            "from": "running",
+            "to": "done"
+          },
+          {
+            "from": "done",
+            "to": "audit"
+          },
+          {
+            "from": "audit",
+            "to": "archive"
+          },
+          {
+            "from": "archive",
+            "to": "retained"
+          },
+          {
+            "from": "retained",
+            "to": "expired"
+          },
+          {
+            "from": "expired",
+            "to": "purging"
+          },
+          {
+            "from": "purging",
+            "to": "removed"
+          },
+          {
+            "from": "removed",
+            "to": "queued"
+          }
+        ],
+        "cards": [
+          {
+            "text": "Primary path\nQueued through Done is the primary reading path.\nEvery record phase remains in the diagram.",
+            "box": {
+              "x": 182,
+              "y": 1052.046875,
+              "width": 508,
+              "height": 111.390625,
+              "bottom": 1163.4375
+            },
+            "visible": true
+          },
+          {
+            "text": "Retention detail\nAudit, archive and expiry are secondary phases.\nThe automatic layout places them below the primary path.",
+            "box": {
+              "x": 706,
+              "y": 1052.046875,
+              "width": 508,
+              "height": 111.390625,
+              "bottom": 1163.4375
+            },
+            "visible": true
+          },
+          {
+            "text": "Cycle boundary\nRemoved starts a new cycle through the explicit return.\nThis is a synthetic investigation fixture.",
+            "box": {
+              "x": 1230,
+              "y": 1052.046875,
+              "width": 508,
+              "height": 111.390625,
+              "bottom": 1163.4375
+            },
+            "visible": true
+          }
+        ],
+        "cardItems": [
+          {
+            "text": "Queued through Done is the primary reading path.",
+            "fontPx": 13,
+            "box": {
+              "x": 199,
+              "y": 1100.046875,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "Every record phase remains in the diagram.",
+            "fontPx": 13,
+            "box": {
+              "x": 199,
+              "y": 1125.640625,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          },
+          {
+            "text": "Audit, archive and expiry are secondary phases.",
+            "fontPx": 13,
+            "box": {
+              "x": 723,
+              "y": 1100.046875,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "The automatic layout places them below the primary path.",
+            "fontPx": 13,
+            "box": {
+              "x": 723,
+              "y": 1125.640625,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          },
+          {
+            "text": "Removed starts a new cycle through the explicit return.",
+            "fontPx": 13,
+            "box": {
+              "x": 1247,
+              "y": 1100.046875,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1120.84375
+            }
+          },
+          {
+            "text": "This is a synthetic investigation fixture.",
+            "fontPx": 13,
+            "box": {
+              "x": 1247,
+              "y": 1125.640625,
+              "width": 474,
+              "height": 20.796875,
+              "bottom": 1146.4375
+            }
+          }
+        ],
+        "railBox": {
+          "x": 182,
+          "y": 1052.046875,
+          "width": 1556,
+          "height": 266.875,
+          "bottom": 1318.921875
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 11,
+          "edges": 11,
+          "cards": 3,
+          "items": 6
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Checked",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Running",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Audit",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Archive",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 56
+          },
+          {
+            "text": "Retained",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 267
+          },
+          {
+            "text": "Expired",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 267
+          },
+          {
+            "text": "Purging",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 56
+          },
+          {
+            "text": "Removed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 173
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 260
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 173
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "new cycle",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Primary path",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Queued through Done is the primary reading path.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Every record phase remains in the diagram.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Retention detail",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Audit, archive and expiry are secondary phases.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "The automatic layout places them below the primary path.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Cycle boundary",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "Removed starts a new cycle through the explicit return.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          },
+          {
+            "text": "This is a synthetic investigation fixture.",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 271
+          }
+        ]
+      }
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "width": 1440,
+      "height": 900,
+      "artifactSha256": "2a77713b319f8e4e325e1917c29a04ebd00e32e65ddb4c44560501f7f0eecb11",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 12,
+          "headerPx": 52,
+          "diagramChromePx": 78,
+          "svgPx": 746,
+          "cardsPx": 0,
+          "viewBoxHeight": 638
+        },
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1354,
+        "diagramWidth": 1324,
+        "viewBoxWidth": 1132,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "record phase",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "rawScrollHeight": 1060,
+        "rawScrollWidth": 1440,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 58,
+          "y": 67,
+          "width": 1324,
+          "height": 746.203125,
+          "bottom": 813.203125
+        },
+        "viewBox": "0 0 1132 638",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 180.11935424804688,
+              "y": 117.3278579711914,
+              "width": 50.51560974121094,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Checked",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 433.2198181152344,
+              "y": 117.3278579711914,
+              "width": 58.9375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 698.953125,
+              "y": 117.3278579711914,
+              "width": 42.09368896484375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Running",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 947.8426513671875,
+              "y": 117.3278579711914,
+              "width": 58.9375,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1217.786865234375,
+              "y": 117.3278579711914,
+              "width": 33.671875,
+              "height": 17.99999237060547,
+              "bottom": 135.32785034179688
+            }
+          },
+          {
+            "text": "Audit",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1213.5760498046875,
+              "y": 299.7850341796875,
+              "width": 42.09375,
+              "height": 18,
+              "bottom": 317.7850341796875
+            }
+          },
+          {
+            "text": "Archive",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1205.1541748046875,
+              "y": 482.24224853515625,
+              "width": 58.9375,
+              "height": 18.000030517578125,
+              "bottom": 500.2422790527344
+            }
+          },
+          {
+            "text": "Retained",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 1200.9510498046875,
+              "y": 664.699462890625,
+              "width": 67.34375,
+              "height": 17.99993896484375,
+              "bottom": 682.6994018554688
+            }
+          },
+          {
+            "text": "Expired",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 664.699462890625,
+              "width": 58.9375,
+              "height": 17.99993896484375,
+              "bottom": 682.6994018554688
+            }
+          },
+          {
+            "text": "Purging",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 482.24224853515625,
+              "width": 58.9375,
+              "height": 18.000030517578125,
+              "bottom": 500.2422790527344
+            }
+          },
+          {
+            "text": "Removed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 14.035168495297807,
+            "visible": true,
+            "box": {
+              "x": 175.90841674804688,
+              "y": 299.7850341796875,
+              "width": 58.9375,
+              "height": 18,
+              "bottom": 317.7850341796875
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 141.380615234375,
+              "width": 75.74998474121094,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 424.8135681152344,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 682.125,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 939.4364013671875,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 141.380615234375,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 155.380615234375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 323.8377990722656,
+              "width": 75.75,
+              "height": 13.999969482421875,
+              "bottom": 337.8377685546875
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 506.2949523925781,
+              "width": 75.75,
+              "height": 14.000030517578125,
+              "bottom": 520.2949829101562
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 1196.747802734375,
+              "y": 688.752197265625,
+              "width": 75.75,
+              "height": 14,
+              "bottom": 702.752197265625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 688.752197265625,
+              "width": 75.74998474121094,
+              "height": 14,
+              "bottom": 702.752197265625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 506.2949523925781,
+              "width": 75.74998474121094,
+              "height": 14.000030517578125,
+              "bottom": 520.2949829101562
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 10.526376371473354,
+            "visible": true,
+            "box": {
+              "x": 167.50216674804688,
+              "y": 323.8377990722656,
+              "width": 75.74998474121094,
+              "height": 13.999969482421875,
+              "bottom": 337.8377685546875
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 309.47821044921875,
+              "y": 112.89506530761719,
+              "width": 49.109344482421875,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 566.7896728515625,
+              "y": 112.89506530761719,
+              "width": 49.10931396484375,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 824.1010131835938,
+              "y": 112.89506530761719,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1081.412353515625,
+              "y": 112.89506530761719,
+              "width": 49.1094970703125,
+              "height": 16,
+              "bottom": 128.8950653076172
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 220.49803161621094,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 236.49803161621094
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 402.9552307128906,
+              "width": 49.109375,
+              "height": 16.000030517578125,
+              "bottom": 418.95526123046875
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 1171.4715576171875,
+              "y": 585.4124145507812,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 601.4124145507812
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 695.4453125,
+              "y": 660.2666625976562,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 676.2666625976562
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 142.22576904296875,
+              "y": 585.4124145507812,
+              "width": 49.109375,
+              "height": 16,
+              "bottom": 601.4124145507812
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 142.22576904296875,
+              "y": 402.9552307128906,
+              "width": 49.109375,
+              "height": 16.000030517578125,
+              "bottom": 418.95526123046875
+            }
+          },
+          {
+            "text": "new cycle",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 11.695973746081505,
+            "visible": true,
+            "box": {
+              "x": 128.1925506591797,
+              "y": 220.49803161621094,
+              "width": 63.140625,
+              "height": 16,
+              "bottom": 236.49803161621094
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "checked",
+          "ready",
+          "running",
+          "done",
+          "audit",
+          "archive",
+          "retained",
+          "expired",
+          "purging",
+          "removed"
+        ],
+        "edgeIds": [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "restart"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "checked"
+          },
+          {
+            "from": "checked",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "running"
+          },
+          {
+            "from": "running",
+            "to": "done"
+          },
+          {
+            "from": "done",
+            "to": "audit"
+          },
+          {
+            "from": "audit",
+            "to": "archive"
+          },
+          {
+            "from": "archive",
+            "to": "retained"
+          },
+          {
+            "from": "retained",
+            "to": "expired"
+          },
+          {
+            "from": "expired",
+            "to": "purging"
+          },
+          {
+            "from": "purging",
+            "to": "removed"
+          },
+          {
+            "from": "removed",
+            "to": "queued"
+          }
+        ],
+        "cards": [],
+        "cardItems": [],
+        "railBox": {
+          "x": 43,
+          "y": 898.203125,
+          "width": 1354,
+          "height": 155.484375,
+          "bottom": 1053.6875
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 11,
+          "edges": 11,
+          "cards": 0,
+          "items": 0
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Checked",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Running",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Audit",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Archive",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 41
+          },
+          {
+            "text": "Retained",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "Expired",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "Purging",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 41
+          },
+          {
+            "text": "Removed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 143
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 143
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "new cycle",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "width": 1920,
+      "height": 1080,
+      "artifactSha256": "2a77713b319f8e4e325e1917c29a04ebd00e32e65ddb4c44560501f7f0eecb11",
+      "gateMetrics": {
+        "pageComposition": {
+          "bodyPaddingPx": 64,
+          "headerPx": 60,
+          "diagramChromePx": 84,
+          "svgPx": 860,
+          "cardsPx": 0,
+          "viewBoxHeight": 638
+        },
+        "innerWidth": 1920,
+        "innerHeight": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080,
+        "resolvedTheme": "light",
+        "readerLayout": "adaptive",
+        "readerOverflow": null,
+        "readerFit": "intrinsic-height",
+        "diagramType": null,
+        "documentScrollUnclipped": true,
+        "readerWidth": 1556,
+        "diagramWidth": 1526,
+        "viewBoxWidth": 1132,
+        "workflowLanes": [],
+        "minimumProjectedNodeTextPx": 9,
+        "minimumProjectedNonEdgeTextPx": 9,
+        "minimumProjectedEdgeTextPx": 10,
+        "minimumProjectedNodeText": "record phase",
+        "minimumProjectedNodeTextDetail": "context",
+        "minimumProjectedNodeTextOwner": {
+          "kind": "node",
+          "id": "queued"
+        },
+        "hasLegend": true,
+        "hasNavigationDock": true,
+        "legendDockIntersectionArea": 0,
+        "dockStageIntersectionArea": 0,
+        "dockStageGap": 10,
+        "viewerChromeRequiredGap": 10,
+        "viewerChromeReserve": 54,
+        "viewerChromeActive": true
+      },
+      "measured": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "rawScrollHeight": 1240,
+        "rawScrollWidth": 1920,
+        "scrollY": 0,
+        "rail": "bottom",
+        "readerOverflow": null,
+        "camera": {
+          "scale": 1,
+          "x": 0,
+          "y": 0,
+          "mode": "overview"
+        },
+        "motion": "still",
+        "detail": "read",
+        "preset": null,
+        "theme": "light",
+        "svgBox": {
+          "x": 197,
+          "y": 107,
+          "width": 1526,
+          "height": 860.046875,
+          "bottom": 967.046875
+        },
+        "viewBox": "0 0 1132 638",
+        "primary": [
+          {
+            "text": "Queued",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 337.75482177734375,
+              "y": 165.1419677734375,
+              "width": 58.21875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Checked",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 629.4711303710938,
+              "y": 165.1419677734375,
+              "width": 67.921875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Ready",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 935.7421875,
+              "y": 165.1419677734375,
+              "width": 48.515625,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Running",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1222.60693359375,
+              "y": 165.1419677734375,
+              "width": 67.921875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Done",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1533.7294921875,
+              "y": 165.1419677734375,
+              "width": 38.8123779296875,
+              "height": 21,
+              "bottom": 186.1419677734375
+            }
+          },
+          {
+            "text": "Audit",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1528.8779296875,
+              "y": 375.435546875,
+              "width": 48.515625,
+              "height": 21,
+              "bottom": 396.435546875
+            }
+          },
+          {
+            "text": "Archive",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1519.1748046875,
+              "y": 585.7291870117188,
+              "width": 67.921875,
+              "height": 20.99993896484375,
+              "bottom": 606.7291259765625
+            }
+          },
+          {
+            "text": "Retained",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 1514.3232421875,
+              "y": 796.022705078125,
+              "width": 77.625,
+              "height": 21.00006103515625,
+              "bottom": 817.0227661132812
+            }
+          },
+          {
+            "text": "Expired",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 796.022705078125,
+              "width": 67.92190551757812,
+              "height": 21.00006103515625,
+              "bottom": 817.0227661132812
+            }
+          },
+          {
+            "text": "Purging",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 585.7291870117188,
+              "width": 67.92190551757812,
+              "height": 20.99993896484375,
+              "bottom": 606.7291259765625
+            }
+          },
+          {
+            "text": "Removed",
+            "sourceFontPx": 12,
+            "actualScreenFontPx": 16.1764302507837,
+            "visible": true,
+            "box": {
+              "x": 332.90325927734375,
+              "y": 375.435546875,
+              "width": 67.92190551757812,
+              "height": 21,
+              "bottom": 396.435546875
+            }
+          }
+        ],
+        "context": [
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 193.4066162109375,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 619.7601928710938,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 916.328125,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1212.89599609375,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 193.4066162109375,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 209.4066162109375
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 403.7001953125,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 419.7001953125
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 613.9937744140625,
+              "width": 87.34375,
+              "height": 16,
+              "bottom": 629.9937744140625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 1509.4638671875,
+              "y": 824.287353515625,
+              "width": 87.34375,
+              "height": 16.00006103515625,
+              "bottom": 840.2874145507812
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 824.287353515625,
+              "width": 87.34371948242188,
+              "height": 16.00006103515625,
+              "bottom": 840.2874145507812
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 613.9937744140625,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 629.9937744140625
+            }
+          },
+          {
+            "text": "record phase",
+            "sourceFontPx": 9,
+            "actualScreenFontPx": 12.132322688087775,
+            "visible": true,
+            "box": {
+              "x": 323.1923522949219,
+              "y": 403.7001953125,
+              "width": 87.34371948242188,
+              "height": 16,
+              "bottom": 419.7001953125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 486.8356628417969,
+              "y": 159.727783203125,
+              "width": 56.625030517578125,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 783.403564453125,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1079.971435546875,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1376.539306640625,
+              "y": 159.727783203125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 177.727783203125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 283.7470703125,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 301.7470703125
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 494.0406494140625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 512.0406494140625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 1480.3380126953125,
+              "y": 704.334228515625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 722.334228515625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 931.6874389648438,
+              "y": 790.6085205078125,
+              "width": 56.625,
+              "height": 18.00006103515625,
+              "bottom": 808.6085815429688
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 294.0665283203125,
+              "y": 704.334228515625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 722.334228515625
+            }
+          },
+          {
+            "text": "advance",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 294.0665283203125,
+              "y": 494.0406494140625,
+              "width": 56.625,
+              "height": 18,
+              "bottom": 512.0406494140625
+            }
+          },
+          {
+            "text": "new cycle",
+            "sourceFontPx": 10,
+            "actualScreenFontPx": 13.48035854231975,
+            "visible": true,
+            "box": {
+              "x": 277.89239501953125,
+              "y": 283.7470703125,
+              "width": 72.796875,
+              "height": 18,
+              "bottom": 301.7470703125
+            }
+          }
+        ],
+        "nodeIds": [
+          "queued",
+          "checked",
+          "ready",
+          "running",
+          "done",
+          "audit",
+          "archive",
+          "retained",
+          "expired",
+          "purging",
+          "removed"
+        ],
+        "edgeIds": [
+          "t0",
+          "t1",
+          "t2",
+          "t3",
+          "t4",
+          "t5",
+          "t6",
+          "t7",
+          "t8",
+          "t9",
+          "restart"
+        ],
+        "edges": [
+          {
+            "from": "queued",
+            "to": "checked"
+          },
+          {
+            "from": "checked",
+            "to": "ready"
+          },
+          {
+            "from": "ready",
+            "to": "running"
+          },
+          {
+            "from": "running",
+            "to": "done"
+          },
+          {
+            "from": "done",
+            "to": "audit"
+          },
+          {
+            "from": "audit",
+            "to": "archive"
+          },
+          {
+            "from": "archive",
+            "to": "retained"
+          },
+          {
+            "from": "retained",
+            "to": "expired"
+          },
+          {
+            "from": "expired",
+            "to": "purging"
+          },
+          {
+            "from": "purging",
+            "to": "removed"
+          },
+          {
+            "from": "removed",
+            "to": "queued"
+          }
+        ],
+        "cards": [],
+        "cardItems": [],
+        "railBox": {
+          "x": 182,
+          "y": 1052.046875,
+          "width": 1556,
+          "height": 155.484375,
+          "bottom": 1207.53125
+        },
+        "documentOverflow": [
+          {
+            "tag": "HTML",
+            "x": "visible",
+            "y": "visible"
+          },
+          {
+            "tag": "BODY",
+            "x": "visible",
+            "y": "visible"
+          }
+        ],
+        "expected": {
+          "nodes": 11,
+          "edges": 11,
+          "cards": 0,
+          "items": 0
+        },
+        "missingStateIds": [],
+        "missingTransitions": [],
+        "missingCardText": [],
+        "reachability": [
+          {
+            "text": "Queued",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Checked",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Ready",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Running",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Done",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Audit",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "Archive",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 56
+          },
+          {
+            "text": "Retained",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "Expired",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "Purging",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 56
+          },
+          {
+            "text": "Removed",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 160
+          },
+          {
+            "text": "advance",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          },
+          {
+            "text": "new cycle",
+            "reachable": true,
+            "fullyInViewport": true,
+            "scrollY": 0
+          }
+        ]
+      }
+    }
+  ],
+  "browser": {
+    "protocolVersion": "1.3",
+    "product": "Chrome/156.0.8078.48",
+    "revision": "@d0c02bfad08ec92a6ffcf989e53cd995e6381a4c",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "jsVersion": "15.6.75.19"
+  }
+}

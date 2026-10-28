@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c59f50d7-37f3-4ab6-bb36-b115a8ac34eb",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/synthetic-11-no-cards.json",
+  "output": "$EVIDENCE/runs/baseline/artifacts/synthetic-11-no-cards.html",
+  "specification": {
+    "sha256": "80e6df98fcf9ff8f2462a5cacfb158d5e477b20873f8500dd1242cb32ee8133f",
+    "bytes": 2772
+  },
+  "artifact": {
+    "sha256": "2a77713b319f8e4e325e1917c29a04ebd00e32e65ddb4c44560501f7f0eecb11",
+    "bytes": 870012
+  }
+}

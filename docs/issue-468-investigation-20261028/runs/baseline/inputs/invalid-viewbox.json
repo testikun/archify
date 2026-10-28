@@ -1,0 +1,36 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Minimal Lifecycle",
+    "output": "minimal.html",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1075,
+      585
+    ]
+  },
+  "mainPath": [
+    "queued",
+    "done"
+  ],
+  "states": [
+    {
+      "id": "queued",
+      "type": "start",
+      "label": "Queued"
+    },
+    {
+      "id": "done",
+      "type": "success",
+      "label": "Done"
+    }
+  ],
+  "transitions": [
+    {
+      "from": "queued",
+      "to": "done",
+      "label": "finish"
+    }
+  ]
+}

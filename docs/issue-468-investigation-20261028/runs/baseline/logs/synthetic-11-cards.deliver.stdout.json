@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "cf75e1eb-fbd5-4564-8154-454f4e042aea",
+  "ok": true,
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/synthetic-11-cards.json",
+  "output": "$EVIDENCE/runs/baseline/artifacts/synthetic-11-cards.html",
+  "specification": {
+    "sha256": "40b2557aa8f0dc17b10bf28cd122ee53a934a30f0fe4435f46da87c6d36002ef",
+    "bytes": 3410
+  },
+  "artifact": {
+    "sha256": "0076a22d8a921630f8caf4292e28eb7bf3dbe8ae1e5a48700b96ae8ac097d6fb",
+    "bytes": 871000
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}

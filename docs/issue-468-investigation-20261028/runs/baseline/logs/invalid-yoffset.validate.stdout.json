@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/inputs/invalid-yoffset.json",
+  "error": "lifecycle schema validation failed:\n  /states/0 (id/label: \"queued\") must NOT have additional properties {\"additionalProperty\":\"yOffset\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/0 (id/label: \"queued\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/0",
+        "identity": "queued"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "yOffset"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"yOffset\""
+      ]
+    }
+  ]
+}
