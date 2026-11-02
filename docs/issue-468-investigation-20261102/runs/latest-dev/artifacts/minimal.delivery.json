@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "cc73d58c-e758-427d-a9f3-105445057b6b",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/runs/latest-dev/inputs/minimal.json",
+  "output": "$EVIDENCE/runs/latest-dev/artifacts/minimal.html",
+  "specification": {
+    "sha256": "dafff278af774925409e6e7318a5d771815d39ce11fb16794c3bc6583549fe9e",
+    "bytes": 502
+  },
+  "artifact": {
+    "sha256": "977afd985cdcfc502557dc1f7bb9f1893b1318bb325570c7f8f32475e3014242",
+    "bytes": 851829
+  }
+}

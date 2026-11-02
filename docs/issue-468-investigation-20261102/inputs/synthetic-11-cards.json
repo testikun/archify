@@ -1,0 +1,178 @@
+{
+  "schema_version": 3,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Synthetic Retention Lifecycle",
+    "output": "synthetic-11-cards.html",
+    "quality_profile": "showcase"
+  },
+  "mainPath": [
+    "queued",
+    "checked",
+    "ready",
+    "running",
+    "done"
+  ],
+  "states": [
+    {
+      "id": "queued",
+      "type": "start",
+      "label": "Queued",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "checked",
+      "type": "active",
+      "label": "Checked",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "ready",
+      "type": "active",
+      "label": "Ready",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "running",
+      "type": "active",
+      "label": "Running",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "done",
+      "type": "active",
+      "label": "Done",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "audit",
+      "type": "active",
+      "label": "Audit",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "archive",
+      "type": "active",
+      "label": "Archive",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "retained",
+      "type": "active",
+      "label": "Retained",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "expired",
+      "type": "active",
+      "label": "Expired",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "purging",
+      "type": "active",
+      "label": "Purging",
+      "sublabel": "record phase"
+    },
+    {
+      "id": "removed",
+      "type": "success",
+      "label": "Removed",
+      "sublabel": "record phase"
+    }
+  ],
+  "transitions": [
+    {
+      "id": "t0",
+      "from": "queued",
+      "to": "checked",
+      "label": "advance"
+    },
+    {
+      "id": "t1",
+      "from": "checked",
+      "to": "ready",
+      "label": "advance"
+    },
+    {
+      "id": "t2",
+      "from": "ready",
+      "to": "running",
+      "label": "advance"
+    },
+    {
+      "id": "t3",
+      "from": "running",
+      "to": "done",
+      "label": "advance"
+    },
+    {
+      "id": "t4",
+      "from": "done",
+      "to": "audit",
+      "label": "advance"
+    },
+    {
+      "id": "t5",
+      "from": "audit",
+      "to": "archive",
+      "label": "advance"
+    },
+    {
+      "id": "t6",
+      "from": "archive",
+      "to": "retained",
+      "label": "advance"
+    },
+    {
+      "id": "t7",
+      "from": "retained",
+      "to": "expired",
+      "label": "advance"
+    },
+    {
+      "id": "t8",
+      "from": "expired",
+      "to": "purging",
+      "label": "advance"
+    },
+    {
+      "id": "t9",
+      "from": "purging",
+      "to": "removed",
+      "label": "advance"
+    },
+    {
+      "id": "restart",
+      "from": "removed",
+      "to": "queued",
+      "label": "new cycle"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Primary path",
+      "items": [
+        "Queued through Done is the primary reading path.",
+        "Every record phase remains in the diagram."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Retention detail",
+      "items": [
+        "Audit, archive and expiry are secondary phases.",
+        "The automatic layout places them below the primary path."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "Cycle boundary",
+      "items": [
+        "Removed starts a new cycle through the explicit return.",
+        "This is a synthetic investigation fixture."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "sourceSha": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "node": "v22.23.2",
+  "valid": [
+    {
+      "name": "minimal",
+      "views": 4,
+      "artifactSha256": "977afd985cdcfc502557dc1f7bb9f1893b1318bb325570c7f8f32475e3014242"
+    },
+    {
+      "name": "public-deployment",
+      "views": 4,
+      "artifactSha256": "075c17d1b283bd9b1a4111ad3b54fa9ecf28c7017b7935b73cfbd92429234bc2"
+    },
+    {
+      "name": "synthetic-11-cards",
+      "views": 4,
+      "artifactSha256": "da910c325f5e8a43ea634508de974d9b3b62b65cc27045c3e555389544a642dc"
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "views": 4,
+      "artifactSha256": "21a7da9987134ea69b939d18bda7fe4458e4e0d57b70745906fb7b8eee95f0d8"
+    },
+    {
+      "name": "synthetic-tall",
+      "views": 4,
+      "artifactSha256": "68e194d3fe2b87e6d1708d5083b6d0a395a460b341c029aa0bd360f5f0bbe2fa"
+    }
+  ],
+  "expectedFailures": [
+    {
+      "name": "synthetic-11-all-main",
+      "stage": "validate",
+      "exitCode": 1
+    },
+    {
+      "name": "invalid-viewbox",
+      "stage": "validate",
+      "exitCode": 1
+    },
+    {
+      "name": "invalid-yoffset",
+      "stage": "validate",
+      "exitCode": 1
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "startedAt": "2026-11-02T08:25:20.880Z",
+  "source": {
+    "sha": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "source": "git archive origin/dev",
+    "retrievedAt": "2026-11-02T08:24:45.702248+00:00",
+    "previousSourceSha": "6ca6a5c84439b57ea22e0630fe306e1d91587a6e"
+  },
+  "node": "v22.23.2",
+  "executable": "node",
+  "platform": "darwin",
+  "arch": "arm64",
+  "osRelease": "25.6.0",
+  "commands": [
+    {
+      "name": "minimal",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/minimal.json",
+      "inputSha256": "dafff278af774925409e6e7318a5d771815d39ce11fb16794c3bc6583549fe9e"
+    },
+    {
+      "name": "minimal",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/minimal.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 221
+    },
+    {
+      "name": "minimal",
+      "stage": "deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/minimal.json",
+        "$EVIDENCE/runs/latest-dev/artifacts/minimal.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 246
+    },
+    {
+      "name": "minimal",
+      "stage": "visual-check",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "visual-check",
+        "$EVIDENCE/runs/latest-dev/artifacts/minimal.html",
+        "--require-provenance",
+        "--out-dir",
+        "$EVIDENCE/runs/latest-dev/browser/minimal",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1901
+    },
+    {
+      "name": "public-deployment",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/public-deployment.json",
+      "inputSha256": "e3dc105d03c1c9881160006cdace23cb5d8533803e337caf0ec287c64e775275"
+    },
+    {
+      "name": "public-deployment",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/public-deployment.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 236
+    },
+    {
+      "name": "public-deployment",
+      "stage": "deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/public-deployment.json",
+        "$EVIDENCE/runs/latest-dev/artifacts/public-deployment.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 265
+    },
+    {
+      "name": "public-deployment",
+      "stage": "visual-check",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "visual-check",
+        "$EVIDENCE/runs/latest-dev/artifacts/public-deployment.html",
+        "--require-provenance",
+        "--out-dir",
+        "$EVIDENCE/runs/latest-dev/browser/public-deployment",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 2181
+    },
+    {
+      "name": "synthetic-11-cards",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-cards.json",
+      "inputSha256": "40b2557aa8f0dc17b10bf28cd122ee53a934a30f0fe4435f46da87c6d36002ef"
+    },
+    {
+      "name": "synthetic-11-cards",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-cards.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 225
+    },
+    {
+      "name": "synthetic-11-cards",
+      "stage": "deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-cards.json",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-11-cards.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 255
+    },
+    {
+      "name": "synthetic-11-cards",
+      "stage": "visual-check",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "visual-check",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-11-cards.html",
+        "--require-provenance",
+        "--out-dir",
+        "$EVIDENCE/runs/latest-dev/browser/synthetic-11-cards",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1909
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-no-cards.json",
+      "inputSha256": "80e6df98fcf9ff8f2462a5cacfb158d5e477b20873f8500dd1242cb32ee8133f"
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-no-cards.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 231
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "stage": "deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-no-cards.json",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-11-no-cards.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 294
+    },
+    {
+      "name": "synthetic-11-no-cards",
+      "stage": "visual-check",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "visual-check",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-11-no-cards.html",
+        "--require-provenance",
+        "--out-dir",
+        "$EVIDENCE/runs/latest-dev/browser/synthetic-11-no-cards",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1896
+    },
+    {
+      "name": "synthetic-11-all-main",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-all-main.json",
+      "inputSha256": "1aab0e0a70d87879a733f0702912307b3886810c6d8f4d760448e73fa5ade324"
+    },
+    {
+      "name": "synthetic-11-all-main",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-11-all-main.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 1,
+      "signal": null,
+      "elapsedMs": 133
+    },
+    {
+      "name": "synthetic-tall",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/synthetic-tall.json",
+      "inputSha256": "5243c91f192440b78de6e64b2e880b5a68fda70bc5f7ac8701d54a3af574db8f"
+    },
+    {
+      "name": "synthetic-tall",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-tall.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 225
+    },
+    {
+      "name": "synthetic-tall",
+      "stage": "deliver",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "deliver",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/synthetic-tall.json",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-tall.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 274
+    },
+    {
+      "name": "synthetic-tall",
+      "stage": "visual-check",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "visual-check",
+        "$EVIDENCE/runs/latest-dev/artifacts/synthetic-tall.html",
+        "--require-provenance",
+        "--out-dir",
+        "$EVIDENCE/runs/latest-dev/browser/synthetic-tall",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 0,
+      "signal": null,
+      "elapsedMs": 1892
+    },
+    {
+      "name": "invalid-viewbox",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/invalid-viewbox.json",
+      "inputSha256": "4145b17bebd3516751b48a0d50e1cc047e31e20c69e3d0e51612bee98d670c1b"
+    },
+    {
+      "name": "invalid-viewbox",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/invalid-viewbox.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 1,
+      "signal": null,
+      "elapsedMs": 123
+    },
+    {
+      "name": "invalid-yoffset",
+      "input": "$EVIDENCE/runs/latest-dev/inputs/invalid-yoffset.json",
+      "inputSha256": "fc044879e93c8145f91db8db4332ee93ac51da2503d62cb26707ee3e40877f18"
+    },
+    {
+      "name": "invalid-yoffset",
+      "stage": "validate",
+      "command": [
+        "node",
+        "$EVIDENCE/source/archify/bin/archify.mjs",
+        "validate",
+        "lifecycle",
+        "$EVIDENCE/runs/latest-dev/inputs/invalid-yoffset.json",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "cwd": "$EVIDENCE",
+      "exitCode": 1,
+      "signal": null,
+      "elapsedMs": 126
+    }
+  ],
+  "finishedAt": "2026-11-02T08:25:33.528Z"
+}

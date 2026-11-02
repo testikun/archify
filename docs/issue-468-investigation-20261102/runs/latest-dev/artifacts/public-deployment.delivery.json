@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "71b02ec9-2c0d-430c-8997-9ac9b223fb5d",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/runs/latest-dev/inputs/public-deployment.json",
+  "output": "$EVIDENCE/runs/latest-dev/artifacts/public-deployment.html",
+  "specification": {
+    "sha256": "e3dc105d03c1c9881160006cdace23cb5d8533803e337caf0ec287c64e775275",
+    "bytes": 4155
+  },
+  "artifact": {
+    "sha256": "075c17d1b283bd9b1a4111ad3b54fa9ecf28c7017b7935b73cfbd92429234bc2",
+    "bytes": 884505
+  }
+}

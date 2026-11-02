@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "85c7b915-1d95-4dee-8b35-232b880e2f0c",
+  "ok": true,
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/runs/latest-dev/inputs/synthetic-tall.json",
+  "output": "$EVIDENCE/runs/latest-dev/artifacts/synthetic-tall.html",
+  "specification": {
+    "sha256": "5243c91f192440b78de6e64b2e880b5a68fda70bc5f7ac8701d54a3af574db8f",
+    "bytes": 2613
+  },
+  "artifact": {
+    "sha256": "68e194d3fe2b87e6d1708d5083b6d0a395a460b341c029aa0bd360f5f0bbe2fa",
+    "bytes": 869556
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "cache-valid"
+  }
+}
