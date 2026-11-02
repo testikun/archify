@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-244.lifecycle.json",
+  "error": "lifecycle schema validation failed:\n  / must have required property 'mainPath' {\"missingProperty\":\"mainPath\"}\n  / must NOT have additional properties {\"additionalProperty\":\"lanes\"}\n  /schema_version must be equal to constant {\"allowedValue\":3}\n  /meta must have required property 'output' {\"missingProperty\":\"output\"}\n  /meta must NOT have additional properties {\"additionalProperty\":\"viewBox\"}\n  /states/0 (id/label: \"queued\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/0 (id/label: \"queued\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/1 (id/label: \"planning\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/1 (id/label: \"planning\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/2 (id/label: \"executing\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/2 (id/label: \"executing\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/3 (id/label: \"reviewing\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/3 (id/label: \"reviewing\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/4 (id/label: \"completed\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/4 (id/label: \"completed\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /states/5 (id/label: \"blocked\") must NOT have additional properties {\"additionalProperty\":\"lane\"}\n  /states/5 (id/label: \"blocked\") must NOT have additional properties {\"additionalProperty\":\"col\"}\n  /transitions/0 (id/label: \"review-blocked\") must NOT have additional properties {\"additionalProperty\":\"route\"}",
+  "diagnostics": [
+    {
+      "code": "schema/required",
+      "severity": "error",
+      "message": "/ must have required property 'mainPath'",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/"
+      },
+      "evidence": {
+        "keyword": "required",
+        "missingProperty": "mainPath"
+      },
+      "supportedFixes": [
+        "add required property \"mainPath\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/ must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lanes"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lanes\""
+      ]
+    },
+    {
+      "code": "schema/const",
+      "severity": "error",
+      "message": "/schema_version must be equal to constant",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/schema_version"
+      },
+      "evidence": {
+        "keyword": "const",
+        "allowedValue": 3
+      },
+      "supportedFixes": []
+    },
+    {
+      "code": "schema/required",
+      "severity": "error",
+      "message": "/meta must have required property 'output'",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/meta"
+      },
+      "evidence": {
+        "keyword": "required",
+        "missingProperty": "output"
+      },
+      "supportedFixes": [
+        "add required property \"output\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/meta must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/meta"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "viewBox"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"viewBox\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/0 (id/label: \"queued\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/0",
+        "identity": "queued"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/0 (id/label: \"queued\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/0",
+        "identity": "queued"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/1 (id/label: \"planning\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/1",
+        "identity": "planning"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/1 (id/label: \"planning\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/1",
+        "identity": "planning"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/2 (id/label: \"executing\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/2",
+        "identity": "executing"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/2 (id/label: \"executing\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/2",
+        "identity": "executing"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/3 (id/label: \"reviewing\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/3",
+        "identity": "reviewing"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/3 (id/label: \"reviewing\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/3",
+        "identity": "reviewing"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/4 (id/label: \"completed\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/4",
+        "identity": "completed"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/4 (id/label: \"completed\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/4",
+        "identity": "completed"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/5 (id/label: \"blocked\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/5",
+        "identity": "blocked"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "lane"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"lane\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/states/5 (id/label: \"blocked\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/states/5",
+        "identity": "blocked"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "col"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"col\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/transitions/0 (id/label: \"review-blocked\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/transitions/0",
+        "identity": "review-blocked"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "route"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"route\""
+      ]
+    }
+  ]
+}

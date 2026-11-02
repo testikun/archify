@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "88d2781d-a066-4477-93ed-a30ba23510df",
+  "stage": "prepare",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-243.lifecycle.json",
+  "output": "$EVIDENCE/issue-243.original.html",
+  "error": "meta.output must be a portable POSIX-relative path.",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "subject": {
+        "path": "/meta/output"
+      },
+      "evidence": {
+        "reason": "type"
+      },
+      "supportedFixes": [
+        "set meta.output to a portable relative .html path such as reports/diagram.html"
+      ],
+      "code": "output/meta-path-syntax",
+      "message": "meta.output must be a portable POSIX-relative path."
+    }
+  ]
+}

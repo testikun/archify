@@ -1,0 +1,76 @@
+{
+  "sha": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "remoteDevUnchangedAtFinish": true,
+  "modes": {
+    "browser": {
+      "passed": 38,
+      "baselines": 4,
+      "environment": {
+        "sha": "63c9263e84bd3993cab8e09b3d69888857858635",
+        "node": "v20.20.2",
+        "os": "Darwin 25.6.0 arm64",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1
+        },
+        "runner": "Agent-operated real headless Chrome via CDP; native mouse and Tab/Enter/Escape input",
+        "mode": "canonical export, then exit",
+        "timestamp": "2026-11-02T07:55:45.529Z",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/156.0.8078.74",
+          "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "jsVersion": "15.6.75.25"
+        }
+      }
+    },
+    "direct-exit": {
+      "passed": 38,
+      "baselines": 4,
+      "environment": {
+        "sha": "63c9263e84bd3993cab8e09b3d69888857858635",
+        "node": "v20.20.2",
+        "os": "Darwin 25.6.0 arm64",
+        "viewport": {
+          "width": 1440,
+          "height": 900,
+          "deviceScaleFactor": 1
+        },
+        "runner": "Agent-operated real headless Chrome via CDP; native mouse and Tab/Enter/Escape input",
+        "mode": "direct exit without exporting first",
+        "timestamp": "2026-11-02T07:57:04.854Z",
+        "browser": {
+          "protocolVersion": "1.3",
+          "product": "Chrome/156.0.8078.74",
+          "revision": "@d331de35ca8ab1358c7a17e4bd41627d55eaef51",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+          "jsVersion": "15.6.75.25"
+        }
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "file": "issue-243.v3.html",
+      "sha256": "0f50a96a9a9fd4c3f1968ac166cc272b4de4f910540ac4c72c9f59ed6a9f1277",
+      "bytes": 851409
+    },
+    {
+      "file": "issue-243.v3.lifecycle.json",
+      "sha256": "ef241bb374d172a151337c6c72135854201ef197458ce22acc6c5bf0577783da",
+      "bytes": 443
+    },
+    {
+      "file": "issue-244.v3.html",
+      "sha256": "852a256edade73d41b6ed17f3a68d4d905b4e770d84529eb6bda660e45b6afce",
+      "bytes": 857671
+    },
+    {
+      "file": "issue-244.v3.lifecycle.json",
+      "sha256": "8a14bf9a3c2f85b6f9a4e66b7805be5cfc1ec0c26b265d688af46301d34f5c04",
+      "bytes": 941
+    }
+  ]
+}

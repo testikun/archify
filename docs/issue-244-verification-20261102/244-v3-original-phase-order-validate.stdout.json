@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "lifecycle",
+  "input": "$EVIDENCE/issue-244.v3-original-phase-order.lifecycle.json",
+  "error": "Lifecycle validation failed:\n- mainPath step \"queued\" -> \"planning\" has no transition.\n- mainPath step \"planning\" -> \"executing\" has no transition.\n- mainPath step \"executing\" -> \"reviewing\" has no transition.\n- mainPath step \"reviewing\" -> \"completed\" has no transition.",
+  "diagnostics": [
+    {
+      "code": "lifecycle/main-path-gap",
+      "severity": "error",
+      "message": "mainPath step \"queued\" -> \"planning\" has no transition.",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/mainPath/0"
+      },
+      "evidence": {},
+      "supportedFixes": [
+        "add a transition from \"queued\" to \"planning\"",
+        "remove the state from mainPath if it is not on the happy path"
+      ]
+    },
+    {
+      "code": "lifecycle/main-path-gap",
+      "severity": "error",
+      "message": "mainPath step \"planning\" -> \"executing\" has no transition.",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/mainPath/1"
+      },
+      "evidence": {},
+      "supportedFixes": [
+        "add a transition from \"planning\" to \"executing\"",
+        "remove the state from mainPath if it is not on the happy path"
+      ]
+    },
+    {
+      "code": "lifecycle/main-path-gap",
+      "severity": "error",
+      "message": "mainPath step \"executing\" -> \"reviewing\" has no transition.",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/mainPath/2"
+      },
+      "evidence": {},
+      "supportedFixes": [
+        "add a transition from \"executing\" to \"reviewing\"",
+        "remove the state from mainPath if it is not on the happy path"
+      ]
+    },
+    {
+      "code": "lifecycle/main-path-gap",
+      "severity": "error",
+      "message": "mainPath step \"reviewing\" -> \"completed\" has no transition.",
+      "subject": {
+        "diagramType": "lifecycle",
+        "path": "/mainPath/3"
+      },
+      "evidence": {},
+      "supportedFixes": [
+        "add a transition from \"reviewing\" to \"completed\"",
+        "remove the state from mainPath if it is not on the happy path"
+      ]
+    }
+  ]
+}
