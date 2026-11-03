@@ -1,0 +1,72 @@
+Browser tests: 2 files, concurrency 2
+TAP version 13
+# Subtest: automatic architectures preserve primary reading size when fitting the full page would shrink text
+ok 1 - automatic architectures preserve primary reading size when fitting the full page would shrink text
+  ---
+  duration_ms: 1725.727667
+  ...
+# Subtest: a narrow tall architecture fits the first screen without enlarging the other titles
+ok 2 - a narrow tall architecture fits the first screen without enlarging the other titles
+  ---
+  duration_ms: 1071.663209
+  ...
+# Subtest: a first-screen fit never pushes relationship labels below the 6px floor
+ok 3 - a first-screen fit never pushes relationship labels below the 6px floor
+  ---
+  duration_ms: 1331.601959
+  ...
+# Subtest: Route Probe preserves directed paths, Journey and export contracts
+    # Subtest: five modes initialize and trusted endpoint input preserves capture and error recovery
+    ok 1 - five modes initialize and trusted endpoint input preserves capture and error recovery
+      ---
+      duration_ms: 2639.6895
+      ...
+    # Subtest: SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+    ok 2 - SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+      ---
+      duration_ms: 256.770709
+      ...
+    # Subtest: native Journey controls, finite playback, pause and layered Escape preserve path state
+    ok 3 - native Journey controls, finite playback, pause and layered Escape preserve path state
+      ---
+      duration_ms: 6311.331625
+      ...
+    # Subtest: controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+    ok 4 - controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+      ---
+      duration_ms: 1346.972166
+      ...
+    # Subtest: actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+    ok 5 - actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+      ---
+      duration_ms: 1525.104375
+      ...
+    # Subtest: hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+    ok 6 - hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+      ---
+      duration_ms: 8770.5325
+      ...
+    # Subtest: docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+    ok 7 - docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+      ---
+      duration_ms: 1482.268833
+      ...
+    # Subtest: theme snapshots, Still rendering and real exports retain authored route semantics
+    ok 8 - theme snapshots, Still rendering and real exports retain authored route semantics
+      ---
+      duration_ms: 845.342084
+      ...
+    1..8
+ok 4 - Route Probe preserves directed paths, Journey and export contracts
+  ---
+  duration_ms: 24927.986459
+  ...
+1..4
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25027.492917

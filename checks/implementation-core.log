@@ -1,0 +1,115 @@
+
+> test
+> npm run test:core
+
+
+> test:core
+> node scripts/run-tests.mjs test/core-smoke.test.mjs
+
+Repository tests: 1 files, concurrency 4
+TAP version 13
+# Subtest: core smoke: public CLI diagrams, compatibility and delivery safety
+    # Subtest: architecture: validate, render and deliver the official example
+    ok 1 - architecture: validate, render and deliver the official example
+      ---
+      duration_ms: 821.321542
+      ...
+    # Subtest: workflow: validate, render and deliver the official example
+    ok 2 - workflow: validate, render and deliver the official example
+      ---
+      duration_ms: 1025.319625
+      ...
+    # Subtest: sequence: validate, render and deliver the official example
+    ok 3 - sequence: validate, render and deliver the official example
+      ---
+      duration_ms: 750.731
+      ...
+    # Subtest: dataflow: validate, render and deliver the official example
+    ok 4 - dataflow: validate, render and deliver the official example
+      ---
+      duration_ms: 809.016709
+      ...
+    # Subtest: lifecycle: validate, render and deliver the official example
+    ok 5 - lifecycle: validate, render and deliver the official example
+      ---
+      duration_ms: 733.304083
+      ...
+    # Subtest: erd: validate, render and deliver the official example
+    ok 6 - erd: validate, render and deliver the official example
+      ---
+      duration_ms: 771.69275
+      ...
+    # Subtest: tree: validate, render and deliver the official example
+    ok 7 - tree: validate, render and deliver the official example
+      ---
+      duration_ms: 963.9105
+      ...
+    # Subtest: class: validate, render and deliver the official example
+    ok 8 - class: validate, render and deliver the official example
+      ---
+      duration_ms: 851.928125
+      ...
+    # Subtest: timeline: validate, render and deliver the official example
+    ok 9 - timeline: validate, render and deliver the official example
+      ---
+      duration_ms: 674.389875
+      ...
+    # Subtest: waterfall: validate, render and deliver the official example
+    ok 10 - waterfall: validate, render and deliver the official example
+      ---
+      duration_ms: 678.876292
+      ...
+    # Subtest: explainer: validate, render and deliver the official example
+    ok 11 - explainer: validate, render and deliver the official example
+      ---
+      duration_ms: 664.476625
+      ...
+    # Subtest: architecture: frozen schema-v1 input remains valid and renderable
+    ok 12 - architecture: frozen schema-v1 input remains valid and renderable
+      ---
+      duration_ms: 416.541875
+      ...
+    # Subtest: workflow: frozen schema-v1 input remains valid and renderable
+    ok 13 - workflow: frozen schema-v1 input remains valid and renderable
+      ---
+      duration_ms: 408.523792
+      ...
+    # Subtest: sequence: frozen schema-v1 input remains valid and renderable
+    ok 14 - sequence: frozen schema-v1 input remains valid and renderable
+      ---
+      duration_ms: 411.281292
+      ...
+    # Subtest: dataflow: frozen schema-v1 input remains valid and renderable
+    ok 15 - dataflow: frozen schema-v1 input remains valid and renderable
+      ---
+      duration_ms: 407.248917
+      ...
+    # Subtest: unknown diagram types return a structured diagnostic
+    ok 16 - unknown diagram types return a structured diagnostic
+      ---
+      duration_ms: 39.304125
+      ...
+    # Subtest: strict provenance binds the delivered artifact bytes
+    ok 17 - strict provenance binds the delivered artifact bytes
+      ---
+      duration_ms: 203.25925
+      ...
+    # Subtest: invalid schema preserves the last artifact and marks its delivery as failed
+    ok 18 - invalid schema preserves the last artifact and marks its delivery as failed
+      ---
+      duration_ms: 330.778792
+      ...
+    1..18
+ok 1 - core smoke: public CLI diagrams, compatibility and delivery safety
+  ---
+  duration_ms: 10972.532917
+  ...
+1..1
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11042.854

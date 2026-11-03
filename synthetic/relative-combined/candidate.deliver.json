@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "caa93452-d369-4e00-b49e-e067b9f4b128",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/investigation/latest-dev-20261102/issue359-scenario/relative-combined/diagram.json",
+  "output": "/investigation/latest-dev-20261102/issue359-scenario/relative-combined/candidate.html",
+  "specification": {
+    "sha256": "ac7e59741105f3fc0eed0a0c7921841d0b013d1bf3917dcc5d57fba8c6202f00",
+    "bytes": 9405
+  },
+  "artifact": {
+    "sha256": "e97b64876ba9076bf6389d8392258e75ddbddb64c135756b5ba9ff97a6a32bc7",
+    "bytes": 881806
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

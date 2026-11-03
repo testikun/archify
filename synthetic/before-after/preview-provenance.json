@@ -1,0 +1,9 @@
+{
+  "purpose": "Display rejected geometry, not a passing artifact or delivery.",
+  "source_renderer": "/local-user/Documents/ChatGPT/arch/issue-244-verification/latest-dev-20261102/source/archify/renderers/architecture/render-architecture.mjs",
+  "source_renderer_sha256": "8ca0925b294df519cd2eee7c55b60c092815bacf2042628328fd2eb7ceea8afb",
+  "input": "/investigation/latest-dev-20261102/issue359-scenario/best-combined-nodes-only/diagram.json",
+  "input_sha256": "91a89871e4786bb070806bf0a70ebe213cc0bb1c248af38284563ff1f00b79a8",
+  "modification": "External diagnostic renderer catches only typed layout failures before drawing. Imports/assets stay at the frozen base. No product checkout changes.",
+  "annotation": "Capture adds red segments from the original typed diagnostics; node/route geometry is unchanged."
+}

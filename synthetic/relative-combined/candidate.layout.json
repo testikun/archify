@@ -1,0 +1,768 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1240,
+    1280
+  ],
+  "components": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser",
+      "x": 100,
+      "y": 140,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        140
+      ]
+    },
+    {
+      "id": "edge",
+      "type": "cloud",
+      "label": "Edge gateway",
+      "x": 496,
+      "y": 140,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        496,
+        140
+      ]
+    },
+    {
+      "id": "gateway",
+      "type": "backend",
+      "label": "App gateway",
+      "x": 100,
+      "y": 420,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        420
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "API",
+      "x": 496,
+      "y": 420,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        496,
+        420
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Worker",
+      "x": 892,
+      "y": 420,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        892,
+        420
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "security",
+      "label": "Auth service",
+      "x": 100,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        620
+      ]
+    },
+    {
+      "id": "billing",
+      "type": "backend",
+      "label": "Billing service",
+      "x": 496,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        496,
+        620
+      ]
+    },
+    {
+      "id": "queue",
+      "type": "messagebus",
+      "label": "Queue",
+      "x": 892,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        892,
+        620
+      ]
+    },
+    {
+      "id": "scheduler",
+      "type": "backend",
+      "label": "Scheduler",
+      "x": 100,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        860
+      ]
+    },
+    {
+      "id": "processor",
+      "type": "backend",
+      "label": "Processor",
+      "x": 496,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        496,
+        860
+      ]
+    },
+    {
+      "id": "indexer",
+      "type": "backend",
+      "label": "Indexer",
+      "x": 892,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        892,
+        860
+      ]
+    },
+    {
+      "id": "users",
+      "type": "database",
+      "label": "Users",
+      "x": 100,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        1100
+      ]
+    },
+    {
+      "id": "orders",
+      "type": "database",
+      "label": "Orders",
+      "x": 496,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        496,
+        1100
+      ]
+    },
+    {
+      "id": "logs",
+      "type": "database",
+      "label": "Logs",
+      "x": 892,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        892,
+        1100
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "browser",
+      "to": "edge",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          180
+        ],
+        [
+          496,
+          180
+        ]
+      ],
+      "labelAt": [
+        398,
+        180
+      ]
+    },
+    {
+      "from": "gateway",
+      "to": "api",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          460
+        ],
+        [
+          496,
+          460
+        ]
+      ],
+      "labelAt": [
+        398,
+        460
+      ]
+    },
+    {
+      "from": "api",
+      "to": "worker",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          696,
+          460
+        ],
+        [
+          892,
+          460
+        ]
+      ],
+      "labelAt": [
+        794,
+        460
+      ]
+    },
+    {
+      "from": "auth",
+      "to": "billing",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          660
+        ],
+        [
+          496,
+          660
+        ]
+      ],
+      "labelAt": [
+        398,
+        660
+      ]
+    },
+    {
+      "from": "billing",
+      "to": "queue",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          696,
+          660
+        ],
+        [
+          892,
+          660
+        ]
+      ],
+      "labelAt": [
+        794,
+        660
+      ]
+    },
+    {
+      "from": "scheduler",
+      "to": "processor",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          900
+        ],
+        [
+          496,
+          900
+        ]
+      ],
+      "labelAt": [
+        398,
+        900
+      ]
+    },
+    {
+      "from": "processor",
+      "to": "indexer",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          696,
+          900
+        ],
+        [
+          892,
+          900
+        ]
+      ],
+      "labelAt": [
+        794,
+        900
+      ]
+    },
+    {
+      "from": "users",
+      "to": "orders",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          1140
+        ],
+        [
+          496,
+          1140
+        ]
+      ],
+      "labelAt": [
+        398,
+        1140
+      ]
+    },
+    {
+      "from": "orders",
+      "to": "logs",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          696,
+          1140
+        ],
+        [
+          892,
+          1140
+        ]
+      ],
+      "labelAt": [
+        794,
+        1140
+      ]
+    },
+    {
+      "from": "edge",
+      "to": "api",
+      "label": "request",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          596,
+          220
+        ],
+        [
+          596,
+          260
+        ],
+        [
+          680,
+          260
+        ],
+        [
+          680,
+          380
+        ],
+        [
+          596,
+          380
+        ],
+        [
+          596,
+          420
+        ]
+      ],
+      "labelAt": [
+        680,
+        320
+      ]
+    },
+    {
+      "from": "api",
+      "to": "billing",
+      "label": "bill",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          596,
+          500
+        ],
+        [
+          596,
+          540
+        ],
+        [
+          680,
+          540
+        ],
+        [
+          680,
+          580
+        ],
+        [
+          596,
+          580
+        ],
+        [
+          596,
+          620
+        ]
+      ],
+      "labelAt": [
+        680,
+        560
+      ]
+    },
+    {
+      "from": "billing",
+      "to": "processor",
+      "label": "execute",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          596,
+          700
+        ],
+        [
+          596,
+          740
+        ],
+        [
+          680,
+          740
+        ],
+        [
+          680,
+          820
+        ],
+        [
+          596,
+          820
+        ],
+        [
+          596,
+          860
+        ]
+      ],
+      "labelAt": [
+        680,
+        780
+      ]
+    },
+    {
+      "from": "processor",
+      "to": "orders",
+      "label": "write",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          596,
+          940
+        ],
+        [
+          596,
+          980
+        ],
+        [
+          680,
+          980
+        ],
+        [
+          680,
+          1060
+        ],
+        [
+          596,
+          1060
+        ],
+        [
+          596,
+          1100
+        ]
+      ],
+      "labelAt": [
+        680,
+        1020
+      ]
+    },
+    {
+      "from": "gateway",
+      "to": "auth",
+      "label": "authorize",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          200,
+          500
+        ],
+        [
+          200,
+          540
+        ],
+        [
+          320,
+          540
+        ],
+        [
+          320,
+          580
+        ],
+        [
+          200,
+          580
+        ],
+        [
+          200,
+          620
+        ]
+      ],
+      "labelAt": [
+        320,
+        560
+      ]
+    },
+    {
+      "from": "edge",
+      "to": "logs",
+      "label": "audit",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          696,
+          180
+        ],
+        [
+          1180,
+          180
+        ],
+        [
+          1180,
+          1140
+        ],
+        [
+          1092,
+          1140
+        ]
+      ],
+      "labelAt": [
+        1180,
+        660
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "process",
+      "x": 376,
+      "y": 170,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        398,
+        180
+      ]
+    },
+    {
+      "text": "process",
+      "x": 376,
+      "y": 450,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        398,
+        460
+      ]
+    },
+    {
+      "text": "process",
+      "x": 772,
+      "y": 450,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        794,
+        460
+      ]
+    },
+    {
+      "text": "process",
+      "x": 376,
+      "y": 650,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        398,
+        660
+      ]
+    },
+    {
+      "text": "process",
+      "x": 772,
+      "y": 650,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        794,
+        660
+      ]
+    },
+    {
+      "text": "process",
+      "x": 376,
+      "y": 890,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        398,
+        900
+      ]
+    },
+    {
+      "text": "process",
+      "x": 772,
+      "y": 890,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        794,
+        900
+      ]
+    },
+    {
+      "text": "process",
+      "x": 376,
+      "y": 1130,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        398,
+        1140
+      ]
+    },
+    {
+      "text": "process",
+      "x": 772,
+      "y": 1130,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        794,
+        1140
+      ]
+    },
+    {
+      "text": "request",
+      "x": 658,
+      "y": 310,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        680,
+        320
+      ]
+    },
+    {
+      "text": "bill",
+      "x": 665,
+      "y": 550,
+      "width": 30,
+      "height": 14,
+      "labelAt": [
+        680,
+        560
+      ]
+    },
+    {
+      "text": "execute",
+      "x": 658,
+      "y": 770,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        680,
+        780
+      ]
+    },
+    {
+      "text": "write",
+      "x": 663,
+      "y": 1010,
+      "width": 34,
+      "height": 14,
+      "labelAt": [
+        680,
+        1020
+      ]
+    },
+    {
+      "text": "authorize",
+      "x": 293,
+      "y": 550,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        320,
+        560
+      ]
+    },
+    {
+      "text": "audit",
+      "x": 1163,
+      "y": 650,
+      "width": 34,
+      "height": 14,
+      "labelAt": [
+        1180,
+        660
+      ]
+    }
+  ]
+}

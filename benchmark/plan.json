@@ -1,0 +1,250 @@
+{
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "diagram_types": [
+    "architecture"
+  ],
+  "scope_reason": "Only Architecture accepts or resolves the new coordinates. Architecture-specific documentation is in the shared authoring reference; no other diagram semantics, defaults or shared router changed. Core smoke covers unchanged types.",
+  "arms": {
+    "base": {
+      "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+      "tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+      "hash_method": "SHA-256 of git archive bytes",
+      "git_tree_oid": "275dead96c96afb14b213b0b0e23d0f5f920ba23"
+    },
+    "candidate": {
+      "commit": "e7174173cbbd134418a08155c6e1e4a0c8f398cd",
+      "tree_sha256": "8409fdb8da5cd960b13ea439506360d240d1fa171edd432082e78f68cb8e3fad",
+      "hash_method": "SHA-256 of git archive bytes",
+      "git_tree_oid": "5b0c739374e8b5147f210d5fd8b980bdacb6572e"
+    }
+  },
+  "projects": [
+    {
+      "id": "openpi",
+      "name": "OpenPI",
+      "repository": "https://github.com/openpi-dev/openpi",
+      "commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "task": "Use Archify to explain how OpenPI accepts a task, delegates work to an independent subagent, and makes its status and result available to the caller. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A user delegates one bounded task to a subagent and receives its result. Include the actual failure or cancellation path where supported by the source.",
+      "reviewer_source_entrypoints": [
+        "extensions/",
+        "docs/architecture/"
+      ],
+      "tracked_tree_sha256": "bc86117b2958d28f9c0ada5c955788b450a11aa66af0335298377360510d6749"
+    },
+    {
+      "id": "hive",
+      "name": "Hive",
+      "repository": "https://github.com/tt-a1i/hive",
+      "commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "task": "Use Archify to explain how a task in the Hive browser workbench reaches a worker running as a CLI process, and how progress and the result return to the team. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A team dispatches a task to a worker and observes its progress and completion. Include the actual failure or stop path where supported by the source.",
+      "reviewer_source_entrypoints": [
+        "src/cli/",
+        "src/server/"
+      ],
+      "tracked_tree_sha256": "3b25f26c08c54516bba07701aed31e4d8ec9548b937a77022012b5f03d9b119f"
+    },
+    {
+      "id": "mco",
+      "name": "MCO",
+      "repository": "https://github.com/mco-org/mco",
+      "commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "task": "Use Archify to explain how MCO accepts one review request, runs the selected providers, and returns their individual results. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A user requests a read-only review with selected providers and inspects their results. Include how an unavailable or failed provider is handled in the implementation.",
+      "reviewer_source_entrypoints": [
+        "bin/",
+        "docs/contracts/"
+      ],
+      "tracked_tree_sha256": "9509efc0548876fe85b554e6e518c9c0cf54fe27e7ae04b8a14a086c16d78af9"
+    },
+    {
+      "id": "squad",
+      "name": "Squad",
+      "repository": "https://github.com/mco-org/squad",
+      "commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "task": "Use Archify to explain how Squad coordinates a manager and worker through its CLI and persisted task/message state. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A manager assigns work, a worker finds it and reports completion, and the manager checks the outcome. Include any actual ownership or invalid-state check relevant to that path.",
+      "reviewer_source_entrypoints": [
+        "src/main.rs",
+        "src/store.rs",
+        "src/tasks.rs"
+      ],
+      "tracked_tree_sha256": "5367ef1f796f9f01fc0031cd69c301a85635e3d8a1786f617f4162caefdbc4ed"
+    },
+    {
+      "id": "skillroster",
+      "name": "SkillRoster",
+      "repository": "https://github.com/tt-a1i/skillroster",
+      "commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "task": "Use Archify to explain how SkillRoster goes from discovering installed Skills to planning, applying, and undoing a change. Read the checked-out source and focus on the boundaries between inspection and filesystem changes.",
+      "workflow_scenario": "A user inspects installed Skills, reviews a change plan, applies it, and later requests undo. Include the actual confirmation and conflict checks that protect existing files.",
+      "reviewer_source_entrypoints": [
+        "src/scan.rs",
+        "src/change.rs",
+        "src/roster_plan.rs"
+      ],
+      "tracked_tree_sha256": "83aea7f0ed4242188523520054bace7d0d8c16b3a72f0fe7971cf29086db7ca3"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "openpi-base",
+      "project_id": "openpi",
+      "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "arm": "base",
+      "workspace": "/benchmark/runs/openpi-base/workspace",
+      "output": "/benchmark/runs/openpi-base/workspace/output",
+      "evidence": "/benchmark/runs/openpi-base/evidence",
+      "prompt": "/benchmark/runs/openpi-base/prompt.txt",
+      "prompt_sha256": "de43517824c64f5ea016f3e4406ac6953850019c841e5bf4b827fec9f3006028",
+      "substantive_prompt_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+    },
+    {
+      "run_id": "openpi-candidate",
+      "project_id": "openpi",
+      "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "arm": "candidate",
+      "workspace": "/benchmark/runs/openpi-candidate/workspace",
+      "output": "/benchmark/runs/openpi-candidate/workspace/output",
+      "evidence": "/benchmark/runs/openpi-candidate/evidence",
+      "prompt": "/benchmark/runs/openpi-candidate/prompt.txt",
+      "prompt_sha256": "0c31765b99eef54a3eba92b38f6882aed6f279c7443f92f6fb99eb6d9e4d2252",
+      "substantive_prompt_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+    },
+    {
+      "run_id": "hive-candidate",
+      "project_id": "hive",
+      "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "arm": "candidate",
+      "workspace": "/benchmark/runs/hive-candidate/workspace",
+      "output": "/benchmark/runs/hive-candidate/workspace/output",
+      "evidence": "/benchmark/runs/hive-candidate/evidence",
+      "prompt": "/benchmark/runs/hive-candidate/prompt.txt",
+      "prompt_sha256": "19b4dcc2be55283f49d73704ef55ba8a883d2fac6981f7ef1268d0423c7f33be",
+      "substantive_prompt_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+    },
+    {
+      "run_id": "hive-base",
+      "project_id": "hive",
+      "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "arm": "base",
+      "workspace": "/benchmark/runs/hive-base/workspace",
+      "output": "/benchmark/runs/hive-base/workspace/output",
+      "evidence": "/benchmark/runs/hive-base/evidence",
+      "prompt": "/benchmark/runs/hive-base/prompt.txt",
+      "prompt_sha256": "f91cfb121d9185d3cf50af43eb434fb80b4039170f318e6a5525d5886d22137e",
+      "substantive_prompt_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+    },
+    {
+      "run_id": "mco-base",
+      "project_id": "mco",
+      "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "arm": "base",
+      "workspace": "/benchmark/runs/mco-base/workspace",
+      "output": "/benchmark/runs/mco-base/workspace/output",
+      "evidence": "/benchmark/runs/mco-base/evidence",
+      "prompt": "/benchmark/runs/mco-base/prompt.txt",
+      "prompt_sha256": "a2173ca208ede7b350fb0f2efc5513ee6c24304d510f220743b232dad293890d",
+      "substantive_prompt_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+    },
+    {
+      "run_id": "mco-candidate",
+      "project_id": "mco",
+      "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "arm": "candidate",
+      "workspace": "/benchmark/runs/mco-candidate/workspace",
+      "output": "/benchmark/runs/mco-candidate/workspace/output",
+      "evidence": "/benchmark/runs/mco-candidate/evidence",
+      "prompt": "/benchmark/runs/mco-candidate/prompt.txt",
+      "prompt_sha256": "b2c79fb8e587f20171f4c128b595874c8fd68a5c2d4b575989836d4241945bea",
+      "substantive_prompt_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+    },
+    {
+      "run_id": "squad-candidate",
+      "project_id": "squad",
+      "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "arm": "candidate",
+      "workspace": "/benchmark/runs/squad-candidate/workspace",
+      "output": "/benchmark/runs/squad-candidate/workspace/output",
+      "evidence": "/benchmark/runs/squad-candidate/evidence",
+      "prompt": "/benchmark/runs/squad-candidate/prompt.txt",
+      "prompt_sha256": "8b2471f2afce6a38e5c59e04c7eff62564c88b5aed23c217273bc88544009dc0",
+      "substantive_prompt_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+    },
+    {
+      "run_id": "squad-base",
+      "project_id": "squad",
+      "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "arm": "base",
+      "workspace": "/benchmark/runs/squad-base/workspace",
+      "output": "/benchmark/runs/squad-base/workspace/output",
+      "evidence": "/benchmark/runs/squad-base/evidence",
+      "prompt": "/benchmark/runs/squad-base/prompt.txt",
+      "prompt_sha256": "06fce4da47c31a169656a5d248a6266706b9e270bac4be309c4ff2f9dfc4792c",
+      "substantive_prompt_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+    },
+    {
+      "run_id": "skillroster-base",
+      "project_id": "skillroster",
+      "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "arm": "base",
+      "workspace": "/benchmark/runs/skillroster-base/workspace",
+      "output": "/benchmark/runs/skillroster-base/workspace/output",
+      "evidence": "/benchmark/runs/skillroster-base/evidence",
+      "prompt": "/benchmark/runs/skillroster-base/prompt.txt",
+      "prompt_sha256": "a8778bc17979814e1e4b9f434aedfb62540ea3c8f94b56cf7c2814846d9ce0db",
+      "substantive_prompt_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+    },
+    {
+      "run_id": "skillroster-candidate",
+      "project_id": "skillroster",
+      "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "arm": "candidate",
+      "workspace": "/benchmark/runs/skillroster-candidate/workspace",
+      "output": "/benchmark/runs/skillroster-candidate/workspace/output",
+      "evidence": "/benchmark/runs/skillroster-candidate/evidence",
+      "prompt": "/benchmark/runs/skillroster-candidate/prompt.txt",
+      "prompt_sha256": "1b216e41774c56fd8acfb519ff742a2a6d74a706b69094a78391fadd7e723914",
+      "substantive_prompt_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+    }
+  ],
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh exec per run; ignore-user-config; no maintenance conversation or cross-run messages."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS arm64",
+    "node": "v20.20.2",
+    "browser": "Chrome 156.0.8078.74",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "capture": "Native Codex JSONL events plus timestamped event copies; NODE_OPTIONS preload snapshots each complete JSON before CLI entry. An external poller also captures complete output JSON revisions. Unvalidated writes between poll intervals may be unavailable; never reconstruct first draft from final output.",
+  "supplement": {
+    "runs": [],
+    "reused_evidence": "../latest-dev-20261102/issue359-scenario/REPORT.md"
+  },
+  "publication": "User authorized the PR and full protocol benchmark on 2026-11-03. Publish relevant sanitized evidence separately from product source.",
+  "status": "full-five-project-architecture-comparison",
+  "metric_priority": [
+    "semantic correctness and readability",
+    "delivery",
+    "repair rounds",
+    "uncached_input_tokens",
+    "cached_input_tokens",
+    "output_tokens"
+  ],
+  "timing_policy": "Sequential sessions. Wall time retained descriptively; local connection instability prevents speed claims.",
+  "cost_policy": "Cost accounting deferred by user.",
+  "prior_runs": "Earlier exploratory runs remain separate; all ten formal sessions below are fresh."
+}

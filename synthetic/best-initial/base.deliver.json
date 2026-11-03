@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "5a1d4549-8c6d-4946-8a4e-372fe3fe463f",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/investigation/latest-dev-20261102/issue359-scenario/best-initial/diagram.json",
+  "output": "/investigation/latest-dev-20261102/issue359-scenario/best-initial/base.html",
+  "specification": {
+    "sha256": "e1a87fc288183dcada774b8231933bd31b8862816f2e33c09703e9e762c15e79",
+    "bytes": 7729
+  },
+  "artifact": {
+    "sha256": "0f0b9842f923608739379b316f493e29e10a529d3336dbe6d30bf236212c012d",
+    "bytes": 881806
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

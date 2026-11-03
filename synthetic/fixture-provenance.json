@@ -1,0 +1,25 @@
+{
+  "origin": "Synthetic reconstruction of issue 359 prose, not its unavailable private JSON",
+  "nodes": 14,
+  "edges": 15,
+  "layers": [
+    "entry",
+    "application",
+    "services",
+    "production",
+    "data"
+  ],
+  "scope": [
+    "move application layer +40",
+    "stretch node x about origin 100 by 1.1 without resizing",
+    "combined",
+    "insufficient vertical room"
+  ],
+  "fixed_channels": {
+    "central": 680,
+    "authorization": 320,
+    "audit": 1180
+  },
+  "endpoint_gutter": 40,
+  "limits": "Does not implement a bands layout mode or automatically convert a vertical stack to horizontal layers. Relative input is prepared deliberately; its one-time setup cost is not a natural Agent benefit."
+}

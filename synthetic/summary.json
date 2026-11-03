@@ -1,0 +1,163 @@
+[
+  {
+    "case": "raw-initial",
+    "arm": "base",
+    "input_sha256": "dddd91d086194de2c03b42266e199a60fba5a43972a4e646c23f47b99996bead",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-initial",
+    "arm": "base",
+    "input_sha256": "e1a87fc288183dcada774b8231933bd31b8862816f2e33c09703e9e762c15e79",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-initial",
+    "arm": "candidate",
+    "input_sha256": "e1a87fc288183dcada774b8231933bd31b8862816f2e33c09703e9e762c15e79",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "relative-initial",
+    "arm": "candidate",
+    "input_sha256": "7dcbbe01254ef5aff0ca78c806c98088256a1e440f887168d579a3098c26a9d6",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "raw-move-nodes-only",
+    "arm": "base",
+    "input_sha256": "4723afb90ab0c774dc4fea1491818a8ae6c5c401ff4189ae129a65d9b4dacd49",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "raw-move",
+    "arm": "base",
+    "input_sha256": "c4f1706cf4b1195d8508b91488334569e6f81ccfaca5ee93a926f74829d7540c",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-move-nodes-only",
+    "arm": "base",
+    "input_sha256": "341ad3488301867495998d58a194257189459dd818ac666f1ac57326bd3eb481",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "best-move",
+    "arm": "base",
+    "input_sha256": "f886b4574ad9fbe58eb41d3be3f3d4f9311d045f709dc5cd23838bd7dd884f0c",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "relative-move",
+    "arm": "candidate",
+    "input_sha256": "17576c83949fae5ada2bd377752e950397dffa82052e6581b725f3ea0eff93fc",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "raw-stretch-nodes-only",
+    "arm": "base",
+    "input_sha256": "097769b2a16d78d83be43ba6d984840e049143d55cea129c19ee6afb17144a4e",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "raw-stretch",
+    "arm": "base",
+    "input_sha256": "62005190c3f927ab5483e00450c4740004a81cc5567aaf7555f3e8e7471e349f",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-stretch-nodes-only",
+    "arm": "base",
+    "input_sha256": "182d1d5d15c698237c3613e0df993e8e4d5b12a132b2e5a36ad81e68aba1fed4",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "best-stretch",
+    "arm": "base",
+    "input_sha256": "efe79518681783af6b29d6015b262d13d8af75121e1414cb0c8e3fcdb42034f9",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "relative-stretch",
+    "arm": "candidate",
+    "input_sha256": "3428de168d04b24dce078df882dfbdc8587e3c5ef499158c1014133ecd81d229",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "raw-combined-nodes-only",
+    "arm": "base",
+    "input_sha256": "800e5e48f314b138689a1fdebd8e17ef67f41fafdc3bde90c012a67930b9414a",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "raw-combined",
+    "arm": "base",
+    "input_sha256": "7bc31176c076a1b32cae83deb14f844d31dfb3f69fb4d874340b9cb9667d9ae2",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-combined-nodes-only",
+    "arm": "base",
+    "input_sha256": "91a89871e4786bb070806bf0a70ebe213cc0bb1c248af38284563ff1f00b79a8",
+    "layout": 1,
+    "deliver": 1
+  },
+  {
+    "case": "best-combined",
+    "arm": "base",
+    "input_sha256": "cd641e1f9d1a250e604b09a8f480c530a2dbdec60eca31bef4dc132fb19b0b6b",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "best-combined",
+    "arm": "candidate",
+    "input_sha256": "cd641e1f9d1a250e604b09a8f480c530a2dbdec60eca31bef4dc132fb19b0b6b",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "relative-combined",
+    "arm": "candidate",
+    "input_sha256": "ac7e59741105f3fc0eed0a0c7921841d0b013d1bf3917dcc5d57fba8c6202f00",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "automatic-combined",
+    "arm": "base",
+    "input_sha256": "dd5e7f433c74add6a1bab59439719191928104b78e7681a7f3ffee14cd87dcd3",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "automatic-combined",
+    "arm": "candidate",
+    "input_sha256": "dd5e7f433c74add6a1bab59439719191928104b78e7681a7f3ffee14cd87dcd3",
+    "layout": 0,
+    "deliver": 0
+  },
+  {
+    "case": "relative-conflict",
+    "arm": "candidate",
+    "input_sha256": "db8cb43321b7b561913ed140d7e4a19224b27aa699d49e3dd7d699e5f61ee68b",
+    "layout": 1,
+    "deliver": 1
+  }
+]

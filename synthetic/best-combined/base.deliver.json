@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a963129d-84c2-4d31-8d72-399f6b07bd85",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/investigation/latest-dev-20261102/issue359-scenario/best-combined/diagram.json",
+  "output": "/investigation/latest-dev-20261102/issue359-scenario/best-combined/base.html",
+  "specification": {
+    "sha256": "cd641e1f9d1a250e604b09a8f480c530a2dbdec60eca31bef4dc132fb19b0b6b",
+    "bytes": 7757
+  },
+  "artifact": {
+    "sha256": "e97b64876ba9076bf6389d8392258e75ddbddb64c135756b5ba9ff97a6a32bc7",
+    "bytes": 881806
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

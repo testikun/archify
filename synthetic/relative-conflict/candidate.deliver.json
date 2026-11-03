@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "d210b4e3-8118-4eec-b4d6-94efb3211d7d",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/investigation/latest-dev-20261102/issue359-scenario/relative-conflict/diagram.json",
+  "output": "/investigation/latest-dev-20261102/issue359-scenario/relative-conflict/candidate.html",
+  "error": "Architecture layout validation failed:\n- Relative via label must select an existing nonzero route segment.\n- Relative via label must select an existing nonzero route segment.",
+  "diagnostics": [
+    {
+      "code": "architecture/relative-via-label-segment",
+      "severity": "error",
+      "message": "Relative via label must select an existing nonzero route segment.",
+      "subject": {
+        "diagramType": "architecture",
+        "connection": "api-billing",
+        "path": "/connections/10/labelSegment",
+        "from": "api",
+        "to": "billing"
+      },
+      "evidence": {
+        "segment": 2,
+        "segmentCount": 5,
+        "start": [
+          680,
+          580
+        ],
+        "end": [
+          680,
+          580
+        ]
+      },
+      "supportedFixes": [
+        "set /connections/10/labelSegment to an existing nonzero segment index (0 through 4)",
+        "adjust the selected via offsets or component spacing to keep the intended label segment nonzero"
+      ]
+    },
+    {
+      "code": "architecture/relative-via-label-segment",
+      "severity": "error",
+      "message": "Relative via label must select an existing nonzero route segment.",
+      "subject": {
+        "diagramType": "architecture",
+        "connection": "gateway-auth",
+        "path": "/connections/13/labelSegment",
+        "from": "gateway",
+        "to": "auth"
+      },
+      "evidence": {
+        "segment": 2,
+        "segmentCount": 5,
+        "start": [
+          320,
+          580
+        ],
+        "end": [
+          320,
+          580
+        ]
+      },
+      "supportedFixes": [
+        "set /connections/13/labelSegment to an existing nonzero segment index (0 through 4)",
+        "adjust the selected via offsets or component spacing to keep the intended label segment nonzero"
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

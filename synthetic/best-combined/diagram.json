@@ -1,0 +1,461 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Five-layer architecture \u00b7 issue 359 scenario",
+    "subtitle": "Synthetic 14 nodes / 15 edges; original private JSON unavailable",
+    "output": "diagram.html",
+    "quality_profile": "showcase",
+    "visual_preset": "classic",
+    "viewBox": [
+      1240,
+      1280
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser",
+      "sublabel": "Entry layer",
+      "pos": [
+        100.0,
+        140
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "edge",
+      "type": "cloud",
+      "label": "Edge gateway",
+      "sublabel": "Entry layer",
+      "pos": [
+        496.0,
+        140
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "gateway",
+      "type": "backend",
+      "label": "App gateway",
+      "sublabel": "Application layer",
+      "pos": [
+        100.0,
+        420
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "API",
+      "sublabel": "Application layer",
+      "pos": [
+        496.0,
+        420
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Worker",
+      "sublabel": "Application layer",
+      "pos": [
+        892.0,
+        420
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "security",
+      "label": "Auth service",
+      "sublabel": "Services layer",
+      "pos": [
+        100.0,
+        620
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "billing",
+      "type": "backend",
+      "label": "Billing service",
+      "sublabel": "Services layer",
+      "pos": [
+        496.0,
+        620
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "queue",
+      "type": "messagebus",
+      "label": "Queue",
+      "sublabel": "Services layer",
+      "pos": [
+        892.0,
+        620
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "scheduler",
+      "type": "backend",
+      "label": "Scheduler",
+      "sublabel": "Production layer",
+      "pos": [
+        100.0,
+        860
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "processor",
+      "type": "backend",
+      "label": "Processor",
+      "sublabel": "Production layer",
+      "pos": [
+        496.0,
+        860
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "indexer",
+      "type": "backend",
+      "label": "Indexer",
+      "sublabel": "Production layer",
+      "pos": [
+        892.0,
+        860
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "users",
+      "type": "database",
+      "label": "Users",
+      "sublabel": "Data layer",
+      "pos": [
+        100.0,
+        1100
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "orders",
+      "type": "database",
+      "label": "Orders",
+      "sublabel": "Data layer",
+      "pos": [
+        496.0,
+        1100
+      ],
+      "size": [
+        200,
+        80
+      ]
+    },
+    {
+      "id": "logs",
+      "type": "database",
+      "label": "Logs",
+      "sublabel": "Data layer",
+      "pos": [
+        892.0,
+        1100
+      ],
+      "size": [
+        200,
+        80
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "browser-edge",
+      "from": "browser",
+      "to": "edge",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "gateway-api",
+      "from": "gateway",
+      "to": "api",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "api-worker",
+      "from": "api",
+      "to": "worker",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "auth-billing",
+      "from": "auth",
+      "to": "billing",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "billing-queue",
+      "from": "billing",
+      "to": "queue",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "scheduler-processor",
+      "from": "scheduler",
+      "to": "processor",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "processor-indexer",
+      "from": "processor",
+      "to": "indexer",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "users-orders",
+      "from": "users",
+      "to": "orders",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "orders-logs",
+      "from": "orders",
+      "to": "logs",
+      "label": "process",
+      "fromSide": "right",
+      "toSide": "left",
+      "labelDy": 10
+    },
+    {
+      "id": "edge-api",
+      "from": "edge",
+      "to": "api",
+      "label": "request",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          596.0,
+          260
+        ],
+        [
+          680,
+          260
+        ],
+        [
+          680,
+          380
+        ],
+        [
+          596.0,
+          380
+        ]
+      ],
+      "labelSegment": 2,
+      "labelDy": 10
+    },
+    {
+      "id": "api-billing",
+      "from": "api",
+      "to": "billing",
+      "label": "bill",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          596.0,
+          540
+        ],
+        [
+          680,
+          540
+        ],
+        [
+          680,
+          580
+        ],
+        [
+          596.0,
+          580
+        ]
+      ],
+      "labelSegment": 2,
+      "labelDy": 10
+    },
+    {
+      "id": "billing-processor",
+      "from": "billing",
+      "to": "processor",
+      "label": "execute",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          596.0,
+          740
+        ],
+        [
+          680,
+          740
+        ],
+        [
+          680,
+          820
+        ],
+        [
+          596.0,
+          820
+        ]
+      ],
+      "labelSegment": 2,
+      "labelDy": 10
+    },
+    {
+      "id": "processor-orders",
+      "from": "processor",
+      "to": "orders",
+      "label": "write",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          596.0,
+          980
+        ],
+        [
+          680,
+          980
+        ],
+        [
+          680,
+          1060
+        ],
+        [
+          596.0,
+          1060
+        ]
+      ],
+      "labelSegment": 2,
+      "labelDy": 10
+    },
+    {
+      "id": "gateway-auth",
+      "from": "gateway",
+      "to": "auth",
+      "label": "authorize",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          200.0,
+          540
+        ],
+        [
+          320,
+          540
+        ],
+        [
+          320,
+          580
+        ],
+        [
+          200.0,
+          580
+        ]
+      ],
+      "labelSegment": 2,
+      "labelDy": 10
+    },
+    {
+      "id": "audit",
+      "from": "edge",
+      "to": "logs",
+      "label": "audit",
+      "fromSide": "right",
+      "toSide": "right",
+      "via": [
+        [
+          1180,
+          180.0
+        ],
+        [
+          1180,
+          1140.0
+        ]
+      ],
+      "labelAt": [
+        1180,
+        660.0
+      ]
+    }
+  ]
+}

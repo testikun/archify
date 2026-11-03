@@ -1,0 +1,830 @@
+{
+  "ok": false,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1240,
+    1280
+  ],
+  "components": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser",
+      "x": 100,
+      "y": 140,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        140
+      ]
+    },
+    {
+      "id": "edge",
+      "type": "cloud",
+      "label": "Edge gateway",
+      "x": 460,
+      "y": 140,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        460,
+        140
+      ]
+    },
+    {
+      "id": "gateway",
+      "type": "backend",
+      "label": "App gateway",
+      "x": 100,
+      "y": 460,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        460
+      ]
+    },
+    {
+      "id": "api",
+      "type": "backend",
+      "label": "API",
+      "x": 460,
+      "y": 460,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        460,
+        460
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Worker",
+      "x": 820,
+      "y": 460,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        820,
+        460
+      ]
+    },
+    {
+      "id": "auth",
+      "type": "security",
+      "label": "Auth service",
+      "x": 100,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        620
+      ]
+    },
+    {
+      "id": "billing",
+      "type": "backend",
+      "label": "Billing service",
+      "x": 460,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        460,
+        620
+      ]
+    },
+    {
+      "id": "queue",
+      "type": "messagebus",
+      "label": "Queue",
+      "x": 820,
+      "y": 620,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        820,
+        620
+      ]
+    },
+    {
+      "id": "scheduler",
+      "type": "backend",
+      "label": "Scheduler",
+      "x": 100,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        860
+      ]
+    },
+    {
+      "id": "processor",
+      "type": "backend",
+      "label": "Processor",
+      "x": 460,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        460,
+        860
+      ]
+    },
+    {
+      "id": "indexer",
+      "type": "backend",
+      "label": "Indexer",
+      "x": 820,
+      "y": 860,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        820,
+        860
+      ]
+    },
+    {
+      "id": "users",
+      "type": "database",
+      "label": "Users",
+      "x": 100,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        100,
+        1100
+      ]
+    },
+    {
+      "id": "orders",
+      "type": "database",
+      "label": "Orders",
+      "x": 460,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        460,
+        1100
+      ]
+    },
+    {
+      "id": "logs",
+      "type": "database",
+      "label": "Logs",
+      "x": 820,
+      "y": 1100,
+      "width": 200,
+      "height": 80,
+      "pos": [
+        820,
+        1100
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "browser",
+      "to": "edge",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          180
+        ],
+        [
+          460,
+          180
+        ]
+      ],
+      "labelAt": [
+        380,
+        180
+      ]
+    },
+    {
+      "from": "gateway",
+      "to": "api",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          500
+        ],
+        [
+          460,
+          500
+        ]
+      ],
+      "labelAt": [
+        380,
+        500
+      ]
+    },
+    {
+      "from": "api",
+      "to": "worker",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          660,
+          500
+        ],
+        [
+          820,
+          500
+        ]
+      ],
+      "labelAt": [
+        740,
+        500
+      ]
+    },
+    {
+      "from": "auth",
+      "to": "billing",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          660
+        ],
+        [
+          460,
+          660
+        ]
+      ],
+      "labelAt": [
+        380,
+        660
+      ]
+    },
+    {
+      "from": "billing",
+      "to": "queue",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          660,
+          660
+        ],
+        [
+          820,
+          660
+        ]
+      ],
+      "labelAt": [
+        740,
+        660
+      ]
+    },
+    {
+      "from": "scheduler",
+      "to": "processor",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          900
+        ],
+        [
+          460,
+          900
+        ]
+      ],
+      "labelAt": [
+        380,
+        900
+      ]
+    },
+    {
+      "from": "processor",
+      "to": "indexer",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          660,
+          900
+        ],
+        [
+          820,
+          900
+        ]
+      ],
+      "labelAt": [
+        740,
+        900
+      ]
+    },
+    {
+      "from": "users",
+      "to": "orders",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          1140
+        ],
+        [
+          460,
+          1140
+        ]
+      ],
+      "labelAt": [
+        380,
+        1140
+      ]
+    },
+    {
+      "from": "orders",
+      "to": "logs",
+      "label": "process",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          660,
+          1140
+        ],
+        [
+          820,
+          1140
+        ]
+      ],
+      "labelAt": [
+        740,
+        1140
+      ]
+    },
+    {
+      "from": "edge",
+      "to": "api",
+      "label": "request",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          560,
+          220
+        ],
+        [
+          560,
+          260
+        ],
+        [
+          680,
+          260
+        ],
+        [
+          680,
+          420
+        ],
+        [
+          560,
+          420
+        ],
+        [
+          560,
+          460
+        ]
+      ],
+      "labelAt": [
+        680,
+        340
+      ]
+    },
+    {
+      "from": "api",
+      "to": "billing",
+      "label": "bill",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          560,
+          540
+        ],
+        [
+          560,
+          580
+        ],
+        [
+          680,
+          580
+        ],
+        [
+          680,
+          580
+        ],
+        [
+          560,
+          580
+        ],
+        [
+          560,
+          620
+        ]
+      ],
+      "labelAt": [
+        680,
+        580
+      ]
+    },
+    {
+      "from": "billing",
+      "to": "processor",
+      "label": "execute",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          560,
+          700
+        ],
+        [
+          560,
+          740
+        ],
+        [
+          680,
+          740
+        ],
+        [
+          680,
+          820
+        ],
+        [
+          560,
+          820
+        ],
+        [
+          560,
+          860
+        ]
+      ],
+      "labelAt": [
+        680,
+        780
+      ]
+    },
+    {
+      "from": "processor",
+      "to": "orders",
+      "label": "write",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          560,
+          940
+        ],
+        [
+          560,
+          980
+        ],
+        [
+          680,
+          980
+        ],
+        [
+          680,
+          1060
+        ],
+        [
+          560,
+          1060
+        ],
+        [
+          560,
+          1100
+        ]
+      ],
+      "labelAt": [
+        680,
+        1020
+      ]
+    },
+    {
+      "from": "gateway",
+      "to": "auth",
+      "label": "authorize",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          200,
+          540
+        ],
+        [
+          200,
+          580
+        ],
+        [
+          320,
+          580
+        ],
+        [
+          320,
+          580
+        ],
+        [
+          200,
+          580
+        ],
+        [
+          200,
+          620
+        ]
+      ],
+      "labelAt": [
+        320,
+        580
+      ]
+    },
+    {
+      "from": "edge",
+      "to": "logs",
+      "label": "audit",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          660,
+          180
+        ],
+        [
+          1180,
+          180
+        ],
+        [
+          1180,
+          1140
+        ],
+        [
+          1020,
+          1140
+        ]
+      ],
+      "labelAt": [
+        1180,
+        660
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "process",
+      "x": 358,
+      "y": 170,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        380,
+        180
+      ]
+    },
+    {
+      "text": "process",
+      "x": 358,
+      "y": 490,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        380,
+        500
+      ]
+    },
+    {
+      "text": "process",
+      "x": 718,
+      "y": 490,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        740,
+        500
+      ]
+    },
+    {
+      "text": "process",
+      "x": 358,
+      "y": 650,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        380,
+        660
+      ]
+    },
+    {
+      "text": "process",
+      "x": 718,
+      "y": 650,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        740,
+        660
+      ]
+    },
+    {
+      "text": "process",
+      "x": 358,
+      "y": 890,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        380,
+        900
+      ]
+    },
+    {
+      "text": "process",
+      "x": 718,
+      "y": 890,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        740,
+        900
+      ]
+    },
+    {
+      "text": "process",
+      "x": 358,
+      "y": 1130,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        380,
+        1140
+      ]
+    },
+    {
+      "text": "process",
+      "x": 718,
+      "y": 1130,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        740,
+        1140
+      ]
+    },
+    {
+      "text": "request",
+      "x": 658,
+      "y": 330,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        680,
+        340
+      ]
+    },
+    {
+      "text": "bill",
+      "x": 665,
+      "y": 570,
+      "width": 30,
+      "height": 14,
+      "labelAt": [
+        680,
+        580
+      ]
+    },
+    {
+      "text": "execute",
+      "x": 658,
+      "y": 770,
+      "width": 44,
+      "height": 14,
+      "labelAt": [
+        680,
+        780
+      ]
+    },
+    {
+      "text": "write",
+      "x": 663,
+      "y": 1010,
+      "width": 34,
+      "height": 14,
+      "labelAt": [
+        680,
+        1020
+      ]
+    },
+    {
+      "text": "authorize",
+      "x": 293,
+      "y": 570,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        320,
+        580
+      ]
+    },
+    {
+      "text": "audit",
+      "x": 1163,
+      "y": 650,
+      "width": 34,
+      "height": 14,
+      "labelAt": [
+        1180,
+        660
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "source": "renderer",
+  "error": "Architecture layout validation failed:\n- Relative via label must select an existing nonzero route segment.\n- Relative via label must select an existing nonzero route segment.",
+  "diagnostics": [
+    {
+      "code": "architecture/relative-via-label-segment",
+      "severity": "error",
+      "message": "Relative via label must select an existing nonzero route segment.",
+      "subject": {
+        "diagramType": "architecture",
+        "connection": "api-billing",
+        "path": "/connections/10/labelSegment",
+        "from": "api",
+        "to": "billing"
+      },
+      "evidence": {
+        "segment": 2,
+        "segmentCount": 5,
+        "start": [
+          680,
+          580
+        ],
+        "end": [
+          680,
+          580
+        ]
+      },
+      "supportedFixes": [
+        "set /connections/10/labelSegment to an existing nonzero segment index (0 through 4)",
+        "adjust the selected via offsets or component spacing to keep the intended label segment nonzero"
+      ]
+    },
+    {
+      "code": "architecture/relative-via-label-segment",
+      "severity": "error",
+      "message": "Relative via label must select an existing nonzero route segment.",
+      "subject": {
+        "diagramType": "architecture",
+        "connection": "gateway-auth",
+        "path": "/connections/13/labelSegment",
+        "from": "gateway",
+        "to": "auth"
+      },
+      "evidence": {
+        "segment": 2,
+        "segmentCount": 5,
+        "start": [
+          320,
+          580
+        ],
+        "end": [
+          320,
+          580
+        ]
+      },
+      "supportedFixes": [
+        "set /connections/13/labelSegment to an existing nonzero segment index (0 through 4)",
+        "adjust the selected via offsets or component spacing to keep the intended label segment nonzero"
+      ]
+    }
+  ],
+  "contract": "archify-architecture-layout-v1"
+}

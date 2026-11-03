@@ -1,0 +1,46 @@
+{
+  "runs": [
+    {
+      "case": "old-code-stale-absolute",
+      "input": "/investigation/latest-dev-20261102/issue359-scenario/best-combined-nodes-only/diagram.json",
+      "input_sha256": "91a89871e4786bb070806bf0a70ebe213cc0bb1c248af38284563ff1f00b79a8",
+      "ok": false,
+      "exit_code": 1,
+      "diagnostic_count": 9,
+      "codes": [
+        "clean-flow/endpoint-side-direction"
+      ]
+    },
+    {
+      "case": "new-code-stale-absolute",
+      "input": "/investigation/latest-dev-20261102/issue359-scenario/best-combined-nodes-only/diagram.json",
+      "input_sha256": "91a89871e4786bb070806bf0a70ebe213cc0bb1c248af38284563ff1f00b79a8",
+      "ok": false,
+      "exit_code": 1,
+      "diagnostic_count": 9,
+      "codes": [
+        "clean-flow/endpoint-side-direction"
+      ]
+    },
+    {
+      "case": "new-code-relative",
+      "input": "/investigation/latest-dev-20261102/issue359-scenario/relative-combined/diagram.json",
+      "input_sha256": "ac7e59741105f3fc0eed0a0c7921841d0b013d1bf3917dcc5d57fba8c6202f00",
+      "ok": true,
+      "exit_code": 0,
+      "diagnostic_count": 0,
+      "codes": []
+    },
+    {
+      "case": "old-code-manually-synced",
+      "input": "/investigation/latest-dev-20261102/issue359-scenario/best-combined/diagram.json",
+      "input_sha256": "cd641e1f9d1a250e604b09a8f480c530a2dbdec60eca31bef4dc132fb19b0b6b",
+      "ok": true,
+      "exit_code": 0,
+      "diagnostic_count": 0,
+      "codes": []
+    }
+  ],
+  "new_relative_equals_old_manual_sync": true,
+  "old_absolute_input_not_automatically_migrated": true
+}

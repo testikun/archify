@@ -1,0 +1,400 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/architecture-relative-via.test.mjs test/architecture-route-bends.test.mjs test/architecture-repair-evidence.test.mjs test/architecture-automatic-labels.test.mjs test/automatic-port-spread.test.mjs test/authored-straight-routes.test.mjs test/route-detour.test.mjs
+
+Repository tests: 7 files, concurrency 4
+TAP version 13
+# Subtest: vertical auto label clears the source without moving endpoints and is consistent in delivered SVG
+ok 1 - vertical auto label clears the source without moving endpoints and is consistent in delivered SVG
+  ---
+  duration_ms: 1344.059333
+  ...
+# Subtest: frozen K2.8 draft clears its labels and renderer-owned automatic crossing
+ok 2 - frozen K2.8 draft clears its labels and renderer-owned automatic crossing
+  ---
+  duration_ms: 531.616625
+  ...
+# Subtest: explicit labelDx preserves the authored collision and failure
+ok 3 - explicit labelDx preserves the authored collision and failure
+  ---
+  duration_ms: 125.873708
+  ...
+# Subtest: explicit labelDy preserves the authored collision and failure
+ok 4 - explicit labelDy preserves the authored collision and failure
+  ---
+  duration_ms: 126.093375
+  ...
+# Subtest: explicit labelSegment preserves the authored collision and failure
+ok 5 - explicit labelSegment preserves the authored collision and failure
+  ---
+  duration_ms: 130.529042
+  ...
+# Subtest: explicit labelAt preserves the authored collision and failure
+ok 6 - explicit labelAt preserves the authored collision and failure
+  ---
+  duration_ms: 132.451708
+  ...
+# Subtest: standard preserves default placement and failure
+ok 7 - standard preserves default placement and failure
+  ---
+  duration_ms: 128.300292
+  ...
+# Subtest: clear horizontal label and explicit route points stay unchanged
+ok 8 - clear horizontal label and explicit route points stay unchanged
+  ---
+  duration_ms: 125.053375
+  ...
+# Subtest: bounded fallback finds a clear position without hiding or shrinking the label
+ok 9 - bounded fallback finds a clear position without hiding or shrinking the label
+  ---
+  duration_ms: 125.596291
+  ...
+# Subtest: a short gap cannot pass by relocating its label above an endpoint
+ok 10 - a short gap cannot pass by relocating its label above an endpoint
+  ---
+  duration_ms: 516.039
+  ...
+# Subtest: relative coordinates follow grid, pos and measured size while the channel stays fixed
+ok 11 - relative coordinates follow grid, pos and measured size while the channel stays fixed
+  ---
+  duration_ms: 413.448833
+  ...
+# Subtest: equivalent absolute and relative inputs render identical geometry and bind original source bytes
+ok 12 - equivalent absolute and relative inputs render identical geometry and bind original source bytes
+  ---
+  duration_ms: 676.300458
+  ...
+# Subtest: mixed numeric points and references preserve authored collinear indices and absolute labels
+ok 13 - mixed numeric points and references preserve authored collinear indices and absolute labels
+  ---
+  duration_ms: 260.686833
+  ...
+# Subtest: only referenced endpoints require explicit sides
+ok 14 - only referenced endpoints require explicit sides
+  ---
+  duration_ms: 260.353375
+  ...
+# Subtest: horizontal anchors track left/right ports and negative offsets
+ok 15 - horizontal anchors track left/right ports and negative offsets
+  ---
+  duration_ms: 124.501792
+  ...
+# Subtest: missing anchor sides give actionable field diagnostics and preserve output
+ok 16 - missing anchor sides give actionable field diagnostics and preserve output
+  ---
+  duration_ms: 640.307792
+  ...
+# Subtest: unknown nodes and overflow are typed resolution failures
+ok 17 - unknown nodes and overflow are typed resolution failures
+  ---
+  duration_ms: 247.710417
+  ...
+# Subtest: schema rejects arbitrary references and conflicting coordinate representations
+ok 18 - schema rejects arbitrary references and conflicting coordinate representations
+  ---
+  duration_ms: 480.112875
+  ...
+# Subtest: collapsed or invalid label segments fail without silently selecting another segment
+ok 19 - collapsed or invalid label segments fail without silently selecting another segment
+  ---
+  duration_ms: 384.434875
+  ...
+# Subtest: relative resolution retains endpoint-direction, obstacle and canvas checks
+ok 20 - relative resolution retains endpoint-direction, obstacle and canvas checks
+  ---
+  duration_ms: 381.394166
+  ...
+# Subtest: layout route coordinates can be reused for an orthogonal repair at fractional ports
+ok 21 - layout route coordinates can be reused for an orthogonal repair at fractional ports
+  ---
+  duration_ms: 283.879916
+  ...
+# Subtest: delivered Architecture review names a node blocking the direct main corridor
+ok 22 - delivered Architecture review names a node blocking the direct main corridor
+  ---
+  duration_ms: 196.086667
+  ...
+# Subtest: boundary left overflow gives measured side, members and applicable fixes
+ok 23 - boundary left overflow gives measured side, members and applicable fixes
+  ---
+  duration_ms: 138.881958
+  ...
+# Subtest: boundary top overflow gives measured side, members and applicable fixes
+ok 24 - boundary top overflow gives measured side, members and applicable fixes
+  ---
+  duration_ms: 131.617083
+  ...
+# Subtest: boundary right overflow gives measured side, members and applicable fixes
+ok 25 - boundary right overflow gives measured side, members and applicable fixes
+  ---
+  duration_ms: 128.2595
+  ...
+# Subtest: boundary bottom overflow gives measured side, members and applicable fixes
+ok 26 - boundary bottom overflow gives measured side, members and applicable fixes
+  ---
+  duration_ms: 137.166875
+  ...
+# Subtest: enlarging the canvas cannot repair top overflow; moving members preserves a valid multi-row boundary
+ok 27 - enlarging the canvas cannot repair top overflow; moving members preserves a valid multi-row boundary
+  ---
+  duration_ms: 348.696792
+  ...
+# Subtest: rejected layout JSON retains geometry and diagnostics without changing source or trusted output
+ok 28 - rejected layout JSON retains geometry and diagnostics without changing source or trusted output
+  ---
+  duration_ms: 588.442375
+  ...
+# Subtest: direct renderer text explains the boundary repair and retains non-zero exit
+ok 29 - direct renderer text explains the boundary repair and retains non-zero exit
+  ---
+  duration_ms: 72.549166
+  ...
+# Subtest: successful layout keeps existing fields; malformed input never masquerades as computed layout
+ok 30 - successful layout keeps existing fields; malformed input never masquerades as computed layout
+  ---
+  duration_ms: 159.431709
+  ...
+# Subtest: auto canvas includes an outer route even when no label reaches its corridor
+ok 31 - auto canvas includes an outer route even when no label reaches its corridor
+  ---
+  duration_ms: 696.499958
+  ...
+# Subtest: showcase reports clipped explicit routes without rewriting their geometry or authored canvas
+ok 32 - showcase reports clipped explicit routes without rewriting their geometry or authored canvas
+  ---
+  duration_ms: 339.786875
+  ...
+# Subtest: auto canvas does not hide a negative route by growing right or down
+ok 33 - auto canvas does not hide a negative route by growing right or down
+  ---
+  duration_ms: 127.107375
+  ...
+# Subtest: architecture takes the fewest-bend route among equally long side-aware candidates
+ok 34 - architecture takes the fewest-bend route among equally long side-aware candidates
+  ---
+  duration_ms: 3.876167
+  ...
+# Subtest: architecture keeps a feasible route with label room over a fewer-bend route without it
+ok 35 - architecture keeps a feasible route with label room over a fewer-bend route without it
+  ---
+  duration_ms: 1.795875
+  ...
+# Subtest: showcase shortens a route when a neighboring automatic label can move safely
+ok 36 - showcase shortens a route when a neighboring automatic label can move safely
+  ---
+  duration_ms: 167.578
+  ...
+# Subtest: showcase preserves a valid authored reply side even when automatic lanes are straighter
+ok 37 - showcase preserves a valid authored reply side even when automatic lanes are straighter
+  ---
+  duration_ms: 690.897375
+  ...
+# Subtest: architecture straightens a dogleg between facing nodes that overlap across the route
+ok 38 - architecture straightens a dogleg between facing nodes that overlap across the route
+  ---
+  duration_ms: 1.566416
+  ...
+# Subtest: showcase slides a boundary title off a route that crosses its rail
+ok 39 - showcase slides a boundary title off a route that crosses its rail
+  ---
+  duration_ms: 147.584375
+  ...
+# Subtest: showcase moves a boundary title around an authored connection label
+ok 40 - showcase moves a boundary title around an authored connection label
+  ---
+  duration_ms: 136.845958
+  ...
+# Subtest: showcase uses a clear off-centre corner when central ports force a detour
+ok 41 - showcase uses a clear off-centre corner when central ports force a detour
+  ---
+  duration_ms: 157.573958
+  ...
+# Subtest: a two-bend automatic branch can use a clear corner without disturbing the main route
+ok 42 - a two-bend automatic branch can use a clear corner without disturbing the main route
+  ---
+  duration_ms: 4.179459
+  ...
+# Subtest: dataflow: authored straight retains geometry through render, validate, check and deliver (standard)
+ok 43 - dataflow: authored straight retains geometry through render, validate, check and deliver (standard)
+  ---
+  duration_ms: 859.21425
+  ...
+# Subtest: dataflow: authored straight retains geometry through render, validate, check and deliver (showcase)
+ok 44 - dataflow: authored straight retains geometry through render, validate, check and deliver (showcase)
+  ---
+  duration_ms: 850.169708
+  ...
+# Subtest: dataflow: automatic routes retain orthogonal behavior and explicit sides remain enforced
+ok 45 - dataflow: automatic routes retain orthogonal behavior and explicit sides remain enforced
+  ---
+  duration_ms: 356.857542
+  ...
+# Subtest: architecture: authored straight retains geometry through render, validate, check and deliver (standard)
+ok 46 - architecture: authored straight retains geometry through render, validate, check and deliver (standard)
+  ---
+  duration_ms: 853.742833
+  ...
+# Subtest: architecture: authored straight retains geometry through render, validate, check and deliver (showcase)
+ok 47 - architecture: authored straight retains geometry through render, validate, check and deliver (showcase)
+  ---
+  duration_ms: 845.763292
+  ...
+# Subtest: architecture: automatic routes retain orthogonal behavior and explicit sides remain enforced
+ok 48 - architecture: automatic routes retain orthogonal behavior and explicit sides remain enforced
+  ---
+  duration_ms: 364.478125
+  ...
+# Subtest: architecture: an empty via preserves the explicitly authored direct straight route
+ok 49 - architecture: an empty via preserves the explicitly authored direct straight route
+  ---
+  duration_ms: 248.25675
+  ...
+# Subtest: dataflow: via overrides straight and diagonal via still fails during rendering
+ok 50 - dataflow: via overrides straight and diagonal via still fails during rendering
+  ---
+  duration_ms: 103.562542
+  ...
+# Subtest: a straight intent marker cannot exempt bent, curved or unidentified diagonals
+ok 51 - a straight intent marker cannot exempt bent, curved or unidentified diagonals
+  ---
+  duration_ms: 334.793584
+  ...
+# Subtest: architecture: reciprocal automatic relationships with a third inferred port use separate straight channels
+ok 52 - architecture: reciprocal automatic relationships with a third inferred port use separate straight channels
+  ---
+  duration_ms: 417.458375
+  ...
+# Subtest: architecture: reciprocal repair preserves an authored side and via geometry
+ok 53 - architecture: reciprocal repair preserves an authored side and via geometry
+  ---
+  duration_ms: 202.577417
+  ...
+# Subtest: architecture: reciprocal repair preserves explicit relationship label placement controls
+ok 54 - architecture: reciprocal repair preserves explicit relationship label placement controls
+  ---
+  duration_ms: 321.46325
+  ...
+# Subtest: architecture: automatic fan-out uses distinct ports with corner clearance and outward normals
+ok 55 - architecture: automatic fan-out uses distinct ports with corner clearance and outward normals
+  ---
+  duration_ms: 100.501791
+  ...
+# Subtest: architecture: automatic port assignment is stable when relationship input order changes
+ok 56 - architecture: automatic port assignment is stable when relationship input order changes
+  ---
+  duration_ms: 203.7285
+  ...
+# Subtest: architecture: a singly spread near-aligned vertical relationship keeps one direct axis
+ok 57 - architecture: a singly spread near-aligned vertical relationship keeps one direct axis
+  ---
+  duration_ms: 94.035791
+  ...
+# Subtest: architecture: a singly spread near-aligned horizontal relationship keeps one direct axis
+ok 58 - architecture: a singly spread near-aligned horizontal relationship keeps one direct axis
+  ---
+  duration_ms: 96.679875
+  ...
+# Subtest: architecture: a shared bottom port keeps its aligned child relationship straight
+ok 59 - architecture: a shared bottom port keeps its aligned child relationship straight
+  ---
+  duration_ms: 194.132125
+  ...
+# Subtest: architecture: incoming and outgoing relationships keep distinct bottom ports while the direct child stays straight
+ok 60 - architecture: incoming and outgoing relationships keep distinct bottom ports while the direct child stays straight
+  ---
+  duration_ms: 102.071291
+  ...
+# Subtest: architecture: a near-aligned relationship keeps the outside bridge when both endpoints are spread
+ok 61 - architecture: a near-aligned relationship keeps the outside bridge when both endpoints are spread
+  ---
+  duration_ms: 98.547667
+  ...
+# Subtest: architecture: a singly spread near-aligned relationship keeps the bridge when its direct axis is blocked
+ok 62 - architecture: a singly spread near-aligned relationship keeps the bridge when its direct axis is blocked
+  ---
+  duration_ms: 103.701208
+  ...
+# Subtest: architecture: single and explicitly positioned relationships keep legacy anchors
+ok 63 - architecture: single and explicitly positioned relationships keep legacy anchors
+  ---
+  duration_ms: 99.926125
+  ...
+# Subtest: architecture: an unspread near-aligned connection shares one horizontal axis
+ok 64 - architecture: an unspread near-aligned connection shares one horizontal axis
+  ---
+  duration_ms: 92.996959
+  ...
+# Subtest: workflow: automatic cross-lane fan-out selects distinct perpendicular source sides
+ok 65 - workflow: automatic cross-lane fan-out selects distinct perpendicular source sides
+  ---
+  duration_ms: 97.571667
+  ...
+# Subtest: dataflow: automatic fan-out spreads flows without changing their authored topology
+ok 66 - dataflow: automatic fan-out spreads flows without changing their authored topology
+  ---
+  duration_ms: 100.549708
+  ...
+# Subtest: dataflow: aligned automatic branches stay straight without collapsing their shared ports
+ok 67 - dataflow: aligned automatic branches stay straight without collapsing their shared ports
+  ---
+  duration_ms: 190.0125
+  ...
+# Subtest: authoring defaults point to the bounded automatic port rules and READMEs describe the default
+ok 68 - authoring defaults point to the bounded automatic port rules and READMEs describe the default
+  ---
+  duration_ms: 2.819417
+  ...
+# Subtest: dataflow: settled detours reorder shared slots so the aligned branch is straight
+ok 69 - dataflow: settled detours reorder shared slots so the aligned branch is straight
+  ---
+  duration_ms: 105.138542
+  ...
+# Subtest: dataflow: invalid placement retains a useful diagnostic during shared port ordering
+ok 70 - dataflow: invalid placement retains a useful diagnostic during shared port ordering
+  ---
+  duration_ms: 104.623334
+  ...
+# Subtest: showcase rejects an authored route whose empty-space detour is far longer than a legal orthogonal route
+ok 71 - showcase rejects an authored route whose empty-space detour is far longer than a legal orthogonal route
+  ---
+  duration_ms: 136.806
+  ...
+# Subtest: an unnecessary control corridor is diagnosed inside a large content envelope
+ok 72 - an unnecessary control corridor is diagnosed inside a large content envelope
+  ---
+  duration_ms: 129.95975
+  ...
+# Subtest: the same relationship passes after the unnecessary authored detour is removed
+ok 73 - the same relationship passes after the unnecessary authored detour is removed
+  ---
+  duration_ms: 126.460333
+  ...
+# Subtest: standard keeps authored route freedom while showcase owns the compactness gate
+ok 74 - standard keeps authored route freedom while showcase owns the compactness gate
+  ---
+  duration_ms: 127.157125
+  ...
+# Subtest: an explicit route around an opaque obstacle is not reported as an excessive detour
+ok 75 - an explicit route around an opaque obstacle is not reported as an excessive detour
+  ---
+  duration_ms: 128.976834
+  ...
+# Subtest: a related shared outer corridor is treated as an intentional bus
+ok 76 - a related shared outer corridor is treated as an intentional bus
+  ---
+  duration_ms: 128.376417
+  ...
+# Subtest: a direct relationship crossing a region boundary is not a detour
+ok 77 - a direct relationship crossing a region boundary is not a detour
+  ---
+  duration_ms: 123.937708
+  ...
+1..77
+# tests 77
+# suites 0
+# pass 77
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6241.033667
