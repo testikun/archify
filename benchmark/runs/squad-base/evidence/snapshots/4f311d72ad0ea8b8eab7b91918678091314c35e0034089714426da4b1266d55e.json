@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Squad · Manager–worker coordination",
+    "subtitle": "CLI invocations coordinate through local SQLite state — agents execute the work, not Squad",
+    "output": "output/squad-coordination.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/squad",
+      "revision": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "link_mode": "local-only"
+    },
+    "legend": {
+      "entries": {
+        "external": { "label": "Agent terminal" },
+        "backend": { "label": "In-process Rust code" },
+        "database": { "label": "Local persisted state" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "manager",
+      "type": "external",
+      "label": "Manager agent",
+      "sublabel": "Plan · assign · collect results",
+      "pos": [40, 70],
+      "size": [210, 86],
+      "explanation": "A role prompt, not a privileged scheduler. The manager joins, checks agents, creates a tracked assignment, and receives replies. It can inspect task list for persisted results. Review by an inspector is an agent convention outside this focused view, not a task-state gate enforced by the CLI.",
+      "sources": [
+        { "path": "src/roles/manager.md", "line": 1, "end_line": 22 },
+        { "path": "src/main.rs", "line": 973, "end_line": 981 },
+        { "path": "src/main.rs", "line": 1017, "end_line": 1049 }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker agent",
+      "sublabel": "Receive · execute · report",
+      "pos": [900, 70],
+      "size": [210, 86],
+      "explanation": "The worker receives an assignment, explicitly acknowledges it, performs work in its own agent environment, then completes the task with a summary. A separate send can report the result to the manager. Squad does not execute the task body in this CLI path.",
+      "sources": [
+        { "path": "src/roles/worker.md", "line": 1, "end_line": 15 },
+        { "path": "src/main.rs", "line": 984, "end_line": 1003 }
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "Squad CLI",
+      "sublabel": "Dispatch · session checks · stdout",
+      "tag": "receive --wait: poll every 500 ms",
+      "pos": [450, 70],
+      "size": [250, 86],
+      "explanation": "Each terminal invokes the same binary independently. It discovers .squad by walking parent directories and opens .squad/messages.db. join registers an agent and prints its role prompt (custom .squad/roles/<role>.md overrides built-ins). send, receive and task create/ack/complete check active identity and session tokens. receive emits text or JSON; --wait holds an exclusive per-agent lock, polls unread messages every 500 ms, and touches last_seen every 30 seconds. A missing local session token is accepted for compatibility, so this is not strong authentication.",
+      "sources": [
+        { "path": "src/main.rs", "line": 430, "end_line": 484 },
+        { "path": "src/main.rs", "line": 610, "end_line": 639 },
+        { "path": "src/main.rs", "line": 706, "end_line": 869 }
+      ]
+    },
+    {
+      "id": "store",
+      "type": "backend",
+      "label": "Store · rusqlite",
+      "sublabel": "Task transitions + message delivery",
+      "tag": "Active agent + assignee / owner gates",
+      "pos": [450, 340],
+      "size": [250, 86],
+      "explanation": "create_task requires active creator and assignee; one SQLite transaction inserts a queued task and an unread task_assigned message. ack_task requires queued state and matching assignee, then sets acked with lease_owner and a 15-minute lease timestamp. complete_task requires acked state and matching lease_owner, then stores completed and result_summary; it inserts no result message and does not test lease expiry. receive_messages transactionally selects unread messages for a recipient and marks them read; delivery is distinct from task acknowledgement. Freeform sends insert notes; @all fans out to active agents except the sender.",
+      "sources": [
+        { "path": "src/store.rs", "line": 294, "end_line": 385 },
+        { "path": "src/store.rs", "line": 452, "end_line": 546 },
+        { "path": "src/store.rs", "line": 624, "end_line": 718 }
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "Session + wait files",
+      "sublabel": ".squad/sessions/<id> · locks/",
+      "pos": [40, 340],
+      "size": [210, 86],
+      "explanation": "Session helpers write/read/delete .squad/sessions/<agent-id> tokens. receive --wait creates locks/<agent-id>.lock under the workspace root, not inside .squad, and keeps an fs2 exclusive lock for the wait loop. This prevents concurrent waiters for the same agent; it does not serialize all CLI commands.",
+      "sources": [
+        { "path": "src/session.rs", "line": 5, "end_line": 31 },
+        { "path": "src/session.rs", "line": 47, "end_line": 60 },
+        { "path": "src/main.rs", "line": 796, "end_line": 814 }
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "sublabel": "agents · messages · tasks",
+      "tag": "SQLite WAL · 5 s busy timeout",
+      "pos": [900, 340],
+      "size": [230, 86],
+      "explanation": "Shared local coordination state across CLI invocations. agents stores roles, session tokens, presence and active/archived status. messages stores recipient, sender, content, read flag, kind and optional task_id/reply_to. tasks stores creator, assignee, status, lease fields and result_summary. Message reads retain rows; history can show read and unread messages. No remote message broker is on this path.",
+      "sources": [
+        { "path": "src/main.rs", "line": 442, "end_line": 445 },
+        { "path": "src/store.rs", "line": 45, "end_line": 107 },
+        { "path": "src/store.rs", "line": 411, "end_line": 449 }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Per CLI invocation · Rust process", "wraps": ["cli", "store"], "pad": 24 }
+  ],
+  "connections": [
+    { "id": "manager-commands", "from": "manager", "to": "cli", "label": "create / list / send", "variant": "emphasis" },
+    { "id": "manager-output", "from": "cli", "to": "manager", "label": "receive + stdout" },
+    { "id": "worker-commands", "from": "worker", "to": "cli", "label": "ack / complete / send", "variant": "emphasis" },
+    { "id": "worker-output", "from": "cli", "to": "worker", "label": "receive + stdout" },
+    { "id": "cli-store", "from": "cli", "to": "store", "label": "Store calls / results" },
+    { "id": "cli-files", "from": "cli", "to": "files", "label": "Token I/O + wait lock" },
+    { "id": "store-db", "from": "store", "to": "sqlite", "label": "SQL reads / writes" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Assignment → execution",
+      "items": [
+        "create: queued task + assignment message commit together",
+        "receive: mark message read ≠ task ack",
+        "ack: queued → acked; complete: acked → completed"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "How the manager gets the result",
+      "items": [
+        "complete persists result_summary; no automatic result message",
+        "Manager uses task list, or worker sends a separate note",
+        "Freeform send / receive uses the same persisted message table"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Boundaries of this implementation",
+      "items": [
+        "Roles guide agents; no manager-only authorization gate",
+        "15-minute lease timestamp is not enforced by complete",
+        "Requeue resets task state; it emits no new assignment message"
+      ]
+    }
+  ]
+}

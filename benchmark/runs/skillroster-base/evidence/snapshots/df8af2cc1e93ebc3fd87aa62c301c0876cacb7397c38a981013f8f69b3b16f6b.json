@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SkillRoster · inspect, plan, apply & undo",
+    "subtitle": "Scan and Plan leave Skill files untouched—not local state. Only guarded execution applies or reverses a change.",
+    "output": "output/skillroster-architecture.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/skillroster",
+      "revision": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "caller", "type": "external", "label": "Agent / human", "sublabel": "Chooses the change", "pos": [40, 40], "size": [170, 76],
+      "explanation": "The caller supplies structured Plan JSON over stdin. Semantic intent is not inferred by the mutation engine. Human-mode Apply and Undo prompt; --json bypasses that interactive prompt, so approval belongs to the calling Agent.",
+      "sources": [{"path":"src/app.rs","line":6559,"end_line":6577,"label":"Structured caller decision"},{"path":"src/app.rs","line":345,"end_line":389,"label":"Human vs JSON confirmation"}]
+    },
+    {
+      "id": "cli", "type": "backend", "label": "CLI orchestration", "sublabel": "app.rs · command dispatch", "pos": [340, 40], "size": [200, 76],
+      "explanation": "main parses clap arguments and calls app::run_process. app secures the state root, opens StateStore and holds the appropriate state lock. Scan, Plan creation, Apply and Undo acquire exclusive locks. These are separate command invocations, not an automatic pipeline.",
+      "sources": [{"path":"src/main.rs","line":26,"end_line":41,"label":"CLI entry"},{"path":"src/app.rs","line":80,"end_line":128,"label":"State root and lock ownership"},{"path":"src/app.rs","line":569,"end_line":587,"label":"Exclusive vs shared commands"}]
+    },
+    {
+      "id": "scan", "type": "backend", "label": "Discovery & inspection", "sublabel": "scan.rs + harness adapters", "pos": [680, 40], "size": [210, 76],
+      "explanation": "Enumerates known Agent roots, shared Library roots, explicit roots and configured Codex plugin roots. Materializes Skills and placements, freezes physical mutation paths, observes Claude visibility and optionally reads session evidence. Plugin placements and durable read-only source permissions do not grant mutation authority. app persists the index and ScanResult in a snapshot transaction.",
+      "sources": [{"path":"src/scan.rs","line":984,"end_line":1030,"label":"Root discovery and containment"},{"path":"src/scan.rs","line":1083,"end_line":1168,"label":"Read-only roots and evidence"},{"path":"src/app.rs","line":1732,"end_line":1744,"label":"Persist snapshot via StateStore"}]
+    },
+    {
+      "id": "observed", "type": "database", "label": "Installed Skills & logs", "sublabel": "Agent / shared / plugin roots", "pos": [990, 40], "size": [200, 76],
+      "explanation": "Discovery reads directories and SKILL entrypoints plus eligible session logs. This is an inspection surface, not a blanket write allowlist. It overlaps the approved target surface below only where governance and containment checks permit a change.",
+      "sources": [{"path":"src/scan.rs","line":1233,"end_line":1258,"label":"Read root directory"},{"path":"src/scan.rs","line":1406,"end_line":1425,"label":"Discover entrypoints"},{"path":"src/scan.rs","line":1142,"end_line":1163,"label":"Read session evidence"}]
+    },
+    {
+      "id": "planner", "type": "backend", "label": "Plan preparation", "sublabel": "Normalize → derive → validate", "pos": [340, 280], "size": [200, 86],
+      "explanation": "app accepts caller JSON against the latest Snapshot and requires Evidence for governance changes. roster_plan derives physical operations and implicit Library changes. change::prepare normalizes approved paths and validates projected operation state without executing it. app saves a ready Plan, pre-change governance state and physical bindings; it does not apply Skill-file changes.",
+      "sources": [{"path":"src/app.rs","line":8252,"end_line":8307,"label":"Snapshot, Evidence and prepare"},{"path":"src/app.rs","line":7595,"end_line":7616,"label":"Derive roster operations"},{"path":"src/app.rs","line":8448,"end_line":8475,"label":"No Skill changes; save Plan"}]
+    },
+    {
+      "id": "state", "type": "database", "label": "SQLite · StateStore", "sublabel": "Snapshots / Plans / Receipts", "pos": [680, 280], "size": [210, 86],
+      "explanation": "Default path: ~/.skillroster/skillroster.db. Stores the inventory, governance metadata, prepared Plans and Receipt records. StateStore owns SQL persistence; app owns when it is read or updated. SQLite and filesystem journals are separate commits: a durable journal can survive failed SQLite finalization, requiring lifecycle recovery.",
+      "sources": [{"path":"src/sqlite.rs","line":240,"end_line":268,"label":"Secure database open"},{"path":"src/sqlite.rs","line":1269,"end_line":1305,"label":"Persist prepared Plan"},{"path":"src/app.rs","line":8559,"end_line":8598,"label":"Journal then SQLite finalization"}]
+    },
+    {
+      "id": "gate", "type": "security", "label": "Apply / Undo controller", "sublabel": "Explicit command + state lock", "tag": "Refuse stale or unsafe state", "pos": [340, 540], "size": [200, 94],
+      "explanation": "Apply loads a ready Plan, rejects unresolved recovery, and rechecks Snapshot ID, Evidence, package/physical bindings and prior Roster/Library state. Undo loads an applied Receipt, rejects duplicate reversal and restores metadata only after filesystem compensation verifies. app finalizes Receipt/Plan metadata; metadata failure after Apply triggers filesystem rollback. Human prompts are conditional on non-JSON mode.",
+      "sources": [{"path":"src/app.rs","line":8479,"end_line":8557,"label":"Apply gates and metadata rollback"},{"path":"src/app.rs","line":8601,"end_line":8669,"label":"Undo eligibility and finalization"},{"path":"src/app.rs","line":345,"end_line":389,"label":"Explicit mutation commands"}]
+    },
+    {
+      "id": "executor", "type": "backend", "label": "Journaled change runtime", "sublabel": "change.rs → AnchoredFs", "tag": "Revalidate before each operation", "pos": [680, 540], "size": [210, 94],
+      "explanation": "Apply validates the complete prepared sequence and anchored path projections, publishes an Applying journal, stages compensation and executes checked operations. Verification failure attempts rollback; incomplete rollback becomes RecoveryRequired. Undo does not rediscover intent or re-plan: it applies the original Receipt's compensations in reverse order, with drift checks, and publishes a linked reverse Receipt.",
+      "sources": [{"path":"src/change.rs","line":701,"end_line":759,"label":"Preflight, journal, stage, execute"},{"path":"src/change.rs","line":949,"end_line":1024,"label":"Reverse Receipt and compensation"},{"path":"src/change.rs","line":1954,"end_line":1984,"label":"Reverse order and fingerprint guard"}]
+    },
+    {
+      "id": "targets", "type": "database", "label": "Approved filesystem", "sublabel": "Agent paths / Library / backups", "pos": [990, 540], "size": [200, 94],
+      "explanation": "AnchoredFs performs the actual create, symlink, copy, replacement and recoverable move operations after current-state validation. The normal Agent Plan policy rejects caller-supplied raw operations; governance derivation supplies permitted physical changes. Existing content is retained in recoverable locations; Undo stashes created paths rather than blindly deleting them. Read permission alone is not write permission.",
+      "sources": [{"path":"src/change.rs","line":434,"end_line":440,"label":"Reject arbitrary Agent operations"},{"path":"src/change.rs","line":1783,"end_line":1881,"label":"Actual anchored mutations"},{"path":"src/change.rs","line":1974,"end_line":1984,"label":"Undo preserves created content"}]
+    },
+    {
+      "id": "journal", "type": "database", "label": "Receipt journals", "sublabel": "state_dir/receipts/*.json", "pos": [680, 760], "size": [210, 76],
+      "explanation": "The change runtime atomically publishes private JSON journals with operation results, compensation records and fingerprints before and during mutation. Applying or RecoveryRequired journals block subsequent changes until resolved. Recovery material may also live beside the original source for cross-filesystem moves; it is not all contained in the receipts directory.",
+      "sources": [{"path":"src/change.rs","line":2641,"end_line":2655,"label":"Atomic journal publication"},{"path":"src/change.rs","line":759,"end_line":779,"label":"Durable journal blocks writes"},{"path":"src/change.rs","line":1848,"end_line":1880,"label":"Source-side recovery backup"}]
+    }
+  ],
+  "boundaries": [
+    {"kind":"region","label":"PREPARATION · local metadata, not Skill-file changes","wraps":["planner","state"],"pad":24},
+    {"kind":"security-group","label":"MUTATION AUTHORITY · explicit Apply or Undo","wraps":["gate","executor"],"pad":24}
+  ],
+  "connections": [
+    {"id":"invoke","from":"caller","to":"cli","label":"commands / JSON"},
+    {"id":"dispatch-scan","from":"cli","to":"scan","label":"scan"},
+    {"id":"read-installed","from":"scan","to":"observed","label":"read only"},
+    {"id":"dispatch-plan","from":"cli","to":"planner","label":"plan · stdin JSON"},
+    {"id":"snapshot","from":"scan","to":"state","label":"persist Snapshot"},
+    {"id":"prepare-state","from":"planner","to":"state","label":"Snapshot → saved Plan"},
+    {"id":"dispatch-change","from":"cli","to":"gate","label":"apply / undo","fromSide":"left","toSide":"left"},
+    {"id":"control-state","from":"gate","to":"state","label":"load / finalize state","fromSide":"top","toSide":"bottom"},
+    {"id":"guarded-execution","from":"gate","to":"executor","label":"validated + locked","variant":"security"},
+    {"id":"physical-write","from":"executor","to":"targets","label":"apply / undo","variant":"emphasis"},
+    {"id":"journal-write","from":"executor","to":"journal","label":"atomic journal"}
+  ],
+  "cards": [
+    {"dot":"cyan","title":"Discovery is not authority","items":["Known Agent roots, shared Library, explicit roots and configured plugins feed inspection. Plugin and durable-read placements remain read-only.","Report/find expose persisted facts; the caller chooses a structured decision. These commands are not an automatic apply pipeline."]},
+    {"dot":"amber","title":"Read-only means Skill files","items":["Scan writes a snapshot; Plan saves prepared operations. CLI startup also secures local state and opens SQLite.","Apply rechecks drift under the state lock. Human mode prompts; --json delegates approval to the caller."]},
+    {"dot":"emerald","title":"Undo is guarded compensation","items":["Applied Receipt → reverse-order compensation → linked reverse Receipt. Drift or incomplete recovery can refuse or fail Undo.","SQLite and filesystem journals are not one atomic transaction. Recovery reconciles failures; this diagram is source-derived, not a live durability test."]}
+  ]
+}

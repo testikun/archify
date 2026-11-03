@@ -1,0 +1,99 @@
+{
+  "run_id": "skillroster-candidate",
+  "project_id": "skillroster",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 384.1249852080364,
+  "usage": {
+    "input_tokens": 1956901,
+    "cached_input_tokens": 1868800,
+    "output_tokens": 8405,
+    "reasoning_output_tokens": 2280,
+    "uncached_input_tokens": 88101
+  },
+  "time_to_first_json_seconds_descriptive_only": 261.488214,
+  "time_to_first_cli_seconds_descriptive_only": 261.590211,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 29,
+  "failed_tool_commands": 1,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-03T02:51:09.801Z",
+      "pid": 70975,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/skillroster-architecture.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/skillroster-candidate/workspace/output/candidate.json",
+      "sha256": "882c285119610fcaf9f3163b2feb3f4583768ed135ab2a3dfc15b485858be553",
+      "snapshot": "snapshots/882c285119610fcaf9f3163b2feb3f4583768ed135ab2a3dfc15b485858be553.json"
+    },
+    {
+      "at": "2026-11-03T02:52:12.433Z",
+      "pid": 71662,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/skillroster-architecture.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-1",
+        "--json"
+      ],
+      "source": "/benchmark/runs/skillroster-candidate/workspace/output/candidate.json",
+      "sha256": "4610e42555fd278f449e78caf6431e8851ce392063227700461135a7e6b396b4",
+      "snapshot": "snapshots/4610e42555fd278f449e78caf6431e8851ce392063227700461135a7e6b396b4.json"
+    }
+  ],
+  "first_json": "snapshots/882c285119610fcaf9f3163b2feb3f4583768ed135ab2a3dfc15b485858be553.json",
+  "first_submitted_json": "snapshots/882c285119610fcaf9f3163b2feb3f4583768ed135ab2a3dfc15b485858be553.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/benchmark/runs/skillroster-candidate/workspace/output/candidate.json",
+  "final_json_sha256": "4610e42555fd278f449e78caf6431e8851ce392063227700461135a7e6b396b4",
+  "html": [
+    "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.html"
+  ],
+  "delivery_receipts": [
+    "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relative_coordinates_in_final": 0,
+  "source_status": "",
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/benchmark/runs/skillroster-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

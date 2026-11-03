@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/benchmark/runs/squad-base/evidence/snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json",
+  "candidate": {
+    "path": "/benchmark/runs/squad-base/evidence/snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json",
+    "sha256": "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e",
+    "bytes": 7743
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/benchmark/runs/squad-base/evidence/snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/benchmark/runs/squad-base/workspace/project",
+      "--candidate-sha256",
+      "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 4.6,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.5,
+      "maxBends": 2,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 52,
+      "minInteriorSegmentPx": 256,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 46,
+      "emptyTopRatio": 0.089,
+      "occupiedTop": 46,
+      "viewBoxTop": 0,
+      "canvasHeight": 514,
+      "typicalNodeHeight": 86,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "recognized-declared-wide",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 1096.875,
+      "actualBudgetPx": 1096.875,
+      "actualReaderWidth": 1126.875,
+      "desiredReaderWidth": 1126.875,
+      "viewportCap": 1376,
+      "limit": "source-size",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "manager-commands",
+        "from": "manager",
+        "to": "cli"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.5,
+      "semanticTextCount": 20
+    },
+    "issues": []
+  }
+}

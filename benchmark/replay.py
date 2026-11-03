@@ -43,7 +43,7 @@ for observed in observations:
         assert hashlib.sha256(input_path.read_bytes()).hexdigest() == input_hash
     row['identical_layout'] = json.loads((out / 'base.layout.json').read_text()) == json.loads((out / 'candidate.layout.json').read_text())
     if (out / 'base.html').exists() and (out / 'candidate.html').exists():
-        svg = lambda file: re.search(r'<svg\b[\s\S]*?</svg>', file.read_text()).group(0)
+        svg = lambda file: re.search(r'<svg\b[^>]*aria-labelledby="archify-diagram-title[^>]*>[\s\S]*?</svg>', file.read_text()).group(0)
         row['identical_canonical_svg'] = svg(out / 'base.html') == svg(out / 'candidate.html')
     results.append(row)
 summary_path.parent.mkdir(exist_ok=True)

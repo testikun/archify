@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/openpi-candidate/workspace/output/openpi-subagents.json",
+    "sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "bytes": 10342
+  },
+  "artifact": {
+    "path": "/benchmark/runs/openpi-candidate/workspace/output/openpi-subagents.html",
+    "sha256": "cc95edfce61d9042c39bc28015ecea845ac96c08ac0d69cd9a546df41dec627e",
+    "bytes": 880219
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/openpi-candidate/workspace/output/review-2/openpi-subagents.finalize.json",
+    "summaryReceipt": "/benchmark/runs/openpi-candidate/workspace/output/review-2/openpi-subagents.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/openpi-candidate/workspace/output/review-2/openpi-subagents.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3714,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Squad: manager–worker coordination",
+    "subtitle": "Local CLI calls share durable state—not an autonomous agent scheduler. Source pinned at 8146bcc.",
+    "output": "output/squad-coordination.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/squad",
+      "revision": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "manager-terminal",
+      "type": "external",
+      "label": "Manager terminal",
+      "sublabel": "Assign • inspect • coordinate",
+      "pos": [40, 80],
+      "size": [210, 76],
+      "explanation": "The manager is an external agent following role instructions, not a running controller inside Squad. It checks agents, creates tracked assignments, and receives replies. To see task completion it can run task list; complete_task itself does not send a result message. A worker can explicitly send a summary instead. Inspector review is a role convention outside this diagram's manager–worker scope.",
+      "sources": [
+        {"path": "src/roles/manager.md", "line": 1, "end_line": 22},
+        {"path": "src/main.rs", "line": 1017, "end_line": 1049}
+      ]
+    },
+    {
+      "id": "squad-command",
+      "type": "backend",
+      "label": "Squad CLI",
+      "sublabel": "Discover workspace • validate session",
+      "pos": [500, 80],
+      "size": [230, 76],
+      "explanation": "One squad invocation runs the requested command. It walks up to a .squad workspace and opens .squad/messages.db. join registers a unique active agent ID, writes a local session token and prints role instructions; it does not launch the worker or model. Actor commands check active identity/session and touch last_seen. receive --wait uses locks/<agent>.receive.lock, rechecks the captured session, polls every 500 ms and heartbeats every 30 s. Missing local session files are accepted for backward compatibility; this is not a remote authentication boundary.",
+      "sources": [
+        {"path": "src/main.rs", "line": 430, "end_line": 484},
+        {"path": "src/main.rs", "line": 610, "end_line": 639},
+        {"path": "src/main.rs", "line": 786, "end_line": 868}
+      ]
+    },
+    {
+      "id": "worker-terminal",
+      "type": "external",
+      "label": "Worker terminal",
+      "sublabel": "Receive • ack • execute • complete",
+      "pos": [1000, 80],
+      "size": [220, 76],
+      "explanation": "The worker executes the actual work outside Squad. For a structured assignment it receives the task-linked message, explicitly acknowledges the task, then explicitly completes it with a summary. Freeform coordination uses send/receive. Both terminals invoke the same CLI implementation against the same workspace; there is no direct manager-to-worker transport in this path.",
+      "sources": [
+        {"path": "src/roles/worker.md", "line": 1, "end_line": 15},
+        {"path": "src/main.rs", "line": 984, "end_line": 1003}
+      ]
+    },
+    {
+      "id": "tracked-tasks",
+      "type": "backend",
+      "label": "Task commands + Store",
+      "sublabel": "Create • ack • complete • requeue • list",
+      "pos": [40, 310],
+      "size": [240, 80],
+      "explanation": "create_task requires active creator and assignee and atomically inserts both a queued task and an unread task_assigned message carrying task_id. ack requires queued status and the assigned active agent; a conditional UPDATE sets acked and a 15-minute lease. complete requires acked status and that active lease owner; it writes the summary and timestamps but sends no message and does not test lease expiry. requeue is explicit, clears lease/results and can change the assignee; it creates no new assignment message. Without --to, the implementation sets assigned_to to NULL rather than preserving it. list reads persisted tasks.",
+      "sources": [
+        {"path": "src/main.rs", "line": 973, "end_line": 1013},
+        {"path": "src/store.rs", "line": 452, "end_line": 546},
+        {"path": "src/store.rs", "line": 549, "end_line": 719}
+      ]
+    },
+    {
+      "id": "message-inbox",
+      "type": "backend",
+      "label": "Messaging + Store",
+      "sublabel": "Send • broadcast • receive / --wait",
+      "pos": [980, 310],
+      "size": [250, 80],
+      "explanation": "send inserts an unread note, optionally with task_id and reply_to. Direct recipients must be active; @all fans out to active agents other than the sender. receive atomically selects unread messages and marks those IDs read, then CLI renders text or JSON. A task_assigned message is enriched by looking up its current task record. Reading a message does not acknowledge the task. Messages are retained as read history; the read transaction commits before terminal output, so this is not processing acknowledgement or a proven exactly-once delivery guarantee.",
+      "sources": [
+        {"path": "src/main.rs", "line": 706, "end_line": 745},
+        {"path": "src/store.rs", "line": 294, "end_line": 374},
+        {"path": "src/main.rs", "line": 487, "end_line": 538}
+      ]
+    },
+    {
+      "id": "workspace-database",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "sublabel": "agents • tasks • messages | SQLite WAL",
+      "pos": [480, 555],
+      "size": [270, 84],
+      "explanation": "A single local SQLite file is shared by independent CLI processes. Store owns SQL I/O, enables WAL and a 5-second busy timeout, and creates/migrates the tables. agents holds identity, role, status, client/protocol metadata, last_seen and session token. tasks holds assignment, status, lease, result and timestamps. messages holds sender/recipient, content, read flag, kind, task_id and reply_to. Client/protocol metadata is recorded, but the shown task creation path does not gate on protocol version or manager role.",
+      "sources": [
+        {"path": "src/store.rs", "line": 45, "end_line": 107},
+        {"path": "src/store.rs", "line": 142, "end_line": 175},
+        {"path": "src/tasks.rs", "line": 3, "end_line": 17}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "Shared local persistence • workspace .squad", "wraps": ["workspace-database"], "pad": 24}
+  ],
+  "connections": [
+    {"id": "manager-cli", "from": "manager-terminal", "to": "squad-command", "label": "task create / list; send / receive", "variant": "emphasis"},
+    {"id": "worker-cli", "from": "worker-terminal", "to": "squad-command", "label": "receive; task ack / complete", "variant": "emphasis"},
+    {"id": "dispatch-tasks", "from": "squad-command", "to": "tracked-tasks", "label": "task subcommands"},
+    {"id": "dispatch-messages", "from": "squad-command", "to": "message-inbox", "label": "send / receive"},
+    {"id": "agent-state", "from": "squad-command", "to": "workspace-database", "label": "agent/session state via Store"},
+    {"id": "task-sql", "from": "tracked-tasks", "to": "workspace-database", "label": "task + assignment writes; task reads", "variant": "emphasis"},
+    {"id": "inbox-sql", "from": "message-inbox", "to": "workspace-database", "label": "insert notes; read + mark inbox; task lookup"}
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Assignment is not acknowledgement",
+      "items": [
+        "create → queued task + unread task_assigned message in one transaction.",
+        "receive → message read; task stays queued. ack → acked + 15-minute lease; only the active assignee can ack.",
+        "complete → completed + result_summary; only the active lease owner can complete. No automatic result message."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "How the manager gets the result",
+      "items": [
+        "task list reads the persisted status and summary; worker send → manager receive is a separate, explicit notification path.",
+        "CLI arrows represent invocations; reads return through the CLI as stdout text or --json. Both actors must share the workspace.",
+        "Roles are printed guidance, not role-based authorization: create checks active agents, not a manager role or protocol capability."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Local boundaries and limits",
+      "items": [
+        "Session files: .squad/sessions/<id> (src/session.rs:5–22,50–59). Wait lock: locks/<id>.receive.lock, outside .squad (main.rs:796–814).",
+        "No automatic lease-expiry recovery in the traced path: complete does not check expiry. Explicit requeue clears state but emits no new message (store.rs:653–719).",
+        "Agent execution and compliance with role prompts are external; code does not establish successful work or automatic review. Inspector, setup and tmux launch paths are omitted."
+      ]
+    }
+  ]
+}

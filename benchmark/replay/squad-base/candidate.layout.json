@@ -1,0 +1,341 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1170,
+    514
+  ],
+  "components": [
+    {
+      "id": "manager",
+      "type": "external",
+      "label": "Manager agent",
+      "x": 40,
+      "y": 70,
+      "width": 210,
+      "height": 86,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker agent",
+      "x": 900,
+      "y": 70,
+      "width": 210,
+      "height": 86,
+      "pos": [
+        900,
+        70
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "Squad CLI",
+      "x": 450,
+      "y": 70,
+      "width": 250,
+      "height": 86,
+      "pos": [
+        450,
+        70
+      ]
+    },
+    {
+      "id": "store",
+      "type": "backend",
+      "label": "Store · rusqlite",
+      "x": 450,
+      "y": 340,
+      "width": 250,
+      "height": 86,
+      "pos": [
+        450,
+        340
+      ]
+    },
+    {
+      "id": "files",
+      "type": "database",
+      "label": "Session + wait files",
+      "x": 40,
+      "y": 340,
+      "width": 210,
+      "height": 86,
+      "pos": [
+        40,
+        340
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "x": 900,
+      "y": 340,
+      "width": 230,
+      "height": 86,
+      "pos": [
+        900,
+        340
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Per CLI invocation · Rust process",
+      "x": 426,
+      "y": 46,
+      "width": 298,
+      "height": 400,
+      "wraps": [
+        "cli",
+        "store"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager",
+      "to": "cli",
+      "label": "create / list / send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          97.95
+        ],
+        [
+          450,
+          97.95
+        ]
+      ],
+      "labelAt": [
+        350,
+        88
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "manager",
+      "label": "receive + stdout",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          450,
+          113
+        ],
+        [
+          250,
+          113
+        ]
+      ],
+      "labelAt": [
+        350,
+        133
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "cli",
+      "label": "ack / complete / send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          104.95
+        ],
+        [
+          700,
+          104.95
+        ]
+      ],
+      "labelAt": [
+        800,
+        95
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "worker",
+      "label": "receive + stdout",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          700,
+          120
+        ],
+        [
+          900,
+          120
+        ]
+      ],
+      "labelAt": [
+        800,
+        140
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "store",
+      "label": "Store calls / results",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          575,
+          156
+        ],
+        [
+          575,
+          340
+        ]
+      ],
+      "labelAt": [
+        514,
+        251
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "files",
+      "label": "Token I/O + wait lock",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          450,
+          127
+        ],
+        [
+          398,
+          127
+        ],
+        [
+          398,
+          383
+        ],
+        [
+          250,
+          383
+        ]
+      ],
+      "labelAt": [
+        398,
+        245
+      ]
+    },
+    {
+      "from": "store",
+      "to": "sqlite",
+      "label": "SQL reads / writes",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          700,
+          383
+        ],
+        [
+          900,
+          383
+        ]
+      ],
+      "labelAt": [
+        800,
+        373
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "create / list / send",
+      "x": 297,
+      "y": 78,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        350,
+        88
+      ]
+    },
+    {
+      "text": "receive + stdout",
+      "x": 307,
+      "y": 123,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        350,
+        133
+      ]
+    },
+    {
+      "text": "ack / complete / send",
+      "x": 745,
+      "y": 85,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        800,
+        95
+      ]
+    },
+    {
+      "text": "receive + stdout",
+      "x": 757,
+      "y": 130,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        800,
+        140
+      ]
+    },
+    {
+      "text": "Store calls / results",
+      "x": 458,
+      "y": 241,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        514,
+        251
+      ]
+    },
+    {
+      "text": "Token I/O + wait lock",
+      "x": 343,
+      "y": 235,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        398,
+        245
+      ]
+    },
+    {
+      "text": "SQL reads / writes",
+      "x": 752,
+      "y": 363,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        800,
+        373
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · One review, individual provider answers",
+    "subtitle": "Default read-only review · parallel CLI shims · CLI or MCP · pinned source 3cfce13",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "backend": {"label": "MCO runtime"},
+        "database": {"label": "Local files"},
+        "external": {"label": "Child processes"}
+      }
+    },
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "review-entry",
+      "type": "backend",
+      "label": "Review entry + validation",
+      "sublabel": "CLI review / MCP mco_review",
+      "tag": "Read-only by default",
+      "pos": [55, 130],
+      "size": [245, 92],
+      "explanation": "CLI resolves configuration, prompt, selected providers and scope; MCP validates repo/providers and builds the same invocation inputs in _sync_review. Both normally create one invocation per selected provider, using its configured model. Target paths must stay inside the repository and allowed paths. Read-only is the default permission profile, not a universal MCO sandbox: provider support and overrides matter.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2250, "end_line": 2340, "label": "CLI selection, prompt and scope"},
+        {"path": "runtime/cli.py", "line": 1522, "end_line": 1541, "label": "Read-only default and overrides"},
+        {"path": "runtime/mcp_server.py", "line": 275, "end_line": 341, "label": "MCP validation and dispatch"}
+      ]
+    },
+    {
+      "id": "parallel-runtime",
+      "type": "backend",
+      "label": "Invocation scheduler",
+      "sublabel": "Parallel, capped by policy",
+      "tag": "Bounded thread pool",
+      "pos": [435, 130],
+      "size": [265, 92],
+      "explanation": "With chain, debate and synthesis disabled, run_invocation_workflow directly calls run_invocations. It submits each invocation to a ThreadPoolExecutor; max_provider_parallelism caps workers (otherwise one per invocation). Futures are tracked by original input index, so completion order does not reorder final outputs. A global deadline sets the shared stop event and cancels queued futures; workers handle running-provider cancellation.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 734, "end_line": 756, "label": "Default parallel branch"},
+        {"path": "runtime/invocation_runtime.py", "line": 488, "end_line": 598, "label": "Pool, indexed results and cancellation"},
+        {"path": "runtime/invocation_runtime.py", "line": 136, "end_line": 162, "label": "Provider invocations and scope checks"}
+      ]
+    },
+    {
+      "id": "invocation-worker",
+      "type": "backend",
+      "label": "Per-invocation worker",
+      "sublabel": "TaskInput · poll · decode answer",
+      "tag": "Stall + hard deadlines",
+      "pos": [830, 130],
+      "size": [245, 92],
+      "explanation": "_run_one_invocation builds TaskInput with repo, prompt, scope, model, permissions and artifact root, then starts the chosen adapter with a bounded startup deadline. It polls status and reads raw stdout/stderr files, rather than an in-memory stdout pipe. Output changes reset the stall deadline. Provider-specific transport decoding extracts deltas and the final raw answer. Failures, timeouts and cancellation become individual records containing invocation_id, provider, model, status, output, error and exit_code; one failure does not discard another provider's answer.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 165, "end_line": 285, "label": "TaskInput and bounded startup"},
+        {"path": "runtime/invocation_runtime.py", "line": 301, "end_line": 389, "label": "Result fields and raw-log reads"},
+        {"path": "runtime/invocation_runtime.py", "line": 402, "end_line": 435, "label": "Decode, status and deadlines"}
+      ]
+    },
+    {
+      "id": "provider-adapters",
+      "type": "backend",
+      "label": "Selected provider adapters",
+      "sublabel": "Registry → run / poll / cancel",
+      "tag": "Default: CLI shim transport",
+      "pos": [830, 390],
+      "size": [245, 92],
+      "explanation": "The registry maps selected provider IDs to adapter objects (for example ClaudeAdapter and CodexAdapter). ShimAdapterBase builds provider commands, starts subprocesses in the repository directory and redirects stdout/stderr to raw log files. Its poll and cancel methods supervise child processes. Provider adapters own command flags and answer decoding; Codex, for example, translates sandbox/model options and decodes JSON events. CLI can select ACP instead, but that alternative is outside this default-shim view.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 58, "end_line": 155, "label": "Registry and transport choice"},
+        {"path": "runtime/adapters/shim.py", "line": 98, "end_line": 153, "label": "Spawn and raw-file redirection"},
+        {"path": "runtime/adapters/codex.py", "line": 29, "end_line": 85, "label": "Example flags and decoding"}
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Provider CLI processes",
+      "sublabel": "Only the selected agents run",
+      "tag": "Child-process boundary",
+      "pos": [1200, 390],
+      "size": [225, 92],
+      "explanation": "The shim launches installed provider executables (for example codex) with cwd set to the requested repository, configured flags, and prompt arguments. Each selected invocation has its own run handle and raw log files. These executables are outside MCO's Python process. The checkout establishes their launch contract, not their internal model execution, network endpoints, authentication behavior or hosted infrastructure; none is inferred here.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 153, "label": "Actual process launch boundary"},
+        {"path": "runtime/adapters/codex.py", "line": 60, "end_line": 85, "label": "Example provider command"}
+      ]
+    },
+    {
+      "id": "individual-results",
+      "type": "backend",
+      "label": "Individual result envelope",
+      "sublabel": "Ordered outputs[]: answer + status",
+      "tag": "complete / partial / failed",
+      "pos": [435, 390],
+      "size": [265, 92],
+      "explanation": "After futures finish, run_invocations counts successful results and returns task_id, stage, status, exit_code, outputs and artifact_root. Each output retains its own provider/model, answer and status; this path neither merges findings nor synthesizes a consensus. CLI --json prints the envelope without each output's stderr, then returns its exit_code; text/JSONL modes can stream answer deltas and completion events. MCP wraps the workflow result in _ok(result).",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 579, "end_line": 641, "label": "Ordered outputs and task envelope"},
+        {"path": "runtime/cli.py", "line": 2390, "end_line": 2489, "label": "Streaming and JSON return"},
+        {"path": "runtime/mcp_server.py", "line": 324, "end_line": 341, "label": "MCP return wrapper"}
+      ]
+    },
+    {
+      "id": "answer-artifacts",
+      "type": "database",
+      "label": "Optional saved review files",
+      "sublabel": "run.json · result.md · answer text",
+      "tag": "artifact / both result mode",
+      "pos": [445, 610],
+      "size": [245, 92],
+      "explanation": "When CLI result mode is artifact or both (or --save-artifacts promotes stdout to both), answers and run metadata are retained under artifact_base/task_id, normally reports/review/task_id. Workers append per-invocation answer deltas; InvocationArtifactWriter writes run.json and result.md after aggregation. Without persistence, MCO still uses temporary provider logs and answer files, then cleans them up and returns null artifact paths. MCP review does not request persistence. This is a local filesystem, not a database service.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2385, "end_line": 2389, "label": "Persistence selection"},
+        {"path": "runtime/invocation_runtime.py", "line": 465, "end_line": 486, "label": "Persistent or temporary root"},
+        {"path": "runtime/invocation_artifacts.py", "line": 63, "end_line": 106, "label": "Actual summary file writes"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "MCO Python runtime · logical responsibilities", "wraps": ["review-entry", "parallel-runtime", "invocation-worker", "provider-adapters", "individual-results"], "pad": 30}
+  ],
+  "connections": [
+    {"id": "prepare-invocations", "from": "review-entry", "to": "parallel-runtime", "label": "Validated invocations", "variant": "emphasis"},
+    {"id": "submit-workers", "from": "parallel-runtime", "to": "invocation-worker", "label": "Submit each invocation", "variant": "emphasis"},
+    {"id": "drive-adapter", "from": "invocation-worker", "to": "provider-adapters", "label": "run / poll / cancel"},
+    {"id": "spawn-agent", "from": "provider-adapters", "to": "provider-processes", "label": "Spawn CLI + prompt"},
+    {"id": "read-raw-output", "from": "provider-processes", "to": "invocation-worker", "label": "Raw log files + exit"},
+    {"id": "collect-individual", "from": "invocation-worker", "to": "individual-results", "label": "Answer or error record", "variant": "emphasis"},
+    {"id": "return-to-caller", "from": "individual-results", "to": "review-entry", "label": "JSON / text / MCP result", "variant": "emphasis"},
+    {"id": "save-files", "from": "individual-results", "to": "answer-artifacts", "label": "Save summary if enabled"}
+  ],
+  "cards": [
+    {"dot": "amber", "title": "Failure isolation, not consensus", "items": ["Each invocation reports success, failure, timeout or cancellation with its own answer/error.", "Aggregate status is complete, partial or failed. No findings schema or automatic synthesis."]},
+    {"dot": "slate", "title": "Scope and evidence limits", "items": ["Default shim path only; opt-in chain, debate, synthesis and ACP are not expanded.", "Read-only maps to provider flags; external provider internals and remote services are not established."]}
+  ]
+}

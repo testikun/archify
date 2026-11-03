@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/squad-base/workspace/output/candidate.json",
+    "sha256": "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e",
+    "bytes": 7743
+  },
+  "artifact": {
+    "path": "/benchmark/runs/squad-base/workspace/output/squad-coordination.html",
+    "sha256": "19f2f279a251393b2519671a16a1da6893d490e97d0a32340156de42bf9d74bf",
+    "bytes": 874866
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/squad-base/workspace/output/squad-coordination.finalize.json",
+    "summaryReceipt": "/benchmark/runs/squad-base/workspace/output/squad-coordination.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/squad-base/workspace/output/squad-coordination.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3958,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

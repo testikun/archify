@@ -1,0 +1,348 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1270,
+    727
+  ],
+  "components": [
+    {
+      "id": "manager-terminal",
+      "type": "external",
+      "label": "Manager terminal",
+      "x": 40,
+      "y": 80,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        40,
+        80
+      ]
+    },
+    {
+      "id": "squad-command",
+      "type": "backend",
+      "label": "Squad CLI",
+      "x": 500,
+      "y": 80,
+      "width": 230,
+      "height": 76,
+      "pos": [
+        500,
+        80
+      ]
+    },
+    {
+      "id": "worker-terminal",
+      "type": "external",
+      "label": "Worker terminal",
+      "x": 1000,
+      "y": 80,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        1000,
+        80
+      ]
+    },
+    {
+      "id": "tracked-tasks",
+      "type": "backend",
+      "label": "Task commands + Store",
+      "x": 40,
+      "y": 310,
+      "width": 240,
+      "height": 80,
+      "pos": [
+        40,
+        310
+      ]
+    },
+    {
+      "id": "message-inbox",
+      "type": "backend",
+      "label": "Messaging + Store",
+      "x": 980,
+      "y": 310,
+      "width": 250,
+      "height": 80,
+      "pos": [
+        980,
+        310
+      ]
+    },
+    {
+      "id": "workspace-database",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "x": 480,
+      "y": 555,
+      "width": 270,
+      "height": 84,
+      "pos": [
+        480,
+        555
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Shared local persistence • workspace .squad",
+      "x": 456,
+      "y": 531,
+      "width": 318,
+      "height": 128,
+      "wraps": [
+        "workspace-database"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager-terminal",
+      "to": "squad-command",
+      "label": "task create / list; send / receive",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          109.95
+        ],
+        [
+          500,
+          109.95
+        ]
+      ],
+      "labelAt": [
+        375,
+        100
+      ]
+    },
+    {
+      "from": "worker-terminal",
+      "to": "squad-command",
+      "label": "receive; task ack / complete",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1000,
+          109.95
+        ],
+        [
+          730,
+          109.95
+        ]
+      ],
+      "labelAt": [
+        865,
+        100
+      ]
+    },
+    {
+      "from": "squad-command",
+      "to": "tracked-tasks",
+      "label": "task subcommands",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          516,
+          156
+        ],
+        [
+          516,
+          326
+        ],
+        [
+          280,
+          326
+        ]
+      ],
+      "labelAt": [
+        398,
+        316
+      ]
+    },
+    {
+      "from": "squad-command",
+      "to": "message-inbox",
+      "label": "send / receive",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          714,
+          156
+        ],
+        [
+          714,
+          326
+        ],
+        [
+          980,
+          326
+        ]
+      ],
+      "labelAt": [
+        847,
+        316
+      ]
+    },
+    {
+      "from": "squad-command",
+      "to": "workspace-database",
+      "label": "agent/session state via Store",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          615,
+          156
+        ],
+        [
+          615,
+          555
+        ]
+      ],
+      "labelAt": [
+        534,
+        359
+      ]
+    },
+    {
+      "from": "tracked-tasks",
+      "to": "workspace-database",
+      "label": "task + assignment writes; task reads",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          280,
+          374
+        ],
+        [
+          496,
+          374
+        ],
+        [
+          496,
+          555
+        ]
+      ],
+      "labelAt": [
+        496,
+        455
+      ]
+    },
+    {
+      "from": "message-inbox",
+      "to": "workspace-database",
+      "label": "insert notes; read + mark inbox; task lookup",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          980,
+          374
+        ],
+        [
+          734,
+          374
+        ],
+        [
+          734,
+          555
+        ]
+      ],
+      "labelAt": [
+        734,
+        455
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "task create / list; send / receive",
+      "x": 288,
+      "y": 90,
+      "width": 173,
+      "height": 14,
+      "labelAt": [
+        375,
+        100
+      ]
+    },
+    {
+      "text": "receive; task ack / complete",
+      "x": 793,
+      "y": 90,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        865,
+        100
+      ]
+    },
+    {
+      "text": "task subcommands",
+      "x": 355,
+      "y": 306,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        398,
+        316
+      ]
+    },
+    {
+      "text": "send / receive",
+      "x": 808,
+      "y": 306,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        847,
+        316
+      ]
+    },
+    {
+      "text": "agent/session state via Store",
+      "x": 460,
+      "y": 349,
+      "width": 149,
+      "height": 14,
+      "labelAt": [
+        534,
+        359
+      ]
+    },
+    {
+      "text": "task + assignment writes; task reads",
+      "x": 405,
+      "y": 445,
+      "width": 183,
+      "height": 14,
+      "labelAt": [
+        496,
+        455
+      ]
+    },
+    {
+      "text": "insert notes; read + mark inbox; task lookup",
+      "x": 623,
+      "y": 445,
+      "width": 221,
+      "height": 14,
+      "labelAt": [
+        734,
+        455
+      ]
+    }
+  ]
+}

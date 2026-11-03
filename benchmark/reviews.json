@@ -1,0 +1,238 @@
+{
+  "skillroster-candidate": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Six components group inspection, preparation, explicit mutation control, filesystem, journals and reversible execution. The Snapshot/Plan arrows explicitly represent persisted handoffs between command invocations; they do not claim an automatic pipeline. SQLite control state is documented in the handoff labels and cards rather than drawn as another service.",
+      "Inspection and preparation can write local control state while leaving Skill packages untouched. Plugin discovery and confirmed source-read scope do not grant arbitrary write authority. Latest-Snapshot evidence, trusted operation derivation, prepared-plan validation and conditional human/JSON confirmation match the source.",
+      "Apply checks Ready status and current governance/physical bindings under a state lock before anchored execution. Undo uses an applied, not-yet-reversed Receipt and guarded reverse compensation. Journals and SQLite are explicitly separate durability domains; rollback or finalization can require recovery.",
+      "The first captured/submitted draft passes CLI checks. One voluntary ablation removes unnecessary explicit endpoint sides from the preparation-read relationship; the revised automatic route also passes. The pre-ablation JSON remains in the output directory. One command fails on a guessed nonexistent showcase example, not on diagram validation or delivery.",
+      "The final overview and cards are readable, with clear preparation/mutation boundaries and no observed clipping or title-mask occlusion. The long bottom reversal route runs close to the mutation boundary but remains traceable. Generic database symbols denote explicitly labeled filesystem/journal surfaces. Original source links use local-only mode; immutable web references follow. No relative waypoint coordinates were used."
+    ],
+    "source_checks": [
+      {"path": "src/scan.rs", "line": 984, "fact": "Root discovery and bounded evidence collection inspect installed Skills."},
+      {"path": "src/app.rs", "line": 1732, "fact": "Inspection persists its local Snapshot rather than being globally read-only."},
+      {"path": "src/app.rs", "line": 7585, "fact": "Normalization derives trusted operations for the selected request family."},
+      {"path": "src/app.rs", "line": 8252, "fact": "Preparation binds the latest Snapshot and evidence before saving a Plan."},
+      {"path": "src/app.rs", "line": 345, "fact": "Human confirmation is conditional on non-JSON Apply/Undo mode."},
+      {"path": "src/app.rs", "line": 8479, "fact": "Apply checks current plan/governance state and rolls back filesystem work on metadata failure."},
+      {"path": "src/change.rs", "line": 701, "fact": "Anchored validation, no-replace support, journal publication and compensation staging guard execution."},
+      {"path": "src/app.rs", "line": 8601, "fact": "Undo loads an applied Receipt, rejects repeat reversal and restores metadata after verification."},
+      {"path": "src/change.rs", "line": 1954, "fact": "Reverse compensation checks existing content before stashing or restoring paths."}
+    ],
+    "first_draft_check": "pass: independent CLI replay of earliest complete capture",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 1},
+    "screenshot": "captures/skillroster-candidate/fullpage.light.png"
+  },
+  "skillroster-base": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Ten components distinguish caller, command orchestration, inspection, Plan preparation, SQLite state, guarded execution, approved filesystem and Receipt journals. These are responsibilities and local storage surfaces, not a claim that the Rust modules are independently deployed services.",
+      "Scan and Plan leave Skill files unchanged but persist local state. Discovery permissions and plugin visibility are not mutation authority. Apply rechecks the latest Snapshot, evidence, physical bindings and prior governance state; JSON mode delegates approval to the caller while human mode prompts.",
+      "The diagram correctly separates filesystem journals from SQLite finalization. Apply stages compensation before mutation, verifies postconditions and can roll back; Undo uses the original applied Receipt, rejects duplicate reversal and checks drift during reverse-order compensation. No automatic scan-to-apply pipeline or all-or-nothing cross-store transaction is invented.",
+      "The first captured/submitted JSON fails schema/enum because it uses abbreviated endpoint sides l/t/b. The first revision replaces them with full names; the next check fails composition/desktop-readability. The second revision narrows the layout; a third voluntarily removes a redundant preparation boundary. All three candidate revisions and original failures are retained.",
+      "Two additional failed finalize commands come from the participant's chosen sandbox-exec wrapper preventing Chrome sockets or sandbox initialization. They do not represent additional JSON revisions. The participant reruns without that wrapper and completes browser/visual checks; total failed tool commands is four.",
+      "The final overview has traceable control and mutation paths, no observed title-mask occlusion or clipping, and readable cards. Small secondary labels and substantial vertical spacing remain presentation caveats. Generic database symbols also represent filesystem surfaces, which the node labels and explanations identify explicitly. Source links in the original use local-only mode; immutable web references are provided below. No relative waypoint coordinates were used."
+    ],
+    "source_checks": [
+      {"path": "src/scan.rs", "line": 984, "fact": "Discovery enumerates roots and inspects installed Skills; observation does not confer mutation authority."},
+      {"path": "src/app.rs", "line": 1732, "fact": "Scan persists its index and payload as a local Snapshot."},
+      {"path": "src/app.rs", "line": 8252, "fact": "Agent Plan preparation binds the latest Snapshot and requires evidence for governance changes."},
+      {"path": "src/change.rs", "line": 434, "fact": "GovernanceOnly rejects caller-supplied arbitrary operations; trusted derivation supplies the physical changes."},
+      {"path": "src/app.rs", "line": 345, "fact": "Apply/Undo prompt only in non-JSON mode."},
+      {"path": "src/app.rs", "line": 8479, "fact": "Apply rechecks snapshot/evidence/governance state and handles metadata failure after filesystem execution."},
+      {"path": "src/change.rs", "line": 701, "fact": "Anchored preflight and durable journal publication precede operation execution and staged compensation."},
+      {"path": "src/app.rs", "line": 8601, "fact": "Undo requires an applied, not-yet-reversed Receipt and finalizes a linked reverse Receipt."},
+      {"path": "src/change.rs", "line": 1954, "fact": "Compensation runs in reverse order and checks fingerprints before stashing created content."}
+    ],
+    "first_draft_check": "fail: schema/enum for abbreviated endpoint sides; subsequent draft fails composition/desktop-readability",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 2, "voluntary": 1},
+    "screenshot": "captures/skillroster-base/fullpage.light.png"
+  },
+  "squad-base": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Six components show two external actors, the per-invocation Rust CLI and Store, session/wait files and shared SQLite. Calls and stdout returns are explicit; the CLI does not execute task bodies or act as an autonomous scheduler.",
+      "Assignment/message atomicity, read versus ack, assigned-agent/lease-owner checks, separate result notification and unenforced lease expiry match source. The diagram correctly avoids claiming manager-only authorization or strong authentication from compatibility session files.",
+      "The first captured/submitted JSON passes CLI checks. One voluntary revision corrects the receive-lock filename from <id>.lock to <id>.receive.lock and removes redundant database decoration. No tool commands fail.",
+      "The final layout and cards are readable with clear reciprocal actor arrows and a compact process boundary. The boundary title stays clear of the edges, with no clipping or route-mask occlusion observed. The legend qualifies both database-shaped nodes as local persisted state. No relative waypoint coordinates were used."
+    ],
+    "source_checks": [
+      {"path": "src/main.rs", "line": 973, "fact": "Task create/ack/complete enter through workspace/store and acting-session checks."},
+      {"path": "src/store.rs", "line": 453, "fact": "Create commits the queued task and assignment message in one transaction."},
+      {"path": "src/store.rs", "line": 624, "fact": "Ack and completion enforce assignment/ownership and task state; completion writes no result message or expiry check."},
+      {"path": "src/store.rs", "line": 340, "fact": "Receive marks unread messages read transactionally, independently of task acknowledgement."},
+      {"path": "src/main.rs", "line": 786, "fact": "The wait loop uses locks/<agent>.receive.lock, periodic session rechecks and polling/heartbeats."},
+      {"path": "src/session.rs", "line": 50, "fact": "A missing local session file remains accepted for compatibility."}
+    ],
+    "first_draft_check": "pass: independent CLI replay; first draft's lock filename was corrected by the participant afterward",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 1},
+    "screenshot": "captures/squad-base/fullpage.light.png"
+  },
+  "squad-candidate": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source, SVG label-mask/route coordinates and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "issues",
+    "findings": [
+      "Six components correctly model external manager/worker terminals invoking a local CLI whose task/message responsibilities share SQLite state. Arrows are qualified as calls with stdout results, rather than a direct terminal-to-terminal transport or autonomous scheduler.",
+      "Task creation atomically inserts queued work and an unread assignment message. Reading that message does not acknowledge the task. Ack checks the active assignee; completion checks the active lease owner but not expiry and does not automatically send a result message. The manager reads task list or receives a separate worker send.",
+      "Role labels are correctly treated as guidance rather than manager-only access control. The draft also accurately records missing-session-file compatibility, explicit requeue clearing assignment when --to is absent, and the absence of an automatic expiry/requeue scheduler in this path.",
+      "The final database boundary title obscures two incoming route legs. Its mask spans x=460..702.2, y=535..551, crossing the vertical CLI and task routes at x=615 and x=496 immediately before their y=555 database ports. The third incoming route at x=734 remains clear. This is visible in the screenshot and prevents an unqualified readability pass despite successful automated checks.",
+      "First captured/submitted JSON passes. One revision widens/repositions nodes in response to nonblocking crossing/detour advice; another tightens labels/cards. Two failed commands refer to a guessed nonexistent example and an unmatched package glob. The final label-mask issue remains; it is not repaired retrospectively.",
+      "The final JSON has no relative coordinates and produces identical layout/SVG on both code versions. The readability failure is retained as a candidate-run quality issue, but the fixed-input replay does not identify a regression from this PR."
+    ],
+    "source_checks": [
+      {"path": "src/main.rs", "line": 973, "fact": "Task commands resolve workspace/store, check the acting session and call Store methods."},
+      {"path": "src/store.rs", "line": 453, "fact": "Creating a task requires active agents and atomically adds the task plus assignment message."},
+      {"path": "src/store.rs", "line": 624, "fact": "Ack checks queued status and assigned agent; completion checks acked status and lease owner without expiry or message insertion."},
+      {"path": "src/store.rs", "line": 681, "fact": "Explicit requeue clears lease/results and writes the optional assignee, including NULL when omitted."},
+      {"path": "src/store.rs", "line": 340, "fact": "Receive commits read flags in a transaction before CLI presentation; this is not task acknowledgement."},
+      {"path": "src/main.rs", "line": 786, "fact": "Wait uses a per-agent local lock, 500ms polling, session rechecks and 30-second heartbeats."},
+      {"path": "src/session.rs", "line": 50, "fact": "The local session validator explicitly accepts a missing session file for backward compatibility."}
+    ],
+    "first_draft_check": "pass: independent CLI replay; no first-draft visual acceptance claim",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "nonblocking_route_feedback": 1, "voluntary": 1},
+    "screenshot": "captures/squad-candidate/fullpage.light.png"
+  },
+  "mco-candidate": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Seven components separate entry/validation, scheduler, each invocation's worker, provider adapters, external CLI processes, result envelope and optional files. The direct process-to-worker return edge summarizes raw-log reads and adapter-polled exit status; the explanation correctly avoids claiming an in-memory stdout pipe.",
+      "Default parallel invocation, original-order results, independent failure records, provider permission mapping and optional artifact retention match the source. Chain/debate/synthesis and ACP are explicitly outside the drawn default path; no hosted service internals are invented.",
+      "This run has a genuine first-finalize failure: answer-artifacts was geometrically enclosed by the Python boundary despite not being a member. The native diagnostic is retained at session line 46. Moving that node outside fixes it; two later revisions simplify wording/cards and correct the filesystem legend. The original failed JSON also fails on base with the same layout/boundary-encloses-non-member diagnostic, so this does not identify a new validator regression.",
+      "One of the two failed commands is that finalize attempt; the other is an unmatched source-search glob. First/submitted/final versions are retained. The final artifact and cross-replays pass. Source references use local-only mode in the original artifact; this report supplies immutable web source links for remote review.",
+      "The screenshot is readable and keeps the filesystem outside the Python process. The legend explicitly calls it Local files. Primary paths and the result return are traceable without clipping or title-mask occlusion; secondary text remains small. No relative waypoint coordinates were authored."
+    ],
+    "source_checks": [
+      {"path": "runtime/cli.py", "line": 1522, "fact": "Review defaults read_only, with provider-specific permission mappings and overrides."},
+      {"path": "runtime/mcp_server.py", "line": 275, "fact": "MCP validates inputs and invokes the same workflow without requesting artifact persistence."},
+      {"path": "runtime/invocation_runtime.py", "line": 498, "fact": "The thread pool dispatches invocations and stores results by the original input index."},
+      {"path": "runtime/invocation_runtime.py", "line": 345, "fact": "Each worker reads raw log files, decodes output and polls through its adapter; failures retain individual status."},
+      {"path": "runtime/invocation_runtime.py", "line": 600, "fact": "Outputs remain individual records; aggregate status and optional persistence are computed afterward."},
+      {"path": "runtime/adapters/shim.py", "line": 101, "fact": "The shim launches the CLI subprocess with file-backed stdout/stderr capture."},
+      {"path": "runtime/invocation_artifacts.py", "line": 84, "fact": "Persistent results include result.md and run.json metadata."}
+    ],
+    "first_draft_check": "fail: layout/boundary-encloses-non-member on both versions; retained native failure, repaired in first post-check revision",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 1, "voluntary": 2},
+    "screenshot": "captures/mco-candidate/fullpage.light.png"
+  },
+  "mco-base": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light full-page screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Seven components show CLI/MCP entry, preparation, concurrent runtime, shim adapters, result collection, local artifacts and external provider processes. Internal responsibilities share one Python-process boundary and are not presented as independent services.",
+      "The default path preserves individual outputs in selection order and derives complete/partial/failed from invocation outcomes. Optional synthesis/chain/debate are explicitly outside the drawn path. The MCP ok envelope is correctly distinguished from all-provider success.",
+      "Scope checks, provider-specific permission mapping, run/poll/cancel, output decoding and deadlines match the implementation. Persisted CLI artifacts and temporary default MCP files are distinguished; the filesystem uses a generic Database symbol but its explanation explicitly says it is not a database server.",
+      "Earliest captured/submitted JSON passes. One voluntary revision adds the explicit adapter status return edge and removes a redundant explanatory card. One failed read/search command names missing package reference paths; it is retained and is not a rendering failure.",
+      "The overview, process boundary and reciprocal adapter/process arrows are readable. Secondary labels are small and the result/log routes have nearby elbows, but remain separately traceable; no clipping or boundary-title occlusion was observed. No relative waypoint coordinates were authored."
+    ],
+    "source_checks": [
+      {"path": "runtime/cli.py", "line": 2307, "fact": "The CLI validates scope and provider policy before dispatching the invocation workflow."},
+      {"path": "runtime/mcp_server.py", "line": 275, "fact": "MCP review uses the same workflow, defaults read_only and returns the payload inside an ok envelope; persistent artifacts are not enabled here."},
+      {"path": "runtime/invocation_runtime.py", "line": 737, "fact": "Without chain/debate/synthesis the workflow calls run_invocations directly."},
+      {"path": "runtime/invocation_runtime.py", "line": 498, "fact": "Thread-pool jobs execute independently; results are stored at their original invocation index."},
+      {"path": "runtime/invocation_runtime.py", "line": 600, "fact": "Individual results determine complete/partial/failed; nonpersistent artifact paths are cleared and temporary files cleaned."},
+      {"path": "runtime/adapters/shim.py", "line": 101, "fact": "The shim launches the provider in repo_root and captures raw stdout/stderr in files."}
+    ],
+    "first_draft_check": "pass: independent replay of earliest complete capture",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 1},
+    "screenshot": "captures/mco-base/fullpage.light.png"
+  },
+  "hive-base": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source, SVG masks/routes and saved 1440x900 light viewport/full-page screenshots; author-side review, not human maintainer acceptance.",
+    "semantics": "incorrect",
+    "readability": "issues",
+    "findings": [
+      "The final browser explanation and HTTP goal / activity reads edge overstate an exported HTTP helper as the actual workbench goal entry. web/src/api.ts defines sendWorkspaceUserInput and the server endpoint exists, but a repository search finds no browser call site. Actual terminal input is wired through useTerminalRun/onData. Activity reads are real; the added goal-submission claim is unsupported for this pinned UI path.",
+      "The rest of the core dispatch/report explanation is source-backed: independent CLI processes, token/role checks, stopped-worker queuing, owned submitted dispatch plus exact seen sequence, non-waking progress and separate durable report forwarding. Arbitrary terminal output is not treated as completion.",
+      "The top dashed return paths are visually obscured by the long process-boundary titles. The runtime label mask spans x=399..657.4, y=50..66 and overlays the terminal-facing vertical legs at x=538 and x=552, y=46..70; the CLI boundary label similarly overlays the orchestrator leg. This makes the two top paths harder to distinguish. Node text is also small, though not clipped.",
+      "The earliest captured/submitted JSON and final automated delivery pass. Two post-check revisions remove redundant boundary/tag decoration and qualify status/idle behavior; neither fixes the unsupported browser entry or title-mask occlusion. No tool command fails. This run is delivered but is not an accepted-quality result.",
+      "The same frozen final JSON produces identical layouts and SVG on both versions. These are authoring/existing-presentation findings, not a regression introduced by the relative-via change. No relative waypoint coordinates were used."
+    ],
+    "source_checks": [
+      {"path": "web/src/api.ts", "line": 315, "fact": "sendWorkspaceUserInput is an exported helper with no browser caller in the pinned tree; existence alone does not establish an active UI path."},
+      {"path": "web/src/terminal/useTerminalRun.ts", "line": 640, "fact": "Actual xterm input subscribes to onData and calls the terminal client's sendInput."},
+      {"path": "web/src/action-center/ActionCenterStrip.tsx", "line": 123, "fact": "Action Center actually polls getActionCenterSummary, supporting the activity-read part of the edge."},
+      {"path": "src/server/routes-team.ts", "line": 127, "fact": "Authenticated team send reaches dispatch logic with the stopped-worker policy."},
+      {"path": "src/server/dispatch-ledger-store.ts", "line": 294, "fact": "Submitted ownership and exact seen sequence gate report closure."},
+      {"path": "src/server/team-operations.ts", "line": 978, "fact": "Report persistence and later forwarding are separate responsibilities."}
+    ],
+    "first_draft_check": "pass: independent CLI replay; first draft not separately visually accepted",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 2},
+    "screenshot": "captures/hive-base/viewport.light.png"
+  },
+  "hive-candidate": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light viewport/full-page screenshots; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Six components distinguish browser, terminal runtime, two separate CLI processes, team protocol and local SQLite stores. The Node.js grouping is explicitly an overview of in-process helpers; the database symbol is qualified as local persistence, not another server.",
+      "Browser input reaches a run through WebSocket/PTY; the orchestrator chooses to invoke authenticated team send. The diagram does not invent a direct browser-to-worker task scheduler or use the unreferenced HTTP user-input helper as the normal entry.",
+      "PTY output, non-waking progress messages, status wake-up and final report are correctly distinguished. A report closes only a submitted, worker-owned dispatch with the required seen sequence; report commit and later outbox delivery remain separate. Stopped-worker queue behavior and CLI reasoning uncertainty are explicit.",
+      "Earliest captured/submitted JSON passes. One revision reflows nodes after nonblocking route-review feedback; another removes redundant process boundary boxes while preserving the process distinction in labels. Neither follows a failing validator. Four command failures concern missing source paths or searches with no matches, not render failures.",
+      "The final overview and cards are readable with clear directed paths, no clipping or opaque-node intersection. Secondary text is small and the long vertical gap below the runtime leaves noticeable whitespace. No relative waypoint coordinates were authored."
+    ],
+    "source_checks": [
+      {"path": "web/src/terminal/useTerminalRun.ts", "line": 593, "fact": "Terminal client renders output and sends xterm onData input to the selected run."},
+      {"path": "src/server/agent-manager.ts", "line": 125, "fact": "Runtime spawns each configured CLI under a PTY and writes its input."},
+      {"path": "src/server/routes-team.ts", "line": 127, "fact": "Send authenticates the agent/role and queues user-managed stopped workers; acceptance does not prove execution."},
+      {"path": "src/server/dispatch-message-store.ts", "line": 175, "fact": "Progress is stored but receives no dispatch-message outbox entry."},
+      {"path": "src/server/dispatch-ledger-store.ts", "line": 294, "fact": "Reporting requires submitted ownership and an exact required seen sequence."},
+      {"path": "src/server/team-operations.ts", "line": 978, "fact": "Report message, ledger closure and report outbox enqueue occur in one mutation; delivery is handled separately."}
+    ],
+    "first_draft_check": "pass: independent replay of earliest complete capture",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "nonblocking_route_feedback": 1, "voluntary": 1},
+    "screenshot": "captures/hive-candidate/viewport.light.png"
+  },
+  "openpi-base": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Seven components distinguish parent, tools, live manager, backend, child, completion inbox and parent-session transcript. The child is explicitly an independent in-process session, not an OS process or sandbox.",
+      "Status/wait results and deferred follow-up are separate directed paths. Manager settlement owns live status; the result inbox has claim/ack/retry and explicit wait consumption.",
+      "The parent transcript's generic Database icon is a presentation caveat: the accompanying explanation explicitly avoids asserting a physical database or SDK persistence implementation.",
+      "The earliest complete captured JSON cites line 103 in a 90-line source file and fails independent provenance validation. The agent corrects it before the first CLI submission; first submitted JSON passes. Do not conflate those metrics.",
+      "One post-check voluntary revision simplifies boundary framing. Reciprocal arrows and labels remain distinct and no clipping, opaque-node intersection or ambiguous shared route was observed; secondary text is small."
+    ],
+    "source_checks": [
+      {"path": "extensions/subagents/src/manager.ts", "line": 351, "fact": "Settlement updates outcome/live state, notifies waiters and invokes onSettled."},
+      {"path": "extensions/subagents/src/result-delivery.ts", "line": 35, "fact": "Owner-scoped result inbox claims, acknowledges and retries delivery; wait can consume pending results."},
+      {"path": "extensions/subagents/index.ts", "line": 797, "fact": "Settlement hook appends parent evidence and defers only unconsumed model results."},
+      {"path": "extensions/subagents/index.ts", "line": 441, "fact": "Result display entry and followUp/triggerTurn message are separate outputs."},
+      {"path": "extensions/subagents/src/backends/pi.ts", "line": 216, "fact": "Child AgentSession creation is owned by the Pi backend."}
+    ],
+    "first_draft_check": "fail: repository-evidence/line-out-of-range, corrected before first submitted candidate",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 1},
+    "screenshot": "captures/openpi-base/viewport.light.png"
+  },
+  "openpi-candidate": {
+    "review_origin": "Maintenance Codex inspection of final JSON, pinned project source and saved 1440x900 light screenshot; author-side review, not human maintainer acceptance.",
+    "semantics": "correct",
+    "readability": "readable",
+    "findings": [
+      "Six components group the Pi backend and child but separately identify completion inbox and output projection/dispatch. The diagram explicitly limits itself to model-spawned delegation and distinguishes in-process sessions from an OS sandbox.",
+      "Explicit wait consumption, live snapshot status, exact terminal evidence and deferred follow-up are source-backed. The message-bus symbol is qualified as an in-process coordinator, not a durable external broker.",
+      "First captured/submitted JSON passes validation. One voluntary post-check revision removes a redundant relationship while preserving the caller-facing return and described query/wait behavior.",
+      "The final screenshot has clear directions, readable primary nodes and separate return/control paths; no clipping or node intersection observed. Secondary edge labels remain small. No relative waypoint coordinates were used."
+    ],
+    "source_checks": [
+      {"path": "extensions/subagents/src/manager.ts", "line": 351, "fact": "Live outcome folding and consumed-wait notification precede the settlement hook."},
+      {"path": "extensions/subagents/src/manager.ts", "line": 547, "fact": "Reserve admission and invoke the selected backend under a per-child scope."},
+      {"path": "extensions/subagents/src/backends/pi.ts", "line": 216, "fact": "Create the independent Pi AgentSession and wire inherited model/policy."},
+      {"path": "extensions/subagents/src/result-delivery.ts", "line": 35, "fact": "Inbox claim/ack/retry and explicit consumption avoid duplicate delivery."},
+      {"path": "extensions/subagents/index.ts", "line": 441, "fact": "Append display result and send followUp with triggerTurn separately."}
+    ],
+    "first_draft_check": "pass: independent replay of earliest complete capture",
+    "repair_rounds_by_reason": {"validation_driven_after_first_check": 0, "voluntary": 1},
+    "screenshot": "captures/openpi-candidate/viewport.light.png"
+  }
+}

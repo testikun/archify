@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/hive-base/workspace/output/hive-task-path.json",
+    "sha256": "f166013ab856877b0a757ea7aeee8cd96c657e1901afe41c05d3188f3167cad3",
+    "bytes": 12248
+  },
+  "artifact": {
+    "path": "/benchmark/runs/hive-base/workspace/output/hive-task-path.html",
+    "sha256": "15f42339db02c6c9f180a311b93c9fb842775620e133f36ada3ed854a9807ff4",
+    "bytes": 887633
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/hive-base/workspace/output/review-final/hive-task-path.finalize.json",
+    "summaryReceipt": "/benchmark/runs/hive-base/workspace/output/review-final/hive-task-path.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/hive-base/workspace/output/review-final/hive-task-path.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2903,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 3,
+      "routesOverSuggestedBends": 3
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "dispatch-http",
+            "from": "orchestrator",
+            "to": "control-plane",
+            "label": "team send · HTTP",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            765.0999999999999,
+            285
+          ]
+        },
+        {
+          "left": {
+            "id": "dispatch-http",
+            "from": "orchestrator",
+            "to": "control-plane",
+            "label": "team send · HTTP",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            694,
+            285
+          ]
+        },
+        {
+          "left": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            693.9999999999999,
+            149.04999999999998
+          ],
+          "sharedNode": "terminal-runtime"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "browser-http",
+            "from": "workbench",
+            "to": "control-plane",
+            "label": "HTTP goal / activity reads",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 4,
+          "stretch": 1.056
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "orchestrator → control-plane crosses terminal-runtime → worker: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "orchestrator → control-plane crosses worker → terminal-runtime: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "terminal-runtime → worker and worker → terminal-runtime cross next to terminal-runtime: move node worker or worker so the two reach terminal-runtime from different sides (for example one level with it, one directly above or below it).",
+      "workbench → control-plane needs 3 bends: move node workbench or control-plane so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "terminal-runtime → worker needs 3 bends: move node terminal-runtime or worker so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "worker → terminal-runtime needs 4 bends: move node worker or terminal-runtime so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

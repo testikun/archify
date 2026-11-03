@@ -1,0 +1,121 @@
+{
+  "run_id": "hive-candidate",
+  "project_id": "hive",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 616.6355882079806,
+  "usage": {
+    "input_tokens": 2683392,
+    "cached_input_tokens": 2587648,
+    "output_tokens": 14375,
+    "reasoning_output_tokens": 4167,
+    "uncached_input_tokens": 95744
+  },
+  "time_to_first_json_seconds_descriptive_only": 421.920618,
+  "time_to_first_cli_seconds_descriptive_only": 421.967767,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 31,
+  "failed_tool_commands": 4,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 6,
+  "repair_rounds": 2,
+  "attempts": [
+    {
+      "at": "2026-11-03T02:00:58.602Z",
+      "pid": 41281,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/hive-task-roundtrip.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+      "sha256": "2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3",
+      "snapshot": "snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json"
+    },
+    {
+      "at": "2026-11-03T02:01:36.260Z",
+      "pid": 41537,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/hive-task-roundtrip.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+      "sha256": "1837e65a4217f8cedd84e237251a98616302a7b06fd1989dae53d27abb005acb",
+      "snapshot": "snapshots/1837e65a4217f8cedd84e237251a98616302a7b06fd1989dae53d27abb005acb.json"
+    },
+    {
+      "at": "2026-11-03T02:03:03.229Z",
+      "pid": 42559,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/hive-task-roundtrip.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-3",
+        "--json"
+      ],
+      "source": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+      "sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+      "snapshot": "snapshots/b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6.json"
+    }
+  ],
+  "first_json": "snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json",
+  "first_submitted_json": "snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+  "final_json_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+  "html": [
+    "/benchmark/runs/hive-candidate/workspace/output/hive-task-roundtrip.html"
+  ],
+  "delivery_receipts": [
+    "/benchmark/runs/hive-candidate/workspace/output/hive-task-roundtrip.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/benchmark/runs/hive-candidate/workspace/output/hive-task-roundtrip.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relative_coordinates_in_final": 0,
+  "source_status": "",
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/benchmark/runs/hive-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

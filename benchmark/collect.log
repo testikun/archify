@@ -1,0 +1,774 @@
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 3,
+    "tool_commands": 30,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2257373,
+      "cached_input_tokens": 2190592,
+      "output_tokens": 11312,
+      "reasoning_output_tokens": 3548,
+      "uncached_input_tokens": 66781
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 3,
+    "tool_commands": 30,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2257373,
+      "cached_input_tokens": 2190592,
+      "output_tokens": 11312,
+      "reasoning_output_tokens": 3548,
+      "uncached_input_tokens": 66781
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 21,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1358127,
+      "cached_input_tokens": 1301632,
+      "output_tokens": 7688,
+      "reasoning_output_tokens": 2020,
+      "uncached_input_tokens": 56495
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 3,
+    "tool_commands": 30,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2257373,
+      "cached_input_tokens": 2190592,
+      "output_tokens": 11312,
+      "reasoning_output_tokens": 3548,
+      "uncached_input_tokens": 66781
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 21,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1358127,
+      "cached_input_tokens": 1301632,
+      "output_tokens": 7688,
+      "reasoning_output_tokens": 2020,
+      "uncached_input_tokens": 56495
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-base",
+    "repair_rounds": 1,
+    "tool_commands": 19,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1245497,
+      "cached_input_tokens": 1178752,
+      "output_tokens": 6142,
+      "reasoning_output_tokens": 1245,
+      "uncached_input_tokens": 66745
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 3,
+    "tool_commands": 30,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2257373,
+      "cached_input_tokens": 2190592,
+      "output_tokens": 11312,
+      "reasoning_output_tokens": 3548,
+      "uncached_input_tokens": 66781
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 21,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1358127,
+      "cached_input_tokens": 1301632,
+      "output_tokens": 7688,
+      "reasoning_output_tokens": 2020,
+      "uncached_input_tokens": 56495
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-base",
+    "repair_rounds": 1,
+    "tool_commands": 19,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1245497,
+      "cached_input_tokens": 1178752,
+      "output_tokens": 6142,
+      "reasoning_output_tokens": 1245,
+      "uncached_input_tokens": 66745
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "skillroster-base",
+    "repair_rounds": 3,
+    "tool_commands": 29,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2265071,
+      "cached_input_tokens": 2192384,
+      "output_tokens": 10435,
+      "reasoning_output_tokens": 2758,
+      "uncached_input_tokens": 72687
+    },
+    "relative_coordinates_in_final": 0
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1994448,
+      "cached_input_tokens": 1905792,
+      "output_tokens": 11599,
+      "reasoning_output_tokens": 3666,
+      "uncached_input_tokens": 88656
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 23,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1563401,
+      "cached_input_tokens": 1504640,
+      "output_tokens": 7450,
+      "reasoning_output_tokens": 1493,
+      "uncached_input_tokens": 58761
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 31,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2683392,
+      "cached_input_tokens": 2587648,
+      "output_tokens": 14375,
+      "reasoning_output_tokens": 4167,
+      "uncached_input_tokens": 95744
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 32,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2842694,
+      "cached_input_tokens": 2640512,
+      "output_tokens": 14049,
+      "reasoning_output_tokens": 5016,
+      "uncached_input_tokens": 202182
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1797759,
+      "cached_input_tokens": 1733248,
+      "output_tokens": 8240,
+      "reasoning_output_tokens": 1555,
+      "uncached_input_tokens": 64511
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 3,
+    "tool_commands": 30,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2257373,
+      "cached_input_tokens": 2190592,
+      "output_tokens": 11312,
+      "reasoning_output_tokens": 3548,
+      "uncached_input_tokens": 66781
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 21,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1358127,
+      "cached_input_tokens": 1301632,
+      "output_tokens": 7688,
+      "reasoning_output_tokens": 2020,
+      "uncached_input_tokens": 56495
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "squad-base",
+    "repair_rounds": 1,
+    "tool_commands": 19,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1245497,
+      "cached_input_tokens": 1178752,
+      "output_tokens": 6142,
+      "reasoning_output_tokens": 1245,
+      "uncached_input_tokens": 66745
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "skillroster-base",
+    "repair_rounds": 3,
+    "tool_commands": 29,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2265071,
+      "cached_input_tokens": 2192384,
+      "output_tokens": 10435,
+      "reasoning_output_tokens": 2758,
+      "uncached_input_tokens": 72687
+    },
+    "relative_coordinates_in_final": 0
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1956901,
+      "cached_input_tokens": 1868800,
+      "output_tokens": 8405,
+      "reasoning_output_tokens": 2280,
+      "uncached_input_tokens": 88101
+    },
+    "relative_coordinates_in_final": 0
+  }
+]

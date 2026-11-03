@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "261137d7-ab13-410d-85db-2500c59a9498",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+  "output": "/benchmark/replay/hive-candidate/base.html",
+  "specification": {
+    "sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "bytes": 10206
+  },
+  "artifact": {
+    "sha256": "69ce20f62035e468cfda4e206404490722d9c4f7163c07fc6792d94de5a1cae1",
+    "bytes": 883641
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/tt-a1i/hive",
+    "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+    "references": 16
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

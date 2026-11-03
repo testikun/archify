@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/squad-candidate/workspace/output/candidate.json",
+    "sha256": "8a4a7e0e719a076b230c8bc73281aa97b71911c194060070aa44baa2fae43e1e",
+    "bytes": 8865
+  },
+  "artifact": {
+    "path": "/benchmark/runs/squad-candidate/workspace/output/squad-coordination.html",
+    "sha256": "c84a1d416435dce07ec2bc5cd7a6b03111717e158016aa71a3b6572e3889e47e",
+    "bytes": 876309
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/squad-candidate/workspace/output/review-2/squad-coordination.finalize.json",
+    "summaryReceipt": "/benchmark/runs/squad-candidate/workspace/output/review-2/squad-coordination.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/squad-candidate/workspace/output/review-2/squad-coordination.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2448,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

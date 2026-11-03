@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/hive-candidate/workspace/output/candidate.json",
+    "sha256": "1837e65a4217f8cedd84e237251a98616302a7b06fd1989dae53d27abb005acb",
+    "bytes": 10390
+  },
+  "artifact": {
+    "path": "/benchmark/runs/hive-candidate/workspace/output/hive-task-roundtrip.html",
+    "sha256": "92c0394b925032285177e443535933da2496ecb57701d565fcca1f13d0d344ae",
+    "bytes": 885052
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/hive-candidate/workspace/output/review-2/hive-task-roundtrip.finalize.json",
+    "summaryReceipt": "/benchmark/runs/hive-candidate/workspace/output/review-2/hive-task-roundtrip.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/hive-candidate/workspace/output/review-2/hive-task-roundtrip.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3099,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team-protocol",
+            "label": "team send · HTTP",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1.152
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "orchestrator → team-protocol needs 3 bends: move node orchestrator or team-protocol so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "worker → terminal-runtime needs 3 bends: move node worker or terminal-runtime so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

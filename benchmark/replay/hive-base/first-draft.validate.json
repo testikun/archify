@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/benchmark/runs/hive-base/evidence/snapshots/526bdd1caa6f0ef2ee7494f2d67d30daf0cab21c4299f1e6173672bf3e5c3309.json",
+  "candidate": {
+    "path": "/benchmark/runs/hive-base/evidence/snapshots/526bdd1caa6f0ef2ee7494f2d67d30daf0cab21c4299f1e6173672bf3e5c3309.json",
+    "sha256": "526bdd1caa6f0ef2ee7494f2d67d30daf0cab21c4299f1e6173672bf3e5c3309",
+    "bytes": 12385
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/benchmark/runs/hive-base/evidence/snapshots/526bdd1caa6f0ef2ee7494f2d67d30daf0cab21c4299f1e6173672bf3e5c3309.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/benchmark/runs/hive-base/workspace/project",
+      "--candidate-sha256",
+      "526bdd1caa6f0ef2ee7494f2d67d30daf0cab21c4299f1e6173672bf3e5c3309",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 3,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 5,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.5,
+      "maxBends": 4,
+      "routesOverSuggestedBends": 3,
+      "maxStretch": 1.175,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 24,
+      "minInteriorSegmentPx": 64,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [
+        {
+          "left": {
+            "id": "dispatch-http",
+            "from": "orchestrator",
+            "to": "control-plane",
+            "label": "team send · HTTP",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            765.0999999999999,
+            285
+          ]
+        },
+        {
+          "left": {
+            "id": "dispatch-http",
+            "from": "orchestrator",
+            "to": "control-plane",
+            "label": "team send · HTTP",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            1075,
+            198
+          ]
+        },
+        {
+          "left": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "point": [
+            694,
+            149.05
+          ],
+          "sharedNode": "terminal-runtime"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "browser-http",
+            "from": "workbench",
+            "to": "control-plane",
+            "label": "HTTP goal / activity reads",
+            "collectionIndex": 2,
+            "artifactIndex": 3
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-input",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task prompt",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 4,
+          "stretch": 1.056
+        }
+      ]
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 17,
+      "emptyTopRatio": 0.028,
+      "occupiedTop": 17,
+      "viewBoxTop": 0,
+      "canvasHeight": 598,
+      "typicalNodeHeight": 110,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "recognized-declared-wide",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 1212.1875,
+      "actualBudgetPx": 1212.1875,
+      "actualReaderWidth": 1242.1875,
+      "desiredReaderWidth": 1242.1875,
+      "viewportCap": 1376,
+      "limit": "source-size",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "terminal-input",
+        "from": "workbench",
+        "to": "terminal-runtime"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.5,
+      "semanticTextCount": 26
+    },
+    "issues": []
+  }
+}

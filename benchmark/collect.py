@@ -52,6 +52,14 @@ for run in plan['runs'] + plan['supplement']['runs']:
         final = next((c for c in candidates if c['sha256'] == last_hash), None)
     html = [str(p) for p in Path(run['output']).rglob('*.html')
             if re.search(r'<svg\b[^>]*aria-labelledby="archify-diagram-title', p.read_text())]
+    receipt_integrity = []
+    for file, receipt in receipts:
+        output = Path(receipt.get('output', ''))
+        receipt_integrity.append({
+            'path': str(file), 'status': receipt.get('status'),
+            'matches_final_json': bool(final and receipt.get('specification', {}).get('sha256') == final['sha256']),
+            'matches_artifact': output.is_file() and hashlib.sha256(output.read_bytes()).hexdigest() == receipt.get('artifact', {}).get('sha256'),
+        })
     source_status = None
     project = Path(run['workspace']) / 'project'
     if (project / '.git').exists():
@@ -65,6 +73,10 @@ for run in plan['runs'] + plan['supplement']['runs']:
         'run_id': run['run_id'], 'project_id': run['project_id'], 'arm': run['arm'],
         'execution_exit_code': metadata.get('exit_code'), 'timeout': metadata.get('timeout', False),
         'wall_seconds_descriptive_only': metadata['wall_seconds'], 'usage': usage,
+        'time_to_first_json_seconds_descriptive_only': (datetime.datetime.fromisoformat(first['at'].replace('Z', '+00:00')) - datetime.datetime.fromisoformat(metadata['started_at'])).total_seconds() if first else None,
+        'time_to_first_cli_seconds_descriptive_only': (datetime.datetime.fromisoformat(attempts[0]['at'].replace('Z', '+00:00')) - datetime.datetime.fromisoformat(metadata['started_at'])).total_seconds() if attempts else None,
+        'cli_execution_seconds': None, 'queue_seconds': None,
+        'unavailable_timing_reason': 'Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.',
         'cost': None, 'cost_reason': 'Cost accounting deferred by user.',
         'tool_commands': len(commands), 'failed_tool_commands': sum(c.get('exit_code') not in (None, 0) for c in commands),
         'provider_error_events': sum(event.get('type') == 'error' for event in events),
@@ -75,6 +87,8 @@ for run in plan['runs'] + plan['supplement']['runs']:
         'precheck_revisions_observed': max(0, len(precheck_hashes)-1) if first else None,
         'final_json': final['path'] if final else None, 'final_json_sha256': final['sha256'] if final else None,
         'html': html, 'delivery_receipts': [str(p) for p, _ in receipts],
+        'delivery_receipt_integrity': receipt_integrity,
+        'delivery_verified': any(r['status'] == 'current' and r['matches_final_json'] and r['matches_artifact'] for r in receipt_integrity),
         'relative_coordinates_in_final': sum(isinstance(v, dict) for c in final['data'].get('connections', []) for point in c.get('via', []) for v in point) if final else None,
         'source_status': source_status, 'changed_package_files': changed_package, 'added_package_files': added_package,
         'semantics': 'unverified', 'readability': 'unreviewed',

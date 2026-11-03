@@ -1,0 +1,90 @@
+{
+  "checked_at": "2026-11-03T02:08:32.274267+00:00",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "official_protocol_unchanged_in_candidate": true,
+  "checks": [
+    {
+      "project": "openpi",
+      "official_project_entry_exact": true,
+      "runs": [
+        {
+          "run_id": "openpi-base",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        },
+        {
+          "run_id": "openpi-candidate",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        }
+      ]
+    },
+    {
+      "project": "hive",
+      "official_project_entry_exact": true,
+      "runs": [
+        {
+          "run_id": "hive-candidate",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        },
+        {
+          "run_id": "hive-base",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        }
+      ]
+    },
+    {
+      "project": "mco",
+      "official_project_entry_exact": true,
+      "runs": [
+        {
+          "run_id": "mco-base",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        },
+        {
+          "run_id": "mco-candidate",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        }
+      ]
+    },
+    {
+      "project": "squad",
+      "official_project_entry_exact": true,
+      "runs": [
+        {
+          "run_id": "squad-candidate",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        },
+        {
+          "run_id": "squad-base",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        }
+      ]
+    },
+    {
+      "project": "skillroster",
+      "official_project_entry_exact": true,
+      "runs": [
+        {
+          "run_id": "skillroster-base",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        },
+        {
+          "run_id": "skillroster-candidate",
+          "task_and_architecture_variant_exact": true,
+          "prompt_sha256_valid": true
+        }
+      ]
+    }
+  ],
+  "matrix": "5 pinned projects \u00d7 Architecture \u00d7 base/candidate = 10 fresh sessions",
+  "runner_origin": "Local orchestration/capture only; the repository explicitly provides protocol and task corpus rather than launching Agents.",
+  "scope_note": "Architecture-only API and authoring section; no shared router change. Formal maintainer scope acceptance remains distinct from this author-run comparison."
+}

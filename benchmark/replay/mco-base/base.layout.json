@@ -1,0 +1,465 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1134,
+    715
+  ],
+  "components": [
+    {
+      "id": "entry",
+      "type": "backend",
+      "label": "Review entry points",
+      "x": 40,
+      "y": 70,
+      "width": 230,
+      "height": 82,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "prepare",
+      "type": "security",
+      "label": "Validate & plan",
+      "x": 420,
+      "y": 70,
+      "width": 245,
+      "height": 82,
+      "pos": [
+        420,
+        70
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "Concurrent invocation runtime",
+      "x": 820,
+      "y": 70,
+      "width": 250,
+      "height": 82,
+      "pos": [
+        820,
+        70
+      ]
+    },
+    {
+      "id": "adapters",
+      "type": "backend",
+      "label": "Provider adapters · shim",
+      "x": 820,
+      "y": 320,
+      "width": 250,
+      "height": 82,
+      "pos": [
+        820,
+        320
+      ]
+    },
+    {
+      "id": "results",
+      "type": "backend",
+      "label": "Collect individual results",
+      "x": 420,
+      "y": 320,
+      "width": 245,
+      "height": 82,
+      "pos": [
+        420,
+        320
+      ]
+    },
+    {
+      "id": "disk",
+      "type": "database",
+      "label": "Local run artifacts",
+      "x": 420,
+      "y": 565,
+      "width": 245,
+      "height": 82,
+      "pos": [
+        420,
+        565
+      ]
+    },
+    {
+      "id": "providers",
+      "type": "external",
+      "label": "Selected provider processes",
+      "x": 820,
+      "y": 565,
+      "width": 250,
+      "height": 82,
+      "pos": [
+        820,
+        565
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "MCO Python process · logical responsibilities, not separate services",
+      "x": 16,
+      "y": 46,
+      "width": 1078,
+      "height": 376,
+      "wraps": [
+        "entry",
+        "prepare",
+        "runtime",
+        "adapters",
+        "results"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "entry",
+      "to": "prepare",
+      "label": "review request",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          270,
+          102.95
+        ],
+        [
+          420,
+          102.95
+        ]
+      ],
+      "labelAt": [
+        345,
+        93
+      ]
+    },
+    {
+      "from": "prepare",
+      "to": "runtime",
+      "label": "invocations + policy",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          665,
+          102.95
+        ],
+        [
+          820,
+          102.95
+        ]
+      ],
+      "labelAt": [
+        743,
+        93
+      ]
+    },
+    {
+      "from": "runtime",
+      "to": "adapters",
+      "label": "run / poll / cancel",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          953.05,
+          152
+        ],
+        [
+          953.05,
+          320
+        ]
+      ],
+      "labelAt": [
+        1010,
+        239
+      ]
+    },
+    {
+      "from": "adapters",
+      "to": "runtime",
+      "label": "run ref + status",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          938,
+          320
+        ],
+        [
+          938,
+          152
+        ]
+      ],
+      "labelAt": [
+        889,
+        239
+      ]
+    },
+    {
+      "from": "adapters",
+      "to": "providers",
+      "label": "spawn + prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          953.05,
+          402
+        ],
+        [
+          953.05,
+          565
+        ]
+      ],
+      "labelAt": [
+        998,
+        487
+      ]
+    },
+    {
+      "from": "providers",
+      "to": "adapters",
+      "label": "stdout / stderr / exit",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          938,
+          565
+        ],
+        [
+          938,
+          402
+        ]
+      ],
+      "labelAt": [
+        874,
+        487
+      ]
+    },
+    {
+      "from": "runtime",
+      "to": "results",
+      "label": "decoded results",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          820,
+          118
+        ],
+        [
+          742.5,
+          118
+        ],
+        [
+          742.5,
+          361
+        ],
+        [
+          665,
+          361
+        ]
+      ],
+      "labelAt": [
+        743,
+        230
+      ]
+    },
+    {
+      "from": "results",
+      "to": "entry",
+      "label": "payload / JSON",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          420,
+          336
+        ],
+        [
+          254,
+          336
+        ],
+        [
+          254,
+          152
+        ]
+      ],
+      "labelAt": [
+        254,
+        234
+      ]
+    },
+    {
+      "from": "results",
+      "to": "disk",
+      "label": "save if enabled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          542.5,
+          402
+        ],
+        [
+          542.5,
+          565
+        ]
+      ],
+      "labelAt": [
+        496,
+        487
+      ]
+    },
+    {
+      "from": "adapters",
+      "to": "disk",
+      "label": "capture raw logs",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          820,
+          361
+        ],
+        [
+          742.5,
+          361
+        ],
+        [
+          742.5,
+          606
+        ],
+        [
+          665,
+          606
+        ]
+      ],
+      "labelAt": [
+        743,
+        474
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "review request",
+      "x": 306,
+      "y": 83,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        345,
+        93
+      ]
+    },
+    {
+      "text": "invocations + policy",
+      "x": 690,
+      "y": 83,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        743,
+        93
+      ]
+    },
+    {
+      "text": "run / poll / cancel",
+      "x": 959,
+      "y": 229,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        1010,
+        239
+      ]
+    },
+    {
+      "text": "run ref + status",
+      "x": 845,
+      "y": 229,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        889,
+        239
+      ]
+    },
+    {
+      "text": "spawn + prompt",
+      "x": 959,
+      "y": 477,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        998,
+        487
+      ]
+    },
+    {
+      "text": "stdout / stderr / exit",
+      "x": 816,
+      "y": 477,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        874,
+        487
+      ]
+    },
+    {
+      "text": "decoded results",
+      "x": 702,
+      "y": 220,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        743,
+        230
+      ]
+    },
+    {
+      "text": "payload / JSON",
+      "x": 215,
+      "y": 224,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        254,
+        234
+      ]
+    },
+    {
+      "text": "save if enabled",
+      "x": 455,
+      "y": 477,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        496,
+        487
+      ]
+    },
+    {
+      "text": "capture raw logs",
+      "x": 699,
+      "y": 464,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        743,
+        474
+      ]
+    }
+  ]
+}

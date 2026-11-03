@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "browser-check",
+  "evidenceKind": "automated-browser",
+  "status": "fail",
+  "visualReview": "not-requested",
+  "provenance": "current",
+  "deliveryReceiptId": "412187ab-5200-46dd-b49e-e88daf831791",
+  "artifact": {
+    "path": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+    "bytes": 888258
+  },
+  "state": {
+    "detail": "read",
+    "motion": "still"
+  },
+  "chrome": {
+    "status": "available",
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\n[66548:20506250:1103/114402.913828:ERROR:chrome/browser/process_singleton_posix.cc:1083] Failed to bind() /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/com.google.Chrome.vCCzSD/SingletonSocket: Operation not permitted (1)\n[66548:20506250:1103/114402.945647:ERROR:chrome/app/chrome_main_delegate.cc:624] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66548, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "containment": {
+    "status": "fail",
+    "policy": "fit-or-reader-declared-readable-vertical-scroll",
+    "viewports": []
+  },
+  "themeStates": {
+    "status": "fail",
+    "viewports": []
+  },
+  "readability": {
+    "status": "fail",
+    "minimumProjectedNodeTextPx": 6,
+    "viewports": []
+  },
+  "viewerChrome": {
+    "status": "fail",
+    "viewports": []
+  },
+  "captures": {
+    "status": "not-requested",
+    "screenshots": [],
+    "contactSheet": null
+  },
+  "sidecars": {
+    "receipt": "skillroster-architecture.browser-check.json",
+    "files": []
+  },
+  "error": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\n[66548:20506250:1103/114402.913828:ERROR:chrome/browser/process_singleton_posix.cc:1083] Failed to bind() /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/com.google.Chrome.vCCzSD/SingletonSocket: Operation not permitted (1)\n[66548:20506250:1103/114402.945647:ERROR:chrome/app/chrome_main_delegate.cc:624] Failed to create a ProcessSingleton for your profile directory. This means that running multiple instances would start multiple browser processes rather than opening a new window in the existing process. Aborting now to avoid profile corruption.\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66548, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=0, messages=0, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=1, writtenBytes=50, bufferedBytes=0."
+}

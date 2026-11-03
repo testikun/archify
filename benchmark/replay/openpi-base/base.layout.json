@@ -1,0 +1,530 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1324,
+    564
+  ],
+  "components": [
+    {
+      "id": "parent",
+      "type": "external",
+      "label": "Parent Pi session",
+      "x": 40,
+      "y": 120,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        40,
+        120
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Subagent tool API",
+      "x": 380,
+      "y": 120,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        380,
+        120
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "Subagent manager",
+      "x": 720,
+      "y": 120,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        720,
+        120
+      ]
+    },
+    {
+      "id": "backend",
+      "type": "backend",
+      "label": "Pi backend adapter",
+      "x": 1060,
+      "y": 120,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        1060,
+        120
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion inbox",
+      "x": 40,
+      "y": 390,
+      "width": 210,
+      "height": 86,
+      "pos": [
+        40,
+        390
+      ]
+    },
+    {
+      "id": "records",
+      "type": "database",
+      "label": "Parent Pi transcript",
+      "x": 720,
+      "y": 390,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        720,
+        390
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Independent Pi child",
+      "x": 1060,
+      "y": 390,
+      "width": 190,
+      "height": 86,
+      "pos": [
+        1060,
+        390
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "One OpenPI / Pi host process",
+      "x": 6,
+      "y": 86,
+      "width": 1278,
+      "height": 410,
+      "wraps": [
+        "parent",
+        "tools",
+        "manager",
+        "backend",
+        "delivery",
+        "records",
+        "child"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Child capability boundary",
+      "x": 1042,
+      "y": 366,
+      "width": 226,
+      "height": 130,
+      "wraps": [
+        "child"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "parent",
+      "to": "tools",
+      "label": "Tool call",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          230,
+          154.95
+        ],
+        [
+          380,
+          154.95
+        ]
+      ],
+      "labelAt": [
+        305,
+        145
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "parent",
+      "label": "ID / status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          380,
+          170
+        ],
+        [
+          230,
+          170
+        ]
+      ],
+      "labelAt": [
+        305,
+        190
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "manager",
+      "label": "Manage + query",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          570,
+          154.95
+        ],
+        [
+          720,
+          154.95
+        ]
+      ],
+      "labelAt": [
+        645,
+        145
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "tools",
+      "label": "Snapshot / results",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          720,
+          170
+        ],
+        [
+          570,
+          170
+        ]
+      ],
+      "labelAt": [
+        645,
+        190
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "backend",
+      "label": "backend.spawn",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          910,
+          171.05
+        ],
+        [
+          1060,
+          171.05
+        ]
+      ],
+      "labelAt": [
+        985,
+        191
+      ]
+    },
+    {
+      "from": "backend",
+      "to": "manager",
+      "label": "Normalized events",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1060,
+          156
+        ],
+        [
+          910,
+          156
+        ]
+      ],
+      "labelAt": [
+        985,
+        146
+      ]
+    },
+    {
+      "from": "backend",
+      "to": "child",
+      "label": "Create + prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1146.95,
+          206
+        ],
+        [
+          1146.95,
+          390
+        ]
+      ],
+      "labelAt": [
+        1100,
+        301
+      ]
+    },
+    {
+      "from": "child",
+      "to": "backend",
+      "label": "Pi lifecycle events",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1162,
+          390
+        ],
+        [
+          1162,
+          206
+        ]
+      ],
+      "labelAt": [
+        1219,
+        301
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "delivery",
+      "label": "Unconsumed terminal result",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          808,
+          206
+        ],
+        [
+          808,
+          230
+        ],
+        [
+          152,
+          230
+        ],
+        [
+          152,
+          390
+        ]
+      ],
+      "labelAt": [
+        480,
+        220
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "parent",
+      "label": "Follow-up + wake",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          138,
+          390
+        ],
+        [
+          138,
+          206
+        ]
+      ],
+      "labelAt": [
+        89,
+        301
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "records",
+      "label": "Finish entry via hook",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          822,
+          206
+        ],
+        [
+          822,
+          390
+        ]
+      ],
+      "labelAt": [
+        761,
+        301
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "records",
+      "label": "Result display entry",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          433
+        ],
+        [
+          720,
+          433
+        ]
+      ],
+      "labelAt": [
+        485,
+        423
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Tool call",
+      "x": 278,
+      "y": 135,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        305,
+        145
+      ]
+    },
+    {
+      "text": "ID / status / result",
+      "x": 252,
+      "y": 180,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        305,
+        190
+      ]
+    },
+    {
+      "text": "Manage + query",
+      "x": 606,
+      "y": 135,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        645,
+        145
+      ]
+    },
+    {
+      "text": "Snapshot / results",
+      "x": 597,
+      "y": 180,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        645,
+        190
+      ]
+    },
+    {
+      "text": "backend.spawn",
+      "x": 949,
+      "y": 181,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        985,
+        191
+      ]
+    },
+    {
+      "text": "Normalized events",
+      "x": 939,
+      "y": 136,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        985,
+        146
+      ]
+    },
+    {
+      "text": "Create + prompt",
+      "x": 1059,
+      "y": 291,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        1100,
+        301
+      ]
+    },
+    {
+      "text": "Pi lifecycle events",
+      "x": 1168,
+      "y": 291,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        1219,
+        301
+      ]
+    },
+    {
+      "text": "Unconsumed terminal result",
+      "x": 413,
+      "y": 210,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        480,
+        220
+      ]
+    },
+    {
+      "text": "Follow-up + wake",
+      "x": 45,
+      "y": 291,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        89,
+        301
+      ]
+    },
+    {
+      "text": "Finish entry via hook",
+      "x": 705,
+      "y": 291,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        761,
+        301
+      ]
+    },
+    {
+      "text": "Result display entry",
+      "x": 432,
+      "y": 413,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        485,
+        423
+      ]
+    }
+  ]
+}

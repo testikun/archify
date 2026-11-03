@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/skillroster-candidate/workspace/output/candidate.json",
+    "sha256": "882c285119610fcaf9f3163b2feb3f4583768ed135ab2a3dfc15b485858be553",
+    "bytes": 9904
+  },
+  "artifact": {
+    "path": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "sha256": "71f698329a9405a4f2ca55a42759241cf7fd47738bd2c6306d0845d6a13bb47c",
+    "bytes": 879436
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3406,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "preparation-read",
+            "from": "planning",
+            "to": "skills",
+            "label": "validate current paths",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "planning → skills needs 3 bends: move node planning or skills so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

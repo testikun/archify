@@ -1,0 +1,529 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1230,
+    904
+  ],
+  "components": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Agent / human",
+      "x": 40,
+      "y": 40,
+      "width": 170,
+      "height": 76,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "CLI orchestration",
+      "x": 340,
+      "y": 40,
+      "width": 200,
+      "height": 76,
+      "pos": [
+        340,
+        40
+      ]
+    },
+    {
+      "id": "scan",
+      "type": "backend",
+      "label": "Discovery & inspection",
+      "x": 680,
+      "y": 40,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        680,
+        40
+      ]
+    },
+    {
+      "id": "observed",
+      "type": "database",
+      "label": "Installed Skills & logs",
+      "x": 990,
+      "y": 40,
+      "width": 200,
+      "height": 76,
+      "pos": [
+        990,
+        40
+      ]
+    },
+    {
+      "id": "planner",
+      "type": "backend",
+      "label": "Plan preparation",
+      "x": 340,
+      "y": 280,
+      "width": 200,
+      "height": 86,
+      "pos": [
+        340,
+        280
+      ]
+    },
+    {
+      "id": "state",
+      "type": "database",
+      "label": "SQLite · StateStore",
+      "x": 680,
+      "y": 280,
+      "width": 210,
+      "height": 86,
+      "pos": [
+        680,
+        280
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "security",
+      "label": "Apply / Undo controller",
+      "x": 340,
+      "y": 540,
+      "width": 200,
+      "height": 94,
+      "pos": [
+        340,
+        540
+      ]
+    },
+    {
+      "id": "executor",
+      "type": "backend",
+      "label": "Journaled change runtime",
+      "x": 680,
+      "y": 540,
+      "width": 210,
+      "height": 94,
+      "pos": [
+        680,
+        540
+      ]
+    },
+    {
+      "id": "targets",
+      "type": "database",
+      "label": "Approved filesystem",
+      "x": 990,
+      "y": 540,
+      "width": 200,
+      "height": 94,
+      "pos": [
+        990,
+        540
+      ]
+    },
+    {
+      "id": "journal",
+      "type": "database",
+      "label": "Receipt journals",
+      "x": 680,
+      "y": 760,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        680,
+        760
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "MUTATION AUTHORITY · explicit Apply or Undo",
+      "x": 316,
+      "y": 516,
+      "width": 598,
+      "height": 138,
+      "wraps": [
+        "gate",
+        "executor"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "caller",
+      "to": "cli",
+      "label": "commands / JSON",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          210,
+          71
+        ],
+        [
+          340,
+          71
+        ]
+      ],
+      "labelAt": [
+        275,
+        61
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "scan",
+      "label": "scan",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          540,
+          78
+        ],
+        [
+          680,
+          78
+        ]
+      ],
+      "labelAt": [
+        610,
+        68
+      ]
+    },
+    {
+      "from": "scan",
+      "to": "observed",
+      "label": "read only",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          890,
+          78
+        ],
+        [
+          990,
+          78
+        ]
+      ],
+      "labelAt": [
+        940,
+        68
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "planner",
+      "label": "plan · stdin JSON",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          116
+        ],
+        [
+          440,
+          280
+        ]
+      ],
+      "labelAt": [
+        388,
+        201
+      ]
+    },
+    {
+      "from": "scan",
+      "to": "state",
+      "label": "persist Snapshot",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          785,
+          116
+        ],
+        [
+          785,
+          280
+        ]
+      ],
+      "labelAt": [
+        736,
+        201
+      ]
+    },
+    {
+      "from": "planner",
+      "to": "state",
+      "label": "Snapshot → saved Plan",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          540,
+          323
+        ],
+        [
+          680,
+          323
+        ]
+      ],
+      "labelAt": [
+        610,
+        313
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "gate",
+      "label": "apply / undo",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          340,
+          85
+        ],
+        [
+          308,
+          85
+        ],
+        [
+          308,
+          587
+        ],
+        [
+          340,
+          587
+        ]
+      ],
+      "labelAt": [
+        308,
+        326
+      ]
+    },
+    {
+      "from": "gate",
+      "to": "state",
+      "label": "load / finalize state",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          540
+        ],
+        [
+          440,
+          453
+        ],
+        [
+          785,
+          453
+        ],
+        [
+          785,
+          366
+        ]
+      ],
+      "labelAt": [
+        613,
+        443
+      ]
+    },
+    {
+      "from": "gate",
+      "to": "executor",
+      "label": "validated + locked",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          540,
+          587
+        ],
+        [
+          680,
+          587
+        ]
+      ],
+      "labelAt": [
+        610,
+        577
+      ]
+    },
+    {
+      "from": "executor",
+      "to": "targets",
+      "label": "apply / undo",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          890,
+          587
+        ],
+        [
+          990,
+          587
+        ]
+      ],
+      "labelAt": [
+        940,
+        577
+      ]
+    },
+    {
+      "from": "executor",
+      "to": "journal",
+      "label": "atomic journal",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          785,
+          634
+        ],
+        [
+          785,
+          760
+        ]
+      ],
+      "labelAt": [
+        740,
+        700
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "commands / JSON",
+      "x": 234,
+      "y": 51,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        275,
+        61
+      ]
+    },
+    {
+      "text": "scan",
+      "x": 595,
+      "y": 58,
+      "width": 30,
+      "height": 14,
+      "labelAt": [
+        610,
+        68
+      ]
+    },
+    {
+      "text": "read only",
+      "x": 913,
+      "y": 58,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        940,
+        68
+      ]
+    },
+    {
+      "text": "plan · stdin JSON",
+      "x": 342,
+      "y": 191,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        388,
+        201
+      ]
+    },
+    {
+      "text": "persist Snapshot",
+      "x": 692,
+      "y": 191,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        736,
+        201
+      ]
+    },
+    {
+      "text": "Snapshot → saved Plan",
+      "x": 555,
+      "y": 303,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        610,
+        313
+      ]
+    },
+    {
+      "text": "apply / undo",
+      "x": 274,
+      "y": 316,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        308,
+        326
+      ]
+    },
+    {
+      "text": "load / finalize state",
+      "x": 557,
+      "y": 433,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        613,
+        443
+      ]
+    },
+    {
+      "text": "validated + locked",
+      "x": 562,
+      "y": 567,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        610,
+        577
+      ]
+    },
+    {
+      "text": "apply / undo",
+      "x": 906,
+      "y": 567,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        940,
+        577
+      ]
+    },
+    {
+      "text": "atomic journal",
+      "x": 702,
+      "y": 690,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        740,
+        700
+      ]
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/benchmark/runs/hive-candidate/evidence/snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json",
+  "candidate": {
+    "path": "/benchmark/runs/hive-candidate/evidence/snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json",
+    "sha256": "2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3",
+    "bytes": 10387
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/benchmark/runs/hive-candidate/evidence/snapshots/2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/benchmark/runs/hive-candidate/workspace/project",
+      "--candidate-sha256",
+      "2ff91ba43e317d40b2c62223b778a8a6908da04d0f3eb7f11e48decf350902e3",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 1,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 8.4,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.5,
+      "maxBends": 3,
+      "routesOverSuggestedBends": 2,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 24,
+      "minInteriorSegmentPx": 226,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [
+        {
+          "left": {
+            "id": "worker-task",
+            "from": "terminal-runtime",
+            "to": "worker",
+            "label": "PTY task",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            360,
+            208.99999999999997
+          ],
+          "sharedNode": "terminal-runtime"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team-protocol",
+            "label": "team send · HTTP",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal-runtime",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ]
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 56,
+      "emptyTopRatio": 0.091,
+      "occupiedTop": 56,
+      "viewBoxTop": 0,
+      "canvasHeight": 613,
+      "typicalNodeHeight": 105,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "recognized-declared-wide",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 1085.625,
+      "actualBudgetPx": 1085.625,
+      "actualReaderWidth": 1115.625,
+      "desiredReaderWidth": 1115.625,
+      "viewportCap": 1376,
+      "limit": "source-size",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "browser-input",
+        "from": "workbench",
+        "to": "terminal-runtime"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.5,
+      "semanticTextCount": 25
+    },
+    "issues": []
+  }
+}

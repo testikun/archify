@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b8b86ae4-4bcc-4a43-9a88-96955cc14c8b",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+  "output": "/benchmark/replay/mco-candidate/candidate.html",
+  "specification": {
+    "sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "bytes": 10426
+  },
+  "artifact": {
+    "sha256": "70624bd34038d24942293fc84b2636374843c15985e76b56b7df3dc9d1197b81",
+    "bytes": 880938
+  }
+}

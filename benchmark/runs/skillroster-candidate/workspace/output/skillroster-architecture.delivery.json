@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "f03980d7-200d-4b40-a9e2-694a99431301",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/benchmark/runs/skillroster-candidate/workspace/output/candidate.json",
+  "output": "/benchmark/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+  "specification": {
+    "sha256": "4610e42555fd278f449e78caf6431e8851ce392063227700461135a7e6b396b4",
+    "bytes": 9863
+  },
+  "artifact": {
+    "sha256": "c64429114d3cf98f28a4d3bbf98d63fe6a5684542acbbe7d5a0d43f8f0d0e054",
+    "bytes": 879288
+  }
+}

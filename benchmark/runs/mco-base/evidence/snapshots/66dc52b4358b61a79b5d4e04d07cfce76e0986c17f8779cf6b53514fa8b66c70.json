@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · One review, individual provider answers",
+    "subtitle": "Default review path · CLI or MCP → shared Python runtime → local provider CLIs · pinned source 3cfce13",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e"
+    }
+  },
+  "components": [
+    {
+      "id": "entry",
+      "type": "backend",
+      "label": "Review entry points",
+      "sublabel": "mco review / MCP mco_review",
+      "pos": [40, 70],
+      "size": [230, 82],
+      "explanation": "One request supplies repo, prompt, selected providers and target paths. CLI calls the workflow directly; FastMCP serves stdio and offloads _sync_review with asyncio.to_thread. CLI --json prints the payload without per-output stderr and exits with its exit_code. MCP returns {ok:true,data:payload}; that envelope means execution returned, not that every provider succeeded. Invalid MCP input returns {ok:false,error:{code,message}}.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2446, "end_line": 2489, "label": "CLI call and JSON return"},
+        {"path": "runtime/mcp_server.py", "line": 419, "end_line": 458, "label": "MCP review tool"},
+        {"path": "runtime/mcp_server.py", "line": 13, "end_line": 20, "label": "MCP result envelopes"}
+      ]
+    },
+    {
+      "id": "prepare",
+      "type": "security",
+      "label": "Validate & plan",
+      "sublabel": "Scope, permissions, models, deadlines",
+      "tag": "read_only by default",
+      "pos": [420, 70],
+      "size": [245, 82],
+      "explanation": "Reject unknown providers or invalid scope before execution. MCP rejects unsupported execution modes and derives provider permission flags; CLI checks provider policy and strict-enforcement failures. default_invocations makes one invocation per selected provider, with its configured model and scope. Scope paths must stay within the repo and allow_paths. Read-only is a provider-specific mode, not an independently established universal OS isolation guarantee.",
+      "sources": [
+        {"path": "runtime/mcp_server.py", "line": 290, "end_line": 337, "label": "MCP checks and policy inputs"},
+        {"path": "runtime/cli.py", "line": 2296, "end_line": 2361, "label": "CLI planning and strict policy"},
+        {"path": "runtime/invocation_runtime.py", "line": 136, "end_line": 162, "label": "Invocation plan and scope bounds"}
+      ]
+    },
+    {
+      "id": "runtime",
+      "type": "backend",
+      "label": "Concurrent invocation runtime",
+      "sublabel": "TaskInput per selected provider",
+      "tag": "ThreadPoolExecutor",
+      "pos": [820, 70],
+      "size": [250, 82],
+      "explanation": "run_invocation_workflow delegates to run_invocations when chain, debate and synthesis are off. A thread-pool job runs _run_one_invocation for each selection. max_provider_parallelism > 0 caps workers; 0 allows all invocations concurrently. Each job creates TaskInput, calls adapter.run, polls status, reads stdout logs, decodes output, and optionally emits deltas. Stall, per-invocation hard and global deadlines constrain execution; timeout or cancellation calls adapter.cancel. Worker exceptions become that invocation's failed result, not a fabricated answer.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 165, "end_line": 264, "label": "TaskInput and bounded adapter start"},
+        {"path": "runtime/invocation_runtime.py", "line": 329, "end_line": 435, "label": "Poll, decode, cancel and timeout"},
+        {"path": "runtime/invocation_runtime.py", "line": 488, "end_line": 580, "label": "Bounded fan-out and indexed results"}
+      ]
+    },
+    {
+      "id": "adapters",
+      "type": "backend",
+      "label": "Provider adapters · shim",
+      "sublabel": "Registry → command / decode / cancel",
+      "pos": [820, 320],
+      "size": [250, 82],
+      "explanation": "adapter_registry() defaults to provider-specific shim adapters. ShimAdapterBase builds the command, opens raw stdout/stderr logs, spawns the process with cwd=repo_root, and returns a TaskRunRef. poll checks process completion; cancel terminates the process. Provider decoders normalize transport output: Codex parses JSON events, while providers without a decoder use raw stdout. This box represents one adapter per selected provider, not a remote MCO service.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 133, "end_line": 146, "label": "Default shim registry"},
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 200, "label": "Spawn, log capture and poll"},
+        {"path": "runtime/adapters/codex.py", "line": 38, "end_line": 85, "label": "Codex decoder and command"}
+      ]
+    },
+    {
+      "id": "results",
+      "type": "backend",
+      "label": "Collect individual results",
+      "sublabel": "outputs[] stays in selection order",
+      "tag": "complete / partial / failed",
+      "pos": [420, 320],
+      "size": [245, 82],
+      "explanation": "This is the collection responsibility inside run_invocations, not another service. Each result retains invocation_id, provider, model, status, output, error, exit_code, deltas, transport_status and stderr. Futures finish independently but are stored by original index. All successes → complete; some → partial; none → failed. Return payload includes task_id, stage, outputs, aggregate status, exit_code and artifact_root. No default synthesis or consensus step replaces the individual answers.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 300, "end_line": 327, "label": "Per-invocation result contract"},
+        {"path": "runtime/invocation_runtime.py", "line": 549, "end_line": 641, "label": "Ordered collection and payload"},
+        {"path": "runtime/invocation_runtime.py", "line": 734, "end_line": 756, "label": "Default path has no synthesis"}
+      ]
+    },
+    {
+      "id": "disk",
+      "type": "database",
+      "label": "Local run artifacts",
+      "sublabel": "Raw logs + per-invocation answers",
+      "tag": "temporary unless CLI saves",
+      "pos": [420, 565],
+      "size": [245, 82],
+      "explanation": "Runtime allocates provider-runs and answer files. Adapters capture raw process logs; runtime streams decoded answers into per-invocation Markdown. CLI artifact/both modes (or --save-artifacts) retain the run and write run metadata; otherwise a TemporaryDirectory is cleaned and returned artifact paths are null. MCP _sync_review does not enable persist_artifacts, so its default files are temporary. This is a filesystem boundary, not a database server.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 470, "end_line": 486, "label": "Persistent versus temporary roots"},
+        {"path": "runtime/invocation_runtime.py", "line": 612, "end_line": 641, "label": "Run metadata and cleanup"},
+        {"path": "runtime/cli.py", "line": 2386, "end_line": 2390, "label": "CLI persistence switches"}
+      ]
+    },
+    {
+      "id": "providers",
+      "type": "external",
+      "label": "Selected provider processes",
+      "sublabel": "e.g. claude -p / codex exec",
+      "tag": "local child processes",
+      "pos": [820, 565],
+      "size": [250, 82],
+      "explanation": "Only the selected provider commands execute, with the repository as working directory and the prompt in their arguments. Claude requests text output; Codex requests JSON events. These executables are outside the MCO Python process. Provider-side model execution, network calls and authentication internals are not established by this checkout and are intentionally not drawn.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 120, "end_line": 153, "label": "Child-process boundary"},
+        {"path": "runtime/adapters/claude.py", "line": 34, "end_line": 57, "label": "Claude command"},
+        {"path": "runtime/adapters/codex.py", "line": 60, "end_line": 85, "label": "Codex command"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "MCO Python process · logical responsibilities, not separate services", "wraps": ["entry", "prepare", "runtime", "adapters", "results"], "pad": 24}
+  ],
+  "connections": [
+    {"id": "accept", "from": "entry", "to": "prepare", "label": "review request", "variant": "emphasis"},
+    {"id": "plan", "from": "prepare", "to": "runtime", "label": "invocations + policy", "variant": "emphasis"},
+    {"id": "invoke", "from": "runtime", "to": "adapters", "label": "run / poll / cancel", "variant": "emphasis"},
+    {"id": "adapter-reply", "from": "adapters", "to": "runtime", "label": "run ref + status"},
+    {"id": "spawn", "from": "adapters", "to": "providers", "label": "spawn + prompt", "variant": "emphasis"},
+    {"id": "process-return", "from": "providers", "to": "adapters", "label": "stdout / stderr / exit"},
+    {"id": "collect", "from": "runtime", "to": "results", "label": "decoded results"},
+    {"id": "response", "from": "results", "to": "entry", "label": "payload / JSON"},
+    {"id": "persist", "from": "results", "to": "disk", "label": "save if enabled"},
+    {"id": "logs", "from": "adapters", "to": "disk", "label": "capture raw logs"}
+  ],
+  "cards": [
+    {"dot": "amber", "title": "Execution & failure semantics", "items": ["Parallelism is bounded when configured; deadlines cancel stalled work.", "Read-only maps to provider flags; actual provider isolation is not proven here."]},
+    {"dot": "slate", "title": "Scope of this diagram", "items": ["Default shim, no chain/debate/synthesis; CLI ACP and custom transports omitted.", "Provider backends and network/auth internals are outside the checked-out code."]}
+  ]
+}

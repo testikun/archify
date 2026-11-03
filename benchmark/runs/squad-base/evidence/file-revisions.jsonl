@@ -1,0 +1,4 @@
+{"at": "2026-11-03T02:37:17.108894+00:00", "path": "/benchmark/runs/squad-base/workspace/output/candidate.json", "sha256": "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e"}
+{"at": "2026-11-03T02:37:22.210123+00:00", "path": "/benchmark/runs/squad-base/workspace/output/.archify-delivery-4tF1KB/specification.snapshot.json", "sha256": "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e"}
+{"at": "2026-11-03T02:37:58.212171+00:00", "path": "/benchmark/runs/squad-base/workspace/output/candidate.json", "sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e"}
+{"at": "2026-11-03T02:37:58.376375+00:00", "path": "/benchmark/runs/squad-base/workspace/output/.archify-delivery-V8gAwF/specification.snapshot.json", "sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e"}

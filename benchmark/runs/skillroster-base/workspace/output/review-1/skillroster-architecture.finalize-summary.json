@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/skillroster-base/workspace/output/candidate.json",
+    "sha256": "df8af2cc1e93ebc3fd87aa62c301c0876cacb7397c38a981013f8f69b3b16f6b",
+    "bytes": 11099
+  },
+  "artifact": {
+    "path": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+    "bytes": 888258
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "fail"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114429.720528:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.723828:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /local-user/Library/Application Support/Google/Chrome/Crashpad/attachments/880ba3ed-07ba-40bc-9593-5117b6111055: No such file or directory (2)\n[1103/114429.741635:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.739174:ERROR:third_party/crashpad/crashpad/util/net/http_transport_mac.mm:275] The operation couldn’t be completed. Operation not permitted (NSPOSIXErrorDomain 1)\nFailed to initialize sandbox.[1103/114429.816959:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[1103/114430.113109:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.Failed to initialize sandbox.Trying to load the allocator multiple times. This is *not* supported.\n[1103/114430.158213:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.171300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.237762:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.241945:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\nFailed to initialize sandbox.Failed to initialize sandbox.Failed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.277810:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.296796:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.309686:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.320227:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.331300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[66833:20507379:1103/114430.334917:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[1103/114430.345385:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[66833:20507379:1103/114430.356712:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\n[1103/114430.357803:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.365196:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.365214:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:389] GPU process isn't usable. Goodbye.\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.803835:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66833, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=1328, messages=3, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=3, writtenBytes=255, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 4083,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "run_id": "openpi-base",
+  "project_id": "openpi",
+  "arm": "base",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 509.44035512499977,
+  "usage": {
+    "input_tokens": 1994448,
+    "cached_input_tokens": 1905792,
+    "output_tokens": 11599,
+    "reasoning_output_tokens": 3666,
+    "uncached_input_tokens": 88656
+  },
+  "time_to_first_json_seconds_descriptive_only": 323.514206,
+  "time_to_first_cli_seconds_descriptive_only": 360.154273,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 29,
+  "failed_tool_commands": 0,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-03T01:46:01.514Z",
+      "pid": 34612,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-delegation.json",
+        "output/openpi-delegation.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.json",
+      "sha256": "5f58cc3287e9463526b5f1828e6986de9f95a6c3b1097bba8984d3ac872be2fe",
+      "snapshot": "snapshots/5f58cc3287e9463526b5f1828e6986de9f95a6c3b1097bba8984d3ac872be2fe.json"
+    },
+    {
+      "at": "2026-11-03T01:47:04.604Z",
+      "pid": 35463,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-delegation.json",
+        "output/openpi-delegation.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.json",
+      "sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+      "snapshot": "snapshots/d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393.json"
+    }
+  ],
+  "first_json": "snapshots/9cd077d512654349e88d2d1a071a1bd5c2bffe665a27f739b26104e90a33168a.json",
+  "first_submitted_json": "snapshots/5f58cc3287e9463526b5f1828e6986de9f95a6c3b1097bba8984d3ac872be2fe.json",
+  "precheck_revisions_observed": 1,
+  "final_json": "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.json",
+  "final_json_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+  "html": [
+    "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.html"
+  ],
+  "delivery_receipts": [
+    "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relative_coordinates_in_final": 0,
+  "source_status": "",
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/benchmark/runs/openpi-base/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

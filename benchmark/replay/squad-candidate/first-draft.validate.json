@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/benchmark/runs/squad-candidate/evidence/snapshots/5c5550ab5d6b810cee4d3dd00e769211aa282c2bdad76d44bad0d78ceaff8548.json",
+  "candidate": {
+    "path": "/benchmark/runs/squad-candidate/evidence/snapshots/5c5550ab5d6b810cee4d3dd00e769211aa282c2bdad76d44bad0d78ceaff8548.json",
+    "sha256": "5c5550ab5d6b810cee4d3dd00e769211aa282c2bdad76d44bad0d78ceaff8548",
+    "bytes": 8864
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/benchmark/runs/squad-candidate/evidence/snapshots/5c5550ab5d6b810cee4d3dd00e769211aa282c2bdad76d44bad0d78ceaff8548.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/benchmark/runs/squad-candidate/workspace/project",
+      "--candidate-sha256",
+      "5c5550ab5d6b810cee4d3dd00e769211aa282c2bdad76d44bad0d78ceaff8548",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 1,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 5.8,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.294117647058823,
+      "maxBends": 3,
+      "routesOverSuggestedBends": 2,
+      "maxStretch": 1.173,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 24,
+      "minInteriorSegmentPx": 62,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [
+        {
+          "left": {
+            "id": "worker-cli",
+            "from": "worker-terminal",
+            "to": "squad-command",
+            "label": "receive; task ack / complete",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "right": {
+            "id": "dispatch-messages",
+            "from": "squad-command",
+            "to": "message-inbox",
+            "label": "send / receive",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "point": [
+            706,
+            180.00000000000003
+          ],
+          "sharedNode": "squad-command"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "manager-cli",
+            "from": "manager-terminal",
+            "to": "squad-command",
+            "label": "task create / list; send / receive",
+            "collectionIndex": 0,
+            "artifactIndex": 1
+          },
+          "bends": 3,
+          "stretch": 1.165
+        },
+        {
+          "relationship": {
+            "id": "worker-cli",
+            "from": "worker-terminal",
+            "to": "squad-command",
+            "label": "receive; task ack / complete",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "bends": 3,
+          "stretch": 1.173
+        }
+      ]
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 80,
+      "emptyTopRatio": 0.11,
+      "occupiedTop": 80,
+      "viewBoxTop": 0,
+      "canvasHeight": 727,
+      "typicalNodeHeight": 80,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": false,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "manager-cli",
+        "from": "manager-terminal",
+        "to": "squad-command"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.294117647058823,
+      "semanticTextCount": 20
+    },
+    "issues": []
+  }
+}

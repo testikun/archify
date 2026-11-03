@@ -1,0 +1,465 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1140,
+    773
+  ],
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "x": 430,
+      "y": 40,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        430,
+        40
+      ]
+    },
+    {
+      "id": "terminal-runtime",
+      "type": "backend",
+      "label": "Terminal / CLI runtime",
+      "x": 430,
+      "y": 240,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        430,
+        240
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI process",
+      "x": 850,
+      "y": 240,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        850,
+        240
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI process",
+      "x": 40,
+      "y": 240,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        40,
+        240
+      ]
+    },
+    {
+      "id": "team-protocol",
+      "type": "backend",
+      "label": "Team API + dispatch logic",
+      "x": 430,
+      "y": 580,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        430,
+        580
+      ]
+    },
+    {
+      "id": "protocol-store",
+      "type": "database",
+      "label": "Dispatch + message stores",
+      "x": 850,
+      "y": 580,
+      "width": 250,
+      "height": 105,
+      "pos": [
+        850,
+        580
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Hive Node.js process",
+      "x": 408,
+      "y": 216,
+      "width": 294,
+      "height": 489,
+      "wraps": [
+        "terminal-runtime",
+        "team-protocol"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "workbench",
+      "to": "terminal-runtime",
+      "label": "WS input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          546.95,
+          145
+        ],
+        [
+          546.95,
+          240
+        ]
+      ],
+      "labelAt": [
+        517,
+        196
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "workbench",
+      "label": "WS output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          562,
+          240
+        ],
+        [
+          562,
+          145
+        ]
+      ],
+      "labelAt": [
+        595,
+        196
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "orchestrator",
+      "label": "PTY input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          680,
+          284.45
+        ],
+        [
+          850,
+          284.45
+        ]
+      ],
+      "labelAt": [
+        765,
+        274
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "terminal-runtime",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          850,
+          321.55
+        ],
+        [
+          680,
+          321.55
+        ]
+      ],
+      "labelAt": [
+        765,
+        312
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "team-protocol",
+      "label": "team send · HTTP",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          975,
+          345
+        ],
+        [
+          975,
+          369
+        ],
+        [
+          704,
+          369
+        ],
+        [
+          704,
+          625.5
+        ],
+        [
+          680,
+          625.5
+        ]
+      ],
+      "labelAt": [
+        840,
+        359
+      ]
+    },
+    {
+      "from": "team-protocol",
+      "to": "terminal-runtime",
+      "label": "Task / report injection",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          555,
+          580
+        ],
+        [
+          555,
+          345
+        ]
+      ],
+      "labelAt": [
+        555,
+        570
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "worker",
+      "label": "PTY task",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          430,
+          300.55
+        ],
+        [
+          360,
+          300.55
+        ],
+        [
+          360,
+          263.45
+        ],
+        [
+          290,
+          263.45
+        ]
+      ],
+      "labelAt": [
+        360,
+        272
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "terminal-runtime",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          165,
+          240
+        ],
+        [
+          165,
+          216
+        ],
+        [
+          406,
+          216
+        ],
+        [
+          406,
+          285.5
+        ],
+        [
+          430,
+          285.5
+        ]
+      ],
+      "labelAt": [
+        286,
+        206
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "team-protocol",
+      "label": "team CLI · HTTP",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          165,
+          345
+        ],
+        [
+          165,
+          632.5
+        ],
+        [
+          430,
+          632.5
+        ]
+      ],
+      "labelAt": [
+        298,
+        623
+      ]
+    },
+    {
+      "from": "team-protocol",
+      "to": "protocol-store",
+      "label": "SQL transactions",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          680,
+          640.55
+        ],
+        [
+          850,
+          640.55
+        ]
+      ],
+      "labelAt": [
+        765,
+        631
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "WS input",
+      "x": 493,
+      "y": 186,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        517,
+        196
+      ]
+    },
+    {
+      "text": "WS output",
+      "x": 568,
+      "y": 186,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        595,
+        196
+      ]
+    },
+    {
+      "text": "PTY input",
+      "x": 738,
+      "y": 264,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        765,
+        274
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 736,
+      "y": 302,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        765,
+        312
+      ]
+    },
+    {
+      "text": "team send · HTTP",
+      "x": 796,
+      "y": 349,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        840,
+        359
+      ]
+    },
+    {
+      "text": "Task / report injection",
+      "x": 495,
+      "y": 560,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        555,
+        570
+      ]
+    },
+    {
+      "text": "PTY task",
+      "x": 336,
+      "y": 262,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        360,
+        272
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 257,
+      "y": 196,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        286,
+        206
+      ]
+    },
+    {
+      "text": "team CLI · HTTP",
+      "x": 257,
+      "y": 613,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        298,
+        623
+      ]
+    },
+    {
+      "text": "SQL transactions",
+      "x": 722,
+      "y": 621,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        765,
+        631
+      ]
+    }
+  ]
+}

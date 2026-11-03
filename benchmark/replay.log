@@ -1,0 +1,612 @@
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-candidate",
+    "input_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-candidate",
+    "input_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-candidate",
+    "input_sha256": "69d4dfeb47916b2c29967f8ef8711303b79be9cec62fe5e70b6ba8d2aac53893",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-candidate",
+    "input_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-candidate",
+    "input_sha256": "69d4dfeb47916b2c29967f8ef8711303b79be9cec62fe5e70b6ba8d2aac53893",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-base",
+    "input_sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-candidate",
+    "input_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-candidate",
+    "input_sha256": "69d4dfeb47916b2c29967f8ef8711303b79be9cec62fe5e70b6ba8d2aac53893",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-base",
+    "input_sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "skillroster-base",
+    "input_sha256": "8734c4d6e6a1ea55e8d8b3fd08a152cdf1f76429646855a2664c777653e158d8",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]
+[
+  {
+    "run_id": "openpi-base",
+    "input_sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "openpi-candidate",
+    "input_sha256": "f706fcd52afe569e32de4ddb0a110fad5acfdcf5d96a1bfdca8f870971c1cc54",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-candidate",
+    "input_sha256": "b0f6173fbd23890e7210a2775c4cd678dd91990cee40037f56c8b89be81906f6",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "hive-base",
+    "input_sha256": "a45818e210ddc9f3a95b4e3af819a432da4b29e4c0be7a9a99d833953b4cad27",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-base",
+    "input_sha256": "66dc52b4358b61a79b5d4e04d07cfce76e0986c17f8779cf6b53514fa8b66c70",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "mco-candidate",
+    "input_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-candidate",
+    "input_sha256": "69d4dfeb47916b2c29967f8ef8711303b79be9cec62fe5e70b6ba8d2aac53893",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "squad-base",
+    "input_sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "skillroster-base",
+    "input_sha256": "8734c4d6e6a1ea55e8d8b3fd08a152cdf1f76429646855a2664c777653e158d8",
+    "first_draft_validation_exit": 1,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "input_sha256": "4610e42555fd278f449e78caf6431e8851ce392063227700461135a7e6b396b4",
+    "first_draft_validation_exit": 0,
+    "base_layout_exit": 0,
+    "base_deliver_exit": 0,
+    "candidate_layout_exit": 0,
+    "candidate_deliver_exit": 0,
+    "identical_layout": true,
+    "identical_canonical_svg": true
+  }
+]

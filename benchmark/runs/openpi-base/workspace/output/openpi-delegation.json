@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "OpenPI · task delegation and return",
+    "subtitle": "Direct model-spawned subagents · independent Pi sessions, not independent processes · source 677b495",
+    "output": "output/openpi-delegation.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/openpi-dev/openpi",
+      "revision": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "parent",
+      "type": "external",
+      "label": "Parent Pi session",
+      "sublabel": "Task in; model delegates",
+      "tag": "Caller + synthesis",
+      "pos": [40, 120],
+      "size": [190, 86],
+      "explanation": "The caller here is the parent Pi session/model, not an external job API. OpenPI's Web adapter passes user content to session.prompt and confirms admission via preflightResult; Pi owns model execution. The model decides whether to delegate, then synthesizes the child's result. Provider internals are outside this checkout. Load the delegate capability with openpi_load_tools when needed.",
+      "sources": [
+        { "path": "web/runtime/pi-runtime.ts", "line": 1666, "end_line": 1727, "label": "Task admission into Pi" },
+        { "path": "AGENTS.md", "line": 17, "end_line": 38, "label": "Model judgment vs runtime ownership" },
+        { "path": "extensions/capabilities/index.ts", "line": 182, "end_line": 218, "label": "Load optional delegate tools" }
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Subagent tool API",
+      "sublabel": "Spawn / check / wait",
+      "tag": "Validate + narrow tools",
+      "pos": [380, 120],
+      "size": [190, 86],
+      "explanation": "extensions/subagents/index.ts validates the task, resolves cwd, role and model, narrows inherited active tools, and runs manager effects through the shared ManagedRuntime. subagent_spawn promptly returns an id and metadata, not the final answer. subagent_check reads status and a bounded latest-output preview. subagent_wait explicitly waits, returns bounded results and consumes pending automatic delivery. An aborted wait leaves children running. Optional worktree isolation must succeed or spawn fails.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 1041, "end_line": 1218, "label": "Spawn policy, manager call and id receipt" },
+        { "path": "extensions/subagents/index.ts", "line": 1251, "end_line": 1373, "label": "Wait, consume and return bounded results" },
+        { "path": "extensions/subagents/index.ts", "line": 1583, "end_line": 1634, "label": "Check live status or direct evidence" }
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "Subagent manager",
+      "sublabel": "Admission + live snapshots",
+      "tag": "running → done / error",
+      "pos": [720, 120],
+      "size": [190, 86],
+      "explanation": "The Effect manager reserves a concurrency slot before asynchronous startup, acquires shared child admission, owns a scope per child, and pumps backend events into one in-memory snapshot per id. It stores status, final/partial text, structured result and terminal evidence. Completed maps to done; Failed and Interrupted map to error with distinct outcomes. Settlement notifies readers and invokes the extension's onSettled hook. UI/Web views are projections of this state, not independent execution authorities.",
+      "sources": [
+        { "path": "extensions/subagents/src/manager.ts", "line": 547, "end_line": 669, "label": "Admission, backend startup and event pump" },
+        { "path": "extensions/subagents/src/manager.ts", "line": 351, "end_line": 449, "label": "Fold events, settle and notify" },
+        { "path": "extensions/subagents/src/domain.ts", "line": 227, "end_line": 268, "label": "Shared snapshot read model" }
+      ]
+    },
+    {
+      "id": "backend",
+      "type": "backend",
+      "label": "Pi backend adapter",
+      "sublabel": "Start + normalize events",
+      "tag": "Exact terminal evidence",
+      "pos": [1060, 120],
+      "size": [190, 86],
+      "explanation": "Production registers the Pi backend. It creates a Pi AgentSession, subscribes to native lifecycle and message/tool events, starts session.prompt(task.prompt), and emits normalized SubagentEvents to the manager. Successful settlement requires the exact prompt Promise to settle plus native lifecycle evidence; missing lifecycle events, prompt rejection, failed output-schema fulfillment and abortion do not become a successful run. Partial output alone is not completion.",
+      "sources": [
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 216, "end_line": 276, "label": "Create and bind child Pi session" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 402, "end_line": 515, "label": "Normalize outcomes and terminal gate" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 640, "end_line": 798, "label": "Subscribe, prompt and track exact Promise" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion inbox",
+      "sublabel": "One-shot follow-up delivery",
+      "tag": "Wait may consume first",
+      "pos": [40, 390],
+      "size": [210, 86],
+      "explanation": "onSettled defers a copy of an unconsumed model-origin result. The owner-scoped inbox claims each pending result once: flush immediately if the parent is idle, otherwise on the parent's agent_settled boundary. Explicit wait can consume it before the automatic send. The dispatcher budgets/truncates model-visible output, appends a display record, and calls pi.sendMessage with deliverAs: followUp and triggerTurn: true. This wakes the parent without requiring another user prompt.",
+      "sources": [
+        { "path": "extensions/subagents/src/result-delivery.ts", "line": 33, "end_line": 90, "label": "Claim, defer, consume and flush" },
+        { "path": "extensions/subagents/index.ts", "line": 560, "end_line": 575, "label": "Idle and parent-settled wake-up edges" },
+        { "path": "extensions/subagents/index.ts", "line": 315, "end_line": 453, "label": "Bound output, append and trigger follow-up" }
+      ]
+    },
+    {
+      "id": "records",
+      "type": "database",
+      "label": "Parent Pi transcript",
+      "sublabel": "Finish + result entries",
+      "tag": "Evidence ≠ live status",
+      "pos": [720, 390],
+      "size": [190, 86],
+      "explanation": "The extension uses Pi appendEntry for subagent-finished (terminal completion and owner binding) and subagent-result (display content). These are native parent-session records, distinct from the manager's live snapshots and the model-visible follow-up. A direct-evidence check resolves only records on the active parent branch and reads the bound child transcript through ctx.executeTool('read'). Missing, unsealed, denied or oversized evidence is unavailable, not invented. Pi's storage implementation and physical durability are outside this source slice.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 797, "end_line": 833, "label": "Settlement hook writes finish binding" },
+        { "path": "extensions/subagents/index.ts", "line": 441, "end_line": 453, "label": "Result entry and separate model message" },
+        { "path": "extensions/subagents/src/evidence.ts", "line": 92, "end_line": 177, "label": "Owner-bound evidence and authorized read" }
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Independent Pi child",
+      "sublabel": "Own session + tool execution",
+      "tag": "No recursive delegation",
+      "pos": [1060, 390],
+      "size": [190, 86],
+      "explanation": "Each model-spawned child gets createAgentSession with a fresh SessionManager.create(cwd), loader and settings. Model and thinking inherit unless overridden. Tool authority is the parent's active surface intersected with role and package policy; parent-only subagent and workflow tools are excluded. This is an in-process session/capability boundary, not an OS process or filesystem/network sandbox. cwd is shared by default; isolation: worktree is optional and is not a security sandbox. Native SessionManager persistence is delegated to the Pi SDK, not reimplemented here.",
+      "sources": [
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 182, "end_line": 276, "label": "Independent session; inherited model and policy" },
+        { "path": "extensions/shared/child-session.ts", "line": 521, "end_line": 530, "label": "Exclude recursive subagent/workflow tools" },
+        { "path": "extensions/shared/child-session.ts", "line": 620, "end_line": 660, "label": "Fail-closed capability intersection" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "One OpenPI / Pi host process", "wraps": ["parent", "tools", "manager", "backend", "delivery", "records", "child"], "pad": 34 },
+    { "kind": "security-group", "label": "Child capability boundary", "wraps": ["child"], "pad": 18 }
+  ],
+  "connections": [
+    { "id": "call", "from": "parent", "to": "tools", "label": "Tool call", "variant": "emphasis" },
+    { "id": "tool-return", "from": "tools", "to": "parent", "label": "ID / status / result" },
+    { "id": "manage", "from": "tools", "to": "manager", "label": "Manage + query", "variant": "emphasis" },
+    { "id": "snapshot-return", "from": "manager", "to": "tools", "label": "Snapshot / results" },
+    { "id": "launch", "from": "manager", "to": "backend", "label": "backend.spawn", "variant": "emphasis" },
+    { "id": "events", "from": "backend", "to": "manager", "label": "Normalized events", "variant": "dashed" },
+    { "id": "execute", "from": "backend", "to": "child", "label": "Create + prompt", "variant": "emphasis" },
+    { "id": "native-events", "from": "child", "to": "backend", "label": "Pi lifecycle events", "variant": "dashed" },
+    { "id": "defer", "from": "manager", "to": "delivery", "label": "Unconsumed terminal result", "variant": "dashed" },
+    { "id": "wake", "from": "delivery", "to": "parent", "label": "Follow-up + wake", "variant": "dashed" },
+    { "id": "finish-record", "from": "manager", "to": "records", "label": "Finish entry via hook" },
+    { "id": "result-record", "from": "delivery", "to": "records", "label": "Result display entry" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "1 · Accept and delegate", "items": ["Parent model chooses delegation; there is no automatic task router.", "delegate tools expose spawn, check and wait; spawn returns an id."] },
+    { "dot": "emerald", "title": "2 · Observe or synchronize", "items": ["check: status + latest preview; wait: terminal output + completion receipt.", "The manager owns live state; text or UI labels alone do not prove success."] },
+    { "dot": "amber", "title": "3 · Return without polling", "items": ["Unconsumed results wake the parent now if idle, or after agent_settled.", "Scope: direct model delegation; /btw, workflows and SDK internals omitted.", "Independent session does not mean process or filesystem isolation."] }
+  ]
+}

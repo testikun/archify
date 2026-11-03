@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/benchmark/runs/skillroster-base/evidence/snapshots/9db7357d29ed5f19f2df13eb1bbfb4602dea30f89b2d7cb86e72545c5914a59d.json",
+  "error": "architecture schema validation failed:\n  /connections/6/fromSide (id/label: \"dispatch-change\") must be equal to one of the allowed values {\"allowedValues\":[\"left\",\"right\",\"top\",\"bottom\"]}\n  /connections/6/toSide (id/label: \"dispatch-change\") must be equal to one of the allowed values {\"allowedValues\":[\"left\",\"right\",\"top\",\"bottom\"]}\n  /connections/7/fromSide (id/label: \"control-state\") must be equal to one of the allowed values {\"allowedValues\":[\"left\",\"right\",\"top\",\"bottom\"]}\n  /connections/7/toSide (id/label: \"control-state\") must be equal to one of the allowed values {\"allowedValues\":[\"left\",\"right\",\"top\",\"bottom\"]}",
+  "diagnostics": [
+    {
+      "code": "schema/enum",
+      "severity": "error",
+      "message": "/connections/6/fromSide (id/label: \"dispatch-change\") must be equal to one of the allowed values",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/6/fromSide",
+        "identity": "dispatch-change"
+      },
+      "evidence": {
+        "keyword": "enum",
+        "allowedValues": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ]
+      },
+      "supportedFixes": [
+        "choose one of the allowed values"
+      ]
+    },
+    {
+      "code": "schema/enum",
+      "severity": "error",
+      "message": "/connections/6/toSide (id/label: \"dispatch-change\") must be equal to one of the allowed values",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/6/toSide",
+        "identity": "dispatch-change"
+      },
+      "evidence": {
+        "keyword": "enum",
+        "allowedValues": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ]
+      },
+      "supportedFixes": [
+        "choose one of the allowed values"
+      ]
+    },
+    {
+      "code": "schema/enum",
+      "severity": "error",
+      "message": "/connections/7/fromSide (id/label: \"control-state\") must be equal to one of the allowed values",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/7/fromSide",
+        "identity": "control-state"
+      },
+      "evidence": {
+        "keyword": "enum",
+        "allowedValues": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ]
+      },
+      "supportedFixes": [
+        "choose one of the allowed values"
+      ]
+    },
+    {
+      "code": "schema/enum",
+      "severity": "error",
+      "message": "/connections/7/toSide (id/label: \"control-state\") must be equal to one of the allowed values",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/7/toSide",
+        "identity": "control-state"
+      },
+      "evidence": {
+        "keyword": "enum",
+        "allowedValues": [
+          "left",
+          "right",
+          "top",
+          "bottom"
+        ]
+      },
+      "supportedFixes": [
+        "choose one of the allowed values"
+      ]
+    }
+  ]
+}

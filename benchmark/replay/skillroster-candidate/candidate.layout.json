@@ -1,0 +1,357 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1227,
+    527
+  ],
+  "components": [
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "Discover & inspect",
+      "x": 40,
+      "y": 65,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        40,
+        65
+      ]
+    },
+    {
+      "id": "planning",
+      "type": "backend",
+      "label": "Validate & prepare",
+      "x": 440,
+      "y": 65,
+      "width": 260,
+      "height": 85,
+      "pos": [
+        440,
+        65
+      ]
+    },
+    {
+      "id": "control",
+      "type": "security",
+      "label": "Apply / Undo controller",
+      "x": 890,
+      "y": 65,
+      "width": 275,
+      "height": 85,
+      "pos": [
+        890,
+        65
+      ]
+    },
+    {
+      "id": "skills",
+      "type": "database",
+      "label": "Local Skill filesystem",
+      "x": 40,
+      "y": 350,
+      "width": 255,
+      "height": 85,
+      "pos": [
+        40,
+        350
+      ]
+    },
+    {
+      "id": "journal",
+      "type": "database",
+      "label": "Receipt & recovery files",
+      "x": 450,
+      "y": 350,
+      "width": 250,
+      "height": 85,
+      "pos": [
+        450,
+        350
+      ]
+    },
+    {
+      "id": "executor",
+      "type": "backend",
+      "label": "Reversible change engine",
+      "x": 890,
+      "y": 350,
+      "width": 275,
+      "height": 85,
+      "pos": [
+        890,
+        350
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "INSPECT / PREPARE · no Skill writes; SQLite state may change",
+      "x": 18,
+      "y": 41,
+      "width": 704,
+      "height": 129,
+      "wraps": [
+        "inspection",
+        "planning"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "EXPLICIT MUTATION · lock + validation gates",
+      "x": 868,
+      "y": 41,
+      "width": 319,
+      "height": 414,
+      "wraps": [
+        "control",
+        "executor"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "inspection",
+      "to": "planning",
+      "label": "SQLite Snapshot + Evidence",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          275,
+          99.45
+        ],
+        [
+          440,
+          99.45
+        ]
+      ],
+      "labelAt": [
+        358,
+        89
+      ]
+    },
+    {
+      "from": "planning",
+      "to": "control",
+      "label": "saved Plan; explicit apply",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          700,
+          107.5
+        ],
+        [
+          890,
+          107.5
+        ]
+      ],
+      "labelAt": [
+        795,
+        98
+      ]
+    },
+    {
+      "from": "inspection",
+      "to": "skills",
+      "label": "bounded reads",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          157.5,
+          150
+        ],
+        [
+          157.5,
+          350
+        ]
+      ],
+      "labelAt": [
+        115,
+        253
+      ]
+    },
+    {
+      "from": "planning",
+      "to": "skills",
+      "label": "validate current paths",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          134
+        ],
+        [
+          279,
+          134
+        ],
+        [
+          279,
+          350
+        ]
+      ],
+      "labelAt": [
+        279,
+        232
+      ]
+    },
+    {
+      "from": "control",
+      "to": "executor",
+      "label": "locked Apply / Undo",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1027.5,
+          150
+        ],
+        [
+          1027.5,
+          350
+        ]
+      ],
+      "labelAt": [
+        971,
+        253
+      ]
+    },
+    {
+      "from": "executor",
+      "to": "journal",
+      "label": "journal + recovery I/O",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          890,
+          392.5
+        ],
+        [
+          700,
+          392.5
+        ]
+      ],
+      "labelAt": [
+        795,
+        383
+      ]
+    },
+    {
+      "from": "executor",
+      "to": "skills",
+      "label": "approved writes / guarded reversal",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1027.5,
+          435
+        ],
+        [
+          1027.5,
+          459
+        ],
+        [
+          167.5,
+          459
+        ],
+        [
+          167.5,
+          435
+        ]
+      ],
+      "labelAt": [
+        598,
+        449
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "SQLite Snapshot + Evidence",
+      "x": 290,
+      "y": 79,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        358,
+        89
+      ]
+    },
+    {
+      "text": "saved Plan; explicit apply",
+      "x": 728,
+      "y": 88,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        795,
+        98
+      ]
+    },
+    {
+      "text": "bounded reads",
+      "x": 79,
+      "y": 243,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        115,
+        253
+      ]
+    },
+    {
+      "text": "validate current paths",
+      "x": 221,
+      "y": 222,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        279,
+        232
+      ]
+    },
+    {
+      "text": "locked Apply / Undo",
+      "x": 920,
+      "y": 243,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        971,
+        253
+      ]
+    },
+    {
+      "text": "journal + recovery I/O",
+      "x": 737,
+      "y": 373,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        795,
+        383
+      ]
+    },
+    {
+      "text": "approved writes / guarded reversal",
+      "x": 511,
+      "y": 439,
+      "width": 173,
+      "height": 14,
+      "labelAt": [
+        598,
+        449
+      ]
+    }
+  ]
+}

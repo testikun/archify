@@ -1,0 +1,45 @@
+2026-11-03T02:46:48.840321Z  WARN codex_core_plugins::remote::remote_installed_plugin_sync: remote installed plugin bundle sync failed error=chatgpt authentication required for remote plugin catalog; api key auth is not supported
+2026-11-03T02:46:48.860909Z ERROR codex_models_manager::cache: failed to load models cache: missing field `base_instructions` at line 133 column 5
+2026-11-03T02:46:48.861277Z  WARN codex_models_manager::model_info: Unknown model gpt-6.1-sol is used. This will use fallback model metadata.
+2026-11-03T02:46:48.861616Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:46:49.190161Z  WARN codex_models_manager::model_info: Unknown model gpt-6.1-sol is used. This will use fallback model metadata.
+2026-11-03T02:46:50.784303Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///local-user/.codex/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-11-03T02:46:50.790227Z  WARN codex_core_plugins::manifest: ignoring interface.defaultPrompt[0]: prompt must be at most 128 characters path=file:///local-user/.codex/.tmp/plugins/plugins/ngs-analysis/.codex-plugin/plugin.json
+2026-11-03T02:46:52.954789Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:46:53.843453Z  WARN codex_core_plugins::manager: failed to warm featured plugin ids cache error=failed to send remote featured plugin request to https://chatgpt.com/backend-api/plugins/featured: error sending request for url (https://chatgpt.com/backend-api/plugins/featured?platform=codex)
+2026-11-03T02:46:56.317291Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:00.577560Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:03.798173Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:08.101714Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:11.780507Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:15.482744Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:22.098362Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:27.678646Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:33.572471Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:37.625507Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:43.503111Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:48.070318Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:52.873072Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:47:57.007647Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:48:05.988508Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:48:16.014446Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:48:22.515953Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:49:05.140009Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:49:11.594006Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:49:59.843394Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:10.587387Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:18.285271Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:24.933170Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:36.070206Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:40.911599Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:47.562131Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:51:57.900169Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:03.419670Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:13.472782Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:21.377246Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:29.709498Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:38.175597Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:43.535072Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:47.823816Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:52:57.511937Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic
+2026-11-03T02:53:07.193079Z  WARN codex_protocol::openai_models: Model personality requested but model_messages is missing, falling back to base instructions. model=gpt-6.1-sol personality=pragmatic

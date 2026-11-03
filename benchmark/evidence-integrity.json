@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-03T02:56:31.561148+00:00",
+  "completed_runs": 10,
+  "reviewed_runs": 10,
+  "cross_replays": 10,
+  "original_snapshot_hashes_verified": 28,
+  "all_final_receipts_bind_input_and_artifact": true,
+  "source_and_packages_unchanged": true,
+  "report_relative_links_exist": true,
+  "credential_shapes_found_in_native_evidence": 0,
+  "credential_scan_note": "Token boundaries exclude the sk- substring inside public task- filenames.",
+  "provider_error_events": 0,
+  "timeouts": 0,
+  "semantically_correct": 9,
+  "readable": 8,
+  "relative_coordinates_in_final": 0,
+  "scope": "Evidence integrity and author review; not human acceptance or an authenticity proof."
+}

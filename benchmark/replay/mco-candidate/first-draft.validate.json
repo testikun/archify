@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/benchmark/runs/mco-candidate/evidence/snapshots/16cbd6213a08d77313d57f77f6451271a3c207485cb1524b63e9b7f19e94c150.json",
+  "error": "Architecture layout validation failed:\n- Component \"answer-artifacts\" is not wrapped by boundary \"MCO Python runtime · logical responsibilities\" but sits inside its frame — move it outside the frame, place the wrapped members in one compact axis-aligned cluster (no empty bay for a non-member), or add it to wraps only when it truly belongs there.",
+  "diagnostics": [
+    {
+      "code": "layout/boundary-encloses-non-member",
+      "severity": "error",
+      "message": "Component \"answer-artifacts\" is not wrapped by boundary \"MCO Python runtime · logical responsibilities\" but sits inside its frame — move it outside the frame, place the wrapped members in one compact axis-aligned cluster (no empty bay for a non-member), or add it to wraps only when it truly belongs there.",
+      "subject": {
+        "diagramType": "architecture",
+        "boundary": {
+          "kind": "region",
+          "label": "MCO Python runtime · logical responsibilities",
+          "wraps": [
+            "review-entry",
+            "parallel-runtime",
+            "invocation-worker",
+            "provider-adapters",
+            "individual-results"
+          ]
+        },
+        "component": "answer-artifacts"
+      },
+      "evidence": {
+        "bounds": {
+          "x": 25,
+          "y": 100,
+          "width": 1080,
+          "height": 402
+        },
+        "component": {
+          "id": "answer-artifacts",
+          "type": "database",
+          "label": "Optional saved review files",
+          "x": 55,
+          "y": 390,
+          "width": 245,
+          "height": 92,
+          "pos": [
+            55,
+            390
+          ]
+        }
+      },
+      "supportedFixes": [
+        "move \"answer-artifacts\" outside the boundary frame",
+        "reposition the wrapped members into one compact axis-aligned cluster (no empty bay) that leaves non-members outside"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/benchmark/runs/openpi-base/evidence/snapshots/9cd077d512654349e88d2d1a071a1bd5c2bffe665a27f739b26104e90a33168a.json",
+  "error": "/components/4/sources/0 requests line 103, but extensions/subagents/src/result-delivery.ts has 90 lines at revision 677b4959108976b99fb63fb5029198b04aa51cb5.",
+  "diagnostics": [
+    {
+      "code": "repository-evidence/line-out-of-range",
+      "severity": "error",
+      "message": "/components/4/sources/0 requests line 103, but extensions/subagents/src/result-delivery.ts has 90 lines at revision 677b4959108976b99fb63fb5029198b04aa51cb5.",
+      "subject": {
+        "surface": "repository-evidence",
+        "path": "/components/4/sources/0",
+        "diagramType": "architecture",
+        "collection": "components",
+        "nodeId": "delivery",
+        "componentId": "delivery"
+      },
+      "evidence": {
+        "sourcePath": "extensions/subagents/src/result-delivery.ts",
+        "line": 33,
+        "endLine": 103,
+        "requestedLine": 103,
+        "lineCount": 90,
+        "revision": "677b4959108976b99fb63fb5029198b04aa51cb5"
+      },
+      "supportedFixes": [
+        "set end_line to 90, the last line of extensions/subagents/src/result-delivery.ts"
+      ]
+    }
+  ]
+}

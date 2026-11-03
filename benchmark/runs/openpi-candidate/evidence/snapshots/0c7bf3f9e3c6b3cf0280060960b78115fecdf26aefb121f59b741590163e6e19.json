@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "OpenPI · Task delegation & return",
+    "subtitle": "Parent-model tool call → independent Pi session → observable status and one-shot completion",
+    "output": "output/openpi-subagents.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/openpi-dev/openpi",
+      "revision": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Parent Pi session",
+      "sublabel": "Model delegates; caller receives results",
+      "tag": "Caller / synthesis owner",
+      "pos": [40, 40],
+      "size": [240, 94],
+      "explanation": "This overview starts at the parent model's subagent_spawn call, not at a network task endpoint. The caller receives an ID after startup, can inspect or explicitly wait, and otherwise gets a follow-up that triggers a parent turn. Pi's own user-input and provider internals are external dependencies, not implemented in this source slice.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 1188, "end_line": 1218, "label": "Spawn returns child ID and metadata" },
+        { "path": "extensions/subagents/index.ts", "line": 1355, "end_line": 1388, "label": "Explicit wait returns result and status" },
+        { "path": "extensions/subagents/index.ts", "line": 441, "end_line": 453, "label": "Follow-up triggers parent turn" }
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Subagent tool boundary",
+      "sublabel": "Validate task; constrain child authority",
+      "tag": "spawn · check / list · wait",
+      "pos": [445, 40],
+      "size": [240, 94],
+      "explanation": "subagent_spawn accepts prompt/name plus optional role, working directory, model, reasoning effort, isolation and output schema. It validates cwd, narrows tools to the parent/role/plan-mode policy, resolves project trust, and invokes manager.spawn through the shared Effect ManagedRuntime. Default model and thinking level inherit from the parent. subagent_check/list read manager snapshots; subagent_wait explicitly synchronizes without making waiting the default.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 1000, "end_line": 1139, "label": "Input validation, policy and dispatch" },
+        { "path": "extensions/subagents/index.ts", "line": 1250, "end_line": 1295, "label": "Wait, then consume pending delivery" },
+        { "path": "extensions/subagents/index.ts", "line": 1596, "end_line": 1661, "label": "Check and list read snapshots" }
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "Subagent manager",
+      "sublabel": "Admission, lifecycle & live snapshots",
+      "tag": "Shared Effect runtime · in memory",
+      "pos": [850, 40],
+      "size": [240, 94],
+      "explanation": "Owns child IDs, pool reservations, shared admission leases and per-child scopes. backend.spawn starts the session; a scoped event pump folds activity into mutable snapshots. RunSettled records done/completed or error/failed|interrupted, final/partial text and evidence. Subscribers and waiters are notified; active wait interest marks a result consumed. A stop timeout can be terminal for presentation while execution remains uncertain, so admission is retained rather than assuming the child stopped.",
+      "sources": [
+        { "path": "extensions/subagents/src/manager.ts", "line": 351, "end_line": 450, "label": "Outcome folding and settlement hook" },
+        { "path": "extensions/subagents/src/manager.ts", "line": 540, "end_line": 669, "label": "Admission, backend spawn and event pump" },
+        { "path": "extensions/subagents/src/manager.ts", "line": 686, "end_line": 747, "label": "Wait loop and uncertain stop deadline" }
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Pi backend + child session",
+      "sublabel": "Own session, prompt, tools & transcript",
+      "tag": "In-process · not an OS sandbox",
+      "pos": [850, 330],
+      "size": [240, 94],
+      "explanation": "The adapter calls createAgentSession with SessionManager.create(cwd), child resources/trust, resolved model, inherited thinking level and enforced tool policy. It subscribes to Pi lifecycle/activity events and starts session.prompt(task.prompt), returning a stream rather than waiting for model completion. Terminal success requires the exact prompt Promise to settle with lifecycle evidence; errors, interruption and missing structured output are distinct outcomes. Session persistence is explicitly recorded as unknown in direct evidence. The Pi dependency's implementation is outside this checkout.",
+      "sources": [
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 170, "end_line": 275, "label": "Create separate Pi session with policy" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 387, "end_line": 511, "label": "Evidence and exact terminal outcome" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 640, "end_line": 804, "label": "Subscribe, prompt and expose event stream" }
+      ]
+    },
+    {
+      "id": "inbox",
+      "type": "messagebus",
+      "label": "Completion delivery inbox",
+      "sublabel": "Session-owned, consumable result queue",
+      "tag": "Unconsumed results only",
+      "pos": [445, 330],
+      "size": [240, 94],
+      "explanation": "The extension wires manager.onSettled to append a finished record and defer a snapshot copy unless an active wait/cancel consumed it. The inbox claims and acknowledges batches, retrying synchronous delivery failures. It flushes immediately when the parent is idle or at the parent's agent_settled boundary. An explicit wait consumes pending results so a queued automatic notification does not duplicate that delivery. This is an in-process coordinator, not an external message broker or demonstrated durable queue.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 560, "end_line": 625, "label": "Runtime wiring and parent-settled hook" },
+        { "path": "extensions/subagents/index.ts", "line": 800, "end_line": 833, "label": "Finished record; skip consumed results" },
+        { "path": "extensions/subagents/src/result-delivery.ts", "line": 35, "end_line": 89, "label": "Claim, acknowledge, retry and consume" }
+      ]
+    },
+    {
+      "id": "dispatcher",
+      "type": "backend",
+      "label": "Result projection & dispatch",
+      "sublabel": "Bound output; append and wake parent",
+      "tag": "subagent-result · followUp",
+      "pos": [40, 330],
+      "size": [240, 94],
+      "explanation": "Automatic delivery builds model-visible output plus completion metadata and a separate display projection, appends a subagent-result entry, and calls pi.sendMessage with deliverAs: followUp and triggerTurn: true. The shared projection used by waits and automatic delivery preserves head/tail context for long results and attempts to save an immutable text artifact for native read. Artifact write failure is explicit and does not erase execution success. These files are auxiliary result caches, not the manager's live status source of truth.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 360, "end_line": 453, "label": "Model/display projection and follow-up" },
+        { "path": "extensions/subagents/index.ts", "line": 279, "end_line": 283, "label": "Wire projection to artifact writer" },
+        { "path": "extensions/subagents/src/result-artifact.ts", "line": 48, "end_line": 138, "label": "Text artifact and bounded output fallback" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Separate Pi session · same OS process", "wraps": ["child"], "pad": 22 }
+  ],
+  "connections": [
+    { "id": "delegate", "from": "caller", "to": "tools", "label": "spawn(prompt)", "variant": "emphasis" },
+    { "id": "tool-return", "from": "tools", "to": "caller", "label": "ID / status / result" },
+    { "id": "manager-call", "from": "tools", "to": "manager", "label": "spawn / query / wait", "variant": "emphasis" },
+    { "id": "snapshot-return", "from": "manager", "to": "tools", "label": "snapshots / settled" },
+    { "id": "session-start", "from": "manager", "to": "child", "label": "backend.spawn(task)", "variant": "emphasis" },
+    { "id": "session-events", "from": "child", "to": "manager", "label": "activity / RunSettled" },
+    { "id": "settled-hook", "from": "manager", "to": "inbox", "label": "onSettled: unconsumed", "variant": "dashed" },
+    { "id": "wait-consume", "from": "tools", "to": "inbox", "label": "wait consumes IDs" },
+    { "id": "deliver-batch", "from": "inbox", "to": "dispatcher", "label": "idle / parent settled", "variant": "dashed" },
+    { "id": "follow-up", "from": "dispatcher", "to": "caller", "label": "followUp + wake", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Task acceptance & independence",
+      "items": [
+        "The parent model chooses delegation; spawn returns an ID after startup, not the final answer.",
+        "Child tools are a fail-closed parent/role intersection; model and thinking inherit unless overridden.",
+        "Default cwd is shared. Optional worktree isolation must succeed or spawn fails; it is not a process sandbox."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Three caller-facing views",
+      "items": [
+        "check/list: read live snapshots; wait: explicit synchronization with bounded result output.",
+        "Unawaited completion: inbox → follow-up → parent model turn, without a new user prompt.",
+        "Status subscribers also feed TUI and Web projections (index.ts:599–625), not a second execution state store."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Evidence & limits",
+      "items": [
+        "Pinned checkout 677b4959. Click a component for exact local source ranges and responsibility details.",
+        "Completed requires settled prompt evidence. Failed and interrupted remain distinct; stop timeout can leave termination uncertain.",
+        "Scope: model-spawned path only; /btw, takeover UI and workflow agents omitted. Pi internals and durable session persistence are not established here."
+      ]
+    }
+  ]
+}

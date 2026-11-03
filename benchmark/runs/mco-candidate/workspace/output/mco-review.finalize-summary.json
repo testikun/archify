@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+    "sha256": "d5fd84f4dfbe5403271d1d2012332d9b9da11de696482fa2a1e0c1a009f147b0",
+    "bytes": 10602
+  },
+  "artifact": {
+    "path": "/benchmark/runs/mco-candidate/workspace/output/mco-review.html",
+    "sha256": "841a22d62a3cff720c48565749a5e0a95b95ae3a99f76b10df4b4c4adf36b5f4",
+    "bytes": 881467
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/benchmark/runs/mco-candidate/workspace/output/mco-review.finalize.json",
+    "summaryReceipt": "/benchmark/runs/mco-candidate/workspace/output/mco-review.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/mco-candidate/workspace/output/mco-review.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 3093,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

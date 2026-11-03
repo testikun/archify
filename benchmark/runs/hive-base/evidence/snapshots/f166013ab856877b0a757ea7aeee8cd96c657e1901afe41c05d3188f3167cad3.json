@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hive · browser task to CLI worker",
+    "subtitle": "Local orchestrator path · explicit dispatch and reports, not terminal-output inference · pinned source f8f1343",
+    "output": "output/hive-task-path.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/hive",
+      "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c"
+    }
+  },
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "sublabel": "Goals · terminals · team activity",
+      "pos": [40, 70],
+      "size": [240, 100],
+      "explanation": "A goal is POSTed to /api/workspaces/:id/user-input; it requires a live orchestrator and is not itself a worker dispatch. Alternatively, terminal keystrokes travel over /ws/terminal/:runId/io with a separate control socket. The Action Center polls and shows dispatch/report evidence and recorded task messages. Terminal output is a different, live byte stream.",
+      "sources": [
+        { "path": "web/src/api.ts", "line": 315, "end_line": 324, "label": "Submit goal over HTTP" },
+        { "path": "web/src/terminal/terminal-client.ts", "line": 101, "end_line": 109, "label": "Terminal IO + control sockets" },
+        { "path": "web/src/action-center/ActionCenterStrip.tsx", "line": 123, "end_line": 163, "label": "Poll team activity" }
+      ]
+    },
+    {
+      "id": "terminal-runtime",
+      "type": "backend",
+      "label": "PTY & terminal runtime",
+      "sublabel": "Spawn · ready-gated input · stream",
+      "pos": [420, 70],
+      "size": [250, 100],
+      "explanation": "AgentManager spawns the configured command through node-pty: agents are real child processes, not browser execution. Per-run PTY input is serialized and waits for post-start readiness before prompt paste/submit. PTY output is published to an output bus; the terminal stream hub mirrors it, sends snapshots and streams bytes to viewers. Both orchestrator and worker have this same terminal machinery.",
+      "sources": [
+        { "path": "src/server/agent-manager.ts", "line": 149, "end_line": 178, "label": "Spawn CLI and write PTY input" },
+        { "path": "src/server/agent-stdin-dispatcher.ts", "line": 168, "end_line": 205, "label": "Wait for readiness; paste input" },
+        { "path": "src/server/terminal-stream-hub.ts", "line": 147, "end_line": 158, "label": "PTY output bus to viewers" }
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "sublabel": "Plan work · invoke team send",
+      "pos": [950, 70],
+      "size": [250, 100],
+      "explanation": "The selected agent CLI receives the user's goal through its PTY. Its own reasoning chooses work and calls the bundled team send <member> <task> command. That helper POSTs JSON to http://127.0.0.1:$HIVE_PORT/api/team/send, carrying workspace, agent identity and agent token. The runtime does not infer a task from arbitrary terminal output. Reports are injected back into this orchestrator's PTY; subsequent synthesis is agent behavior, not a deterministic Hive guarantee.",
+      "sources": [
+        { "path": "src/cli/team.ts", "line": 1255, "end_line": 1268, "label": "team send → loopback HTTP" },
+        { "path": "src/server/agent-run-bootstrap.ts", "line": 127, "end_line": 138, "label": "Workspace identity + bundled PATH" },
+        { "path": "src/server/agent-run-starter.ts", "line": 112, "end_line": 125, "label": "Inject runtime port + token" }
+      ]
+    },
+    {
+      "id": "control-plane",
+      "type": "backend",
+      "label": "Team control plane",
+      "sublabel": "Authorize · dispatch · record · report",
+      "tag": "Workspace + role + token checks",
+      "pos": [420, 400],
+      "size": [250, 110],
+      "explanation": "HTTP routes authenticate agent identity, workspace and role before calling team operations. Send records a dispatch, increments pending work, claims it and requests a structured worker prompt with a dispatch ID. Stopped user-managed workers are queued until explicitly started; a newly orchestrator-spawned worker may auto-start on first send. Report requires an owned submitted dispatch and current required seen_seq, then commits report text/artifacts plus an outbox entry. Pending count is decremented; zero pending makes the worker idle. Report forwarding and settlement are distinct. Collaboration messages use the same runtime but do not settle dispatches; progress is recorded without PTY delivery.",
+      "sources": [
+        { "path": "src/server/team-operations.ts", "line": 604, "end_line": 755, "label": "Create, park, claim and deliver work" },
+        { "path": "src/server/team-operations.ts", "line": 978, "end_line": 1132, "label": "Commit report and queue forwarding" },
+        { "path": "src/server/team-authz.ts", "line": 27, "end_line": 100, "label": "Token, workspace and role boundary" }
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "sublabel": "Execute · message/status · report",
+      "pos": [950, 400],
+      "size": [250, 110],
+      "explanation": "The configured worker CLI receives a structured prompt in its PTY, executes the requested work, and explicitly invokes team commands. team message --dispatch <id> --to orchestrator --kind progress records progress without interrupting the orchestrator. team status forwards a non-settling update. team report --dispatch <id> [--seen <seq>] sends result text and artifact strings to the runtime; it is not a stdout completion marker. Other workers do not automatically receive the final report; related task messages can address an owner, subject to collaboration authorization.",
+      "sources": [
+        { "path": "src/cli/team.ts", "line": 1223, "end_line": 1252, "label": "Task-scoped messages over HTTP" },
+        { "path": "src/cli/team.ts", "line": 1538, "end_line": 1575, "label": "Status versus explicit final report" },
+        { "path": "src/server/agent-stdin-dispatcher.ts", "line": 286, "end_line": 335, "label": "Worker prompt with dispatch ID" }
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "Local SQLite state",
+      "sublabel": "Dispatches · messages · report outbox",
+      "pos": [40, 400],
+      "size": [240, 110],
+      "explanation": "Dispatch rows are the authoritative task lifecycle, not raw terminal text. Reporting checks the submitted dispatch owner and acknowledgement sequence before updating status to reported with text and artifact strings. The report outbox persists forwarding separately and is marked delivered only after PTY write resolution. Task progress messages deliberately have no dispatch-message outbox entry, so they are recorded/pollable rather than pushed into an agent terminal. Data is workspace-scoped; this is a local embedded database, not a remote queue service.",
+      "sources": [
+        { "path": "src/server/dispatch-ledger-store.ts", "line": 299, "end_line": 376, "label": "Report ownership + seen_seq gate" },
+        { "path": "src/server/dispatch-message-store.ts", "line": 160, "end_line": 215, "label": "Progress recorded, not enqueued" },
+        { "path": "src/server/report-outbox-store.ts", "line": 53, "end_line": 80, "label": "Durable report queue + delivery stamp" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Local Node runtime · loopback HTTP / WebSocket", "wraps": ["terminal-runtime", "control-plane"], "pad": 25 },
+    { "kind": "region", "label": "Separate agent CLI processes · same workspace", "wraps": ["orchestrator", "worker"], "pad": 25 }
+  ],
+  "connections": [
+    { "id": "terminal-input", "from": "workbench", "to": "terminal-runtime", "label": "WS keystrokes", "fromSide": "right", "toSide": "left", "variant": "emphasis" },
+    { "id": "terminal-output", "from": "terminal-runtime", "to": "workbench", "label": "WS terminal output", "fromSide": "top", "toSide": "top", "variant": "dashed" },
+    { "id": "browser-http", "from": "workbench", "to": "control-plane", "label": "HTTP goal / activity reads", "fromSide": "bottom", "toSide": "left" },
+    { "id": "orch-input", "from": "terminal-runtime", "to": "orchestrator", "label": "PTY goal / report input", "fromSide": "right", "toSide": "left", "variant": "emphasis" },
+    { "id": "orch-output", "from": "orchestrator", "to": "terminal-runtime", "label": "PTY output", "fromSide": "top", "toSide": "top", "variant": "dashed" },
+    { "id": "dispatch-http", "from": "orchestrator", "to": "control-plane", "label": "team send · HTTP", "fromSide": "bottom", "toSide": "top", "variant": "emphasis" },
+    { "id": "worker-http", "from": "worker", "to": "control-plane", "label": "report / status / message · HTTP", "fromSide": "left", "toSide": "right", "variant": "emphasis" },
+    { "id": "runtime-inject", "from": "control-plane", "to": "terminal-runtime", "label": "Ready-gated prompt / report", "fromSide": "top", "toSide": "bottom", "variant": "emphasis" },
+    { "id": "worker-input", "from": "terminal-runtime", "to": "worker", "label": "PTY task prompt", "fromSide": "right", "toSide": "top", "variant": "emphasis" },
+    { "id": "worker-output", "from": "worker", "to": "terminal-runtime", "label": "PTY output", "fromSide": "right", "toSide": "right", "variant": "dashed" },
+    { "id": "state-io", "from": "control-plane", "to": "sqlite", "label": "SQL read / write", "fromSide": "left", "toSide": "right" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "1 · Dispatch is explicit",
+      "items": [
+        "Goal → live orchestrator → team send → ledger → ready-gated worker PTY. A browser goal or task-file edit is not a worker dispatch.",
+        "Stopped user-managed worker: park the dispatch until Start. Newly spawned worker: first-send auto-start exception. 202 means accepted, not completed.",
+        "Entry + queue rule: src/server/routes-workspaces.ts:169–196; src/server/routes-team.ts:127–169. Task-file PUT only writes content: src/server/routes-tasks.ts:60–79."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "2 · Three different progress channels",
+      "items": [
+        "Raw PTY output → browser terminal; not authoritative task completion. team status → best-effort orchestrator input, without settling the task.",
+        "Task message kind=progress → SQLite only, visible in polled activity / team messages; no PTY push. Other eligible task messages use an outbox to their recipient.",
+        "Progress rule: src/server/dispatch-message-store.ts:193–215; src/server/dispatch-message-policy.ts:31–55. Activity: src/server/action-center-summary.ts:208–218. Status: src/server/team-operations.ts:917–951."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "3 · Settle first; forward durably",
+      "items": [
+        "team report closes an owned submitted dispatch only with current required seen_seq. Report text + artifact strings are stored; the pending count drops, becoming idle at zero.",
+        "Report + outbox are committed before forwarding. Orchestrator down or write failure: keep backlog; a later drain / team list retries. A PTY write is not proof the agent understood the result.",
+        "Forwarding: src/server/team-operations.ts:292–336, 1013–1066, 1113–1132. UI reads report/progress evidence via HTTP; the orchestrator's generated reply returns via terminal output."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Scope & evidence limits",
+      "items": [
+        "One workspace, local browser → orchestrator → CLI worker path. Processes are separate, not proven sandbox boundaries. Runtime binds loopback: src/cli/hive.ts:253.",
+        "Remote relay, workflow-runner and external Codex App controllers are alternate paths, intentionally omitted. Other team members are not automatically broadcast final reports.",
+        "Agent reasoning, actual tool success and report truth cannot be established from runtime code. Artifact strings are reported references, not evidence of an upload. Click components for pinned source ranges."
+      ]
+    }
+  ]
+}

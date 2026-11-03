@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-03T02:44:26.759Z",
+  "specification": {
+    "path": "/benchmark/runs/skillroster-base/workspace/output/candidate.json",
+    "sha256": "df8af2cc1e93ebc3fd87aa62c301c0876cacb7397c38a981013f8f69b3b16f6b",
+    "bytes": 11099
+  },
+  "artifact": {
+    "path": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+    "bytes": 888258
+  },
+  "stages": {
+    "validate": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": null,
+      "execution": "embedded-in-deliver",
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/benchmark/runs/skillroster-base/workspace/output/candidate.json",
+        "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/benchmark/runs/skillroster-base/workspace/project",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": true,
+        "command": "validate",
+        "specification": {
+          "sha256": "df8af2cc1e93ebc3fd87aa62c301c0876cacb7397c38a981013f8f69b3b16f6b",
+          "bytes": 11099
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        }
+      }
+    },
+    "deliver": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 446,
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/benchmark/runs/skillroster-base/workspace/output/candidate.json",
+        "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/benchmark/runs/skillroster-base/workspace/project",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "receiptId": "c3666d35-15f7-45be-bfd9-bf8df232c497",
+        "ok": true,
+        "command": "deliver",
+        "type": "architecture",
+        "input": "/benchmark/runs/skillroster-base/workspace/output/candidate.json",
+        "output": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "specification": {
+          "sha256": "df8af2cc1e93ebc3fd87aa62c301c0876cacb7397c38a981013f8f69b3b16f6b",
+          "bytes": 11099
+        },
+        "artifact": {
+          "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+          "bytes": 888258
+        },
+        "validation": {
+          "checksPassed": 9,
+          "checkCount": 9,
+          "compositionProfile": "showcase",
+          "compositionStatus": "pass",
+          "errors": 0,
+          "warnings": 0
+        },
+        "evidence": {
+          "verified": true,
+          "repository": "https://github.com/tt-a1i/skillroster",
+          "revision": "21d14c7cff25c66a016562e238e62d0538eb696f",
+          "references": 29,
+          "linkMode": "local-only"
+        },
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      }
+    },
+    "check": {
+      "status": "pass",
+      "exitCode": 0,
+      "durationMs": 145,
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+        "check",
+        "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "--require-provenance"
+      ],
+      "receipt": {
+        "ok": true,
+        "file": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "artifact": {
+          "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+          "bytes": 888258
+        },
+        "checks": [
+          {
+            "name": "single_svg",
+            "ok": true,
+            "details": [
+              "found 1 <svg> block(s)"
+            ]
+          },
+          {
+            "name": "finite_svg",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "orthogonal_arrows",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "label_route_clearance",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_crossings",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "relationship_corridors",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "container_border_runs",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "route_rhythm",
+            "ok": true,
+            "details": []
+          },
+          {
+            "name": "legend_clearance",
+            "ok": true,
+            "details": []
+          }
+        ],
+        "composition": {
+          "schemaVersion": 1,
+          "profile": "showcase",
+          "status": "pass",
+          "summary": {
+            "errors": 0,
+            "warnings": 0
+          },
+          "metrics": {
+            "properCrossings": 0,
+            "resolvedCrossovers": 0,
+            "ambiguousCorridors": 0,
+            "arrowheadCollisions": 0,
+            "containerBorderRuns": 0,
+            "labelRouteClearanceIssues": 0,
+            "labelCanvasOverflowIssues": 0,
+            "minLabelRouteClearance": 20,
+            "desktopReadabilityIssues": 0,
+            "viewportHeightIssues": 0,
+            "minProjectedNodeTextPx": 6.048780487804878,
+            "maxBends": 2,
+            "routesOverSuggestedBends": 0,
+            "maxStretch": 1.127,
+            "routesOverSuggestedStretch": 0,
+            "minSegmentPx": 32,
+            "minInteriorSegmentPx": 345,
+            "shortSegmentCount": 0,
+            "shortEndpointSegmentCount": 0,
+            "shortInteriorSegmentCount": 0,
+            "microSegmentCount": 0
+          },
+          "suggestedLimits": {
+            "bendsPerRelationship": 2,
+            "stretch": 1.35,
+            "segmentPx": 16,
+            "microSegmentPx": 8
+          },
+          "routeReview": {
+            "crossings": [],
+            "detours": []
+          },
+          "leadingSpace": {
+            "measured": true,
+            "emptyTopPx": 40,
+            "emptyTopRatio": 0.044,
+            "occupiedTop": 40,
+            "viewBoxTop": 0,
+            "canvasHeight": 904,
+            "typicalNodeHeight": 86,
+            "reviewSuggested": false
+          },
+          "desktopReadability": {
+            "budgetBasis": "legacy-930",
+            "readerContract": "declared-wide-v1",
+            "availableDiagramWidth": 930,
+            "actualBudgetPx": 930,
+            "limit": "legacy",
+            "requestedTargetPx": 7.5,
+            "requestedTargetMet": false,
+            "hardFloorPx": 6,
+            "hardFloorMet": true,
+            "minimumOwner": {
+              "kind": "edge",
+              "id": "invoke",
+              "from": "caller",
+              "to": "cli"
+            },
+            "minimumSourceTextPx": 8,
+            "minimumProjectedTextPx": 6.048780487804878,
+            "semanticTextCount": 33
+          },
+          "issues": []
+        },
+        "provenance": "current",
+        "deliveryReceiptId": "c3666d35-15f7-45be-bfd9-bf8df232c497"
+      }
+    },
+    "browser-check": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": 3252,
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+        "browser-check",
+        "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+        "--json",
+        "--require-provenance",
+        "--out-dir",
+        "/benchmark/runs/skillroster-base/workspace/output/review-1"
+      ],
+      "execution": "in-process",
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "browser-check",
+        "evidenceKind": "automated-browser",
+        "status": "fail",
+        "visualReview": "not-requested",
+        "provenance": "current",
+        "deliveryReceiptId": "c3666d35-15f7-45be-bfd9-bf8df232c497",
+        "artifact": {
+          "path": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+          "sha256": "6077ad87f6c7fd7de148de2ab122c9ae4842150e31263be2f92774693367204b",
+          "bytes": 888258
+        },
+        "state": {
+          "detail": "read",
+          "motion": "still"
+        },
+        "chrome": {
+          "status": "available",
+          "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        },
+        "diagnostics": [
+          {
+            "code": "viewer/browser-check-runtime",
+            "severity": "error",
+            "message": "browser-check could not complete its Chrome inspection.",
+            "subject": {
+              "artifact": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html"
+            },
+            "evidence": {
+              "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114429.720528:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.723828:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /local-user/Library/Application Support/Google/Chrome/Crashpad/attachments/880ba3ed-07ba-40bc-9593-5117b6111055: No such file or directory (2)\n[1103/114429.741635:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.739174:ERROR:third_party/crashpad/crashpad/util/net/http_transport_mac.mm:275] The operation couldn’t be completed. Operation not permitted (NSPOSIXErrorDomain 1)\nFailed to initialize sandbox.[1103/114429.816959:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[1103/114430.113109:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.Failed to initialize sandbox.Trying to load the allocator multiple times. This is *not* supported.\n[1103/114430.158213:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.171300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.237762:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.241945:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\nFailed to initialize sandbox.Failed to initialize sandbox.Failed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.277810:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.296796:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.309686:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.320227:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.331300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[66833:20507379:1103/114430.334917:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[1103/114430.345385:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[66833:20507379:1103/114430.356712:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\n[1103/114430.357803:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.365196:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.365214:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:389] GPU process isn't usable. Goodbye.\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.803835:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66833, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=1328, messages=3, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=3, writtenBytes=255, bufferedBytes=0."
+            },
+            "supportedFixes": [
+              "resolve the reported Chrome inspection error, then rerun browser-check"
+            ]
+          }
+        ],
+        "containment": {
+          "status": "fail",
+          "policy": "fit-or-reader-declared-readable-vertical-scroll",
+          "viewports": []
+        },
+        "themeStates": {
+          "status": "fail",
+          "viewports": []
+        },
+        "readability": {
+          "status": "fail",
+          "minimumProjectedNodeTextPx": 6,
+          "viewports": []
+        },
+        "viewerChrome": {
+          "status": "fail",
+          "viewports": []
+        },
+        "captures": {
+          "status": "not-requested",
+          "screenshots": [],
+          "contactSheet": null
+        },
+        "sidecars": {
+          "directory": "/benchmark/runs/skillroster-base/workspace/output/review-1",
+          "receipt": "skillroster-architecture.browser-check.json",
+          "files": []
+        },
+        "error": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114429.720528:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.723828:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /local-user/Library/Application Support/Google/Chrome/Crashpad/attachments/880ba3ed-07ba-40bc-9593-5117b6111055: No such file or directory (2)\n[1103/114429.741635:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.739174:ERROR:third_party/crashpad/crashpad/util/net/http_transport_mac.mm:275] The operation couldn’t be completed. Operation not permitted (NSPOSIXErrorDomain 1)\nFailed to initialize sandbox.[1103/114429.816959:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[1103/114430.113109:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.Failed to initialize sandbox.Trying to load the allocator multiple times. This is *not* supported.\n[1103/114430.158213:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.171300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.237762:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.241945:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\nFailed to initialize sandbox.Failed to initialize sandbox.Failed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.277810:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.296796:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.309686:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.320227:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.331300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[66833:20507379:1103/114430.334917:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[1103/114430.345385:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[66833:20507379:1103/114430.356712:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\n[1103/114430.357803:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.365196:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.365214:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:389] GPU process isn't usable. Goodbye.\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.803835:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66833, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=1328, messages=3, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=3, writtenBytes=255, bufferedBytes=0."
+      }
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "viewer/browser-check-runtime",
+      "severity": "error",
+      "message": "browser-check could not complete its Chrome inspection.",
+      "subject": {
+        "artifact": "/benchmark/runs/skillroster-base/workspace/output/skillroster-architecture.html"
+      },
+      "evidence": {
+        "reason": "Chrome DevTools read pipe failed: stream ended\nChrome process: still running.\nChrome stderr:\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114429.720528:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.723828:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /local-user/Library/Application Support/Google/Chrome/Crashpad/attachments/880ba3ed-07ba-40bc-9593-5117b6111055: No such file or directory (2)\n[1103/114429.741635:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114429.739174:ERROR:third_party/crashpad/crashpad/util/net/http_transport_mac.mm:275] The operation couldn’t be completed. Operation not permitted (NSPOSIXErrorDomain 1)\nFailed to initialize sandbox.[1103/114429.816959:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[1103/114430.113109:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.Failed to initialize sandbox.Trying to load the allocator multiple times. This is *not* supported.\n[1103/114430.158213:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.171300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.237762:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.241945:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\nFailed to initialize sandbox.Failed to initialize sandbox.Failed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.277810:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.296796:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.309686:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.320227:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[1103/114430.331300:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nFailed to initialize sandbox.[66833:20507379:1103/114430.334917:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[1103/114430.345385:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nsandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[66833:20507379:1103/114430.356712:ERROR:content/browser/network_service_instance_impl.cc:652] Network service crashed or was terminated, restarting service.\n[1103/114430.357803:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\n[66833:20507379:1103/114430.365196:ERROR:content/browser/gpu/gpu_process_host.cc:1044] GPU process exited unexpectedly: exit_code=6\n[66833:20507379:1103/114430.365214:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:389] GPU process isn't usable. Goodbye.\nFailed to initialize sandbox.sandbox initialization failed: Operation not permitted\nFailed to initialize sandbox.[1103/114430.803835:WARNING:third_party/crashpad/crashpad/util/numeric/in_range_cast.h:38] value -634136515 out of range\nChrome transport: Node v20.20.2, libuv 1.52.1, darwin; pid=66833, exitCode=null, signalCode=null.\nChrome read pipe: readable=false, ended=true, destroyed=false, receivedBytes=1328, messages=3, bufferedBytes=0.\nChrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=3, writtenBytes=255, bufferedBytes=0."
+      },
+      "supportedFixes": [
+        "resolve the reported Chrome inspection error, then rerun browser-check"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/benchmark/runs/skillroster-base/workspace/output/review-1/skillroster-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "browser-check",
+  "finishedAt": "2026-11-03T02:44:30.842Z",
+  "durationMs": 4083,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "1bc53ade-4dd3-4345-8e9d-398a5d0a980e",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/benchmark/runs/openpi-base/workspace/output/openpi-delegation.json",
+  "output": "/benchmark/replay/openpi-base/candidate.html",
+  "specification": {
+    "sha256": "d84ef00917a636535daeb2c6a9a05af3fb8dec0d6f50dac12facf38fcb2db393",
+    "bytes": 11196
+  },
+  "artifact": {
+    "sha256": "7485e078d22484d0db3c09b81af208e77c14afbdc2223484c510f694f7bc205b",
+    "bytes": 885850
+  }
+}

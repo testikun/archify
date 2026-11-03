@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/benchmark/runs/openpi-candidate/evidence/snapshots/0c7bf3f9e3c6b3cf0280060960b78115fecdf26aefb121f59b741590163e6e19.json",
+  "candidate": {
+    "path": "/benchmark/runs/openpi-candidate/evidence/snapshots/0c7bf3f9e3c6b3cf0280060960b78115fecdf26aefb121f59b741590163e6e19.json",
+    "sha256": "0c7bf3f9e3c6b3cf0280060960b78115fecdf26aefb121f59b741590163e6e19",
+    "bytes": 10441
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/benchmark/runs/openpi-candidate/evidence/snapshots/0c7bf3f9e3c6b3cf0280060960b78115fecdf26aefb121f59b741590163e6e19.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/benchmark/runs/openpi-candidate/workspace/project",
+      "--candidate-sha256",
+      "0c7bf3f9e3c6b3cf0280060960b78115fecdf26aefb121f59b741590163e6e19",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 21,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.5,
+      "maxBends": 3,
+      "routesOverSuggestedBends": 1,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 24,
+      "minInteriorSegmentPx": 219,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "settled-hook",
+            "from": "manager",
+            "to": "inbox",
+            "label": "onSettled: unconsumed",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ]
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 40,
+      "emptyTopRatio": 0.078,
+      "occupiedTop": 40,
+      "viewBoxTop": 0,
+      "canvasHeight": 512,
+      "typicalNodeHeight": 94,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "recognized-declared-wide",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 1080,
+      "actualBudgetPx": 1080,
+      "actualReaderWidth": 1110,
+      "desiredReaderWidth": 1110,
+      "viewportCap": 1376,
+      "limit": "source-size",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "delegate",
+        "from": "caller",
+        "to": "tools"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.5,
+      "semanticTextCount": 23
+    },
+    "issues": []
+  }
+}

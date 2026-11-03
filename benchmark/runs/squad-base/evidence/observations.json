@@ -1,0 +1,99 @@
+{
+  "run_id": "squad-base",
+  "project_id": "squad",
+  "arm": "base",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 292.051605500048,
+  "usage": {
+    "input_tokens": 1245497,
+    "cached_input_tokens": 1178752,
+    "output_tokens": 6142,
+    "reasoning_output_tokens": 1245,
+    "uncached_input_tokens": 66745
+  },
+  "time_to_first_json_seconds_descriptive_only": 179.711965,
+  "time_to_first_cli_seconds_descriptive_only": 184.613071,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 19,
+  "failed_tool_commands": 0,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-03T02:37:22.010Z",
+      "pid": 62714,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/squad-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/squad-coordination.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/squad-base/workspace/output/candidate.json",
+      "sha256": "4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e",
+      "snapshot": "snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json"
+    },
+    {
+      "at": "2026-11-03T02:37:58.201Z",
+      "pid": 63160,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/squad-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/squad-coordination.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-final",
+        "--json"
+      ],
+      "source": "/benchmark/runs/squad-base/workspace/output/candidate.json",
+      "sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e",
+      "snapshot": "snapshots/ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e.json"
+    }
+  ],
+  "first_json": "snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json",
+  "first_submitted_json": "snapshots/4f311d72ad0ea8b8eab7b91918678091314c35e0034089714426da4b1266d55e.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/benchmark/runs/squad-base/workspace/output/candidate.json",
+  "final_json_sha256": "ada813abf614ef36c2ad9741320de9cbd11e09cadd95a12e81c63c6b47456d9e",
+  "html": [
+    "/benchmark/runs/squad-base/workspace/output/squad-coordination.html"
+  ],
+  "delivery_receipts": [
+    "/benchmark/runs/squad-base/workspace/output/squad-coordination.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/benchmark/runs/squad-base/workspace/output/squad-coordination.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relative_coordinates_in_final": 0,
+  "source_status": "",
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/benchmark/runs/squad-base/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

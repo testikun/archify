@@ -1,0 +1,141 @@
+{
+  "run_id": "mco-candidate",
+  "project_id": "mco",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 467.8108419160126,
+  "usage": {
+    "input_tokens": 2257373,
+    "cached_input_tokens": 2190592,
+    "output_tokens": 11312,
+    "reasoning_output_tokens": 3548,
+    "uncached_input_tokens": 66781
+  },
+  "time_to_first_json_seconds_descriptive_only": 219.787704,
+  "time_to_first_cli_seconds_descriptive_only": 219.803959,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 30,
+  "failed_tool_commands": 2,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 8,
+  "repair_rounds": 3,
+  "attempts": [
+    {
+      "at": "2026-11-03T02:23:59.201Z",
+      "pid": 54483,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "16cbd6213a08d77313d57f77f6451271a3c207485cb1524b63e9b7f19e94c150",
+      "snapshot": "snapshots/16cbd6213a08d77313d57f77f6451271a3c207485cb1524b63e9b7f19e94c150.json"
+    },
+    {
+      "at": "2026-11-03T02:24:12.733Z",
+      "pid": 54646,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "d5fd84f4dfbe5403271d1d2012332d9b9da11de696482fa2a1e0c1a009f147b0",
+      "snapshot": "snapshots/d5fd84f4dfbe5403271d1d2012332d9b9da11de696482fa2a1e0c1a009f147b0.json"
+    },
+    {
+      "at": "2026-11-03T02:25:35.876Z",
+      "pid": 55352,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "8e2ae9183072768d2660429d27651297dcb965660f08baea98b9f964cfbb7b8b",
+      "snapshot": "snapshots/8e2ae9183072768d2660429d27651297dcb965660f08baea98b9f964cfbb7b8b.json"
+    },
+    {
+      "at": "2026-11-03T02:27:21.351Z",
+      "pid": 56300,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/benchmark/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-3",
+        "--json"
+      ],
+      "source": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+      "snapshot": "snapshots/56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf.json"
+    }
+  ],
+  "first_json": "snapshots/16cbd6213a08d77313d57f77f6451271a3c207485cb1524b63e9b7f19e94c150.json",
+  "first_submitted_json": "snapshots/16cbd6213a08d77313d57f77f6451271a3c207485cb1524b63e9b7f19e94c150.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/benchmark/runs/mco-candidate/workspace/output/candidate.json",
+  "final_json_sha256": "56fe72f866a8619a65f3ac7c6a00cb4128672ad21db3b73dff2d76c11b331ccf",
+  "html": [
+    "/benchmark/runs/mco-candidate/workspace/output/mco-review.html"
+  ],
+  "delivery_receipts": [
+    "/benchmark/runs/mco-candidate/workspace/output/mco-review.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/benchmark/runs/mco-candidate/workspace/output/mco-review.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relative_coordinates_in_final": 0,
+  "source_status": "",
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/benchmark/runs/mco-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

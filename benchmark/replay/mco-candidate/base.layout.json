@@ -1,0 +1,397 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1465,
+    770
+  ],
+  "components": [
+    {
+      "id": "review-entry",
+      "type": "backend",
+      "label": "Review entry + validation",
+      "x": 55,
+      "y": 130,
+      "width": 245,
+      "height": 92,
+      "pos": [
+        55,
+        130
+      ]
+    },
+    {
+      "id": "parallel-runtime",
+      "type": "backend",
+      "label": "Invocation scheduler",
+      "x": 435,
+      "y": 130,
+      "width": 265,
+      "height": 92,
+      "pos": [
+        435,
+        130
+      ]
+    },
+    {
+      "id": "invocation-worker",
+      "type": "backend",
+      "label": "Per-invocation worker",
+      "x": 830,
+      "y": 130,
+      "width": 245,
+      "height": 92,
+      "pos": [
+        830,
+        130
+      ]
+    },
+    {
+      "id": "provider-adapters",
+      "type": "backend",
+      "label": "Selected provider adapters",
+      "x": 830,
+      "y": 390,
+      "width": 245,
+      "height": 92,
+      "pos": [
+        830,
+        390
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Provider CLI processes",
+      "x": 1200,
+      "y": 390,
+      "width": 225,
+      "height": 92,
+      "pos": [
+        1200,
+        390
+      ]
+    },
+    {
+      "id": "individual-results",
+      "type": "backend",
+      "label": "Individual result envelope",
+      "x": 435,
+      "y": 390,
+      "width": 265,
+      "height": 92,
+      "pos": [
+        435,
+        390
+      ]
+    },
+    {
+      "id": "answer-artifacts",
+      "type": "database",
+      "label": "Optional saved review files",
+      "x": 445,
+      "y": 610,
+      "width": 245,
+      "height": 92,
+      "pos": [
+        445,
+        610
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "MCO Python runtime · logical responsibilities",
+      "x": 25,
+      "y": 100,
+      "width": 1080,
+      "height": 402,
+      "wraps": [
+        "review-entry",
+        "parallel-runtime",
+        "invocation-worker",
+        "provider-adapters",
+        "individual-results"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "review-entry",
+      "to": "parallel-runtime",
+      "label": "Validated invocations",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          300,
+          166.9
+        ],
+        [
+          435,
+          166.9
+        ]
+      ],
+      "labelAt": [
+        368,
+        157
+      ]
+    },
+    {
+      "from": "parallel-runtime",
+      "to": "invocation-worker",
+      "label": "Submit each invocation",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          700,
+          166.9
+        ],
+        [
+          830,
+          166.9
+        ]
+      ],
+      "labelAt": [
+        765,
+        157
+      ]
+    },
+    {
+      "from": "invocation-worker",
+      "to": "provider-adapters",
+      "label": "run / poll / cancel",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          952.5,
+          222
+        ],
+        [
+          952.5,
+          390
+        ]
+      ],
+      "labelAt": [
+        896,
+        309
+      ]
+    },
+    {
+      "from": "provider-adapters",
+      "to": "provider-processes",
+      "label": "Spawn CLI + prompt",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1075,
+          443
+        ],
+        [
+          1200,
+          443
+        ]
+      ],
+      "labelAt": [
+        1138,
+        433
+      ]
+    },
+    {
+      "from": "provider-processes",
+      "to": "invocation-worker",
+      "label": "Raw log files + exit",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1312.5,
+          390
+        ],
+        [
+          1312.5,
+          176
+        ],
+        [
+          1075,
+          176
+        ]
+      ],
+      "labelAt": [
+        1194,
+        166
+      ]
+    },
+    {
+      "from": "invocation-worker",
+      "to": "individual-results",
+      "label": "Answer or error record",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          830,
+          183
+        ],
+        [
+          765,
+          183
+        ],
+        [
+          765,
+          436
+        ],
+        [
+          700,
+          436
+        ]
+      ],
+      "labelAt": [
+        765,
+        300
+      ]
+    },
+    {
+      "from": "individual-results",
+      "to": "review-entry",
+      "label": "JSON / text / MCP result",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          435,
+          406
+        ],
+        [
+          284,
+          406
+        ],
+        [
+          284,
+          222
+        ]
+      ],
+      "labelAt": [
+        284,
+        304
+      ]
+    },
+    {
+      "from": "individual-results",
+      "to": "answer-artifacts",
+      "label": "Save summary if enabled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          567.5,
+          482
+        ],
+        [
+          567.5,
+          610
+        ]
+      ],
+      "labelAt": [
+        501,
+        549
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Validated invocations",
+      "x": 312,
+      "y": 147,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        368,
+        157
+      ]
+    },
+    {
+      "text": "Submit each invocation",
+      "x": 707,
+      "y": 147,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        765,
+        157
+      ]
+    },
+    {
+      "text": "run / poll / cancel",
+      "x": 845,
+      "y": 299,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        896,
+        309
+      ]
+    },
+    {
+      "text": "Spawn CLI + prompt",
+      "x": 1089,
+      "y": 423,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1138,
+        433
+      ]
+    },
+    {
+      "text": "Raw log files + exit",
+      "x": 1141,
+      "y": 156,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        1194,
+        166
+      ]
+    },
+    {
+      "text": "Answer or error record",
+      "x": 707,
+      "y": 290,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        765,
+        300
+      ]
+    },
+    {
+      "text": "JSON / text / MCP result",
+      "x": 221,
+      "y": 294,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        284,
+        304
+      ]
+    },
+    {
+      "text": "Save summary if enabled",
+      "x": 441,
+      "y": 539,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        501,
+        549
+      ]
+    }
+  ]
+}

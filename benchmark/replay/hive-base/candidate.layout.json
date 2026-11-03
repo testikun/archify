@@ -1,0 +1,537 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1293,
+    598
+  ],
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "x": 40,
+      "y": 70,
+      "width": 240,
+      "height": 100,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "terminal-runtime",
+      "type": "backend",
+      "label": "PTY & terminal runtime",
+      "x": 420,
+      "y": 70,
+      "width": 250,
+      "height": 100,
+      "pos": [
+        420,
+        70
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "x": 950,
+      "y": 70,
+      "width": 250,
+      "height": 100,
+      "pos": [
+        950,
+        70
+      ]
+    },
+    {
+      "id": "control-plane",
+      "type": "backend",
+      "label": "Team control plane",
+      "x": 420,
+      "y": 400,
+      "width": 250,
+      "height": 110,
+      "pos": [
+        420,
+        400
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "x": 950,
+      "y": 400,
+      "width": 250,
+      "height": 110,
+      "pos": [
+        950,
+        400
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "Local SQLite state",
+      "x": 40,
+      "y": 400,
+      "width": 240,
+      "height": 110,
+      "pos": [
+        40,
+        400
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Local Node runtime · loopback HTTP / WebSocket",
+      "x": 395,
+      "y": 45,
+      "width": 300,
+      "height": 485,
+      "wraps": [
+        "terminal-runtime",
+        "control-plane"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Separate agent CLI processes · same workspace",
+      "x": 925,
+      "y": 45,
+      "width": 300,
+      "height": 485,
+      "wraps": [
+        "orchestrator",
+        "worker"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "workbench",
+      "to": "terminal-runtime",
+      "label": "WS keystrokes",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          280,
+          120
+        ],
+        [
+          420,
+          120
+        ]
+      ],
+      "labelAt": [
+        350,
+        110
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "workbench",
+      "label": "WS terminal output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          538,
+          70
+        ],
+        [
+          538,
+          46
+        ],
+        [
+          160,
+          46
+        ],
+        [
+          160,
+          70
+        ]
+      ],
+      "labelAt": [
+        349,
+        36
+      ]
+    },
+    {
+      "from": "workbench",
+      "to": "control-plane",
+      "label": "HTTP goal / activity reads",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          160,
+          170
+        ],
+        [
+          160,
+          194
+        ],
+        [
+          396,
+          194
+        ],
+        [
+          396,
+          448
+        ],
+        [
+          420,
+          448
+        ]
+      ],
+      "labelAt": [
+        278,
+        184
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "orchestrator",
+      "label": "PTY goal / report input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          670,
+          106
+        ],
+        [
+          950,
+          106
+        ]
+      ],
+      "labelAt": [
+        810,
+        96
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "terminal-runtime",
+      "label": "PTY output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1075,
+          70
+        ],
+        [
+          1075,
+          46
+        ],
+        [
+          552,
+          46
+        ],
+        [
+          552,
+          70
+        ]
+      ],
+      "labelAt": [
+        814,
+        36
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "control-plane",
+      "label": "team send · HTTP",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1075,
+          170
+        ],
+        [
+          1075,
+          285
+        ],
+        [
+          552,
+          285
+        ],
+        [
+          552,
+          400
+        ]
+      ],
+      "labelAt": [
+        814,
+        275
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "control-plane",
+      "label": "report / status / message · HTTP",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          950,
+          455
+        ],
+        [
+          670,
+          455
+        ]
+      ],
+      "labelAt": [
+        810,
+        445
+      ]
+    },
+    {
+      "from": "control-plane",
+      "to": "terminal-runtime",
+      "label": "Ready-gated prompt / report",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          535.9,
+          400
+        ],
+        [
+          535.9,
+          170
+        ]
+      ],
+      "labelAt": [
+        612,
+        231
+      ]
+    },
+    {
+      "from": "terminal-runtime",
+      "to": "worker",
+      "label": "PTY task prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          670,
+          149.05
+        ],
+        [
+          765.1,
+          149.05
+        ],
+        [
+          765.1,
+          376
+        ],
+        [
+          1075,
+          376
+        ],
+        [
+          1075,
+          400
+        ]
+      ],
+      "labelAt": [
+        765,
+        253
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "terminal-runtime",
+      "label": "PTY output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1200,
+          455
+        ],
+        [
+          1224,
+          455
+        ],
+        [
+          1224,
+          368
+        ],
+        [
+          694,
+          368
+        ],
+        [
+          694,
+          134
+        ],
+        [
+          670,
+          134
+        ]
+      ],
+      "labelAt": [
+        1259,
+        415
+      ]
+    },
+    {
+      "from": "control-plane",
+      "to": "sqlite",
+      "label": "SQL read / write",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          420,
+          462
+        ],
+        [
+          280,
+          462
+        ]
+      ],
+      "labelAt": [
+        350,
+        482
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "WS keystrokes",
+      "x": 314,
+      "y": 100,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        350,
+        110
+      ]
+    },
+    {
+      "text": "WS terminal output",
+      "x": 301,
+      "y": 26,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        349,
+        36
+      ]
+    },
+    {
+      "text": "HTTP goal / activity reads",
+      "x": 211,
+      "y": 174,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        278,
+        184
+      ]
+    },
+    {
+      "text": "PTY goal / report input",
+      "x": 750,
+      "y": 86,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        810,
+        96
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 785,
+      "y": 26,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        814,
+        36
+      ]
+    },
+    {
+      "text": "team send · HTTP",
+      "x": 770,
+      "y": 265,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        814,
+        275
+      ]
+    },
+    {
+      "text": "report / status / message · HTTP",
+      "x": 728,
+      "y": 435,
+      "width": 164,
+      "height": 14,
+      "labelAt": [
+        810,
+        445
+      ]
+    },
+    {
+      "text": "Ready-gated prompt / report",
+      "x": 542,
+      "y": 221,
+      "width": 140,
+      "height": 14,
+      "labelAt": [
+        612,
+        231
+      ]
+    },
+    {
+      "text": "PTY task prompt",
+      "x": 724,
+      "y": 243,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        765,
+        253
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 1230,
+      "y": 405,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1259,
+        415
+      ]
+    },
+    {
+      "text": "SQL read / write",
+      "x": 307,
+      "y": 472,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        350,
+        482
+      ]
+    }
+  ]
+}
