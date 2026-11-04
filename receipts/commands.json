@@ -1,0 +1,334 @@
+[
+  {
+    "case": "original-v1",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/original-v1.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.167
+  },
+  {
+    "case": "original-v1",
+    "operation": "render",
+    "args": [
+      "render",
+      "workflow",
+      "/evidence/inputs/original-v1.workflow.json",
+      "/evidence/artifacts/original-v1.html",
+      "--quality",
+      "showcase"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.129
+  },
+  {
+    "case": "v1-output-only",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v1-output-only.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.132
+  },
+  {
+    "case": "v1-output-only",
+    "operation": "render",
+    "args": [
+      "render",
+      "workflow",
+      "/evidence/inputs/v1-output-only.workflow.json",
+      "/evidence/artifacts/v1-output-only.html",
+      "--quality",
+      "showcase"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.113
+  },
+  {
+    "case": "v2-uncentered",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-uncentered.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.133
+  },
+  {
+    "case": "v2-uncentered",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/v2-uncentered.workflow.json",
+      "/evidence/artifacts/v2-uncentered.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.255
+  },
+  {
+    "case": "v2-centered",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-centered.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.13
+  },
+  {
+    "case": "v2-centered",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/v2-centered.workflow.json",
+      "/evidence/artifacts/v2-centered.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.246
+  },
+  {
+    "case": "v2-explicit-original-canvas",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-explicit-original-canvas.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.141
+  },
+  {
+    "case": "v2-explicit-original-canvas",
+    "operation": "render",
+    "args": [
+      "render",
+      "workflow",
+      "/evidence/inputs/v2-explicit-original-canvas.workflow.json",
+      "/evidence/artifacts/v2-explicit-original-canvas.html",
+      "--quality",
+      "showcase"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.121
+  },
+  {
+    "case": "v2-explicit-capacity",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-explicit-capacity.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.135
+  },
+  {
+    "case": "v2-explicit-capacity",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/v2-explicit-capacity.workflow.json",
+      "/evidence/artifacts/v2-explicit-capacity.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.488
+  },
+  {
+    "case": "v2-absolute-pin",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-absolute-pin.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.136
+  },
+  {
+    "case": "v2-absolute-pin",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/v2-absolute-pin.workflow.json",
+      "/evidence/artifacts/v2-absolute-pin.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.25
+  },
+  {
+    "case": "probe-lane-height",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/probe-lane-height.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.133
+  },
+  {
+    "case": "probe-lane-height",
+    "operation": "render",
+    "args": [
+      "render",
+      "workflow",
+      "/evidence/inputs/probe-lane-height.workflow.json",
+      "/evidence/artifacts/probe-lane-height.html",
+      "--quality",
+      "showcase"
+    ],
+    "exitCode": 1,
+    "elapsedSeconds": 0.111
+  },
+  {
+    "case": "v2-five-stages",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/v2-five-stages.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.137
+  },
+  {
+    "case": "v2-five-stages",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/v2-five-stages.workflow.json",
+      "/evidence/artifacts/v2-five-stages.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.272
+  },
+  {
+    "case": "original-v1",
+    "operation": "migrate",
+    "args": [
+      "migrate",
+      "workflow",
+      "/evidence/inputs/original-v1.workflow.json",
+      "/evidence/inputs/migrated.workflow.json",
+      "--to-schema",
+      "2",
+      "--output",
+      "stack.html",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.287
+  },
+  {
+    "case": "migrated",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/migrated.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.157
+  },
+  {
+    "case": "migrated",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/migrated.workflow.json",
+      "/evidence/artifacts/migrated.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.282
+  },
+  {
+    "case": "migrated-centered-implicit",
+    "operation": "validate",
+    "args": [
+      "validate",
+      "workflow",
+      "/evidence/inputs/migrated-centered-implicit.workflow.json",
+      "--quality",
+      "showcase",
+      "--layout-json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.235
+  },
+  {
+    "case": "migrated-centered-implicit",
+    "operation": "deliver",
+    "args": [
+      "deliver",
+      "workflow",
+      "/evidence/inputs/migrated-centered-implicit.workflow.json",
+      "/evidence/artifacts/migrated-centered-implicit.html",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 0,
+    "elapsedSeconds": 0.268
+  }
+]

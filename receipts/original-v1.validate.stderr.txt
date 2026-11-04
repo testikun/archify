@@ -1,0 +1,3 @@
+workflow schema validation failed:
+  /meta must have required property 'output' {"missingProperty":"output"}
+[schema/required] /meta must have required property 'output' Fix: add required property "output".

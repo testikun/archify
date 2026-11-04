@@ -1,0 +1,15 @@
+{
+  "recommendedAndNormalizedMigrationSameCanonicalSvg": true,
+  "canonicalSvgSha256": "70436093a72d1788d7866a5c37a7a9da99bee2af3895c0317ac9fae5cc7ae0c1",
+  "uncenteredCanvas": [
+    768,
+    627
+  ],
+  "centeredCanvas": [
+    768,
+    452
+  ],
+  "heightReduction": 175,
+  "heightReductionPercent": 27.91068580542265,
+  "interpretation": "Input-only ablation on identical unmodified dev; not a product before/after patch."
+}

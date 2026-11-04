@@ -1,0 +1,6 @@
+{
+  "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "trackedBlobsChecked": 1273,
+  "changed": [],
+  "method": "git blob hash of every archived tracked blob; node_modules excluded because it is not tracked"
+}

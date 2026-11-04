@@ -1,0 +1,123 @@
+{
+  "contract": "readable-v2",
+  "viewBox": [
+    720,
+    640
+  ],
+  "requiredViewBox": [
+    768,
+    452
+  ],
+  "columns": [
+    94,
+    214,
+    334,
+    454,
+    574,
+    694
+  ],
+  "nodes": [
+    {
+      "id": "a",
+      "lane": "cage",
+      "col": 2,
+      "x": 288,
+      "y": 91,
+      "width": 92,
+      "height": 52
+    },
+    {
+      "id": "b",
+      "lane": "cage",
+      "col": 2,
+      "x": 288,
+      "y": 181,
+      "width": 92,
+      "height": 52
+    },
+    {
+      "id": "c",
+      "lane": "cage",
+      "col": 2,
+      "x": 288,
+      "y": 271,
+      "width": 92,
+      "height": 52
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "a",
+      "to": "b",
+      "points": [
+        [
+          334,
+          143
+        ],
+        [
+          334,
+          181
+        ]
+      ]
+    },
+    {
+      "id": "e2",
+      "from": "b",
+      "to": "c",
+      "points": [
+        [
+          334,
+          233
+        ],
+        [
+          334,
+          271
+        ]
+      ]
+    }
+  ],
+  "labels": [],
+  "diagnostics": [
+    {
+      "code": "workflow/viewbox-capacity",
+      "severity": "error",
+      "message": "Workflow viewBox 720×640 cannot contain the readable-v2 layout; minimum 768×452.",
+      "subject": {
+        "diagramType": "workflow",
+        "path": "/meta/viewBox"
+      },
+      "evidence": {
+        "actualViewBox": [
+          720,
+          640
+        ],
+        "requiredViewBox": [
+          768,
+          452
+        ],
+        "contentBounds": [
+          20,
+          27,
+          752,
+          390
+        ],
+        "contributors": [
+          "legend title",
+          "workflow top padding",
+          "workflow lanes",
+          "legend",
+          "lane cage group frame containment 1px",
+          "lane cage group label clearance 5px",
+          "node a height 52px with yOffset -90px",
+          "node c height 52px with yOffset 90px"
+        ]
+      },
+      "supportedFixes": [
+        "set meta.viewBox to at least [768, 452]",
+        "omit meta.viewBox so the compiler can use its measured intrinsic canvas"
+      ]
+    }
+  ],
+  "ok": false
+}

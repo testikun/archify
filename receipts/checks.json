@@ -1,0 +1,93 @@
+[
+  {
+    "name": "compiler-migration-tests",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "scripts/run-tests.mjs",
+      "--require-files",
+      "test/workflow-compiler.test.mjs",
+      "test/workflow-migration.test.mjs",
+      "test/workflow-migration-semantics.test.mjs"
+    ],
+    "cwd": "/evidence/source",
+    "exitCode": 0,
+    "elapsedSeconds": 12.422
+  },
+  {
+    "name": "desktop-stack-tests",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "scripts/run-tests.mjs",
+      "--require-files",
+      "test/desktop-reader-browser.test.mjs",
+      "--test-name-pattern=issue #250"
+    ],
+    "cwd": "/evidence/source",
+    "exitCode": 0,
+    "elapsedSeconds": 3.789
+  },
+  {
+    "name": "v2-centered.visual-check",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "/evidence/source/archify/bin/archify.mjs",
+      "visual-check",
+      "/evidence/artifacts/v2-centered.html",
+      "--require-provenance",
+      "--out-dir",
+      "/evidence/receipts/visual/v2-centered",
+      "--json"
+    ],
+    "cwd": "/evidence",
+    "exitCode": 0,
+    "elapsedSeconds": 1.636
+  },
+  {
+    "name": "v2-five-stages.visual-check",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "/evidence/source/archify/bin/archify.mjs",
+      "visual-check",
+      "/evidence/artifacts/v2-five-stages.html",
+      "--require-provenance",
+      "--out-dir",
+      "/evidence/receipts/visual/v2-five-stages",
+      "--json"
+    ],
+    "cwd": "/evidence",
+    "exitCode": 0,
+    "elapsedSeconds": 1.661
+  },
+  {
+    "name": "migrated.visual-check",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "/evidence/source/archify/bin/archify.mjs",
+      "visual-check",
+      "/evidence/artifacts/migrated.html",
+      "--require-provenance",
+      "--out-dir",
+      "/evidence/receipts/visual/migrated",
+      "--json"
+    ],
+    "cwd": "/evidence",
+    "exitCode": 1,
+    "elapsedSeconds": 1.603
+  },
+  {
+    "name": "v2-explicit-capacity.visual-check",
+    "args": [
+      "/toolchain/node-v22.23.2/bin/node",
+      "/evidence/source/archify/bin/archify.mjs",
+      "visual-check",
+      "/evidence/artifacts/v2-explicit-capacity.html",
+      "--require-provenance",
+      "--out-dir",
+      "/evidence/receipts/visual/v2-explicit-capacity",
+      "--json"
+    ],
+    "cwd": "/evidence",
+    "exitCode": 1,
+    "elapsedSeconds": 1.68
+  }
+]

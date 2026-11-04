@@ -1,0 +1,194 @@
+[
+  {
+    "name": "v2-centered",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "mobile": true
+    },
+    "freshBrowser": true,
+    "initial": {
+      "wide": "true",
+      "overflowX": "auto",
+      "scrollWidth": 744,
+      "clientWidth": 356,
+      "scrollLeft": 0,
+      "camera": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "font": 10.3125,
+          "left": 299,
+          "right": 385.25,
+          "horizontallyVisible": false
+        },
+        {
+          "id": "b",
+          "font": 10.3125,
+          "left": 299,
+          "right": 385.25,
+          "horizontallyVisible": false
+        },
+        {
+          "id": "c",
+          "font": 10.3125,
+          "left": 299,
+          "right": 385.25,
+          "horizontallyVisible": false
+        }
+      ]
+    },
+    "action": "native container horizontal scroll to center",
+    "after": {
+      "wide": "true",
+      "overflowX": "auto",
+      "scrollWidth": 744,
+      "clientWidth": 356,
+      "scrollLeft": 180,
+      "camera": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "manual"
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "font": 10.3125,
+          "left": 119,
+          "right": 205.25,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "b",
+          "font": 10.3125,
+          "left": 119,
+          "right": 205.25,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "c",
+          "font": 10.3125,
+          "left": 119,
+          "right": 205.25,
+          "horizontallyVisible": true
+        }
+      ]
+    }
+  },
+  {
+    "name": "v2-five-stages",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "mobile": true
+    },
+    "freshBrowser": true,
+    "initial": {
+      "wide": null,
+      "overflowX": "hidden",
+      "scrollWidth": 356,
+      "clientWidth": 356,
+      "scrollLeft": 0,
+      "camera": {
+        "scale": 1,
+        "x": 0,
+        "y": 0,
+        "mode": "overview"
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "font": 4.755117681962025,
+          "left": 153.50079345703125,
+          "right": 193.27085876464844,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "b",
+          "font": 4.755117681962025,
+          "left": 153.50079345703125,
+          "right": 193.27085876464844,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "c",
+          "font": 4.755117681962025,
+          "left": 153.50079345703125,
+          "right": 193.27085876464844,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "d",
+          "font": 4.755117681962025,
+          "left": 153.50079345703125,
+          "right": 193.27085876464844,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "e",
+          "font": 4.755117681962025,
+          "left": 153.50079345703125,
+          "right": 193.27085876464844,
+          "horizontallyVisible": true
+        }
+      ]
+    },
+    "action": "native camera zoomIn 6 times (250%)",
+    "after": {
+      "wide": null,
+      "overflowX": "hidden",
+      "scrollWidth": 593,
+      "clientWidth": 356,
+      "scrollLeft": 0,
+      "camera": {
+        "scale": 2.5,
+        "x": -249,
+        "y": -204.75,
+        "mode": "manual"
+      },
+      "nodes": [
+        {
+          "id": "a",
+          "font": 11.887794204905063,
+          "left": 91.25198364257812,
+          "right": 190.67715454101562,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "b",
+          "font": 11.887794204905063,
+          "left": 91.25198364257812,
+          "right": 190.67715454101562,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "c",
+          "font": 11.887794204905063,
+          "left": 91.25198364257812,
+          "right": 190.67715454101562,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "d",
+          "font": 11.887794204905063,
+          "left": 91.25198364257812,
+          "right": 190.67715454101562,
+          "horizontallyVisible": true
+        },
+        {
+          "id": "e",
+          "font": 11.887794204905063,
+          "left": 91.25198364257812,
+          "right": 190.67715454101562,
+          "horizontallyVisible": true
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: issue \#250 tall intrinsic workflow uses reading width and permits readable page scroll
+ok 1 - issue \#250 tall intrinsic workflow uses reading width and permits readable page scroll
+  ---
+  duration_ms: 1905.377375
+  type: 'test'
+  ...
+# Subtest: issue \#250 five-stage stack retains reading scale within the automatic enlargement cap
+ok 2 - issue \#250 five-stage stack retains reading scale within the automatic enlargement cap
+  ---
+  duration_ms: 1581.462042
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3566.091583

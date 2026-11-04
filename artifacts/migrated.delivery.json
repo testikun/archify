@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ece2cedd-bb7c-49f0-b249-b043a9b82854",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/evidence/inputs/migrated.workflow.json",
+  "output": "/evidence/artifacts/migrated.html",
+  "specification": {
+    "sha256": "51dbc70ba2ec294bc47a5009ca97302a5ca9c951c79982c9d6548c3b9f64a182",
+    "bytes": 1178
+  },
+  "artifact": {
+    "sha256": "903259e05b45916377943a98df6d0a30e47a8dc69ca24bbce35b3c4cbd4a03ec",
+    "bytes": 855792
+  }
+}

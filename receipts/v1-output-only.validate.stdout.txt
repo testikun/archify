@@ -1,0 +1,104 @@
+{
+  "contract": "fixed-v1",
+  "viewBox": [
+    720,
+    640
+  ],
+  "requiredViewBox": [
+    720,
+    343
+  ],
+  "columns": [
+    88,
+    220,
+    300,
+    430,
+    500,
+    625
+  ],
+  "nodes": [
+    {
+      "id": "a",
+      "lane": "cage",
+      "col": 2,
+      "x": 254,
+      "y": 93,
+      "width": 92,
+      "height": 52
+    },
+    {
+      "id": "b",
+      "lane": "cage",
+      "col": 2,
+      "x": 254,
+      "y": 183,
+      "width": 92,
+      "height": 52
+    },
+    {
+      "id": "c",
+      "lane": "cage",
+      "col": 2,
+      "x": 254,
+      "y": 273,
+      "width": 92,
+      "height": 52
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "a",
+      "to": "b",
+      "points": [
+        [
+          300,
+          145
+        ],
+        [
+          300,
+          183
+        ]
+      ]
+    },
+    {
+      "id": "e2",
+      "from": "b",
+      "to": "c",
+      "points": [
+        [
+          300,
+          235
+        ],
+        [
+          300,
+          273
+        ]
+      ]
+    }
+  ],
+  "labels": [],
+  "diagnostics": [
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Node \"b\" collides with the title or boundary of lane \"cage\".",
+      "subject": {
+        "diagramType": "workflow"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    },
+    {
+      "code": "layout/constraint",
+      "severity": "error",
+      "message": "Node \"c\" collides with the title or boundary of lane \"cage\".",
+      "subject": {
+        "diagramType": "workflow"
+      },
+      "evidence": {},
+      "supportedFixes": []
+    }
+  ],
+  "ok": false
+}

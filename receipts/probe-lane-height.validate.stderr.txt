@@ -1,0 +1,3 @@
+workflow schema validation failed:
+  /lanes/0 (id/label: "cage") must NOT have additional properties {"additionalProperty":"height"}
+[schema/additionalProperties] /lanes/0 (id/label: "cage") must NOT have additional properties Fix: remove unsupported property "height".

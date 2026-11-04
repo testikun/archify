@@ -1,0 +1,56 @@
+{
+  "v1ToCenteredV2SameSemanticFields": true,
+  "cases": {
+    "original-v1": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "462526ef05a6ae8b44ef99a6821aa0f5fcb031775b1ed1ee7c19a96f43d3a8ca"
+    },
+    "v1-output-only": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "71903c190058a6adc2dacae43642eb6c65c8f0defada15d92663cf99e8da8887"
+    },
+    "v2-uncentered": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "b9b33c00cb6c7f749c5cf0cc49ce2d85a5b867ef6118ef657c72a68f6527d42b"
+    },
+    "v2-centered": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "04a760f201a61563e9d97570f0e398d6a786e705c4cda1b690da6e5a1f6abd90"
+    },
+    "v2-explicit-original-canvas": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "30383851ca92c5f9c60f982b4f24eed045935916f39931de54c21c1efe76eefe"
+    },
+    "v2-explicit-capacity": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "6bc8696871fb5b6334f0b631cd8f7e28e24df5f64ee61e2f69a8eb1d80b73fc8"
+    },
+    "v2-absolute-pin": {
+      "sameSemanticFieldsAsOriginal": false,
+      "sha256": "353feb79db817e828d603cd6a06f1bd6be8c9c4db22990650a4777da63e81183"
+    },
+    "probe-lane-height": {
+      "sameSemanticFieldsAsOriginal": false,
+      "sha256": "e10a530bc0e4627a5cf3e006288b44e76e2fc222db94648dd571287d072236e5"
+    },
+    "v2-five-stages": {
+      "sameSemanticFieldsAsOriginal": false,
+      "sha256": "98edfbb9337e3fac42a842c64ba1431cdc6d5f697b285f605f82032d46831fb1"
+    },
+    "migrated": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "51dbc70ba2ec294bc47a5009ca97302a5ca9c951c79982c9d6548c3b9f64a182"
+    },
+    "migrated-centered-implicit": {
+      "sameSemanticFieldsAsOriginal": true,
+      "sha256": "04a760f201a61563e9d97570f0e398d6a786e705c4cda1b690da6e5a1f6abd90"
+    }
+  },
+  "changedFields": [
+    "meta.output added",
+    "schema_version: 1 -> 2",
+    "meta.viewBox removed",
+    "nodes[*].yOffset: [0,90,180] -> [-90,0,90]"
+  ],
+  "fiveStageIsSyntheticExtension": true
+}

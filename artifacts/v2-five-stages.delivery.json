@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "37b5e9bc-4cfd-4923-958b-ffb396ad528e",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/evidence/inputs/v2-five-stages.workflow.json",
+  "output": "/evidence/artifacts/v2-five-stages.html",
+  "specification": {
+    "sha256": "98edfbb9337e3fac42a842c64ba1431cdc6d5f697b285f605f82032d46831fb1",
+    "bytes": 1710
+  },
+  "artifact": {
+    "sha256": "1df1dece10ef2bd76cb3b0123b8c1faa250cb8e1cb83d6d494ea0567c2327949",
+    "bytes": 858237
+  }
+}

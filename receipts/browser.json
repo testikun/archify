@@ -1,0 +1,1692 @@
+[
+  {
+    "environment": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.80",
+      "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.27"
+    },
+    "node": "v22.23.2",
+    "source": "63c9263e84bd3993cab8e09b3d69888857858635"
+  },
+  {
+    "name": "v2-uncentered",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "v2-uncentered-1440x900-light.png",
+    "viewBox": "0 0 768 627",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 466,
+        "screenBottom": 544
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 601,
+        "screenBottom": 679
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 736,
+        "screenBottom": 814
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1196
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 296,
+    "lastTop": 440,
+    "lastBottom": 518
+  },
+  {
+    "name": "v2-centered",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "v2-centered-1440x900-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 258,
+        "screenBottom": 336
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 393,
+        "screenBottom": 471
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 528,
+        "screenBottom": 606
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1001
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 101,
+    "lastTop": 427,
+    "lastBottom": 505
+  },
+  {
+    "name": "v2-centered",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "v2-centered-1440x900-dark.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 258,
+        "screenBottom": 336
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 393,
+        "screenBottom": 471
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 528,
+        "screenBottom": 606
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1001
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 101,
+    "lastTop": 427,
+    "lastBottom": 505
+  },
+  {
+    "name": "v2-centered",
+    "width": 1366,
+    "height": 768,
+    "theme": "light",
+    "screenshot": "v2-centered-1366x768-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 203.5,
+        "screenBottom": 281.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 338.5,
+        "screenBottom": 416.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 473.5,
+        "screenBottom": 551.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1366,
+      "height": 933
+    },
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 165,
+    "lastTop": 308.5,
+    "lastBottom": 386.5
+  },
+  {
+    "name": "v2-centered",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "v2-centered-1920x1080-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 361.5,
+        "screenBottom": 439.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 496.5,
+        "screenBottom": 574.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 631.5,
+        "screenBottom": 709.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1920,
+      "height": 1181
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 101,
+    "lastTop": 530.5,
+    "lastBottom": 608.5
+  },
+  {
+    "name": "v2-centered",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "screenshot": "v2-centered-390x844-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 238.3125,
+        "screenBottom": 287.0625
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 322.6875,
+        "screenBottom": 371.4375
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 407.0625,
+        "screenBottom": 455.8125
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 10.3125
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 10.3125
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 10.3125
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 390,
+      "height": 844
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 0,
+    "lastTop": 407.0625,
+    "lastBottom": 455.8125
+  },
+  {
+    "name": "v2-five-stages",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "v2-five-stages-1440x900-light.png",
+    "viewBox": "0 0 768 632",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 414
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 456
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 203.5,
+        "screenBottom": 281.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 338.5,
+        "screenBottom": 416.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 473.5,
+        "screenBottom": 551.5
+      },
+      {
+        "id": "d",
+        "x": 288,
+        "y": 361,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 608.5,
+        "screenBottom": 686.5
+      },
+      {
+        "id": "e",
+        "x": 288,
+        "y": 451,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 743.5,
+        "screenBottom": 821.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageD",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageE",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 4,
+    "document": {
+      "width": 1440,
+      "height": 1203
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 303,
+    "lastTop": 440.5,
+    "lastBottom": 518.5
+  },
+  {
+    "name": "v2-five-stages",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "v2-five-stages-1440x900-dark.png",
+    "viewBox": "0 0 768 632",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 414
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 456
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 203.5,
+        "screenBottom": 281.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 338.5,
+        "screenBottom": 416.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 473.5,
+        "screenBottom": 551.5
+      },
+      {
+        "id": "d",
+        "x": 288,
+        "y": 361,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 608.5,
+        "screenBottom": 686.5
+      },
+      {
+        "id": "e",
+        "x": 288,
+        "y": 451,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 743.5,
+        "screenBottom": 821.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageD",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageE",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 4,
+    "document": {
+      "width": 1440,
+      "height": 1203
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 303,
+    "lastTop": 440.5,
+    "lastBottom": 518.5
+  },
+  {
+    "name": "v2-five-stages",
+    "width": 1366,
+    "height": 768,
+    "theme": "light",
+    "screenshot": "v2-five-stages-1366x768-light.png",
+    "viewBox": "0 0 768 632",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 414
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 456
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 203.5,
+        "screenBottom": 281.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 338.5,
+        "screenBottom": 416.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 473.5,
+        "screenBottom": 551.5
+      },
+      {
+        "id": "d",
+        "x": 288,
+        "y": 361,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 608.5,
+        "screenBottom": 686.5
+      },
+      {
+        "id": "e",
+        "x": 288,
+        "y": 451,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 743.5,
+        "screenBottom": 821.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageD",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageE",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 4,
+    "document": {
+      "width": 1366,
+      "height": 1203
+    },
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 435,
+    "lastTop": 308.5,
+    "lastBottom": 386.5
+  },
+  {
+    "name": "v2-five-stages",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "v2-five-stages-1920x1080-light.png",
+    "viewBox": "0 0 768 632",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 414
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 456
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 243.5,
+        "screenBottom": 321.5
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 378.5,
+        "screenBottom": 456.5
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 513.5,
+        "screenBottom": 591.5
+      },
+      {
+        "id": "d",
+        "x": 288,
+        "y": 361,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 648.5,
+        "screenBottom": 726.5
+      },
+      {
+        "id": "e",
+        "x": 288,
+        "y": 451,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 783.5,
+        "screenBottom": 861.5
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageD",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageE",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 4,
+    "document": {
+      "width": 1920,
+      "height": 1269
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 189,
+    "lastTop": 594.5,
+    "lastBottom": 672.5
+  },
+  {
+    "name": "v2-five-stages",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "screenshot": "v2-five-stages-390x844-light.png",
+    "viewBox": "0 0 768 632",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 414
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 456
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 192.33779907226562,
+        "screenBottom": 214.8165283203125
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 231.24330139160156,
+        "screenBottom": 253.7220458984375
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 270.1488037109375,
+        "screenBottom": 292.6275634765625
+      },
+      {
+        "id": "d",
+        "x": 288,
+        "y": 361,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 309.0543212890625,
+        "screenBottom": 331.5330505371094
+      },
+      {
+        "id": "e",
+        "x": 288,
+        "y": 451,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 347.9598388671875,
+        "screenBottom": 370.4385681152344
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 4.755117681962025
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 4.755117681962025
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 4.755117681962025
+      },
+      {
+        "text": "stageD",
+        "projectedFont": 4.755117681962025
+      },
+      {
+        "text": "stageE",
+        "projectedFont": 4.755117681962025
+      }
+    ],
+    "edgeCount": 4,
+    "document": {
+      "width": 390,
+      "height": 844
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 0,
+    "lastTop": 347.9598388671875,
+    "lastBottom": 370.4385681152344
+  },
+  {
+    "name": "migrated",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "migrated-1440x900-light.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 533.1883544921875,
+        "screenBottom": 624.3229370117188
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 690.9212646484375,
+        "screenBottom": 782.0558471679688
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 848.6541748046875,
+        "screenBottom": 939.7887573242188
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 19.278466796875
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1270
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 370,
+    "lastTop": 478.6541748046875,
+    "lastBottom": 569.7887573242188
+  },
+  {
+    "name": "migrated",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "migrated-1440x900-dark.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 533.1883544921875,
+        "screenBottom": 624.3229370117188
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 690.9212646484375,
+        "screenBottom": 782.0558471679688
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 848.6541748046875,
+        "screenBottom": 939.7887573242188
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 19.278466796875
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1270
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 370,
+    "lastTop": 478.6541748046875,
+    "lastBottom": 569.7887573242188
+  },
+  {
+    "name": "migrated",
+    "width": 1366,
+    "height": 768,
+    "theme": "light",
+    "screenshot": "migrated-1366x768-light.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 507.5625,
+        "screenBottom": 593.6875
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 656.625,
+        "screenBottom": 742.75
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 805.6875,
+        "screenBottom": 891.8125
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 18.21875
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 18.21875
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 18.21875
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1366,
+      "height": 1208
+    },
+    "viewport": {
+      "width": 1366,
+      "height": 768
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 440,
+    "lastTop": 365.6875,
+    "lastBottom": 451.8125
+  },
+  {
+    "name": "migrated",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "migrated-1920x1080-light.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 595.359375,
+        "screenBottom": 690.828125
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 760.59375,
+        "screenBottom": 856.0625
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 925.828125,
+        "screenBottom": 1021.296875
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 20.1953125
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 20.1953125
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 20.1953125
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1920,
+      "height": 1399
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 319,
+    "lastTop": 606.828125,
+    "lastBottom": 702.296875
+  },
+  {
+    "name": "migrated",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "screenshot": "migrated-390x844-light.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 409
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 451
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 266,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 267.9852600097656,
+        "screenBottom": 290.46356201171875
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 356,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 306.8900451660156,
+        "screenBottom": 329.36834716796875
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 446,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 345.7948303222656,
+        "screenBottom": 368.27313232421875
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 4.755029296875
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 4.755029296875
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 4.755029296875
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 390,
+      "height": 844
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 0,
+    "lastTop": 345.7948303222656,
+    "lastBottom": 368.27313232421875
+  },
+  {
+    "name": "migrated-centered-implicit",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "migrated-centered-implicit-1440x900-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 258,
+        "screenBottom": 336
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 393,
+        "screenBottom": 471
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 528,
+        "screenBottom": 606
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1001
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 101,
+    "lastTop": 427,
+    "lastBottom": 505
+  },
+  {
+    "name": "v2-explicit-capacity",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "v2-explicit-capacity-1440x900-light.png",
+    "viewBox": "0 0 768 640",
+    "readerFit": null,
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 226.48550415039062,
+        "screenBottom": 317.62005615234375
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 384.2184143066406,
+        "screenBottom": 475.35296630859375
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 541.9512939453125,
+        "screenBottom": 633.0858764648438
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 19.278466796875
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 19.278466796875
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1270
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 370,
+    "lastTop": 171.95132446289062,
+    "lastBottom": 263.08587646484375
+  },
+  {
+    "name": "v2-absolute-pin",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "v2-absolute-pin-1440x900-light.png",
+    "viewBox": "0 0 768 452",
+    "readerFit": "width-first",
+    "group": {
+      "x": 164,
+      "y": 90,
+      "width": 340,
+      "height": 234
+    },
+    "lane": {
+      "x": 40,
+      "y": 52,
+      "width": 712,
+      "height": 276
+    },
+    "nodes": [
+      {
+        "id": "a",
+        "x": 288,
+        "y": 91,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 258,
+        "screenBottom": 336
+      },
+      {
+        "id": "b",
+        "x": 288,
+        "y": 181,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 393,
+        "screenBottom": 471
+      },
+      {
+        "id": "c",
+        "x": 288,
+        "y": 271,
+        "width": 92,
+        "height": 52,
+        "insideGroup": true,
+        "screenTop": 528,
+        "screenBottom": 606
+      }
+    ],
+    "texts": [
+      {
+        "text": "stageA",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageB",
+        "projectedFont": 16.5
+      },
+      {
+        "text": "stageC",
+        "projectedFont": 16.5
+      }
+    ],
+    "edgeCount": 2,
+    "document": {
+      "width": 1440,
+      "height": 1001
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "fonts": "loaded",
+    "lastNodeReachable": true,
+    "scrollY": 101,
+    "lastTop": 427,
+    "lastBottom": 505
+  }
+]

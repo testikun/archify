@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "stack",
+    "output": "stack.html"
+  },
+  "lanes": [
+    {
+      "id": "cage",
+      "label": "one cage"
+    }
+  ],
+  "groups": [
+    {
+      "id": "g",
+      "label": "cage",
+      "lane": "cage",
+      "fromCol": 1,
+      "toCol": 3,
+      "variant": "security"
+    }
+  ],
+  "mainPath": [
+    "a",
+    "b",
+    "c"
+  ],
+  "nodes": [
+    {
+      "id": "a",
+      "lane": "cage",
+      "col": 2,
+      "type": "security",
+      "label": "stageA",
+      "yOffset": -90
+    },
+    {
+      "id": "b",
+      "lane": "cage",
+      "col": 2,
+      "type": "security",
+      "label": "stageB",
+      "yOffset": 0
+    },
+    {
+      "id": "c",
+      "lane": "cage",
+      "col": 2,
+      "type": "security",
+      "label": "stageC",
+      "yOffset": 90
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "from": "a",
+      "to": "b",
+      "role": "main",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "via": [
+        [
+          334,
+          162
+        ]
+      ]
+    },
+    {
+      "id": "e2",
+      "from": "b",
+      "to": "c",
+      "role": "main",
+      "fromSide": "bottom",
+      "toSide": "top"
+    }
+  ]
+}

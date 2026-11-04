@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "7e531d3e-66d1-495c-8bfa-261604c5b37c",
+  "status": "current",
+  "command": "deliver",
+  "type": "workflow",
+  "input": "/evidence/inputs/v2-centered.workflow.json",
+  "output": "/evidence/artifacts/v2-centered.html",
+  "specification": {
+    "sha256": "04a760f201a61563e9d97570f0e398d6a786e705c4cda1b690da6e5a1f6abd90",
+    "bytes": 1133
+  },
+  "artifact": {
+    "sha256": "7b84cde025b65a5b6e11786133e25cbdd520c16edc70d178892306d167b9566f",
+    "bytes": 855819
+  }
+}
