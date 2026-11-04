@@ -1,0 +1,7 @@
+{
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "candidate": "2ccc77bb73dcd233aad6e3bb41da879de257e6ec",
+  "zipSha256": "b14e1b729672fdb550954cf06cf515a90ad91ac6bd0d1c288a2d892b8c09045e",
+  "sourceWorkingTreeClean": true,
+  "snapshotNote": "Screenshots and replays precede final CLI composition-diagnostic conversion and equivalent scope-predicate inlining; final regression covers these edits."
+}

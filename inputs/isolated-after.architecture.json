@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Boundary membership repro",
+    "quality_profile": "standard",
+    "output": "repro.html",
+    "viewBox": [
+      800,
+      520
+    ]
+  },
+  "components": [
+    {
+      "id": "app_a",
+      "type": "backend",
+      "label": "App A",
+      "pos": [
+        260,
+        40
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "app_b",
+      "type": "backend",
+      "label": "App B",
+      "pos": [
+        260,
+        320
+      ],
+      "size": [
+        150,
+        60
+      ]
+    },
+    {
+      "id": "third_party",
+      "type": "external",
+      "label": "Third-party API",
+      "sublabel": "NOT in the boundary",
+      "pos": [
+        550,
+        180
+      ],
+      "size": [
+        150,
+        60
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "our private network",
+      "wraps": [
+        "app_a",
+        "app_b"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "a-b",
+      "from": "app_a",
+      "to": "app_b",
+      "label": "internal call",
+      "fromSide": "left",
+      "toSide": "left",
+      "via": [
+        [
+          180,
+          70
+        ],
+        [
+          180,
+          350
+        ]
+      ]
+    },
+    {
+      "id": "a-third",
+      "from": "app_a",
+      "to": "third_party",
+      "label": "outbound",
+      "variant": "dashed",
+      "fromSide": "right",
+      "toSide": "left",
+      "via": [
+        [
+          490,
+          70
+        ],
+        [
+          490,
+          210
+        ]
+      ]
+    }
+  ]
+}

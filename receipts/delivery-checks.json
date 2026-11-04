@@ -1,0 +1,105 @@
+[
+  {
+    "name": "isolated-after.visual-check",
+    "args": [
+      "<workspace>/issue-395-investigation/implementation/source/archify/bin/archify.mjs",
+      "visual-check",
+      "<workspace>/issue-395-investigation/implementation/artifacts/isolated-after-delivered.html",
+      "--require-provenance",
+      "--out-dir",
+      "<workspace>/issue-395-investigation/implementation/receipts/visual/isolated-after",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "production-legacy-geometry.visual-check",
+    "args": [
+      "<workspace>/issue-395-investigation/implementation/source/archify/bin/archify.mjs",
+      "visual-check",
+      "<workspace>/issue-395-investigation/implementation/artifacts/production-legacy-geometry-delivered.html",
+      "--require-provenance",
+      "--out-dir",
+      "<workspace>/issue-395-investigation/implementation/receipts/visual/production-legacy-geometry",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "production-current.visual-check",
+    "args": [
+      "<workspace>/issue-395-investigation/implementation/source/archify/bin/archify.mjs",
+      "visual-check",
+      "<workspace>/issue-395-investigation/implementation/artifacts/production-current-delivered.html",
+      "--require-provenance",
+      "--out-dir",
+      "<workspace>/issue-395-investigation/implementation/receipts/visual/production-current",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "maka-author-repair.visual-check",
+    "args": [
+      "<workspace>/issue-395-investigation/implementation/source/archify/bin/archify.mjs",
+      "visual-check",
+      "<workspace>/issue-395-investigation/implementation/artifacts/maka-author-repair-delivered.html",
+      "--require-provenance",
+      "--out-dir",
+      "<workspace>/issue-395-investigation/implementation/receipts/visual/maka-author-repair",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "web-app-current.visual-check",
+    "args": [
+      "<workspace>/issue-395-investigation/implementation/source/archify/bin/archify.mjs",
+      "visual-check",
+      "<workspace>/issue-395-investigation/implementation/artifacts/web-app-current-delivered.html",
+      "--require-provenance",
+      "--out-dir",
+      "<workspace>/issue-395-investigation/implementation/receipts/visual/web-app-current",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "package-reject",
+    "args": [
+      "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-395-package-trkz_ctt/archify/bin/archify.mjs",
+      "validate",
+      "architecture",
+      "<workspace>/issue-395-investigation/implementation/inputs/meta-standard-cli-showcase.architecture.json",
+      "--quality",
+      "showcase",
+      "--json"
+    ],
+    "exitCode": 1
+  },
+  {
+    "name": "package-standard",
+    "args": [
+      "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-395-package-trkz_ctt/archify/bin/archify.mjs",
+      "deliver",
+      "architecture",
+      "<workspace>/issue-395-investigation/implementation/inputs/meta-standard-cli-showcase.architecture.json",
+      "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-395-package-trkz_ctt/compatible.html",
+      "--quality",
+      "standard",
+      "--json"
+    ],
+    "exitCode": 0
+  },
+  {
+    "name": "package-check",
+    "args": [
+      "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-395-package-trkz_ctt/archify/bin/archify.mjs",
+      "check",
+      "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-395-package-trkz_ctt/compatible.html",
+      "--require-provenance",
+      "--json"
+    ],
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "removeCompareIsolation": {
+    "exitCode": 1,
+    "expected": "failure: moved members/origin must not cross-join versions",
+    "retained": false
+  },
+  "inlineSingleUseScopePredicate": {
+    "tests": "../ablation-tests.log",
+    "pass": 24,
+    "fail": 0,
+    "retained": true
+  },
+  "sourceArtifactOwnership": "source guard retains pre-publication layout diagnostics; artifact checker accepts saved HTML without source JSON. Shared geometry removes duplicated containment logic."
+}

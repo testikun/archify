@@ -1,0 +1,5357 @@
+[
+  {
+    "environment": {
+      "protocolVersion": "1.3",
+      "product": "Chrome/156.0.8078.80",
+      "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+      "jsVersion": "15.6.75.27"
+    },
+    "node": "v22.23.2",
+    "source": "63c9263e84bd3993cab8e09b3d69888857858635 + implementation working tree",
+    "conditions": "Native page, clean preferences, still motion, deviceScaleFactor 1; computed CSS font x screen CTM"
+  },
+  {
+    "name": "isolated-before",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "isolated-before-1440x900-light.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 260,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.142337740384615
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1023
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "our private network",
+        "node": "third_party",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 123,
+    "svgBottom": 818.890625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "isolated-before",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "isolated-before-1440x900-dark.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 260,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.142337740384615
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1023
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "our private network",
+        "node": "third_party",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 123,
+    "svgBottom": 818.890625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "isolated-before",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "isolated-before-1920x1080-light.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 260,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.862499999999999
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1141
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [
+      {
+        "frame": "our private network",
+        "node": "third_party",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 61,
+    "svgBottom": 962.5,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "isolated-after",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "isolated-after-1440x900-light.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 550,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.142337740384615
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1023
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 123,
+    "svgBottom": 818.890625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "isolated-after",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "isolated-after-1440x900-dark.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 550,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 18.507301682692308
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.142337740384615
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1023
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 123,
+    "svgBottom": 818.890625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "isolated-after",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "isolated-after-1920x1080-light.png",
+    "viewBox": "0 0 800 520",
+    "readerFit": "authored-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "our private network",
+        "members": "app_a app_b",
+        "rect": {
+          "x": 230,
+          "y": 10,
+          "width": 210,
+          "height": 390
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "app_a",
+        "rect": {
+          "x": 260,
+          "y": 40,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "app_b",
+        "rect": {
+          "x": 260,
+          "y": 320,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "third_party",
+        "rect": {
+          "x": 550,
+          "y": 180,
+          "width": 150,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "App A",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "App B",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "Third-party API",
+        "primary": true,
+        "font": 19.3875
+      },
+      {
+        "text": "NOT in the boundary",
+        "primary": false,
+        "font": 15.862499999999999
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1141
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [],
+    "scrollY": 61,
+    "svgBottom": 962.5,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-legacy-geometry",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "production-legacy-geometry-1440x900-light.png",
+    "viewBox": "0 0 1376 728",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 361
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 536,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 554,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 578,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 450,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 6.847355769230769
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1357
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "private application network",
+        "node": "audit",
+        "full": false,
+        "overlapX": 126,
+        "overlapY": 37
+      }
+    ],
+    "scrollY": 457,
+    "svgBottom": 322.125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-legacy-geometry",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "production-legacy-geometry-1440x900-dark.png",
+    "viewBox": "0 0 1376 728",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 361
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 536,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 554,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 578,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 450,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 6.847355769230769
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 10.760130494505495
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 8.803743131868131
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 6.847355769230769
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1357
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "private application network",
+        "node": "audit",
+        "full": false,
+        "overlapX": 126,
+        "overlapY": 37
+      }
+    ],
+    "scrollY": 457,
+    "svgBottom": 322.125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-legacy-geometry",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "production-legacy-geometry-1920x1080-light.png",
+    "viewBox": "0 0 1376 728",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 361
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 536,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 554,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 578,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 450,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 8.266676682692308
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 12.990491929945055
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 10.62858430631868
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 8.266676682692308
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1571
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [
+      {
+        "frame": "private application network",
+        "node": "audit",
+        "full": false,
+        "overlapX": 126,
+        "overlapY": 37
+      }
+    ],
+    "scrollY": 491,
+    "svgBottom": 475.734375,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "production-current-1440x900-light.png",
+    "viewBox": "0 0 1376 790",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 403
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 598,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 616,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 640,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 492,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 6.608188291139241
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1391
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 491,
+    "svgBottom": 321.78125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "production-current-1440x900-dark.png",
+    "viewBox": "0 0 1376 790",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 403
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 598,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 616,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 640,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 492,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 6.608188291139241
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 10.38429588607595
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 8.496242088607595
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 6.608188291139241
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1391
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 491,
+    "svgBottom": 321.78125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "production-current",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "production-current-1920x1080-light.png",
+    "viewBox": "0 0 1376 790",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS us-east-1 / production",
+        "members": "edge gateway api_a api_b redis postgres events worker audit",
+        "rect": {
+          "x": 210,
+          "y": 171,
+          "width": 1126,
+          "height": 403
+        }
+      },
+      {
+        "id": "1",
+        "label": "private application network",
+        "members": "api_a api_b redis postgres events worker",
+        "rect": {
+          "x": 616,
+          "y": 171,
+          "width": 714,
+          "height": 316
+        }
+      },
+      {
+        "id": "2",
+        "label": "AWS eu-west-1 / disaster recovery",
+        "members": "replica",
+        "rect": {
+          "x": 1006.113525390625,
+          "y": 598,
+          "width": 193.77291870117188,
+          "height": 124
+        }
+      },
+      {
+        "id": "3",
+        "label": "DR private subnet",
+        "members": "replica",
+        "rect": {
+          "x": 1026,
+          "y": 616,
+          "width": 154,
+          "height": 106
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "clients",
+        "rect": {
+          "x": 38,
+          "y": 300,
+          "width": 122,
+          "height": 60
+        }
+      },
+      {
+        "id": "edge",
+        "rect": {
+          "x": 230,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "gateway",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 128,
+          "height": 60
+        }
+      },
+      {
+        "id": "api_a",
+        "rect": {
+          "x": 630,
+          "y": 195,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "api_b",
+        "rect": {
+          "x": 630,
+          "y": 405,
+          "width": 136,
+          "height": 62
+        }
+      },
+      {
+        "id": "redis",
+        "rect": {
+          "x": 840,
+          "y": 195,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "postgres",
+        "rect": {
+          "x": 840,
+          "y": 405,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "events",
+        "rect": {
+          "x": 1040,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 1190,
+          "y": 300,
+          "width": 126,
+          "height": 60
+        }
+      },
+      {
+        "id": "replica",
+        "rect": {
+          "x": 1040,
+          "y": 640,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "audit",
+        "rect": {
+          "x": 1190,
+          "y": 492,
+          "width": 126,
+          "height": 62
+        }
+      },
+      {
+        "id": "observability",
+        "rect": {
+          "x": 1190,
+          "y": 85,
+          "width": 126,
+          "height": 62
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Customers",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "web + mobile",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "Global Edge",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "CDN + WAF",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "edge team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "API Gateway",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "public :443",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "API Pods / AZ-a",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "API Pods / AZ-b",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "private subnet",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "multi-AZ cache",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "primary / encrypted",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "Event Bus",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "orders.v1",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "platform",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "Workers",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "private workload",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "app team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "DR Replica",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "eu-west-1",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "data team",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "Audit Archive",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "immutable objects",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "security",
+        "primary": false,
+        "font": 7.620530063291139
+      },
+      {
+        "text": "Observability",
+        "primary": true,
+        "font": 11.975118670886076
+      },
+      {
+        "text": "metrics + traces",
+        "primary": false,
+        "font": 9.797824367088607
+      },
+      {
+        "text": "SRE",
+        "primary": false,
+        "font": 7.620530063291139
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1571
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [],
+    "scrollY": 491,
+    "svgBottom": 476.03125,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "maka-current-1440x900-light.png",
+    "viewBox": "0 0 1200 608",
+    "readerFit": "intrinsic-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 170,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 550,
+          "y": 110,
+          "width": 400,
+          "height": 410
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 200,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 390,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 580,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 780,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 970,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 970,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 580,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 780,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 580,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 780,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 970,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 7.851613898026316
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 7.851613898026316
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 10.094932154605264
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1272
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "providers",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "tools",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "session",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "agentrun",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "toolrt",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 372,
+    "svgBottom": 402.65625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "maka-current-1440x900-dark.png",
+    "viewBox": "0 0 1200 608",
+    "readerFit": "intrinsic-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 170,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 550,
+          "y": 110,
+          "width": 400,
+          "height": 410
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 200,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 390,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 580,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 780,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 970,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 970,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 580,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 780,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 580,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 780,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 970,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 7.851613898026316
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 7.851613898026316
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 10.094932154605264
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 12.33825041118421
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 10.094932154605264
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1272
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "providers",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "tools",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "session",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "agentrun",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "toolrt",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 372,
+    "svgBottom": 402.65625,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-current",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "maka-current-1920x1080-light.png",
+    "viewBox": "0 0 1200 608",
+    "readerFit": "intrinsic-height",
+    "quality": "standard",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 170,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 550,
+          "y": 110,
+          "width": 400,
+          "height": 410
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 200,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 390,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 580,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 780,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 970,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 970,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 580,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 780,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 580,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 780,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 970,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 9.607370476973685
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 9.607370476973685
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 12.352333470394736
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 15.09729646381579
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 12.352333470394736
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1445
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "providers",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "Electron app + packages/runtime",
+        "node": "tools",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "session",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "agentrun",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "bots",
+        "full": true,
+        "overlapX": 150,
+        "overlapY": 60
+      },
+      {
+        "frame": "trust boundary",
+        "node": "toolrt",
+        "full": true,
+        "overlapX": 140,
+        "overlapY": 60
+      }
+    ],
+    "scrollY": 365,
+    "svgBottom": 602.15625,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-author-repair",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "maka-author-repair-1440x900-light.png",
+    "viewBox": "0 0 1390 748",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 210,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 606,
+          "y": 118,
+          "width": 368,
+          "height": 102
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 240,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 620,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 820,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 820,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 820,
+          "y": 620,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 40,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 820,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 620,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 1010,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 1210,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 6.743085728609626
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 6.743085728609626
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 8.669681651069519
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1310
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 410,
+    "svgBottom": 403.234375,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-author-repair",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "maka-author-repair-1440x900-dark.png",
+    "viewBox": "0 0 1390 748",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 210,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 606,
+          "y": 118,
+          "width": 368,
+          "height": 102
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 240,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 620,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 820,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 820,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 820,
+          "y": 620,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 40,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 820,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 620,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 1010,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 1210,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 6.743085728609626
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 6.743085728609626
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 8.669681651069519
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 10.596277573529411
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 8.669681651069519
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1310
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 410,
+    "svgBottom": 403.234375,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "maka-author-repair",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "maka-author-repair-1920x1080-light.png",
+    "viewBox": "0 0 1390 748",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "Electron app + packages/runtime",
+        "members": "ui main session agentrun model toolrt storage permission",
+        "rect": {
+          "x": 210,
+          "y": 110,
+          "width": 970,
+          "height": 410
+        }
+      },
+      {
+        "id": "1",
+        "label": "trust boundary",
+        "members": "permission storage",
+        "rect": {
+          "x": 606,
+          "y": 118,
+          "width": 368,
+          "height": 102
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "ui",
+        "rect": {
+          "x": 240,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "main",
+        "rect": {
+          "x": 430,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "session",
+        "rect": {
+          "x": 620,
+          "y": 300,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "agentrun",
+        "rect": {
+          "x": 820,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "model",
+        "rect": {
+          "x": 820,
+          "y": 440,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "providers",
+        "rect": {
+          "x": 820,
+          "y": 620,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "bots",
+        "rect": {
+          "x": 40,
+          "y": 440,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "permission",
+        "rect": {
+          "x": 820,
+          "y": 140,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "storage",
+        "rect": {
+          "x": 620,
+          "y": 140,
+          "width": 150,
+          "height": 60
+        }
+      },
+      {
+        "id": "toolrt",
+        "rect": {
+          "x": 1010,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      },
+      {
+        "id": "tools",
+        "rect": {
+          "x": 1210,
+          "y": 300,
+          "width": 140,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "You",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "desktop user",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "Desktop UI",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "React renderer",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "Main Process",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "Electron IPC",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "SessionManager",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "public runtime API",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "AgentRun",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "turn + recovery",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "ModelAdapter",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "stream + usage",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "Model Providers",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "AI SDK / Ollama",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "API keys local",
+        "primary": false,
+        "font": 7.8056901737967905
+      },
+      {
+        "text": "Bots & Gateway",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "Telegram · Feishu · HTTP",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "Permission",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "policy engine",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "fail-closed",
+        "primary": false,
+        "font": 7.8056901737967905
+      },
+      {
+        "text": "Local Storage",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "userData JSONL",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "ToolRuntime",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "validate · abort",
+        "primary": false,
+        "font": 10.03588736631016
+      },
+      {
+        "text": "Local Tools",
+        "primary": true,
+        "font": 12.266084558823529
+      },
+      {
+        "text": "Read · Write · Bash",
+        "primary": false,
+        "font": 10.03588736631016
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1490
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [],
+    "scrollY": 410,
+    "svgBottom": 556.78125,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "web-app-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "screenshot": "web-app-current-1440x900-light.png",
+    "viewBox": "0 0 1080 588",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS Region: us-west-2",
+        "members": "cdn lb api cache db s3 queue worker",
+        "rect": {
+          "x": 220,
+          "y": 120,
+          "width": 820,
+          "height": 400
+        }
+      },
+      {
+        "id": "1",
+        "label": "sg-api :443/:8000",
+        "members": "lb api",
+        "rect": {
+          "x": 430,
+          "y": 270,
+          "width": 400,
+          "height": 110
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "users",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "auth",
+        "rect": {
+          "x": 40,
+          "y": 110,
+          "width": 120,
+          "height": 64
+        }
+      },
+      {
+        "id": "cdn",
+        "rect": {
+          "x": 250,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "lb",
+        "rect": {
+          "x": 460,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "api",
+        "rect": {
+          "x": 670,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "cache",
+        "rect": {
+          "x": 670,
+          "y": 150,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "db",
+        "rect": {
+          "x": 880,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "s3",
+        "rect": {
+          "x": 250,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "queue",
+        "rect": {
+          "x": 670,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 880,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Users",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "Browser / Mobile",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Auth Provider",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "OAuth 2.0",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "JWT + PKCE",
+        "primary": false,
+        "font": 8.723958333333332
+      },
+      {
+        "text": "CloudFront",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "CDN",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Load Balancer",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "HTTPS :443",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "API Server",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "FastAPI :8000",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "cache :6379",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "primary :5432",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "S3",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "static assets",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "OAI protected",
+        "primary": false,
+        "font": 8.723958333333332
+      },
+      {
+        "text": "SQS",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "job queue",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Worker",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "async jobs",
+        "primary": false,
+        "font": 11.216517857142858
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1297
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 397,
+    "svgBottom": 402.8125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "web-app-current",
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "screenshot": "web-app-current-1440x900-dark.png",
+    "viewBox": "0 0 1080 588",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS Region: us-west-2",
+        "members": "cdn lb api cache db s3 queue worker",
+        "rect": {
+          "x": 220,
+          "y": 120,
+          "width": 820,
+          "height": 400
+        }
+      },
+      {
+        "id": "1",
+        "label": "sg-api :443/:8000",
+        "members": "lb api",
+        "rect": {
+          "x": 430,
+          "y": 270,
+          "width": 400,
+          "height": 110
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "users",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "auth",
+        "rect": {
+          "x": 40,
+          "y": 110,
+          "width": 120,
+          "height": 64
+        }
+      },
+      {
+        "id": "cdn",
+        "rect": {
+          "x": 250,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "lb",
+        "rect": {
+          "x": 460,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "api",
+        "rect": {
+          "x": 670,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "cache",
+        "rect": {
+          "x": 670,
+          "y": 150,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "db",
+        "rect": {
+          "x": 880,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "s3",
+        "rect": {
+          "x": 250,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "queue",
+        "rect": {
+          "x": 670,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 880,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Users",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "Browser / Mobile",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Auth Provider",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "OAuth 2.0",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "JWT + PKCE",
+        "primary": false,
+        "font": 8.723958333333332
+      },
+      {
+        "text": "CloudFront",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "CDN",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Load Balancer",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "HTTPS :443",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "API Server",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "FastAPI :8000",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "cache :6379",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "primary :5432",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "S3",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "static assets",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "OAI protected",
+        "primary": false,
+        "font": 8.723958333333332
+      },
+      {
+        "text": "SQS",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "job queue",
+        "primary": false,
+        "font": 11.216517857142858
+      },
+      {
+        "text": "Worker",
+        "primary": true,
+        "font": 13.70907738095238
+      },
+      {
+        "text": "async jobs",
+        "primary": false,
+        "font": 11.216517857142858
+      }
+    ],
+    "document": {
+      "width": 1440,
+      "height": 1297
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "membership": [],
+    "scrollY": 397,
+    "svgBottom": 402.8125,
+    "viewportBottom": 900,
+    "diagramBottomReachable": true
+  },
+  {
+    "name": "web-app-current",
+    "width": 1920,
+    "height": 1080,
+    "theme": "light",
+    "screenshot": "web-app-current-1920x1080-light.png",
+    "viewBox": "0 0 1080 588",
+    "readerFit": "intrinsic-height",
+    "quality": "showcase",
+    "frames": [
+      {
+        "id": "0",
+        "label": "AWS Region: us-west-2",
+        "members": "cdn lb api cache db s3 queue worker",
+        "rect": {
+          "x": 220,
+          "y": 120,
+          "width": 820,
+          "height": 400
+        }
+      },
+      {
+        "id": "1",
+        "label": "sg-api :443/:8000",
+        "members": "lb api",
+        "rect": {
+          "x": 430,
+          "y": 270,
+          "width": 400,
+          "height": 110
+        }
+      }
+    ],
+    "nodes": [
+      {
+        "id": "users",
+        "rect": {
+          "x": 40,
+          "y": 300,
+          "width": 120,
+          "height": 60
+        }
+      },
+      {
+        "id": "auth",
+        "rect": {
+          "x": 40,
+          "y": 110,
+          "width": 120,
+          "height": 64
+        }
+      },
+      {
+        "id": "cdn",
+        "rect": {
+          "x": 250,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "lb",
+        "rect": {
+          "x": 460,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "api",
+        "rect": {
+          "x": 670,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "cache",
+        "rect": {
+          "x": 670,
+          "y": 150,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "db",
+        "rect": {
+          "x": 880,
+          "y": 300,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "s3",
+        "rect": {
+          "x": 250,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "queue",
+        "rect": {
+          "x": 670,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      },
+      {
+        "id": "worker",
+        "rect": {
+          "x": 880,
+          "y": 440,
+          "width": 130,
+          "height": 60
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Users",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "Browser / Mobile",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "Auth Provider",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "OAuth 2.0",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "JWT + PKCE",
+        "primary": false,
+        "font": 10.240699404761905
+      },
+      {
+        "text": "CloudFront",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "CDN",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "Load Balancer",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "HTTPS :443",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "API Server",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "FastAPI :8000",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "Redis",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "cache :6379",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "PostgreSQL",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "primary :5432",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "S3",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "static assets",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "OAI protected",
+        "primary": false,
+        "font": 10.240699404761905
+      },
+      {
+        "text": "SQS",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "job queue",
+        "primary": false,
+        "font": 13.166613520408163
+      },
+      {
+        "text": "Worker",
+        "primary": true,
+        "font": 16.09252763605442
+      },
+      {
+        "text": "async jobs",
+        "primary": false,
+        "font": 13.166613520408163
+      }
+    ],
+    "document": {
+      "width": 1920,
+      "height": 1490
+    },
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "membership": [],
+    "scrollY": 410,
+    "svgBottom": 557.21875,
+    "viewportBottom": 1080,
+    "diagramBottomReachable": true
+  }
+]

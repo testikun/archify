@@ -1,0 +1,16 @@
+[
+  {
+    "name": "production-deployment-ownership.svg",
+    "type": "image/svg+xml;charset=utf-8",
+    "bytes": 205940,
+    "source": "artifacts/production-current-delivered.html",
+    "method": "Native Archify.exportMenu; download anchor intercepted to save its actual Blob"
+  },
+  {
+    "name": "production-deployment-ownership.png",
+    "type": "image/png",
+    "bytes": 718953,
+    "source": "artifacts/production-current-delivered.html",
+    "method": "Native Archify.exportMenu; download anchor intercepted to save its actual Blob"
+  }
+]

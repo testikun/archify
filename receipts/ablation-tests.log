@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: CLI quality overrides source membership gates across validate, render, and deliver
+ok 1 - CLI quality overrides source membership gates across validate, render, and deliver
+  ---
+  duration_ms: 3367.605958
+  type: 'test'
+  ...
+# Subtest: render output check: full containment is an error under showcase
+ok 2 - render output check: full containment is an error under showcase
+  ---
+  duration_ms: 52.820416
+  type: 'test'
+  ...
+# Subtest: render output check: full containment is only a warning under standard
+ok 3 - render output check: full containment is only a warning under standard
+  ---
+  duration_ms: 53.338167
+  type: 'test'
+  ...
+# Subtest: check: standalone membership failures identify the component and supported repairs
+ok 4 - check: standalone membership failures identify the component and supported repairs
+  ---
+  duration_ms: 154.494416
+  type: 'test'
+  ...
+# Subtest: render output check: a straddling non-member warns even under showcase
+ok 5 - render output check: a straddling non-member warns even under showcase
+  ---
+  duration_ms: 51.176459
+  type: 'test'
+  ...
+# Subtest: render output check: legitimate nested membership stays clean
+ok 6 - render output check: legitimate nested membership stays clean
+  ---
+  duration_ms: 49.896
+  type: 'test'
+  ...
+# Subtest: render output check: a sparse membership is judged like any other
+ok 7 - render output check: a sparse membership is judged like any other
+  ---
+  duration_ms: 51.825
+  type: 'test'
+  ...
+# Subtest: render output check: a frame that declares no membership is skipped
+ok 8 - render output check: a frame that declares no membership is skipped
+  ---
+  duration_ms: 51.789042
+  type: 'test'
+  ...
+# Subtest: render output check: node text that looks like an attribute cannot hide a violation
+ok 9 - render output check: node text that looks like an attribute cannot hide a violation
+  ---
+  duration_ms: 50.752209
+  type: 'test'
+  ...
+# Subtest: render output check: single-quoted attributes are read like any other
+ok 10 - render output check: single-quoted attributes are read like any other
+  ---
+  duration_ms: 52.420125
+  type: 'test'
+  ...
+# Subtest: render output check: commented-out markup is not a component
+ok 11 - render output check: commented-out markup is not a component
+  ---
+  duration_ms: 51.749333
+  type: 'test'
+  ...
+# Subtest: render output check: a rectangle outside the node element is not its box
+ok 12 - render output check: a rectangle outside the node element is not its box
+  ---
+  duration_ms: 51.02975
+  type: 'test'
+  ...
+# Subtest: render output check: a zero-area component draws nothing and cannot be enclosed
+ok 13 - render output check: a zero-area component draws nothing and cannot be enclosed
+  ---
+  duration_ms: 49.991541
+  type: 'test'
+  ...
+# Subtest: render output check: disjoint and edge-touching components are clean
+ok 14 - render output check: disjoint and edge-touching components are clean
+  ---
+  duration_ms: 51.34675
+  type: 'test'
+  ...
+# Subtest: render output check: an explicitly empty membership is judged, an absent one is not
+ok 15 - render output check: an explicitly empty membership is judged, an absent one is not
+  ---
+  duration_ms: 104.027208
+  type: 'test'
+  ...
+# Subtest: render output check: malformed nesting cannot move a rectangle between components
+ok 16 - render output check: malformed nesting cannot move a rectangle between components
+  ---
+  duration_ms: 155.791
+  type: 'test'
+  ...
+# Subtest: render output check: a compare artifact draws a moved node twice and both positions count
+ok 17 - render output check: a compare artifact draws a moved node twice and both positions count
+  ---
+  duration_ms: 53.939042
+  type: 'test'
+  ...
+# Subtest: render output check: membership from one version is never applied to the other
+ok 18 - render output check: membership from one version is never applied to the other
+  ---
+  duration_ms: 51.763584
+  type: 'test'
+  ...
+# Subtest: render output check: a version-scoped frame still judges its own version
+ok 19 - render output check: a version-scoped frame still judges its own version
+  ---
+  duration_ms: 51.806375
+  type: 'test'
+  ...
+# Subtest: render output check: a component both versions draw is judged by both frames
+ok 20 - render output check: a component both versions draw is judged by both frames
+  ---
+  duration_ms: 52.956916
+  type: 'test'
+  ...
+# Subtest: render output check: evidence separates a frame that passed from one that was not read
+ok 21 - render output check: evidence separates a frame that passed from one that was not read
+  ---
+  duration_ms: 102.528583
+  type: 'test'
+  ...
+# Subtest: compare generation: a frame whose members moved does not judge the other version
+ok 22 - compare generation: a frame whose members moved does not judge the other version
+  ---
+  duration_ms: 797.724583
+  type: 'test'
+  ...
+# Subtest: compare generation: a moved grid origin does not judge the other version
+ok 23 - compare generation: a moved grid origin does not judge the other version
+  ---
+  duration_ms: 785.935417
+  type: 'test'
+  ...
+# Subtest: compare generation: a version that really does enclose a non-member is reported
+ok 24 - compare generation: a version that really does enclose a non-member is reported
+  ---
+  duration_ms: 808.064167
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7165.604625

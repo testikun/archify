@@ -1,0 +1,151 @@
+TAP version 13
+# Subtest: CLI quality overrides source membership gates across validate, render, and deliver
+not ok 1 - CLI quality overrides source membership gates across validate, render, and deliver
+  ---
+  duration_ms: 151.80375
+  type: 'test'
+  location: '<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:61:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    validate-showcase-standard: {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "architecture",
+      "input": "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-boundary-membership-2C24HQ/validate-showcase-standard.json",
+      "error": "Architecture layout validation failed:\n- Component \"third_party\" is not wrapped by boundary \"our private network\" but sits inside its frame — move it outside the frame, place the wrapped members in one compact axis-aligned cluster (no empty bay for a non-member), or add it to wraps only when it truly belongs there.",
+      "diagnostics": [
+        {
+          "code": "layout/boundary-encloses-non-member",
+          "severity": "error",
+          "message": "Component \"third_party\" is not wrapped by boundary \"our private network\" but sits inside its frame — move it outside the frame, place the wrapped members in one compact axis-aligned cluster (no empty bay for a non-member), or add it to wraps only when it truly belongs there.",
+          "subject": {
+            "diagramType": "architecture",
+            "boundary": {
+              "kind": "region",
+              "label": "our private network",
+              "wraps": [
+                "app_a",
+                "app_b"
+              ]
+            },
+            "component": "third_party"
+          },
+          "evidence": {
+            "bounds": {
+              "x": 230,
+              "y": 10,
+              "width": 210,
+              "height": 390
+            },
+            "component": {
+              "id": "third_party",
+              "type": "external",
+              "label": "Third-party API",
+              "x": 260,
+              "y": 180,
+              "width": 150,
+              "height": 60,
+              "pos": [
+                260,
+                180
+              ]
+            }
+          },
+          "supportedFixes": [
+            "move \"third_party\" outside the boundary frame",
+            "reposition the wrapped members into one compact axis-aligned cluster (no empty bay) that leaves non-members outside"
+          ]
+        }
+      ]
+    }
+    
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:79:14)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: render output check: full containment is an error under showcase
+not ok 2 - render output check: full containment is an error under showcase
+  ---
+  duration_ms: 56.569209
+  type: 'test'
+  location: '<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:95:1'
+  failureType: 'testCodeFailure'
+  error: 'Expected "actual" to be strictly unequal to: 0'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 0
+  operator: 'notStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:103:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: render output check: full containment is only a warning under standard
+not ok 3 - render output check: full containment is only a warning under standard
+  ---
+  duration_ms: 54.650792
+  type: 'test'
+  location: '<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:111:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'severity')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file://<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:122:94)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: compare generation: a frame whose members moved does not judge the other version
+not ok 4 - compare generation: a frame whose members moved does not judge the other version
+  ---
+  duration_ms: 851.303709
+  type: 'test'
+  location: '<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:456:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    a head frame must not enclose a component only base drew
+    
+    undefined !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<workspace>/issue-395-investigation/implementation/source/test/boundary-membership.test.mjs:467:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1168.931791

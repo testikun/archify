@@ -1,0 +1,55 @@
+{
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "candidate": "2ccc77bb73dcd233aad6e3bb41da879de257e6ec",
+  "runs": [
+    {
+      "log": "receipts/full-tests-final.log",
+      "tests": 3697,
+      "pass": 3563,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 134
+    },
+    {
+      "log": "receipts/browser-suite.log",
+      "tests": 337,
+      "pass": 337,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "receipts/ablation-tests.log",
+      "tests": 24,
+      "pass": 24,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0
+    },
+    {
+      "log": "receipts/readme-recheck-final.log",
+      "tests": 15,
+      "pass": 14,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 1
+    }
+  ],
+  "browserNativeSamples": 21,
+  "officialVisualChecksPassed": 5,
+  "sourceSweep": {
+    "jsonFiles": 13,
+    "arms": 2,
+    "qualities": 2,
+    "validations": 52,
+    "newUnintendedRejections": 0,
+    "knownFailure": "AI-agent/n8n showcase proper crossings on both base and candidate"
+  },
+  "notClaimed": [
+    "new independent real-project Agent generation sessions",
+    "human review",
+    "Windows local run",
+    "remote CI completion",
+    "generation speedup"
+  ]
+}

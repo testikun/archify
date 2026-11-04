@@ -1,0 +1,2124 @@
+
+> test:browser
+> node scripts/run-browser-tests.mjs
+
+Browser tests: 48 files, concurrency 2
+TAP version 13
+# Subtest: automatic architectures preserve primary reading size when fitting the full page would shrink text
+ok 1 - automatic architectures preserve primary reading size when fitting the full page would shrink text
+  ---
+  duration_ms: 1631.6395
+  type: 'test'
+  ...
+# Subtest: a narrow tall architecture fits the first screen without enlarging the other titles
+ok 2 - a narrow tall architecture fits the first screen without enlarging the other titles
+  ---
+  duration_ms: 724.409584
+  type: 'test'
+  ...
+# Subtest: a first-screen fit never pushes relationship labels below the 6px floor
+ok 3 - a first-screen fit never pushes relationship labels below the 6px floor
+  ---
+  duration_ms: 1056.365334
+  type: 'test'
+  ...
+# Subtest: Bottom node index preserves readable rows and native Viewer interaction
+ok 4 - Bottom node index preserves readable rows and native Viewer interaction
+  ---
+  duration_ms: 2418.052042
+  type: 'test'
+  ...
+# Subtest: class: hierarchy bus motion follows from-to while retaining aligned visual dashes
+ok 5 - class: hierarchy bus motion follows from-to while retaining aligned visual dashes
+  ---
+  duration_ms: 1378.599625
+  type: 'test'
+  ...
+# Subtest: class: mixed hierarchy fallback keeps dependency notation in focus and SVG export
+ok 6 - class: mixed hierarchy fallback keeps dependency notation in focus and SVG export
+  ---
+  duration_ms: 1017.793333
+  type: 'test'
+  ...
+# Subtest: compact stage rail and in-canvas navigation keep the diagram clear of toolbar and controls
+ok 7 - compact stage rail and in-canvas navigation keep the diagram clear of toolbar and controls
+  ---
+  duration_ms: 1350.038708
+  type: 'test'
+  ...
+# Subtest: architecture automatic crossover masks follow live relationship state without becoming semantic edges
+ok 8 - architecture automatic crossover masks follow live relationship state without becoming semantic edges
+  ---
+  duration_ms: 1742.250417
+  type: 'test'
+  ...
+# Subtest: dataflow automatic crossover masks follow live relationship state without becoming semantic edges
+ok 9 - dataflow automatic crossover masks follow live relationship state without becoming semantic edges
+  ---
+  duration_ms: 1526.77875
+  type: 'test'
+  ...
+# Subtest: dataflow classification plates preserve their own connector in Read and Detail
+    # Subtest: light/read
+    ok 1 - light/read
+      ---
+      duration_ms: 199.972959
+      type: 'test'
+      ...
+    # Subtest: light/full
+    ok 2 - light/full
+      ---
+      duration_ms: 136.213333
+      type: 'test'
+      ...
+    # Subtest: dark/read
+    ok 3 - dark/read
+      ---
+      duration_ms: 145.990917
+      type: 'test'
+      ...
+    # Subtest: dark/full
+    ok 4 - dark/full
+      ---
+      duration_ms: 135.800583
+      type: 'test'
+      ...
+    1..4
+ok 10 - dataflow classification plates preserve their own connector in Read and Detail
+  ---
+  duration_ms: 1136.946833
+  type: 'test'
+  ...
+# Subtest: waterfall axis labels stay distinct and inside the SVG at nonzero origins
+ok 11 - waterfall axis labels stay distinct and inside the SVG at nonzero origins
+  ---
+  duration_ms: 1500.467209
+  type: 'test'
+  ...
+# Subtest: all packaged HTML examples pass the real visual-check desktop gate
+ok 12 - all packaged HTML examples pass the real visual-check desktop gate
+  ---
+  duration_ms: 34359.400125
+  type: 'test'
+  ...
+# Subtest: default sequence and dataflow canvases fit the real desktop reader without changing explicit geometry
+ok 13 - default sequence and dataflow canvases fit the real desktop reader without changing explicit geometry
+  ---
+  duration_ms: 6865.849542
+  type: 'test'
+  ...
+# Subtest: visual-check collects nested ID-less semantic edge text for every renderer family
+ok 14 - visual-check collects nested ID-less semantic edge text for every renderer family
+  ---
+  duration_ms: 9457.822958
+  type: 'test'
+  ...
+# Subtest: production showcase is readable in the real 1440 by 900 adaptive reader
+ok 15 - production showcase is readable in the real 1440 by 900 adaptive reader
+  ---
+  duration_ms: 5734.682416
+  type: 'test'
+  ...
+# Subtest: route-expanded intrinsic architecture preserves reading size with ordinary page scroll
+ok 16 - route-expanded intrinsic architecture preserves reading size with ordinary page scroll
+  ---
+  duration_ms: 2839.735417
+  type: 'test'
+  ...
+# Subtest: extreme intrinsic architecture keeps readable page scroll below first-screen fit
+ok 17 - extreme intrinsic architecture keeps readable page scroll below first-screen fit
+  ---
+  duration_ms: 1966.3685
+  type: 'test'
+  ...
+# Subtest: offline intrinsic workflows fit while authored overflow still identifies lane frames
+ok 18 - offline intrinsic workflows fit while authored overflow still identifies lane frames
+  ---
+  duration_ms: 5968.855833
+  type: 'test'
+  ...
+# Subtest: a 1px width-first remainder is declared instead of failing browser containment
+ok 19 - a 1px width-first remainder is declared instead of failing browser containment
+  ---
+  duration_ms: 1864.617125
+  type: 'test'
+  ...
+# Subtest: issue \#250 tall intrinsic workflow uses reading width and permits readable page scroll
+ok 20 - issue \#250 tall intrinsic workflow uses reading width and permits readable page scroll
+  ---
+  duration_ms: 1599.463958
+  type: 'test'
+  ...
+# Subtest: issue \#250 five-stage stack retains reading scale within the automatic enlargement cap
+ok 21 - issue \#250 five-stage stack retains reading scale within the automatic enlargement cap
+  ---
+  duration_ms: 1626.174459
+  type: 'test'
+  ...
+# Subtest: authored Architecture canvas keeps its scale and accepts readable document scrolling
+ok 22 - authored Architecture canvas keeps its scale and accepts readable document scrolling
+  ---
+  duration_ms: 6518.083083
+  type: 'test'
+  ...
+# Subtest: offline native render → independent observation → paired report and numeric review form
+ok 23 - offline native render → independent observation → paired report and numeric review form
+  ---
+  duration_ms: 4037.172
+  type: 'test'
+  ...
+# Subtest: transparent, covered, clipped text and invalid arrows cannot establish visible facts
+ok 24 - transparent, covered, clipped text and invalid arrows cannot establish visible facts
+  ---
+  duration_ms: 5238.273708
+  type: 'test'
+  ...
+# Subtest: browser observer reads painted text and closes its temporary Chrome profile
+ok 25 - browser observer reads painted text and closes its temporary Chrome profile
+  ---
+  duration_ms: 460.938666
+  type: 'test'
+  ...
+# Subtest: local sibling navigation preserves reader context, authored overrides and parent context
+ok 26 - local sibling navigation preserves reader context, authored overrides and parent context
+  ---
+  duration_ms: 1523.4235
+  type: 'test'
+  ...
+# Subtest: default relationship labels are readable on their mask in every preset and state
+    # Subtest: classic light normal
+    ok 1 - classic light normal
+      ---
+      duration_ms: 118.372917
+      type: 'test'
+      ...
+    # Subtest: classic light presentation
+    ok 2 - classic light presentation
+      ---
+      duration_ms: 131.274416
+      type: 'test'
+      ...
+    # Subtest: classic light focused
+    ok 3 - classic light focused
+      ---
+      duration_ms: 249.427458
+      type: 'test'
+      ...
+    # Subtest: classic dark normal
+    ok 4 - classic dark normal
+      ---
+      duration_ms: 233.297791
+      type: 'test'
+      ...
+    # Subtest: classic dark presentation
+    ok 5 - classic dark presentation
+      ---
+      duration_ms: 134.61125
+      type: 'test'
+      ...
+    # Subtest: classic dark focused
+    ok 6 - classic dark focused
+      ---
+      duration_ms: 232.848459
+      type: 'test'
+      ...
+    # Subtest: signal-flow light normal
+    ok 7 - signal-flow light normal
+      ---
+      duration_ms: 232.526666
+      type: 'test'
+      ...
+    # Subtest: signal-flow light presentation
+    ok 8 - signal-flow light presentation
+      ---
+      duration_ms: 136.905042
+      type: 'test'
+      ...
+    # Subtest: signal-flow light focused
+    ok 9 - signal-flow light focused
+      ---
+      duration_ms: 245.86175
+      type: 'test'
+      ...
+    # Subtest: signal-flow dark normal
+    ok 10 - signal-flow dark normal
+      ---
+      duration_ms: 233.634667
+      type: 'test'
+      ...
+    # Subtest: signal-flow dark presentation
+    ok 11 - signal-flow dark presentation
+      ---
+      duration_ms: 133.157
+      type: 'test'
+      ...
+    # Subtest: signal-flow dark focused
+    ok 12 - signal-flow dark focused
+      ---
+      duration_ms: 231.821208
+      type: 'test'
+      ...
+    # Subtest: blueprint light normal
+    ok 13 - blueprint light normal
+      ---
+      duration_ms: 234.570709
+      type: 'test'
+      ...
+    # Subtest: blueprint light presentation
+    ok 14 - blueprint light presentation
+      ---
+      duration_ms: 133.393709
+      type: 'test'
+      ...
+    # Subtest: blueprint light focused
+    ok 15 - blueprint light focused
+      ---
+      duration_ms: 231.538167
+      type: 'test'
+      ...
+    # Subtest: blueprint dark normal
+    ok 16 - blueprint dark normal
+      ---
+      duration_ms: 235.196375
+      type: 'test'
+      ...
+    # Subtest: blueprint dark presentation
+    ok 17 - blueprint dark presentation
+      ---
+      duration_ms: 133.019792
+      type: 'test'
+      ...
+    # Subtest: blueprint dark focused
+    ok 18 - blueprint dark focused
+      ---
+      duration_ms: 230.402042
+      type: 'test'
+      ...
+    # Subtest: editorial light normal
+    ok 19 - editorial light normal
+      ---
+      duration_ms: 248.87175
+      type: 'test'
+      ...
+    # Subtest: editorial light presentation
+    ok 20 - editorial light presentation
+      ---
+      duration_ms: 133.615042
+      type: 'test'
+      ...
+    # Subtest: editorial light focused
+    ok 21 - editorial light focused
+      ---
+      duration_ms: 250.841791
+      type: 'test'
+      ...
+    # Subtest: editorial dark normal
+    ok 22 - editorial dark normal
+      ---
+      duration_ms: 248.716375
+      type: 'test'
+      ...
+    # Subtest: editorial dark presentation
+    ok 23 - editorial dark presentation
+      ---
+      duration_ms: 133.907083
+      type: 'test'
+      ...
+    # Subtest: editorial dark focused
+    ok 24 - editorial dark focused
+      ---
+      duration_ms: 250.964709
+      type: 'test'
+      ...
+    # Subtest: classic print uses light label ink from either theme
+    ok 25 - classic print uses light label ink from either theme
+      ---
+      duration_ms: 333.016042
+      type: 'test'
+      ...
+    1..25
+ok 27 - default relationship labels are readable on their mask in every preset and state
+  ---
+  duration_ms: 5983.589959
+  type: 'test'
+  ...
+# classic light normal: default label 5.966:1, fill rgb(91, 100, 116)
+# classic light presentation: default label 5.966:1, fill rgb(91, 100, 116)
+# classic light focused: default label 5.966:1, fill rgb(91, 100, 116)
+# classic dark normal: default label 6.963:1, fill rgb(148, 163, 184)
+# classic dark presentation: default label 6.963:1, fill rgb(148, 163, 184)
+# classic dark focused: default label 6.963:1, fill rgb(148, 163, 184)
+# signal-flow light normal: default label 5.034:1, fill rgb(88, 114, 135)
+# signal-flow light presentation: default label 5.034:1, fill rgb(88, 114, 135)
+# signal-flow light focused: default label 5.034:1, fill rgb(88, 114, 135)
+# signal-flow dark normal: default label 5.800:1, fill rgb(120, 144, 173)
+# signal-flow dark presentation: default label 5.800:1, fill rgb(120, 144, 173)
+# signal-flow dark focused: default label 5.800:1, fill rgb(120, 144, 173)
+# blueprint light normal: default label 4.926:1, fill rgb(78, 116, 134)
+# blueprint light presentation: default label 4.926:1, fill rgb(78, 116, 134)
+# blueprint light focused: default label 4.926:1, fill rgb(78, 116, 134)
+# blueprint dark normal: default label 6.109:1, fill rgb(120, 163, 183)
+# blueprint dark presentation: default label 6.109:1, fill rgb(120, 163, 183)
+# blueprint dark focused: default label 6.109:1, fill rgb(120, 163, 183)
+# editorial light normal: default label 5.326:1, fill rgb(111, 102, 88)
+# editorial light presentation: default label 5.326:1, fill rgb(111, 102, 88)
+# editorial light focused: default label 5.326:1, fill rgb(111, 102, 88)
+# editorial dark normal: default label 4.770:1, fill rgb(148, 137, 120)
+# editorial dark presentation: default label 4.770:1, fill rgb(148, 137, 120)
+# editorial dark focused: default label 4.770:1, fill rgb(148, 137, 120)
+# classic light print normal: default label 7.578:1, fill rgb(71, 85, 105)
+# classic dark print normal: default label 7.578:1, fill rgb(71, 85, 105)
+# Subtest: common public HTML QA measures real keyboard, references, themes and horizontal layout without Archify markers
+ok 28 - common public HTML QA measures real keyboard, references, themes and horizontal layout without Archify markers
+  ---
+  duration_ms: 1009.224792
+  type: 'test'
+  ...
+# Subtest: formal renderer retains keyboard navigation, static reading and print modes
+ok 29 - formal renderer retains keyboard navigation, static reading and print modes
+  ---
+  duration_ms: 3952.167042
+  type: 'test'
+  ...
+# Subtest: retry layout and referenced node explanations remain readable and keyboard accessible after a prose edit
+ok 30 - retry layout and referenced node explanations remain readable and keyboard accessible after a prose edit
+  ---
+  duration_ms: 1748.358
+  type: 'test'
+  ...
+# Subtest: native step opens the complete Viewer and focuses exact nodes and edges with readable graph text
+ok 31 - native step opens the complete Viewer and focuses exact nodes and edges with readable graph text
+  ---
+  duration_ms: 3104.062042
+  type: 'test'
+  ...
+# Subtest: wide frozen native previews keep every node visible at 1280 and reclaim the 1440 text floor on live resize
+ok 32 - wide frozen native previews keep every node visible at 1280 and reclaim the 1440 text floor on live resize
+  ---
+  duration_ms: 3539.328542
+  type: 'test'
+  ...
+# Subtest: public overflow uses actual clip chains and separates local scroll access from irreversible cropping
+ok 33 - public overflow uses actual clip chains and separates local scroll access from irreversible cropping
+  ---
+  duration_ms: 663.48325
+  type: 'test'
+  ...
+# Subtest: public system-theme mode starts with fresh storage and stable DOM identities distinguish duplicate controls
+ok 34 - public system-theme mode starts with fresh storage and stable DOM identities distinguish duplicate controls
+  ---
+  duration_ms: 841.7975
+  type: 'test'
+  ...
+# Subtest: text names light their diagram nodes and walk-throughs step through steps and messages
+ok 35 - text names light their diagram nodes and walk-throughs step through steps and messages
+  ---
+  duration_ms: 1415.756958
+  type: 'test'
+  ...
+# Subtest: Export preserves menu, clipboard, semantic cards and recording lifecycles
+    # Subtest: removed share actions cannot be invoked through the menu or old API
+    ok 1 - removed share actions cannot be invoked through the menu or old API
+      ---
+      duration_ms: 313.267334
+      type: 'test'
+      ...
+    # Subtest: native menu input skips unavailable entries and preserves focus and mutual exclusion
+    ok 2 - native menu input skips unavailable entries and preserves focus and mutual exclusion
+      ---
+      duration_ms: 641.375208
+      type: 'test'
+      ...
+    # Subtest: auto-open and themed menu rendering keep stable layout
+    ok 3 - auto-open and themed menu rendering keep stable layout
+      ---
+      duration_ms: 923.291375
+      type: 'test'
+      ...
+    # Subtest: semantic card downloads retain snapshots, receipts and URL lifetime
+    ok 4 - semantic card downloads retain snapshots, receipts and URL lifetime
+      ---
+      duration_ms: 2536.663917
+      type: 'test'
+      ...
+    # Subtest: clipboard keeps promise construction in the click and distinct fallback/error receipts
+    ok 5 - clipboard keeps promise construction in the click and distinct fallback/error receipts
+      ---
+      duration_ms: 3178.958791
+      type: 'test'
+      ...
+    # Subtest: raster failures release sources and retain retry and synchronous SVG behavior
+    ok 6 - raster failures release sources and retain retry and synchronous SVG behavior
+      ---
+      duration_ms: 1148.609209
+      type: 'test'
+      ...
+    # Subtest: standalone SVG keeps intrinsic dimensions without changing Viewer or raster sizing
+    ok 7 - standalone SVG keeps intrinsic dimensions without changing Viewer or raster sizing
+      ---
+      duration_ms: 11218.690209
+      type: 'test'
+      ...
+    # Subtest: SVG download declares UTF-8 and preserves CJK text
+    ok 8 - SVG download declares UTF-8 and preserves CJK text
+      ---
+      duration_ms: 471.25425
+      type: 'test'
+      ...
+    # Subtest: classic preset hides background grid in viewer and exported standalone SVGs without affecting PNG
+    ok 9 - classic preset hides background grid in viewer and exported standalone SVGs without affecting PNG
+      ---
+      duration_ms: 2665.601708
+      type: 'test'
+      ...
+    # Subtest: recording succeeds with real encoding and releases tracks and the background URL
+    ok 10 - recording succeeds with real encoding and releases tracks and the background URL
+      ---
+      duration_ms: 877.3685
+      type: 'test'
+      ...
+    # Subtest: menu recording writes its receipt and downloads the real default-duration WebM
+    ok 11 - menu recording writes its receipt and downloads the real default-duration WebM
+      ---
+      duration_ms: 7363.8175
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after image
+    ok 12 - recording settles and releases its resources after image
+      ---
+      duration_ms: 206.989875
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after context-null
+    ok 13 - recording settles and releases its resources after context-null
+      ---
+      duration_ms: 208.065375
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after context-throw
+    ok 14 - recording settles and releases its resources after context-throw
+      ---
+      duration_ms: 216.533417
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after capture
+    ok 15 - recording settles and releases its resources after capture
+      ---
+      duration_ms: 215.627292
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after start
+    ok 16 - recording settles and releases its resources after start
+      ---
+      duration_ms: 230.5695
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after first-frame
+    ok 17 - recording settles and releases its resources after first-frame
+      ---
+      duration_ms: 221.280292
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after later-frame
+    ok 18 - recording settles and releases its resources after later-frame
+      ---
+      duration_ms: 220.8175
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after async-error
+    ok 19 - recording settles and releases its resources after async-error
+      ---
+      duration_ms: 666.274125
+      type: 'test'
+      ...
+    # Subtest: recording settles and releases its resources after stop
+    ok 20 - recording settles and releases its resources after stop
+      ---
+      duration_ms: 588.008875
+      type: 'test'
+      ...
+    # Subtest: recording failures reach the menu receipt and a later same-page recording succeeds
+    ok 21 - recording failures reach the menu receipt and a later same-page recording succeeds
+      ---
+      duration_ms: 597.151208
+      type: 'test'
+      ...
+    # Subtest: recording keeps flush best-effort and isolates overlapping calls
+    ok 22 - recording keeps flush best-effort and isolates overlapping calls
+      ---
+      duration_ms: 1249.991958
+      type: 'test'
+      ...
+    # Subtest: recording constructor/error/empty failures clean up and public run disables WebM
+    ok 23 - recording constructor/error/empty failures clean up and public run disables WebM
+      ---
+      duration_ms: 830.120667
+      type: 'test'
+      ...
+    1..23
+ok 36 - Export preserves menu, clipboard, semantic cards and recording lifecycles
+  ---
+  duration_ms: 37545.93
+  type: 'test'
+  ...
+# Subtest: Export cleanup preserves canonical artifacts and live interaction state
+    # Subtest: five modes export standalone SVG in both themes and reduced motion
+    ok 1 - five modes export standalone SVG in both themes and reduced motion
+      ---
+      duration_ms: 2276.383125
+      type: 'test'
+      ...
+    # Subtest: explicit light and dark SVG exports stay fixed under the opposite OS theme
+    ok 2 - explicit light and dark SVG exports stay fixed under the opposite OS theme
+      ---
+      duration_ms: 461.415458
+      type: 'test'
+      ...
+    # Subtest: fixed SVG options do not depend on WebP encoding
+    ok 3 - fixed SVG options do not depend on WebP encoding
+      ---
+      duration_ms: 190.617667
+      type: 'test'
+      ...
+    # Subtest: real zoom, focus, preview, lens and route actions leave exports clean
+    ok 4 - real zoom, focus, preview, lens and route actions leave exports clean
+      ---
+      duration_ms: 1686.02
+      type: 'test'
+      ...
+    # Subtest: raster and share-card exports preserve dimensions and current theme
+    ok 5 - raster and share-card exports preserve dimensions and current theme
+      ---
+      duration_ms: 2722.607416
+      type: 'test'
+      ...
+    # Subtest: clone restoration, preservation and repeated cleanup are independent of live DOM
+    ok 6 - clone restoration, preservation and repeated cleanup are independent of live DOM
+      ---
+      duration_ms: 207.928916
+      type: 'test'
+      ...
+    # Subtest: share decoration follows cleanup and preserves snapshot rejection behavior
+    ok 7 - share decoration follows cleanup and preserves snapshot rejection behavior
+      ---
+      duration_ms: 633.350584
+      type: 'test'
+      ...
+    1..7
+ok 37 - Export cleanup preserves canonical artifacts and live interaction state
+  ---
+  duration_ms: 9332.363833
+  type: 'test'
+  ...
+# Subtest: Export menu preserves authored reach until genuine outside dismissal
+ok 38 - Export menu preserves authored reach until genuine outside dismissal
+  ---
+  duration_ms: 9189.265792
+  type: 'test'
+  ...
+# Subtest: finalize proves all four gates in real Chrome with bounded mixed-case sidecars and repeat delivery
+ok 39 - finalize proves all four gates in real Chrome with bounded mixed-case sidecars and repeat delivery
+  ---
+  duration_ms: 4148.637833
+  type: 'test'
+  ...
+# Subtest: Finder preserves search, keyboard, contextual Route selection and cleanup
+    # Subtest: five modes initialize one index and no external resources
+    ok 1 - five modes initialize one index and no external resources
+      ---
+      duration_ms: 1013.516375
+      type: 'test'
+      ...
+    # Subtest: search normalizes queries and preserves contextual lists and retained context
+    ok 2 - search normalizes queries and preserves contextual lists and retained context
+      ---
+      duration_ms: 382.408542
+      type: 'test'
+      ...
+    # Subtest: composing global shortcuts preserve Viewer state and default input behavior
+    ok 3 - composing global shortcuts preserve Viewer state and default input behavior
+      ---
+      duration_ms: 1067.855833
+      type: 'test'
+      ...
+    # Subtest: trusted keyboard navigation, selection and Escape preserve focus boundaries
+    ok 4 - trusted keyboard navigation, selection and Escape preserve focus boundaries
+      ---
+      duration_ms: 665.68725
+      type: 'test'
+      ...
+    # Subtest: real Route controls select source and target; cancellation restores Route focus
+    ok 5 - real Route controls select source and target; cancellation restores Route focus
+      ---
+      duration_ms: 1748.538667
+      type: 'test'
+      ...
+    # Subtest: panel coordination, outside clicks, repeated close and embed retain baseline semantics
+    ok 6 - panel coordination, outside clicks, repeated close and embed retain baseline semantics
+      ---
+      duration_ms: 768.39375
+      type: 'test'
+      ...
+    # Subtest: themes, constrained viewport, reduced motion and exported SVG
+    ok 7 - themes, constrained viewport, reduced motion and exported SVG
+      ---
+      duration_ms: 625.884541
+      type: 'test'
+      ...
+    1..7
+ok 40 - Finder preserves search, keyboard, contextual Route selection and cleanup
+  ---
+  duration_ms: 7280.338708
+  type: 'test'
+  ...
+# Subtest: Focus preserves semantic selection, relationships, reachability and shared flow tokens
+    # Subtest: five modes expose the same Focus and flowTokens surfaces at cold start
+    ok 1 - five modes expose the same Focus and flowTokens surfaces at cold start
+      ---
+      duration_ms: 1768.015958
+      type: 'test'
+      ...
+    # Subtest: native node input and option variants preserve selection and cleanup side effects
+    ok 2 - native node input and option variants preserve selection and cleanup side effects
+      ---
+      duration_ms: 593.872416
+      type: 'test'
+      ...
+    # Subtest: Passport rows preserve keyboard navigation, missing metadata and no-neighbor state
+    ok 3 - Passport rows preserve keyboard navigation, missing metadata and no-neighbor state
+      ---
+      duration_ms: 1105.91675
+      type: 'test'
+      ...
+    # Subtest: relationship focus and pointer intents yield to pins and direct keyboard exploration
+    ok 4 - relationship focus and pointer intents yield to pins and direct keyboard exploration
+      ---
+      duration_ms: 1532.825625
+      type: 'test'
+      ...
+    # Subtest: direct pointer delay, touch filtering and background input keep ownership rules
+    ok 5 - direct pointer delay, touch filtering and background input keep ownership rules
+      ---
+      duration_ms: 1296.908
+      type: 'test'
+      ...
+    # Subtest: authored graph geometry and shared token kinds preserve grouping and direction
+    ok 6 - authored graph geometry and shared token kinds preserve grouping and direction
+      ---
+      duration_ms: 350.556541
+      type: 'test'
+      ...
+    # Subtest: reachability handles cycles, parallel edges, toggles and strict snapshot rejection
+    ok 7 - reachability handles cycles, parallel edges, toggles and strict snapshot rejection
+      ---
+      duration_ms: 1684.059167
+      type: 'test'
+      ...
+    # Subtest: cold URLs and hashchange preserve focus, relation, reach and query semantics
+    ok 8 - cold URLs and hashchange preserve focus, relation, reach and query semantics
+      ---
+      duration_ms: 1583.361417
+      type: 'test'
+      ...
+    # Subtest: copy fallback and delayed feedback retain node, reach and relation links
+    ok 9 - copy fallback and delayed feedback retain node, reach and relation links
+      ---
+      duration_ms: 9876.0715
+      type: 'test'
+      ...
+    # Subtest: real pulse completion and motion transitions preserve static relationship state
+    ok 10 - real pulse completion and motion transitions preserve static relationship state
+      ---
+      duration_ms: 1863.376875
+      type: 'test'
+      ...
+    # Subtest: real SVG export strips temporary Focus, Reach and relationship state from clones
+    ok 11 - real SVG export strips temporary Focus, Reach and relationship state from clones
+      ---
+      duration_ms: 842.890834
+      type: 'test'
+      ...
+    # Subtest: Passport layout and dark/light output remain stable through viewport and camera changes
+    ok 12 - Passport layout and dark/light output remain stable through viewport and camera changes
+      ---
+      duration_ms: 3386.088833
+      type: 'test'
+      ...
+    1..12
+ok 41 - Focus preserves semantic selection, relationships, reachability and shared flow tokens
+  ---
+  duration_ms: 26892.813917
+  type: 'test'
+  ...
+# Subtest: visual-check binds the delivered Korean fixture to viewport and theme receipts
+ok 42 - visual-check binds the delivered Korean fixture to viewport and theme receipts
+  ---
+  duration_ms: 2383.980084
+  type: 'test'
+  ...
+# Subtest: visual-check binds the delivered Japanese fixture to viewport and theme receipts
+ok 43 - visual-check binds the delivered Japanese fixture to viewport and theme receipts
+  ---
+  duration_ms: 2363.160083
+  type: 'test'
+  ...
+# Subtest: a passing finalize keeps locale warnings in its receipt
+ok 44 - a passing finalize keeps locale warnings in its receipt
+  ---
+  duration_ms: 1977.432375
+  type: 'test'
+  ...
+# Subtest: real Chrome keeps zh-CN Finder, Route, Export, and accessibility UI localized in all five modes
+ok 45 - real Chrome keeps zh-CN Finder, Route, Export, and accessibility UI localized in all five modes
+  ---
+  duration_ms: 10456.989958
+  type: 'test'
+  ...
+# Subtest: real Chrome keeps es Finder, Route, Export, and accessibility UI localized in all five modes
+ok 46 - real Chrome keeps es Finder, Route, Export, and accessibility UI localized in all five modes
+  ---
+  duration_ms: 11000.430958
+  type: 'test'
+  ...
+# Subtest: real Chrome keeps ko Finder, Route, Export, and accessibility UI localized in all five modes
+ok 47 - real Chrome keeps ko Finder, Route, Export, and accessibility UI localized in all five modes
+  ---
+  duration_ms: 10761.347125
+  type: 'test'
+  ...
+# Subtest: real Chrome keeps Arabic UI localized with mixed-script authored titles in all five modes
+ok 48 - real Chrome keeps Arabic UI localized with mixed-script authored titles in all five modes
+  ---
+  duration_ms: 11343.562708
+  type: 'test'
+  ...
+# Subtest: Intent Trace preserves input handoffs, transient geometry and cleanup
+    # Subtest: five modes initialize and public return/broadcast contracts remain intact
+    ok 1 - five modes initialize and public return/broadcast contracts remain intact
+      ---
+      duration_ms: 968.365958
+      type: 'test'
+      ...
+    # Subtest: real pointer delay, fast exit, keyboard focus and Escape share cleanup
+    ok 2 - real pointer delay, fast exit, keyboard focus and Escape share cleanup
+      ---
+      duration_ms: 1173.114
+      type: 'test'
+      ...
+    # Subtest: hover dimming keeps node masks opaque over underlying arrows
+    ok 3 - hover dimming keeps node masks opaque over underlying arrows
+      ---
+      duration_ms: 374.829667
+      type: 'test'
+      ...
+    # Subtest: controlled timers preserve repeated-show, retained-input and input-filter semantics
+    ok 4 - controlled timers preserve repeated-show, retained-input and input-filter semantics
+      ---
+      duration_ms: 589.557792
+      type: 'test'
+      ...
+    # Subtest: a minimal SVG fixture preserves counting, cloned geometry and isolated nodes
+    ok 5 - a minimal SVG fixture preserves counting, cloned geometry and isolated nodes
+      ---
+      duration_ms: 126.116334
+      type: 'test'
+      ...
+    # Subtest: blockers gate requests while actual Focus, Route and Lens retain handoff behavior
+    ok 6 - blockers gate requests while actual Focus, Route and Lens retain handoff behavior
+      ---
+      duration_ms: 1350.649083
+      type: 'test'
+      ...
+    # Subtest: real CSS looping, Motion stop/restart, reduced motion and themes preserve previews
+    ok 7 - real CSS looping, Motion stop/restart, reduced motion and themes preserve previews
+      ---
+      duration_ms: 1854.492709
+      type: 'test'
+      ...
+    1..7
+ok 49 - Intent Trace preserves input handoffs, transient geometry and cleanup
+  ---
+  duration_ms: 7759.020042
+  type: 'test'
+  ...
+# Subtest: one joint wait preserves real Reader/Chrome convergence at the CLI boundary
+    # Subtest: CLI visits all six fresh states and captures immediate geometry before collecting metrics
+    ok 1 - CLI visits all six fresh states and captures immediate geometry before collecting metrics
+      ---
+      duration_ms: 4593.036333
+      type: 'test'
+      ...
+    # Subtest: native observer feedback converges through reserve and adaptive overflow without changing canonical SVG
+    ok 2 - native observer feedback converges through reserve and adaptive overflow without changing canonical SVG
+      ---
+      duration_ms: 2426.401791
+      type: 'test'
+      ...
+    # Subtest: a deferred or rejected reader-only reprobe blocks joint resolution and coalesces
+    ok 3 - a deferred or rejected reader-only reprobe blocks joint resolution and coalesces
+      ---
+      duration_ms: 3165.342292
+      type: 'test'
+      ...
+    # Subtest: initial font readiness blocks the gate through changed nav and reader content
+    ok 4 - initial font readiness blocks the gate through changed nav and reader content
+      ---
+      duration_ms: 1066.893333
+      type: 'test'
+      ...
+    # Subtest: a new native font cycle active during sampling cannot resolve before font/layout readiness
+    ok 5 - a new native font cycle active during sampling cannot resolve before font/layout readiness
+      ---
+      duration_ms: 1599.130667
+      type: 'test'
+      ...
+    # Subtest: intrinsic-height overflow, resize bursts, and mode returns converge at baseline camera
+    ok 6 - intrinsic-height overflow, resize bursts, and mode returns converge at baseline camera
+      ---
+      duration_ms: 8077.264
+      type: 'test'
+      ...
+    # Subtest: optional-observer fallback retains joint scheduling on viewport changes
+    ok 7 - optional-observer fallback retains joint scheduling on viewport changes
+      ---
+      duration_ms: 2106.51775
+      type: 'test'
+      ...
+    1..7
+ok 50 - one joint wait preserves real Reader/Chrome convergence at the CLI boundary
+  ---
+  duration_ms: 24090.196291
+  type: 'test'
+  ...
+# Subtest: Lifecycle notes retain their content and reading depth with readable Full-detail ink
+    # Subtest: light Read hides notes and Full meets opaque-plate contrast
+    ok 1 - light Read hides notes and Full meets opaque-plate contrast
+      ---
+      duration_ms: 378.750333
+      type: 'test'
+      ...
+    # Subtest: dark Read hides notes and Full meets opaque-plate contrast
+    ok 2 - dark Read hides notes and Full meets opaque-plate contrast
+      ---
+      duration_ms: 229.979792
+      type: 'test'
+      ...
+    1..2
+ok 51 - Lifecycle notes retain their content and reading depth with readable Full-detail ink
+  ---
+  duration_ms: 1170.196041
+  type: 'test'
+  ...
+# light cancel-2 opaque-plate contrast 5.966:1; ink 91,100,116; plate 255,255,255
+# light deadline-0 opaque-plate contrast 5.966:1; ink 91,100,116; plate 255,255,255
+# light deadline-2 opaque-plate contrast 5.966:1; ink 91,100,116; plate 255,255,255
+# light fail-1 opaque-plate contrast 5.966:1; ink 91,100,116; plate 255,255,255
+# dark cancel-2 opaque-plate contrast 6.963:1; ink 148,163,184; plate 15,23,42
+# dark deadline-0 opaque-plate contrast 6.963:1; ink 148,163,184; plate 15,23,42
+# dark deadline-2 opaque-plate contrast 6.963:1; ink 148,163,184; plate 15,23,42
+# dark fail-1 opaque-plate contrast 6.963:1; ink 148,163,184; plate 15,23,42
+# Subtest: Viewer menus preserve modified navigation keys
+ok 52 - Viewer menus preserve modified navigation keys
+  ---
+  duration_ms: 628.68
+  type: 'test'
+  ...
+# Subtest: Motion Governor preserves mode, ownership, continuous Live flow and real callers
+    # Subtest: ten modes preserve authored geometry and semantics; representative flows keep cycling and resume
+    ok 1 - ten modes preserve authored geometry and semantics; representative flows keep cycling and resume
+      ---
+      duration_ms: 7658.829458
+      type: 'test'
+      ...
+    # Subtest: Live relays each comet from its source after the signal reaches it
+    ok 2 - Live relays each comet from its source after the signal reaches it
+      ---
+      duration_ms: 219.646375
+      type: 'test'
+      ...
+    # Subtest: settled Live node glow preserves Classic card depth across themes
+    ok 3 - settled Live node glow preserves Classic card depth across themes
+      ---
+      duration_ms: 439.199292
+      type: 'test'
+      ...
+    # Subtest: collapsing Orders hides only its descendant flow overlays
+    ok 4 - collapsing Orders hides only its descendant flow overlays
+      ---
+      duration_ms: 514.634792
+      type: 'test'
+      ...
+    # Subtest: printing settled Live nodes preserves static styling then restores screen Live
+    ok 5 - printing settled Live nodes preserves static styling then restores screen Live
+      ---
+      duration_ms: 555.694083
+      type: 'test'
+      ...
+    # Subtest: grouped edges keep runtime flows out of semantic geometry copies
+    ok 6 - grouped edges keep runtime flows out of semantic geometry copies
+      ---
+      duration_ms: 250.05275
+      type: 'test'
+      ...
+    # Subtest: stored user intent remains distinct from reduced motion and suspension
+    ok 7 - stored user intent remains distinct from reduced motion and suspension
+      ---
+      duration_ms: 1137.96275
+      type: 'test'
+      ...
+    # Subtest: claims preempt cleanup, normal release does not, and SVG owners fall back automatically
+    ok 8 - claims preempt cleanup, normal release does not, and SVG owners fall back automatically
+      ---
+      duration_ms: 276.343792
+      type: 'test'
+      ...
+    # Subtest: counted suspensions and the existing visibility-key interaction remain distinct
+    ok 9 - counted suspensions and the existing visibility-key interaction remain distinct
+      ---
+      duration_ms: 255.462916
+      type: 'test'
+      ...
+    # Subtest: node entry cancellation and optional platform interfaces keep their fallback
+    ok 10 - node entry cancellation and optional platform interfaces keep their fallback
+      ---
+      duration_ms: 1439.336291
+      type: 'test'
+      ...
+    # Subtest: guards hide Live immediately and automatically restore it without growing the SVG
+    ok 11 - guards hide Live immediately and automatically restore it without growing the SVG
+      ---
+      duration_ms: 419.915375
+      type: 'test'
+      ...
+    # Subtest: printing keeps Governor Live and preserves the existing Route print policy
+    ok 12 - printing keeps Governor Live and preserves the existing Route print policy
+      ---
+      duration_ms: 380.005375
+      type: 'test'
+      ...
+    # Subtest: canonical SVG and PNG bytes are identical in Live, Still and resumed Live
+    ok 13 - canonical SVG and PNG bytes are identical in Live, Still and resumed Live
+      ---
+      duration_ms: 710.198083
+      type: 'test'
+      ...
+    # Subtest: Motion pauses actual Route without discarding elapsed dwell
+    ok 14 - Motion pauses actual Route without discarding elapsed dwell
+      ---
+      duration_ms: 406.575916
+      type: 'test'
+      ...
+    # Subtest: dark and light modes expose the same controls and computed Still state
+    ok 15 - dark and light modes expose the same controls and computed Still state
+      ---
+      duration_ms: 612.872833
+      type: 'test'
+      ...
+    1..15
+ok 53 - Motion Governor preserves mode, ownership, continuous Live flow and real callers
+  ---
+  duration_ms: 16900.13375
+  type: 'test'
+  ...
+# [{"preset":"classic","theme":"dark","baseline":"drop-shadow(rgba(0, 0, 0, 0.35) 0px 8px 16px)","neutral":"drop-shadow(rgba(0, 0, 0, 0.35) 0px 8px 16px)","peak":"drop-shadow(rgba(0, 0, 0, 0.35) 0px 8px 16px) drop-shadow(rgb(52, 211, 153) 0px 0px 10px)"},{"preset":"editorial","theme":"dark","baseline":"none","neutral":"none","peak":"drop-shadow(rgb(221, 107, 61) 0px 0px 10px)"},{"preset":"classic","theme":"light","baseline":"drop-shadow(rgba(17, 24, 39, 0.05) 0px 1px 1px) drop-shadow(rgba(17, 24, 39, 0.06) 0px 6px 12px)","neutral":"drop-shadow(rgba(17, 24, 39, 0.05) 0px 1px 1px) drop-shadow(rgba(17, 24, 39, 0.06) 0px 6px 12px)","peak":"drop-shadow(rgba(17, 24, 39, 0.05) 0px 1px 1px) drop-shadow(rgba(17, 24, 39, 0.06) 0px 6px 12px) drop-shadow(rgb(5, 150, 105) 0px 0px 10px)"},{"preset":"editorial","theme":"light","baseline":"none","neutral":"none","peak":"drop-shadow(rgb(187, 76, 35) 0px 0px 10px)"}]
+# Subtest: fresh viewers use bundled fonts with local fonts disabled and identical offline layout
+ok 54 - fresh viewers use bundled fonts with local fonts disabled and identical offline layout
+  ---
+  duration_ms: 5852.785666
+  type: 'test'
+  ...
+# Subtest: SVG and raster exports preserve the viewer font with local fonts and network disabled
+ok 55 - SVG and raster exports preserve the viewer font with local fonts and network disabled
+  ---
+  duration_ms: 2418.410792
+  type: 'test'
+  ...
+# Subtest: png requested at DOMContentLoaded matches a font-settled repeat
+ok 56 - png requested at DOMContentLoaded matches a font-settled repeat
+  ---
+  duration_ms: 1463.741667
+  type: 'test'
+  ...
+# png: fonts at initial click: loading; fonts ready for every Canvas text draw
+# Subtest: route-share-card requested at DOMContentLoaded matches a font-settled repeat
+ok 57 - route-share-card requested at DOMContentLoaded matches a font-settled repeat
+  ---
+  duration_ms: 1409.744667
+  type: 'test'
+  ...
+# route-share-card: fonts at initial click: loading; fonts ready for every Canvas text draw
+# Subtest: Semantic Passport flips to an authored explanation and back without moving or exporting it
+ok 58 - Semantic Passport flips to an authored explanation and back without moving or exporting it
+  ---
+  duration_ms: 1181.775792
+  type: 'test'
+  ...
+# Subtest: near-limit explanation keeps Back and keyboard scrolling reachable at reflow and after resize
+ok 59 - near-limit explanation keeps Back and keyboard scrolling reachable at reflow and after resize
+  ---
+  duration_ms: 1657.059583
+  type: 'test'
+  ...
+# Subtest: reader cards keep an unbreakable note inside the viewport width
+ok 60 - reader cards keep an unbreakable note inside the viewport width
+  ---
+  duration_ms: 3253.808292
+  type: 'test'
+  ...
+# Subtest: Reader Layout preserves final-artifact behavior across its ownership boundaries
+    # Subtest: Guide stays closed for a new reader and its icon toggles reliably
+    ok 1 - Guide stays closed for a new reader and its icon toggles reliably
+      ---
+      duration_ms: 919.561666
+      type: 'test'
+      ...
+    # Subtest: five modes initialize and export clean SVG; a representative reader honors both themes and reduced motion
+    ok 2 - five modes initialize and export clean SVG; a representative reader honors both themes and reduced motion
+      ---
+      duration_ms: 6365.598375
+      type: 'test'
+      ...
+    # Subtest: Guide and presentation keyboard controls preserve focus, URL context and authored geometry
+    ok 3 - Guide and presentation keyboard controls preserve focus, URL context and authored geometry
+      ---
+      duration_ms: 1151.092667
+      type: 'test'
+      ...
+    # Subtest: ratio and desktop thresholds preserve shape while clearing temporary state
+    ok 4 - ratio and desktop thresholds preserve shape while clearing temporary state
+      ---
+      duration_ms: 7230.814625
+      type: 'test'
+      ...
+    # Subtest: capped canvas keeps its original legend in the outer corner through camera, input and canonical export
+    ok 5 - capped canvas keeps its original legend in the outer corner through camera, input and canonical export
+      ---
+      duration_ms: 9660.695792
+      type: 'test'
+      ...
+    # Subtest: zero-size SVG clears corner legend placement and recovers without nonfinite transforms
+    ok 6 - zero-size SVG clears corner legend placement and recovers without nonfinite transforms
+      ---
+      duration_ms: 1019.221084
+      type: 'test'
+      ...
+    # Subtest: compact real ERD keeps the normal canvas while SVG enlargement remains capped
+    ok 7 - compact real ERD keeps the normal canvas while SVG enlargement remains capped
+      ---
+      duration_ms: 5647.133459
+      type: 'test'
+      ...
+    # Subtest: automatic compact ERD clears its reader area in specialized modes and restores it on return
+    ok 8 - automatic compact ERD clears its reader area in specialized modes and restores it on return
+      ---
+      duration_ms: 2431.585375
+      type: 'test'
+      ...
+    # Subtest: compact ERD resize clears and restores its area across desktop eligibility and binding cap boundaries
+    ok 9 - compact ERD resize clears and restores its area across desktop eligibility and binding cap boundaries
+      ---
+      duration_ms: 1783.678167
+      type: 'test'
+      ...
+    # Subtest: automatic width-first content favors reading width while small canvases cap enlargement
+    ok 10 - automatic width-first content favors reading width while small canvases cap enlargement
+      ---
+      duration_ms: 13798.986042
+      type: 'test'
+      ...
+    # Subtest: compact automatic Sequence fits the initial desktop stage without shrinking source text
+    ok 11 - compact automatic Sequence fits the initial desktop stage without shrinking source text
+      ---
+      duration_ms: 5399.512708
+      type: 'test'
+      ...
+    # Subtest: public renderers declare automatic reading width while undeclared canvases retain their fit
+    ok 12 - public renderers declare automatic reading width while undeclared canvases retain their fit
+      ---
+      duration_ms: 5567.554583
+      type: 'test'
+      ...
+    # Subtest: desktop budgets, extreme content and limited horizontal space preserve geometry
+    ok 13 - desktop budgets, extreme content and limited horizontal space preserve geometry
+      ---
+      duration_ms: 2986.027791
+      type: 'test'
+      ...
+    # Subtest: embed, presentation and print return to ordinary layout without clearing shape
+    ok 14 - embed, presentation and print return to ordinary layout without clearing shape
+      ---
+      duration_ms: 6512.55675
+      type: 'test'
+      ...
+    # Subtest: content observers and burst scheduling converge while camera state remains usable
+    ok 15 - content observers and burst scheduling converge while camera state remains usable
+      ---
+      duration_ms: 1416.414666
+      type: 'test'
+      ...
+    # Subtest: optional content and browser interfaces retain their fallback behavior
+    ok 16 - optional content and browser interfaces retain their fallback behavior
+      ---
+      duration_ms: 1101.004584
+      type: 'test'
+      ...
+    # Subtest: font readiness gates sampling and pending-frame timeout remains explicit
+    ok 17 - font readiness gates sampling and pending-frame timeout remains explicit
+      ---
+      duration_ms: 885.111208
+      type: 'test'
+      ...
+    1..17
+ok 61 - Reader Layout preserves final-artifact behavior across its ownership boundaries
+  ---
+  duration_ms: 75040.085583
+  type: 'test'
+  ...
+# Subtest: Reader Layout settles when card height depends on the reader width
+ok 62 - Reader Layout settles when card height depends on the reader width
+  ---
+  duration_ms: 970.847584
+  type: 'test'
+  ...
+# Subtest: declared wide synthetic reader preserves geometry and reaches edge/node readability
+ok 63 - declared wide synthetic reader preserves geometry and reaches edge/node readability
+  ---
+  duration_ms: 6202.71925
+  type: 'test'
+  ...
+# Subtest: native copy links preserve a host page and opaque reader state without changing standalone links
+ok 64 - native copy links preserve a host page and opaque reader state without changing standalone links
+  ---
+  duration_ms: 1583.073916
+  type: 'test'
+  ...
+# Subtest: browser renders local-only sources as searchable text and web sources as links
+ok 65 - browser renders local-only sources as searchable text and web sources as links
+  ---
+  duration_ms: 2772.193833
+  type: 'test'
+  ...
+# Subtest: browser announces verified source counts without visual marks and restores canonical export labels
+ok 66 - browser announces verified source counts without visual marks and restores canonical export labels
+  ---
+  duration_ms: 1080.835916
+  type: 'test'
+  ...
+# Subtest: verified sources remain in Focus and Finder with accessible counts and no node badges
+ok 67 - verified sources remain in Focus and Finder with accessible counts and no node badges
+  ---
+  duration_ms: 8900.778125
+  type: 'test'
+  ...
+# Subtest: Route Probe preserves directed paths, Journey and export contracts
+    # Subtest: five modes initialize and trusted endpoint input preserves capture and error recovery
+    ok 1 - five modes initialize and trusted endpoint input preserves capture and error recovery
+      ---
+      duration_ms: 2322.548708
+      type: 'test'
+      ...
+    # Subtest: SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+    ok 2 - SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+      ---
+      duration_ms: 215.793042
+      type: 'test'
+      ...
+    # Subtest: native Journey controls, finite playback, pause and layered Escape preserve path state
+    ok 3 - native Journey controls, finite playback, pause and layered Escape preserve path state
+      ---
+      duration_ms: 6237.955208
+      type: 'test'
+      ...
+    # Subtest: controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+    ok 4 - controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+      ---
+      duration_ms: 1329.583125
+      type: 'test'
+      ...
+    # Subtest: actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+    ok 5 - actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+      ---
+      duration_ms: 1536.733209
+      type: 'test'
+      ...
+    # Subtest: hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+    ok 6 - hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+      ---
+      duration_ms: 8777.639083
+      type: 'test'
+      ...
+    # Subtest: docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+    ok 7 - docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+      ---
+      duration_ms: 1480.030917
+      type: 'test'
+      ...
+    # Subtest: theme snapshots, Still rendering and real exports retain authored route semantics
+    ok 8 - theme snapshots, Still rendering and real exports retain authored route semantics
+      ---
+      duration_ms: 814.459417
+      type: 'test'
+      ...
+    1..8
+ok 68 - Route Probe preserves directed paths, Journey and export contracts
+  ---
+  duration_ms: 23999.480833
+  type: 'test'
+  ...
+# Subtest: Semantic Lens preserves selection, legend preview and panel contracts
+    # Subtest: five modes and optional legend initialization preserve counts, roles and embed boundaries
+    ok 1 - five modes and optional legend initialization preserve counts, roles and embed boundaries
+      ---
+      duration_ms: 1465.144291
+      type: 'test'
+      ...
+    # Subtest: trusted buttons, selection transitions, return values and three cleanup operations stay distinct
+    ok 2 - trusted buttons, selection transitions, return values and three cleanup operations stay distinct
+      ---
+      duration_ms: 341.875333
+      type: 'test'
+      ...
+    # Subtest: native legend focus, pointer transitions, keyboard activation and opener restoration
+    ok 3 - native legend focus, pointer transitions, keyboard activation and opener restoration
+      ---
+      duration_ms: 521.362584
+      type: 'test'
+      ...
+    # Subtest: minimal SVG fixtures preserve node indexing, grouped directions, first-member geometry and 24/25 threshold
+    ok 4 - minimal SVG fixtures preserve node indexing, grouped directions, first-member geometry and 24/25 threshold
+      ---
+      duration_ms: 184.708958
+      type: 'test'
+      ...
+    # Subtest: initial URL, hashchange and controlled clipboard boundaries retain normalization and feedback
+    ok 5 - initial URL, hashchange and controlled clipboard boundaries retain normalization and feedback
+      ---
+      duration_ms: 8231.252167
+      type: 'test'
+      ...
+    # Subtest: actual capability handoffs and blocked previews preserve existing ownership
+    ok 6 - actual capability handoffs and blocked previews preserve existing ownership
+      ---
+      duration_ms: 584.471
+      type: 'test'
+      ...
+    # Subtest: panel events, pending frames and controlled docking geometry preserve responsive branches
+    ok 7 - panel events, pending frames and controlled docking geometry preserve responsive branches
+      ---
+      duration_ms: 749.124958
+      type: 'test'
+      ...
+    # Subtest: themes, reduced motion, Still and real SVG export retain selection and preview rendering
+    ok 8 - themes, reduced motion, Still and real SVG export retain selection and preview rendering
+      ---
+      duration_ms: 2199.378667
+      type: 'test'
+      ...
+    1..8
+ok 69 - Semantic Lens preserves selection, legend preview and panel contracts
+  ---
+  duration_ms: 15670.827417
+  type: 'test'
+  ...
+# Subtest: Semantic Passport pointer movement honors threshold, capture, four-edge clamp, persistence, cancel, and resets
+ok 70 - Semantic Passport pointer movement honors threshold, capture, four-edge clamp, persistence, cancel, and resets
+  ---
+  duration_ms: 2196.467459
+  type: 'test'
+  ...
+# Subtest: compact ERD Passport reclamps to the settled container when the reader cap stops binding
+ok 71 - compact ERD Passport reclamps to the settled container when the reader cap stops binding
+  ---
+  duration_ms: 3871.390167
+  type: 'test'
+  ...
+# Subtest: Semantic Passport keyboard movement uses coarse/fine steps, Home reset, and resize reclamping
+ok 72 - Semantic Passport keyboard movement uses coarse/fine steps, Home reset, and resize reclamping
+  ---
+  duration_ms: 1663.905541
+  type: 'test'
+  ...
+# Subtest: mobile scrolling and wide coarse pointers keep automatic placement and hide the move affordance
+ok 73 - mobile scrolling and wide coarse pointers keep automatic placement and hide the move affordance
+  ---
+  duration_ms: 1194.369292
+  type: 'test'
+  ...
+# Subtest: move affordance exposes localized accessible names and a visible keyboard focus ring
+ok 74 - move affordance exposes localized accessible names and a visible keyboard focus ring
+  ---
+  duration_ms: 1226.747584
+  type: 'test'
+  ...
+# Subtest: manual Passport placement composes with Radar, Legend, Dock, and clean SVG, PNG, and WebM export
+ok 75 - manual Passport placement composes with Radar, Legend, Dock, and clean SVG, PNG, and WebM export
+  ---
+  duration_ms: 1814.265042
+  type: 'test'
+  ...
+# Subtest: all typed renderers inherit one viewer-only Semantic Radar
+ok 76 - all typed renderers inherit one viewer-only Semantic Radar
+  ---
+  duration_ms: 664.524958
+  type: 'test'
+  ...
+# Subtest: Semantic Radar derives semantic node bounds and focuses stable IDs
+ok 77 - Semantic Radar derives semantic node bounds and focuses stable IDs
+  ---
+  duration_ms: 247.580417
+  type: 'test'
+  ...
+# Subtest: Semantic Radar tracks desktop camera and mobile contained scroll
+ok 78 - Semantic Radar tracks desktop camera and mobile contained scroll
+  ---
+  duration_ms: 131.54625
+  type: 'test'
+  ...
+# Subtest: Semantic Radar keeps redundant accessible navigation and clean exports
+ok 79 - Semantic Radar keeps redundant accessible navigation and clean exports
+  ---
+  duration_ms: 135.263583
+  type: 'test'
+  ...
+# Subtest: Semantic Radar stays above the measured MAP control strip
+ok 80 - Semantic Radar stays above the measured MAP control strip
+  ---
+  duration_ms: 1146.531292
+  type: 'test'
+  ...
+# Subtest: Semantic Radar avoids an expanded mobile Passport without hiding a collision
+ok 81 - Semantic Radar avoids an expanded mobile Passport without hiding a collision
+  ---
+  duration_ms: 1138.080083
+  type: 'test'
+  ...
+# Subtest: Semantic Radar reports a consistent unavailable state and recovers when space returns
+ok 82 - Semantic Radar reports a consistent unavailable state and recovers when space returns
+  ---
+  duration_ms: 1316.955834
+  type: 'test'
+  ...
+# Subtest: Semantic Radar automatically avoids a tall Semantic Passport
+ok 83 - Semantic Radar automatically avoids a tall Semantic Passport
+  ---
+  duration_ms: 1121.9585
+  type: 'test'
+  ...
+# Subtest: Semantic Radar titlebar drag persists while surface drag still pans the diagram
+ok 84 - Semantic Radar titlebar drag persists while surface drag still pans the diagram
+  ---
+  duration_ms: 1260.574583
+  type: 'test'
+  ...
+# Subtest: closing a pending Radar request prevents retry and reflow from reopening it
+ok 85 - closing a pending Radar request prevents retry and reflow from reopening it
+  ---
+  duration_ms: 1577.055791
+  type: 'test'
+  ...
+# Subtest: Radar reflects camera viewport, status and Focus activity through normal callers
+ok 86 - Radar reflects camera viewport, status and Focus activity through normal callers
+  ---
+  duration_ms: 3435.888
+  type: 'test'
+  ...
+# Subtest: sequence headers center text without overlapping corner marks or changing literal labels
+ok 87 - sequence headers center text without overlapping corner marks or changing literal labels
+  ---
+  duration_ms: 3625.857833
+  type: 'test'
+  ...
+# Subtest: SVG and PNG exports keep every line of a wrapped sequence note
+    # Subtest: dark Full-detail note has at least 4.5:1 contrast
+    ok 1 - dark Full-detail note has at least 4.5:1 contrast
+      ---
+      duration_ms: 26.554416
+      type: 'test'
+      ...
+    # Subtest: light Full-detail note has at least 4.5:1 contrast
+    ok 2 - light Full-detail note has at least 4.5:1 contrast
+      ---
+      duration_ms: 30.916542
+      type: 'test'
+      ...
+    # Subtest: phase borders remain outside note text in Read, focused Map and exports
+    ok 3 - phase borders remain outside note text in Read, focused Map and exports
+      ---
+      duration_ms: 1216.234167
+      type: 'test'
+      ...
+    1..3
+ok 88 - SVG and PNG exports keep every line of a wrapped sequence note
+  ---
+  duration_ms: 2800.586208
+  type: 'test'
+  ...
+# dark note contrast 7.460:1; foreground 148,163,184; background 8.5,14.5,32.5
+# light note contrast 5.966:1; foreground 91,100,116; background 255,255,255
+# Subtest: sequence phase headings retain readable contrast in Read and Full detail
+    # Subtest: classic light read phase heading has at least 4.5:1 contrast
+    ok 1 - classic light read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 35.018292
+      type: 'test'
+      ...
+    # Subtest: classic dark read phase heading has at least 4.5:1 contrast
+    ok 2 - classic dark read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 32.137791
+      type: 'test'
+      ...
+    # Subtest: signal-flow light read phase heading has at least 4.5:1 contrast
+    ok 3 - signal-flow light read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 33.197875
+      type: 'test'
+      ...
+    # Subtest: signal-flow dark read phase heading has at least 4.5:1 contrast
+    ok 4 - signal-flow dark read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 35.581583
+      type: 'test'
+      ...
+    # Subtest: blueprint light read phase heading has at least 4.5:1 contrast
+    ok 5 - blueprint light read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 30.956375
+      type: 'test'
+      ...
+    # Subtest: blueprint dark read phase heading has at least 4.5:1 contrast
+    ok 6 - blueprint dark read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 33.324458
+      type: 'test'
+      ...
+    # Subtest: editorial light read phase heading has at least 4.5:1 contrast
+    ok 7 - editorial light read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 34.418541
+      type: 'test'
+      ...
+    # Subtest: editorial dark read phase heading has at least 4.5:1 contrast
+    ok 8 - editorial dark read phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 33.752333
+      type: 'test'
+      ...
+    # Subtest: classic light full phase heading has at least 4.5:1 contrast
+    ok 9 - classic light full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 28.127
+      type: 'test'
+      ...
+    # Subtest: classic dark full phase heading has at least 4.5:1 contrast
+    ok 10 - classic dark full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 32.684791
+      type: 'test'
+      ...
+    # Subtest: signal-flow light full phase heading has at least 4.5:1 contrast
+    ok 11 - signal-flow light full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 31.214583
+      type: 'test'
+      ...
+    # Subtest: signal-flow dark full phase heading has at least 4.5:1 contrast
+    ok 12 - signal-flow dark full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 32.238417
+      type: 'test'
+      ...
+    # Subtest: blueprint light full phase heading has at least 4.5:1 contrast
+    ok 13 - blueprint light full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 33.787875
+      type: 'test'
+      ...
+    # Subtest: blueprint dark full phase heading has at least 4.5:1 contrast
+    ok 14 - blueprint dark full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 32.454375
+      type: 'test'
+      ...
+    # Subtest: editorial light full phase heading has at least 4.5:1 contrast
+    ok 15 - editorial light full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 39.835541
+      type: 'test'
+      ...
+    # Subtest: editorial dark full phase heading has at least 4.5:1 contrast
+    ok 16 - editorial dark full phase heading has at least 4.5:1 contrast
+      ---
+      duration_ms: 32.661333
+      type: 'test'
+      ...
+    1..16
+ok 89 - sequence phase headings retain readable contrast in Read and Full detail
+  ---
+  duration_ms: 1558.837333
+  type: 'test'
+  ...
+# classic light read: 5.96610:1; foreground 91,100,116,1; plate 255,255,255,1
+# classic dark read: 6.96265:1; foreground 148,163,184,1; plate 15,23,42,1
+# signal-flow light read: 5.03389:1; foreground 88,114,135,1; plate 255,255,255,1
+# signal-flow dark read: 8.61119:1; foreground 158,176,199,1; plate 7,16,30,1
+# blueprint light read: 4.92568:1; foreground 78,116,134,1; plate 249,253,255,1
+# blueprint dark read: 7.84342:1; foreground 145,184,202,1; plate 10,32,49,1
+# editorial light read: 5.32608:1; foreground 111,102,88,1; plate 251,248,241,1
+# editorial dark read: 7.48885:1; foreground 185,174,155,1; plate 35,31,24,1
+# classic light full: 5.96610:1; foreground 91,100,116,1; plate 255,255,255,1
+# classic dark full: 6.96265:1; foreground 148,163,184,1; plate 15,23,42,1
+# signal-flow light full: 5.03389:1; foreground 88,114,135,1; plate 255,255,255,1
+# signal-flow dark full: 8.61119:1; foreground 158,176,199,1; plate 7,16,30,1
+# blueprint light full: 4.92568:1; foreground 78,116,134,1; plate 249,253,255,1
+# blueprint dark full: 7.84342:1; foreground 145,184,202,1; plate 10,32,49,1
+# editorial light full: 5.32608:1; foreground 111,102,88,1; plate 251,248,241,1
+# editorial dark full: 7.48885:1; foreground 185,174,155,1; plate 35,31,24,1
+# Subtest: authored sequence canvases default to spread and keep real browser labels inside their columns
+ok 90 - authored sequence canvases default to spread and keep real browser labels inside their columns
+  ---
+  duration_ms: 6768.111625
+  type: 'test'
+  ...
+# Subtest: automatic sequence spread recovers crowded headers without losing real browser glyphs or masks
+ok 91 - automatic sequence spread recovers crowded headers without losing real browser glyphs or masks
+  ---
+  duration_ms: 1182.851167
+  type: 'test'
+  ...
+# Subtest: attachment preserves localized native state labels and localizes the Story transition
+ok 92 - attachment preserves localized native state labels and localizes the Story transition
+  ---
+  duration_ms: 7350.068333
+  type: 'test'
+  ...
+# Subtest: a public story attaches once, follows native appearance and retains source notes and exports
+ok 93 - a public story attaches once, follows native appearance and retains source notes and exports
+  ---
+  duration_ms: 12908.414625
+  type: 'test'
+  ...
+# Subtest: flowless guides stay out of the story opening clock
+ok 94 - flowless guides stay out of the story opening clock
+  ---
+  duration_ms: 2403.890875
+  type: 'test'
+  ...
+# Subtest: Viewer toolbars move focus between enabled top-level controls with directional keys
+ok 95 - Viewer toolbars move focus between enabled top-level controls with directional keys
+  ---
+  duration_ms: 1044.9185
+  type: 'test'
+  ...
+# Subtest: Tree branches collapse in place, follow the keyboard, reveal selections, and export complete
+ok 96 - Tree branches collapse in place, follow the keyboard, reveal selections, and export complete
+  ---
+  duration_ms: 2722.3845
+  type: 'test'
+  ...
+# Subtest: Camera accessible names retain the visible readout after native actions
+ok 97 - Camera accessible names retain the visible readout after native actions
+  ---
+  duration_ms: 10994.955416
+  type: 'test'
+  ...
+# Subtest: Camera preserves transactions, rendered state and real caller handoffs
+    # Subtest: five modes keep initial state, zoom limits and canonical geometry
+    ok 1 - five modes keep initial state, zoom limits and canonical geometry
+      ---
+      duration_ms: 1832.96875
+      type: 'test'
+      ...
+    # Subtest: manual overview zoom centers below 100%, restores reset and survives viewport changes
+    ok 2 - manual overview zoom centers below 100%, restores reset and survives viewport changes
+      ---
+      duration_ms: 2651.025083
+      type: 'test'
+      ...
+    # Subtest: long sequences keep the first row visible below 100% and the final row reachable
+    ok 3 - long sequences keep the first row visible below 100% and the final row reachable
+      ---
+      duration_ms: 2448.611375
+      type: 'test'
+      ...
+    # Subtest: long-diagram zoom preserves visible content from middle and bottom scroll positions
+    ok 4 - long-diagram zoom preserves visible content from middle and bottom scroll positions
+      ---
+      duration_ms: 6655.625167
+      type: 'test'
+      ...
+    # Subtest: a true narrow wide canvas centers a fitting overview inside its visible scroll viewport
+    ok 5 - a true narrow wide canvas centers a fitting overview inside its visible scroll viewport
+      ---
+      duration_ms: 828.207375
+      type: 'test'
+      ...
+    # Subtest: pointer cancellation ends dragging and controls do not begin a pan
+    ok 6 - pointer cancellation ends dragging and controls do not begin a pan
+      ---
+      duration_ms: 516.380333
+      type: 'test'
+      ...
+    # Subtest: target selection, failure branches and instant options preserve their side effects
+    ok 7 - target selection, failure branches and instant options preserve their side effects
+      ---
+      duration_ms: 331.885125
+      type: 'test'
+      ...
+    # Subtest: running transactions complete, replace, cancel and yield to manual navigation
+    ok 8 - running transactions complete, replace, cancel and yield to manual navigation
+      ---
+      duration_ms: 2251.7795
+      type: 'test'
+      ...
+    # Subtest: mobile branches, automatic scroll guard and scrollTo fallback stay distinct
+    ok 9 - mobile branches, automatic scroll guard and scrollTo fallback stay distinct
+      ---
+      duration_ms: 2165.900333
+      type: 'test'
+      ...
+    # Subtest: reduced motion and call-time hidden state keep immediate completion semantics
+    ok 10 - reduced motion and call-time hidden state keep immediate completion semantics
+      ---
+      duration_ms: 716.201459
+      type: 'test'
+      ...
+    # Subtest: actual Route, Finder and Radar callers retain camera ownership
+    ok 11 - actual Route, Finder and Radar callers retain camera ownership
+      ---
+      duration_ms: 3099.815792
+      type: 'test'
+      ...
+    # Subtest: export removes camera transforms without mutating the live camera
+    ok 12 - export removes camera transforms without mutating the live camera
+      ---
+      duration_ms: 1056.544875
+      type: 'test'
+      ...
+    1..12
+ok 98 - Camera preserves transactions, rendered state and real caller handoffs
+  ---
+  duration_ms: 26606.735541
+  type: 'test'
+  ...
+# Subtest: zooming out a tall diagram keeps its top inside the frame
+ok 99 - zooming out a tall diagram keeps its top inside the frame
+  ---
+  duration_ms: 2430.958792
+  type: 'test'
+  ...
+# Subtest: the public CLI gives all typed renderers one final Viewer contract
+ok 100 - the public CLI gives all typed renderers one final Viewer contract
+  ---
+  duration_ms: 1583.675792
+  type: 'test'
+  ...
+# Subtest: Viewer chrome remains outside the canonical SVG export boundary
+ok 101 - Viewer chrome remains outside the canonical SVG export boundary
+  ---
+  duration_ms: 1.774417
+  type: 'test'
+  ...
+# Subtest: Dock Safe Rail keeps typed renderers clear across themes, Presentation, and low-height desktops
+ok 102 - Dock Safe Rail keeps typed renderers clear across themes, Presentation, and low-height desktops
+  ---
+  duration_ms: 2625.260916
+  type: 'test'
+  ...
+# Subtest: an artifact with no Legend still receives the desktop stage rail
+ok 103 - an artifact with no Legend still receives the desktop stage rail
+  ---
+  duration_ms: 950.681959
+  type: 'test'
+  ...
+# Subtest: Dock Safe Rail resolves a forced Legend collision across the shared diagram viewer
+ok 104 - Dock Safe Rail resolves a forced Legend collision across the shared diagram viewer
+  ---
+  duration_ms: 2824.167083
+  type: 'test'
+  ...
+# Subtest: Maka remains collision-free at the reported Retina-equivalent viewport
+ok 105 - Maka remains collision-free at the reported Retina-equivalent viewport
+  ---
+  duration_ms: 995.923292
+  type: 'test'
+  ...
+# Subtest: a real 5px Legend gap keeps the stage rail and Legend clear
+ok 106 - a real 5px Legend gap keeps the stage rail and Legend clear
+  ---
+  duration_ms: 1184.320375
+  type: 'test'
+  ...
+# Subtest: Presentation keeps its visible Dock clear of a colliding Legend
+ok 107 - Presentation keeps its visible Dock clear of a colliding Legend
+  ---
+  duration_ms: 1036.97675
+  type: 'test'
+  ...
+# Subtest: manual zoom and pan reschedules Legend and Dock collision measurement
+ok 108 - manual zoom and pan reschedules Legend and Dock collision measurement
+  ---
+  duration_ms: 1076.501583
+  type: 'test'
+  ...
+# Subtest: camera pan clips authored relationship paint at the protected stage boundary
+ok 109 - camera pan clips authored relationship paint at the protected stage boundary
+  ---
+  duration_ms: 1086.375583
+  type: 'test'
+  ...
+# Subtest: live camera transitions keep authored relationship paint outside the Dock on every frame
+ok 110 - live camera transitions keep authored relationship paint outside the Dock on every frame
+  ---
+  duration_ms: 3205.485667
+  type: 'test'
+  ...
+# Subtest: zoom keeps the desktop rail stable and reports protected stage geometry
+ok 111 - zoom keeps the desktop rail stable and reports protected stage geometry
+  ---
+  duration_ms: 1029.215875
+  type: 'test'
+  ...
+# Subtest: Reset followed immediately by zoom and pan retains a collision-free desktop rail
+ok 112 - Reset followed immediately by zoom and pan retains a collision-free desktop rail
+  ---
+  duration_ms: 1043.752875
+  type: 'test'
+  ...
+# Subtest: zoomed camera restores its bounded desktop rail after crossing the mobile breakpoint
+ok 113 - zoomed camera restores its bounded desktop rail after crossing the mobile breakpoint
+  ---
+  duration_ms: 1441.922875
+  type: 'test'
+  ...
+# Subtest: localized multiline Legends remain clear across required viewports, themes, and presets
+ok 114 - localized multiline Legends remain clear across required viewports, themes, and presets
+  ---
+  duration_ms: 5708.966334
+  type: 'test'
+  ...
+# Subtest: Semantic Lens and Radar protect the final Legend and Dock rectangles
+ok 115 - Semantic Lens and Radar protect the final Legend and Dock rectangles
+  ---
+  duration_ms: 1363.19025
+  type: 'test'
+  ...
+# Subtest: Radar, Passport, Legend, and Dock remain mutually clear on desktop and narrow viewports
+ok 116 - Radar, Passport, Legend, and Dock remain mutually clear on desktop and narrow viewports
+  ---
+  duration_ms: 1605.218417
+  type: 'test'
+  ...
+# Subtest: mobile, embed, and print keep zero reserve while hidden Legends retain the stage rail
+ok 117 - mobile, embed, and print keep zero reserve while hidden Legends retain the stage rail
+  ---
+  duration_ms: 1697.741833
+  type: 'test'
+  ...
+# Subtest: Chrome Layout preserves scheduling, mode restoration and Reader handoffs
+    # Subtest: automatic resize crosses Chrome and Reader thresholds without reserve accumulation
+    ok 1 - automatic resize crosses Chrome and Reader thresholds without reserve accumulation
+      ---
+      duration_ms: 1914.268583
+      type: 'test'
+      ...
+    # Subtest: automatic observer callbacks handle navigation size, visibility and content changes
+    ok 2 - automatic observer callbacks handle navigation size, visibility and content changes
+      ---
+      duration_ms: 1349.774208
+      type: 'test'
+      ...
+    # Subtest: embed and print restore a zoomed rail, while Presentation remains eligible
+    ok 3 - embed and print restore a zoomed rail, while Presentation remains eligible
+      ---
+      duration_ms: 3166.408417
+      type: 'test'
+      ...
+    # Subtest: pending Reader probes coalesce and retain the rail when the camera changes
+    ok 4 - pending Reader probes coalesce and retain the rail when the camera changes
+      ---
+      duration_ms: 964.797666
+      type: 'test'
+      ...
+    # Subtest: font readiness and optional observers preserve their existing fallbacks
+    ok 5 - font readiness and optional observers preserve their existing fallbacks
+      ---
+      duration_ms: 952.0205
+      type: 'test'
+      ...
+    1..5
+ok 118 - Chrome Layout preserves scheduling, mode restoration and Reader handoffs
+  ---
+  duration_ms: 8976.567333
+  type: 'test'
+  ...
+# Subtest: theme switches repaint the page and diagram without dropping the desktop rail
+ok 119 - theme switches repaint the page and diagram without dropping the desktop rail
+  ---
+  duration_ms: 1243.640333
+  type: 'test'
+  ...
+# Subtest: valid identifiers preserve Viewer selection, routes and relationship links
+    # Subtest: architecture
+        # Subtest: focus excludes unselected identifiers
+        ok 1 - focus excludes unselected identifiers
+          ---
+          duration_ms: 261.381208
+          type: 'test'
+          ...
+        # Subtest: Intent Trace includes only the authored neighborhood
+        ok 2 - Intent Trace includes only the authored neighborhood
+          ---
+          duration_ms: 153.114541
+          type: 'test'
+          ...
+        # Subtest: Camera does not infer a target from an empty selection
+        ok 3 - Camera does not infer a target from an empty selection
+          ---
+          duration_ms: 135.972041
+          type: 'test'
+          ...
+        # Subtest: Route Probe follows the authored edge and exposes the target
+        ok 4 - Route Probe follows the authored edge and exposes the target
+          ---
+          duration_ms: 154.939125
+          type: 'test'
+          ...
+        # Subtest: a unique relationship ID restores from a share link
+        ok 5 - a unique relationship ID restores from a share link
+          ---
+          duration_ms: 138.560042
+          type: 'test'
+          ...
+        # Subtest: Semantic Lens includes the authored node and its relationships
+        ok 6 - Semantic Lens includes the authored node and its relationships
+          ---
+          duration_ms: 120.738417
+          type: 'test'
+          ...
+        1..6
+    ok 1 - architecture
+      ---
+      duration_ms: 1294.494208
+      type: 'test'
+      ...
+    # Subtest: workflow
+        # Subtest: focus excludes unselected identifiers
+        ok 1 - focus excludes unselected identifiers
+          ---
+          duration_ms: 289.0085
+          type: 'test'
+          ...
+        # Subtest: Intent Trace includes only the authored neighborhood
+        ok 2 - Intent Trace includes only the authored neighborhood
+          ---
+          duration_ms: 146.038375
+          type: 'test'
+          ...
+        # Subtest: Camera does not infer a target from an empty selection
+        ok 3 - Camera does not infer a target from an empty selection
+          ---
+          duration_ms: 147.9545
+          type: 'test'
+          ...
+        # Subtest: Route Probe follows the authored edge and exposes the target
+        ok 4 - Route Probe follows the authored edge and exposes the target
+          ---
+          duration_ms: 184.106291
+          type: 'test'
+          ...
+        # Subtest: a unique relationship ID restores from a share link
+        ok 5 - a unique relationship ID restores from a share link
+          ---
+          duration_ms: 145.455125
+          type: 'test'
+          ...
+        # Subtest: Semantic Lens includes the authored node and its relationships
+        ok 6 - Semantic Lens includes the authored node and its relationships
+          ---
+          duration_ms: 139.7565
+          type: 'test'
+          ...
+        1..6
+    ok 2 - workflow
+      ---
+      duration_ms: 1449.865875
+      type: 'test'
+      ...
+    # Subtest: sequence
+        # Subtest: focus excludes unselected identifiers
+        ok 1 - focus excludes unselected identifiers
+          ---
+          duration_ms: 135.998458
+          type: 'test'
+          ...
+        # Subtest: Intent Trace includes only the authored neighborhood
+        ok 2 - Intent Trace includes only the authored neighborhood
+          ---
+          duration_ms: 111.736834
+          type: 'test'
+          ...
+        # Subtest: Camera does not infer a target from an empty selection
+        ok 3 - Camera does not infer a target from an empty selection
+          ---
+          duration_ms: 116.256709
+          type: 'test'
+          ...
+        # Subtest: Route Probe follows the authored edge and exposes the target
+        ok 4 - Route Probe follows the authored edge and exposes the target
+          ---
+          duration_ms: 129.791666
+          type: 'test'
+          ...
+        # Subtest: a unique relationship ID restores from a share link
+        ok 5 - a unique relationship ID restores from a share link
+          ---
+          duration_ms: 135.933875
+          type: 'test'
+          ...
+        # Subtest: Semantic Lens includes the authored node and its relationships
+        ok 6 - Semantic Lens includes the authored node and its relationships
+          ---
+          duration_ms: 124.408834
+          type: 'test'
+          ...
+        1..6
+    ok 3 - sequence
+      ---
+      duration_ms: 1036.469375
+      type: 'test'
+      ...
+    # Subtest: dataflow
+        # Subtest: focus excludes unselected identifiers
+        ok 1 - focus excludes unselected identifiers
+          ---
+          duration_ms: 258.739708
+          type: 'test'
+          ...
+        # Subtest: Intent Trace includes only the authored neighborhood
+        ok 2 - Intent Trace includes only the authored neighborhood
+          ---
+          duration_ms: 128.816459
+          type: 'test'
+          ...
+        # Subtest: Camera does not infer a target from an empty selection
+        ok 3 - Camera does not infer a target from an empty selection
+          ---
+          duration_ms: 132.352416
+          type: 'test'
+          ...
+        # Subtest: Route Probe follows the authored edge and exposes the target
+        ok 4 - Route Probe follows the authored edge and exposes the target
+          ---
+          duration_ms: 122.060083
+          type: 'test'
+          ...
+        # Subtest: a unique relationship ID restores from a share link
+        ok 5 - a unique relationship ID restores from a share link
+          ---
+          duration_ms: 125.274875
+          type: 'test'
+          ...
+        # Subtest: Semantic Lens includes the authored node and its relationships
+        ok 6 - Semantic Lens includes the authored node and its relationships
+          ---
+          duration_ms: 120.934458
+          type: 'test'
+          ...
+        1..6
+    ok 4 - dataflow
+      ---
+      duration_ms: 1277.821209
+      type: 'test'
+      ...
+    # Subtest: lifecycle
+        # Subtest: focus excludes unselected identifiers
+        ok 1 - focus excludes unselected identifiers
+          ---
+          duration_ms: 132.477334
+          type: 'test'
+          ...
+        # Subtest: Intent Trace includes only the authored neighborhood
+        ok 2 - Intent Trace includes only the authored neighborhood
+          ---
+          duration_ms: 127.759625
+          type: 'test'
+          ...
+        # Subtest: Camera does not infer a target from an empty selection
+        ok 3 - Camera does not infer a target from an empty selection
+          ---
+          duration_ms: 116.858084
+          type: 'test'
+          ...
+        # Subtest: Route Probe follows the authored edge and exposes the target
+        ok 4 - Route Probe follows the authored edge and exposes the target
+          ---
+          duration_ms: 119.823833
+          type: 'test'
+          ...
+        # Subtest: a unique relationship ID restores from a share link
+        ok 5 - a unique relationship ID restores from a share link
+          ---
+          duration_ms: 127.976208
+          type: 'test'
+          ...
+        # Subtest: Semantic Lens includes the authored node and its relationships
+        ok 6 - Semantic Lens includes the authored node and its relationships
+          ---
+          duration_ms: 122.258583
+          type: 'test'
+          ...
+        1..6
+    ok 5 - lifecycle
+      ---
+      duration_ms: 1051.956584
+      type: 'test'
+      ...
+    1..5
+ok 120 - valid identifiers preserve Viewer selection, routes and relationship links
+  ---
+  duration_ms: 6854.325041
+  type: 'test'
+  ...
+# Subtest: Radar follows page scrolling and navigates long diagrams vertically
+ok 121 - Radar follows page scrolling and navigates long diagrams vertically
+  ---
+  duration_ms: 6665.2795
+  type: 'test'
+  ...
+# Subtest: workflow default labels and lane headings remain readable without recoloring semantic ink
+    # Subtest: light Full-detail labels and normal lane headings meet classic contrast
+    ok 1 - light Full-detail labels and normal lane headings meet classic contrast
+      ---
+      duration_ms: 204.685791
+      type: 'test'
+      ...
+    # Subtest: dark Full-detail labels and normal lane headings meet classic contrast
+    ok 2 - dark Full-detail labels and normal lane headings meet classic contrast
+      ---
+      duration_ms: 113.854583
+      type: 'test'
+      ...
+    1..2
+ok 122 - workflow default labels and lane headings remain readable without recoloring semantic ink
+  ---
+  duration_ms: 1131.609042
+  type: 'test'
+  ...
+# light 01 / Work: flat 5.793714:1, CSS dot peak 5.373301:1; fill rgb(91, 100, 116); flat background 250.45000000000002,251.75,253.05; dot peak background 240.3,243.35,246.4
+# light 02 / Normal: flat 5.793714:1, CSS dot peak 5.373301:1; fill rgb(91, 100, 116); flat background 250.45000000000002,251.75,253.05; dot peak background 240.3,243.35,246.4
+# light fallback label: 5.966:1; foreground 91,100,116; background 255,255,255
+# light default label: 5.966:1; foreground 91,100,116; background 255,255,255
+# dark 01 / Work: flat 7.359138:1, CSS dot peak 6.116047:1; fill rgb(148, 163, 184); flat background 9.93,16.37,34.59; dot peak background 27.3396,34.902800000000006,53.49720000000001
+# dark 02 / Normal: flat 7.359138:1, CSS dot peak 6.116047:1; fill rgb(148, 163, 184); flat background 9.93,16.37,34.59; dot peak background 27.3396,34.902800000000006,53.49720000000001
+# dark fallback label: 6.963:1; foreground 148,163,184; background 15,23,42
+# dark default label: 6.963:1; foreground 148,163,184; background 15,23,42
+1..122
+# tests 337
+# suites 0
+# pass 337
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 320987.704375
