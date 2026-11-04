@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hive · From browser task to CLI worker",
+    "subtitle": "Local CLI-orchestrator path · terminal output is not task completion",
+    "output": "output/hive-task-path.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/hive",
+      "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "browser", "type": "frontend", "label": "Browser workbench",
+      "sublabel": "xterm input + output; team views", "tag": "Browser process",
+      "pos": [40, 65], "size": [220, 90],
+      "explanation": "The active desktop path sends xterm onData through the terminal client. Run output renders back into xterm. Separately, the UI polls reported dispatches and displays notifications; it can inspect task message history. A user-input HTTP endpoint also exists, but the exported web API helper has no call site in this checkout, so it is not shown as the primary UI path.",
+      "sources": [
+        {"path": "web/src/terminal/useTerminalRun.ts", "line": 593, "end_line": 647, "label": "Terminal input and output"},
+        {"path": "web/src/notifications/useReportNotifications.ts", "line": 36, "end_line": 95, "label": "Poll reports; notify the user"},
+        {"path": "web/src/api.ts", "line": 2113, "end_line": 2183, "label": "Read task messages and reports"}
+      ]
+    },
+    {
+      "id": "pty", "type": "backend", "label": "Terminal + PTY runtime",
+      "sublabel": "Spawn CLIs; serialize stdin; fan out output",
+      "pos": [465, 65], "size": [255, 90],
+      "explanation": "terminal-stream-hub routes WebSocket input to writeRunInput and subscribes to the PTY output bus for browser viewers. agent-manager spawns the configured CLI with node-pty and writes its process input. agent-stdin-dispatcher queues protocol envelopes per agent, waits for readiness and uses the interactive paste/submit writer. Orchestrator and worker are independent CLI child processes, not browser-hosted agents.",
+      "sources": [
+        {"path": "src/server/agent-manager.ts", "line": 153, "end_line": 178, "label": "Spawn process and write stdin"},
+        {"path": "src/server/agent-stdin-dispatcher.ts", "line": 125, "end_line": 344, "label": "Per-agent queue; dispatch envelope"},
+        {"path": "src/server/terminal-stream-hub.ts", "line": 145, "end_line": 316, "label": "Output subscription; input routing"}
+      ]
+    },
+    {
+      "id": "orchestrator", "type": "external", "label": "Orchestrator CLI",
+      "sublabel": "Interpret goal; choose worker; integrate result",
+      "tag": "Own PTY / configured agent CLI",
+      "pos": [945, 65], "size": [255, 90],
+      "explanation": "The orchestrator agent chooses whether and how to delegate by running the bundled team CLI. team send POSTs workspace identity, agent identity, token, worker name and task text to the local runtime. This is an agent decision guided by prompts, not a deterministic conversion of every browser message into a dispatch. HIVE_* environment variables and a PATH prepend connect the child CLI to Hive.",
+      "sources": [
+        {"path": "src/cli/team.ts", "line": 1255, "end_line": 1268, "label": "team send invokes local HTTP"},
+        {"path": "src/server/hive-team-guidance.ts", "line": 24, "end_line": 43, "label": "Orchestrator delegation guidance"},
+        {"path": "src/server/agent-run-bootstrap.ts", "line": 127, "end_line": 138, "label": "Workspace identity and bundled team PATH"}
+      ]
+    },
+    {
+      "id": "team", "type": "backend", "label": "Team protocol + coordination",
+      "sublabel": "Authenticate; ledger; deliver; settle report",
+      "tag": "Workspace + role checks",
+      "pos": [465, 405], "size": [255, 100],
+      "explanation": "routes-team authenticates the CLI token, workspace membership and command role before team-operations resolves the worker and records a dispatch. A stopped user-managed worker keeps a queued dispatch until restarted; permitted startup paths can create its run. Dispatch delivery invokes the PTY runtime. Status does not close work. A valid explicit report records text/artifact paths, closes the ledger responsibility and enqueues its orchestrator envelope; outbox delivery is marked only after a successful PTY write. A 202 is acceptance, not proof the orchestrator consumed the result.",
+      "sources": [
+        {"path": "src/server/routes-team.ts", "line": 127, "end_line": 170, "label": "Authenticated send; stopped-worker policy"},
+        {"path": "src/server/team-operations.ts", "line": 604, "end_line": 791, "label": "Ledger creation and PTY dispatch"},
+        {"path": "src/server/team-operations.ts", "line": 916, "end_line": 1132, "label": "Non-closing status; report and outbox"}
+      ]
+    },
+    {
+      "id": "worker", "type": "external", "label": "Worker CLI",
+      "sublabel": "Execute assigned work; explicitly report",
+      "tag": "Own PTY / configured agent CLI",
+      "pos": [945, 405], "size": [255, 100],
+      "explanation": "A worker receives the dispatch envelope in stdin and executes with its configured CLI and working directory. Task-bound progress uses team message --kind progress --to orchestrator: it is stored without waking the orchestrator. team status is a separate optional wake-up path and never closes a dispatch. team report submits result text, dispatch ID, seen sequence and artifact path strings. The result must refer to open work and acknowledge the required inbound sequence. The third-party CLI's internal planning, model calls and successful task execution are not established by Hive's source.",
+      "sources": [
+        {"path": "src/server/hive-team-guidance.ts", "line": 45, "end_line": 56, "label": "Worker scope; progress versus report"},
+        {"path": "src/cli/team.ts", "line": 1538, "end_line": 1574, "label": "Status and report HTTP requests"},
+        {"path": "src/server/dispatch-ledger-store.ts", "line": 340, "end_line": 375, "label": "Open work + seen sequence gate"}
+      ]
+    },
+    {
+      "id": "sqlite", "type": "database", "label": "Local SQLite state",
+      "sublabel": "Dispatches; messages; report outbox",
+      "tag": "Durable protocol state, not PTY memory",
+      "pos": [40, 405], "size": [240, 100],
+      "explanation": "dispatches stores report text, artifact path strings and settlement state. dispatch_messages stores task context and progress; progress has no delivery-outbox row, so it does not inject into the orchestrator PTY. report_outbox keeps pending result envelopes; the runtime drains it when an orchestrator is reachable and marks delivered only after the PTY write resolves. Delivery is not exactly-once consumption: the report envelope advises deduplication by dispatch ID.",
+      "sources": [
+        {"path": "src/server/report-outbox-store.ts", "line": 53, "end_line": 81, "label": "Persist pending report envelopes"},
+        {"path": "src/server/team-operations.ts", "line": 294, "end_line": 335, "label": "Drain; acknowledge after PTY write"},
+        {"path": "src/server/dispatch-message-store.ts", "line": 160, "end_line": 206, "label": "Persist messages; no wake for progress"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "Local Hive Node.js runtime", "wraps": ["pty", "team"], "pad": 24},
+    {"kind": "region", "label": "Workspace CLI child processes", "wraps": ["orchestrator", "worker"], "pad": 24}
+  ],
+  "connections": [
+    {"id": "user-input", "from": "browser", "to": "pty", "label": "1 · WS input", "variant": "emphasis"},
+    {"id": "terminal-return", "from": "pty", "to": "browser", "label": "WS output"},
+    {"id": "orchestrator-input", "from": "pty", "to": "orchestrator", "label": "Goal / report stdin", "variant": "emphasis"},
+    {"id": "orchestrator-output", "from": "orchestrator", "to": "pty", "label": "PTY output"},
+    {"id": "delegate", "from": "orchestrator", "to": "team", "label": "2 · HTTP team send", "variant": "emphasis"},
+    {"id": "protocol-injection", "from": "team", "to": "pty", "label": "Dispatch / status / report", "fromSide": "top", "toSide": "bottom", "variant": "emphasis"},
+    {"id": "worker-input", "from": "pty", "to": "worker", "label": "3 · Dispatch stdin", "variant": "emphasis"},
+    {"id": "worker-output", "from": "worker", "to": "pty", "label": "PTY output"},
+    {"id": "worker-protocol", "from": "worker", "to": "team", "label": "4 · HTTP message / report", "variant": "emphasis"},
+    {"id": "browser-poll", "from": "browser", "to": "team", "label": "GET reports / history", "fromSide": "bottom", "toSide": "left"},
+    {"id": "persist", "from": "team", "to": "sqlite", "label": "SQL read / write"}
+  ],
+  "cards": [
+    {"dot": "amber", "title": "Progress is not completion", "items": ["PTY output streams to browser terminals, not task settlement.", "Task progress messages are stored; they do not wake the orchestrator.", "Optional team status wakes it but leaves the dispatch open.", "Report polling updates the team's browser notifications."]},
+    {"dot": "emerald", "title": "Boundaries and limits", "items": ["team uses 127.0.0.1 + HIVE_* identity/token; roles are checked.", "Stopped user-managed workers wait for an explicit restart.", "Reports require open work + current seen sequence; 202 ≠ consumed.", "Scope: local CLI controller, not remote tunnel / workflow / Codex App."]}
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "OpenPI · Direct task delegation",
+    "output": "output/openpi-delegation.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/openpi-dev/openpi",
+      "revision": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Caller · parent Pi agent",
+      "sublabel": "Chooses task; synthesizes answer",
+      "pos": [40, 70],
+      "size": [220, 90],
+      "explanation": "The caller here is the parent Pi agent using extension tools, not an HTTP client. subagent_spawn returns an ID after startup, without waiting for task completion. The parent may continue working, check status, explicitly wait, or receive an automatic follow-up. User-interface ingress and workflow delegation are outside this direct-tool slice.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 1190, "end_line": 1218, "label": "Spawn tool returns handle" },
+        { "path": "extensions/subagents/index.ts", "line": 441, "end_line": 453, "label": "Parent receives follow-up" }
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Task & query tools",
+      "sublabel": "spawn · check · list · wait",
+      "tag": "Validate cwd; narrow child authority",
+      "pos": [450, 70],
+      "size": [240, 90],
+      "explanation": "subagent_spawn accepts prompt/name plus optional role, cwd, model, worktree isolation and output schema. It validates cwd, applies plan-mode restrictions, resolves project trust, intersects child tools with the parent's active capabilities and sends a SpawnTask through runTool. check/list read manager snapshots; waitFor waits for settlement and returns results. A wait consumes pending automatic delivery; aborting a wait does not stop the child. Requested worktree creation fails closed rather than falling back to shared cwd.",
+      "sources": [
+        { "path": "extensions/subagents/index.ts", "line": 999, "end_line": 1139, "label": "Task acceptance and dispatch" },
+        { "path": "extensions/subagents/index.ts", "line": 1251, "end_line": 1311, "label": "Explicit wait and consumption" },
+        { "path": "extensions/subagents/index.ts", "line": 1583, "end_line": 1660, "label": "Status and output queries" }
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "SubagentManager",
+      "sublabel": "Admission · IDs · live snapshots",
+      "tag": "running → done / error",
+      "pos": [920, 70],
+      "size": [240, 90],
+      "explanation": "One shared Effect ManagedRuntime supplies the manager and production pi backend. The manager enforces pool limits and shared child-execution admission, creates a scoped backend session, allocates sa-N and stores the snapshot in an in-memory map. A scoped event pump folds activity and terminal evidence into that snapshot. Completion distinguishes completed, failed and interrupted outcomes; uncertain execution is separately represented. Subscribers and explicit waiters are notified; unconsumed settlements invoke the extension's onSettled hook. The live map is not a durable queue or external worker service.",
+      "sources": [
+        { "path": "extensions/subagents/src/manager.ts", "line": 547, "end_line": 704, "label": "Admission, spawn and event pump" },
+        { "path": "extensions/subagents/src/manager.ts", "line": 355, "end_line": 420, "label": "Terminal state and notification" },
+        { "path": "extensions/subagents/src/runtime.ts", "line": 28, "end_line": 43, "label": "Single runtime; pi backend" }
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Pi backend + child session",
+      "sublabel": "createAgentSession → prompt(task)",
+      "tag": "Own session; same OS process",
+      "pos": [920, 370],
+      "size": [240, 106],
+      "explanation": "The production adapter creates a fresh Pi AgentSession with its own SessionManager, cwd-specific resources and tool policy, then starts session.prompt(task.prompt) asynchronously. Pi session events are translated into an Effect queue/stream for the manager. Terminal classification waits for the exact prompt promise to settle as well as checking lifecycle evidence, so agent_settled alone is not proof of success. The model and thinking level inherit from the parent unless explicitly overridden. Independence is session-level: by default the filesystem cwd is shared; this is neither a subprocess nor an OS sandbox. Pi SDK internals and durable session-file guarantees are not established by this checkout.",
+      "sources": [
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 234, "end_line": 275, "label": "Fresh Pi session and policy" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 402, "end_line": 510, "label": "Evidence-gated terminal outcome" },
+        { "path": "extensions/subagents/src/backends/pi.ts", "line": 721, "end_line": 804, "label": "Async prompt and event stream" }
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion delivery",
+      "sublabel": "One-shot inbox; bounded output",
+      "tag": "Idle now; otherwise parent settled",
+      "pos": [450, 370],
+      "size": [240, 106],
+      "explanation": "onSettled records subagent-finished in the parent transcript, then defers a snapshot copy unless an explicit wait already consumed it. The inbox flushes immediately if the parent is idle, otherwise on the parent's agent_settled boundary. Explicit waits can consume pending envelopes to avoid duplicate automatic results. The dispatcher budgets output, appends a display entry and sends a hidden model-facing subagent-result followUp with triggerTurn=true. Oversized output may be saved in a content-addressed Pi cache artifact, with head/tail and a recovery locator; save failure is reported, not recast as execution failure. This inbox is in-process, not a message broker.",
+      "sources": [
+        { "path": "extensions/subagents/src/result-delivery.ts", "line": 35, "end_line": 89, "label": "One-shot inbox and wake rules" },
+        { "path": "extensions/subagents/index.ts", "line": 315, "end_line": 453, "label": "Projection, transcript and follow-up" },
+        { "path": "extensions/subagents/index.ts", "line": 797, "end_line": 833, "label": "Settlement hook and wait exclusion" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "OpenPI extension runtime · in-process calls and events", "wraps": ["tools", "manager", "child", "delivery"], "pad": 26 }
+  ],
+  "connections": [
+    { "id": "task-in", "from": "caller", "to": "tools", "label": "prompt / query", "variant": "emphasis" },
+    { "id": "tool-return", "from": "tools", "to": "caller", "label": "ID / status / result" },
+    { "id": "manager-call", "from": "tools", "to": "manager", "label": "spawn / view / waitFor", "variant": "emphasis" },
+    { "id": "spawn-child", "from": "manager", "to": "child", "label": "scoped backend.spawn", "variant": "emphasis" },
+    { "id": "child-events", "from": "child", "to": "manager", "label": "activity + RunSettled", "variant": "dashed" },
+    { "id": "settlement", "from": "manager", "to": "delivery", "label": "onSettled · unless waited", "variant": "dashed" },
+    { "id": "wake-parent", "from": "delivery", "to": "caller", "label": "followUp + triggerTurn", "variant": "dashed" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Accept → return a handle",
+      "items": [
+        "The parent chooses a task; spawn returns sa-N after startup, not completion.",
+        "check/list expose live snapshots; wait returns terminal output and consumes automatic delivery."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Independent session ≠ sandbox",
+      "items": [
+        "Child tools are narrowed; recursive subagent tools are excluded (shared/child-session.ts:514–527, 625–659).",
+        "Default cwd is shared. Optional worktree creation must succeed; no silent fallback (subagents/index.ts:1047–1061)."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Result evidence & limits",
+      "items": [
+        "Status, execution outcome and persistence are distinct; session durability may be unknown (subagents/src/completion.ts:25–68).",
+        "Oversized output gets head/tail plus a cache path if saving succeeds (subagents/src/result-artifact.ts:110–164)."
+      ]
+    }
+  ]
+}

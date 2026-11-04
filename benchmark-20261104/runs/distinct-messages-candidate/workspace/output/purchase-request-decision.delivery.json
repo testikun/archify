@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "9097c01f-8a02-4595-b692-978d5160e13f",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/purchase-request-decision.html",
+  "specification": {
+    "sha256": "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+    "bytes": 1748
+  },
+  "artifact": {
+    "sha256": "84255966fb10261cc73df03ad590503a600484628de8b49a80889286e3fcfb98",
+    "bytes": 868296
+  }
+}

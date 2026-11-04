@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "3806b3ca-3e43-41fc-9254-6573ea3b0811",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/skillroster-candidate/base.html",
+  "specification": {
+    "sha256": "1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe",
+    "bytes": 11449
+  },
+  "artifact": {
+    "sha256": "87c859085badf53c1d065b796de5947940e14663f867896a3053e395ae9cf3a3",
+    "bytes": 889154
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/tt-a1i/skillroster",
+    "revision": "21d14c7cff25c66a016562e238e62d0538eb696f",
+    "references": 30,
+    "linkMode": "local-only"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

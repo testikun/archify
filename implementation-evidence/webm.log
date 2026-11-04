@@ -1,0 +1,60 @@
+
+> test:webm
+> node test/webm-artifact.smoke.mjs && node --test test/site-language-integration.mjs
+
+ok legend runtime: labels, counts, keyboard, export, print, embed, hidden, and dual themes
+ok Semantic Passport: close control, focus return, inside preservation, and outside dismissal
+ok Architecture Delta navigator + export: exact identity, complete explorers, static SVG, and 117997-byte Share Card
+dyld[29078]: Library not loaded: @loader_path/../../../../opt/libvmaf/lib/libvmaf.1.dylib
+  Referenced from: <62C99CC9-6250-33D6-A4D0-C9F4E1F8902D> /usr/local/Cellar/ffmpeg/6.0_1/bin/ffmpeg
+  Reason: tried: '/usr/local/Cellar/ffmpeg/6.0_1/bin/../../../../opt/libvmaf/lib/libvmaf.1.dylib' (no such file), '/usr/local/lib/libvmaf.1.dylib' (no such file), '/usr/lib/libvmaf.1.dylib' (no such file, not in dyld cache)
+node:internal/errors:983
+  const err = new Error(message);
+              ^
+
+Error: Command failed: /usr/local/bin/ffmpeg -v error -i /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-webm-artifact-HvyMBe/architecture-route.route-share-card.png -vf scale=120:63 -frames:v 1 -f rawvideo -pix_fmt rgb24 -
+dyld[29078]: Library not loaded: @loader_path/../../../../opt/libvmaf/lib/libvmaf.1.dylib
+  Referenced from: <62C99CC9-6250-33D6-A4D0-C9F4E1F8902D> /usr/local/Cellar/ffmpeg/6.0_1/bin/ffmpeg
+  Reason: tried: '/usr/local/Cellar/ffmpeg/6.0_1/bin/../../../../opt/libvmaf/lib/libvmaf.1.dylib' (no such file), '/usr/local/lib/libvmaf.1.dylib' (no such file), '/usr/lib/libvmaf.1.dylib' (no such file, not in dyld cache)
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:916:11)
+    at execFileSync (node:child_process:952:15)
+    at captureRouteShareCard (file:///evidence/issue-1139/implementation/test/webm-artifact.smoke.mjs:1196:27)
+    at async file:///evidence/issue-1139/implementation/test/webm-artifact.smoke.mjs:1643:3 {
+  status: null,
+  signal: 'SIGABRT',
+  output: [
+    null,
+    Buffer(0) [Uint8Array] [],
+    Buffer(414) [Uint8Array] [
+      100, 121, 108, 100,  91,  50,  57,  48,  55,  56,  93,  58,
+       32,  76, 105,  98, 114,  97, 114, 121,  32, 110, 111, 116,
+       32, 108, 111,  97, 100, 101, 100,  58,  32,  64, 108, 111,
+       97, 100, 101, 114,  95, 112,  97, 116, 104,  47,  46,  46,
+       47,  46,  46,  47,  46,  46,  47,  46,  46,  47, 111, 112,
+      116,  47, 108, 105,  98, 118, 109,  97, 102,  47, 108, 105,
+       98,  47, 108, 105,  98, 118, 109,  97, 102,  46,  49,  46,
+      100, 121, 108, 105,  98,  10,  32,  32,  82, 101, 102, 101,
+      114, 101, 110,  99,
+      ... 314 more items
+    ]
+  ],
+  pid: 29078,
+  stdout: Buffer(0) [Uint8Array] [],
+  stderr: Buffer(414) [Uint8Array] [
+    100, 121, 108, 100,  91,  50,  57,  48,  55,  56,  93,  58,
+     32,  76, 105,  98, 114,  97, 114, 121,  32, 110, 111, 116,
+     32, 108, 111,  97, 100, 101, 100,  58,  32,  64, 108, 111,
+     97, 100, 101, 114,  95, 112,  97, 116, 104,  47,  46,  46,
+     47,  46,  46,  47,  46,  46,  47,  46,  46,  47, 111, 112,
+    116,  47, 108, 105,  98, 118, 109,  97, 102,  47, 108, 105,
+     98,  47, 108, 105,  98, 118, 109,  97, 102,  46,  49,  46,
+    100, 121, 108, 105,  98,  10,  32,  32,  82, 101, 102, 101,
+    114, 101, 110,  99,
+    ... 314 more items
+  ]
+}
+
+Node.js v22.23.2

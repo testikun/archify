@@ -1,0 +1,184 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "hive-base",
+  "project_id": "hive",
+  "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "d3068ee899f047a2642d25fee33b9ad78318c09efcc3ba33e0dbd41c00a7212e",
+    "substantive_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+  },
+  "session": {
+    "id": "01a1a57c-d065-7e40-a251-b325a040ef73",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T07:41:50.438Z",
+        "pid": 75696,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0",
+        "snapshot": "snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json"
+      },
+      {
+        "at": "2026-11-04T07:42:11.493Z",
+        "pid": 75928,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b",
+        "snapshot": "snapshots/b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b.json"
+      },
+      {
+        "at": "2026-11-04T07:42:26.885Z",
+        "pid": 75999,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-3",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6",
+        "snapshot": "snapshots/0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.delivery.json"
+    ],
+    "screenshots": [
+      "captures/hive-base/fullpage.light.png",
+      "captures/hive-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "incorrect task-scoped progress transport; see ISSUES.md",
+    "readability": "readable; dense labels are small at default viewport",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side source, JSON, native viewport and feature-export inspection; no maintainer approval.",
+    "findings": [
+      "Task planning is distinct from worker dispatch; CLI agents execute under local PTYs and final report persistence is distinct from delivery.",
+      "Two modified submitted candidates after first validation.",
+      "Task-scoped progress is incorrectly included in the PTY result-return edge and summary card. The pinned store explicitly excludes progress from its delivery outbox. This is a baseline generation fact error, unchanged by replay on candidate.",
+      "Two failed finalize rounds reported route-side and label-route collisions; final layout passes. No new presentation used."
+    ],
+    "first_draft_check": 1,
+    "repair_rounds": 2,
+    "tool_calls": 26,
+    "usage": {
+      "input_tokens": 1950729,
+      "cached_input_tokens": 1868416,
+      "output_tokens": 11346,
+      "reasoning_output_tokens": 2352,
+      "uncached_input_tokens": 82313
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 2,
+      "voluntary_visual_or_metadata": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "not exercised",
+    "label_arrow_count": 0
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:36:22.597358+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T07:44:53.459216+00:00",
+    "wall_seconds": 510.8636543749999,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 327.840642,
+    "time_to_first_cli_seconds": 327.840642
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

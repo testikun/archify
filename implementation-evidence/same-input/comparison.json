@@ -1,0 +1,277 @@
+{
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "candidate": "uncommitted local implementation",
+  "rows": [
+    {
+      "type": "workflow",
+      "input": "agent-tool-call.workflow.json",
+      "inputSha256": "d67965d50872c97e4ff3476271e645bf19fab6b3ab44e111bdb44b063e3aa36f",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-workflow-agent-tool-call-rendered.html",
+        "svgSha256": "a18d84865d7226abc196f9569fcf7281504730b23c7262bd053cf5b51b004d6e"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-workflow-agent-tool-call-rendered.html",
+        "svgSha256": "a18d84865d7226abc196f9569fcf7281504730b23c7262bd053cf5b51b004d6e"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "sequence",
+      "input": "cache-miss-request.sequence.json",
+      "inputSha256": "f8486daa803fff6c295cecca4604c561fbbf9acb2e83326022b5a87639e8afe6",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-sequence-cache-miss-request.html",
+        "svgSha256": "abad8ebcd4de93302b1f76c2745b04f9e91677d9a8ef3d71b0af0e1575bc433c"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-sequence-cache-miss-request.html",
+        "svgSha256": "abad8ebcd4de93302b1f76c2745b04f9e91677d9a8ef3d71b0af0e1575bc433c"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "dataflow",
+      "input": "product-analytics.dataflow.json",
+      "inputSha256": "8a635db9e51a5b1a8d2955b9d66f5b9a450e0a298432ce8f2e2f0be11f372e05",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-dataflow-product-analytics.html",
+        "svgSha256": "f212775b840f6a94c064a7b54ef59488e731d004bb7e7687b193ab544c7da0be"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-dataflow-product-analytics.html",
+        "svgSha256": "f212775b840f6a94c064a7b54ef59488e731d004bb7e7687b193ab544c7da0be"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "lifecycle",
+      "input": "agent-run.lifecycle.json",
+      "inputSha256": "5ba36f5ce91ed428cb48b599e275424916d82b619b9a3231cbd1bbc3966fc54b",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-lifecycle-agent-run.html",
+        "svgSha256": "a34dca9646ed5d9f86cc4f383c81350469ef2d919a43583bfc19261d2c227ad1"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-lifecycle-agent-run.html",
+        "svgSha256": "a34dca9646ed5d9f86cc4f383c81350469ef2d919a43583bfc19261d2c227ad1"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "architecture",
+      "input": "web-app.architecture.json",
+      "inputSha256": "95e051b27a9e4a3307e194c0f666fca4af51470be7e2228d400ff48aea5b353b",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-web-app-rendered.html",
+        "svgSha256": "d7668ec903e1e63cc6ac0aea45a6cac9a7665d30de09a0eb9853cb9e2dfa3035"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-web-app-rendered.html",
+        "svgSha256": "d7668ec903e1e63cc6ac0aea45a6cac9a7665d30de09a0eb9853cb9e2dfa3035"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "erd",
+      "input": "orders.erd.json",
+      "inputSha256": "1777a374647084466f4d7ce3a968004be6ab70ac9cf82459b96bed7c556cdfdd",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-erd-orders-rendered.html",
+        "svgSha256": "b106ac03de9aa5e14f132eb0b28f1762c3d20b5abfb3d11060984c671d0731d7"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-erd-orders-rendered.html",
+        "svgSha256": "b106ac03de9aa5e14f132eb0b28f1762c3d20b5abfb3d11060984c671d0731d7"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "erd",
+      "input": "subscription-billing.erd.json",
+      "inputSha256": "89945699d92b9cc0ab91263cf38a07c350867d260eacd5d8ba1dc835fe2d22ed",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-subscription-billing-rendered.html",
+        "svgSha256": "b16a518f758c880d4db3fab1545bbb62267f7fa3150bad7cf0cef725ab65a60c"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-subscription-billing-rendered.html",
+        "svgSha256": "b16a518f758c880d4db3fab1545bbb62267f7fa3150bad7cf0cef725ab65a60c"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "tree",
+      "input": "payment-platform.tree.json",
+      "inputSha256": "1e99f37b3845d67fa97c9a2ff33109981c23bfdb0d03ba05b7d92944dcdfc61f",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-tree-payment-platform-rendered.html",
+        "svgSha256": "96b1712ad1a9a51472341365f3d82d9b1bf7d705ad5d2302565c190154bea981"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-tree-payment-platform-rendered.html",
+        "svgSha256": "96b1712ad1a9a51472341365f3d82d9b1bf7d705ad5d2302565c190154bea981"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "tree",
+      "input": "archify-repository.tree.json",
+      "inputSha256": "970617ee844ecfb1bb792c677aa8b85688abfd2cf8ab2365dc03ea9e26e6b9c7",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-tree-archify-repository-rendered.html",
+        "svgSha256": "d5ed4cd47d4b4757fefa4f3c200794f617432c9e4ee908fe4356828f04e609e0"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-tree-archify-repository-rendered.html",
+        "svgSha256": "d5ed4cd47d4b4757fefa4f3c200794f617432c9e4ee908fe4356828f04e609e0"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "class",
+      "input": "payments.class.json",
+      "inputSha256": "afba837f97a041e14687cbe8893523232c4afad7afd922d9b128606d1b3f12c8",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-class-payments-rendered.html",
+        "svgSha256": "29a519b7d2710684f2b756961afa3463a076d0788eb207e9d71b56e4333c9867"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-class-payments-rendered.html",
+        "svgSha256": "29a519b7d2710684f2b756961afa3463a076d0788eb207e9d71b56e4333c9867"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "class",
+      "input": "payment-processors.class.json",
+      "inputSha256": "98742b997db4782981460e8110e5fba899d8500c92c086aa867c5c62c3b89222",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-class-payment-processors-rendered.html",
+        "svgSha256": "d1482c03560648f3d121707f770dcdebe088567381419850940c8a3745164fc1"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-class-payment-processors-rendered.html",
+        "svgSha256": "d1482c03560648f3d121707f770dcdebe088567381419850940c8a3745164fc1"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "timeline",
+      "input": "payment-incident.timeline.json",
+      "inputSha256": "c1f535b3cc915ddd47ecd7df4e3ef02c441c8c3191daced5cf4422cff8dec95f",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-timeline-payment-incident-rendered.html",
+        "svgSha256": "f0ecc205ef2a0324963b4613647554fcdcdb8333f1ed76d7f4e0d075b089954f"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-timeline-payment-incident-rendered.html",
+        "svgSha256": "f0ecc205ef2a0324963b4613647554fcdcdb8333f1ed76d7f4e0d075b089954f"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "timeline",
+      "input": "archify-dev-activity.timeline.json",
+      "inputSha256": "e9c8d76528e8c38a68d9a8df2499c462f6b9633292ea43bf33350546ef2fd3a3",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-timeline-archify-dev-activity-rendered.html",
+        "svgSha256": "8932279e1a587f4fa90a770bb6d634f8ecc0b7a2570e7280c015c4fa8f4f5498"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-timeline-archify-dev-activity-rendered.html",
+        "svgSha256": "8932279e1a587f4fa90a770bb6d634f8ecc0b7a2570e7280c015c4fa8f4f5498"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "waterfall",
+      "input": "checkout-request.waterfall.json",
+      "inputSha256": "55a5f74699a0f0e44018a4a000556d43c90430b95f39accac6141af8318b5133",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-waterfall-checkout-request-rendered.html",
+        "svgSha256": "25b3c87c0faee78404f250197fdb2b907851651b12b9fb3667492a2c6733fabe"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-waterfall-checkout-request-rendered.html",
+        "svgSha256": "25b3c87c0faee78404f250197fdb2b907851651b12b9fb3667492a2c6733fabe"
+      },
+      "identicalSvg": true
+    },
+    {
+      "type": "waterfall",
+      "input": "example-rebuild.waterfall.json",
+      "inputSha256": "77d610013a5aab031df739c207b66ebc26e1740371b51da06956ecf06b5e9929",
+      "base": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/base-waterfall-example-rebuild-rendered.html",
+        "svgSha256": "9cf0d5c0e819dc17adcfee0542cf114810ac7c8bddd0096c5e1fb2a2a7cb94b1"
+      },
+      "candidate": {
+        "exitCode": 0,
+        "diagnostics": "",
+        "htmlPath": "/evidence/issue-1139/implementation-evidence/same-input/candidate-waterfall-example-rebuild-rendered.html",
+        "svgSha256": "9cf0d5c0e819dc17adcfee0542cf114810ac7c8bddd0096c5e1fb2a2a7cb94b1"
+      },
+      "identicalSvg": true
+    }
+  ],
+  "newCapabilityBaseExitCode": 1
+}

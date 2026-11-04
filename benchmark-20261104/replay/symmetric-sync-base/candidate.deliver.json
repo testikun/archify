@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d2d0010d-39fe-4d7e-b9e5-eb4405a53fe2",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/symmetric-sync-base/candidate.html",
+  "specification": {
+    "sha256": "2b9d0cd0e606d2b07dc3e3c73f3e3151a0f473a73c7752057f5db9ae80fa4592",
+    "bytes": 2215
+  },
+  "artifact": {
+    "sha256": "a5ab2731a0b49e0da9f21668536cf7cbb9c660720804f11afd4f25fc6afb54c2",
+    "bytes": 868731
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

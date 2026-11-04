@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "4dc51f96-59e8-4e8b-9365-4636ce0abe1e",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/implementation/test/fixtures/architecture-directions.json",
+  "output": "/evidence/issue-1139/implementation-evidence/directions.html",
+  "specification": {
+    "sha256": "96a21e19c4e3897f0f01e826200b704630061618fc87f8893a6e84cf5b223d71",
+    "bytes": 995
+  },
+  "artifact": {
+    "sha256": "c18974cb2e5b0924556b85abf0dad9a5ee532661de7d6d1c728127dd55706967",
+    "bytes": 869907
+  }
+}

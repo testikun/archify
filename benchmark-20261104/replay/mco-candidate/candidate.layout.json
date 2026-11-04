@@ -1,0 +1,437 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1385,
+    718
+  ],
+  "components": [
+    {
+      "id": "review-entry",
+      "type": "backend",
+      "label": "Review CLI",
+      "x": 40,
+      "y": 70,
+      "width": 215,
+      "height": 90,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "invocation-runtime",
+      "type": "backend",
+      "label": "Invocation runtime",
+      "x": 390,
+      "y": 70,
+      "width": 225,
+      "height": 90,
+      "pos": [
+        390,
+        70
+      ]
+    },
+    {
+      "id": "provider-adapters",
+      "type": "backend",
+      "label": "Provider adapters",
+      "x": 760,
+      "y": 70,
+      "width": 225,
+      "height": 90,
+      "pos": [
+        760,
+        70
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Provider CLI processes",
+      "x": 1120,
+      "y": 70,
+      "width": 225,
+      "height": 90,
+      "pos": [
+        1120,
+        70
+      ]
+    },
+    {
+      "id": "result-collector",
+      "type": "backend",
+      "label": "Result collection",
+      "x": 390,
+      "y": 340,
+      "width": 225,
+      "height": 90,
+      "pos": [
+        390,
+        340
+      ]
+    },
+    {
+      "id": "cli-output",
+      "type": "frontend",
+      "label": "CLI response",
+      "x": 40,
+      "y": 340,
+      "width": 215,
+      "height": 90,
+      "pos": [
+        40,
+        340
+      ]
+    },
+    {
+      "id": "review-artifacts",
+      "type": "database",
+      "label": "Local review artifacts",
+      "x": 390,
+      "y": 560,
+      "width": 225,
+      "height": 90,
+      "pos": [
+        390,
+        560
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "MCO Python process · in-process calls, worker threads and callbacks",
+      "x": 14,
+      "y": 44,
+      "width": 997,
+      "height": 406,
+      "wraps": [
+        "review-entry",
+        "invocation-runtime",
+        "provider-adapters",
+        "result-collector",
+        "cli-output"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "review-entry",
+      "to": "invocation-runtime",
+      "label": "Validated invocations",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          255,
+          115
+        ],
+        [
+          390,
+          115
+        ]
+      ],
+      "labelAt": [
+        323,
+        105
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "provider-adapters",
+      "label": "run / poll / cancel",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          615,
+          123.05
+        ],
+        [
+          760,
+          123.05
+        ]
+      ],
+      "labelAt": [
+        688,
+        113
+      ]
+    },
+    {
+      "from": "provider-adapters",
+      "to": "invocation-runtime",
+      "label": "Run ref + status",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          858.5,
+          160
+        ],
+        [
+          858.5,
+          184
+        ],
+        [
+          523.5,
+          184
+        ],
+        [
+          523.5,
+          160
+        ]
+      ],
+      "labelAt": [
+        691,
+        174
+      ]
+    },
+    {
+      "from": "provider-adapters",
+      "to": "provider-processes",
+      "label": "Spawn CLI + task",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          985,
+          123.05
+        ],
+        [
+          1120,
+          123.05
+        ]
+      ],
+      "labelAt": [
+        1053,
+        113
+      ]
+    },
+    {
+      "from": "provider-processes",
+      "to": "provider-adapters",
+      "label": "stdout / stderr logs",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1232.5,
+          160
+        ],
+        [
+          1232.5,
+          184
+        ],
+        [
+          872.5,
+          184
+        ],
+        [
+          872.5,
+          160
+        ]
+      ],
+      "labelAt": [
+        1053,
+        174
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "result-collector",
+      "label": "Decoded results",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          509.5,
+          160
+        ],
+        [
+          509.5,
+          340
+        ]
+      ],
+      "labelAt": [
+        463,
+        253
+      ]
+    },
+    {
+      "from": "result-collector",
+      "to": "cli-output",
+      "label": "outputs[] + exit code",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          390,
+          385
+        ],
+        [
+          255,
+          385
+        ]
+      ],
+      "labelAt": [
+        323,
+        375
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "cli-output",
+      "label": "Live event callbacks",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          495.5,
+          160
+        ],
+        [
+          495.5,
+          184
+        ],
+        [
+          147.5,
+          184
+        ],
+        [
+          147.5,
+          340
+        ]
+      ],
+      "labelAt": [
+        322,
+        174
+      ]
+    },
+    {
+      "from": "result-collector",
+      "to": "review-artifacts",
+      "label": "If persistence enabled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          502.5,
+          430
+        ],
+        [
+          502.5,
+          560
+        ]
+      ],
+      "labelAt": [
+        439,
+        498
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Validated invocations",
+      "x": 267,
+      "y": 95,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        323,
+        105
+      ]
+    },
+    {
+      "text": "run / poll / cancel",
+      "x": 637,
+      "y": 103,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        688,
+        113
+      ]
+    },
+    {
+      "text": "Run ref + status",
+      "x": 648,
+      "y": 164,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        691,
+        174
+      ]
+    },
+    {
+      "text": "Spawn CLI + task",
+      "x": 1009,
+      "y": 103,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        1053,
+        113
+      ]
+    },
+    {
+      "text": "stdout / stderr logs",
+      "x": 1000,
+      "y": 164,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        1053,
+        174
+      ]
+    },
+    {
+      "text": "Decoded results",
+      "x": 422,
+      "y": 243,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        463,
+        253
+      ]
+    },
+    {
+      "text": "outputs[] + exit code",
+      "x": 267,
+      "y": 365,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        323,
+        375
+      ]
+    },
+    {
+      "text": "Live event callbacks",
+      "x": 269,
+      "y": 164,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        322,
+        174
+      ]
+    },
+    {
+      "text": "If persistence enabled",
+      "x": 381,
+      "y": 488,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        439,
+        498
+      ]
+    }
+  ]
+}

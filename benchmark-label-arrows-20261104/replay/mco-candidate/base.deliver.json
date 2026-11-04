@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "acaffbf8-9c9e-4cee-a669-72ba23aa3c6d",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/mco-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"submit-review\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/1 (id/label: \"return-results\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/2 (id/label: \"start-provider\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/3 (id/label: \"decode-provider\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/4 (id/label: \"spawn-cli\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/5 (id/label: \"capture-cli\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"submit-review\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "submit-review"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"return-results\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "return-results"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"start-provider\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "start-provider"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/3 (id/label: \"decode-provider\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/3",
+        "identity": "decode-provider"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/4 (id/label: \"spawn-cli\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/4",
+        "identity": "spawn-cli"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/5 (id/label: \"capture-cli\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/5",
+        "identity": "capture-cli"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "095cd4ba-df86-4cad-a9c6-1be276c1bd5e",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/implementation/test/fixtures/architecture-label-arrows.json",
+  "output": "/evidence/issue-1139/label-arrows-evidence/package-delivery.html",
+  "specification": {
+    "sha256": "408aaf847aca261a421518a6bbab77ca8de52e13784d2500f1216d02a8485731",
+    "bytes": 669
+  },
+  "artifact": {
+    "sha256": "4a9ec4c86edb78d4188466ed0ab583503ef264880748cf840baebc71e2849d2e",
+    "bytes": 864146
+  }
+}

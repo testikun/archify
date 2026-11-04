@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Squad: manager–worker coordination",
+    "subtitle": "Local CLI invocations coordinate through persisted tasks and mailboxes — not a manager daemon.",
+    "output": "output/squad-coordination.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/squad",
+      "revision": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "link_mode": "local-only"
+    },
+    "legend": {
+      "entries": {
+        "external": { "label": "Agent terminal / caller" },
+        "backend": { "label": "Local Rust implementation" },
+        "database": { "label": "Workspace files / SQLite" },
+        "relation-both": { "label": "Command and returned output" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "manager", "type": "external", "icon": "person",
+      "label": "Manager terminal", "sublabel": "Plan, assign, inspect results",
+      "pos": [35, 85], "size": [235, 85],
+      "explanation": "The manager is an agent following role instructions, not an embedded scheduler. It checks agents, creates tracked assignments, and reads replies. Use task list to inspect completed task state; freeform replies use send/receive. Inspector review is role guidance and is outside this focused two-agent overview.",
+      "sources": [
+        { "path": "src/roles/manager.md", "line": 1, "end_line": 22, "label": "Manager collaboration policy" },
+        { "path": "src/main.rs", "line": 973, "end_line": 981, "label": "Create task through Store" },
+        { "path": "src/main.rs", "line": 1006, "end_line": 1049, "label": "Explicit requeue / task inspection" }
+      ]
+    },
+    {
+      "id": "cli", "type": "backend",
+      "label": "squad CLI", "sublabel": "Dispatch • validate • print output",
+      "pos": [435, 85], "size": [235, 85],
+      "explanation": "Each invocation locates an ancestor .squad directory and opens .squad/messages.db. Join registers an active agent, writes its session token, and prints role instructions. Mutating agent commands check active identity and session state. Receive returns text or JSON. With --wait it polls every 500 ms, refreshes last_seen every 30 s, and returns on delivery or timeout (default 3600 s).",
+      "sources": [
+        { "path": "src/main.rs", "line": 430, "end_line": 483, "label": "Workspace, Store and session checks" },
+        { "path": "src/main.rs", "line": 610, "end_line": 640, "label": "Join registers and prints role" },
+        { "path": "src/main.rs", "line": 786, "end_line": 869, "label": "Receive polling and output" }
+      ]
+    },
+    {
+      "id": "worker", "type": "external", "icon": "person",
+      "label": "Worker terminal", "sublabel": "Receive, execute, ack, complete",
+      "pos": [835, 85], "size": [235, 85],
+      "explanation": "The worker executes the actual work outside Squad. For tracked work it receives the task_assigned message, explicitly acknowledges the task, then completes it with a summary. It can separately send a manager reply. Reading an assignment is not an acknowledgement, and task completion alone does not send a result message.",
+      "sources": [
+        { "path": "src/roles/worker.md", "line": 1, "end_line": 15, "label": "Worker behavior" },
+        { "path": "src/main.rs", "line": 984, "end_line": 1003, "label": "Ack / complete CLI handlers" },
+        { "path": "src/store.rs", "line": 653, "end_line": 679, "label": "Completion updates task only" }
+      ]
+    },
+    {
+      "id": "roles", "type": "database",
+      "label": "Role instructions", "sublabel": ".squad/roles/<role>.md",
+      "tag": "Custom file → built-in fallback",
+      "pos": [35, 310], "size": [235, 95],
+      "explanation": "init copies built-in role prompts into the workspace. Join reads the custom role file if present, otherwise uses compiled-in defaults, and prints it. These files guide agent behavior; they are not an enforced manager-only authorization policy.",
+      "sources": [
+        { "path": "src/roles.rs", "line": 4, "end_line": 29, "label": "Role lookup and fallback" },
+        { "path": "src/init.rs", "line": 24, "end_line": 33, "label": "Init writes role templates" },
+        { "path": "src/main.rs", "line": 628, "end_line": 640, "label": "Join prints instructions" }
+      ]
+    },
+    {
+      "id": "store", "type": "backend",
+      "label": "Store / SQL operations", "sublabel": "Task transitions + mailbox I/O",
+      "pos": [435, 310], "size": [235, 95],
+      "explanation": "create_task atomically inserts a queued task and task_assigned message, requiring active creator and assignee. ack_task requires queued status and matching assignee, and records a 15-minute lease. complete_task requires acked status and matching lease owner; it persists the summary but neither checks lease expiry nor sends a message. receive_messages selects unread messages and marks those rows read in one transaction. requeue_task clears lease/result and optionally assigns an active agent; it sends no assignment message.",
+      "sources": [
+        { "path": "src/store.rs", "line": 294, "end_line": 374, "label": "Send and transactional receive" },
+        { "path": "src/store.rs", "line": 452, "end_line": 546, "label": "Task + assignment transaction" },
+        { "path": "src/store.rs", "line": 624, "end_line": 718, "label": "Ack, complete and explicit requeue" }
+      ]
+    },
+    {
+      "id": "coord-files", "type": "database",
+      "label": "Local coordination files", "sublabel": ".squad/sessions/<agent>",
+      "tag": "locks/<agent>.receive.lock",
+      "pos": [835, 310], "size": [235, 95],
+      "explanation": "Join writes the session token file; validation compares it with the expected database token. Missing files are accepted for backward compatibility, so this is not a strong authentication boundary. receive --wait holds an exclusive fs2 file lock at workspace-root locks/<agent>.receive.lock for the duration of the wait; non-wait receives do not take that lock.",
+      "sources": [
+        { "path": "src/session.rs", "line": 5, "end_line": 22, "label": "Write and read session file" },
+        { "path": "src/session.rs", "line": 47, "end_line": 60, "label": "Validation allows missing file" },
+        { "path": "src/main.rs", "line": 796, "end_line": 814, "label": "Per-agent wait lock" }
+      ]
+    },
+    {
+      "id": "db", "type": "database",
+      "label": "SQLite: messages.db", "sublabel": ".squad/ • WAL • 5 s busy timeout",
+      "tag": "agents | tasks | messages",
+      "pos": [435, 535], "size": [235, 95],
+      "explanation": "One shared local database persists agent identity, role, session token, client metadata and presence; task assignment, status, lease and result; and message sender/recipient, unread flag, kind, task_id and reply_to. Tasks and mailboxes are distinct state: reading messages changes read flags, not task status. Only Store executes SQL; agent terminals communicate through CLI invocations rather than direct peer transport.",
+      "sources": [
+        { "path": "src/store.rs", "line": 45, "end_line": 98, "label": "SQLite configuration and schema" },
+        { "path": "src/main.rs", "line": 442, "end_line": 445, "label": "Database path" },
+        { "path": "src/store.rs", "line": 142, "end_line": 175, "label": "Unique active registration" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Squad process • Rust CLI + library", "wraps": ["cli", "store"] }
+  ],
+  "connections": [
+    { "id": "manager-cli", "from": "manager", "to": "cli", "direction": "both", "label": "create / list / send", "variant": "emphasis" },
+    { "id": "worker-cli", "from": "worker", "to": "cli", "direction": "both", "label": "receive / ack / complete", "variant": "emphasis" },
+    { "id": "cli-store", "from": "cli", "to": "store", "direction": "both", "label": "calls + records" },
+    { "id": "cli-roles", "from": "cli", "to": "roles", "label": "join: read prompt" },
+    { "id": "cli-files", "from": "cli", "to": "coord-files", "label": "tokens + wait lock" },
+    { "id": "store-db", "from": "store", "to": "db", "direction": "both", "label": "SQL reads / writes", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan", "title": "Assignment → execution → observation",
+      "items": [
+        "Create commits queued task + unread task_assigned together; both agents must be active.",
+        "Receive marks mail read; ack separately moves queued → acked for the assigned worker.",
+        "Complete moves acked → completed for the lease owner. Manager reads task list, or worker separately sends a reply."
+      ]
+    },
+    {
+      "dot": "emerald", "title": "Mailbox is not task state",
+      "items": [
+        "send / receive is the freeform fallback; direct notes can carry task_id and reply_to. @all fans out to other active agents (src/main.rs:706–734; src/store.rs:317–374).",
+        "Task assignment output joins the task body/status onto its message; --json emits envelopes (src/main.rs:487–580).",
+        "Read marking commits before output is printed: do not infer end-to-end processing acknowledgement."
+      ]
+    },
+    {
+      "dot": "amber", "title": "Boundaries and implementation limits",
+      "items": [
+        "Roles are prompts, not manager-only permissions. External agent execution and inspector review are omitted.",
+        "Ack records a 15-minute lease; complete does not enforce expiry. Requeue is explicit and emits no message (src/store.rs:13,624–718).",
+        "Shared local workspace only in this path: no evidenced daemon, push channel, automatic result delivery, or automatic expired-lease recovery."
+      ]
+    }
+  ]
+}

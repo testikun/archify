@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "994acf18-f487-4b59-ac74-da6f2c9c5d91",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.html",
+  "specification": {
+    "sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+    "bytes": 2033
+  },
+  "artifact": {
+    "sha256": "824f28791fb78326e2a6215d1b4cc36fcff44b051ef6c9e6c8aff4f58760e8d5",
+    "bytes": 860320
+  }
+}

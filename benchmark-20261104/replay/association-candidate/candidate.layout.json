@@ -1,0 +1,158 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    690,
+    460
+  ],
+  "components": [
+    {
+      "id": "crm",
+      "type": "backend",
+      "label": "CRM",
+      "x": 40,
+      "y": 40,
+      "width": 220,
+      "height": 80,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "x": 40,
+      "y": 290,
+      "width": 220,
+      "height": 80,
+      "pos": [
+        40,
+        290
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "backend",
+      "label": "Reporting",
+      "x": 470,
+      "y": 40,
+      "width": 180,
+      "height": 80,
+      "pos": [
+        470,
+        40
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "crm",
+      "to": "project-management",
+      "label": "Same opportunity identifier",
+      "variant": "dashed",
+      "direction": "none",
+      "route": "auto",
+      "points": [
+        [
+          150,
+          120
+        ],
+        [
+          150,
+          290
+        ]
+      ],
+      "labelAt": [
+        74,
+        208
+      ]
+    },
+    {
+      "from": "crm",
+      "to": "reporting",
+      "label": "Publishes sales summaries",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          73
+        ],
+        [
+          470,
+          73
+        ]
+      ],
+      "labelAt": [
+        365,
+        63
+      ]
+    },
+    {
+      "from": "project-management",
+      "to": "reporting",
+      "label": "Publishes delivery summaries",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          306
+        ],
+        [
+          486,
+          306
+        ],
+        [
+          486,
+          120
+        ]
+      ],
+      "labelAt": [
+        486,
+        203
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Same opportunity identifier",
+      "x": 4,
+      "y": 198,
+      "width": 140,
+      "height": 14,
+      "labelAt": [
+        74,
+        208
+      ]
+    },
+    {
+      "text": "Publishes sales summaries",
+      "x": 300,
+      "y": 53,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        365,
+        63
+      ]
+    },
+    {
+      "text": "Publishes delivery summaries",
+      "x": 414,
+      "y": 193,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        486,
+        203
+      ]
+    }
+  ]
+}

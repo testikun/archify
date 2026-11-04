@@ -1,0 +1,3 @@
+Created [the architecture diagram](/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.html) and [source JSON](/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json).
+
+Includes one bidirectional status synchronization relationship, two separate one-way audit flows, and a connection legend. No runtime details or source links invented. Archify’s automated validation and browser checks passed.

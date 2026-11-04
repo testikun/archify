@@ -1,0 +1,157 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "shared-messages-base",
+  "project_id": "shared-messages",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "14c7bdd9aef33d120f56682f0f9f77843e06b4ff56a2ff457dbb46484f6e8cd8",
+    "substantive_sha256": "03e2ba895b623aca3e0887061a9c336cb0f276136aab4a99d7eb5d1db642f918"
+  },
+  "session": {
+    "id": "01a1a599-4088-7ce1-9ebd-9ffc64a5deb9",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T08:09:27.308Z",
+        "pid": 84661,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-order.architecture.json",
+          "output/purchase-order.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+        "sha256": "0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa",
+        "snapshot": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json"
+      },
+      {
+        "at": "2026-11-04T08:09:50.239Z",
+        "pid": 84912,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-order.architecture.json",
+          "output/purchase-order.html",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+        "sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+        "snapshot": "snapshots/bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.delivery.json"
+    ],
+    "screenshots": [
+      "captures/shared-messages-base/fullpage.light.png",
+      "captures/shared-messages-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered fallback; requested presentation unsupported",
+    "semantics": "correct against the synthetic brief",
+    "readability": "readable; requested shared-label presentation unsupported",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side original BUSINESS.md, exact prompt, final JSON and native capture inspection.",
+    "findings": [
+      "The manager-approved purchase request and post-validation accept/reject decision retain distinct IDs and directions. Only accepted orders are stored; no systems or source citations were invented.",
+      "The Agent reported the installed tool limitation and used two parallel endpoint-arrow paths. This preserves the business facts but does not satisfy the requested shared corridor with label-adjacent direction cues.",
+      "Endpoint arrows were not forbidden by the benchmark prompt; the finding concerns the expressly requested shared-label presentation, not an invented extra acceptance criterion.",
+      "One voluntary revision trimmed redundant supporting text after a passing first check. Two failed commands were missing example/glob lookups.",
+      "Original final bytes render identically on both versions."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 12,
+    "usage": {
+      "input_tokens": 580920,
+      "cached_input_tokens": 521216,
+      "output_tokens": 3489,
+      "reasoning_output_tokens": 647,
+      "uncached_input_tokens": 59704
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "unsupported requested presentation; honest fallback, delivered semantics retained",
+    "label_arrow_count": 0
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T08:07:26.479385+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T08:10:39.848753+00:00",
+    "wall_seconds": 193.3690709170005,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 120.817902,
+    "time_to_first_cli_seconds": 120.828615
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b57ed88b-195c-4045-aa57-023bd4396c55",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/issues/boundary-title-mask/minimal.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/issues/boundary-title-mask/base.html",
+  "specification": {
+    "sha256": "54f71bba93f8f777c58e05ae5d82477dfe10eba58caba97f1b80380eda5043cd",
+    "bytes": 954
+  },
+  "artifact": {
+    "sha256": "bf6022fa3da974424213689288b1dfe96527492566c724c16c70c4cece6bd4d5",
+    "bytes": 857717
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "pageComposition": {
+    "bodyPaddingPx": 12,
+    "headerPx": 52,
+    "diagramChromePx": 78,
+    "svgPx": 644,
+    "cardsPx": 0,
+    "viewBoxHeight": 528
+  },
+  "innerWidth": 1440,
+  "innerHeight": 900,
+  "scrollWidth": 1440,
+  "scrollHeight": 900,
+  "resolvedTheme": "light",
+  "readerLayout": "adaptive",
+  "readerOverflow": null,
+  "readerFit": "intrinsic-height",
+  "diagramType": null,
+  "documentScrollUnclipped": true,
+  "readerWidth": 1376,
+  "diagramWidth": 1346,
+  "viewBoxWidth": 1103,
+  "workflowLanes": [],
+  "minimumProjectedNodeTextPx": 7.5,
+  "minimumProjectedNonEdgeTextPx": 7.5,
+  "minimumProjectedEdgeTextPx": 8,
+  "minimumProjectedNodeText": "Separate session · restricted tools, not an OS sandbox",
+  "minimumProjectedNodeTextDetail": "boundary",
+  "minimumProjectedNodeTextOwner": {
+    "kind": "boundary",
+    "id": null
+  },
+  "hasLegend": true,
+  "hasNavigationDock": true,
+  "legendDockIntersectionArea": 0,
+  "dockStageIntersectionArea": 0,
+  "dockStageGap": 10,
+  "viewerChromeRequiredGap": 10,
+  "viewerChromeReserve": 54,
+  "viewerChromeActive": true
+}

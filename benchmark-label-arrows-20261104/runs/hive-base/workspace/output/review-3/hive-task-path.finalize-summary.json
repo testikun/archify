@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "sha256": "0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6",
+    "bytes": 9010
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+    "sha256": "0e98bf365e9bf46cdd068cf56925011161667bc11aee05b7652c386792329fb2",
+    "bytes": 883630
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-3/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-3/hive-task-path.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-3/hive-task-path.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2453,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "team-visibility",
+            "from": "control",
+            "to": "team-ui",
+            "label": "HTTP poll response · every 2 s",
+            "collectionIndex": 10,
+            "artifactIndex": 11
+          },
+          "bends": 3,
+          "stretch": 1.289,
+          "directCorridorBlockers": [
+            {
+              "id": "worker",
+              "label": "Worker CLI",
+              "box": [
+                455,
+                360,
+                220,
+                78
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": false
+    },
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

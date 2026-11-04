@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/evidence/snapshots/9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60.json",
+  "candidate": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/evidence/snapshots/9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60.json",
+    "sha256": "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+    "bytes": 1748
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/evidence/snapshots/9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/project",
+      "--candidate-sha256",
+      "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 20,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.5,
+      "maxBends": 0,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 206,
+      "minInteriorSegmentPx": null,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 40,
+      "emptyTopRatio": 0.083,
+      "occupiedTop": 40,
+      "viewBoxTop": 0,
+      "canvasHeight": 482,
+      "typicalNodeHeight": 84,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "recognized-declared-wide",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 984.375,
+      "actualBudgetPx": 984.375,
+      "actualReaderWidth": 1014.375,
+      "desiredReaderWidth": 1014.375,
+      "viewportCap": 1376,
+      "limit": "source-size",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": true,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "purchase-creation-request",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.5,
+      "semanticTextCount": 9
+    },
+    "issues": []
+  }
+}

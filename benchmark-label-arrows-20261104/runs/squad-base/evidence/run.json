@@ -1,0 +1,160 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "squad-base",
+  "project_id": "squad",
+  "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "384adbabe390dcb8702858c403ee14072b5c3fe6163a005dc53bdb0e6c57a759",
+    "substantive_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+  },
+  "session": {
+    "id": "01a1a58a-425f-74c2-8d65-5bd0d7d312c1",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T07:54:34.433Z",
+        "pid": 80342,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+        "sha256": "c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5",
+        "snapshot": "snapshots/c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5.json"
+      },
+      {
+        "at": "2026-11-04T07:55:23.862Z",
+        "pid": 80584,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+        "sha256": "ba9c4631b436b5d20c11ce20a339f20f3c2a12250a1ef042a666f1e26223e275",
+        "snapshot": "snapshots/ba9c4631b436b5d20c11ce20a339f20f3c2a12250a1ef042a666f1e26223e275.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.delivery.json"
+    ],
+    "screenshots": [
+      "captures/squad-base/fullpage.light.png",
+      "captures/squad-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "source-backed at overview scope",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side pinned source, final JSON and native capture inspection; feature Route/export evidence retained.",
+    "findings": [
+      "Task creation records the assignment; receive marks a message read independently of ack. Complete requires matching lease ownership and acked status, but does not send a result message or enforce lease expiry.",
+      "Task/message operations are local Store code, role instructions are guidance rather than a manager-only authorization boundary.",
+      "No both relation was used in either arm in this sample; the earlier both misuse is retained under its original run and cannot be declared eliminated.",
+      "Uses ordinary forward relationships and endpoint arrows. One voluntary boundary cleanup; one nonexistent example read failed before generation."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 20,
+    "usage": {
+      "input_tokens": 1186633,
+      "cached_input_tokens": 1131520,
+      "output_tokens": 6565,
+      "reasoning_output_tokens": 1264,
+      "uncached_input_tokens": 55113
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_semantic_or_visual": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "not exercised",
+    "label_arrow_count": 0
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:51:03.834430+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T07:56:31.553302+00:00",
+    "wall_seconds": 327.7163189169987,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 210.597959,
+    "time_to_first_cli_seconds": 210.59857
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

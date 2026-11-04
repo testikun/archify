@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/evidence/snapshots/b62e5ae7e07493c50fb4e7f2e9ccb84c0f5a7af27c4c97cfee3204a7346cb498.json",
+  "error": "architecture schema validation failed:\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"security-line\"}\n  /components/5/sources/0/label (id/label: \"Locked apply, journaling, verification and rollback\") must NOT have more than 48 characters {\"limit\":48}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/meta/legend/entries must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/meta/legend/entries"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "security-line"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"security-line\""
+      ]
+    },
+    {
+      "code": "schema/maxLength",
+      "severity": "error",
+      "message": "/components/5/sources/0/label (id/label: \"Locked apply, journaling, verification and rollback\") must NOT have more than 48 characters",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/components/5/sources/0/label",
+        "identity": "Locked apply, journaling, verification and rollback"
+      },
+      "evidence": {
+        "keyword": "maxLength",
+        "limit": 48
+      },
+      "supportedFixes": [
+        "provide at most 48 character(s)"
+      ]
+    }
+  ]
+}

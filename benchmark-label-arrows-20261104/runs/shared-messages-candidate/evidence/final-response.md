@@ -1,0 +1,3 @@
+Created [the architecture diagram](/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.html) and [source JSON](/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json).
+
+Request and decision remain distinct directed relationships on one shared corridor, with centered labels and adjacent direction cues. The accepted-only storage path and notation legend are included. Automated checks passed; light and dark previews were visually reviewed.

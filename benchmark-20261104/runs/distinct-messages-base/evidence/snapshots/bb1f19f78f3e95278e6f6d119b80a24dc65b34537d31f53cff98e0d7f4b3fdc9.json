@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Purchase request and decision",
+    "subtitle": "Business architecture · Based only on the synthetic BUSINESS.md brief",
+    "locale": "en",
+    "output": "output/purchase-orders.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Persistent order storage" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Requests orders; receives decisions",
+      "pos": [40, 40],
+      "size": [220, 100]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Validates purchase requests",
+      "pos": [700, 40],
+      "size": [200, 100]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "sublabel": "Rejected orders are not written",
+      "pos": [700, 330],
+      "size": [200, 80]
+    }
+  ],
+  "connections": [
+    {
+      "id": "approved-purchase-request",
+      "from": "project-management",
+      "to": "erp",
+      "label": "PO creation request | only after manager approval"
+    },
+    {
+      "id": "validated-purchase-decision",
+      "from": "erp",
+      "to": "project-management",
+      "label": "Acceptance / rejection decision | after validation"
+    },
+    {
+      "id": "accepted-order-write",
+      "from": "erp",
+      "to": "order-storage",
+      "label": "Write order | accepted only"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Reading the diagram",
+      "items": [
+        "Each arrow is one distinct directed relationship, not a generic exchange.",
+        "Text after | gives the condition for that relationship.",
+        "PO means purchase order. No additional systems or paths are established."
+      ]
+    }
+  ]
+}

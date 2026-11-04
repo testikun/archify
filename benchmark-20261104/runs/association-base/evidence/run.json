@@ -1,0 +1,135 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "association-base",
+  "project_id": "association",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "4c3a2e5ab1797827a47b41d7ab77b9c550ae9dd5beb89ff713a0e7c154b9b009",
+    "substantive_sha256": "d748fff76986c3b53ad1860f261a436edf628dff7e01978d080c45a1ba2981d7"
+  },
+  "session": {
+    "id": "01a1a487-4b8e-7171-a186-8a4c1b4ccde0",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/764982bcc9c08e724cdd861b322cf2beb03bab7758ed3fa435889f72ed9b279b.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:09:47.854Z",
+        "pid": 3682,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/shared-opportunity-identifiers.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/candidate.json",
+        "sha256": "764982bcc9c08e724cdd861b322cf2beb03bab7758ed3fa435889f72ed9b279b",
+        "snapshot": "snapshots/764982bcc9c08e724cdd861b322cf2beb03bab7758ed3fa435889f72ed9b279b.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.delivery.json"
+    ],
+    "screenshots": [
+      "captures/association-base/fullpage.light.png",
+      "captures/association-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered workaround; requested relation unsupported",
+    "semantics": "incorrect",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review against frozen synthetic BUSINESS.md, initial/final JSON and native/full-page captures; author-side inspection, not an official real-project case.",
+    "findings": [
+      "The two Reporting arrows and all business text agree with [BUSINESS.md](runs/association-base/workspace/project/BUSINESS.md). The Agent recognizes the old schema limitation and places CRM ─── Project Management in a separate text card, with an explicit no-message/no-dependency explanation. It does not invent a directed CRM-to-Project-Management communication flow.",
+      "The requested association is absent from the canonical graph's connections; only the two reporting edges exist. The semantic outcome is marked incorrect relative to the complete requested graph, because a text card is not a traversable undirected relationship. This is the known unsupported baseline capability, not a new regression or a false claim by the Agent that native support exists.",
+      "The rendered partial graph and supporting cards are readable, and the final response discloses the limitation. First/final submitted JSON are identical and pass the old validator. There are no submitted revisions; one guessed example-path command fails. The Agent's ablation inspection retains both explanatory panels.",
+      "Both versions reproduce this old-format input with identical layout and canonical SVG. Candidate replay cannot infer a missing relationship from prose. New direction fields are not stripped or injected to turn the workaround into a capability success."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 0,
+    "tool_calls": 12,
+    "usage": {
+      "input_tokens": 542950,
+      "cached_input_tokens": 509824,
+      "output_tokens": 3326,
+      "reasoning_output_tokens": 754,
+      "uncached_input_tokens": 33126
+    },
+    "first_draft_semantics": "incorrect relative to complete requested graph: same missing canonical association as final",
+    "first_draft_visual": "readable partial workaround; same bytes as final",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "unsupported native undirected relationship; truthful text-panel workaround retained"
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T03:08:12.424284+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:10:35.357755+00:00",
+    "wall_seconds": 142.9324470419997,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 95.39776,
+    "time_to_first_cli_seconds": 95.429716
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

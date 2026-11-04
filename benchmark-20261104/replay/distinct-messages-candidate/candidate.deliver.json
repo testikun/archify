@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "7684c5d1-30cb-4328-a273-a0c8332ed8df",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/distinct-messages-candidate/candidate.html",
+  "specification": {
+    "sha256": "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+    "bytes": 1748
+  },
+  "artifact": {
+    "sha256": "84255966fb10261cc73df03ad590503a600484628de8b49a80889286e3fcfb98",
+    "bytes": 868296
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

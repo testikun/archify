@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · One review, individual answers",
+    "subtitle": "Default CLI + built-in shim path · selected providers run independently · source-pinned implementation overview",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "review-cli",
+      "type": "frontend",
+      "label": "1 · Review CLI",
+      "sublabel": "repo + prompt + selected providers",
+      "tag": "runtime/cli.py · main",
+      "pos": [40, 60],
+      "size": [235, 86],
+      "explanation": "Accepts mco review arguments. Loads configuration defaults and resolves provider selection. Review supplies a natural-language default prompt if none is given; execution mode defaults to read_only, but explicit config/permission overrides can change it. No providers selected is an error, not automatic provider discovery.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2146, "end_line": 2172, "label": "CLI configuration defaults"},
+        {"path": "runtime/cli.py", "line": 2248, "end_line": 2306, "label": "Providers and review prompt"},
+        {"path": "runtime/cli.py", "line": 1522, "end_line": 1541, "label": "Read-only preset and overrides"}
+      ]
+    },
+    {
+      "id": "request-plan",
+      "type": "security",
+      "label": "2 · Validate & plan",
+      "sublabel": "scope, invocation IDs, adapter policy",
+      "tag": "Reject invalid / unsupported requests",
+      "pos": [460, 60],
+      "size": [250, 86],
+      "explanation": "Validates target paths against the repository and allow_paths. Builds AgentInvocation records from selected providers and configured models, or explicit [alias=]provider:model declarations. Resolves the adapter registry and rejects unsupported strict policy settings or known-invalid models before executing. The CLI passes the accepted plan, adapters, permissions, context and timeouts to run_invocation_workflow.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2312, "end_line": 2378, "label": "Plan and policy preflight"},
+        {"path": "runtime/invocation_runtime.py", "line": 99, "end_line": 162, "label": "Invocation identity and scope rules"},
+        {"path": "runtime/cli.py", "line": 2445, "end_line": 2475, "label": "Workflow call and runtime inputs"}
+      ]
+    },
+    {
+      "id": "fanout",
+      "type": "backend",
+      "label": "3 · Invocation scheduler",
+      "sublabel": "ThreadPoolExecutor · bounded fan-out",
+      "tag": "run_invocation_workflow → run_invocations",
+      "pos": [910, 60],
+      "size": [270, 86],
+      "explanation": "Without chain, debate or synthesis flags, the workflow directly calls run_invocations. It submits one _run_one_invocation job per declaration, choosing adapters[invocation.provider]. max_provider_parallelism caps workers when positive; otherwise the pool has one worker per invocation. A global deadline and shared cancellation event govern the task. These are local threads, not a distributed queue.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 734, "end_line": 756, "label": "Default workflow dispatch"},
+        {"path": "runtime/invocation_runtime.py", "line": 487, "end_line": 549, "label": "Pool, submit and deadline"}
+      ]
+    },
+    {
+      "id": "invocation-worker",
+      "type": "backend",
+      "label": "4 · Per-invocation worker",
+      "sublabel": "TaskInput → poll → decoded answer",
+      "tag": "Stall / hard deadlines · cancellation",
+      "pos": [910, 310],
+      "size": [270, 96],
+      "explanation": "Builds TaskInput with prompt, repo root, scope, model and permission metadata. Starts adapter.run under a deadline, then polls the run reference. The worker reads the adapter's stdout log, calls decode_transport, emits output_delta events, and appends answer deltas to the invocation Markdown file. Terminal results retain invocation ID, provider, model, status, output, error and exit code. Failures, cancellation and timeouts remain per-invocation results; the worker requests adapter cancellation when needed.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 188, "end_line": 285, "label": "Build TaskInput and start adapter"},
+        {"path": "runtime/invocation_runtime.py", "line": 300, "end_line": 348, "label": "Result envelope, poll and cancel"},
+        {"path": "runtime/invocation_runtime.py", "line": 349, "end_line": 435, "label": "Log read, decoding, deltas and timeout"}
+      ]
+    },
+    {
+      "id": "shim-adapters",
+      "type": "backend",
+      "label": "Provider shim adapters",
+      "sublabel": "CLI flags + process lifecycle + decoder",
+      "tag": "Shared ShimAdapterBase · provider overrides",
+      "pos": [460, 310],
+      "size": [250, 96],
+      "explanation": "The registry maps provider IDs to concrete adapters. In the default built-in shim path, the base adapter spawns the provider CLI with cwd=repo_root and stdout/stderr redirected to local files. poll observes the child process; cancel controls it. Provider overrides construct commands and decode their output formats; Codex is a concrete example, not a required provider. The worker reads these raw log files rather than receiving an HTTP response.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 132, "end_line": 165, "label": "Default provider registry"},
+        {"path": "runtime/adapters/shim.py", "line": 98, "end_line": 261, "label": "Spawn, log capture, poll and cancel"},
+        {"path": "runtime/adapters/codex.py", "line": 38, "end_line": 86, "label": "Example decoder and CLI command"}
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Selected provider CLIs",
+      "sublabel": "One child process per invocation",
+      "tag": "e.g. Claude / Codex / Gemini",
+      "pos": [40, 310],
+      "size": [235, 96],
+      "explanation": "Locally launched external CLI executables perform the actual review in the target repository. This boundary is the observed subprocess boundary, not a claim of network or filesystem isolation. Provider-internal model calls, remote hosting and internal review logic are outside the checked-out implementation and are intentionally not invented here.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 154, "label": "Observed child-process boundary"},
+        {"path": "runtime/adapters/__init__.py", "line": 132, "end_line": 146, "label": "Built-in provider choices"}
+      ]
+    },
+    {
+      "id": "result-collection",
+      "type": "backend",
+      "label": "5 · Collect individual results",
+      "sublabel": "outputs[] stays in declaration order",
+      "tag": "Complete 0 · partial 1 · failed 2",
+      "pos": [910, 555],
+      "size": [270, 86],
+      "explanation": "Futures finish in any order, but the scheduler writes results into their original declaration-index slots. An unexpected worker exception becomes that invocation's failed result. It returns task_id, status, outputs[], exit_code and artifact_root. All successes mean complete/0; some mean partial/1; none mean failed/2. The default path does not merge or synthesize provider answers. Optional persistence writes result.md and run.json, while stdout-only mode uses a temporary directory and clears artifact paths before cleanup.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 550, "end_line": 641, "label": "Per-result capture and returned payload"},
+        {"path": "runtime/invocation_runtime.py", "line": 465, "end_line": 486, "label": "Persistent versus temporary files"},
+        {"path": "runtime/invocation_artifacts.py", "line": 63, "end_line": 106, "label": "Optional result.md and run.json writes"}
+      ]
+    },
+    {
+      "id": "cli-output",
+      "type": "frontend",
+      "label": "6 · Return to caller",
+      "sublabel": "Text / JSONL events / final JSON",
+      "tag": "Individual answers + task exit code",
+      "pos": [460, 555],
+      "size": [250, 86],
+      "explanation": "For --json, main prints the final payload with each output's stderr omitted, then returns payload.exit_code. Without --json, the callback renders text deltas labelled by invocation when multiple invocations are active, or prints JSONL lifecycle/output events; diagnostics go to stderr. These streaming callbacks happen during execution, not only after collection. Artifact/both result modes retain files; --save-artifacts promotes stdout to both.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2385, "end_line": 2444, "label": "Persistence choice and live event output"},
+        {"path": "runtime/cli.py", "line": 2482, "end_line": 2489, "label": "Final JSON and process return code"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "External child processes", "wraps": ["provider-processes"], "pad": 18}
+  ],
+  "connections": [
+    {"id": "cli-plan", "from": "review-cli", "to": "request-plan", "label": "resolve request", "variant": "emphasis"},
+    {"id": "plan-dispatch", "from": "request-plan", "to": "fanout", "label": "validated plan", "variant": "emphasis"},
+    {"id": "dispatch-workers", "from": "fanout", "to": "invocation-worker", "label": "submit each invocation", "variant": "emphasis"},
+    {"id": "worker-adapter", "from": "invocation-worker", "to": "shim-adapters", "label": "run / poll / cancel", "variant": "emphasis"},
+    {"id": "adapter-worker", "from": "shim-adapters", "to": "invocation-worker", "label": "log path + decode"},
+    {"id": "spawn-provider", "from": "shim-adapters", "to": "provider-processes", "label": "spawn CLI", "variant": "emphasis"},
+    {"id": "provider-logs", "from": "provider-processes", "to": "shim-adapters", "label": "stdout / stderr"},
+    {"id": "worker-results", "from": "invocation-worker", "to": "result-collection", "label": "one result per invocation", "variant": "emphasis"},
+    {"id": "return-payload", "from": "result-collection", "to": "cli-output", "label": "payload + exit code", "variant": "emphasis"},
+    {"id": "stream-deltas", "from": "invocation-worker", "to": "cli-output", "label": "live events", "fromSide": "bottom", "toSide": "right"}
+  ],
+  "cards": [
+    {"dot": "cyan", "title": "One request ≠ one merged answer", "items": ["Selected providers become invocation records; aliases can distinguish multiple models of one provider.", "Concurrent completion does not reorder outputs[]. Failure of one invocation can yield a partial task."]},
+    {"dot": "emerald", "title": "Local files, optional retention", "items": ["Adapters capture raw stdout/stderr; workers read and decode logs, emit live deltas and write individual Markdown answers.", "stdout-only: temporary files cleaned up. artifact/both: retain invocation files, result.md and run.json."]},
+    {"dot": "amber", "title": "Scope & evidence limits", "items": ["This is the default CLI/built-in shim path. ACP/custom transports and opt-in chain, debate and synthesis are not expanded.", "Read-only is a configurable permission preset, not a universal isolation guarantee. Provider internals and remote model topology are unknown here."]}
+  ]
+}

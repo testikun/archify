@@ -1,0 +1,139 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "association-candidate",
+  "project_id": "association",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "cfb70579633bcb6c1bf47264195b3556015a1691b59d9f5368b3b01ae0bacfdb",
+    "substantive_sha256": "d748fff76986c3b53ad1860f261a436edf628dff7e01978d080c45a1ba2981d7"
+  },
+  "session": {
+    "id": "01a1a485-4c4f-74e0-94c6-7840ba601a30",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:07:25.542Z",
+        "pid": 2592,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/shared-opportunity-identifiers.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/candidate.json",
+        "sha256": "c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4",
+        "snapshot": "snapshots/c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/shared-opportunity-identifiers.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/shared-opportunity-identifiers.delivery.json"
+    ],
+    "screenshots": [
+      "captures/association-candidate/fullpage.light.png",
+      "captures/association-candidate/directions.light.png",
+      "captures/association-candidate/export.dark.png",
+      "captures/association-candidate/export.light.png",
+      "captures/association-candidate/directions.dark.png",
+      "captures/association-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review against the frozen synthetic BUSINESS.md brief, initial/final JSON, native screenshots, exports and Route/Reach observations; author-side inspection, not an official real-project case.",
+    "findings": [
+      "The three-node graph matches [BUSINESS.md](runs/association-candidate/workspace/project/BUSINESS.md): CRM and Project Management share an identifier with no claimed message/dependency, and each independently publishes its own summary to Reporting. No extra system, path, protocol or source link is invented.",
+      "The correspondence is one direction:none dashed relationship. Its explicit legend says the dash/no-arrow combination denotes identifier correspondence rather than communication; the two real reporting paths remain solid directed arrows. This is an instance-specific legend, not a universal claim that every dashed line is an association.",
+      "First and final submitted JSON are identical and pass validation. There are no repair rounds; one guessed example-path command fails. The native light viewport and dark PNG export are readable, including both direction legend entries; exports retain the same relationship meanings.",
+      "Reverse structural Route and Reach find the opposite endpoint, retain one identity and create no route-flow overlay in Live mode. The association itself has neither marker-start nor marker-end. Base replay rejects the new direction/legend fields as unsupported; candidate replay succeeds without altering the input. This supports the requested new capability, not a real-project quality or speed claim."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 0,
+    "tool_calls": 10,
+    "usage": {
+      "input_tokens": 447981,
+      "cached_input_tokens": 424960,
+      "output_tokens": 3130,
+      "reasoning_output_tokens": 590,
+      "uncached_input_tokens": 23021
+    },
+    "first_draft_semantics": "correct: first and final submitted bytes are identical and reviewed against the brief",
+    "first_draft_visual": "readable: first and final submitted bytes are identical and reviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T03:06:01.442942+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:08:12.422049+00:00",
+    "wall_seconds": 130.9780359590004,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 84.071884,
+    "time_to_first_cli_seconds": 84.099058
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

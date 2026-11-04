@@ -1,0 +1,101 @@
+{
+  "run_id": "distinct-messages-base",
+  "project_id": "distinct-messages",
+  "arm": "base",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 100.16879150000022,
+  "usage": {
+    "input_tokens": 349170,
+    "cached_input_tokens": 309888,
+    "output_tokens": 2492,
+    "reasoning_output_tokens": 537,
+    "uncached_input_tokens": 39282
+  },
+  "time_to_first_json_seconds_descriptive_only": 57.984479,
+  "time_to_first_cli_seconds_descriptive_only": 58.016549,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 10,
+  "failed_tool_commands": 1,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-04T03:16:43.443Z",
+      "pid": 6712,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/purchase-orders.json",
+        "output/purchase-orders.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.json",
+      "sha256": "bb1f19f78f3e95278e6f6d119b80a24dc65b34537d31f53cff98e0d7f4b3fdc9",
+      "snapshot": "snapshots/bb1f19f78f3e95278e6f6d119b80a24dc65b34537d31f53cff98e0d7f4b3fdc9.json"
+    },
+    {
+      "at": "2026-11-04T03:17:10.797Z",
+      "pid": 6976,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/purchase-orders.json",
+        "output/purchase-orders.html",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.json",
+      "sha256": "149d25b73c9f84aeea303df372db32236e349dd7bed3ffb168d85b9252a33253",
+      "snapshot": "snapshots/149d25b73c9f84aeea303df372db32236e349dd7bed3ffb168d85b9252a33253.json"
+    }
+  ],
+  "first_json": "snapshots/bb1f19f78f3e95278e6f6d119b80a24dc65b34537d31f53cff98e0d7f4b3fdc9.json",
+  "first_submitted_json": "snapshots/bb1f19f78f3e95278e6f6d119b80a24dc65b34537d31f53cff98e0d7f4b3fdc9.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.json",
+  "final_json_sha256": "149d25b73c9f84aeea303df372db32236e349dd7bed3ffb168d85b9252a33253",
+  "html": [
+    "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 3,
+    "both": 0,
+    "none": 0
+  },
+  "source_status": null,
+  "source_commit_after": null,
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

@@ -1,0 +1,528 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1160,
+    934
+  ],
+  "components": [
+    {
+      "id": "local-inputs",
+      "type": "database",
+      "label": "Installed Skills + evidence",
+      "x": 40,
+      "y": 90,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        40,
+        90
+      ]
+    },
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "Scan + Report",
+      "x": 40,
+      "y": 310,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        40,
+        310
+      ]
+    },
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Agent / human caller",
+      "x": 420,
+      "y": 310,
+      "width": 200,
+      "height": 76,
+      "pos": [
+        420,
+        310
+      ]
+    },
+    {
+      "id": "planner",
+      "type": "backend",
+      "label": "Plan preparation",
+      "x": 820,
+      "y": 310,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        820,
+        310
+      ]
+    },
+    {
+      "id": "state",
+      "type": "database",
+      "label": "SQLite StateStore",
+      "x": 820,
+      "y": 90,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        820,
+        90
+      ]
+    },
+    {
+      "id": "execution-gates",
+      "type": "security",
+      "label": "Apply / Undo gates",
+      "x": 820,
+      "y": 560,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        820,
+        560
+      ]
+    },
+    {
+      "id": "change-engine",
+      "type": "backend",
+      "label": "Reversible change engine",
+      "x": 420,
+      "y": 560,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        420,
+        560
+      ]
+    },
+    {
+      "id": "anchored-fs",
+      "type": "security",
+      "label": "AnchoredFs",
+      "x": 40,
+      "y": 560,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        40,
+        560
+      ]
+    },
+    {
+      "id": "managed-targets",
+      "type": "database",
+      "label": "Approved change targets",
+      "x": 40,
+      "y": 790,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        40,
+        790
+      ]
+    },
+    {
+      "id": "journals",
+      "type": "database",
+      "label": "Durable recovery artifacts",
+      "x": 420,
+      "y": 790,
+      "width": 220,
+      "height": 76,
+      "pos": [
+        420,
+        790
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "inspection",
+      "to": "local-inputs",
+      "label": "read roots + evidence",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          143,
+          310
+        ],
+        [
+          143,
+          166
+        ]
+      ],
+      "labelAt": [
+        82,
+        241
+      ]
+    },
+    {
+      "from": "inspection",
+      "to": "state",
+      "label": "save Snapshot / Findings",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          157,
+          310
+        ],
+        [
+          157,
+          286
+        ],
+        [
+          796,
+          286
+        ],
+        [
+          796,
+          128
+        ],
+        [
+          820,
+          128
+        ]
+      ],
+      "labelAt": [
+        477,
+        276
+      ]
+    },
+    {
+      "from": "inspection",
+      "to": "caller",
+      "label": "bounded facts",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          348
+        ],
+        [
+          420,
+          348
+        ]
+      ],
+      "labelAt": [
+        340,
+        338
+      ]
+    },
+    {
+      "from": "caller",
+      "to": "planner",
+      "label": "decision JSON",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          620,
+          348
+        ],
+        [
+          820,
+          348
+        ]
+      ],
+      "labelAt": [
+        720,
+        338
+      ]
+    },
+    {
+      "from": "planner",
+      "to": "state",
+      "label": "read / save Plan",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          930,
+          310
+        ],
+        [
+          930,
+          166
+        ]
+      ],
+      "labelAt": [
+        930,
+        300
+      ]
+    },
+    {
+      "from": "planner",
+      "to": "execution-gates",
+      "label": "explicit apply ID",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          930,
+          386
+        ],
+        [
+          930,
+          560
+        ]
+      ],
+      "labelAt": [
+        878,
+        476
+      ]
+    },
+    {
+      "from": "execution-gates",
+      "to": "state",
+      "label": "load / finalize state",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1040,
+          598
+        ],
+        [
+          1064,
+          598
+        ],
+        [
+          1064,
+          128
+        ],
+        [
+          1040,
+          128
+        ]
+      ],
+      "labelAt": [
+        1003,
+        484
+      ]
+    },
+    {
+      "from": "execution-gates",
+      "to": "change-engine",
+      "label": "validated Plan / Receipt",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          820,
+          598
+        ],
+        [
+          640,
+          598
+        ]
+      ],
+      "labelAt": [
+        730,
+        588
+      ]
+    },
+    {
+      "from": "change-engine",
+      "to": "anchored-fs",
+      "label": "execute / compensate",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          420,
+          589.95
+        ],
+        [
+          260,
+          589.95
+        ]
+      ],
+      "labelAt": [
+        340,
+        580
+      ]
+    },
+    {
+      "from": "anchored-fs",
+      "to": "managed-targets",
+      "label": "checked mutations",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          150,
+          636
+        ],
+        [
+          150,
+          790
+        ]
+      ],
+      "labelAt": [
+        98,
+        716
+      ]
+    },
+    {
+      "from": "anchored-fs",
+      "to": "journals",
+      "label": "atomic journal writes",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          605
+        ],
+        [
+          340,
+          605
+        ],
+        [
+          340,
+          828
+        ],
+        [
+          420,
+          828
+        ]
+      ],
+      "labelAt": [
+        340,
+        707
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "read roots + evidence",
+      "x": 26,
+      "y": 231,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        82,
+        241
+      ]
+    },
+    {
+      "text": "save Snapshot / Findings",
+      "x": 414,
+      "y": 266,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        477,
+        276
+      ]
+    },
+    {
+      "text": "bounded facts",
+      "x": 304,
+      "y": 328,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        340,
+        338
+      ]
+    },
+    {
+      "text": "decision JSON",
+      "x": 684,
+      "y": 328,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        720,
+        338
+      ]
+    },
+    {
+      "text": "read / save Plan",
+      "x": 887,
+      "y": 290,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        930,
+        300
+      ]
+    },
+    {
+      "text": "explicit apply ID",
+      "x": 832,
+      "y": 466,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        878,
+        476
+      ]
+    },
+    {
+      "text": "load / finalize state",
+      "x": 947,
+      "y": 474,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        1003,
+        484
+      ]
+    },
+    {
+      "text": "validated Plan / Receipt",
+      "x": 667,
+      "y": 578,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        730,
+        588
+      ]
+    },
+    {
+      "text": "execute / compensate",
+      "x": 287,
+      "y": 570,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        340,
+        580
+      ]
+    },
+    {
+      "text": "checked mutations",
+      "x": 52,
+      "y": 706,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        98,
+        716
+      ]
+    },
+    {
+      "text": "atomic journal writes",
+      "x": 285,
+      "y": 697,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        340,
+        707
+      ]
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "run_id": "openpi-base",
+  "project_id": "openpi",
+  "arm": "base",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 414.29252825000003,
+  "usage": {
+    "input_tokens": 1984132,
+    "cached_input_tokens": 1910016,
+    "output_tokens": 9050,
+    "reasoning_output_tokens": 1956,
+    "uncached_input_tokens": 74116
+  },
+  "time_to_first_json_seconds_descriptive_only": 222.459157,
+  "time_to_first_cli_seconds_descriptive_only": 222.475887,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 25,
+  "failed_tool_commands": 0,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 8,
+  "repair_rounds": 3,
+  "attempts": [
+    {
+      "at": "2026-11-04T07:33:10.688Z",
+      "pid": 69449,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagents.json",
+        "output/openpi-subagents.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+      "sha256": "d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5",
+      "snapshot": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json"
+    },
+    {
+      "at": "2026-11-04T07:34:21.462Z",
+      "pid": 70239,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagents.json",
+        "output/openpi-subagents.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-1",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+      "sha256": "90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192",
+      "snapshot": "snapshots/90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192.json"
+    },
+    {
+      "at": "2026-11-04T07:35:03.433Z",
+      "pid": 70957,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagents.json",
+        "output/openpi-subagents.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+      "sha256": "904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7",
+      "snapshot": "snapshots/904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7.json"
+    },
+    {
+      "at": "2026-11-04T07:35:31.050Z",
+      "pid": 71305,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagents.json",
+        "output/openpi-subagents.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-restored",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+      "sha256": "45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6",
+      "snapshot": "snapshots/45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6.json"
+    }
+  ],
+  "first_json": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json",
+  "first_submitted_json": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+  "final_json_sha256": "45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6",
+  "html": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 10,
+    "both": 0,
+    "none": 0
+  },
+  "label_arrow_count": 0,
+  "source_status": "",
+  "source_commit_after": "677b4959108976b99fb63fb5029198b04aa51cb5",
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

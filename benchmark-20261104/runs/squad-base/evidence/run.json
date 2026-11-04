@@ -1,0 +1,137 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "squad-base",
+  "project_id": "squad",
+  "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "c940f9fd408b2fbd770a01f8314da870059523ec8a15b0e3c5587c27ab18137b",
+    "substantive_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+  },
+  "session": {
+    "id": "01a1a471-a47a-7140-85cb-cec8dc9357f0",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/9b773aad9bced1274a82020719b63048f3602794511cf180a04d2bf2f2dbd935.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:48:49.947Z",
+        "pid": 95509,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/candidate.json",
+        "sha256": "9b773aad9bced1274a82020719b63048f3602794511cf180a04d2bf2f2dbd935",
+        "snapshot": "snapshots/9b773aad9bced1274a82020719b63048f3602794511cf180a04d2bf2f2dbd935.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/squad-coordination.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/squad-coordination.delivery.json"
+    ],
+    "screenshots": [
+      "captures/squad-base/fullpage.light.png",
+      "captures/squad-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final/only submitted JSON, pinned source and native 1440x900/full-page screenshots; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Seven components distinguish manager and worker callers, the CLI, role prompts, session/wait files, Store and SQLite state. All six relationships are directed calls, reads or file operations. Returned values are summarized in explanations and call labels; the diagram does not assert that the same commands are invoked in reverse.",
+      "The graph correctly identifies persisted tasks and mailboxes as the coordination mechanism, without inventing a manager daemon or broker. Task acknowledgment, mailbox receive and task completion remain distinct; completion does not automatically send a report. The explanations correctly limit role authorization, token compatibility and lease enforcement.",
+      "The first and only submitted JSON validates and is the delivered final JSON. There are no changed submitted revisions or failed shell commands. The native viewport and taller full-page view are readable; file symbols are explicitly labeled as local prompt/session files. No clipping or boundary-title masking was observed.",
+      "All six relationships use legacy forward behavior. Fixed-input replay gives identical layout and canonical SVG on both versions. This supports compatibility for this input and provides the base observation for the candidate's natural both-adoption semantic error; it is not a repeatability or speed claim."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 0,
+    "tool_calls": 21,
+    "usage": {
+      "input_tokens": 1406275,
+      "cached_input_tokens": 1354880,
+      "output_tokens": 9133,
+      "reasoning_output_tokens": 1871,
+      "uncached_input_tokens": 51395
+    },
+    "first_draft_semantics": "correct: first and final submitted bytes are identical and reviewed",
+    "first_draft_visual": "readable: first and final submitted bytes are identical and reviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:44:33.435727+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:50:35.831515+00:00",
+    "wall_seconds": 362.3940486669999,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 241.248668,
+    "time_to_first_cli_seconds": 256.511273
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

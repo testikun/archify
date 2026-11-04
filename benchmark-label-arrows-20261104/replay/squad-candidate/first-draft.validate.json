@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence/snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+  "candidate": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence/snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+    "sha256": "df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534",
+    "bytes": 8803
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence/snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/project",
+      "--candidate-sha256",
+      "df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 39.5,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 6.763636363636364,
+      "maxBends": 1,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 146,
+      "minInteriorSegmentPx": null,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 65,
+      "emptyTopRatio": 0.091,
+      "occupiedTop": 65,
+      "viewBoxTop": 0,
+      "canvasHeight": 718,
+      "typicalNodeHeight": 95,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": false,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "manager-commands",
+        "from": "manager-agent",
+        "to": "squad-cli"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 6.763636363636364,
+      "semanticTextCount": 22
+    },
+    "issues": []
+  }
+}

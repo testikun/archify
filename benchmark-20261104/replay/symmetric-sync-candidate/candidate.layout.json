@@ -1,0 +1,162 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    750,
+    458
+  ],
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "x": 40,
+      "y": 40,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "x": 500,
+      "y": 40,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        500,
+        40
+      ]
+    },
+    {
+      "id": "audit-storage",
+      "type": "database",
+      "label": "Audit Storage",
+      "x": 270,
+      "y": 270,
+      "width": 210,
+      "height": 76,
+      "pos": [
+        270,
+        270
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "project-management",
+      "to": "erp",
+      "label": "Project status synchronization",
+      "variant": "default",
+      "direction": "both",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          71
+        ],
+        [
+          500,
+          71
+        ]
+      ],
+      "labelAt": [
+        375,
+        61
+      ]
+    },
+    {
+      "from": "project-management",
+      "to": "audit-storage",
+      "label": "Audit summary",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          100
+        ],
+        [
+          286,
+          100
+        ],
+        [
+          286,
+          270
+        ]
+      ],
+      "labelAt": [
+        286,
+        175
+      ]
+    },
+    {
+      "from": "erp",
+      "to": "audit-storage",
+      "label": "Audit summary",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          500,
+          100
+        ],
+        [
+          464,
+          100
+        ],
+        [
+          464,
+          270
+        ]
+      ],
+      "labelAt": [
+        464,
+        175
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Project status synchronization",
+      "x": 298,
+      "y": 51,
+      "width": 154,
+      "height": 14,
+      "labelAt": [
+        375,
+        61
+      ]
+    },
+    {
+      "text": "Audit summary",
+      "x": 250,
+      "y": 165,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        286,
+        175
+      ]
+    },
+    {
+      "text": "Audit summary",
+      "x": 428,
+      "y": 165,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        464,
+        175
+      ]
+    }
+  ]
+}

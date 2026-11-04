@@ -1,0 +1,220 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/architecture-delta.test.mjs test/gallery.test.mjs
+
+Repository tests: 2 files, concurrency 4
+TAP version 13
+# Subtest: architecture compare classifies authored facts separately from geometry and presentation
+ok 1 - architecture compare classifies authored facts separately from geometry and presentation
+  ---
+  duration_ms: 2.563542
+  ...
+# Subtest: legend-only changes are presentation changes and never topology changes
+ok 2 - legend-only changes are presentation changes and never topology changes
+  ---
+  duration_ms: 0.568
+  ...
+# Subtest: canonical architecture ignores formatting, entity order, and set-like order
+ok 3 - canonical architecture ignores formatting, entity order, and set-like order
+  ---
+  duration_ms: 0.364708
+  ...
+# Subtest: compare reports brand-only changes in the receipt and exact review target
+ok 4 - compare reports brand-only changes in the receipt and exact review target
+  ---
+  duration_ms: 2424.263958
+  ...
+# Subtest: compare reports icon-only changes in the receipt and exact review target
+ok 5 - compare reports icon-only changes in the receipt and exact review target
+  ---
+  duration_ms: 3575.116083
+  ...
+# Subtest: compare reports locale-only changes as presentation changes
+ok 6 - compare reports locale-only changes as presentation changes
+  ---
+  duration_ms: 859.700417
+  ...
+# Subtest: change navigator order is exact-ID based, complete, unique, and stable
+ok 7 - change navigator order is exact-ID based, complete, unique, and stable
+  ---
+  duration_ms: 0.814584
+  ...
+# Subtest: exact identity fails closed instead of guessing relationships or unrelated systems
+ok 8 - exact identity fails closed instead of guessing relationships or unrelated systems
+  ---
+  duration_ms: 0.477042
+  ...
+# Subtest: evidence-only component changes keep an enabled exact review contract
+ok 9 - evidence-only component changes keep an enabled exact review contract
+  ---
+  duration_ms: 0.623292
+  ...
+# Subtest: mixed semantic and geometry component changes retain both exact forms
+ok 10 - mixed semantic and geometry component changes retain both exact forms
+  ---
+  duration_ms: 898.422041
+  ...
+# Subtest: mixed semantic and geometry relationship changes retain both exact routes
+ok 11 - mixed semantic and geometry relationship changes retain both exact routes
+  ---
+  duration_ms: 902.24225
+  ...
+# Subtest: baseline boundary title masks stay below current components and carry delta identity
+ok 12 - baseline boundary title masks stay below current components and carry delta identity
+  ---
+  duration_ms: 756.37575
+  ...
+# Subtest: same-label node id changes remain one removal plus one addition
+ok 13 - same-label node id changes remain one removal plus one addition
+  ---
+  duration_ms: 0.4865
+  ...
+# Subtest: repository mismatch fails and verified matching revisions remain evidence-bounded
+ok 14 - repository mismatch fails and verified matching revisions remain evidence-bounded
+  ---
+  duration_ms: 0.8395
+  ...
+# Subtest: provenance-only changes stay separate from graph changes and remain visible
+ok 15 - provenance-only changes stay separate from graph changes and remain visible
+  ---
+  duration_ms: 2.621375
+  ...
+# Subtest: legacy schema-v1 provenance receipts render a generic notice without inventing details
+ok 16 - legacy schema-v1 provenance receipts render a generic notice without inventing details
+  ---
+  duration_ms: 1.506375
+  ...
+# Subtest: repository location representation changes stay redacted in provenance output
+ok 17 - repository location representation changes stay redacted in provenance output
+  ---
+  duration_ms: 1.175875
+  ...
+# Subtest: public compare keeps a revision-only provenance change out of graph identities
+ok 18 - public compare keeps a revision-only provenance change out of graph identities
+  ---
+  duration_ms: 1301.009333
+  ...
+# Subtest: unchanged provenance preserves the ordinary empty graph state
+ok 19 - unchanged provenance preserves the ordinary empty graph state
+  ---
+  duration_ms: 1.4115
+  ...
+# Subtest: portable compare retains link settings and uses the same repository identity rules
+ok 20 - portable compare retains link settings and uses the same repository identity rules
+  ---
+  duration_ms: 1.432458
+  ...
+# Subtest: portable compare preserves literal SCP paths and rejects different Git locations
+ok 21 - portable compare preserves literal SCP paths and rejects different Git locations
+  ---
+  duration_ms: 1.260458
+  ...
+# Subtest: compare CLI writes a deterministic three-state artifact and complete sidecar receipt
+ok 22 - compare CLI writes a deterministic three-state artifact and complete sidecar receipt
+  ---
+  duration_ms: 2879.626709
+  ...
+# Subtest: compare cleanup preserves an unexpected claimant in private staging
+ok 23 - compare cleanup preserves an unexpected claimant in private staging
+  ---
+  duration_ms: 2002.025875
+  ...
+# Subtest: compare default receipts preserve distinct HTML extension spellings only when the filesystem does
+ok 24 - compare default receipts preserve distinct HTML extension spellings only when the filesystem does
+  ---
+  duration_ms: 1779.811583
+  ...
+# Subtest: compare prepares a missing nested parent before deriving its default receipt
+ok 25 - compare prepares a missing nested parent before deriving its default receipt
+  ---
+  duration_ms: 852.975708
+  ...
+# Subtest: compare validates an explicit receipt directory before preparing a missing output parent
+ok 26 - compare validates an explicit receipt directory before preparing a missing output parent
+  ---
+  duration_ms: 46.291959
+  ...
+# Subtest: compare rejects an indeterminate default receipt namespace before creating outputs
+ok 27 - compare rejects an indeterminate default receipt namespace before creating outputs
+  ---
+  duration_ms: 57.706917
+  ...
+# Subtest: checked-in Checkout compare artifact is reproducible from its authoritative inputs
+ok 28 - checked-in Checkout compare artifact is reproducible from its authoritative inputs
+  ---
+  duration_ms: 896.106541
+  ...
+# Subtest: compare artifact exports standalone SVG with a UTF-8 XML declaration
+ok 29 - compare artifact exports standalone SVG with a UTF-8 XML declaration
+  ---
+  duration_ms: 872.735333
+  ...
+# Subtest: artifact validation fails closed on missing, duplicate, or self-blessed review identity
+ok 30 - artifact validation fails closed on missing, duplicate, or self-blessed review identity
+  ---
+  duration_ms: 1065.318
+  ...
+# Subtest: formatting-only input changes raw proof but not semantic hash or artifact bytes
+ok 31 - formatting-only input changes raw proof but not semantic hash or artifact bytes
+  ---
+  duration_ms: 1777.606083
+  ...
+# Subtest: compare failure preserves an existing trusted artifact
+ok 32 - compare failure preserves an existing trusted artifact
+  ---
+  duration_ms: 775.913708
+  ...
+# Subtest: compare validates raw snapshots before canonicalization can discard invalid fields
+ok 33 - compare validates raw snapshots before canonicalization can discard invalid fields
+  ---
+  duration_ms: 130.720458
+  ...
+# Subtest: compare rejects either unsupported target before staging a trusted pair
+ok 34 - compare rejects either unsupported target before staging a trusted pair
+  ---
+  duration_ms: 50.626042
+  ...
+# Subtest: compare validates captured base bytes when the original becomes invalid
+ok 35 - compare validates captured base bytes when the original becomes invalid
+  ---
+  duration_ms: 866.960666
+  ...
+# Subtest: compare validates captured base bytes when the original becomes valid
+ok 36 - compare validates captured base bytes when the original becomes valid
+  ---
+  duration_ms: 135.585542
+  ...
+# Subtest: compare validates captured head bytes when the original becomes invalid
+ok 37 - compare validates captured head bytes when the original becomes invalid
+  ---
+  duration_ms: 878.959375
+  ...
+# Subtest: compare validates captured head bytes when the original becomes valid
+ok 38 - compare validates captured head bytes when the original becomes valid
+  ---
+  duration_ms: 309.158167
+  ...
+# Subtest: compare reports a base snapshot write failure as a preparation error
+ok 39 - compare reports a base snapshot write failure as a preparation error
+  ---
+  duration_ms: 60.370958
+  ...
+# Subtest: compare reports a head snapshot write failure as a preparation error
+ok 40 - compare reports a head snapshot write failure as a preparation error
+  ---
+  duration_ms: 63.661666
+  ...
+# Subtest: generated proof gallery matches its sources, receipts, and checked-in artifacts
+ok 41 - generated proof gallery matches its sources, receipts, and checked-in artifacts
+  ---
+  duration_ms: 3070.285584
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 26296.142833

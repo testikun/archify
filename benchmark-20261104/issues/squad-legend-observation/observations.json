@@ -1,0 +1,549 @@
+{
+  "nativeMetrics": {
+    "pageComposition": {
+      "bodyPaddingPx": 12,
+      "headerPx": 78,
+      "diagramChromePx": 78,
+      "svgPx": 720,
+      "cardsPx": 0,
+      "viewBoxHeight": 720
+    },
+    "innerWidth": 1440,
+    "innerHeight": 900,
+    "scrollWidth": 1440,
+    "scrollHeight": 900,
+    "resolvedTheme": "light",
+    "readerLayout": "adaptive",
+    "readerOverflow": null,
+    "readerFit": "intrinsic-height",
+    "diagramType": null,
+    "documentScrollUnclipped": true,
+    "readerWidth": 1140,
+    "diagramWidth": 1110,
+    "viewBoxWidth": 1110,
+    "workflowLanes": [],
+    "minimumProjectedNodeTextPx": 8,
+    "minimumProjectedNonEdgeTextPx": 9,
+    "minimumProjectedEdgeTextPx": 8,
+    "minimumProjectedNodeText": "create / list / send",
+    "minimumProjectedNodeTextDetail": "edge",
+    "minimumProjectedNodeTextOwner": {
+      "kind": "edge",
+      "id": "manager-cli",
+      "from": "manager",
+      "to": "cli"
+    },
+    "hasLegend": true,
+    "hasNavigationDock": true,
+    "legendDockIntersectionArea": 0,
+    "dockStageIntersectionArea": 0,
+    "dockStageGap": 10,
+    "viewerChromeRequiredGap": 10,
+    "viewerChromeReserve": 54,
+    "viewerChromeActive": true
+  },
+  "records": [
+    {
+      "name": "01-native-inspect",
+      "state": {
+        "legend": {
+          "x": 200,
+          "y": 742.6875,
+          "width": 813,
+          "height": 57,
+          "top": 742.6875,
+          "right": 1013,
+          "bottom": 799.6875,
+          "left": 200
+        },
+        "directed": {
+          "x": 849,
+          "y": 764.6875,
+          "width": 164,
+          "height": 13,
+          "top": 764.6875,
+          "right": 1013,
+          "bottom": 777.6875,
+          "left": 849
+        },
+        "dock": {
+          "x": 914.03125,
+          "y": 822.6875,
+          "width": 358.96875,
+          "height": 42,
+          "top": 822.6875,
+          "right": 1273,
+          "bottom": 864.6875,
+          "left": 914.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 165,
+          "y": 92.6875,
+          "left": 165,
+          "top": 92.6875,
+          "right": 1275,
+          "bottom": 812.6875,
+          "width": 1110,
+          "height": 720
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2944.01,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive",
+          "navStageRail": "true"
+        }
+      }
+    },
+    {
+      "name": "02-preset-click",
+      "state": {
+        "legend": {
+          "x": 200,
+          "y": 742.6875,
+          "width": 813,
+          "height": 57,
+          "top": 742.6875,
+          "right": 1013,
+          "bottom": 799.6875,
+          "left": 200
+        },
+        "directed": {
+          "x": 849,
+          "y": 764.6875,
+          "width": 164,
+          "height": 13,
+          "top": 764.6875,
+          "right": 1013,
+          "bottom": 777.6875,
+          "left": 849
+        },
+        "dock": {
+          "x": 914.03125,
+          "y": 822.6875,
+          "width": 358.96875,
+          "height": 42,
+          "top": 822.6875,
+          "right": 1273,
+          "bottom": 864.6875,
+          "left": 914.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 165,
+          "y": 92.6875,
+          "left": 165,
+          "top": 92.6875,
+          "right": 1275,
+          "bottom": 812.6875,
+          "width": 1110,
+          "height": 720
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2944.01,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive",
+          "navStageRail": "true"
+        }
+      }
+    },
+    {
+      "name": "03-motion-still",
+      "state": {
+        "legend": {
+          "x": 200,
+          "y": 742.6875,
+          "width": 813,
+          "height": 57,
+          "top": 742.6875,
+          "right": 1013,
+          "bottom": 799.6875,
+          "left": 200
+        },
+        "directed": {
+          "x": 849,
+          "y": 764.6875,
+          "width": 164,
+          "height": 13,
+          "top": 764.6875,
+          "right": 1013,
+          "bottom": 777.6875,
+          "left": 849
+        },
+        "dock": {
+          "x": 914.03125,
+          "y": 822.6875,
+          "width": 358.96875,
+          "height": 42,
+          "top": 822.6875,
+          "right": 1273,
+          "bottom": 864.6875,
+          "left": 914.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 165,
+          "y": 92.6875,
+          "left": 165,
+          "top": 92.6875,
+          "right": 1275,
+          "bottom": 812.6875,
+          "width": 1110,
+          "height": 720
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2944.01,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive",
+          "navStageRail": "true"
+        }
+      }
+    },
+    {
+      "name": "04-settled",
+      "state": {
+        "legend": {
+          "x": 200,
+          "y": 742.6875,
+          "width": 813,
+          "height": 57,
+          "top": 742.6875,
+          "right": 1013,
+          "bottom": 799.6875,
+          "left": 200
+        },
+        "directed": {
+          "x": 849,
+          "y": 764.6875,
+          "width": 164,
+          "height": 13,
+          "top": 764.6875,
+          "right": 1013,
+          "bottom": 777.6875,
+          "left": 849
+        },
+        "dock": {
+          "x": 914.03125,
+          "y": 822.6875,
+          "width": 358.96875,
+          "height": 42,
+          "top": 822.6875,
+          "right": 1273,
+          "bottom": 864.6875,
+          "left": 914.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 165,
+          "y": 92.6875,
+          "left": 165,
+          "top": 92.6875,
+          "right": 1275,
+          "bottom": 812.6875,
+          "width": 1110,
+          "height": 720
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2944.01,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive",
+          "navStageRail": "true"
+        }
+      }
+    },
+    {
+      "name": "06-after-clip",
+      "state": {
+        "legend": {
+          "x": 189.69705200195312,
+          "y": 781.8038940429688,
+          "width": 829.01806640625,
+          "height": 57.83221435546875,
+          "top": 781.8038940429688,
+          "right": 1018.7151184082031,
+          "bottom": 839.6361083984375,
+          "left": 189.69705200195312
+        },
+        "directed": {
+          "x": 851.555908203125,
+          "y": 804.2001953125,
+          "width": 167.1591796875,
+          "height": 13,
+          "top": 804.2001953125,
+          "right": 1018.715087890625,
+          "bottom": 817.2001953125,
+          "left": 851.555908203125
+        },
+        "dock": {
+          "x": 925.03125,
+          "y": 808.953125,
+          "width": 358.96875,
+          "height": 42,
+          "top": 808.953125,
+          "right": 1284,
+          "bottom": 850.953125,
+          "left": 925.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 154,
+          "y": 118.6875,
+          "left": 154,
+          "top": 118.6875,
+          "right": 1286,
+          "bottom": 852.953125,
+          "width": 1132,
+          "height": 734.265625
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2944.01,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive"
+        }
+      }
+    },
+    {
+      "name": "07-after-clip-settled",
+      "state": {
+        "legend": {
+          "x": 200,
+          "y": 742.6875,
+          "width": 813,
+          "height": 57,
+          "top": 742.6875,
+          "right": 1013,
+          "bottom": 799.6875,
+          "left": 200
+        },
+        "directed": {
+          "x": 849,
+          "y": 764.6875,
+          "width": 164,
+          "height": 13,
+          "top": 764.6875,
+          "right": 1013,
+          "bottom": 777.6875,
+          "left": 849
+        },
+        "dock": {
+          "x": 914.03125,
+          "y": 822.6875,
+          "width": 358.96875,
+          "height": 42,
+          "top": 822.6875,
+          "right": 1273,
+          "bottom": 864.6875,
+          "left": 914.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 165,
+          "y": 92.6875,
+          "left": 165,
+          "top": 92.6875,
+          "right": 1275,
+          "bottom": 812.6875,
+          "width": 1110,
+          "height": 720
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2874.5,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive",
+          "navStageRail": "true"
+        }
+      }
+    },
+    {
+      "name": "09-after-second-clip",
+      "state": {
+        "legend": {
+          "x": 189.69705200195312,
+          "y": 781.8038940429688,
+          "width": 829.01806640625,
+          "height": 57.83221435546875,
+          "top": 781.8038940429688,
+          "right": 1018.7151184082031,
+          "bottom": 839.6361083984375,
+          "left": 189.69705200195312
+        },
+        "directed": {
+          "x": 851.555908203125,
+          "y": 804.2001953125,
+          "width": 167.1591796875,
+          "height": 13,
+          "top": 804.2001953125,
+          "right": 1018.715087890625,
+          "bottom": 817.2001953125,
+          "left": 851.555908203125
+        },
+        "dock": {
+          "x": 925.03125,
+          "y": 808.953125,
+          "width": 358.96875,
+          "height": 42,
+          "top": 808.953125,
+          "right": 1284,
+          "bottom": 850.953125,
+          "left": 925.03125
+        },
+        "restingDock": {},
+        "stage": {
+          "x": 154,
+          "y": 118.6875,
+          "left": 154,
+          "top": 118.6875,
+          "right": 1286,
+          "bottom": 852.953125,
+          "width": 1132,
+          "height": 734.265625
+        },
+        "receipt": {
+          "eligible": true,
+          "active": true,
+          "reserve": 54,
+          "gap": 10,
+          "baselineStageGap": -44,
+          "stageGap": 10,
+          "stageIntersectionArea": 0,
+          "baselineIntersectionArea": 2874.5,
+          "intersectionArea": 0
+        },
+        "scrollX": 0,
+        "scrollY": 0,
+        "innerWidth": 1440,
+        "innerHeight": 900,
+        "html": {
+          "theme": "light",
+          "preset": "classic",
+          "motionCapable": "true",
+          "motion": "still",
+          "ambientMotion": "paused",
+          "ambientEntry": "settled",
+          "readerRail": "bottom",
+          "readerLayout": "adaptive"
+        }
+      }
+    }
+  ]
+}

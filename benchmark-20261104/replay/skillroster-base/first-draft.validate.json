@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/evidence/snapshots/f8c5b6da93a33b1ff2000dc2bbf0efd2291d37a9b3ccfd803884225c96fd8a99.json",
+  "candidate": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/evidence/snapshots/f8c5b6da93a33b1ff2000dc2bbf0efd2291d37a9b3ccfd803884225c96fd8a99.json",
+    "sha256": "f8c5b6da93a33b1ff2000dc2bbf0efd2291d37a9b3ccfd803884225c96fd8a99",
+    "bytes": 11842
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/evidence/snapshots/f8c5b6da93a33b1ff2000dc2bbf0efd2291d37a9b3ccfd803884225c96fd8a99.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/project",
+      "--candidate-sha256",
+      "f8c5b6da93a33b1ff2000dc2bbf0efd2291d37a9b3ccfd803884225c96fd8a99",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 20,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 6.880841121495327,
+      "maxBends": 2,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 92.5,
+      "minInteriorSegmentPx": 215,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 16,
+      "emptyTopRatio": 0.019,
+      "occupiedTop": 16,
+      "viewBoxTop": 0,
+      "canvasHeight": 826,
+      "typicalNodeHeight": 82,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": false,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "boundary",
+        "id": null
+      },
+      "minimumSourceTextPx": 7.916666666666667,
+      "minimumProjectedTextPx": 6.880841121495327,
+      "semanticTextCount": 26
+    },
+    "issues": []
+  }
+}

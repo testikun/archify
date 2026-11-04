@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+    "sha256": "c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5",
+    "bytes": 8406
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.html",
+    "sha256": "cef8c37cf7c25b1e33b4b162e023fb19508441adbd0c1b518da0d6a580c51d2c",
+    "bytes": 880875
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1908,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

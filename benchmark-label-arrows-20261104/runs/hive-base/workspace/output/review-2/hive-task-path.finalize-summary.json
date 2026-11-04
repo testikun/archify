@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "sha256": "b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b",
+    "bytes": 9010
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html"
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 1 [760, 399] -> [760, 550] (label rect [713, 411, 130, 14]; minimum 4px) — if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 7,
+        "id": "worker-report",
+        "from": "worker",
+        "to": "control"
+      },
+      "evidence": {
+        "label": "4 · HTTP message / report",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 10,
+          "id": "team-visibility",
+          "from": "control",
+          "to": "team-ui"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "worker-report",
+            "from": "worker",
+            "to": "control",
+            "label": "4 · HTTP message / report",
+            "variant": "dashed",
+            "labelDy": 25
+          },
+          "relationIndex": 7,
+          "label": "4 · HTTP message / report",
+          "x": 712.5,
+          "y": 411,
+          "width": 130,
+          "height": 14,
+          "lx": 777.5,
+          "ly": 421
+        },
+        "from": [
+          760,
+          399
+        ],
+        "to": [
+          760,
+          550
+        ]
+      },
+      "supportedFixes": [
+        "if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 294,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "constraint": "Preserve unaffected semantics and geometry; apply each diagnostic's supportedFixes, or the fix its message names, and do not replace the whole candidate.",
+    "then": "finalize-once"
+  }
+}

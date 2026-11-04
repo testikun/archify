@@ -1,0 +1,102 @@
+{
+  "run_id": "shared-messages-base",
+  "project_id": "shared-messages",
+  "arm": "base",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 193.3690709170005,
+  "usage": {
+    "input_tokens": 580920,
+    "cached_input_tokens": 521216,
+    "output_tokens": 3489,
+    "reasoning_output_tokens": 647,
+    "uncached_input_tokens": 59704
+  },
+  "time_to_first_json_seconds_descriptive_only": 120.817902,
+  "time_to_first_cli_seconds_descriptive_only": 120.828615,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 12,
+  "failed_tool_commands": 2,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-04T08:09:27.308Z",
+      "pid": 84661,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/purchase-order.architecture.json",
+        "output/purchase-order.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+      "sha256": "0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa",
+      "snapshot": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json"
+    },
+    {
+      "at": "2026-11-04T08:09:50.239Z",
+      "pid": 84912,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/purchase-order.architecture.json",
+        "output/purchase-order.html",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+      "sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+      "snapshot": "snapshots/bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0.json"
+    }
+  ],
+  "first_json": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json",
+  "first_submitted_json": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+  "final_json_sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+  "html": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 3,
+    "both": 0,
+    "none": 0
+  },
+  "label_arrow_count": 0,
+  "source_status": null,
+  "source_commit_after": null,
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

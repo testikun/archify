@@ -1,0 +1,533 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1264,
+    593
+  ],
+  "components": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "x": 40,
+      "y": 65,
+      "width": 220,
+      "height": 90,
+      "pos": [
+        40,
+        65
+      ]
+    },
+    {
+      "id": "pty",
+      "type": "backend",
+      "label": "Terminal + PTY runtime",
+      "x": 465,
+      "y": 65,
+      "width": 255,
+      "height": 90,
+      "pos": [
+        465,
+        65
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "x": 945,
+      "y": 65,
+      "width": 255,
+      "height": 90,
+      "pos": [
+        945,
+        65
+      ]
+    },
+    {
+      "id": "team",
+      "type": "backend",
+      "label": "Team protocol + coordination",
+      "x": 465,
+      "y": 405,
+      "width": 255,
+      "height": 100,
+      "pos": [
+        465,
+        405
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "x": 945,
+      "y": 405,
+      "width": 255,
+      "height": 100,
+      "pos": [
+        945,
+        405
+      ]
+    },
+    {
+      "id": "sqlite",
+      "type": "database",
+      "label": "Local SQLite state",
+      "x": 40,
+      "y": 405,
+      "width": 240,
+      "height": 100,
+      "pos": [
+        40,
+        405
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Local Hive Node.js runtime",
+      "x": 441,
+      "y": 41,
+      "width": 303,
+      "height": 484,
+      "wraps": [
+        "pty",
+        "team"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Workspace CLI child processes",
+      "x": 921,
+      "y": 41,
+      "width": 303,
+      "height": 484,
+      "wraps": [
+        "orchestrator",
+        "worker"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "browser",
+      "to": "pty",
+      "label": "1 · WS input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          118.05
+        ],
+        [
+          465,
+          118.05
+        ]
+      ],
+      "labelAt": [
+        363,
+        138
+      ]
+    },
+    {
+      "from": "pty",
+      "to": "browser",
+      "label": "WS output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          465,
+          103
+        ],
+        [
+          260,
+          103
+        ]
+      ],
+      "labelAt": [
+        363,
+        93
+      ]
+    },
+    {
+      "from": "pty",
+      "to": "orchestrator",
+      "label": "Goal / report stdin",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          720,
+          89
+        ],
+        [
+          945,
+          89
+        ]
+      ],
+      "labelAt": [
+        833,
+        79
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "pty",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          945,
+          108.95
+        ],
+        [
+          752,
+          108.95
+        ],
+        [
+          752,
+          179
+        ],
+        [
+          607.55,
+          179
+        ],
+        [
+          607.55,
+          155
+        ]
+      ],
+      "labelAt": [
+        849,
+        129
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "team",
+      "label": "2 · HTTP team send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          945,
+          124
+        ],
+        [
+          904,
+          124
+        ],
+        [
+          904,
+          410
+        ],
+        [
+          760,
+          410
+        ],
+        [
+          760,
+          448
+        ],
+        [
+          720,
+          448
+        ]
+      ],
+      "labelAt": [
+        958,
+        270
+      ]
+    },
+    {
+      "from": "team",
+      "to": "pty",
+      "label": "Dispatch / status / report",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          592.5,
+          405
+        ],
+        [
+          592.5,
+          155
+        ]
+      ],
+      "labelAt": [
+        593,
+        395
+      ]
+    },
+    {
+      "from": "pty",
+      "to": "worker",
+      "label": "3 · Dispatch stdin",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          720,
+          115.95
+        ],
+        [
+          796.5999999999999,
+          115.95
+        ],
+        [
+          796.5999999999999,
+          439.95
+        ],
+        [
+          945,
+          439.95
+        ]
+      ],
+      "labelAt": [
+        742,
+        281
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "pty",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1072.5,
+          405
+        ],
+        [
+          1072.5,
+          255
+        ],
+        [
+          788.5999999999999,
+          255
+        ],
+        [
+          788.5999999999999,
+          131
+        ],
+        [
+          720,
+          131
+        ]
+      ],
+      "labelAt": [
+        1038,
+        333
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "team",
+      "label": "4 · HTTP message / report",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          945,
+          469
+        ],
+        [
+          720,
+          469
+        ]
+      ],
+      "labelAt": [
+        833,
+        459
+      ]
+    },
+    {
+      "from": "browser",
+      "to": "team",
+      "label": "GET reports / history",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          150,
+          155
+        ],
+        [
+          150,
+          402
+        ],
+        [
+          433,
+          402
+        ],
+        [
+          433,
+          448
+        ],
+        [
+          465,
+          448
+        ]
+      ],
+      "labelAt": [
+        292,
+        392
+      ]
+    },
+    {
+      "from": "team",
+      "to": "sqlite",
+      "label": "SQL read / write",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          465,
+          462
+        ],
+        [
+          280,
+          462
+        ]
+      ],
+      "labelAt": [
+        373,
+        452
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "1 · WS input",
+      "x": 329,
+      "y": 128,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        363,
+        138
+      ]
+    },
+    {
+      "text": "WS output",
+      "x": 336,
+      "y": 83,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        363,
+        93
+      ]
+    },
+    {
+      "text": "Goal / report stdin",
+      "x": 782,
+      "y": 69,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        833,
+        79
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 820,
+      "y": 119,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        849,
+        129
+      ]
+    },
+    {
+      "text": "2 · HTTP team send",
+      "x": 910,
+      "y": 260,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        958,
+        270
+      ]
+    },
+    {
+      "text": "Dispatch / status / report",
+      "x": 525,
+      "y": 385,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        593,
+        395
+      ]
+    },
+    {
+      "text": "3 · Dispatch stdin",
+      "x": 694,
+      "y": 271,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        742,
+        281
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 1009,
+      "y": 323,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1038,
+        333
+      ]
+    },
+    {
+      "text": "4 · HTTP message / report",
+      "x": 768,
+      "y": 449,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        833,
+        459
+      ]
+    },
+    {
+      "text": "GET reports / history",
+      "x": 236,
+      "y": 382,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        292,
+        392
+      ]
+    },
+    {
+      "text": "SQL read / write",
+      "x": 329,
+      "y": 442,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        373,
+        452
+      ]
+    }
+  ]
+}

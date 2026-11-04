@@ -1,0 +1,487 @@
+{
+  "relations": [
+    {
+      "edge": {
+        "id": "manager-cli",
+        "from": "manager",
+        "to": "cli",
+        "direction": "both",
+        "start": "url(#arrowhead-emphasis-start)",
+        "end": "url(#arrowhead-emphasis)"
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "cli",
+          "label": "squad CLI"
+        },
+        "target": {
+          "id": "manager",
+          "label": "Manager terminal"
+        },
+        "nodeIds": [
+          "cli",
+          "manager"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "direction": "both",
+            "label": "create / list / send"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "cli",
+          "label": "squad CLI"
+        },
+        "nodeIds": [
+          "cli",
+          "manager",
+          "worker",
+          "store",
+          "roles",
+          "coord-files",
+          "db"
+        ],
+        "depths": {
+          "cli": 0,
+          "manager": 1,
+          "worker": 1,
+          "store": 1,
+          "roles": 1,
+          "coord-files": 1,
+          "db": 2
+        },
+        "maxDepth": 2,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "label": "create / list / send",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "1",
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "label": "receive / ack / complete",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "2",
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "label": "calls + records",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "3",
+            "id": "cli-roles",
+            "from": "cli",
+            "to": "roles",
+            "label": "join: read prompt",
+            "depth": 1
+          },
+          {
+            "key": "4",
+            "id": "cli-files",
+            "from": "cli",
+            "to": "coord-files",
+            "label": "tokens + wait lock",
+            "depth": 1
+          },
+          {
+            "key": "5",
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "label": "SQL reads / writes",
+            "direction": "both",
+            "depth": 2
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    },
+    {
+      "edge": {
+        "id": "worker-cli",
+        "from": "worker",
+        "to": "cli",
+        "direction": "both",
+        "start": "url(#arrowhead-emphasis-start)",
+        "end": "url(#arrowhead-emphasis)"
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "cli",
+          "label": "squad CLI"
+        },
+        "target": {
+          "id": "worker",
+          "label": "Worker terminal"
+        },
+        "nodeIds": [
+          "cli",
+          "worker"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "1",
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "direction": "both",
+            "label": "receive / ack / complete"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "cli",
+          "label": "squad CLI"
+        },
+        "nodeIds": [
+          "cli",
+          "manager",
+          "worker",
+          "store",
+          "roles",
+          "coord-files",
+          "db"
+        ],
+        "depths": {
+          "cli": 0,
+          "manager": 1,
+          "worker": 1,
+          "store": 1,
+          "roles": 1,
+          "coord-files": 1,
+          "db": 2
+        },
+        "maxDepth": 2,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "label": "create / list / send",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "1",
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "label": "receive / ack / complete",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "2",
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "label": "calls + records",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "3",
+            "id": "cli-roles",
+            "from": "cli",
+            "to": "roles",
+            "label": "join: read prompt",
+            "depth": 1
+          },
+          {
+            "key": "4",
+            "id": "cli-files",
+            "from": "cli",
+            "to": "coord-files",
+            "label": "tokens + wait lock",
+            "depth": 1
+          },
+          {
+            "key": "5",
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "label": "SQL reads / writes",
+            "direction": "both",
+            "depth": 2
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    },
+    {
+      "edge": {
+        "id": "cli-store",
+        "from": "cli",
+        "to": "store",
+        "direction": "both",
+        "start": "url(#arrowhead-start)",
+        "end": "url(#arrowhead)"
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "store",
+          "label": "Store / SQL operations"
+        },
+        "target": {
+          "id": "cli",
+          "label": "squad CLI"
+        },
+        "nodeIds": [
+          "store",
+          "cli"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "2",
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "direction": "both",
+            "label": "calls + records"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "store",
+          "label": "Store / SQL operations"
+        },
+        "nodeIds": [
+          "store",
+          "cli",
+          "db",
+          "manager",
+          "worker",
+          "roles",
+          "coord-files"
+        ],
+        "depths": {
+          "store": 0,
+          "cli": 1,
+          "db": 1,
+          "manager": 2,
+          "worker": 2,
+          "roles": 2,
+          "coord-files": 2
+        },
+        "maxDepth": 2,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "label": "create / list / send",
+            "direction": "both",
+            "depth": 2
+          },
+          {
+            "key": "1",
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "label": "receive / ack / complete",
+            "direction": "both",
+            "depth": 2
+          },
+          {
+            "key": "2",
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "label": "calls + records",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "3",
+            "id": "cli-roles",
+            "from": "cli",
+            "to": "roles",
+            "label": "join: read prompt",
+            "depth": 2
+          },
+          {
+            "key": "4",
+            "id": "cli-files",
+            "from": "cli",
+            "to": "coord-files",
+            "label": "tokens + wait lock",
+            "depth": 2
+          },
+          {
+            "key": "5",
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "label": "SQL reads / writes",
+            "direction": "both",
+            "depth": 1
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    },
+    {
+      "edge": {
+        "id": "store-db",
+        "from": "store",
+        "to": "db",
+        "direction": "both",
+        "start": "url(#arrowhead-emphasis-start)",
+        "end": "url(#arrowhead-emphasis)"
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "db",
+          "label": "SQLite: messages.db"
+        },
+        "target": {
+          "id": "store",
+          "label": "Store / SQL operations"
+        },
+        "nodeIds": [
+          "db",
+          "store"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "5",
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "direction": "both",
+            "label": "SQL reads / writes"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "db",
+          "label": "SQLite: messages.db"
+        },
+        "nodeIds": [
+          "db",
+          "store",
+          "cli",
+          "manager",
+          "worker",
+          "roles",
+          "coord-files"
+        ],
+        "depths": {
+          "db": 0,
+          "store": 1,
+          "cli": 2,
+          "manager": 3,
+          "worker": 3,
+          "roles": 3,
+          "coord-files": 3
+        },
+        "maxDepth": 3,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "label": "create / list / send",
+            "direction": "both",
+            "depth": 3
+          },
+          {
+            "key": "1",
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "label": "receive / ack / complete",
+            "direction": "both",
+            "depth": 3
+          },
+          {
+            "key": "2",
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "label": "calls + records",
+            "direction": "both",
+            "depth": 2
+          },
+          {
+            "key": "3",
+            "id": "cli-roles",
+            "from": "cli",
+            "to": "roles",
+            "label": "join: read prompt",
+            "depth": 3
+          },
+          {
+            "key": "4",
+            "id": "cli-files",
+            "from": "cli",
+            "to": "coord-files",
+            "label": "tokens + wait lock",
+            "depth": 3
+          },
+          {
+            "key": "5",
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "label": "SQL reads / writes",
+            "direction": "both",
+            "depth": 1
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    }
+  ],
+  "legend": [
+    "Directed relationship",
+    "Bidirectional relationship",
+    "Bidirectional relationship"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

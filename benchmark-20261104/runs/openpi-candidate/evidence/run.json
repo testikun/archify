@@ -1,0 +1,160 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "openpi-candidate",
+  "project_id": "openpi",
+  "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "73448441783d395129488e66224ef92cf88b6dc818a337df3dce0ab7da79e833",
+    "substantive_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+  },
+  "session": {
+    "id": "01a1a44c-5c25-7223-a278-335137e45f3e",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/0588202277d7d78f1ab1d0cba19cd39ea0fb601b656a831964293d4b24d48ed9.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:07:54.488Z",
+        "pid": 84346,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagent.architecture.json",
+          "output/openpi-subagent.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+        "sha256": "0588202277d7d78f1ab1d0cba19cd39ea0fb601b656a831964293d4b24d48ed9",
+        "snapshot": "snapshots/0588202277d7d78f1ab1d0cba19cd39ea0fb601b656a831964293d4b24d48ed9.json"
+      },
+      {
+        "at": "2026-11-04T02:08:42.351Z",
+        "pid": 84596,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagent.architecture.json",
+          "output/openpi-subagent.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+        "sha256": "6f1950231b0894d05a6e8c74c423862441ae4ba5b735695a140ccfabc3b558a9",
+        "snapshot": "snapshots/6f1950231b0894d05a6e8c74c423862441ae4ba5b735695a140ccfabc3b558a9.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.delivery.json"
+    ],
+    "screenshots": [
+      "captures/openpi-candidate/fullpage.light.png",
+      "captures/openpi-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "issues",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final JSON, pinned source, saved full-page screenshot and canonical SVG mask/route coordinates; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Six components correctly separate parent, tools, manager, in-process child, completion inbox and transcript API. Request/result, spawn/events, explicit wait and automatic follow-up remain distinct directed paths. Generic database/message-bus symbols are explicitly qualified as a transcript API and an in-process inbox, not independent services or durable-storage guarantees.",
+      "Child isolation is correctly limited to session/lifecycle ownership with restricted tools. Explicit wait consumes deferred delivery; stopping a wait does not stop the child. Stop uncertainty and persistence uncertainty remain separate from successful execution.",
+      "The final child-session boundary title masks both vertical spawn/event routes. In SVG coordinates the mask is x=806..1059, y=335..351; the route legs run at x=940.55 and x=925.5 through that interval before reaching the child at y=355. The screenshot shows the gap. This is a readability issue despite passing automated checks; the final artifact has not been repaired retrospectively.",
+      "First captured JSON passes validation. One voluntary ablation removes the larger redundant runtime boundary; the child boundary and its mask issue remain. Two failed commands are a guessed nonexistent example and an unmatched browser glob, not failed diagram validations. All attempted bytes and failures are preserved.",
+      "All ten relationships retain legacy forward semantics. This final JSON yields identical layout and canonical SVG on base and candidate, so the visual issue is reproducible on both revisions and is not evidence of a direction-feature rendering regression. The differing repair counts between the two generation runs cannot be attributed to the new feature."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 25,
+    "usage": {
+      "input_tokens": 1694374,
+      "cached_input_tokens": 1617792,
+      "output_tokens": 8849,
+      "reasoning_output_tokens": 2304,
+      "uncached_input_tokens": 76582
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:03:49.973453+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:10:00.832708+00:00",
+    "wall_seconds": 370.8558698329998,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 244.462998,
+    "time_to_first_cli_seconds": 244.514547
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

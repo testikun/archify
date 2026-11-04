@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e4f2bd4d-ceca-49e4-9708-b9d133ec58a4",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/squad-base/candidate.html",
+  "specification": {
+    "sha256": "9b773aad9bced1274a82020719b63048f3602794511cf180a04d2bf2f2dbd935",
+    "bytes": 9034
+  },
+  "artifact": {
+    "sha256": "faea1df9413dc287fc7ac4190e17ea80f59851fc5e93beffebfe5628290fd9d7",
+    "bytes": 885168
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/mco-org/squad",
+    "revision": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+    "references": 18,
+    "linkMode": "local-only"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

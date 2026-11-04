@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "f6e0520e-7701-4542-b1d9-bf82b6191616",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/symmetric-sync-candidate/base.html"
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "63874658-d3c1-41e7-af0c-4005b1ca2339",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/hive-candidate/candidate.html",
+  "specification": {
+    "sha256": "00c46cc7ca6b6f8113bafae1c5e52dad87feec336f54872b06a44415649ab5f0",
+    "bytes": 9475
+  },
+  "artifact": {
+    "sha256": "73edc69f6e938a8dc0b5b3967596450a256a81232f7bbc6f7d916510daf5289d",
+    "bytes": 891851
+  }
+}

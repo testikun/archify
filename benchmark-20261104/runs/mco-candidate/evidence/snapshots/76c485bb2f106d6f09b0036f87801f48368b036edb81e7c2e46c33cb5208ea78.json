@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · One review, individual provider answers",
+    "subtitle": "Default CLI / shim path · no chain, debate or synthesis · checked-out revision 3cfce13",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "review-entry", "type": "backend", "label": "Review CLI",
+      "sublabel": "Resolve prompt, providers & scope", "tag": "mco review --providers …",
+      "pos": [40, 70], "size": [215, 90],
+      "explanation": "Accepts one CLI request. Resolves configuration and prompt; validates target paths against repository and allow_paths; creates one invocation per selected provider/model (or explicit --agent). Builds the adapter map and checks policy support before starting. Review defaults to read_only, but explicit execution mode and permission overrides can change it; this is not an unconditional MCO sandbox.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2242, "end_line": 2360, "label": "Selection, scope and adapter checks"},
+        {"path": "runtime/cli.py", "line": 2445, "end_line": 2475, "label": "Invoke shared runtime"},
+        {"path": "runtime/cli.py", "line": 1513, "end_line": 1541, "label": "Read-only default and overrides"}
+      ]
+    },
+    {
+      "id": "invocation-runtime", "type": "backend", "label": "Invocation runtime",
+      "sublabel": "Fan out · poll · decode · cancel", "tag": "ThreadPoolExecutor",
+      "pos": [390, 70], "size": [225, 90],
+      "explanation": "run_invocation_workflow delegates directly to run_invocations when chain, debate and synthesis are off. A worker per invocation builds TaskInput with prompt, repo, scope, model and permissions. The pool is bounded by max_provider_parallelism when positive, otherwise by invocation count. Workers start adapters, poll status and read raw stdout logs, decode provider transport into answer deltas and final text, and enforce stall/hard/global deadlines and cancellation.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 707, "end_line": 756, "label": "Default workflow delegation"},
+        {"path": "runtime/invocation_runtime.py", "line": 438, "end_line": 538, "label": "Artifact setup and concurrent dispatch"},
+        {"path": "runtime/invocation_runtime.py", "line": 165, "end_line": 435, "label": "Per-invocation lifecycle and decoding"}
+      ]
+    },
+    {
+      "id": "provider-adapters", "type": "backend", "label": "Provider adapters",
+      "sublabel": "Translate task to provider CLI", "tag": "One selected adapter per worker",
+      "pos": [760, 70], "size": [225, 90],
+      "explanation": "The registry maps provider IDs to provider-specific adapters, such as ClaudeAdapter and CodexAdapter. In the default shim path, ShimAdapterBase spawns a subprocess in repo_root, captures stdout/stderr in raw log files, and exposes run/poll/cancel. Provider subclasses build commands and decode their wire format; Codex, for example, uses exec --json and maps sandbox/model/prompt options. ACP and configured custom agents are optional alternatives, not shown as mandatory hops.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 133, "end_line": 165, "label": "Default adapter registry"},
+        {"path": "runtime/adapters/shim.py", "line": 98, "end_line": 154, "label": "Launch process and capture logs"},
+        {"path": "runtime/adapters/codex.py", "line": 38, "end_line": 86, "label": "Example command and transport decoder"}
+      ]
+    },
+    {
+      "id": "provider-processes", "type": "external", "label": "Provider CLI processes",
+      "sublabel": "Claude / Codex / selected others", "tag": "Separate OS processes",
+      "pos": [1120, 70], "size": [225, 90],
+      "explanation": "Each shim invocation starts the selected provider executable with cwd set to the requested repository. Raw stdout/stderr are redirected to files and consumed through MCO's adapter/runtime path. This source establishes the subprocess boundary, not the provider's internal reasoning, network endpoints, credentials or actual remote execution. Provider binaries were not run for this diagram.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 154, "label": "Executable, cwd, I/O and PID boundary"},
+        {"path": "runtime/adapters/codex.py", "line": 60, "end_line": 86, "label": "Concrete Codex CLI invocation"}
+      ]
+    },
+    {
+      "id": "result-collector", "type": "backend", "label": "Result collection",
+      "sublabel": "Keep every invocation separate", "tag": "complete / partial / failed",
+      "pos": [390, 340], "size": [225, 90],
+      "explanation": "A logical responsibility within run_invocations, not a separate service. Futures are consumed as they finish, but results are stored by original invocation index, preserving selection order in outputs[]. Each result carries invocation_id, provider, model, status, output, error and exit_code (plus deltas/transport details when available). Exceptions and cancellation become individual failure results. All success gives complete/0; some success gives partial/1; none gives failed/2. There is no default answer merge or review verdict synthesis.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 300, "end_line": 327, "label": "Individual result envelope"},
+        {"path": "runtime/invocation_runtime.py", "line": 539, "end_line": 638, "label": "Collect, classify, persist and return"},
+        {"path": "runtime/invocation_runtime.py", "line": 23, "end_line": 26, "label": "Aggregate exit codes"}
+      ]
+    },
+    {
+      "id": "cli-output", "type": "frontend", "label": "CLI response",
+      "sublabel": "Raw text / JSONL / JSON", "tag": "Per-provider identity retained",
+      "pos": [40, 340], "size": [215, 90],
+      "explanation": "Another responsibility of runtime/cli.py, not an extra process. Default stdout streams decoded text, adding invocation/provider/model headers when multiple sources alternate. JSONL emits lifecycle and delta events. --json prints a final task envelope containing outputs[] with stderr removed, then returns the aggregate exit code. Diagnostics go to stderr in the non-JSON event path. --result-mode artifact can suppress answer stdout; both retains both outputs.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2386, "end_line": 2444, "label": "Result mode and streaming callbacks"},
+        {"path": "runtime/cli.py", "line": 2482, "end_line": 2489, "label": "Final JSON and exit status"}
+      ]
+    },
+    {
+      "id": "review-artifacts", "type": "database", "label": "Local review artifacts",
+      "sublabel": "Answers · result.md · run.json", "tag": "Persist only for artifact / both",
+      "pos": [390, 560], "size": [225, 90],
+      "explanation": "Filesystem output, not a database server. The runtime writes decoded deltas into stages/run/invocations/<invocation_id>.md. If persistence is requested, InvocationArtifactWriter writes result.md and run.json under artifact_base/task_id, with raw provider runs under provider-runs/. Otherwise all working files use a temporary directory, artifact paths are nulled in returned outputs, and the temporary directory is cleaned up. The collector owns summary writes; the invocation worker owns incremental answer writes.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 470, "end_line": 486, "label": "Persistent versus temporary directory"},
+        {"path": "runtime/invocation_runtime.py", "line": 599, "end_line": 641, "label": "Optional writes and cleanup"},
+        {"path": "runtime/invocation_artifacts.py", "line": 8, "end_line": 106, "label": "Answer files and summary writer"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "MCO Python process · in-process calls, worker threads and callbacks", "wraps": ["review-entry", "invocation-runtime", "provider-adapters", "result-collector", "cli-output"], "pad": 26}
+  ],
+  "connections": [
+    {"id": "accept-request", "from": "review-entry", "to": "invocation-runtime", "label": "Validated invocations", "variant": "emphasis"},
+    {"id": "dispatch-selected", "from": "invocation-runtime", "to": "provider-adapters", "label": "run / poll / cancel", "variant": "emphasis"},
+    {"id": "adapter-reply", "from": "provider-adapters", "to": "invocation-runtime", "label": "Run ref + status"},
+    {"id": "spawn-provider", "from": "provider-adapters", "to": "provider-processes", "label": "Spawn CLI + task", "variant": "emphasis"},
+    {"id": "provider-reply", "from": "provider-processes", "to": "provider-adapters", "label": "stdout / stderr logs"},
+    {"id": "collect-results", "from": "invocation-runtime", "to": "result-collector", "label": "Decoded results"},
+    {"id": "return-envelope", "from": "result-collector", "to": "cli-output", "label": "outputs[] + exit code", "variant": "emphasis"},
+    {"id": "stream-events", "from": "invocation-runtime", "to": "cli-output", "label": "Live event callbacks", "fromSide": "bottom", "toSide": "top"},
+    {"id": "persist-results", "from": "result-collector", "to": "review-artifacts", "label": "If persistence enabled"}
+  ],
+  "cards": [
+    {"dot": "cyan", "title": "One request, N independent answers", "items": ["Selected providers become provider/model invocations, not separate review requests.", "Concurrency is bounded when configured; outputs[] preserves selection order, not finish order.", "Failure of one invocation can yield a partial task rather than discard successful answers."]},
+    {"dot": "amber", "title": "Scope and enforcement", "items": ["Default CLI + shim path only; chain, debate, synthesis, ACP and custom-agent variants are not expanded.", "Review defaults to read_only; configuration and permission overrides matter. No unconditional sandbox is implied.", "Entry, output and collection boxes are logical roles, not separate services."]},
+    {"dot": "slate", "title": "Evidence boundary", "items": ["Source references are attached to each component at pinned revision 3cfce13.", "Provider internals and network behavior are outside the checked-out implementation; no remote service is inferred.", "Raw log I/O belongs to the adapter/runtime path; stored review outputs are local files, not a database."]}
+  ]
+}

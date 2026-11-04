@@ -1,0 +1,282 @@
+{
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "diagram_types": [
+    "architecture"
+  ],
+  "scope_reason": "Architecture direction plus optional centered label markers; only Architecture accepts these fields. The new CSS exception is conditional on direction-bearing label metadata. Fifteen saved inputs across ten types retain identical SVG versus the preceding candidate, and focused browser replay covers shared presentation. Ten official Architecture runs plus one synthetic shared-message pair. Earlier three semantic supplemental pairs remain evidence under their original SHA, not this candidate.",
+  "arms": {
+    "base": {
+      "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+      "tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+      "hash_method": "SHA-256 of git archive bytes",
+      "git_tree_oid": "275dead96c96afb14b213b0b0e23d0f5f920ba23"
+    },
+    "candidate": {
+      "commit": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+      "tree_sha256": "dc2d2fb2503f08cc0119e2705f6b04f5c718d8a494d9582221a6572f7316d1d6",
+      "hash_method": "SHA-256 of git archive bytes",
+      "git_tree_oid": "a33a7bbb8141d0698b83e48ee2289b69066ec65d"
+    }
+  },
+  "projects": [
+    {
+      "id": "openpi",
+      "name": "OpenPI",
+      "repository": "https://github.com/openpi-dev/openpi",
+      "commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "task": "Use Archify to explain how OpenPI accepts a task, delegates work to an independent subagent, and makes its status and result available to the caller. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A user delegates one bounded task to a subagent and receives its result. Include the actual failure or cancellation path where supported by the source.",
+      "reviewer_source_entrypoints": [
+        "extensions/",
+        "docs/architecture/"
+      ],
+      "tracked_tree_sha256": "bc86117b2958d28f9c0ada5c955788b450a11aa66af0335298377360510d6749"
+    },
+    {
+      "id": "hive",
+      "name": "Hive",
+      "repository": "https://github.com/tt-a1i/hive",
+      "commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "task": "Use Archify to explain how a task in the Hive browser workbench reaches a worker running as a CLI process, and how progress and the result return to the team. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A team dispatches a task to a worker and observes its progress and completion. Include the actual failure or stop path where supported by the source.",
+      "reviewer_source_entrypoints": [
+        "src/cli/",
+        "src/server/"
+      ],
+      "tracked_tree_sha256": "3b25f26c08c54516bba07701aed31e4d8ec9548b937a77022012b5f03d9b119f"
+    },
+    {
+      "id": "mco",
+      "name": "MCO",
+      "repository": "https://github.com/mco-org/mco",
+      "commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "task": "Use Archify to explain how MCO accepts one review request, runs the selected providers, and returns their individual results. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A user requests a read-only review with selected providers and inspects their results. Include how an unavailable or failed provider is handled in the implementation.",
+      "reviewer_source_entrypoints": [
+        "bin/",
+        "docs/contracts/"
+      ],
+      "tracked_tree_sha256": "9509efc0548876fe85b554e6e518c9c0cf54fe27e7ae04b8a14a086c16d78af9"
+    },
+    {
+      "id": "squad",
+      "name": "Squad",
+      "repository": "https://github.com/mco-org/squad",
+      "commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "task": "Use Archify to explain how Squad coordinates a manager and worker through its CLI and persisted task/message state. Read the checked-out source and focus on that path.",
+      "workflow_scenario": "A manager assigns work, a worker finds it and reports completion, and the manager checks the outcome. Include any actual ownership or invalid-state check relevant to that path.",
+      "reviewer_source_entrypoints": [
+        "src/main.rs",
+        "src/store.rs",
+        "src/tasks.rs"
+      ],
+      "tracked_tree_sha256": "5367ef1f796f9f01fc0031cd69c301a85635e3d8a1786f617f4162caefdbc4ed"
+    },
+    {
+      "id": "skillroster",
+      "name": "SkillRoster",
+      "repository": "https://github.com/tt-a1i/skillroster",
+      "commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "task": "Use Archify to explain how SkillRoster goes from discovering installed Skills to planning, applying, and undoing a change. Read the checked-out source and focus on the boundaries between inspection and filesystem changes.",
+      "workflow_scenario": "A user inspects installed Skills, reviews a change plan, applies it, and later requests undo. Include the actual confirmation and conflict checks that protect existing files.",
+      "reviewer_source_entrypoints": [
+        "src/scan.rs",
+        "src/change.rs",
+        "src/roster_plan.rs"
+      ],
+      "tracked_tree_sha256": "83aea7f0ed4242188523520054bace7d0d8c16b3a72f0fe7971cf29086db7ca3"
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "openpi-base",
+      "project_id": "openpi",
+      "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "arm": "base",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/prompt.txt",
+      "prompt_sha256": "0bb1a3ce02fc77f56fc483b3a914ed9b5c3c4e1fcf6c1c2ca1aac496f95f81d6",
+      "substantive_prompt_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+    },
+    {
+      "run_id": "openpi-candidate",
+      "project_id": "openpi",
+      "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+      "arm": "candidate",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/prompt.txt",
+      "prompt_sha256": "e8bbfaa90173d49535b8c6142422be2587e32194bc49f60699aca3389c5d57ee",
+      "substantive_prompt_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+    },
+    {
+      "run_id": "hive-candidate",
+      "project_id": "hive",
+      "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "arm": "candidate",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/prompt.txt",
+      "prompt_sha256": "4ecfe8278c6ad6b6c08537855b477c53369f3bc25fe0356849e81f10b9c7f5a5",
+      "substantive_prompt_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+    },
+    {
+      "run_id": "hive-base",
+      "project_id": "hive",
+      "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "arm": "base",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/prompt.txt",
+      "prompt_sha256": "d3068ee899f047a2642d25fee33b9ad78318c09efcc3ba33e0dbd41c00a7212e",
+      "substantive_prompt_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+    },
+    {
+      "run_id": "mco-base",
+      "project_id": "mco",
+      "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "arm": "base",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/prompt.txt",
+      "prompt_sha256": "85b976ec7687707d67bc16a29d0fd1336222b9dfe9550af8d2baf1fa7ed28b1d",
+      "substantive_prompt_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+    },
+    {
+      "run_id": "mco-candidate",
+      "project_id": "mco",
+      "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "arm": "candidate",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/prompt.txt",
+      "prompt_sha256": "2a03c9c048c843e8399f79c7d1522d52892992c1a9a4da5306afae0dc91431a4",
+      "substantive_prompt_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+    },
+    {
+      "run_id": "squad-candidate",
+      "project_id": "squad",
+      "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "arm": "candidate",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/prompt.txt",
+      "prompt_sha256": "64fe0a6ffba8d410d948f8bed58394f4b8550a1a8e6d3e582efaf250169ee2d1",
+      "substantive_prompt_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+    },
+    {
+      "run_id": "squad-base",
+      "project_id": "squad",
+      "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "arm": "base",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/prompt.txt",
+      "prompt_sha256": "384adbabe390dcb8702858c403ee14072b5c3fe6163a005dc53bdb0e6c57a759",
+      "substantive_prompt_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+    },
+    {
+      "run_id": "skillroster-base",
+      "project_id": "skillroster",
+      "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "arm": "base",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/prompt.txt",
+      "prompt_sha256": "b544a6642c344a7240371f2b90213489ccbaf0f19f77e2d34819dc71f852d21d",
+      "substantive_prompt_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+    },
+    {
+      "run_id": "skillroster-candidate",
+      "project_id": "skillroster",
+      "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "arm": "candidate",
+      "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace",
+      "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output",
+      "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/evidence",
+      "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/prompt.txt",
+      "prompt_sha256": "302e77b3eab379654fc5642d0b59cd88e4d94d5a27bc0fc7fc952db9992decf6",
+      "substantive_prompt_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+    }
+  ],
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "capture": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+  "supplement": {
+    "projects": [
+      {
+        "id": "shared-messages",
+        "brief": "# Purchase request and decision\n\nProject Management sends a purchase-order creation request to ERP only after a manager approves the purchase. ERP returns an acceptance or rejection decision to Project Management after validation. The request and decision have different contents and conditions: they must remain separately identifiable relationships. ERP also writes accepted orders to Order Storage. Rejected orders are not written. No additional systems or paths are established.\n",
+        "task": "Use Archify to create an architecture diagram from BUSINESS.md. Preserve the request and decision as distinct directed relationships, with their different meanings and conditions readable on the diagram. Show the conditional storage path and include a diagram legend when needed to explain notation. Do not replace the distinct request and response with one generic exchange. Deliver the diagram and its source JSON in <OUTPUT_DIR> using the normal Archify workflow. The brief is synthetic business evidence, not a real software repository; do not invent source links. Keep the request and decision compact on one visual connection corridor, with centered labels and direction cues beside the labels. Each action must still be separately identifiable. If the installed tool cannot express this presentation, report that limitation honestly; do not fabricate a supported option.",
+        "brief_sha256": "b2b5ea402e26d1b7859409513ec8750de07a36fd8d4ddfcc163d976da99f98d1"
+      }
+    ],
+    "runs": [
+      {
+        "run_id": "shared-messages-candidate",
+        "project_id": "shared-messages",
+        "project_commit": null,
+        "arm": "candidate",
+        "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace",
+        "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output",
+        "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/evidence",
+        "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/prompt.txt",
+        "prompt_sha256": "b42e574345f45fbb27dfd53f7a496e731c1831f77a0f258d7f1c140b89d0c5ed",
+        "substantive_prompt_sha256": "03e2ba895b623aca3e0887061a9c336cb0f276136aab4a99d7eb5d1db642f918"
+      },
+      {
+        "run_id": "shared-messages-base",
+        "project_id": "shared-messages",
+        "project_commit": null,
+        "arm": "base",
+        "workspace": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace",
+        "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output",
+        "evidence": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/evidence",
+        "prompt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/prompt.txt",
+        "prompt_sha256": "14c7bdd9aef33d120f56682f0f9f77843e06b4ff56a2ff457dbb46484f6e8cd8",
+        "substantive_prompt_sha256": "03e2ba895b623aca3e0887061a9c336cb0f276136aab4a99d7eb5d1db642f918"
+      }
+    ],
+    "classification": "Synthetic business capability tasks; separate from official real-repository corpus."
+  },
+  "publication": "Local execution authorized on 2026-11-04. No external publication or GitHub comment is authorized by this run plan.",
+  "metric_priority": [
+    "semantics and readability",
+    "delivery",
+    "repair rounds",
+    "uncached_input_tokens",
+    "cached_input_tokens",
+    "output_tokens"
+  ],
+  "timing_policy": "Two independent sessions per paired project batch, using the same concurrency for both arms; dispatch order alternates by project. Both finish before the next project. Host contention and network/provider queueing are uncontrolled; no speed claims. Each run keeps its 1200-second limit and all failures.",
+  "cost_policy": "Deferred by user.",
+  "status": "frozen-before-launch"
+}

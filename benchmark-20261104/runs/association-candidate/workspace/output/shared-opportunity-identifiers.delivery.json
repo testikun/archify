@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d2733ad8-c1a3-48f3-936c-a2f14406a555",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/shared-opportunity-identifiers.html",
+  "specification": {
+    "sha256": "c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4",
+    "bytes": 1941
+  },
+  "artifact": {
+    "sha256": "51ed298baeaf1a7c439560684deaae400b422e024064eb5543d59a8b0daf70e9",
+    "bytes": 868255
+  }
+}

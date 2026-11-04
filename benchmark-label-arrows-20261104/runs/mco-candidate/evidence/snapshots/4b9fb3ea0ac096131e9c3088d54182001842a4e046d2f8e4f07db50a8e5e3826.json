@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · One review, individual provider results",
+    "locale": "en",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "review-entry",
+      "type": "frontend",
+      "label": "Review entry points",
+      "sublabel": "CLI review / MCP mco_review",
+      "tag": "Validate selection, scope, policy",
+      "pos": [40, 140],
+      "size": [270, 100],
+      "explanation": "A request supplies repo, prompt, selected providers and target paths. CLI resolves config and builds invocations; MCP validates provider selection and scope, resolves policy and builds default invocations. Review defaults to read_only, but execution mode and provider permissions can change it. CLI --json prints the returned payload without per-output stderr; text/JSONL can stream invocation events. MCP returns the result in its _ok envelope. Sources: cli.py:2252–2337, 2446–2489; mcp_server.py:275–341, 434–458; cli.py:1522–1541.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2252, "end_line": 2337, "label": "Resolve request and invocations"},
+        {"path": "runtime/cli.py", "line": 2446, "end_line": 2489, "label": "Call runtime and print JSON"},
+        {"path": "runtime/mcp_server.py", "line": 275, "end_line": 341, "label": "MCP review to shared runtime"}
+      ]
+    },
+    {
+      "id": "invocation-runtime",
+      "type": "backend",
+      "label": "Invocation runtime",
+      "sublabel": "Schedule, monitor, collect results",
+      "tag": "Thread pool · bounded parallelism",
+      "pos": [500, 140],
+      "size": [280, 100],
+      "explanation": "run_invocation_workflow takes the direct run_invocations path when chain, debate and synthesis are off. The pool submits one _run_one_invocation per selected invocation; max_provider_parallelism caps workers (otherwise all may run concurrently). Each worker creates TaskInput, starts and polls its adapter, decodes raw output, emits output_delta events, and enforces stall/hard/global deadlines or cancellation. Results occupy their declaration-order slots, not completion order. The payload retains individual outputs and computes complete / partial / failed; one provider failure does not discard the others. No consensus or automatic retry is added on this default path.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 165, "end_line": 435, "label": "Per-provider lifecycle and decoding"},
+        {"path": "runtime/invocation_runtime.py", "line": 438, "end_line": 641, "label": "Fan-out, collection and artifacts"},
+        {"path": "runtime/invocation_runtime.py", "line": 707, "end_line": 760, "label": "Default workflow delegates directly"}
+      ]
+    },
+    {
+      "id": "provider-adapters",
+      "type": "backend",
+      "label": "Provider adapters",
+      "sublabel": "Registry selects one per provider",
+      "tag": "run / poll / cancel / decode",
+      "pos": [970, 140],
+      "size": [270, 100],
+      "explanation": "The registry maps provider IDs to adapters. On the default shim transport, provider-specific command builders translate prompt, model and permissions to CLI arguments. ShimAdapterBase spawns the command with cwd=repo_root and stdout/stderr log files, polls process completion and supports cancellation. Runtime reads the logs and calls decode_transport to obtain provider answers. Claude and Codex are examples, not a fixed required pair. Optional ACP transport and configured custom agents are not expanded here.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 56, "end_line": 165, "label": "Provider registry and transports"},
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 154, "label": "Spawn process and capture logs"},
+        {"path": "runtime/adapters/shim.py", "line": 167, "end_line": 263, "label": "Poll completion and cancel"}
+      ]
+    },
+    {
+      "id": "run-files",
+      "type": "database",
+      "label": "Local run artifacts",
+      "sublabel": "Answers, run.json, result.md",
+      "tag": "Temporary unless persistence enabled",
+      "pos": [500, 450],
+      "size": [280, 100],
+      "explanation": "The runtime always uses working files: by default a TemporaryDirectory cleaned in finally; with persist_artifacts it keeps a task directory under artifact_base. InvocationArtifactWriter prepares per-invocation Markdown files; runtime appends decoded deltas. Persistent runs also write run.json and result.md. Without persistence, returned artifact_root and per-output artifact_path are null. CLI enables persistence with artifact/both result modes or --save-artifacts; MCP review does not pass persist_artifacts and therefore uses the temporary path. Raw provider logs are owned by shim adapter process redirection, not by this normalized-answer writer.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 465, "end_line": 489, "label": "Temporary or persistent directory"},
+        {"path": "runtime/invocation_runtime.py", "line": 612, "end_line": 641, "label": "Persistence policy and cleanup"},
+        {"path": "runtime/invocation_artifacts.py", "line": 8, "end_line": 106, "label": "Answer and summary file writer"}
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Selected provider CLIs",
+      "sublabel": "Independent child processes",
+      "tag": "Repository cwd · provider permissions",
+      "pos": [970, 450],
+      "size": [270, 100],
+      "explanation": "Each selected default-shim adapter launches its external provider CLI as a local child process in the requested repository. Claude uses -p with a permission mode; Codex uses exec --json with sandbox/approval options. Child output is redirected into adapter-owned stdout/stderr logs. MCO's checked-out source establishes this process boundary, not the providers' remote infrastructure, internal model execution, network protocols or actual permission enforcement. Those are deliberately not invented or drawn as hosted MCO services.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 154, "label": "Child process and output redirection"},
+        {"path": "runtime/adapters/claude.py", "line": 34, "end_line": 57, "label": "Example Claude command"},
+        {"path": "runtime/adapters/codex.py", "line": 41, "end_line": 86, "label": "Example Codex command"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "MCO process · entry, orchestration and adapters", "wraps": ["review-entry", "invocation-runtime", "provider-adapters"], "pad": 30}
+  ],
+  "connections": [
+    {"id": "submit-review", "from": "review-entry", "to": "invocation-runtime", "label": "Validated invocations", "arrowPosition": "label", "route": "straight"},
+    {"id": "return-results", "from": "invocation-runtime", "to": "review-entry", "label": "Individual outputs[]", "arrowPosition": "label", "route": "straight"},
+    {"id": "start-provider", "from": "invocation-runtime", "to": "provider-adapters", "label": "TaskInput · run / poll", "arrowPosition": "label", "route": "straight"},
+    {"id": "decode-provider", "from": "provider-adapters", "to": "invocation-runtime", "label": "Status + decoded answer", "arrowPosition": "label", "route": "straight"},
+    {"id": "spawn-cli", "from": "provider-adapters", "to": "provider-processes", "label": "Spawn command", "arrowPosition": "label", "route": "straight"},
+    {"id": "capture-cli", "from": "provider-processes", "to": "provider-adapters", "label": "Logs + exit status", "arrowPosition": "label", "route": "straight"},
+    {"id": "write-artifacts", "from": "invocation-runtime", "to": "run-files", "label": "Write answers; optionally retain", "route": "straight"}
+  ],
+  "cards": [
+    {"dot": "cyan", "title": "One request → N independent answers", "items": ["outputs[] keeps invocation ID, provider, model, status, output and error.", "Declaration order is preserved; overall status is complete, partial or failed."]},
+    {"dot": "amber", "title": "Execution controls, not a hosted service", "items": ["Review defaults to read_only; provider flags implement the selected mode.", "Workers enforce stall/hard/global deadlines and cancellation."]},
+    {"dot": "slate", "title": "Scope and evidence", "items": ["Default shim fan-out shown; chain, debate, synthesis and ACP are optional.", "External CLI internals and remote model infrastructure are not established."]}
+  ]
+}

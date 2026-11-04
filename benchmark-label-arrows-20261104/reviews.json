@@ -1,0 +1,589 @@
+{
+  "openpi-base": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable",
+    "review_origin": "Author-side source, final JSON, native 1440x900 and full-page screenshot inspection; not maintainer approval.",
+    "findings": [
+      "Independent in-process Pi session, manager status snapshots, explicit wait versus one-shot follow-up delivery remain distinct. No OS worker or durable broker is invented.",
+      "The final diagram uses only ordinary forward relations and no label markers; this run does not exercise the new presentation.",
+      "Same final JSON delivers on both versions with identical canonical SVG and layout. Revision-count differences cannot be attributed to new markers."
+    ],
+    "source_checks": [
+      {
+        "path": "extensions/subagents/src/backends/pi.ts",
+        "line": 216,
+        "fact": "The production backend creates a fresh AgentSession in-process with its own SessionManager and child tool policy."
+      },
+      {
+        "path": "extensions/subagents/src/manager.ts",
+        "line": 351,
+        "fact": "Settlement records completed, failed or interrupted outcomes, clears live state, notifies waiters and invokes the settlement hook with consumption state."
+      },
+      {
+        "path": "extensions/subagents/index.ts",
+        "line": 797,
+        "fact": "The hook records subagent-finished, consumes explicit waits, and otherwise defers a snapshot for automatic delivery."
+      },
+      {
+        "path": "extensions/subagents/src/result-delivery.ts",
+        "line": 35,
+        "fact": "Owner-scoped inbox claim/ack/retry, idle flushing and explicit consumption govern one-shot result delivery."
+      },
+      {
+        "path": "extensions/subagents/index.ts",
+        "line": 441,
+        "fact": "Display transcript entry and hidden followUp/triggerTurn model message are separate outputs."
+      }
+    ],
+    "first_draft_semantics": "unverified; first bytes retained",
+    "first_draft_visual": "unreviewed; validation pass is not visual acceptance",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 3
+    },
+    "capability_result": "not exercised"
+  },
+  "openpi-candidate": {
+    "semantics": "source-backed at overview scope",
+    "readability": "localized boundary-title route occlusion; issue retained",
+    "review_origin": "Author-side source, final JSON, native 1440x900 and full-page screenshot inspection; not maintainer approval.",
+    "findings": [
+      "Independent in-process Pi session, manager status snapshots, explicit wait versus one-shot follow-up delivery remain distinct. No OS worker or durable broker is invented.",
+      "The final diagram uses only ordinary forward relations and no label markers; this run does not exercise the new presentation.",
+      "Same final JSON delivers on both versions with identical canonical SVG and layout. Revision-count differences cannot be attributed to new markers.",
+      "Boundary title masks the child input/output routes; retained in ISSUES.md and reproducible on both versions."
+    ],
+    "source_checks": [
+      {
+        "path": "extensions/subagents/src/backends/pi.ts",
+        "line": 216,
+        "fact": "The production backend creates a fresh AgentSession in-process with its own SessionManager and child tool policy."
+      },
+      {
+        "path": "extensions/subagents/src/manager.ts",
+        "line": 351,
+        "fact": "Settlement records completed, failed or interrupted outcomes, clears live state, notifies waiters and invokes the settlement hook with consumption state."
+      },
+      {
+        "path": "extensions/subagents/index.ts",
+        "line": 797,
+        "fact": "The hook records subagent-finished, consumes explicit waits, and otherwise defers a snapshot for automatic delivery."
+      },
+      {
+        "path": "extensions/subagents/src/result-delivery.ts",
+        "line": 35,
+        "fact": "Owner-scoped inbox claim/ack/retry, idle flushing and explicit consumption govern one-shot result delivery."
+      },
+      {
+        "path": "extensions/subagents/index.ts",
+        "line": 441,
+        "fact": "Display transcript entry and hidden followUp/triggerTurn model message are separate outputs."
+      }
+    ],
+    "first_draft_semantics": "unverified; first bytes retained",
+    "first_draft_visual": "unreviewed; validation pass is not visual acceptance",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "not exercised"
+  },
+  "hive-base": {
+    "semantics": "incorrect task-scoped progress transport; see ISSUES.md",
+    "readability": "readable; dense labels are small at default viewport",
+    "review_origin": "Author-side source, JSON, native viewport and feature-export inspection; no maintainer approval.",
+    "findings": [
+      "Task planning is distinct from worker dispatch; CLI agents execute under local PTYs and final report persistence is distinct from delivery.",
+      "Two modified submitted candidates after first validation.",
+      "Task-scoped progress is incorrectly included in the PTY result-return edge and summary card. The pinned store explicitly excludes progress from its delivery outbox. This is a baseline generation fact error, unchanged by replay on candidate.",
+      "Two failed finalize rounds reported route-side and label-route collisions; final layout passes. No new presentation used."
+    ],
+    "source_checks": [
+      {
+        "path": "web/src/terminal/useTerminalRun.ts",
+        "line": 640,
+        "fact": "Browser terminal input calls sendInput; live output returns through the terminal client."
+      },
+      {
+        "path": "src/server/routes-team.ts",
+        "line": 127,
+        "fact": "Authenticated team send resolves dispatch and distinguishes parked user-managed workers from initial auto-start of spawned workers."
+      },
+      {
+        "path": "src/server/agent-stdin-dispatcher.ts",
+        "line": 286,
+        "fact": "Dispatch input is formatted and written only to an active process through the serialized writer."
+      },
+      {
+        "path": "src/server/dispatch-message-store.ts",
+        "line": 193,
+        "fact": "Task-scoped progress is recorded without a delivery-outbox row; it does not trigger model delivery."
+      },
+      {
+        "path": "src/server/dispatch-ledger-store.ts",
+        "line": 294,
+        "fact": "Report closure requires submitted owned work and the exact required inbound seen sequence."
+      },
+      {
+        "path": "src/server/team-operations.ts",
+        "line": 294,
+        "fact": "Report outbox draining marks delivery only after the orchestrator PTY write resolves."
+      },
+      {
+        "path": "web/src/notifications/useReportNotifications.ts",
+        "line": 36,
+        "fact": "Report polling uses a server snapshot and subsequent pages to display new completion notifications."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 2,
+      "voluntary_visual_or_metadata": 0
+    },
+    "capability_result": "not exercised"
+  },
+  "hive-candidate": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; dense labels are small at default viewport",
+    "review_origin": "Author-side source, JSON, native viewport and feature-export inspection; no maintainer approval.",
+    "findings": [
+      "Task planning is distinct from worker dispatch; CLI agents execute under local PTYs and final report persistence is distinct from delivery.",
+      "Two modified submitted candidates after first validation.",
+      "Ten label markers on five opposite-direction pairs were naturally selected without feature hints. IDs remain separate and every inspected direct Route selects the corresponding relationship.",
+      "Horizontal and vertical direction cues remain attributable in light/dark, native SVG and PNG exports. All 12 edges remain forward; distinct input/output messages are not merged into both.",
+      "Two voluntary refinements after first successful validation; a separate failed file-read command requested a nonexistent example, not a generation/renderer failure.",
+      "Base rejects the new arrowPosition field as unsupported; that rejection is not a repaired baseline defect."
+    ],
+    "source_checks": [
+      {
+        "path": "web/src/terminal/useTerminalRun.ts",
+        "line": 640,
+        "fact": "Browser terminal input calls sendInput; live output returns through the terminal client."
+      },
+      {
+        "path": "src/server/routes-team.ts",
+        "line": 127,
+        "fact": "Authenticated team send resolves dispatch and distinguishes parked user-managed workers from initial auto-start of spawned workers."
+      },
+      {
+        "path": "src/server/agent-stdin-dispatcher.ts",
+        "line": 286,
+        "fact": "Dispatch input is formatted and written only to an active process through the serialized writer."
+      },
+      {
+        "path": "src/server/dispatch-message-store.ts",
+        "line": 193,
+        "fact": "Task-scoped progress is recorded without a delivery-outbox row; it does not trigger model delivery."
+      },
+      {
+        "path": "src/server/dispatch-ledger-store.ts",
+        "line": 294,
+        "fact": "Report closure requires submitted owned work and the exact required inbound seen sequence."
+      },
+      {
+        "path": "src/server/team-operations.ts",
+        "line": 294,
+        "fact": "Report outbox draining marks delivery only after the orchestrator PTY write resolves."
+      },
+      {
+        "path": "web/src/notifications/useReportNotifications.ts",
+        "line": 36,
+        "fact": "Report polling uses a server snapshot and subsequent pages to display new completion notifications."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 2
+    },
+    "capability_result": "naturally exercised: 10 label arrows, 5 shared opposite pairs; export and Route inspected"
+  },
+  "mco-base": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; no material overlap seen",
+    "review_origin": "Author-side pinned source, final JSON and desktop capture inspection; feature dark/export/Route evidence where applicable.",
+    "findings": [
+      "Selected invocations run independently through adapters and local provider processes; declaration order is retained in results. Read-only is a configurable default, not an unconditional sandbox.",
+      "Individual failures remain in the result payload and aggregate complete/partial/failed status is distinct from synthesis.",
+      "One voluntary revision after a passing first validation. A nonzero source/package lookup command is retained separately from product diagnostics.",
+      "Uses ordinary endpoint arrows; replay on candidate produces identical layout and canonical SVG."
+    ],
+    "source_checks": [
+      {
+        "path": "runtime/cli.py",
+        "line": 1522,
+        "fact": "Review defaults to read_only while allowing explicit execution-policy configuration."
+      },
+      {
+        "path": "runtime/cli.py",
+        "line": 2248,
+        "fact": "Unknown providers and invalid configuration are rejected before dispatching the invocation workflow."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 188,
+        "fact": "Each worker builds a TaskInput and retains startup failures as invocation results."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 349,
+        "fact": "The worker reads raw logs, decodes output, emits deltas and observes timeout/cancellation."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 498,
+        "fact": "Thread-pool futures execute independently and their results are stored at original declaration indexes."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 600,
+        "fact": "Individual success counts determine complete/partial/failed and persistent versus temporary artifact handling."
+      },
+      {
+        "path": "runtime/adapters/shim.py",
+        "line": 115,
+        "fact": "The shim launches a subprocess in repo_root with stdout/stderr redirected to files."
+      },
+      {
+        "path": "runtime/cli.py",
+        "line": 2482,
+        "fact": "The CLI returns the payload's exit code and prints the final JSON in JSON mode."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "not exercised"
+  },
+  "mco-candidate": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; no material overlap seen",
+    "review_origin": "Author-side pinned source, final JSON and desktop capture inspection; feature dark/export/Route evidence where applicable.",
+    "findings": [
+      "Selected invocations run independently through adapters and local provider processes; declaration order is retained in results. Read-only is a configurable default, not an unconditional sandbox.",
+      "Individual failures remain in the result payload and aggregate complete/partial/failed status is distinct from synthesis.",
+      "One voluntary revision after a passing first validation. A nonzero source/package lookup command is retained separately from product diagnostics.",
+      "Six label arrows naturally express three distinct request/return pairs. Vertical and horizontal cues, corresponding direct Route IDs and light/dark exports are preserved.",
+      "The older base rejects the opt-in field; unsupported capability is not scored as a baseline rendering defect."
+    ],
+    "source_checks": [
+      {
+        "path": "runtime/cli.py",
+        "line": 1522,
+        "fact": "Review defaults to read_only while allowing explicit execution-policy configuration."
+      },
+      {
+        "path": "runtime/cli.py",
+        "line": 2248,
+        "fact": "Unknown providers and invalid configuration are rejected before dispatching the invocation workflow."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 188,
+        "fact": "Each worker builds a TaskInput and retains startup failures as invocation results."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 349,
+        "fact": "The worker reads raw logs, decodes output, emits deltas and observes timeout/cancellation."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 498,
+        "fact": "Thread-pool futures execute independently and their results are stored at original declaration indexes."
+      },
+      {
+        "path": "runtime/invocation_runtime.py",
+        "line": 600,
+        "fact": "Individual success counts determine complete/partial/failed and persistent versus temporary artifact handling."
+      },
+      {
+        "path": "runtime/adapters/shim.py",
+        "line": 115,
+        "fact": "The shim launches a subprocess in repo_root with stdout/stderr redirected to files."
+      },
+      {
+        "path": "runtime/cli.py",
+        "line": 2482,
+        "fact": "The CLI returns the payload's exit code and prints the final JSON in JSON mode."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "naturally exercised: 6 label arrows on 3 opposite pairs"
+  },
+  "squad-base": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable",
+    "review_origin": "Author-side pinned source, final JSON and native capture inspection; feature Route/export evidence retained.",
+    "findings": [
+      "Task creation records the assignment; receive marks a message read independently of ack. Complete requires matching lease ownership and acked status, but does not send a result message or enforce lease expiry.",
+      "Task/message operations are local Store code, role instructions are guidance rather than a manager-only authorization boundary.",
+      "No both relation was used in either arm in this sample; the earlier both misuse is retained under its original run and cannot be declared eliminated.",
+      "Uses ordinary forward relationships and endpoint arrows. One voluntary boundary cleanup; one nonexistent example read failed before generation."
+    ],
+    "source_checks": [
+      {
+        "path": "src/store.rs",
+        "line": 452,
+        "fact": "Create atomically inserts the task and initial assignment."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 340,
+        "fact": "Receiving a mailbox message marks it read independently of task acknowledgment."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 624,
+        "fact": "Ack requires queued state and matching assignee and records a lease."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 653,
+        "fact": "Complete requires acked state and ownership but does not check lease expiry or send a report."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 681,
+        "fact": "Requeue clears the lease and may change assignment without creating a result message."
+      },
+      {
+        "path": "src/session.rs",
+        "line": 50,
+        "fact": "An absent token file preserves the compatibility path."
+      },
+      {
+        "path": "src/main.rs",
+        "line": 786,
+        "fact": "Waiting uses a per-agent receive lock, periodic polling and lock heartbeat."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_semantic_or_visual": 1
+    },
+    "capability_result": "not exercised"
+  },
+  "squad-candidate": {
+    "semantics": "source-backed at overview scope",
+    "readability": "localized boundary-title route occlusion; see ISSUES.md",
+    "review_origin": "Author-side pinned source, final JSON and native capture inspection; feature Route/export evidence retained.",
+    "findings": [
+      "Task creation records the assignment; receive marks a message read independently of ack. Complete requires matching lease ownership and acked status, but does not send a result message or enforce lease expiry.",
+      "Task/message operations are local Store code, role instructions are guidance rather than a manager-only authorization boundary.",
+      "No both relation was used in either arm in this sample; the earlier both misuse is retained under its original run and cannot be declared eliminated.",
+      "After the first successful check, the Agent added separate manager/worker return edges and 4 label arrows on 2 shared paths, plus prose cleanup. This is a voluntary semantic/presentation revision, not first-draft completeness.",
+      "Four direct Route checks select the matching edge ID; the shared paths do not collapse command/output meanings.",
+      "An ordinary session-token route is hidden by the workspace boundary-title background. A reduced unchanged-geometry case delivers identically on base and candidate; retained separately from new marker capability."
+    ],
+    "source_checks": [
+      {
+        "path": "src/store.rs",
+        "line": 452,
+        "fact": "Create atomically inserts the task and initial assignment."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 340,
+        "fact": "Receiving a mailbox message marks it read independently of task acknowledgment."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 624,
+        "fact": "Ack requires queued state and matching assignee and records a lease."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 653,
+        "fact": "Complete requires acked state and ownership but does not check lease expiry or send a report."
+      },
+      {
+        "path": "src/store.rs",
+        "line": 681,
+        "fact": "Requeue clears the lease and may change assignment without creating a result message."
+      },
+      {
+        "path": "src/session.rs",
+        "line": 50,
+        "fact": "An absent token file preserves the compatibility path."
+      },
+      {
+        "path": "src/main.rs",
+        "line": 786,
+        "fact": "Waiting uses a per-agent receive lock, periodic polling and lock heartbeat."
+      }
+    ],
+    "first_draft_semantics": "unverified; candidate initially omitted explicit return arrows",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_semantic_or_visual": 1
+    },
+    "capability_result": "naturally exercised: 4 label arrows on 2 command/result pairs"
+  },
+  "skillroster-base": {
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; no material overlap observed",
+    "review_origin": "Author-side pinned-source and final JSON review plus native 1440x900 capture inspection.",
+    "findings": [
+      "Inspection and planning persist control state but do not execute Skill-content mutations. Discovery is separate from mutation authority.",
+      "Apply and Undo are explicit commands with live-state rechecks; Undo reverses stored receipt compensations, not a new semantic plan. JSON mode does not enforce an extra confirmation prompt.",
+      "Filesystem journals and SQLite are distinct persistence layers; failure/recovery limitations are disclosed.",
+      "One voluntary revision removed a redundant boundary after passing validation. Two failed lookup commands came from nonexistent paths/globs, not diagram diagnostics.",
+      "No new direction or label-arrow field was used. Unchanged final bytes deliver with identical layout and SVG on both versions."
+    ],
+    "source_checks": [
+      {
+        "path": "src/scan.rs",
+        "line": 984,
+        "fact": "Discovery observes approved roots and bounded session evidence; read scope does not confer mutation authority."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 1733,
+        "fact": "Scan persists a Snapshot in local control state without applying Skill-content operations."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8223,
+        "fact": "Plan preparation binds declarative intent and evidence to the latest Snapshot and saves an immutable prepared plan."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 345,
+        "fact": "Apply and Undo are separate commands; interactive confirmation is bypassed in JSON mode."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8479,
+        "fact": "Apply requires a Ready plan and rechecks recovery, Snapshot, bindings, evidence and governance state."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8601,
+        "fact": "Undo requires an Applied receipt and rejects an existing reverse receipt."
+      },
+      {
+        "path": "src/change.rs",
+        "line": 1954,
+        "fact": "Undo reverses recorded compensations in reverse order, checking expected fingerprints or absent destinations."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "not exercised; ordinary forward arrows"
+  },
+  "skillroster-candidate": {
+    "semantics": "source-backed at overview scope",
+    "readability": "small context labels at native viewport; no material overlap observed",
+    "review_origin": "Author-side pinned-source and final JSON review plus native 1440x900 and explicitly taller full-page capture inspection.",
+    "findings": [
+      "The overview retains inspection versus Skill-content mutation, latest-Snapshot/evidence validation, independent Apply/Undo commands and receipt-based reversal.",
+      "The Plan-to-gate arrow is explicitly labeled apply ID and the node/card state a separate invocation; it does not establish an automatic apply step.",
+      "The first submitted input failed the projected-text floor at 5.47px. One diagnostic-driven revision compacted it; a later voluntary revision clarified Apply/Undo IDs and moved the state route endpoint.",
+      "Final native context labels are approximately 6.67px: above the 6px failure floor but below the preferred 7.5px target. The taller full-page image reflows larger and is not evidence of better 1440x900 readability; see ISSUES.md.",
+      "No new direction or label-arrow field was used. Unchanged final bytes deliver with identical layout and SVG on both versions."
+    ],
+    "source_checks": [
+      {
+        "path": "src/scan.rs",
+        "line": 984,
+        "fact": "Discovery observes approved roots and bounded session evidence; read scope does not confer mutation authority."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 1733,
+        "fact": "Scan persists a Snapshot in local control state without applying Skill-content operations."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8223,
+        "fact": "Plan preparation binds declarative intent and evidence to the latest Snapshot and saves an immutable prepared plan."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 345,
+        "fact": "Apply and Undo are separate commands; interactive confirmation is bypassed in JSON mode."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8479,
+        "fact": "Apply requires a Ready plan and rechecks recovery, Snapshot, bindings, evidence and governance state."
+      },
+      {
+        "path": "src/app.rs",
+        "line": 8601,
+        "fact": "Undo requires an Applied receipt and rejects an existing reverse receipt."
+      },
+      {
+        "path": "src/change.rs",
+        "line": 1954,
+        "fact": "Undo reverses recorded compensations in reverse order, checking expected fingerprints or absent destinations."
+      }
+    ],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed; captured check fails projected-text floor",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 1,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "not exercised; ordinary forward arrows"
+  },
+  "shared-messages-base": {
+    "semantics": "correct against the synthetic brief",
+    "readability": "readable; requested shared-label presentation unsupported",
+    "review_origin": "Author-side original BUSINESS.md, exact prompt, final JSON and native capture inspection.",
+    "findings": [
+      "The manager-approved purchase request and post-validation accept/reject decision retain distinct IDs and directions. Only accepted orders are stored; no systems or source citations were invented.",
+      "The Agent reported the installed tool limitation and used two parallel endpoint-arrow paths. This preserves the business facts but does not satisfy the requested shared corridor with label-adjacent direction cues.",
+      "Endpoint arrows were not forbidden by the benchmark prompt; the finding concerns the expressly requested shared-label presentation, not an invented extra acceptance criterion.",
+      "One voluntary revision trimmed redundant supporting text after a passing first check. Two failed commands were missing example/glob lookups.",
+      "Original final bytes render identically on both versions."
+    ],
+    "source_checks": [],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "unsupported requested presentation; honest fallback, delivered semantics retained",
+    "delivery_note": "delivered fallback; requested presentation unsupported"
+  },
+  "shared-messages-candidate": {
+    "semantics": "correct against the synthetic brief",
+    "readability": "readable; requested shared-label presentation observed",
+    "review_origin": "Author-side original BUSINESS.md, exact prompt, final JSON, light/dark native captures, PNG export and recorded Route inspection.",
+    "findings": [
+      "The two differently conditioned actions remain separate forward identities. Accepted-only storage and rejected-order exclusion match BUSINESS.md.",
+      "Two label arrows use one explicit straight corridor with centered opposite-side labels. Light/dark presentation and native SVG/PNG exports retain labels and direction cues without redundant endpoint arrows.",
+      "Direct Route from Project Management to ERP selects only approved-purchase-request; the reverse selects only validated-purchase-decision. Visual path sharing does not merge the relationships.",
+      "One voluntary revision removed redundant node prose after first-check success. One failed source-example lookup is retained.",
+      "Base rejects arrowPosition as unsupported. This is new presentation capability, not proof of fixing a previously supported renderer failure or reducing model rework."
+    ],
+    "source_checks": [],
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "capability_result": "exercised: 2 label arrows on one shared path"
+  }
+}

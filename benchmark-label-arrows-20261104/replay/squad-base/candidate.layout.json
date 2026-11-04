@@ -1,0 +1,473 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1420,
+    586
+  ],
+  "components": [
+    {
+      "id": "manager",
+      "type": "external",
+      "label": "Manager agent",
+      "x": 40,
+      "y": 65,
+      "width": 200,
+      "height": 78,
+      "pos": [
+        40,
+        65
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker agent",
+      "x": 40,
+      "y": 305,
+      "width": 200,
+      "height": 78,
+      "pos": [
+        40,
+        305
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "squad CLI",
+      "x": 395,
+      "y": 185,
+      "width": 215,
+      "height": 88,
+      "pos": [
+        395,
+        185
+      ]
+    },
+    {
+      "id": "tasks",
+      "type": "backend",
+      "label": "Task operations",
+      "x": 750,
+      "y": 65,
+      "width": 225,
+      "height": 88,
+      "pos": [
+        750,
+        65
+      ]
+    },
+    {
+      "id": "mailbox",
+      "type": "backend",
+      "label": "Mailbox operations",
+      "x": 750,
+      "y": 305,
+      "width": 225,
+      "height": 88,
+      "pos": [
+        750,
+        305
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "x": 1130,
+      "y": 185,
+      "width": 230,
+      "height": 88,
+      "pos": [
+        1130,
+        185
+      ]
+    },
+    {
+      "id": "sessions",
+      "type": "database",
+      "label": ".squad/sessions/<id>",
+      "x": 395,
+      "y": 440,
+      "width": 215,
+      "height": 78,
+      "pos": [
+        395,
+        440
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Shared local database",
+      "x": 1110,
+      "y": 160,
+      "width": 270,
+      "height": 133,
+      "wraps": [
+        "db"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager",
+      "to": "cli",
+      "label": "create / list / send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          240,
+          95.95
+        ],
+        [
+          411,
+          95.95
+        ],
+        [
+          411,
+          185
+        ]
+      ],
+      "labelAt": [
+        411,
+        130
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "manager",
+      "label": "results / inbox",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          395,
+          201
+        ],
+        [
+          224,
+          201
+        ],
+        [
+          224,
+          143
+        ]
+      ],
+      "labelAt": [
+        224,
+        162
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "cli",
+      "label": "ack / complete / send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          140,
+          305
+        ],
+        [
+          140,
+          236
+        ],
+        [
+          395,
+          236
+        ]
+      ],
+      "labelAt": [
+        268,
+        226
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "worker",
+      "label": "assignment / inbox",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          395,
+          257
+        ],
+        [
+          224,
+          257
+        ],
+        [
+          224,
+          305
+        ]
+      ],
+      "labelAt": [
+        224,
+        271
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "tasks",
+      "label": "task commands",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          610,
+          201
+        ],
+        [
+          766,
+          201
+        ],
+        [
+          766,
+          153
+        ]
+      ],
+      "labelAt": [
+        766,
+        167
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "mailbox",
+      "label": "send / receive",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          610,
+          257
+        ],
+        [
+          766,
+          257
+        ],
+        [
+          766,
+          305
+        ]
+      ],
+      "labelAt": [
+        766,
+        271
+      ]
+    },
+    {
+      "from": "tasks",
+      "to": "db",
+      "label": "task + notice SQL",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          959,
+          153
+        ],
+        [
+          959,
+          201
+        ],
+        [
+          1130,
+          201
+        ]
+      ],
+      "labelAt": [
+        1045,
+        191
+      ]
+    },
+    {
+      "from": "mailbox",
+      "to": "db",
+      "label": "insert / read-mark",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          959,
+          305
+        ],
+        [
+          959,
+          257
+        ],
+        [
+          1130,
+          257
+        ]
+      ],
+      "labelAt": [
+        1045,
+        247
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "sessions",
+      "label": "write / validate",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          502.5,
+          273
+        ],
+        [
+          502.5,
+          440
+        ]
+      ],
+      "labelAt": [
+        453,
+        360
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "db",
+      "label": "join / session / heartbeat",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          610,
+          229
+        ],
+        [
+          1130,
+          229
+        ]
+      ],
+      "labelAt": [
+        870,
+        219
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "create / list / send",
+      "x": 358,
+      "y": 120,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        411,
+        130
+      ]
+    },
+    {
+      "text": "results / inbox",
+      "x": 183,
+      "y": 152,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        224,
+        162
+      ]
+    },
+    {
+      "text": "ack / complete / send",
+      "x": 212,
+      "y": 216,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        268,
+        226
+      ]
+    },
+    {
+      "text": "assignment / inbox",
+      "x": 176,
+      "y": 261,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        224,
+        271
+      ]
+    },
+    {
+      "text": "task commands",
+      "x": 730,
+      "y": 157,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        766,
+        167
+      ]
+    },
+    {
+      "text": "send / receive",
+      "x": 727,
+      "y": 261,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        766,
+        271
+      ]
+    },
+    {
+      "text": "task + notice SQL",
+      "x": 999,
+      "y": 181,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        1045,
+        191
+      ]
+    },
+    {
+      "text": "insert / read-mark",
+      "x": 996,
+      "y": 237,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        1045,
+        247
+      ]
+    },
+    {
+      "text": "write / validate",
+      "x": 410,
+      "y": 350,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        453,
+        360
+      ]
+    },
+    {
+      "text": "join / session / heartbeat",
+      "x": 803,
+      "y": 209,
+      "width": 135,
+      "height": 14,
+      "labelAt": [
+        870,
+        219
+      ]
+    }
+  ]
+}

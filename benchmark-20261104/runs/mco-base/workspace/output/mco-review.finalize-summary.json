@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+    "sha256": "78d12082bf3c336b0a1454a0d1c4c8373d7982c1875e778b16abb13c2b6bab4e",
+    "bytes": 11567
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.html",
+    "sha256": "f8220907cdc341c478cdc5830c4df3eea28fbf491c199c1c433619dd106fd85c",
+    "bytes": 886566
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2429,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "stream-deltas",
+            "from": "invocation-worker",
+            "to": "cli-output",
+            "label": "live events",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "invocation-worker → cli-output needs 3 bends: move node invocation-worker or cli-output so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

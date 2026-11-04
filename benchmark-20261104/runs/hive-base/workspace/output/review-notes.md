@@ -1,0 +1,9 @@
+# Delivery review
+
+- Final candidate: `candidate.json`; final diagram: `hive-task-path.html`.
+- The current authoritative finalization and browser receipts are in `review-final/`. Root-level receipts and `review-2/` describe earlier candidates, not the final artifact.
+- Archify showcase validation, delivery, strict artifact checks and the real-Chrome browser gate passed for the final candidate. The separate visual-check also passed its automated containment, readability, viewer, theme and capture checks.
+- Perceptual review: inspected the final 1440×900 dark and 2048×1320 light captures. The main drawing fits the laptop screen; evidence cards continue below it. Labels and arrow directions remain separate, process/runtime boundaries do not enclose unrelated components, and the worker-output return uses an unobstructed outer corridor. This is visual review of the captured READ view, not an additional claim about every interactive Viewer state.
+- Simplification/ablation experiment: removed the explicit worker-output endpoint-side constraints and reran full finalization (`review-2/`). Automated gates still passed, but routing diagnostics reported three crossovers instead of zero. Restored the two endpoint-side constraints because they materially preserve the readable task/return paths. The retained three-bend outer return is intentional and was visually inspected; no waypoint coordinates or custom viewBox were necessary.
+- Content simplification: retained six responsibility-level components; represented task-file synchronization in a scope note rather than expanding an unrelated filesystem subgraph. No external agent implementation, remote gateway, workflow runner or automatic task-list scheduler was invented.
+- Update checks were disabled for this offline/source-only task. No live services, installs, delegation or project execution were used. Application source was unchanged; the selected project remained clean after artifact generation.

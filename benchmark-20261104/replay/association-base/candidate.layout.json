@@ -1,0 +1,129 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    720,
+    398
+  ],
+  "components": [
+    {
+      "id": "crm",
+      "type": "backend",
+      "label": "CRM",
+      "x": 40,
+      "y": 40,
+      "width": 200,
+      "height": 70,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "x": 40,
+      "y": 260,
+      "width": 200,
+      "height": 70,
+      "pos": [
+        40,
+        260
+      ]
+    },
+    {
+      "id": "reporting",
+      "type": "backend",
+      "label": "Reporting",
+      "x": 500,
+      "y": 150,
+      "width": 180,
+      "height": 70,
+      "pos": [
+        500,
+        150
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "crm",
+      "to": "reporting",
+      "label": "Publishes sales summaries",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          240,
+          94
+        ],
+        [
+          516,
+          94
+        ],
+        [
+          516,
+          150
+        ]
+      ],
+      "labelAt": [
+        516,
+        112
+      ]
+    },
+    {
+      "from": "project-management",
+      "to": "reporting",
+      "label": "Publishes delivery summaries",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          240,
+          276
+        ],
+        [
+          516,
+          276
+        ],
+        [
+          516,
+          220
+        ]
+      ],
+      "labelAt": [
+        516,
+        238
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Publishes sales summaries",
+      "x": 451,
+      "y": 102,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        516,
+        112
+      ]
+    },
+    {
+      "text": "Publishes delivery summaries",
+      "x": 444,
+      "y": 228,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        516,
+        238
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "hive-candidate",
+  "project_id": "hive",
+  "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "package_or_tree_sha256": "dc2d2fb2503f08cc0119e2705f6b04f5c718d8a494d9582221a6572f7316d1d6",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "4ecfe8278c6ad6b6c08537855b477c53369f3bc25fe0356849e81f10b9c7f5a5",
+    "substantive_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+  },
+  "session": {
+    "id": "01a1a57c-d065-7322-a13c-3008f7c45d9c",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T07:42:00.165Z",
+        "pid": 75789,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766",
+        "snapshot": "snapshots/eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766.json"
+      },
+      {
+        "at": "2026-11-04T07:43:35.274Z",
+        "pid": 76444,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json",
+          "--out-dir",
+          "output/review-2"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "1496252935efa0c866966144b0329844759c366f55aa1cec4ff9f8edcb495e6a",
+        "snapshot": "snapshots/1496252935efa0c866966144b0329844759c366f55aa1cec4ff9f8edcb495e6a.json"
+      },
+      {
+        "at": "2026-11-04T07:44:01.434Z",
+        "pid": 76876,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json",
+          "--out-dir",
+          "output/final-review"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9",
+        "snapshot": "snapshots/5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.delivery.json"
+    ],
+    "screenshots": [
+      "captures/hive-candidate/fullpage.light.png",
+      "captures/hive-candidate/directions.light.png",
+      "captures/hive-candidate/export.dark.png",
+      "captures/hive-candidate/export.light.png",
+      "captures/hive-candidate/directions.dark.png",
+      "captures/hive-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; dense labels are small at default viewport",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side source, JSON, native viewport and feature-export inspection; no maintainer approval.",
+    "findings": [
+      "Task planning is distinct from worker dispatch; CLI agents execute under local PTYs and final report persistence is distinct from delivery.",
+      "Two modified submitted candidates after first validation.",
+      "Ten label markers on five opposite-direction pairs were naturally selected without feature hints. IDs remain separate and every inspected direct Route selects the corresponding relationship.",
+      "Horizontal and vertical direction cues remain attributable in light/dark, native SVG and PNG exports. All 12 edges remain forward; distinct input/output messages are not merged into both.",
+      "Two voluntary refinements after first successful validation; a separate failed file-read command requested a nonexistent example, not a generation/renderer failure.",
+      "Base rejects the new arrowPosition field as unsupported; that rejection is not a repaired baseline defect."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 2,
+    "tool_calls": 28,
+    "usage": {
+      "input_tokens": 2359889,
+      "cached_input_tokens": 2287360,
+      "output_tokens": 11328,
+      "reasoning_output_tokens": 3637,
+      "uncached_input_tokens": 72529
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 2
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "naturally exercised: 10 label arrows, 5 shared opposite pairs; export and Route inspected",
+    "label_arrow_count": 10
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:36:22.597722+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T07:44:48.947570+00:00",
+    "wall_seconds": 506.35178129199994,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 337.550535,
+    "time_to_first_cli_seconds": 337.567278
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

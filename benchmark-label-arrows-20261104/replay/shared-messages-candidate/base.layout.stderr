@@ -1,0 +1,5 @@
+architecture schema validation failed:
+  /connections/0 (id/label: "approved-purchase-request") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/1 (id/label: "validated-purchase-decision") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+[schema/additionalProperties] /connections/0 (id/label: "approved-purchase-request") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/1 (id/label: "validated-purchase-decision") must NOT have additional properties Fix: remove unsupported property "arrowPosition".

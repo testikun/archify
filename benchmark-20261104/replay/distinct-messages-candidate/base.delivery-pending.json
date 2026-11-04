@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "beffbe20-ef7a-4f45-9619-e8062d660be4",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/distinct-messages-candidate/base.html"
+}

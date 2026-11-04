@@ -1,0 +1,321 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1310,
+    618
+  ],
+  "components": [
+    {
+      "id": "review-entry",
+      "type": "frontend",
+      "label": "Review entry points",
+      "x": 40,
+      "y": 140,
+      "width": 270,
+      "height": 100,
+      "pos": [
+        40,
+        140
+      ]
+    },
+    {
+      "id": "invocation-runtime",
+      "type": "backend",
+      "label": "Invocation runtime",
+      "x": 500,
+      "y": 140,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        500,
+        140
+      ]
+    },
+    {
+      "id": "provider-adapters",
+      "type": "backend",
+      "label": "Provider adapters",
+      "x": 970,
+      "y": 140,
+      "width": 270,
+      "height": 100,
+      "pos": [
+        970,
+        140
+      ]
+    },
+    {
+      "id": "run-files",
+      "type": "database",
+      "label": "Local run artifacts",
+      "x": 500,
+      "y": 450,
+      "width": 280,
+      "height": 100,
+      "pos": [
+        500,
+        450
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Selected provider CLIs",
+      "x": 970,
+      "y": 450,
+      "width": 270,
+      "height": 100,
+      "pos": [
+        970,
+        450
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "MCO process · entry, orchestration and adapters",
+      "x": 10,
+      "y": 110,
+      "width": 1260,
+      "height": 150,
+      "wraps": [
+        "review-entry",
+        "invocation-runtime",
+        "provider-adapters"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "review-entry",
+      "to": "invocation-runtime",
+      "label": "Validated invocations",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          310,
+          190
+        ],
+        [
+          500,
+          190
+        ]
+      ],
+      "labelAt": [
+        405,
+        181
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "review-entry",
+      "label": "Individual outputs[]",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          500,
+          190
+        ],
+        [
+          310,
+          190
+        ]
+      ],
+      "labelAt": [
+        405,
+        205
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "provider-adapters",
+      "label": "TaskInput · run / poll",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          780,
+          190
+        ],
+        [
+          970,
+          190
+        ]
+      ],
+      "labelAt": [
+        875,
+        181
+      ]
+    },
+    {
+      "from": "provider-adapters",
+      "to": "invocation-runtime",
+      "label": "Status + decoded answer",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          970,
+          190
+        ],
+        [
+          780,
+          190
+        ]
+      ],
+      "labelAt": [
+        875,
+        205
+      ]
+    },
+    {
+      "from": "provider-adapters",
+      "to": "provider-processes",
+      "label": "Spawn command",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          1105,
+          240
+        ],
+        [
+          1105,
+          450
+        ]
+      ],
+      "labelAt": [
+        1154,
+        348
+      ]
+    },
+    {
+      "from": "provider-processes",
+      "to": "provider-adapters",
+      "label": "Logs + exit status",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          1105,
+          450
+        ],
+        [
+          1105,
+          240
+        ]
+      ],
+      "labelAt": [
+        1044,
+        348
+      ]
+    },
+    {
+      "from": "invocation-runtime",
+      "to": "run-files",
+      "label": "Write answers; optionally retain",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          640,
+          240
+        ],
+        [
+          640,
+          450
+        ]
+      ],
+      "labelAt": [
+        552,
+        348
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Validated invocations",
+      "x": 342,
+      "y": 171,
+      "width": 127,
+      "height": 14,
+      "labelAt": [
+        405,
+        181
+      ]
+    },
+    {
+      "text": "Individual outputs[]",
+      "x": 344,
+      "y": 195,
+      "width": 122,
+      "height": 14,
+      "labelAt": [
+        405,
+        205
+      ]
+    },
+    {
+      "text": "TaskInput · run / poll",
+      "x": 809,
+      "y": 171,
+      "width": 132,
+      "height": 14,
+      "labelAt": [
+        875,
+        181
+      ]
+    },
+    {
+      "text": "Status + decoded answer",
+      "x": 807,
+      "y": 195,
+      "width": 136,
+      "height": 14,
+      "labelAt": [
+        875,
+        205
+      ]
+    },
+    {
+      "text": "Spawn command",
+      "x": 1110,
+      "y": 338,
+      "width": 88,
+      "height": 14,
+      "labelAt": [
+        1154,
+        348
+      ]
+    },
+    {
+      "text": "Logs + exit status",
+      "x": 988,
+      "y": 338,
+      "width": 112,
+      "height": 14,
+      "labelAt": [
+        1044,
+        348
+      ]
+    },
+    {
+      "text": "Write answers; optionally retain",
+      "x": 470,
+      "y": 338,
+      "width": 164,
+      "height": 14,
+      "labelAt": [
+        552,
+        348
+      ]
+    }
+  ]
+}

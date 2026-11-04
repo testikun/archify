@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-04T07:42:11.538Z",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "sha256": "b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b",
+    "bytes": 9010
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html"
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/project",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "78ab49a5-9222-4107-958a-e2ce8caddad9",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+        "error": "Architecture layout validation failed:\n- [composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 1 [760, 399] -> [760, 550] (label rect [713, 411, 130, 14]; minimum 4px) — if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+        "diagnostics": [
+          {
+            "code": "composition/label-route-clearance",
+            "severity": "error",
+            "message": "[composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 1 [760, 399] -> [760, 550] (label rect [713, 411, 130, 14]; minimum 4px) — if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "index": 7,
+              "id": "worker-report",
+              "from": "worker",
+              "to": "control"
+            },
+            "evidence": {
+              "label": "4 · HTTP message / report",
+              "otherRelationship": {
+                "diagramType": "architecture",
+                "collection": "connections",
+                "index": 10,
+                "id": "team-visibility",
+                "from": "control",
+                "to": "team-ui"
+              },
+              "segmentIndex": 1,
+              "clearancePx": 0,
+              "minimumPx": 4,
+              "labelRect": {
+                "relation": {
+                  "id": "worker-report",
+                  "from": "worker",
+                  "to": "control",
+                  "label": "4 · HTTP message / report",
+                  "variant": "dashed",
+                  "labelDy": 25
+                },
+                "relationIndex": 7,
+                "label": "4 · HTTP message / report",
+                "x": 712.5,
+                "y": 411,
+                "width": 130,
+                "height": 14,
+                "lx": 777.5,
+                "ly": 421
+              },
+              "from": [
+                760,
+                399
+              ],
+              "to": [
+                760,
+                550
+              ]
+            },
+            "supportedFixes": [
+              "if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+            ]
+          }
+        ],
+        "provenance": "absent",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 1 [760, 399] -> [760, 550] (label rect [713, 411, 130, 14]; minimum 4px) — if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 7,
+        "id": "worker-report",
+        "from": "worker",
+        "to": "control"
+      },
+      "evidence": {
+        "label": "4 · HTTP message / report",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 10,
+          "id": "team-visibility",
+          "from": "control",
+          "to": "team-ui"
+        },
+        "segmentIndex": 1,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "worker-report",
+            "from": "worker",
+            "to": "control",
+            "label": "4 · HTTP message / report",
+            "variant": "dashed",
+            "labelDy": 25
+          },
+          "relationIndex": 7,
+          "label": "4 · HTTP message / report",
+          "x": 712.5,
+          "y": 411,
+          "width": 130,
+          "height": 14,
+          "lx": 777.5,
+          "ly": 421
+        },
+        "from": [
+          760,
+          399
+        ],
+        "to": [
+          760,
+          550
+        ]
+      },
+      "supportedFixes": [
+        "if the authored labelDy/via/fromSide/toSide/labelSegment are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-11-04T07:42:11.833Z",
+  "durationMs": 294,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

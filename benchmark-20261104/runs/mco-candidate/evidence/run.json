@@ -1,0 +1,182 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "mco-candidate",
+  "project_id": "mco",
+  "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "83bc9a34bf0a1576d9d1766bc0c29614e5c5eaee8d088636dd041f59d56315b7",
+    "substantive_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+  },
+  "session": {
+    "id": "01a1a469-b1bd-7c71-9823-89bc42a77f48",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/76c485bb2f106d6f09b0036f87801f48368b036edb81e7c2e46c33cb5208ea78.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:39:04.990Z",
+        "pid": 92195,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "76c485bb2f106d6f09b0036f87801f48368b036edb81e7c2e46c33cb5208ea78",
+        "snapshot": "snapshots/76c485bb2f106d6f09b0036f87801f48368b036edb81e7c2e46c33cb5208ea78.json"
+      },
+      {
+        "at": "2026-11-04T02:39:38.639Z",
+        "pid": 92322,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "b074f0daad522696f66584116accfae6fd221f8741caf42a8b5f66273b9613f1",
+        "snapshot": "snapshots/b074f0daad522696f66584116accfae6fd221f8741caf42a8b5f66273b9613f1.json"
+      },
+      {
+        "at": "2026-11-04T02:40:09.807Z",
+        "pid": 92797,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-3",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "f8952f83d00e496791ac1377fec003bdba1410f3bbab99968e6a165ee006cec0",
+        "snapshot": "snapshots/f8952f83d00e496791ac1377fec003bdba1410f3bbab99968e6a165ee006cec0.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/mco-review.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json"
+    ],
+    "screenshots": [
+      "captures/mco-candidate/fullpage.light.png",
+      "captures/mco-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final JSON, pinned source, submitted-version diffs and saved full-page screenshot; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Seven components separate logical responsibilities inside MCO, external provider CLI processes and local artifact files. Runtime/adapter return arrows summarize run references, process status and log transport; explanations identify actual raw-log reads. No remote topology, provider reasoning or independent result-collection service is invented.",
+      "The default concurrent workflow, selected-provider ordering, individual failed/cancelled results and complete/partial/failed aggregate outcome match source. Live callbacks and final JSON return are separately drawn. Optional persistence is conditional, and read-only is correctly described as a configurable permission mode.",
+      "First captured JSON passes validation. Two voluntary revisions remove a redundant adapter tag and replace generic legend category names with CLI output, MCO logic, Local files and Child processes. Two failed shell commands refer to guessed source/example paths or an unmatched finalize glob; neither is a diagram validation failure.",
+      "The final drawing is readable, with traceable reciprocal control/result paths and a clear process/filesystem boundary. No clipping or boundary-title masking was observed. Return paths use broad bends and substantial empty space remains, but the diagram's factual distinctions are legible.",
+      "All nine relationships use forward semantics. Fixed-input replay yields identical layout and canonical SVG on both revisions. The changed number of logical boxes, revisions and tokens reflects separate generation choices; this run provides no direct evidence of new direction-feature benefit."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 2,
+    "tool_calls": 20,
+    "usage": {
+      "input_tokens": 1390196,
+      "cached_input_tokens": 1334528,
+      "output_tokens": 7084,
+      "reasoning_output_tokens": 1199,
+      "uncached_input_tokens": 55668
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 2
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:35:52.527503+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:40:38.110148+00:00",
+    "wall_seconds": 285.5504963340004,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 192.462497,
+    "time_to_first_cli_seconds": 192.462497
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

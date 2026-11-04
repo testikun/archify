@@ -1,0 +1,448 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1103,
+    528
+  ],
+  "components": [
+    {
+      "id": "parent-caller",
+      "type": "external",
+      "label": "Parent Pi agent",
+      "x": 25,
+      "y": 70,
+      "width": 205,
+      "height": 80,
+      "pos": [
+        25,
+        70
+      ]
+    },
+    {
+      "id": "tool-boundary",
+      "type": "backend",
+      "label": "Subagent tool boundary",
+      "x": 390,
+      "y": 70,
+      "width": 235,
+      "height": 80,
+      "pos": [
+        390,
+        70
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "Subagent manager",
+      "x": 815,
+      "y": 70,
+      "width": 235,
+      "height": 80,
+      "pos": [
+        815,
+        70
+      ]
+    },
+    {
+      "id": "child-session",
+      "type": "backend",
+      "label": "Pi adapter + child session",
+      "x": 815,
+      "y": 355,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        815,
+        355
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion delivery",
+      "x": 390,
+      "y": 355,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        390,
+        355
+      ]
+    },
+    {
+      "id": "parent-transcript",
+      "type": "database",
+      "label": "Parent Pi transcript",
+      "x": 25,
+      "y": 355,
+      "width": 225,
+      "height": 85,
+      "pos": [
+        25,
+        355
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "security-group",
+      "label": "Separate session · restricted tools, not an OS sandbox",
+      "x": 802,
+      "y": 331,
+      "width": 261,
+      "height": 129,
+      "wraps": [
+        "child-session"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "parent-caller",
+      "to": "tool-boundary",
+      "label": "spawn / check / wait",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          230,
+          101.95
+        ],
+        [
+          390,
+          101.95
+        ]
+      ],
+      "labelAt": [
+        310,
+        92
+      ]
+    },
+    {
+      "from": "tool-boundary",
+      "to": "parent-caller",
+      "label": "ID / status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          390,
+          117
+        ],
+        [
+          230,
+          117
+        ]
+      ],
+      "labelAt": [
+        310,
+        137
+      ]
+    },
+    {
+      "from": "tool-boundary",
+      "to": "manager",
+      "label": "spawn / read / wait",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          625,
+          94.95
+        ],
+        [
+          815,
+          94.95
+        ]
+      ],
+      "labelAt": [
+        720,
+        85
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "tool-boundary",
+      "label": "snapshot / settled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          815,
+          110
+        ],
+        [
+          625,
+          110
+        ]
+      ],
+      "labelAt": [
+        720,
+        130
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "child-session",
+      "label": "backend.spawn(task)",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          940.55,
+          150
+        ],
+        [
+          940.55,
+          355
+        ]
+      ],
+      "labelAt": [
+        997,
+        256
+      ]
+    },
+    {
+      "from": "child-session",
+      "to": "manager",
+      "label": "activity / RunSettled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          925.5,
+          355
+        ],
+        [
+          925.5,
+          150
+        ]
+      ],
+      "labelAt": [
+        864,
+        307
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "delivery",
+      "label": "onSettled; defer if unconsumed",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          815,
+          124
+        ],
+        [
+          784,
+          124
+        ],
+        [
+          784,
+          397.5
+        ],
+        [
+          625,
+          397.5
+        ]
+      ],
+      "labelAt": [
+        784,
+        251
+      ]
+    },
+    {
+      "from": "tool-boundary",
+      "to": "delivery",
+      "label": "wait consumes result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          507.5,
+          150
+        ],
+        [
+          507.5,
+          355
+        ]
+      ],
+      "labelAt": [
+        449,
+        256
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "parent-caller",
+      "label": "followUp; idle or parent settled",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          390,
+          390.5
+        ],
+        [
+          366,
+          390.5
+        ],
+        [
+          366,
+          174
+        ],
+        [
+          127.5,
+          174
+        ],
+        [
+          127.5,
+          150
+        ]
+      ],
+      "labelAt": [
+        366,
+        272
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "parent-transcript",
+      "label": "appendEntry",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          390,
+          405.55
+        ],
+        [
+          250,
+          405.55
+        ]
+      ],
+      "labelAt": [
+        320,
+        396
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "spawn / check / wait",
+      "x": 257,
+      "y": 82,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        310,
+        92
+      ]
+    },
+    {
+      "text": "ID / status / result",
+      "x": 257,
+      "y": 127,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        310,
+        137
+      ]
+    },
+    {
+      "text": "spawn / read / wait",
+      "x": 669,
+      "y": 75,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        720,
+        85
+      ]
+    },
+    {
+      "text": "snapshot / settled",
+      "x": 672,
+      "y": 120,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        720,
+        130
+      ]
+    },
+    {
+      "text": "backend.spawn(task)",
+      "x": 947,
+      "y": 246,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        997,
+        256
+      ]
+    },
+    {
+      "text": "activity / RunSettled",
+      "x": 809,
+      "y": 297,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        864,
+        307
+      ]
+    },
+    {
+      "text": "onSettled; defer if unconsumed",
+      "x": 707,
+      "y": 241,
+      "width": 154,
+      "height": 14,
+      "labelAt": [
+        784,
+        251
+      ]
+    },
+    {
+      "text": "wait consumes result",
+      "x": 396,
+      "y": 246,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        449,
+        256
+      ]
+    },
+    {
+      "text": "followUp; idle or parent settled",
+      "x": 284,
+      "y": 262,
+      "width": 164,
+      "height": 14,
+      "labelAt": [
+        366,
+        272
+      ]
+    },
+    {
+      "text": "appendEntry",
+      "x": 289,
+      "y": 386,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        320,
+        396
+      ]
+    }
+  ]
+}

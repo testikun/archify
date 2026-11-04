@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+    "sha256": "90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192",
+    "bytes": 9150
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html",
+    "sha256": "16341c2a91b8cc62662eae3ab65b4fb81c29a529adc0a1fd518a29488004c3b9",
+    "bytes": 882458
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-1/openpi-subagents.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-1/openpi-subagents.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-1/openpi-subagents.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2149,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 1,
+      "routesOverSuggestedBends": 2,
+      "routesOverSuggestedStretch": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "events",
+            "from": "backend",
+            "to": "manager",
+            "label": "activity + RunSettled",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "settled",
+            "from": "manager",
+            "to": "delivery",
+            "label": "unconsumed settlement",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            821.1499999999997,
+            230.5
+          ],
+          "sharedNode": "manager"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "start",
+            "from": "manager",
+            "to": "backend",
+            "label": "scoped spawn(task)",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 4,
+          "stretch": 1.143
+        },
+        {
+          "relationship": {
+            "id": "events",
+            "from": "backend",
+            "to": "manager",
+            "label": "activity + RunSettled",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "bends": 4,
+          "stretch": 1.619
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "backend → manager and manager → delivery cross next to manager: move node backend or delivery so the two reach manager from different sides (for example one level with it, one directly above or below it).",
+      "manager → backend needs 4 bends: move node manager or backend so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "backend → manager needs 4 bends: move node backend or manager so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

@@ -1,0 +1,13 @@
+architecture schema validation failed:
+  /connections/0 (id/label: "submit-review") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/1 (id/label: "return-results") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/2 (id/label: "start-provider") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/3 (id/label: "decode-provider") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/4 (id/label: "spawn-cli") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/5 (id/label: "capture-cli") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+[schema/additionalProperties] /connections/0 (id/label: "submit-review") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/1 (id/label: "return-results") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/2 (id/label: "start-provider") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/3 (id/label: "decode-provider") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/4 (id/label: "spawn-cli") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/5 (id/label: "capture-cli") must NOT have additional properties Fix: remove unsupported property "arrowPosition".

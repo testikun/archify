@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+    "sha256": "0588202277d7d78f1ab1d0cba19cd39ea0fb601b656a831964293d4b24d48ed9",
+    "bytes": 10631
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html",
+    "sha256": "e4f9287e063fcc05af50885e673ab0cdbfd4968975f8b85315b445e07f1e49b0",
+    "bytes": 890634
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2368,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [],
+      "detours": [
+        {
+          "relationship": {
+            "id": "wake-parent",
+            "from": "delivery",
+            "to": "parent-caller",
+            "label": "followUp; idle or parent settled",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "delivery → parent-caller needs 3 bends: move node delivery or parent-caller so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

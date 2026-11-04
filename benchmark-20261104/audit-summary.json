@@ -1,0 +1,961 @@
+{
+  "checks": [
+    {
+      "check": "All 16 scheduled sessions retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted e67f3b6015ae",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted 6d7adfdd4c84",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted 00e1046a2ee3",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: submitted 0588202277d7",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: submitted 6f1950231b08",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: submitted c16672aaad56",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: submitted 00c46cc7ca6b",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "hive-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "hive-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted 9ba66a6f79d6",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted d9fc907b1d8d",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted 2c3559f60044",
+      "pass": true
+    },
+    {
+      "check": "hive-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "hive-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "hive-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "mco-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "mco-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-base: submitted 78d12082bf3c",
+      "pass": true
+    },
+    {
+      "check": "mco-base: submitted 495a319af685",
+      "pass": true
+    },
+    {
+      "check": "mco-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "mco-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "mco-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: submitted 76c485bb2f10",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: submitted b074f0daad52",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: submitted f8952f83d00e",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: submitted 7adb00507f87",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: submitted f7bed3f87cae",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: new relation identities inspected",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: reverse structural Route/Reach/static manager-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: reverse structural Route/Reach/static worker-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: reverse structural Route/Reach/static cli-store",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: reverse structural Route/Reach/static store-db",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export markers manager-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export markers worker-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export markers cli-store",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export markers store-db",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export markers manager-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export markers worker-cli",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export markers cli-store",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export markers store-db",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "squad-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "squad-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-base: submitted 9b773aad9bce",
+      "pass": true
+    },
+    {
+      "check": "squad-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "squad-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "squad-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: submitted f8c5b6da93a3",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: submitted 5f4278852453",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted b62e5ae7e074",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted ed1ee4ed9ee0",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted 4a08666d907b",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted 6102c7a381c2",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted becc66d02986",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: submitted c5fbe8bcec0c",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: new relation identities inspected",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: reverse structural Route/Reach/static opportunity-identifier-correspondence",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: light export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: light export markers opportunity-identifier-correspondence",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: light native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: dark export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: dark export markers opportunity-identifier-correspondence",
+      "pass": true
+    },
+    {
+      "check": "association-candidate: dark native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "association-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "association-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "association-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "association-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "association-base: submitted 764982bcc9c0",
+      "pass": true
+    },
+    {
+      "check": "association-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "association-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "association-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "association-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "association-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: submitted 2429af020c07",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: submitted 2b9d0cd0e606",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: submitted 6223a1305762",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: new relation identities inspected",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: reverse structural Route/Reach/static shared-status-sync",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: light export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: light export markers shared-status-sync",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: light native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: dark export retains new identities",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: dark export markers shared-status-sync",
+      "pass": true
+    },
+    {
+      "check": "symmetric-sync-candidate: dark native PNG exists",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: submitted 9447dc4468d1",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: submitted bb1f19f78f3e",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: submitted 149d25b73c9f",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "distinct-messages-base: captured final artifact",
+      "pass": true
+    }
+  ],
+  "passed": 211,
+  "failed": [],
+  "export_features": [
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "manager-cli",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "worker-cli",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "cli-store",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-start)",
+      "marker_end": "url(#arrowhead)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "store-db",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "manager-cli",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "worker-cli",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "cli-store",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-start)",
+      "marker_end": "url(#arrowhead)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "store-db",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-emphasis-start)",
+      "marker_end": "url(#arrowhead-emphasis)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "association-candidate",
+      "theme": "light",
+      "id": "opportunity-identifier-correspondence",
+      "direction": "none",
+      "marker_start": null,
+      "marker_end": null,
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "association-candidate",
+      "theme": "dark",
+      "id": "opportunity-identifier-correspondence",
+      "direction": "none",
+      "marker_start": null,
+      "marker_end": null,
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "symmetric-sync-candidate",
+      "theme": "light",
+      "id": "shared-status-sync",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-start)",
+      "marker_end": "url(#arrowhead)",
+      "definitions_resolved": true
+    },
+    {
+      "run_id": "symmetric-sync-candidate",
+      "theme": "dark",
+      "id": "shared-status-sync",
+      "direction": "both",
+      "marker_start": "url(#arrowhead-start)",
+      "marker_end": "url(#arrowhead)",
+      "definitions_resolved": true
+    }
+  ],
+  "scope": "Evidence integrity and recorded feature behavior only. Does not score semantic correctness or visual quality."
+}

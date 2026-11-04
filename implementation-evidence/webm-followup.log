@@ -1,0 +1,176 @@
+
+> test:webm
+> node test/webm-artifact.smoke.mjs && node --test test/site-language-integration.mjs
+
+ok legend runtime: labels, counts, keyboard, export, print, embed, hidden, and dual themes
+ok Semantic Passport: close control, focus return, inside preservation, and outside dismissal
+ok Architecture Delta navigator + export: exact identity, complete explorers, static SVG, and 117997-byte Share Card
+ok architecture-route Route Card: 83744 bytes, 4 nodes, 3 exact hops
+ok workflow-route Route Card: 99491 bytes, 5 nodes, 4 exact hops
+ok sequence-route Route Card: 94637 bytes, 3 nodes, 2 exact hops
+ok dataflow-route Route Card: 111711 bytes, 5 nodes, 4 exact hops
+ok lifecycle-route Route Card: 97133 bytes, 3 nodes, 2 exact hops
+ok parallel-route Route Card: 82780 bytes, 2 nodes, 1 exact hops
+ok special-10-hop-route Route Card: 61751 bytes, 11 nodes, 10 exact hops
+ok architecture-route Route visual matrix: Classic/Flow/Blueprint/Editorial x dark/light
+ok sequence-route Route visual matrix: Classic/Flow/Blueprint/Editorial x dark/light
+ok architecture-reach Reach Card: 88171 bytes, 9 nodes, 8 authored links
+ok workflow-reach Reach Card: 104503 bytes, 11 nodes, 10 authored links
+ok sequence-reach Reach Card: 100890 bytes, 7 nodes, 12 authored links
+ok dataflow-reach Reach Card: 117669 bytes, 9 nodes, 9 authored links
+ok lifecycle-reach Reach Card: 106576 bytes, 8 nodes, 10 authored links
+ok architecture-route reduced motion: dynamic reduced-motion paused Journey without changing Route Card source
+ok WebM artifact: 99475 bytes, 10 sampled frames, 10 unique
+TAP version 13
+# Subtest: attachment preserves localized native state labels and localizes the Story transition
+ok 1 - attachment preserves localized native state labels and localizes the Story transition
+  ---
+  duration_ms: 6342.377333
+  type: 'test'
+  ...
+# Subtest: a public story attaches once, follows native appearance and retains source notes and exports
+ok 2 - a public story attaches once, follows native appearance and retains source notes and exports
+  ---
+  duration_ms: 12030.6635
+  type: 'test'
+  ...
+# Subtest: flowless guides stay out of the story opening clock
+ok 3 - flowless guides stay out of the story opening clock
+  ---
+  duration_ms: 1933.473625
+  type: 'test'
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 3
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20393.99825
+TAP version 13
+# Subtest: site language runtime normalizes one entry parameter into one durable preference
+ok 1 - site language runtime normalizes one entry parameter into one durable preference
+  ---
+  duration_ms: 4.630584
+  type: 'test'
+  ...
+# Subtest: custom site builders emit every shared site asset and preserve entry, navigation, selection, and refresh state
+ok 2 - custom site builders emit every shared site asset and preserve entry, navigation, selection, and refresh state
+  ---
+  duration_ms: 3045.70575
+  type: 'test'
+  ...
+# Subtest: all site pages consume one language runtime and one navigation contract
+ok 3 - all site pages consume one language runtime and one navigation contract
+  ---
+  duration_ms: 3.91025
+  type: 'test'
+  ...
+# Subtest: site page identity paths localize with the selected language
+ok 4 - site page identity paths localize with the selected language
+  ---
+  duration_ms: 0.826417
+  type: 'test'
+  ...
+# Subtest: proof gallery type filters localize with the selected language
+ok 5 - proof gallery type filters localize with the selected language
+  ---
+  duration_ms: 0.771458
+  type: 'test'
+  ...
+# Subtest: scenario guide type filters use consistent Chinese diagram names
+ok 6 - scenario guide type filters use consistent Chinese diagram names
+  ---
+  duration_ms: 0.307125
+  type: 'test'
+  ...
+# Subtest: real Chrome preserves language through entry, navigation, selection, refresh, and consistent navigation chrome
+not ok 7 - real Chrome preserves language through entry, navigation, selection, refresh, and consistent navigation chrome
+  ---
+  duration_ms: 42771.533167
+  type: 'test'
+  location: '/evidence/issue-1139/implementation/test/site-language-continuity.test.mjs:409:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Page load failed while navigating to http://127.0.0.1:62902/index.html?lang=en (expected http://127.0.0.1:62902/index.html?lang=en): Chrome DevTools event timeout failed: Page.loadEventFired: event timed out after 15000ms
+    Chrome process: still running.
+    Chrome stderr:
+    60.432GiB)
+    [76191:243288:1104/104543.594137:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS START event to the history log
+    [76189:243283:1104/104543.594482:VERBOSE1:chrome/updater/crash_reporter.cc:123] Crash handler launched and ready.
+    [76189:243283:1104/104543.595113:VERBOSE1:chrome/updater/crash_client.cc:109] Found 0 completed crash reports
+    [76189:243283:1104/104543.595181:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+    [76189:243283:1104/104543.595245:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /local-user/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+    [76189:243283:1104/104543.595542:VERBOSE1:chrome/updater/updater.cc:107] Crash reporting initialized.
+    [76189:243283:1104/104543.595815:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+    [75493:241168:1104/104544.257526:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104544.483466:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104544.483938:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104544.961968:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104545.280171:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104545.881047:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104546.209640:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104546.528495:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104546.691202:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104547.260479:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104548.859069:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104549.298301:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104549.551465:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.149042:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.149426:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.167067:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.429520:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.433210:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104550.487442:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.158965:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.428881:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.706186:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.707619:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.714702:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.730624:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.740536:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.968149:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.975372:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104551.989065:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.008998:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.014831:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75492:241207:1104/104552.326647:ERROR:ui/display/mac/cv_display_link_mac.mm:188] CVDisplayLinkCreateWithCGDisplay failed. CVReturn: -6670
+    [75493:241168:1104/104552.444912:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.471491:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.573483:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.772580:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.868450:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104552.947023:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104553.162937:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104553.201766:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104553.284485:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104553.425488:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [75493:241168:1104/104557.310129:ERROR:net/socket/ssl_client_socket_impl.cc:949] handshake failed; returned -1, SSL error code 1, net_error -100
+    [76189:243283:1104/104559.462453:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+    [76189:243283:1104/104559.463340:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+    [76189:243283:1104/104559.463393:VERBOSE1:chrome/updater/updater.cc:420] UpdaterMain (--wake) returned 0.
+    [76186:243277:1104/104559.579260:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/local-user/Library/Application Support/Google/GoogleUpdater/157.0.8089.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+    [76186:243265:1104/104559.579520:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+    [76186:243265:1104/104559.580213:VERBOSE2:chrome/updater/event_history.cc:266] Emitted a UPDATER_PROCESS END event to the history log
+    [76186:243265:1104/104559.580255:VERBOSE1:chrome/updater/updater.cc:420] UpdaterMain (--wake-all) returned 0.
+    Chrome transport: Node v22.23.2, libuv 1.51.0, darwin; pid=75488, exitCode=null, signalCode=null.
+    Chrome read pipe: readable=true, ended=false, destroyed=false, receivedBytes=114368, messages=470, bufferedBytes=0.
+    Chrome write pipe: writable=true, ended=false, destroyed=false, completedWrites=52, writtenBytes=17173, bufferedBytes=0.
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    navigate (file:///evidence/issue-1139/implementation/test/site-language-continuity.test.mjs:84:25)
+    async TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/site-language-continuity.test.mjs:768:11)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 45914.964916

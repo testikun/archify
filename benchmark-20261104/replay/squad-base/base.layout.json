@@ -1,0 +1,322 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1044,
+    558
+  ],
+  "components": [
+    {
+      "id": "manager-session",
+      "type": "external",
+      "label": "Manager session",
+      "x": 40,
+      "y": 80,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        40,
+        80
+      ]
+    },
+    {
+      "id": "worker-session",
+      "type": "external",
+      "label": "Worker session",
+      "x": 40,
+      "y": 330,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        40,
+        330
+      ]
+    },
+    {
+      "id": "squad-cli",
+      "type": "backend",
+      "label": "Squad CLI",
+      "x": 370,
+      "y": 205,
+      "width": 240,
+      "height": 90,
+      "pos": [
+        370,
+        205
+      ]
+    },
+    {
+      "id": "role-prompts",
+      "type": "database",
+      "label": ".squad/roles/*.md",
+      "x": 370,
+      "y": 30,
+      "width": 240,
+      "height": 74,
+      "pos": [
+        370,
+        30
+      ]
+    },
+    {
+      "id": "session-files",
+      "type": "database",
+      "label": ".squad/sessions/<id>",
+      "x": 370,
+      "y": 400,
+      "width": 240,
+      "height": 74,
+      "pos": [
+        370,
+        400
+      ]
+    },
+    {
+      "id": "store-module",
+      "type": "backend",
+      "label": "Store",
+      "x": 740,
+      "y": 205,
+      "width": 240,
+      "height": 90,
+      "pos": [
+        740,
+        205
+      ]
+    },
+    {
+      "id": "sqlite-state",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "x": 740,
+      "y": 400,
+      "width": 240,
+      "height": 90,
+      "pos": [
+        740,
+        400
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Squad command process — no coordinator daemon",
+      "x": 346,
+      "y": 181,
+      "width": 658,
+      "height": 134,
+      "wraps": [
+        "squad-cli",
+        "store-module"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager-session",
+      "to": "squad-cli",
+      "label": "create / list / send / receive",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          150
+        ],
+        [
+          386,
+          150
+        ],
+        [
+          386,
+          205
+        ]
+      ],
+      "labelAt": [
+        386,
+        168
+      ]
+    },
+    {
+      "from": "worker-session",
+      "to": "squad-cli",
+      "label": "ack / complete / send / receive",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          244,
+          330
+        ],
+        [
+          244,
+          279
+        ],
+        [
+          370,
+          279
+        ]
+      ],
+      "labelAt": [
+        159,
+        308
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "role-prompts",
+      "label": "load on join",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          490,
+          205
+        ],
+        [
+          490,
+          104
+        ]
+      ],
+      "labelAt": [
+        490,
+        195
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "session-files",
+      "label": "write / validate token",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          490,
+          295
+        ],
+        [
+          490,
+          400
+        ]
+      ],
+      "labelAt": [
+        426,
+        351
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "store-module",
+      "label": "Rust calls / results",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          610,
+          250
+        ],
+        [
+          740,
+          250
+        ]
+      ],
+      "labelAt": [
+        675,
+        240
+      ]
+    },
+    {
+      "from": "store-module",
+      "to": "sqlite-state",
+      "label": "SQL reads / writes",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          860,
+          295
+        ],
+        [
+          860,
+          400
+        ]
+      ],
+      "labelAt": [
+        806,
+        351
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "create / list / send / receive",
+      "x": 309,
+      "y": 158,
+      "width": 154,
+      "height": 14,
+      "labelAt": [
+        386,
+        168
+      ]
+    },
+    {
+      "text": "ack / complete / send / receive",
+      "x": 79,
+      "y": 298,
+      "width": 159,
+      "height": 14,
+      "labelAt": [
+        159,
+        308
+      ]
+    },
+    {
+      "text": "load on join",
+      "x": 456,
+      "y": 185,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        490,
+        195
+      ]
+    },
+    {
+      "text": "write / validate token",
+      "x": 368,
+      "y": 341,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        426,
+        351
+      ]
+    },
+    {
+      "text": "Rust calls / results",
+      "x": 622,
+      "y": 230,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        675,
+        240
+      ]
+    },
+    {
+      "text": "SQL reads / writes",
+      "x": 758,
+      "y": 341,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        806,
+        351
+      ]
+    }
+  ]
+}

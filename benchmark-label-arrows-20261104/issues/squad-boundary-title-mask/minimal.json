@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Boundary title masks ordinary token route",
+    "output": "boundary-mask.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "squad-cli",
+      "type": "backend",
+      "label": "squad CLI",
+      "sublabel": "Join \u00b7 validate \u00b7 dispatch \u00b7 print",
+      "pos": [
+        430,
+        65
+      ],
+      "size": [
+        240,
+        85
+      ]
+    },
+    {
+      "id": "session-files",
+      "type": "database",
+      "label": "Session token files",
+      "sublabel": ".squad/sessions/<agent>",
+      "pos": [
+        430,
+        300
+      ],
+      "size": [
+        240,
+        95
+      ]
+    },
+    {
+      "id": "sqlite-state",
+      "type": "database",
+      "label": "Shared SQLite database",
+      "sublabel": ".squad/messages.db \u00b7 WAL",
+      "tag": "agents / tasks / messages",
+      "pos": [
+        420,
+        525
+      ],
+      "size": [
+        260,
+        105
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Workspace persistence \u00b7 shared by CLI invocations",
+      "wraps": [
+        "session-files",
+        "sqlite-state"
+      ],
+      "pad": 30
+    }
+  ],
+  "connections": [
+    {
+      "id": "session-io",
+      "from": "squad-cli",
+      "to": "session-files",
+      "label": "write / validate token"
+    }
+  ]
+}

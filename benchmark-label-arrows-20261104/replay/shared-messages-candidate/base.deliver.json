@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "7b97f4a3-3e37-41f9-87c3-871f6ba3d1b1",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/shared-messages-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"approved-purchase-request\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/1 (id/label: \"validated-purchase-decision\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"approved-purchase-request\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "approved-purchase-request"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"validated-purchase-decision\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "validated-purchase-decision"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

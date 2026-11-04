@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b1c6cc0b-74e4-438a-87c7-623302dc00e4",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/openpi-candidate/candidate.html",
+  "specification": {
+    "sha256": "6f1950231b0894d05a6e8c74c423862441ae4ba5b735695a140ccfabc3b558a9",
+    "bytes": 10437
+  },
+  "artifact": {
+    "sha256": "1031c5b1387a9cf004ca9dfc58c599532de8f8a5af9263b4730a8fdcd03136e9",
+    "bytes": 889448
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/openpi-dev/openpi",
+    "revision": "677b4959108976b99fb63fb5029198b04aa51cb5",
+    "references": 16,
+    "linkMode": "local-only"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

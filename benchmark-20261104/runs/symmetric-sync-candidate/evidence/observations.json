@@ -1,0 +1,81 @@
+{
+  "run_id": "symmetric-sync-candidate",
+  "project_id": "symmetric-sync",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 95.0145081669998,
+  "usage": {
+    "input_tokens": 343891,
+    "cached_input_tokens": 308352,
+    "output_tokens": 2497,
+    "reasoning_output_tokens": 332,
+    "uncached_input_tokens": 35539
+  },
+  "time_to_first_json_seconds_descriptive_only": 52.618905,
+  "time_to_first_cli_seconds_descriptive_only": 62.719736,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 11,
+  "failed_tool_commands": 2,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 2,
+  "repair_rounds": 0,
+  "attempts": [
+    {
+      "at": "2026-11-04T03:13:38.623Z",
+      "pid": 5353,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/status-synchronization.html",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+      "sha256": "6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165",
+      "snapshot": "snapshots/6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165.json"
+    }
+  ],
+  "first_json": "snapshots/6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165.json",
+  "first_submitted_json": "snapshots/6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+  "final_json_sha256": "6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165",
+  "html": [
+    "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 2,
+    "both": 1,
+    "none": 0
+  },
+  "source_status": null,
+  "source_commit_after": null,
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

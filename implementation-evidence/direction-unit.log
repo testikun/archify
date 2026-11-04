@@ -1,0 +1,45 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/architecture-relationship-direction.test.mjs --concurrency=2
+
+Repository tests: 1 files, concurrency 2
+TAP version 13
+# Subtest: Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+ok 1 - Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+  ---
+  duration_ms: 354.273625
+  ...
+# Subtest: explicit forward preserves legacy SVG and direction validation is Architecture-only
+ok 2 - explicit forward preserves legacy SVG and direction validation is Architecture-only
+  ---
+  duration_ms: 1078.0775
+  ...
+# Subtest: relationship legends honor hidden and custom labels without changing authored arrows
+ok 3 - relationship legends honor hidden and custom labels without changing authored arrows
+  ---
+  duration_ms: 463.00475
+  ...
+# Subtest: Delta normalizes default forward and identifies direction changes without duplicating relationships
+ok 4 - Delta normalizes default forward and identifies direction changes without duplicating relationships
+  ---
+  duration_ms: 1.330042
+  ...
+# Subtest: arrow clearance checks source arrowheads for both and excludes unmarked associations
+ok 5 - arrow clearance checks source arrowheads for both and excludes unmarked associations
+  ---
+  duration_ms: 0.290417
+  ...
+# Subtest: Story preserves structural identities, defaults to static actions and rejects directional transfer
+ok 6 - Story preserves structural identities, defaults to static actions and rejects directional transfer
+  ---
+  duration_ms: 258.724084
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2239.138584

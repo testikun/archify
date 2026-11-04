@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Shared opportunity identifiers",
+    "subtitle": "Business-system overview · Independent reporting flows; structural correspondence shown below",
+    "output": "output/shared-opportunity-identifiers.html",
+    "locale": "en",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "crm",
+      "type": "backend",
+      "label": "CRM",
+      "sublabel": "Stores opportunity identifier",
+      "pos": [40, 40],
+      "size": [200, 70]
+    },
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Stores opportunity identifier",
+      "pos": [40, 260],
+      "size": [200, 70]
+    },
+    {
+      "id": "reporting",
+      "type": "backend",
+      "label": "Reporting",
+      "sublabel": "Receives both summaries",
+      "pos": [500, 150],
+      "size": [180, 70]
+    }
+  ],
+  "connections": [
+    {
+      "id": "sales-reporting",
+      "from": "crm",
+      "to": "reporting",
+      "label": "Publishes sales summaries"
+    },
+    {
+      "id": "delivery-reporting",
+      "from": "project-management",
+      "to": "reporting",
+      "label": "Publishes delivery summaries"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Undirected association",
+      "items": [
+        "CRM ─── Project Management",
+        "Records share the same opportunity identifier.",
+        "Structural correspondence only: no message or dependency."
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "Connection legend",
+      "items": [
+        "→ Arrow: actual publication to Reporting, in the indicated direction.",
+        "─── No arrowheads: shared-identifier association, not communication.",
+        "Only the two reporting flows are established."
+      ]
+    }
+  ]
+}

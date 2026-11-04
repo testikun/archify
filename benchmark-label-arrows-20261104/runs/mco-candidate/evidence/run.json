@@ -1,0 +1,165 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "mco-candidate",
+  "project_id": "mco",
+  "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "package_or_tree_sha256": "dc2d2fb2503f08cc0119e2705f6b04f5c718d8a494d9582221a6572f7316d1d6",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "2a03c9c048c843e8399f79c7d1522d52892992c1a9a4da5306afae0dc91431a4",
+    "substantive_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+  },
+  "session": {
+    "id": "01a1a584-9bfb-7121-9383-3f6291bdc03d",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T07:48:42.824Z",
+        "pid": 78549,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826",
+        "snapshot": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json"
+      },
+      {
+        "at": "2026-11-04T07:49:47.881Z",
+        "pid": 78906,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24",
+        "snapshot": "snapshots/a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json"
+    ],
+    "screenshots": [
+      "captures/mco-candidate/fullpage.light.png",
+      "captures/mco-candidate/directions.light.png",
+      "captures/mco-candidate/export.dark.png",
+      "captures/mco-candidate/export.light.png",
+      "captures/mco-candidate/directions.dark.png",
+      "captures/mco-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "source-backed at overview scope",
+    "readability": "readable; no material overlap seen",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side pinned source, final JSON and desktop capture inspection; feature dark/export/Route evidence where applicable.",
+    "findings": [
+      "Selected invocations run independently through adapters and local provider processes; declaration order is retained in results. Read-only is a configurable default, not an unconditional sandbox.",
+      "Individual failures remain in the result payload and aggregate complete/partial/failed status is distinct from synthesis.",
+      "One voluntary revision after a passing first validation. A nonzero source/package lookup command is retained separately from product diagnostics.",
+      "Six label arrows naturally express three distinct request/return pairs. Vertical and horizontal cues, corresponding direct Route IDs and light/dark exports are preserved.",
+      "The older base rejects the opt-in field; unsupported capability is not scored as a baseline rendering defect."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 25,
+    "usage": {
+      "input_tokens": 1600141,
+      "cached_input_tokens": 1465728,
+      "output_tokens": 6881,
+      "reasoning_output_tokens": 1239,
+      "uncached_input_tokens": 134413
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "naturally exercised: 6 label arrows on 3 opposite pairs",
+    "label_arrow_count": 6
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:44:53.563772+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T07:51:03.743819+00:00",
+    "wall_seconds": 370.17701733300055,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 217.370118,
+    "time_to_first_cli_seconds": 229.260228
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

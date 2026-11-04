@@ -1,0 +1,139 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "distinct-messages-candidate",
+  "project_id": "distinct-messages",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "6e6715c826a75d4dbf0ffca7287e788daed26178549726cd6a31187477979fb7",
+    "substantive_sha256": "0471e7327a3376065d5de8c4dad05ad3b08fe72bd4d90b0a9f99d5ee37bc3333"
+  },
+  "session": {
+    "id": "01a1a48c-c40f-7cb2-9a1a-eb71a014bba0",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:15:11.473Z",
+        "pid": 6143,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/purchase-request-decision.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+        "sha256": "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+        "snapshot": "snapshots/9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/purchase-request-decision.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/purchase-request-decision.delivery.json"
+    ],
+    "screenshots": [
+      "captures/distinct-messages-candidate/fullpage.light.png",
+      "captures/distinct-messages-candidate/directions.light.png",
+      "captures/distinct-messages-candidate/export.dark.png",
+      "captures/distinct-messages-candidate/export.light.png",
+      "captures/distinct-messages-candidate/directions.dark.png",
+      "captures/distinct-messages-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review against frozen synthetic BUSINESS.md, initial/final JSON, native screenshot and explicit relation legend; author-side inspection, not an official real-project case.",
+    "findings": [
+      "All three relationships match [BUSINESS.md](runs/distinct-messages-candidate/workspace/project/BUSINESS.md). Project Management sends a purchase-order request only after manager approval; ERP returns an acceptance/rejection decision after validation; ERP writes accepted orders only. The request and decision remain distinct opposite directed edges with independent IDs and readable conditions.",
+      "No generic both exchange, extra manager system, invented storage write on rejection or additional runtime behavior is introduced. The explicit relation-forward legend correctly describes direction and conditional labels. Opposing arrows and their labels are separated and readable, with no observed clipping or obstruction.",
+      "The first and final submitted JSON are identical and pass validation. No revisions are submitted; one shell command fails on a guessed browser-script glob. Native light/dark exports retain the explicit directed-relation legend.",
+      "Base replay rejects the newly supported explicit direction fields and relation-forward legend key, despite the underlying three facts also being expressible with old defaults. Candidate replay succeeds without changing bytes. This targeted success shows that an explicit requirement can be followed; it does not invalidate the natural Squad command/output-merging failure."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 0,
+    "tool_calls": 9,
+    "usage": {
+      "input_tokens": 279491,
+      "cached_input_tokens": 246272,
+      "output_tokens": 2267,
+      "reasoning_output_tokens": 203,
+      "uncached_input_tokens": 33219
+    },
+    "first_draft_semantics": "correct: first and final submitted bytes are identical and reviewed",
+    "first_draft_visual": "readable: first and final submitted bytes are identical and reviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T03:14:10.921739+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:15:45.423640+00:00",
+    "wall_seconds": 94.50038541699996,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 56.312398,
+    "time_to_first_cli_seconds": 60.551261
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

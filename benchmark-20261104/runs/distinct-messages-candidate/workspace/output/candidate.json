@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Purchase request and decision",
+    "locale": "en",
+    "output": "output/purchase-request-decision.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Order persistence" },
+        "relation-forward": { "label": "Arrow: directed relationship; label states its condition", "visible": true }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Requests purchase-order creation",
+      "pos": [40, 40],
+      "size": [250, 84]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Validates and decides",
+      "pos": [760, 40],
+      "size": [250, 84]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "sublabel": "Rejected orders are not written",
+      "pos": [760, 330],
+      "size": [250, 84]
+    }
+  ],
+  "connections": [
+    {
+      "id": "purchase-creation-request",
+      "from": "project-management",
+      "to": "erp",
+      "direction": "forward",
+      "label": "Create purchase order — only after manager approval"
+    },
+    {
+      "id": "validation-decision",
+      "from": "erp",
+      "to": "project-management",
+      "direction": "forward",
+      "label": "Acceptance or rejection decision — after validation"
+    },
+    {
+      "id": "persist-accepted-order",
+      "from": "erp",
+      "to": "order-storage",
+      "direction": "forward",
+      "label": "Write order — only if accepted"
+    }
+  ]
+}

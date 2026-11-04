@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Shared Project Status Synchronization",
+    "output": "output/status-synchronization.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Audit storage" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Can initiate status updates",
+      "pos": [40, 40],
+      "size": [180, 72]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Can initiate status updates",
+      "pos": [460, 40],
+      "size": [180, 72]
+    },
+    {
+      "id": "audit-storage",
+      "type": "database",
+      "label": "Audit Storage",
+      "sublabel": "Receives audit summaries only",
+      "pos": [250, 240],
+      "size": [180, 72]
+    }
+  ],
+  "connections": [
+    {
+      "id": "shared-status-sync",
+      "from": "project-management",
+      "to": "erp",
+      "label": "↔ Status sync",
+      "variant": "emphasis"
+    },
+    {
+      "id": "project-management-audit",
+      "from": "project-management",
+      "to": "audit-storage",
+      "label": "Audit summary"
+    },
+    {
+      "id": "erp-audit",
+      "from": "erp",
+      "to": "audit-storage",
+      "label": "Audit summary"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Connection legend",
+      "items": [
+        "↔ Status sync: one symmetric relationship; either system can initiate the same project-status update.",
+        "Audit summary → Audit Storage: two separate one-way flows; Audit Storage sends no updates back."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Scope and rendering limitation",
+      "items": [
+        "Evidence: the synthetic BUSINESS.md brief only. No source-code links or deployment assumptions.",
+        "No protocol, retry mechanism or timing is established.",
+        "This Archify version has no bidirectional connection field. The ↔ label expresses synchronization; its generated end arrow is not a one-way business constraint."
+      ]
+    }
+  ]
+}

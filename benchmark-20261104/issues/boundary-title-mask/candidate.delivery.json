@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "9df47e6a-5e96-456d-964b-b4bfd096801d",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/issues/boundary-title-mask/minimal.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/issues/boundary-title-mask/candidate.html",
+  "specification": {
+    "sha256": "54f71bba93f8f777c58e05ae5d82477dfe10eba58caba97f1b80380eda5043cd",
+    "bytes": 954
+  },
+  "artifact": {
+    "sha256": "be731d5b126949aa7185983565ace6becb4de716e5ddbaaf3a64e99b56479179",
+    "bytes": 865974
+  }
+}

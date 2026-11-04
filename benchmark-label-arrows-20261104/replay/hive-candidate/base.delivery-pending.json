@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "208cc1f6-2961-499a-9b98-1276f77b99c9",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/hive-candidate/base.html"
+}

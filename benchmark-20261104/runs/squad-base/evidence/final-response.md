@@ -1,0 +1,5 @@
+Created [Squad coordination architecture diagram](/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/squad-coordination.html) and its [source JSON](/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/candidate.json).
+
+Squad coordinates external manager and worker sessions through CLI invocations sharing SQLite state—not a coordinator daemon. Task creation atomically persists an assignment notification; completion stores a result summary without automatically messaging the manager.
+
+Source references and implementation caveats are retained in the diagram and [source notes](/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/source-notes.md). Archify checks passed, laptop layouts were visually reviewed, and application source remains unchanged.

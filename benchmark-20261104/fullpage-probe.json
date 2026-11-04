@@ -1,0 +1,53 @@
+{
+  "before": {
+    "innerHeight": 900,
+    "scrollHeight": 1151,
+    "diagram": {
+      "x": 41,
+      "y": 103.6875,
+      "width": 1358,
+      "height": 764.3125,
+      "top": 103.6875,
+      "right": 1399,
+      "bottom": 868,
+      "left": 41
+    },
+    "card": {
+      "x": 41,
+      "y": 884,
+      "width": 1358,
+      "height": 136.984375,
+      "top": 884,
+      "right": 1399,
+      "bottom": 1020.984375,
+      "left": 41
+    }
+  },
+  "after": {
+    "innerHeight": 900,
+    "scrollHeight": 1151,
+    "diagram": {
+      "x": 41,
+      "y": 103.6875,
+      "width": 1358,
+      "height": 764.3125,
+      "top": 103.6875,
+      "right": 1399,
+      "bottom": 868,
+      "left": 41
+    },
+    "card": {
+      "x": 41,
+      "y": 884,
+      "width": 1358,
+      "height": 136.984375,
+      "top": 884,
+      "right": 1399,
+      "bottom": 1020.984375,
+      "left": 41
+    }
+  },
+  "response": {},
+  "pngWidth": 1440,
+  "pngHeight": 900
+}

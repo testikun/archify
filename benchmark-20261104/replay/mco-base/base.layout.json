@@ -1,0 +1,466 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1220,
+    709
+  ],
+  "components": [
+    {
+      "id": "review-cli",
+      "type": "frontend",
+      "label": "1 · Review CLI",
+      "x": 40,
+      "y": 60,
+      "width": 235,
+      "height": 86,
+      "pos": [
+        40,
+        60
+      ]
+    },
+    {
+      "id": "request-plan",
+      "type": "security",
+      "label": "2 · Validate & plan",
+      "x": 460,
+      "y": 60,
+      "width": 250,
+      "height": 86,
+      "pos": [
+        460,
+        60
+      ]
+    },
+    {
+      "id": "fanout",
+      "type": "backend",
+      "label": "3 · Invocation scheduler",
+      "x": 910,
+      "y": 60,
+      "width": 270,
+      "height": 86,
+      "pos": [
+        910,
+        60
+      ]
+    },
+    {
+      "id": "invocation-worker",
+      "type": "backend",
+      "label": "4 · Per-invocation worker",
+      "x": 910,
+      "y": 310,
+      "width": 270,
+      "height": 96,
+      "pos": [
+        910,
+        310
+      ]
+    },
+    {
+      "id": "shim-adapters",
+      "type": "backend",
+      "label": "Provider shim adapters",
+      "x": 460,
+      "y": 310,
+      "width": 250,
+      "height": 96,
+      "pos": [
+        460,
+        310
+      ]
+    },
+    {
+      "id": "provider-processes",
+      "type": "external",
+      "label": "Selected provider CLIs",
+      "x": 40,
+      "y": 310,
+      "width": 235,
+      "height": 96,
+      "pos": [
+        40,
+        310
+      ]
+    },
+    {
+      "id": "result-collection",
+      "type": "backend",
+      "label": "5 · Collect individual results",
+      "x": 910,
+      "y": 555,
+      "width": 270,
+      "height": 86,
+      "pos": [
+        910,
+        555
+      ]
+    },
+    {
+      "id": "cli-output",
+      "type": "frontend",
+      "label": "6 · Return to caller",
+      "x": 460,
+      "y": 555,
+      "width": 250,
+      "height": 86,
+      "pos": [
+        460,
+        555
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "External child processes",
+      "x": 22,
+      "y": 286,
+      "width": 271,
+      "height": 140,
+      "wraps": [
+        "provider-processes"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "review-cli",
+      "to": "request-plan",
+      "label": "resolve request",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          275,
+          103
+        ],
+        [
+          460,
+          103
+        ]
+      ],
+      "labelAt": [
+        368,
+        93
+      ]
+    },
+    {
+      "from": "request-plan",
+      "to": "fanout",
+      "label": "validated plan",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          710,
+          103
+        ],
+        [
+          910,
+          103
+        ]
+      ],
+      "labelAt": [
+        810,
+        93
+      ]
+    },
+    {
+      "from": "fanout",
+      "to": "invocation-worker",
+      "label": "submit each invocation",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1045,
+          146
+        ],
+        [
+          1045,
+          310
+        ]
+      ],
+      "labelAt": [
+        981,
+        231
+      ]
+    },
+    {
+      "from": "invocation-worker",
+      "to": "shim-adapters",
+      "label": "run / poll / cancel",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          910,
+          366.05
+        ],
+        [
+          710,
+          366.05
+        ]
+      ],
+      "labelAt": [
+        810,
+        386
+      ]
+    },
+    {
+      "from": "shim-adapters",
+      "to": "invocation-worker",
+      "label": "log path + decode",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          710,
+          351
+        ],
+        [
+          910,
+          351
+        ]
+      ],
+      "labelAt": [
+        810,
+        341
+      ]
+    },
+    {
+      "from": "shim-adapters",
+      "to": "provider-processes",
+      "label": "spawn CLI",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          460,
+          366.05
+        ],
+        [
+          275,
+          366.05
+        ]
+      ],
+      "labelAt": [
+        368,
+        386
+      ]
+    },
+    {
+      "from": "provider-processes",
+      "to": "shim-adapters",
+      "label": "stdout / stderr",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          275,
+          351
+        ],
+        [
+          460,
+          351
+        ]
+      ],
+      "labelAt": [
+        368,
+        341
+      ]
+    },
+    {
+      "from": "invocation-worker",
+      "to": "result-collection",
+      "label": "one result per invocation",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1053.05,
+          406
+        ],
+        [
+          1053.05,
+          555
+        ]
+      ],
+      "labelAt": [
+        982,
+        484
+      ]
+    },
+    {
+      "from": "result-collection",
+      "to": "cli-output",
+      "label": "payload + exit code",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          910,
+          606.05
+        ],
+        [
+          710,
+          606.05
+        ]
+      ],
+      "labelAt": [
+        810,
+        596
+      ]
+    },
+    {
+      "from": "invocation-worker",
+      "to": "cli-output",
+      "label": "live events",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1038,
+          406
+        ],
+        [
+          1038,
+          430
+        ],
+        [
+          734,
+          430
+        ],
+        [
+          734,
+          591
+        ],
+        [
+          710,
+          591
+        ]
+      ],
+      "labelAt": [
+        886,
+        420
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "resolve request",
+      "x": 327,
+      "y": 83,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        368,
+        93
+      ]
+    },
+    {
+      "text": "validated plan",
+      "x": 771,
+      "y": 83,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        810,
+        93
+      ]
+    },
+    {
+      "text": "submit each invocation",
+      "x": 923,
+      "y": 221,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        981,
+        231
+      ]
+    },
+    {
+      "text": "run / poll / cancel",
+      "x": 759,
+      "y": 376,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        810,
+        386
+      ]
+    },
+    {
+      "text": "log path + decode",
+      "x": 764,
+      "y": 331,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        810,
+        341
+      ]
+    },
+    {
+      "text": "spawn CLI",
+      "x": 341,
+      "y": 376,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        368,
+        386
+      ]
+    },
+    {
+      "text": "stdout / stderr",
+      "x": 327,
+      "y": 331,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        368,
+        341
+      ]
+    },
+    {
+      "text": "one result per invocation",
+      "x": 917,
+      "y": 474,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        982,
+        484
+      ]
+    },
+    {
+      "text": "payload + exit code",
+      "x": 759,
+      "y": 586,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        810,
+        596
+      ]
+    },
+    {
+      "text": "live events",
+      "x": 855,
+      "y": 410,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        886,
+        420
+      ]
+    }
+  ]
+}

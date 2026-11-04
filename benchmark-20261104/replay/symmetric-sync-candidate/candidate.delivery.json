@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "87c73c14-58db-4d10-96e1-a1c34fdb5023",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/symmetric-sync-candidate/candidate.html",
+  "specification": {
+    "sha256": "6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165",
+    "bytes": 2229
+  },
+  "artifact": {
+    "sha256": "e0aa0e05164822067674d13dcb4ec3f2258886319544b4504fdcbe7e50ff0e52",
+    "bytes": 869989
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/candidate.json",
+    "sha256": "5f42788524538f6f205e5bb78144d4c5ed26fb790794ab9e91c0937298d1736d",
+    "bytes": 11837
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "sha256": "de9840ef169177d0b893f9180df22e5710d7158703f47216534aa99998dfd11d",
+    "bytes": 883505
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/review-2/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/review-2/skillroster-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/review-2/skillroster-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2244,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

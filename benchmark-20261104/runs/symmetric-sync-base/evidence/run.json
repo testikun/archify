@@ -1,0 +1,155 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "symmetric-sync-base",
+  "project_id": "symmetric-sync",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "3cba1136ec4d3febe1c7f785fa9b48cc48fb1c71db7a3b8a32ef8096f2d19362",
+    "substantive_sha256": "6b8e69028bd1383cb67b03e990b34a3a025d106ca20438b09032f61a63076116"
+  },
+  "session": {
+    "id": "01a1a489-79bb-70b3-99ea-48c3641fee5e",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/2429af020c07b01b93ce9a51af660b70e17c84568c7749a72cb9a00970b51b96.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:12:04.383Z",
+        "pid": 4668,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/status-synchronization.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/candidate.json",
+        "sha256": "2429af020c07b01b93ce9a51af660b70e17c84568c7749a72cb9a00970b51b96",
+        "snapshot": "snapshots/2429af020c07b01b93ce9a51af660b70e17c84568c7749a72cb9a00970b51b96.json"
+      },
+      {
+        "at": "2026-11-04T03:12:18.647Z",
+        "pid": 4918,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/status-synchronization.html",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/candidate.json",
+        "sha256": "2b9d0cd0e606d2b07dc3e3c73f3e3151a0f473a73c7752057f5db9ae80fa4592",
+        "snapshot": "snapshots/2b9d0cd0e606d2b07dc3e3c73f3e3151a0f473a73c7752057f5db9ae80fa4592.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/status-synchronization.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/status-synchronization.delivery.json"
+    ],
+    "screenshots": [
+      "captures/symmetric-sync-base/fullpage.light.png",
+      "captures/symmetric-sync-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered workaround; requested relation unsupported",
+    "semantics": "incorrect",
+    "readability": "issues",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review against frozen synthetic BUSINESS.md, submitted-version diff and native screenshot; author-side inspection, not an official real-project case.",
+    "findings": [
+      "The three nodes and two one-way audit flows match [BUSINESS.md](runs/symmetric-sync-base/workspace/project/BUSINESS.md). No protocol, retry or timing detail is invented. The Agent preserves one synchronization relationship and explicitly discloses that the old renderer cannot draw its requested two-headed connection.",
+      "The actual synchronization edge remains forward from Project Management to ERP. A ↔ symbol in its label and a supporting disclaimer describe two-way business meaning, but do not change its one-way arrow or graph traversal. The diagram therefore has a visible direction conflict and does not satisfy the requested bidirectional relationship. This is unsupported old capability, not a new rendering regression or a silent Agent misrepresentation.",
+      "First JSON passes automated validation. One voluntary revision removes a redundant subtitle; it does not change the unsupported direction. Two shell commands exit nonzero for absent AGENTS.md search matches and an unmatched update-file glob. No diagram validation failure occurs. Text and routes are otherwise legible, but the arrow/label conflict is recorded as a readability issue.",
+      "The unchanged final input replays identically on both versions. The candidate does not infer direction from a Unicode label. This demonstrates why textual workarounds cannot substitute for the new contract; it does not establish generation-effort savings."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 13,
+    "usage": {
+      "input_tokens": 469312,
+      "cached_input_tokens": 443776,
+      "output_tokens": 2953,
+      "reasoning_output_tokens": 878,
+      "uncached_input_tokens": 25536
+    },
+    "first_draft_semantics": "incorrect: same one-way graph relationship contradicts the requested two-way relation",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary_subtitle_simplification": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "unsupported native bidirectional relationship; one-way edge plus textual disclaimer retained"
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T03:10:35.359559+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:12:35.900512+00:00",
+    "wall_seconds": 120.51992291599981,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 89.023441,
+    "time_to_first_cli_seconds": 89.023441
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

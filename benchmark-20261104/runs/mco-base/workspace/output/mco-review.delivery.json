@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e232630e-98a9-446e-8751-a6bab3bba35d",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.html",
+  "specification": {
+    "sha256": "495a319af685bf363fe45dc746970e508ffc3ba69325816e31b3d28225d03960",
+    "bytes": 11417
+  },
+  "artifact": {
+    "sha256": "ea94942b74848249408617f33c7cd6b15af72b1d02f84c9d6f9a7bb241794fc8",
+    "bytes": 885660
+  }
+}

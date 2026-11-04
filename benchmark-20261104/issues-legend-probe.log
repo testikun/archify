@@ -1,0 +1,98 @@
+[
+  {
+    name: '01-native-inspect',
+    directed: {
+      x: 849,
+      y: 764.6875,
+      width: 164,
+      height: 13,
+      top: 764.6875,
+      right: 1013,
+      bottom: 777.6875,
+      left: 849
+    },
+    dock: {
+      x: 914.03125,
+      y: 822.6875,
+      width: 358.96875,
+      height: 42,
+      top: 822.6875,
+      right: 1273,
+      bottom: 864.6875,
+      left: 914.03125
+    },
+    restingDock: {}
+  },
+  {
+    name: '02-preset-click',
+    directed: {
+      x: 849,
+      y: 764.6875,
+      width: 164,
+      height: 13,
+      top: 764.6875,
+      right: 1013,
+      bottom: 777.6875,
+      left: 849
+    },
+    dock: {
+      x: 914.03125,
+      y: 822.6875,
+      width: 358.96875,
+      height: 42,
+      top: 822.6875,
+      right: 1273,
+      bottom: 864.6875,
+      left: 914.03125
+    },
+    restingDock: {}
+  },
+  {
+    name: '03-motion-still',
+    directed: {
+      x: 849,
+      y: 764.6875,
+      width: 164,
+      height: 13,
+      top: 764.6875,
+      right: 1013,
+      bottom: 777.6875,
+      left: 849
+    },
+    dock: {
+      x: 914.03125,
+      y: 822.6875,
+      width: 358.96875,
+      height: 42,
+      top: 822.6875,
+      right: 1273,
+      bottom: 864.6875,
+      left: 914.03125
+    },
+    restingDock: {}
+  },
+  {
+    name: '04-settled',
+    directed: {
+      x: 849,
+      y: 764.6875,
+      width: 164,
+      height: 13,
+      top: 764.6875,
+      right: 1013,
+      bottom: 777.6875,
+      left: 849
+    },
+    dock: {
+      x: 914.03125,
+      y: 822.6875,
+      width: 358.96875,
+      height: 42,
+      top: 822.6875,
+      right: 1273,
+      bottom: 864.6875,
+      left: 914.03125
+    },
+    restingDock: {}
+  }
+]

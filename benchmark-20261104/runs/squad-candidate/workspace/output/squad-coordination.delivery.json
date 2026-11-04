@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "07314c4a-1d9e-4d9d-aab4-b58c69978629",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/squad-coordination.html",
+  "specification": {
+    "sha256": "f7bed3f87cae0824c907b7f344ee6a4b5bd0d4d3bb4e0d1b99d8a2b877858c03",
+    "bytes": 9658
+  },
+  "artifact": {
+    "sha256": "77a0cc328428e574e8ca00cab2146bab8ab1957c8dd001b7a4310a65f7e06f2c",
+    "bytes": 887526
+  }
+}

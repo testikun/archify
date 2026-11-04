@@ -1,0 +1,290 @@
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 2,
+    "tool_commands": 27,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 2333227,
+      "cached_input_tokens": 2235904,
+      "output_tokens": 9732,
+      "reasoning_output_tokens": 3487,
+      "uncached_input_tokens": 97323
+    },
+    "relationship_directions": {
+      "forward": 7,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 25,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1694374,
+      "cached_input_tokens": 1617792,
+      "output_tokens": 8849,
+      "reasoning_output_tokens": 2304,
+      "uncached_input_tokens": 76582
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 34,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 3154547,
+      "cached_input_tokens": 3062272,
+      "output_tokens": 16842,
+      "reasoning_output_tokens": 6453,
+      "uncached_input_tokens": 92275
+    },
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 35,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 3227811,
+      "cached_input_tokens": 3141632,
+      "output_tokens": 14942,
+      "reasoning_output_tokens": 2923,
+      "uncached_input_tokens": 86179
+    },
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 26,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1789773,
+      "cached_input_tokens": 1723136,
+      "output_tokens": 7748,
+      "reasoning_output_tokens": 1360,
+      "uncached_input_tokens": 66637
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 20,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1390196,
+      "cached_input_tokens": 1334528,
+      "output_tokens": 7084,
+      "reasoning_output_tokens": 1199,
+      "uncached_input_tokens": 55668
+    },
+    "relationship_directions": {
+      "forward": 9,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 18,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1129568,
+      "cached_input_tokens": 1074432,
+      "output_tokens": 6377,
+      "reasoning_output_tokens": 1104,
+      "uncached_input_tokens": 55136
+    },
+    "relationship_directions": {
+      "forward": 2,
+      "both": 4,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "squad-base",
+    "repair_rounds": 0,
+    "tool_commands": 21,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1406275,
+      "cached_input_tokens": 1354880,
+      "output_tokens": 9133,
+      "reasoning_output_tokens": 1871,
+      "uncached_input_tokens": 51395
+    },
+    "relationship_directions": {
+      "forward": 6,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "skillroster-base",
+    "repair_rounds": 1,
+    "tool_commands": 25,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1708723,
+      "cached_input_tokens": 1612800,
+      "output_tokens": 9705,
+      "reasoning_output_tokens": 2631,
+      "uncached_input_tokens": 95923
+    },
+    "relationship_directions": {
+      "forward": 7,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "repair_rounds": 4,
+    "tool_commands": 33,
+    "failed_tool_commands": 4,
+    "usage": {
+      "input_tokens": 2529209,
+      "cached_input_tokens": 2457344,
+      "output_tokens": 10394,
+      "reasoning_output_tokens": 1912,
+      "uncached_input_tokens": 71865
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "association-candidate",
+    "repair_rounds": 0,
+    "tool_commands": 10,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 447981,
+      "cached_input_tokens": 424960,
+      "output_tokens": 3130,
+      "reasoning_output_tokens": 590,
+      "uncached_input_tokens": 23021
+    },
+    "relationship_directions": {
+      "forward": 2,
+      "both": 0,
+      "none": 1
+    }
+  },
+  {
+    "run_id": "association-base",
+    "repair_rounds": 0,
+    "tool_commands": 12,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 542950,
+      "cached_input_tokens": 509824,
+      "output_tokens": 3326,
+      "reasoning_output_tokens": 754,
+      "uncached_input_tokens": 33126
+    },
+    "relationship_directions": {
+      "forward": 2,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "symmetric-sync-base",
+    "repair_rounds": 1,
+    "tool_commands": 13,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 469312,
+      "cached_input_tokens": 443776,
+      "output_tokens": 2953,
+      "reasoning_output_tokens": 878,
+      "uncached_input_tokens": 25536
+    },
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "symmetric-sync-candidate",
+    "repair_rounds": 0,
+    "tool_commands": 11,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 343891,
+      "cached_input_tokens": 308352,
+      "output_tokens": 2497,
+      "reasoning_output_tokens": 332,
+      "uncached_input_tokens": 35539
+    },
+    "relationship_directions": {
+      "forward": 2,
+      "both": 1,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "distinct-messages-candidate",
+    "repair_rounds": 0,
+    "tool_commands": 9,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 279491,
+      "cached_input_tokens": 246272,
+      "output_tokens": 2267,
+      "reasoning_output_tokens": 203,
+      "uncached_input_tokens": 33219
+    },
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "distinct-messages-base",
+    "repair_rounds": 1,
+    "tool_commands": 10,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 349170,
+      "cached_input_tokens": 309888,
+      "output_tokens": 2492,
+      "reasoning_output_tokens": 537,
+      "uncached_input_tokens": 39282
+    },
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    }
+  }
+]

@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Squad: manager–worker coordination",
+    "subtitle": "CLI-driven collaboration through one workspace’s persisted task and message state",
+    "output": "output/squad-coordination.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/squad",
+      "revision": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "manager-session",
+      "type": "external",
+      "label": "Manager session",
+      "sublabel": "Assign work · inspect results",
+      "tag": "AI client / terminal",
+      "pos": [40, 80],
+      "size": [220, 86],
+      "explanation": "The manager is an external agent following printed role instructions, not an embedded Squad scheduler. It checks agents, creates tracked assignments, and reads tasks or messages for results. Inspector/review orchestration is advisory prompt text and is outside this manager–worker slice.",
+      "sources": [
+        { "path": "src/roles/manager.md", "line": 1, "end_line": 22, "label": "Manager’s CLI collaboration instructions" },
+        { "path": "src/main.rs", "line": 1017, "end_line": 1049, "label": "Task list prints persisted result summaries" }
+      ]
+    },
+    {
+      "id": "worker-session",
+      "type": "external",
+      "label": "Worker session",
+      "sublabel": "Receive · acknowledge · execute",
+      "tag": "AI client / terminal",
+      "pos": [40, 330],
+      "size": [220, 86],
+      "explanation": "The worker executes work outside Squad, invokes task ack and task complete for tracked work, and may explicitly send a summary to the manager. Squad does not execute the AI client or the assigned work in this command path. CLI stdout returns messages and status to the caller.",
+      "sources": [
+        { "path": "src/roles/worker.md", "line": 1, "end_line": 15, "label": "Worker’s receive / ack / complete loop" },
+        { "path": "src/main.rs", "line": 984, "end_line": 1003, "label": "Explicit ack and complete commands" }
+      ]
+    },
+    {
+      "id": "squad-cli",
+      "type": "backend",
+      "label": "Squad CLI",
+      "sublabel": "join · task · send · receive",
+      "tag": "Command process · stdout replies",
+      "pos": [370, 205],
+      "size": [240, 90],
+      "explanation": "Each invocation discovers the shared workspace and opens Store. Join registers an active agent, writes its session token, and prints a custom or built-in role prompt. Send, receive, task create, ack and complete check an active session. receive --wait uses workspace-root locks/<id>.receive.lock, polls about every 500 ms, refreshes last_seen every 30 s, and returns after receiving messages or timing out. Requeue and task list do not perform the same agent/session check.",
+      "sources": [
+        { "path": "src/main.rs", "line": 610, "end_line": 640, "label": "Join registration, token and prompt" },
+        { "path": "src/main.rs", "line": 706, "end_line": 869, "label": "Send and receive, wait lock and polling" },
+        { "path": "src/main.rs", "line": 973, "end_line": 1049, "label": "Task commands delegate to Store" }
+      ]
+    },
+    {
+      "id": "role-prompts",
+      "type": "database",
+      "label": ".squad/roles/*.md",
+      "sublabel": "Custom prompt or built-in fallback",
+      "pos": [370, 30],
+      "size": [240, 74],
+      "explanation": "Role text is loaded from the workspace first, otherwise compiled-in manager/worker/inspector instructions are used. init seeds the role files. Join prints these instructions; this is behavioral guidance, not a manager-only permission boundary.",
+      "sources": [
+        { "path": "src/roles.rs", "line": 4, "end_line": 29, "label": "Custom role loading and built-in fallback" },
+        { "path": "src/init.rs", "line": 11, "end_line": 33, "label": "Init seeds workspace role files" }
+      ]
+    },
+    {
+      "id": "session-files",
+      "type": "database",
+      "label": ".squad/sessions/<id>",
+      "sublabel": "Local token files",
+      "pos": [370, 400],
+      "size": [240, 74],
+      "explanation": "Join writes the registered token to a per-agent file. Commands compare the database token with the local token; missing local token files are accepted for backward compatibility. Waiting receive also retains its entry token and detects replacement on each poll. These are local displacement guards, not authenticated identities of independent clients.",
+      "sources": [
+        { "path": "src/session.rs", "line": 4, "end_line": 60, "label": "Token file I/O and compatibility validation" },
+        { "path": "src/main.rs", "line": 451, "end_line": 484, "label": "Active-agent and session-token checks" },
+        { "path": "src/main.rs", "line": 610, "end_line": 621, "label": "Join writes the session token" }
+      ]
+    },
+    {
+      "id": "store-module",
+      "type": "backend",
+      "label": "Store",
+      "sublabel": "Task gates · message transactions",
+      "tag": "In-process Rust / rusqlite",
+      "pos": [740, 205],
+      "size": [240, 90],
+      "explanation": "create_task atomically requires active creator and assignee, inserts a queued task and a task_assigned message. receive_messages selects unread messages and marks those IDs read in one transaction; reading does not acknowledge a task. ack requires queued + assigned agent and records a 15-minute lease. complete requires acked + lease owner and stores the summary, without checking expiry or sending a result message. Requeue resets task state but inserts no assignment message. No manager-role authorization is enforced here.",
+      "sources": [
+        { "path": "src/store.rs", "line": 290, "end_line": 385, "label": "Direct/broadcast writes and atomic receive" },
+        { "path": "src/store.rs", "line": 452, "end_line": 546, "label": "Atomic task plus assignment notification" },
+        { "path": "src/store.rs", "line": 624, "end_line": 718, "label": "Ack / complete gates and explicit requeue" }
+      ]
+    },
+    {
+      "id": "sqlite-state",
+      "type": "database",
+      "label": ".squad/messages.db",
+      "sublabel": "agents · tasks · messages",
+      "tag": "SQLite WAL · shared workspace",
+      "pos": [740, 400],
+      "size": [240, 90],
+      "explanation": "All command processes in this workspace open the same local SQLite file. agents holds role, status, token and last_seen; tasks holds assignment, state, lease and result_summary; messages holds sender/recipient, read state, kind, task_id and reply_to. Store configures WAL and a 5-second busy timeout. This database is the cross-process coordination medium, not a remote message broker. Task list reads persisted summaries independently of the inbox.",
+      "sources": [
+        { "path": "src/main.rs", "line": 430, "end_line": 445, "label": "Workspace discovery and database path" },
+        { "path": "src/store.rs", "line": 45, "end_line": 107, "label": "WAL setup, tables and envelope migrations" },
+        { "path": "src/store.rs", "line": 549, "end_line": 621, "label": "Task and result reads" }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Squad command process — no coordinator daemon", "wraps": ["squad-cli", "store-module"], "pad": 24 }
+  ],
+  "connections": [
+    { "id": "manager-cli", "from": "manager-session", "to": "squad-cli", "label": "create / list / send / receive", "variant": "emphasis" },
+    { "id": "worker-cli", "from": "worker-session", "to": "squad-cli", "label": "ack / complete / send / receive", "variant": "emphasis" },
+    { "id": "cli-roles", "from": "squad-cli", "to": "role-prompts", "label": "load on join" },
+    { "id": "cli-sessions", "from": "squad-cli", "to": "session-files", "label": "write / validate token" },
+    { "id": "cli-store", "from": "squad-cli", "to": "store-module", "label": "Rust calls / results" },
+    { "id": "store-db", "from": "store-module", "to": "sqlite-state", "label": "SQL reads / writes" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Assignment → execution",
+      "items": [
+        "Create commits queued task + task_assigned message together.",
+        "Receive marks the message read; it does not ack the task.",
+        "Ack: queued + assignee → acked; complete: acked + owner → completed."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Results are state, not a push",
+      "items": [
+        "Complete stores result_summary; it sends no manager message.",
+        "Manager uses task list, or worker explicitly sends a summary.",
+        "Freeform send / receive shares the same persisted inbox."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Guards, not a scheduler",
+      "items": [
+        "Roles guide AI clients; no manager-only task permission gate.",
+        "Ack records a 15-minute lease; complete does not enforce expiry.",
+        "Requeue is explicit; no assignment message is generated."
+      ]
+    }
+  ]
+}

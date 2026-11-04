@@ -1,0 +1,362 @@
+{
+  "relations": [],
+  "labelRelations": [
+    {
+      "id": "goal-input",
+      "from": "workbench",
+      "to": "terminal-host",
+      "text": "Goal HTTP / terminal input",
+      "glyph": "translate(427.9 111) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "workbench",
+          "label": "Browser workbench"
+        },
+        "target": {
+          "id": "terminal-host",
+          "label": "PTY host + terminal hub"
+        },
+        "nodeIds": [
+          "workbench",
+          "terminal-host"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "goal-input",
+            "from": "workbench",
+            "to": "terminal-host",
+            "label": "Goal HTTP / terminal input"
+          }
+        ]
+      }
+    },
+    {
+      "id": "live-terminal",
+      "from": "terminal-host",
+      "to": "workbench",
+      "text": "Terminal WebSocket output",
+      "glyph": "translate(289.5 135) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "terminal-host",
+          "label": "PTY host + terminal hub"
+        },
+        "target": {
+          "id": "workbench",
+          "label": "Browser workbench"
+        },
+        "nodeIds": [
+          "terminal-host",
+          "workbench"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "1",
+            "id": "live-terminal",
+            "from": "terminal-host",
+            "to": "workbench",
+            "label": "Terminal WebSocket output"
+          }
+        ]
+      }
+    },
+    {
+      "id": "orch-input",
+      "from": "terminal-host",
+      "to": "orchestrator",
+      "text": "Goal → PTY stdin",
+      "glyph": "translate(823.9 111) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "terminal-host",
+          "label": "PTY host + terminal hub"
+        },
+        "target": {
+          "id": "orchestrator",
+          "label": "Orchestrator CLI"
+        },
+        "nodeIds": [
+          "terminal-host",
+          "orchestrator"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "2",
+            "id": "orch-input",
+            "from": "terminal-host",
+            "to": "orchestrator",
+            "label": "Goal → PTY stdin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "orch-output",
+      "from": "orchestrator",
+      "to": "terminal-host",
+      "text": "CLI terminal output",
+      "glyph": "translate(723.9 135) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "orchestrator",
+          "label": "Orchestrator CLI"
+        },
+        "target": {
+          "id": "terminal-host",
+          "label": "PTY host + terminal hub"
+        },
+        "nodeIds": [
+          "orchestrator",
+          "terminal-host"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "3",
+            "id": "orch-output",
+            "from": "orchestrator",
+            "to": "terminal-host",
+            "label": "CLI terminal output"
+          }
+        ]
+      }
+    },
+    {
+      "id": "task-edits",
+      "from": "workbench",
+      "to": "task-plan",
+      "text": "HTTP read / save",
+      "glyph": "translate(262.8 270.5) rotate(90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "workbench",
+          "label": "Browser workbench"
+        },
+        "target": {
+          "id": "task-plan",
+          "label": ".hive/tasks.md"
+        },
+        "nodeIds": [
+          "workbench",
+          "task-plan"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "4",
+            "id": "task-edits",
+            "from": "workbench",
+            "to": "task-plan",
+            "label": "HTTP read / save"
+          }
+        ]
+      }
+    },
+    {
+      "id": "task-updates",
+      "from": "task-plan",
+      "to": "workbench",
+      "text": "Tasks WebSocket updates",
+      "glyph": "translate(23.600000000000023 270.5) rotate(-90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "task-plan",
+          "label": ".hive/tasks.md"
+        },
+        "target": {
+          "id": "workbench",
+          "label": "Browser workbench"
+        },
+        "nodeIds": [
+          "task-plan",
+          "workbench"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "5",
+            "id": "task-updates",
+            "from": "task-plan",
+            "to": "workbench",
+            "label": "Tasks WebSocket updates"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dispatch-request",
+      "from": "orchestrator",
+      "to": "team-control",
+      "text": "team send · HTTP",
+      "glyph": "translate(1082.8000000000002 270.5) rotate(90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "orchestrator",
+          "label": "Orchestrator CLI"
+        },
+        "target": {
+          "id": "team-control",
+          "label": "Team API + delivery"
+        },
+        "nodeIds": [
+          "orchestrator",
+          "team-control"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "7",
+            "id": "dispatch-request",
+            "from": "orchestrator",
+            "to": "team-control",
+            "label": "team send · HTTP"
+          }
+        ]
+      }
+    },
+    {
+      "id": "report-return",
+      "from": "team-control",
+      "to": "orchestrator",
+      "text": "Final report · PTY stdin",
+      "glyph": "translate(838.8 270.5) rotate(-90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "team-control",
+          "label": "Team API + delivery"
+        },
+        "target": {
+          "id": "orchestrator",
+          "label": "Orchestrator CLI"
+        },
+        "nodeIds": [
+          "team-control",
+          "orchestrator"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "8",
+            "id": "report-return",
+            "from": "team-control",
+            "to": "orchestrator",
+            "label": "Final report · PTY stdin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "dispatch-delivery",
+      "from": "team-control",
+      "to": "worker",
+      "text": "Dispatch · PTY paste + submit",
+      "glyph": "translate(699.9 430) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "team-control",
+          "label": "Team API + delivery"
+        },
+        "target": {
+          "id": "worker",
+          "label": "Worker CLI"
+        },
+        "nodeIds": [
+          "team-control",
+          "worker"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "9",
+            "id": "dispatch-delivery",
+            "from": "team-control",
+            "to": "worker",
+            "label": "Dispatch · PTY paste + submit"
+          }
+        ]
+      }
+    },
+    {
+      "id": "worker-tools",
+      "from": "worker",
+      "to": "team-control",
+      "text": "Progress / report · HTTP",
+      "glyph": "translate(843.1 406) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "worker",
+          "label": "Worker CLI"
+        },
+        "target": {
+          "id": "team-control",
+          "label": "Team API + delivery"
+        },
+        "nodeIds": [
+          "worker",
+          "team-control"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "10",
+            "id": "worker-tools",
+            "from": "worker",
+            "to": "team-control",
+            "label": "Progress / report · HTTP"
+          }
+        ]
+      }
+    }
+  ],
+  "legend": [
+    "Directed relationship",
+    "Label marker shows direction",
+    "Label marker shows direction"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

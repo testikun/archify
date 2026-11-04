@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/candidate.json",
+    "sha256": "2b9d0cd0e606d2b07dc3e3c73f3e3151a0f473a73c7752057f5db9ae80fa4592",
+    "bytes": 2215
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/status-synchronization.html",
+    "sha256": "29cd1a02171f50a4ea18ce5d98d7e8dbfacc46cbfd52a38978e0c2ba62b3be92",
+    "bytes": 860474
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/review-2/status-synchronization.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/review-2/status-synchronization.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/review-2/status-synchronization.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1884,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

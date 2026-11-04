@@ -1,0 +1,400 @@
+
+> test:browser
+> node scripts/run-browser-tests.mjs test/architecture-relationship-direction-browser.test.mjs test/route-probe-browser.test.mjs test/focus-browser.test.mjs test/intent-trace-browser.test.mjs test/semantic-lens-browser.test.mjs test/export-browser.test.mjs test/story-browser.test.mjs
+
+Browser tests: 7 files, concurrency 2
+TAP version 13
+# Subtest: mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+    # Subtest: reverse paths retain authored endpoints and unique IDs without inventing flow
+    ok 1 - reverse paths retain authored endpoints and unique IDs without inventing flow
+      ---
+      duration_ms: 148.508208
+      ...
+    # Subtest: Reach counts structural relationships once in both directions and preserves exports
+    ok 2 - Reach counts structural relationships once in both directions and preserves exports
+      ---
+      duration_ms: 147.86875
+      ...
+    # Subtest: previews and semantic lenses leave structural relations static
+    ok 3 - previews and semantic lenses leave structural relations static
+      ---
+      duration_ms: 126.71625
+      ...
+    # Subtest: SVG and PNG exports retain the actual legend and arrowheads in both themes
+    ok 4 - SVG and PNG exports retain the actual legend and arrowheads in both themes
+      ---
+      duration_ms: 593.960958
+      ...
+    1..4
+ok 1 - mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+  ---
+  duration_ms: 3289.013416
+  ...
+# Subtest: Export preserves menu, clipboard, semantic cards and recording lifecycles
+    # Subtest: removed share actions cannot be invoked through the menu or old API
+    ok 1 - removed share actions cannot be invoked through the menu or old API
+      ---
+      duration_ms: 382.883708
+      ...
+    # Subtest: native menu input skips unavailable entries and preserves focus and mutual exclusion
+    ok 2 - native menu input skips unavailable entries and preserves focus and mutual exclusion
+      ---
+      duration_ms: 642.844375
+      ...
+    # Subtest: auto-open and themed menu rendering keep stable layout
+    ok 3 - auto-open and themed menu rendering keep stable layout
+      ---
+      duration_ms: 887.466333
+      ...
+    # Subtest: semantic card downloads retain snapshots, receipts and URL lifetime
+    ok 4 - semantic card downloads retain snapshots, receipts and URL lifetime
+      ---
+      duration_ms: 2542.978334
+      ...
+    # Subtest: clipboard keeps promise construction in the click and distinct fallback/error receipts
+    ok 5 - clipboard keeps promise construction in the click and distinct fallback/error receipts
+      ---
+      duration_ms: 3239.804792
+      ...
+    # Subtest: raster failures release sources and retain retry and synchronous SVG behavior
+    ok 6 - raster failures release sources and retain retry and synchronous SVG behavior
+      ---
+      duration_ms: 1150.836125
+      ...
+    # Subtest: standalone SVG keeps intrinsic dimensions without changing Viewer or raster sizing
+    ok 7 - standalone SVG keeps intrinsic dimensions without changing Viewer or raster sizing
+      ---
+      duration_ms: 11168.62325
+      ...
+    # Subtest: SVG download declares UTF-8 and preserves CJK text
+    ok 8 - SVG download declares UTF-8 and preserves CJK text
+      ---
+      duration_ms: 449.709833
+      ...
+    # Subtest: classic preset hides background grid in viewer and exported standalone SVGs without affecting PNG
+    ok 9 - classic preset hides background grid in viewer and exported standalone SVGs without affecting PNG
+      ---
+      duration_ms: 2696.242084
+      ...
+    # Subtest: recording succeeds with real encoding and releases tracks and the background URL
+    ok 10 - recording succeeds with real encoding and releases tracks and the background URL
+      ---
+      duration_ms: 867.032959
+      ...
+    # Subtest: menu recording writes its receipt and downloads the real default-duration WebM
+    ok 11 - menu recording writes its receipt and downloads the real default-duration WebM
+      ---
+      duration_ms: 7377.85475
+      ...
+    # Subtest: recording settles and releases its resources after image
+    ok 12 - recording settles and releases its resources after image
+      ---
+      duration_ms: 278.917625
+      ...
+    # Subtest: recording settles and releases its resources after context-null
+    ok 13 - recording settles and releases its resources after context-null
+      ---
+      duration_ms: 243.474958
+      ...
+    # Subtest: recording settles and releases its resources after context-throw
+    ok 14 - recording settles and releases its resources after context-throw
+      ---
+      duration_ms: 212.676291
+      ...
+    # Subtest: recording settles and releases its resources after capture
+    ok 15 - recording settles and releases its resources after capture
+      ---
+      duration_ms: 215.645833
+      ...
+    # Subtest: recording settles and releases its resources after start
+    ok 16 - recording settles and releases its resources after start
+      ---
+      duration_ms: 224.765208
+      ...
+    # Subtest: recording settles and releases its resources after first-frame
+    ok 17 - recording settles and releases its resources after first-frame
+      ---
+      duration_ms: 209.091667
+      ...
+    # Subtest: recording settles and releases its resources after later-frame
+    ok 18 - recording settles and releases its resources after later-frame
+      ---
+      duration_ms: 227.590375
+      ...
+    # Subtest: recording settles and releases its resources after async-error
+    ok 19 - recording settles and releases its resources after async-error
+      ---
+      duration_ms: 669.249917
+      ...
+    # Subtest: recording settles and releases its resources after stop
+    ok 20 - recording settles and releases its resources after stop
+      ---
+      duration_ms: 593.905792
+      ...
+    # Subtest: recording failures reach the menu receipt and a later same-page recording succeeds
+    ok 21 - recording failures reach the menu receipt and a later same-page recording succeeds
+      ---
+      duration_ms: 597.034042
+      ...
+    # Subtest: recording keeps flush best-effort and isolates overlapping calls
+    ok 22 - recording keeps flush best-effort and isolates overlapping calls
+      ---
+      duration_ms: 1242.346667
+      ...
+    # Subtest: recording constructor/error/empty failures clean up and public run disables WebM
+    ok 23 - recording constructor/error/empty failures clean up and public run disables WebM
+      ---
+      duration_ms: 839.800125
+      ...
+    1..23
+ok 2 - Export preserves menu, clipboard, semantic cards and recording lifecycles
+  ---
+  duration_ms: 38877.733292
+  ...
+# Subtest: Focus preserves semantic selection, relationships, reachability and shared flow tokens
+    # Subtest: five modes expose the same Focus and flowTokens surfaces at cold start
+    ok 1 - five modes expose the same Focus and flowTokens surfaces at cold start
+      ---
+      duration_ms: 1819.124625
+      ...
+    # Subtest: native node input and option variants preserve selection and cleanup side effects
+    ok 2 - native node input and option variants preserve selection and cleanup side effects
+      ---
+      duration_ms: 627.359875
+      ...
+    # Subtest: Passport rows preserve keyboard navigation, missing metadata and no-neighbor state
+    ok 3 - Passport rows preserve keyboard navigation, missing metadata and no-neighbor state
+      ---
+      duration_ms: 1105.682416
+      ...
+    # Subtest: relationship focus and pointer intents yield to pins and direct keyboard exploration
+    ok 4 - relationship focus and pointer intents yield to pins and direct keyboard exploration
+      ---
+      duration_ms: 1550.099958
+      ...
+    # Subtest: direct pointer delay, touch filtering and background input keep ownership rules
+    ok 5 - direct pointer delay, touch filtering and background input keep ownership rules
+      ---
+      duration_ms: 1299.015208
+      ...
+    # Subtest: authored graph geometry and shared token kinds preserve grouping and direction
+    ok 6 - authored graph geometry and shared token kinds preserve grouping and direction
+      ---
+      duration_ms: 366.88125
+      ...
+    # Subtest: reachability handles cycles, parallel edges, toggles and strict snapshot rejection
+    ok 7 - reachability handles cycles, parallel edges, toggles and strict snapshot rejection
+      ---
+      duration_ms: 1682.2555
+      ...
+    # Subtest: cold URLs and hashchange preserve focus, relation, reach and query semantics
+    ok 8 - cold URLs and hashchange preserve focus, relation, reach and query semantics
+      ---
+      duration_ms: 1582.416958
+      ...
+    # Subtest: copy fallback and delayed feedback retain node, reach and relation links
+    ok 9 - copy fallback and delayed feedback retain node, reach and relation links
+      ---
+      duration_ms: 9858.324458
+      ...
+    # Subtest: real pulse completion and motion transitions preserve static relationship state
+    ok 10 - real pulse completion and motion transitions preserve static relationship state
+      ---
+      duration_ms: 1881.149709
+      ...
+    # Subtest: real SVG export strips temporary Focus, Reach and relationship state from clones
+    ok 11 - real SVG export strips temporary Focus, Reach and relationship state from clones
+      ---
+      duration_ms: 775.901666
+      ...
+    # Subtest: Passport layout and dark/light output remain stable through viewport and camera changes
+    ok 12 - Passport layout and dark/light output remain stable through viewport and camera changes
+      ---
+      duration_ms: 3338.0215
+      ...
+    1..12
+ok 3 - Focus preserves semantic selection, relationships, reachability and shared flow tokens
+  ---
+  duration_ms: 27020.89275
+  ...
+# Subtest: Intent Trace preserves input handoffs, transient geometry and cleanup
+    # Subtest: five modes initialize and public return/broadcast contracts remain intact
+    ok 1 - five modes initialize and public return/broadcast contracts remain intact
+      ---
+      duration_ms: 1031.190875
+      ...
+    # Subtest: real pointer delay, fast exit, keyboard focus and Escape share cleanup
+    ok 2 - real pointer delay, fast exit, keyboard focus and Escape share cleanup
+      ---
+      duration_ms: 1233.219
+      ...
+    # Subtest: hover dimming keeps node masks opaque over underlying arrows
+    ok 3 - hover dimming keeps node masks opaque over underlying arrows
+      ---
+      duration_ms: 410.831958
+      ...
+    # Subtest: controlled timers preserve repeated-show, retained-input and input-filter semantics
+    ok 4 - controlled timers preserve repeated-show, retained-input and input-filter semantics
+      ---
+      duration_ms: 589.60325
+      ...
+    # Subtest: a minimal SVG fixture preserves counting, cloned geometry and isolated nodes
+    ok 5 - a minimal SVG fixture preserves counting, cloned geometry and isolated nodes
+      ---
+      duration_ms: 128.687792
+      ...
+    # Subtest: blockers gate requests while actual Focus, Route and Lens retain handoff behavior
+    ok 6 - blockers gate requests while actual Focus, Route and Lens retain handoff behavior
+      ---
+      duration_ms: 1297.86425
+      ...
+    # Subtest: real CSS looping, Motion stop/restart, reduced motion and themes preserve previews
+    ok 7 - real CSS looping, Motion stop/restart, reduced motion and themes preserve previews
+      ---
+      duration_ms: 1835.377584
+      ...
+    1..7
+ok 4 - Intent Trace preserves input handoffs, transient geometry and cleanup
+  ---
+  duration_ms: 7710.726916
+  ...
+# Subtest: Route Probe preserves directed paths, Journey and export contracts
+    # Subtest: five modes initialize and trusted endpoint input preserves capture and error recovery
+    ok 1 - five modes initialize and trusted endpoint input preserves capture and error recovery
+      ---
+      duration_ms: 2401.900416
+      ...
+    # Subtest: SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+    not ok 2 - SVG graph fixtures preserve directed BFS order, parallel edges and strict export snapshots
+      ---
+      duration_ms: 189.710834
+      location: '/evidence/issue-1139/implementation/test/route-probe-browser.test.mjs:150:11'
+      failureType: 'testCodeFailure'
+      error: |-
+        Expected values to be strictly equal:
+        
+        false !== true
+        
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: true
+      actual: false
+      operator: 'strictEqual'
+      stack: |-
+        route (file:///evidence/issue-1139/implementation/test/route-probe-browser.test.mjs:94:12)
+        process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        async TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/route-probe-browser.test.mjs:181:5)
+        async Test.run (node:internal/test_runner/test:797:9)
+        async TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/route-probe-browser.test.mjs:150:3)
+        async Test.run (node:internal/test_runner/test:797:9)
+        async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+      ...
+    # Subtest: native Journey controls, finite playback, pause and layered Escape preserve path state
+    ok 3 - native Journey controls, finite playback, pause and layered Escape preserve path state
+      ---
+      duration_ms: 6216.369542
+      ...
+    # Subtest: controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+    ok 4 - controlled clocks preserve elapsed dwell, fresh steps, stale generations and pulse cleanup
+      ---
+      duration_ms: 1362.770625
+      ...
+    # Subtest: actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+    ok 5 - actual Finder, Focus, Lens, Guide and Camera handoffs retain cleanup options
+      ---
+      duration_ms: 1539.634792
+      ...
+    # Subtest: hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+    ok 6 - hash restoration and controlled clipboard preserve invalid states, query and delayed feedback
+      ---
+      duration_ms: 8770.714041
+      ...
+    # Subtest: docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+    ok 7 - docking rectangle and timer fixtures preserve top/bottom ties, resize and scroll
+      ---
+      duration_ms: 1482.049333
+      ...
+    # Subtest: theme snapshots, Still rendering and real exports retain authored route semantics
+    ok 8 - theme snapshots, Still rendering and real exports retain authored route semantics
+      ---
+      duration_ms: 931.853708
+      ...
+    1..8
+not ok 5 - Route Probe preserves directed paths, Journey and export contracts
+  ---
+  duration_ms: 24099.904208
+  location: '/evidence/issue-1139/implementation/test/route-probe-browser.test.mjs:14:1'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+# Subtest: Semantic Lens preserves selection, legend preview and panel contracts
+    # Subtest: five modes and optional legend initialization preserve counts, roles and embed boundaries
+    ok 1 - five modes and optional legend initialization preserve counts, roles and embed boundaries
+      ---
+      duration_ms: 1444.842875
+      ...
+    # Subtest: trusted buttons, selection transitions, return values and three cleanup operations stay distinct
+    ok 2 - trusted buttons, selection transitions, return values and three cleanup operations stay distinct
+      ---
+      duration_ms: 324.542708
+      ...
+    # Subtest: native legend focus, pointer transitions, keyboard activation and opener restoration
+    ok 3 - native legend focus, pointer transitions, keyboard activation and opener restoration
+      ---
+      duration_ms: 540.426417
+      ...
+    # Subtest: minimal SVG fixtures preserve node indexing, grouped directions, first-member geometry and 24/25 threshold
+    ok 4 - minimal SVG fixtures preserve node indexing, grouped directions, first-member geometry and 24/25 threshold
+      ---
+      duration_ms: 160.560667
+      ...
+    # Subtest: initial URL, hashchange and controlled clipboard boundaries retain normalization and feedback
+    ok 5 - initial URL, hashchange and controlled clipboard boundaries retain normalization and feedback
+      ---
+      duration_ms: 8221.36925
+      ...
+    # Subtest: actual capability handoffs and blocked previews preserve existing ownership
+    ok 6 - actual capability handoffs and blocked previews preserve existing ownership
+      ---
+      duration_ms: 584.651791
+      ...
+    # Subtest: panel events, pending frames and controlled docking geometry preserve responsive branches
+    ok 7 - panel events, pending frames and controlled docking geometry preserve responsive branches
+      ---
+      duration_ms: 731.795541
+      ...
+    # Subtest: themes, reduced motion, Still and real SVG export retain selection and preview rendering
+    ok 8 - themes, reduced motion, Still and real SVG export retain selection and preview rendering
+      ---
+      duration_ms: 2200.739667
+      ...
+    1..8
+ok 6 - Semantic Lens preserves selection, legend preview and panel contracts
+  ---
+  duration_ms: 15536.525583
+  ...
+# Subtest: attachment preserves localized native state labels and localizes the Story transition
+ok 7 - attachment preserves localized native state labels and localizes the Story transition
+  ---
+  duration_ms: 6176.810917
+  ...
+# Subtest: a public story attaches once, follows native appearance and retains source notes and exports
+ok 8 - a public story attaches once, follows native appearance and retains source notes and exports
+  ---
+  duration_ms: 12015.892708
+  ...
+# Subtest: flowless guides stay out of the story opening clock
+ok 9 - flowless guides stay out of the story opening clock
+  ---
+  duration_ms: 1904.182875
+  ...
+1..9
+# tests 71
+# suites 0
+# pass 69
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74719.739041

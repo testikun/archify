@@ -1,0 +1,153 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    910,
+    418
+  ],
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "x": 40,
+      "y": 40,
+      "width": 220,
+      "height": 80,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "x": 650,
+      "y": 40,
+      "width": 220,
+      "height": 80,
+      "pos": [
+        650,
+        40
+      ]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "x": 650,
+      "y": 270,
+      "width": 220,
+      "height": 80,
+      "pos": [
+        650,
+        270
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "project-management",
+      "to": "erp",
+      "label": "Create PO request · only after manager approval",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          73
+        ],
+        [
+          650,
+          73
+        ]
+      ],
+      "labelAt": [
+        455,
+        63
+      ]
+    },
+    {
+      "from": "erp",
+      "to": "project-management",
+      "label": "Acceptance / rejection decision · after validation",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          650,
+          87
+        ],
+        [
+          260,
+          87
+        ]
+      ],
+      "labelAt": [
+        455,
+        107
+      ]
+    },
+    {
+      "from": "erp",
+      "to": "order-storage",
+      "label": "Write order · accepted only",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          120
+        ],
+        [
+          760,
+          270
+        ]
+      ],
+      "labelAt": [
+        684,
+        198
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Create PO request · only after manager approval",
+      "x": 337,
+      "y": 53,
+      "width": 236,
+      "height": 14,
+      "labelAt": [
+        455,
+        63
+      ]
+    },
+    {
+      "text": "Acceptance / rejection decision · after validation",
+      "x": 330,
+      "y": 97,
+      "width": 250,
+      "height": 14,
+      "labelAt": [
+        455,
+        107
+      ]
+    },
+    {
+      "text": "Write order · accepted only",
+      "x": 614,
+      "y": 188,
+      "width": 140,
+      "height": 14,
+      "labelAt": [
+        684,
+        198
+      ]
+    }
+  ]
+}

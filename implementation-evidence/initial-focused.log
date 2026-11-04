@@ -1,0 +1,767 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/authored-reachability.test.mjs test/legend-contract.test.mjs test/route-share-card.test.mjs test/reach-share-card.test.mjs test/geometry.test.mjs --concurrency=2
+
+Repository tests: 5 files, concurrency 2
+TAP version 13
+# Subtest: authored reachability is available in every typed artifact without entering canonical SVG
+ok 1 - authored reachability is available in every typed artifact without entering canonical SVG
+  ---
+  duration_ms: 593.223959
+  ...
+# Subtest: reachability uses stable breadth-first depth, supports cycles, and deduplicates edge fragments
+ok 2 - reachability uses stable breadth-first depth, supports cycles, and deduplicates edge fragments
+  ---
+  duration_ms: 1.294375
+  ...
+# Subtest: reachability stays explicit, deep-linkable, keyboard reachable, and export-clean
+ok 3 - reachability stays explicit, deep-linkable, keyboard reachable, and export-clean
+  ---
+  duration_ms: 0.720833
+  ...
+# Subtest: automaticPortRhythmBridge: near parallel ports use readable outside runs
+ok 4 - automaticPortRhythmBridge: near parallel ports use readable outside runs
+  ---
+  duration_ms: 1.765708
+  ...
+# Subtest: automaticPortRhythmBridge: opposed facing ports shrink only the rejected 24px stubs
+ok 5 - automaticPortRhythmBridge: opposed facing ports shrink only the rejected 24px stubs
+  ---
+  duration_ms: 0.353458
+  ...
+# Subtest: automaticPortRhythmBridge: accepts no route when the collision callback rejects each candidate
+ok 6 - automaticPortRhythmBridge: accepts no route when the collision callback rejects each candidate
+  ---
+  duration_ms: 0.146792
+  ...
+# Subtest: rectsOverlap: separated rects do not overlap
+ok 7 - rectsOverlap: separated rects do not overlap
+  ---
+  duration_ms: 0.091583
+  ...
+# Subtest: rectsOverlap: clearly overlapping rects overlap
+ok 8 - rectsOverlap: clearly overlapping rects overlap
+  ---
+  duration_ms: 0.059292
+  ...
+# Subtest: rectsOverlap: edge-touching is NOT overlap at gap 0 (<= boundary)
+ok 9 - rectsOverlap: edge-touching is NOT overlap at gap 0 (<= boundary)
+  ---
+  duration_ms: 0.05075
+  ...
+# Subtest: rectsOverlap: positive gap flags rects within that gap as too close
+ok 10 - rectsOverlap: positive gap flags rects within that gap as too close
+  ---
+  duration_ms: 0.062583
+  ...
+# Subtest: rectsOverlap: a clearance the solver measured short of by one ulp is met (\#583)
+ok 11 - rectsOverlap: a clearance the solver measured short of by one ulp is met (\#583)
+  ---
+  duration_ms: 0.129208
+  ...
+# Subtest: rectsOverlap: the numeric tolerance stays far below a repairable shortfall
+ok 12 - rectsOverlap: the numeric tolerance stays far below a repairable shortfall
+  ---
+  duration_ms: 0.155625
+  ...
+# Subtest: rectsOverlap: negative gap shrinks the hit box (label-collision convention)
+ok 13 - rectsOverlap: negative gap shrinks the hit box (label-collision convention)
+  ---
+  duration_ms: 0.116334
+  ...
+# Subtest: rectsOverlap: non-finite geometry is not an overlap
+ok 14 - rectsOverlap: non-finite geometry is not an overlap
+  ---
+  duration_ms: 0.0815
+  ...
+# Subtest: segmentIntersectsRect: detects an edge crossing a node box
+ok 15 - segmentIntersectsRect: detects an edge crossing a node box
+  ---
+  duration_ms: 0.1415
+  ...
+# Subtest: segmentRectClearance measures horizontal, vertical, and reversed diagonal segments
+ok 16 - segmentRectClearance measures horizontal, vertical, and reversed diagonal segments
+  ---
+  duration_ms: 0.220875
+  ...
+# Subtest: label-route clearance locks tangent, sub-threshold, boundary, and reversed coordinates
+ok 17 - label-route clearance locks tangent, sub-threshold, boundary, and reversed coordinates
+  ---
+  duration_ms: 0.511417
+  ...
+# Subtest: near-zero segments preserve the existing label clearance threshold
+ok 18 - near-zero segments preserve the existing label clearance threshold
+  ---
+  duration_ms: 0.074625
+  ...
+# Subtest: collectLabelRouteClearance exempts only the owning relationship at an exact threshold
+ok 19 - collectLabelRouteClearance exempts only the owning relationship at an exact threshold
+  ---
+  duration_ms: 0.777458
+  ...
+# Subtest: minimumLabelRouteClearance handles receipt sets above the argument limit
+ok 20 - minimumLabelRouteClearance handles receipt sets above the argument limit
+  ---
+  duration_ms: 17.747625
+  ...
+# Subtest: collectLabelRouteClearance indexes sparse routes without changing hit order
+ok 21 - collectLabelRouteClearance indexes sparse routes without changing hit order
+  ---
+  duration_ms: 1.460042
+  ...
+# Subtest: collectLabelRouteClearance keeps very long routes in the global candidate set
+ok 22 - collectLabelRouteClearance keeps very long routes in the global candidate set
+  ---
+  duration_ms: 0.114917
+  ...
+# Subtest: collectLabelRouteClearance falls back for unsafe finite grid coordinates
+ok 23 - collectLabelRouteClearance falls back for unsafe finite grid coordinates
+  ---
+  duration_ms: 0.261583
+  ...
+# Subtest: collectLabelRouteClearance falls back when threshold query is unselective
+ok 24 - collectLabelRouteClearance falls back when threshold query is unselective
+  ---
+  duration_ms: 0.105667
+  ...
+# Subtest: collectLabelRouteClearance stays bounded for thousands of sparse routes
+ok 25 - collectLabelRouteClearance stays bounded for thousands of sparse routes
+  ---
+  duration_ms: 40.26825
+  ...
+# Subtest: endpoint-side direction distinguishes perpendicular entry from a tangent border run
+ok 26 - endpoint-side direction distinguishes perpendicular entry from a tangent border run
+  ---
+  duration_ms: 0.37825
+  ...
+# Subtest: endpoint-side direction can fail closed on renderer-inferred automatic sides
+ok 27 - endpoint-side direction can fail closed on renderer-inferred automatic sides
+  ---
+  duration_ms: 0.093083
+  ...
+# Subtest: cleanFlowProblems reports collection index, ids, segment, clearance, and fix
+ok 28 - cleanFlowProblems reports collection index, ids, segment, clearance, and fix
+  ---
+  duration_ms: 0.207917
+  ...
+# Subtest: cleanFlowProblems exempts endpoints and ignores missing endpoint geometry
+ok 29 - cleanFlowProblems exempts endpoints and ignores missing endpoint geometry
+  ---
+  duration_ms: 0.06975
+  ...
+# Subtest: cleanFlowProblems uses clearance, reports the first segment, and deduplicates an obstacle
+ok 30 - cleanFlowProblems uses clearance, reports the first segment, and deduplicates an obstacle
+  ---
+  duration_ms: 0.070375
+  ...
+# Subtest: cleanCrossingProblems reports one deterministic proper X in showcase
+ok 31 - cleanCrossingProblems reports one deterministic proper X in showcase
+  ---
+  duration_ms: 0.338833
+  ...
+# Subtest: crossing repair advice distinguishes automatic routes from optional authored controls
+ok 32 - crossing repair advice distinguishes automatic routes from optional authored controls
+  ---
+  duration_ms: 0.791
+  ...
+# Subtest: cleanCrossingProblems keeps proper X as non-blocking in standard
+ok 33 - cleanCrossingProblems keeps proper X as non-blocking in standard
+  ---
+  duration_ms: 0.05575
+  ...
+# Subtest: cleanCrossingProblems exempts shared endpoints
+ok 34 - cleanCrossingProblems exempts shared endpoints
+  ---
+  duration_ms: 0.060667
+  ...
+# Subtest: cleanCrossingProblems selectively checks automatic shared-endpoint interior crossings
+ok 35 - cleanCrossingProblems selectively checks automatic shared-endpoint interior crossings
+  ---
+  duration_ms: 0.215875
+  ...
+# Subtest: polyline bend contacts distinguish false junctions from actual route endpoints
+ok 36 - polyline bend contacts distinguish false junctions from actual route endpoints
+  ---
+  duration_ms: 0.405458
+  ...
+# Subtest: cleanCrossingProblems exempts endpoint touches and collinear corridors
+ok 37 - cleanCrossingProblems exempts endpoint touches and collinear corridors
+  ---
+  duration_ms: 0.08025
+  ...
+# Subtest: ambiguous corridor gate reports unrelated collinear overlap with exact identities
+ok 38 - ambiguous corridor gate reports unrelated collinear overlap with exact identities
+  ---
+  duration_ms: 0.615
+  ...
+# Subtest: ambiguous corridor gate exempts shared endpoints, point touches, and overlaps below 8px
+ok 39 - ambiguous corridor gate exempts shared endpoints, point touches, and overlaps below 8px
+  ---
+  duration_ms: 0.081209
+  ...
+# Subtest: shared-endpoint counterflow opt-in detects reverse trunks while preserving same-direction branches
+ok 40 - shared-endpoint counterflow opt-in detects reverse trunks while preserving same-direction branches
+  ---
+  duration_ms: 0.319041
+  ...
+# Subtest: ambiguous corridor gate keeps standard renderable
+ok 41 - ambiguous corridor gate keeps standard renderable
+  ---
+  duration_ms: 0.049292
+  ...
+# Subtest: cleanBorderRunProblems reports a deterministic long run on a rounded frame side
+ok 42 - cleanBorderRunProblems reports a deterministic long run on a rounded frame side
+  ---
+  duration_ms: 0.36275
+  ...
+# Subtest: border-run contract allows perpendicular crossings, point touches, and rounded corners
+ok 43 - border-run contract allows perpendicular crossings, point touches, and rounded corners
+  ---
+  duration_ms: 0.195917
+  ...
+# Subtest: border-run contract detects vertical frames and merges hits per relation side
+ok 44 - border-run contract detects vertical frames and merges hits per relation side
+  ---
+  duration_ms: 0.069625
+  ...
+# Subtest: border-run contract merges adjacent primitives and counts any positive straight overlap
+ok 45 - border-run contract merges adjacent primitives and counts any positive straight overlap
+  ---
+  duration_ms: 0.14275
+  ...
+# Subtest: routeBudgetMetrics normalizes collinear points and records neutral route evidence
+ok 46 - routeBudgetMetrics normalizes collinear points and records neutral route evidence
+  ---
+  duration_ms: 0.1785
+  ...
+# Subtest: route rhythm separates ordinary endpoint stubs from cramped turns and micro segments
+ok 47 - route rhythm separates ordinary endpoint stubs from cramped turns and micro segments
+  ---
+  duration_ms: 0.072334
+  ...
+# Subtest: route rhythm is a showcase-only generation gate with actionable relationship identity
+ok 48 - route rhythm is a showcase-only generation gate with actionable relationship identity
+  ---
+  duration_ms: 0.158334
+  ...
+# Subtest: asArray coerces non-arrays to [] (degraded-mode guard)
+ok 49 - asArray coerces non-arrays to [] (degraded-mode guard)
+  ---
+  duration_ms: 0.036417
+  ...
+# Subtest: isFinitePoint rejects NaN/undefined/Infinity
+ok 50 - isFinitePoint rejects NaN/undefined/Infinity
+  ---
+  duration_ms: 0.032541
+  ...
+# Subtest: anchor returns the correct edge midpoint for each side
+ok 51 - anchor returns the correct edge midpoint for each side
+  ---
+  duration_ms: 0.057625
+  ...
+# Subtest: anchor falls back to the right edge for unknown/auto sides
+ok 52 - anchor falls back to the right edge for unknown/auto sides
+  ---
+  duration_ms: 0.033042
+  ...
+# Subtest: defaultFromSide / defaultToSide are mirror pairs
+ok 53 - defaultFromSide / defaultToSide are mirror pairs
+  ---
+  duration_ms: 0.056083
+  ...
+# Subtest: defaultFromSide / defaultToSide follow the dominant axis, not any horizontal delta
+ok 54 - defaultFromSide / defaultToSide follow the dominant axis, not any horizontal delta
+  ---
+  duration_ms: 0.064083
+  ...
+# Subtest: chosenSide treats explicit "auto" as "use the geometric fallback"
+ok 55 - chosenSide treats explicit "auto" as "use the geometric fallback"
+  ---
+  duration_ms: 0.0375
+  ...
+# Subtest: polylinePath emits M then L commands
+ok 56 - polylinePath emits M then L commands
+  ---
+  duration_ms: 0.045917
+  ...
+# Subtest: roundedPath degrades to a polyline for <3 points or radius<=0
+ok 57 - roundedPath degrades to a polyline for <3 points or radius<=0
+  ---
+  duration_ms: 0.077958
+  ...
+# Subtest: roundedPath inserts a quadratic corner and never emits NaN
+ok 58 - roundedPath inserts a quadratic corner and never emits NaN
+  ---
+  duration_ms: 0.03925
+  ...
+# Subtest: roundedPath clamps radius to half the shorter adjacent segment
+ok 59 - roundedPath clamps radius to half the shorter adjacent segment
+  ---
+  duration_ms: 0.043833
+  ...
+# Subtest: labelPoint: 2-point path is the midpoint lifted 10px, plus offsets
+ok 60 - labelPoint: 2-point path is the midpoint lifted 10px, plus offsets
+  ---
+  duration_ms: 0.054792
+  ...
+# Subtest: labelPoint: labelSegment selects a segment and clamps to range
+ok 61 - labelPoint: labelSegment selects a segment and clamps to range
+  ---
+  duration_ms: 0.036708
+  ...
+# Subtest: labelPoint: explicit labelAt wins outright
+ok 62 - labelPoint: explicit labelAt wins outright
+  ---
+  duration_ms: 0.031041
+  ...
+# Subtest: textUnits: ASCII=1, CJK=2, mixed sums, fullwidth supplementary=2
+ok 63 - textUnits: ASCII=1, CJK=2, mixed sums, fullwidth supplementary=2
+  ---
+  duration_ms: 0.147625
+  ...
+# Subtest: textUnits follows wide and halfwidth East Asian presentation boundaries
+ok 64 - textUnits follows wide and halfwidth East Asian presentation boundaries
+  ---
+  duration_ms: 0.038333
+  ...
+# Subtest: textUnits counts emoji-presentation symbols in the BMP as wide
+ok 65 - textUnits counts emoji-presentation symbols in the BMP as wide
+  ---
+  duration_ms: 0.568542
+  ...
+# Subtest: textUnits estimates variation-selector sequences without counting selectors separately
+ok 66 - textUnits estimates variation-selector sequences without counting selectors separately
+  ---
+  duration_ms: 0.045625
+  ...
+# Subtest: textUnits keeps a Wide base wide when VS15 asks for text presentation
+ok 67 - textUnits keeps a Wide base wide when VS15 asks for text presentation
+  ---
+  duration_ms: 0.079583
+  ...
+# Subtest: semantic sigils cover every component and lifecycle kind without literal color
+ok 68 - semantic sigils cover every component and lifecycle kind without literal color
+  ---
+  duration_ms: 0.286084
+  ...
+# Subtest: unknown semantic sigils fail closed to a neutral role stamp
+ok 69 - unknown semantic sigils fail closed to a neutral role stamp
+  ---
+  duration_ms: 0.050541
+  ...
+# Subtest: every authored icon has SVG geometry while keeping its node tone and placement
+ok 70 - every authored icon has SVG geometry while keeping its node tone and placement
+  ---
+  duration_ms: 0.94275
+  ...
+# Subtest: suggestLabelObstacleFix includes rects and labelAt/labelDy hints
+ok 71 - suggestLabelObstacleFix includes rects and labelAt/labelDy hints
+  ---
+  duration_ms: 0.321958
+  ...
+# Subtest: suggestLabelObstacleFix states its no-viewBox hint as replacement values
+ok 72 - suggestLabelObstacleFix states its no-viewBox hint as replacement values
+  ---
+  duration_ms: 0.066042
+  ...
+# Subtest: suggestLabelObstacleFix carries an x nudge into the relative form
+ok 73 - suggestLabelObstacleFix carries an x nudge into the relative form
+  ---
+  duration_ms: 0.08175
+  ...
+# Subtest: suggestLabelObstacleFix measures its relative fix from the authored labelDx
+ok 74 - suggestLabelObstacleFix measures its relative fix from the authored labelDx
+  ---
+  duration_ms: 0.057583
+  ...
+# Subtest: suggestLabelObstacleFix offers no relative fix while labelAt is authored
+ok 75 - suggestLabelObstacleFix offers no relative fix while labelAt is authored
+  ---
+  duration_ms: 0.078916
+  ...
+# Subtest: suggestLabelObstacleFix drops a relative fix that integer deltas cannot land inside
+ok 76 - suggestLabelObstacleFix drops a relative fix that integer deltas cannot land inside
+  ---
+  duration_ms: 0.174125
+  ...
+# Subtest: suggestLabelObstacleFix measures its relative fix from a fractional anchor
+ok 77 - suggestLabelObstacleFix measures its relative fix from a fractional anchor
+  ---
+  duration_ms: 0.096917
+  ...
+# Subtest: suggestLabelObstacleFix treats a fractional authored labelDx as no horizontal move
+ok 78 - suggestLabelObstacleFix treats a fractional authored labelDx as no horizontal move
+  ---
+  duration_ms: 0.048166
+  ...
+# Subtest: suggestLabelObstacleFix keeps its labelAt inside a supplied viewBox
+ok 79 - suggestLabelObstacleFix keeps its labelAt inside a supplied viewBox
+  ---
+  duration_ms: 0.093417
+  ...
+# Subtest: suggestLabelObstacleFix drops a placement that would only trade the obstacle for a clipped edge
+ok 80 - suggestLabelObstacleFix drops a placement that would only trade the obstacle for a clipped edge
+  ---
+  duration_ms: 0.127167
+  ...
+# Subtest: suggestLabelObstacleFix keeps both two-line forms clear of the obstacle it names
+ok 81 - suggestLabelObstacleFix keeps both two-line forms clear of the obstacle it names
+  ---
+  duration_ms: 0.162125
+  ...
+# Subtest: suggestLabelObstacleFix reports when neither vertical slot clears the obstacle
+ok 82 - suggestLabelObstacleFix reports when neither vertical slot clears the obstacle
+  ---
+  duration_ms: 0.044542
+  ...
+# Subtest: suggestLabelObstacleFix offers no coordinate for a label wider than the canvas
+ok 83 - suggestLabelObstacleFix offers no coordinate for a label wider than the canvas
+  ---
+  duration_ms: 0.052792
+  ...
+# Subtest: suggestLabelObstacleFix keeps placements clear of the other supplied obstacles
+ok 84 - suggestLabelObstacleFix keeps placements clear of the other supplied obstacles
+  ---
+  duration_ms: 0.054583
+  ...
+# Subtest: cleanLabelCanvasContainmentProblems names both edges a corner overhang crosses and stays off standard
+ok 85 - cleanLabelCanvasContainmentProblems names both edges a corner overhang crosses and stays off standard
+  ---
+  duration_ms: 0.239417
+  ...
+# Subtest: cleanLabelCanvasContainmentProblems ignores overhang under the 0.5px tolerance
+ok 86 - cleanLabelCanvasContainmentProblems ignores overhang under the 0.5px tolerance
+  ---
+  duration_ms: 0.093291
+  ...
+# Subtest: suggestComponentSeparation proposes nudged pos
+ok 87 - suggestComponentSeparation proposes nudged pos
+  ---
+  duration_ms: 0.071042
+  ...
+# Subtest: applyTemplate preserves dollar sequences in titles
+ok 88 - applyTemplate preserves dollar sequences in titles
+  ---
+  duration_ms: 1.070875
+  ...
+# Subtest: applyTemplate omits the subtitle row when no subtitle is authored
+ok 89 - applyTemplate omits the subtitle row when no subtitle is authored
+  ---
+  duration_ms: 0.406875
+  ...
+# Subtest: applyTemplate requires the new evidence slot only when evidence is present
+ok 90 - applyTemplate requires the new evidence slot only when evidence is present
+  ---
+  duration_ms: 0.475125
+  ...
+# Subtest: public typed renderers default to auto and expose only authored semantic kinds
+ok 91 - public typed renderers default to auto and expose only authored semantic kinds
+  ---
+  duration_ms: 676.151042
+  ...
+# Subtest: Dataflow database node facts are interactive while flow variants stay visual-only
+ok 92 - Dataflow database node facts are interactive while flow variants stay visual-only
+  ---
+  duration_ms: 265.973417
+  ...
+# Subtest: Issue \#52 dataflow and lifecycle reproductions publish truthful default legends
+ok 93 - Issue \#52 dataflow and lifecycle reproductions publish truthful default legends
+  ---
+  duration_ms: 253.779666
+  ...
+# Subtest: all mode follows each renderer-owned stable catalog order
+not ok 94 - all mode follows each renderer-owned stable catalog order
+  ---
+  duration_ms: 144.053417
+  location: '/evidence/issue-1139/implementation/test/legend-contract.test.mjs:192:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    architecture
+    + actual - expected ... Lines skipped
+    
+      [
+        'frontend',
+    ...
+        'messagebus',
+        'external',
+    +   'relation-forward',
+    +   'relation-both',
+    +   'relation-none'
+      ]
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 'frontend'
+    1: 'backend'
+    2: 'database'
+    3: 'cloud'
+    4: 'security'
+    5: 'messagebus'
+    6: 'external'
+  actual:
+    0: 'frontend'
+    1: 'backend'
+    2: 'database'
+    3: 'cloud'
+    4: 'security'
+    5: 'messagebus'
+    6: 'external'
+    7: 'relation-forward'
+    8: 'relation-both'
+    9: 'relation-none'
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/legend-contract.test.mjs:195:12)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: hidden mode removes the complete legend and overrides visible true
+ok 95 - hidden mode removes the complete legend and overrides visible true
+  ---
+  duration_ms: 676.282625
+  ...
+# Subtest: visibility overrides apply after auto/all and empty legends leave no chrome
+ok 96 - visibility overrides apply after auto/all and empty legends leave no chrome
+  ---
+  duration_ms: 1794.096375
+  ...
+# Subtest: label overrides round-trip through all five public renderers
+ok 97 - label overrides round-trip through all five public renderers
+  ---
+  duration_ms: 732.561792
+  ...
+# Subtest: label overrides preserve stable kinds and exact Semantic Legend boundaries
+ok 98 - label overrides preserve stable kinds and exact Semantic Legend boundaries
+  ---
+  duration_ms: 983.710625
+  ...
+# Subtest: strict per-renderer schemas reject malformed legend contracts with path-prefixed errors
+ok 99 - strict per-renderer schemas reject malformed legend contracts with path-prefixed errors
+  ---
+  duration_ms: 3952.131459
+  ...
+# Subtest: measured legends fail explicitly instead of wrapping into diagram content
+ok 100 - measured legends fail explicitly instead of wrapping into diagram content
+  ---
+  duration_ms: 275.775166
+  ...
+# Subtest: explicit Architecture viewBox rejects legend title rectangles that overlap content
+ok 101 - explicit Architecture viewBox rejects legend title rectangles that overlap content
+  ---
+  duration_ms: 134.9505
+  ...
+# Subtest: a single unfit label fails with a path-specific width diagnostic
+ok 102 - a single unfit label fails with a path-specific width diagnostic
+  ---
+  duration_ms: 138.811333
+  ...
+# Subtest: measured legend rows share baselines and stay within the viewBox for localized labels
+ok 103 - measured legend rows share baselines and stay within the viewBox for localized labels
+  ---
+  duration_ms: 136.082125
+  ...
+# Subtest: legend entries reserve the width of their rendered label font
+ok 104 - legend entries reserve the width of their rendered label font
+  ---
+  duration_ms: 12.760334
+  ...
+# Subtest: all five renderers inherit one active-reach-only Reach Share Card item
+ok 105 - all five renderers inherit one active-reach-only Reach Share Card item
+  ---
+  duration_ms: 613.917083
+  ...
+# Subtest: Reach Share Card snapshots copy the active authored closure without rerunning traversal
+ok 106 - Reach Share Card snapshots copy the active authored closure without rerunning traversal
+  ---
+  duration_ms: 121.682625
+  ...
+# Subtest: Reach variant decorates only a finite canonical clone with static authored identity
+ok 107 - Reach variant decorates only a finite canonical clone with static authored identity
+  ---
+  duration_ms: 206.20075
+  ...
+# Subtest: Reach styling preserves context, direction, and Blueprint restraint without motion
+ok 108 - Reach styling preserves context, direction, and Blueprint restraint without motion
+  ---
+  duration_ms: 118.501625
+  ...
+# Subtest: Reach Share Card reuses the 1200x630 seam and publishes a truthful scoped receipt
+ok 109 - Reach Share Card reuses the 1200x630 seam and publishes a truthful scoped receipt
+  ---
+  duration_ms: 117.492666
+  ...
+# Subtest: Skill, product docs, and READMEs keep the optional truthful boundary explicit
+ok 110 - Skill, product docs, and READMEs keep the optional truthful boundary explicit
+  ---
+  duration_ms: 5.106875
+  ...
+# Subtest: all five renderers inherit one resolved-only Route Share Card Export item
+ok 111 - all five renderers inherit one resolved-only Route Share Card Export item
+  ---
+  duration_ms: 803.796125
+  ...
+# Subtest: Route Share Card menu lifecycle excludes hidden state from keyboard navigation
+ok 112 - Route Share Card menu lifecycle excludes hidden state from keyboard navigation
+  ---
+  duration_ms: 293.042042
+  ...
+# Subtest: Route Share Card snapshots copy exact resolved node and relationship identity without rerouting
+not ok 113 - Route Share Card snapshots copy exact resolved node and relationship identity without rerouting
+  ---
+  duration_ms: 146.376708
+  location: '/evidence/issue-1139/implementation/test/route-share-card.test.mjs:59:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The input did not match the regular expression /fragment\.getAttribute\('data-edge-from'\) === activeNodeIds\[index\]/. Input:
+    
+    'function exportSnapshot() {\n' +
+      "        if (mode !== 'result' || activeNodeIds.length < 2 || activeEdges.length !== activeNodeIds.length - 1) return null;\n" +
+      '        var allNodes = nodes();\n' +
+      '        var byId = nodesById();\n' +
+      '        var seenNodeIds = Object.create(null);\n' +
+      '        var seenEdgeKeys = Object.create(null);\n' +
+      '        if (startId !== activeNodeIds[0] || endId !== activeNodeIds[activeNodeIds.length - 1] ||\n' +
+      '            activeNodeIds.some(function (id) {\n' +
+      '              if (seenNodeIds[id] || allNodes.filter(function (node) {\n' +
+      "                return node.getAttribute('data-node-id') === id;\n" +
+      '              }).length !== 1) return true;\n' +
+      '              seenNodeIds[id] = true;\n' +
+      '              return !byId[id];\n' +
+      '            }) ||\n' +
+      '            activeEdges.some(function (edge, index) {\n' +
+      '              if (!edge || !svg.contains(edge) || edgeDirection(edge) !== activeEdgeDirections[index]) return true;\n' +
+      "              var edgeKey = edge.getAttribute('data-edge-key');\n" +
+      "              var edgeId = edge.getAttribute('data-edge-id') || '';\n" +
+      '              if (!edgeKey || seenEdgeKeys[edgeKey]) return true;\n' +
+      '              seenEdgeKeys[edgeKey] = true;\n' +
+      "              var fragments = Array.prototype.slice.call(svg.querySelectorAll('[data-edge-key]')).filter(function (candidate) {\n" +
+      "                return candidate.getAttribute('data-edge-key') === edgeKey;\n" +
+      '              });\n' +
+      '              var drawableFragments = fragments.filter(hasDrawableGeometry);\n' +
+      '              return !fragments.length || !fragments.every(function (fragment) {\n' +
+      "                return fragment.getAttribute('data-edge-from') === edge.getAttribute('data-edge-from') &&\n" +
+      "                  fragment.getAttribute('data-edge-to') === edge.getAttribute('data-edge-to') &&\n" +
+      '                  edgeDirection(fragment) === edgeDirection(edge) &&\n' +
+      "                  (fragment.getAttribute('data-edge-id') || '') === edgeId;\n" +
+      '              }) || drawableFragments.length !== 1 || drawableFragments[0] !== edge ||\n' +
+      '                !edgeAllowsStep(edge, activeNodeIds[index], activeNodeIds[index + 1]);\n' +
+      '            })) return null;\n' +
+      '        return {\n' +
+      '          source: { id: startId, label: nodeLabel(byId[startId], startId) },\n' +
+      '          target: { id: endId, label: nodeLabel(byId[endId], endId) },\n' +
+      '          nodeIds: activeNodeIds.slice(),\n' +
+      '          hops: activeEdges.length,\n' +
+      '          edges: activeEdges.map(function (edge) {\n' +
+      '            return {\n' +
+      "              key: edge.getAttribute('data-edge-key'),\n" +
+      "              id: edge.getAttribute('data-edge-id') || '',\n" +
+      "              from: edge.getAttribute('data-edge-from'),\n" +
+      "              to: edge.getAttribute('data-edge-to'),\n" +
+      "              ...(edgeDirection(edge) === 'forward' ? {} : { direction: edgeDirection(edge) }),\n" +
+      "              label: edge.getAttribute('data-edge-label') || ''\n" +
+      '            };\n' +
+      '          })\n' +
+      '        };\n' +
+      '      }'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+  actual: |-
+    function exportSnapshot() {
+            if (mode !== 'result' || activeNodeIds.length < 2 || activeEdges.length !== activeNodeIds.length - 1) return null;
+            var allNodes = nodes();
+            var byId = nodesById();
+            var seenNodeIds = Object.create(null);
+            var seenEdgeKeys = Object.create(null);
+            if (startId !== activeNodeIds[0] || endId !== activeNodeIds[activeNodeIds.length - 1] ||
+                activeNodeIds.some(function (id) {
+                  if (seenNodeIds[id] || allNodes.filter(function (node) {
+                    return node.getAttribute('data-node-id') === id;
+                  }).length !== 1) return true;
+                  seenNodeIds[id] = true;
+                  return !byId[id];
+                }) ||
+                activeEdges.some(function (edge, index) {
+                  if (!edge || !svg.contains(edge) || edgeDirection(edge) !== activeEdgeDirections[index]) return true;
+                  var edgeKey = edge.getAttribute('data-edge-key');
+                  var edgeId = edge.getAttribute('data-edge-id') || '';
+                  if (!edgeKey || seenEdgeKeys[edgeKey]) return true;
+                  seenEdgeKeys[edgeKey] = true;
+                  var fragments = Array.prototype.slice.call(svg.querySelectorAll('[data-edge-key]')).filter(function (candidate) {
+                    return candidate.getAttribute('data-edge-key') === edgeKey;
+                  });
+                  var drawableFragments = fragments.filter(hasDrawableGeometry);
+                  return !fragments.length || !fragments.every(function (fragment) {
+                    return fragment.getAttribute('data-edge-from') === edge.getAttribute('data-edge-from') &&
+                      fragment.getAttribute('data-edge-to') === edge.getAttribute('data-edge-to') &&
+                      edgeDirection(fragment) === edgeDirection(edge) &&
+                      (fragment.getAttribute('data-edge-id') || '') === edgeId;
+                  }) || drawableFragments.length !== 1 || drawableFragments[0] !== edge ||
+                    !edgeAllowsStep(edge, activeNodeIds[index], activeNodeIds[index + 1]);
+                })) return null;
+            return {
+              source: { id: startId, label: nodeLabel(byId[startId], startId) },
+              target: { id: endId, label: nodeLabel(byId[endId], endId) },
+              nodeIds: activeNodeIds.slice(),
+              hops: activeEdges.length,
+              edges: activeEdges.map(function (edge) {
+                return {
+                  key: edge.getAttribute('data-edge-key'),
+                  id: edge.getAttribute('data-edge-id') || '',
+                  from: edge.getAttribute('data-edge-from'),
+                  to: edge.getAttribute('data-edge-to'),
+                  ...(edgeDirection(edge) === 'forward' ? {} : { direction: edgeDirection(edge) }),
+                  label: edge.getAttribute('data-edge-label') || ''
+                };
+              })
+            };
+          }
+  operator: 'match'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/route-share-card.test.mjs:69:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: Route Share Card snapshot fails closed when the resolved DOM becomes stale or conflicting
+ok 114 - Route Share Card snapshot fails closed when the resolved DOM becomes stale or conflicting
+  ---
+  duration_ms: 220.501208
+  ...
+# Subtest: Route variant decorates only a finite canonical clone with dedicated static attributes
+ok 115 - Route variant decorates only a finite canonical clone with dedicated static attributes
+  ---
+  duration_ms: 129.286583
+  ...
+# Subtest: clone-only Route styling retains context and distinguishes start, middle, and end without motion
+ok 116 - clone-only Route styling retains context and distinguishes start, middle, and end without motion
+  ---
+  duration_ms: 123.347417
+  ...
+# Subtest: Route Share Card reuses one 1200x630 variant seam and publishes a truthful receipt
+ok 117 - Route Share Card reuses one 1200x630 variant seam and publishes a truthful receipt
+  ---
+  duration_ms: 126.208792
+  ...
+# Subtest: skill and READMEs describe the optional Export variant and show one real card without changing the hero
+ok 118 - skill and READMEs describe the optional Export variant and show one real card without changing the hero
+  ---
+  duration_ms: 2.259083
+  ...
+1..118
+# tests 118
+# suites 0
+# pass 116
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10380.887208

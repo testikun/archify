@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "SkillRoster: inspect, plan, apply, undo",
+    "subtitle": "Local Rust CLI • caller chooses intent; SkillRoster validates and executes • arrows name calls and local I/O, not services",
+    "output": "output/skillroster-architecture.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/skillroster",
+      "revision": "21d14c7cff25c66a016562e238e62d0538eb696f",
+      "link_mode": "local-only"
+    },
+    "legend": {
+      "entries": {
+        "backend": { "label": "Local Rust responsibilities" },
+        "database": { "label": "Local persistent files" },
+        "security": { "label": "Mutation authority / gates" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "1 · Discover & inspect",
+      "sublabel": "scan.rs + app::scan_command",
+      "tag": "No Skill writes",
+      "pos": [40, 48],
+      "size": [240, 86],
+      "explanation": "The scan command freezes exact durable read permissions, discovers known Agent roots, shared Library roots, explicit roots and Codex plugin roots, then materializes Skill identities, placements, fingerprints and optional session evidence. app.rs persists the Snapshot. This is read-only with respect to Agent/Skill content, not with respect to SkillRoster state. Plugin caches and durable-read roots are observed but not governable.",
+      "sources": [
+        { "path": "src/scan.rs", "line": 984, "end_line": 1168 },
+        { "path": "src/app.rs", "line": 1644, "end_line": 1759 },
+        { "path": "src/scan.rs", "line": 195, "end_line": 218 }
+      ]
+    },
+    {
+      "id": "planning",
+      "type": "backend",
+      "label": "2 · Prepare immutable Plan",
+      "sublabel": "app.rs · roster_plan.rs · change::prepare",
+      "tag": "Declarative requests only",
+      "pos": [440, 48],
+      "size": [270, 86],
+      "explanation": "plan reads JSON from stdin. The caller supplies intent and current-Snapshot Evidence, not arbitrary filesystem operations. Trusted normalization derives Roster moves/links, Library changes or source updates; these request groups must use separate Plans. Preparation validates roots, operation policy, Evidence and current Snapshot, captures fingerprints / physical bindings and before-state, computes a digest and saves a Ready Plan. It inspects paths and writes control state, but does not execute the content operations.",
+      "sources": [
+        { "path": "src/app.rs", "line": 7572, "end_line": 7618 },
+        { "path": "src/app.rs", "line": 8223, "end_line": 8475 },
+        { "path": "src/change.rs", "line": 406, "end_line": 678 }
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "security",
+      "label": "3 · Apply / Undo gate",
+      "sublabel": "app.rs · exclusive StateLock",
+      "tag": "Recheck before execution",
+      "pos": [900, 48],
+      "size": [250, 86],
+      "explanation": "These are separate CLI commands, not an automatic continuation of planning. Apply requires a Ready Plan, the same latest Snapshot, valid Evidence, unchanged physical placements and unchanged Roster/Library before-state; unresolved journals or recovery block it. Undo loads an Applied Receipt and rejects a prior reverse Receipt. Interactive mode prompts for confirmation. --json skips that prompt: explicit user consent is the caller's responsibility, not a consent token verified by the engine.",
+      "sources": [
+        { "path": "src/app.rs", "line": 345, "end_line": 390 },
+        { "path": "src/app.rs", "line": 8479, "end_line": 8516 },
+        { "path": "src/app.rs", "line": 8601, "end_line": 8621 }
+      ]
+    },
+    {
+      "id": "content",
+      "type": "database",
+      "label": "Agent & Library packages",
+      "sublabel": "SKILL.md · package files · links",
+      "tag": "Read scope ≠ write scope",
+      "pos": [40, 274],
+      "size": [240, 80],
+      "explanation": "Known Agent roots, shared sources, explicit roots and plugin caches are discovery inputs. The managed Library normally lives under state_dir/library. Not every discovered path may be changed: governable and MutationScope::Mutable must both hold; provider caches and durable-read sources are not mutation authority. Only approved targets of a validated Plan enter the mutation path.",
+      "sources": [
+        { "path": "src/scan.rs", "line": 984, "end_line": 1130 },
+        { "path": "src/scan.rs", "line": 175, "end_line": 218 },
+        { "path": "src/roster_plan.rs", "line": 703, "end_line": 795 }
+      ]
+    },
+    {
+      "id": "state",
+      "type": "database",
+      "label": "SQLite · StateStore",
+      "sublabel": "state_dir/skillroster.db",
+      "tag": "Snapshots · Plans · Receipts",
+      "pos": [440, 274],
+      "size": [270, 80],
+      "explanation": "Control-plane persistence, separate from Skill content and filesystem Receipt journals. Scans save indexed inventory and Snapshot payloads transactionally. Preparation saves immutable Plans. Apply records governance changes, Plan status and Receipt; Undo restores captured governance before-state and records a reverse Receipt. SQLite finalization is not the same transaction as filesystem mutation: a durable journal may exist even if SQLite finalization fails, requiring lifecycle recovery.",
+      "sources": [
+        { "path": "src/sqlite.rs", "line": 240, "end_line": 269 },
+        { "path": "src/app.rs", "line": 8533, "end_line": 8598 },
+        { "path": "src/app.rs", "line": 8622, "end_line": 8670 }
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "4 · Reversible execution",
+      "sublabel": "change::apply_locked / undo_locked",
+      "tag": "Journal → execute → verify",
+      "pos": [900, 274],
+      "size": [250, 80],
+      "explanation": "Apply validates the prepared digest/sequence against an anchored filesystem, requires atomic no-replace rename support and no unresolved recovery, then publishes an Applying journal before executing. Each operation is revalidated and compensations are staged and persisted. Failures attempt rollback, otherwise mark RecoveryRequired. Undo uses the original Receipt's compensations in reverse order, verifies fingerprints / missing destinations, and emits a linked reverse Receipt. It is not a rescan-derived inverse Plan. app.rs commits governance metadata only after successful filesystem verification, and compensates an Apply if that metadata update fails.",
+      "sources": [
+        { "path": "src/change.rs", "line": 686, "end_line": 830 },
+        { "path": "src/change.rs", "line": 940, "end_line": 1025 },
+        { "path": "src/change.rs", "line": 1954, "end_line": 2001 }
+      ]
+    },
+    {
+      "id": "anchored",
+      "type": "security",
+      "label": "AnchoredFs + durability",
+      "sublabel": "Bound roots · identity checks · sync",
+      "tag": "Content-write boundary",
+      "pos": [440, 488],
+      "size": [270, 80],
+      "explanation": "The change engine requests filesystem actions through AnchoredFs created from the StateLock and approved roots. This is the actual I/O layer, not the planner. It creates files/directories/links, replaces files and renames recoverable paths. Private Receipt journals are staged, file-synced, atomically renamed and parent-synced with identity checks. The code establishes these mechanisms; this diagram does not claim tested crash/power-loss behavior on every filesystem or that the inspected user's installation supports every primitive.",
+      "sources": [
+        { "path": "src/anchored_fs.rs", "line": 939, "end_line": 1039 },
+        { "path": "src/anchored_fs.rs", "line": 1179, "end_line": 1218 },
+        { "path": "src/change.rs", "line": 1783, "end_line": 1824 }
+      ]
+    },
+    {
+      "id": "journals",
+      "type": "database",
+      "label": "Receipt journals & recovery",
+      "sublabel": "receipts/*.json · backups / stashes",
+      "tag": "Durable mutation evidence",
+      "pos": [40, 488],
+      "size": [240, 80],
+      "explanation": "change.rs owns journal serialization and requests atomic writes via AnchoredFs. Journals retain status, changed paths, per-operation results and compensations. Undo may stash created paths rather than delete them; moved paths are renamed back only if expected fingerprints match and destinations are absent. Unresolved journal states block later writes. Filesystem journals and the SQLite Receipt record are distinct persistence layers.",
+      "sources": [
+        { "path": "src/change.rs", "line": 2641, "end_line": 2655 },
+        { "path": "src/change.rs", "line": 1954, "end_line": 2001 },
+        { "path": "src/app.rs", "line": 8590, "end_line": 8598 }
+      ]
+    }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Inspection & preparation · no Agent/Skill mutations", "wraps": ["inspection", "planning"], "pad": 18 }
+  ],
+  "connections": [
+    { "id": "read-installed", "from": "inspection", "to": "content", "label": "read packages / links" },
+    { "id": "persist-scan", "from": "inspection", "to": "state", "label": "save Snapshot" },
+    { "id": "prepare-state", "from": "planning", "to": "state", "label": "read facts / save Plan" },
+    { "id": "load-command-state", "from": "gate", "to": "state", "label": "load Plan / Receipt" },
+    { "id": "execute-authorized", "from": "gate", "to": "engine", "label": "only if checks pass", "variant": "security" },
+    { "id": "commit-governance", "from": "engine", "to": "state", "label": "app commits outcome" },
+    { "id": "anchored-io", "from": "engine", "to": "anchored", "label": "apply / compensate" },
+    { "id": "write-content", "from": "anchored", "to": "content", "label": "validated targets only", "variant": "security" },
+    { "id": "journal-io", "from": "anchored", "to": "journals", "label": "write / read recovery" }
+  ],
+  "cards": [
+    { "dot": "cyan", "title": "Caller owns intent & consent", "items": ["CLI calls are separate steps: scan → declarative plan → apply <plan> → undo <receipt>.", "Human Apply/Undo prompts; --json relies on caller-obtained consent (app.rs:345–390, 600–605).", "No live Agent service is needed for this local path; all source links target the pinned checkout."] },
+    { "dot": "amber", "title": "Read-only means content, not all disk", "items": ["Scan saves inventory; Plan saves control records. Neither executes Skill-content operations.", "Provider caches and durable read permissions do not grant governance rights.", "A Ready Plan is not automatic permission to apply; live state is checked again."] },
+    { "dot": "rose", "title": "Undo is conditional recovery", "items": ["Reverse stored compensations; reject drift rather than overwrite unrelated changes.", "Partial failure can require lifecycle recovery; SQLite and filesystem journals are not one atomic transaction.", "Successful Apply requests a rescan; Undo can invalidate a newer Snapshot. Runtime filesystem guarantees are not established by this source-only review."] }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1152,
+    548
+  ],
+  "components": [
+    {
+      "id": "parent",
+      "type": "backend",
+      "label": "Caller · parent Pi session",
+      "x": 40,
+      "y": 50,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        40,
+        50
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Subagent tool facade",
+      "x": 450,
+      "y": 50,
+      "width": 225,
+      "height": 86,
+      "pos": [
+        450,
+        50
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "SubagentManager",
+      "x": 870,
+      "y": 50,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        870,
+        50
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Pi backend + child session",
+      "x": 870,
+      "y": 370,
+      "width": 220,
+      "height": 90,
+      "pos": [
+        870,
+        370
+      ]
+    },
+    {
+      "id": "completion",
+      "type": "messagebus",
+      "label": "Completion delivery",
+      "x": 40,
+      "y": 370,
+      "width": 230,
+      "height": 90,
+      "pos": [
+        40,
+        370
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "One OpenPI process · Pi-native extension runtime",
+      "x": 18,
+      "y": 26,
+      "width": 1094,
+      "height": 454,
+      "wraps": [
+        "parent",
+        "tools",
+        "manager",
+        "child",
+        "completion"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Separate context · not an OS sandbox",
+      "x": 852,
+      "y": 346,
+      "width": 256,
+      "height": 134,
+      "wraps": [
+        "child"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "parent",
+      "to": "tools",
+      "label": "spawn / check / wait",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          84.95
+        ],
+        [
+          450,
+          84.95
+        ]
+      ],
+      "labelAt": [
+        355,
+        75
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "parent",
+      "label": "ID / status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          450,
+          100
+        ],
+        [
+          260,
+          100
+        ]
+      ],
+      "labelAt": [
+        355,
+        120
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "manager",
+      "label": "spawn / read / wait",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          675,
+          84.95
+        ],
+        [
+          870,
+          84.95
+        ]
+      ],
+      "labelAt": [
+        773,
+        75
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "tools",
+      "label": "snapshot",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          870,
+          100
+        ],
+        [
+          675,
+          100
+        ]
+      ],
+      "labelAt": [
+        773,
+        120
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "child",
+      "label": "create + prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          995.05,
+          136
+        ],
+        [
+          995.05,
+          370
+        ]
+      ],
+      "labelAt": [
+        1042,
+        256
+      ]
+    },
+    {
+      "from": "child",
+      "to": "manager",
+      "label": "events + RunSettled",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          980,
+          370
+        ],
+        [
+          980,
+          136
+        ]
+      ],
+      "labelAt": [
+        923,
+        315
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "completion",
+      "label": "onSettled · if unconsumed",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          966,
+          136
+        ],
+        [
+          966,
+          253
+        ],
+        [
+          162,
+          253
+        ],
+        [
+          162,
+          370
+        ]
+      ],
+      "labelAt": [
+        564,
+        243
+      ]
+    },
+    {
+      "from": "completion",
+      "to": "parent",
+      "label": "followUp + triggerTurn",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          146.95,
+          370
+        ],
+        [
+          146.95,
+          136
+        ]
+      ],
+      "labelAt": [
+        83,
+        256
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "spawn / check / wait",
+      "x": 302,
+      "y": 65,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        355,
+        75
+      ]
+    },
+    {
+      "text": "ID / status / result",
+      "x": 302,
+      "y": 110,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        355,
+        120
+      ]
+    },
+    {
+      "text": "spawn / read / wait",
+      "x": 722,
+      "y": 65,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        773,
+        75
+      ]
+    },
+    {
+      "text": "snapshot",
+      "x": 748,
+      "y": 110,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        773,
+        120
+      ]
+    },
+    {
+      "text": "create + prompt",
+      "x": 1001,
+      "y": 246,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        1042,
+        256
+      ]
+    },
+    {
+      "text": "events + RunSettled",
+      "x": 873,
+      "y": 305,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        923,
+        315
+      ]
+    },
+    {
+      "text": "onSettled · if unconsumed",
+      "x": 499,
+      "y": 233,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        564,
+        243
+      ]
+    },
+    {
+      "text": "followUp + triggerTurn",
+      "x": 25,
+      "y": 246,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        83,
+        256
+      ]
+    }
+  ]
+}

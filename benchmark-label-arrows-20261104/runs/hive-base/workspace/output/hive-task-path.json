@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hive: from browser task to CLI worker",
+    "subtitle": "Local team path · terminal bytes are live visibility; team messages and reports are structured collaboration",
+    "output": "output/hive-task-path.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/tt-a1i/hive",
+      "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "terminal-ui", "type": "frontend", "label": "Workbench terminals",
+      "sublabel": "Enter a goal; watch CLI output", "pos": [40, 70], "size": [210, 78],
+      "explanation": "The browser connects per run to /ws/terminal/:runId/io and /control. Input reaches the CLI through the server PTY, not a browser-side agent. The orchestrator terminal is the interactive entry shown here; worker terminals use the same transport.",
+      "sources": [{"path":"web/src/terminal/terminal-client.ts","line":99,"end_line":110,"label":"Per-run WebSocket channels"},{"path":"web/src/terminal/terminal-client.ts","line":144,"end_line":180,"label":"Input and rendered output"}]
+    },
+    {
+      "id": "bridge", "type": "backend", "label": "PTY runtime + stream hub",
+      "sublabel": "Spawn, write, mirror and fan out", "pos": [455, 70], "size": [220, 78],
+      "explanation": "Hive starts configured CLIs through node-pty. Terminal input is written to the run; PTY onData publishes to the output bus and the stream hub fans it out to viewers. Dispatch/report envelopes also use the runtime's CLI-aware input writer. Both server boxes in this drawing belong to the same Hive runtime, not separate services.",
+      "sources": [{"path":"src/server/agent-manager.ts","line":153,"end_line":166,"label":"Spawn CLI under PTY"},{"path":"src/server/agent-manager-support.ts","line":330,"end_line":343,"label":"PTY write and output publication"},{"path":"src/server/terminal-stream-hub.ts","line":146,"end_line":158,"label":"Output fan-out to viewers"}]
+    },
+    {
+      "id": "orchestrator", "type": "external", "label": "Orchestrator CLI",
+      "sublabel": "Interpret goal; choose team member", "tag": "CLI process", "pos": [880, 70], "size": [220, 78],
+      "explanation": "The orchestrator invokes the local team CLI: team send <member> <task>. That helper posts to 127.0.0.1:HIVE_PORT with project identity and an agent token. Agent behavior is prompted, not guaranteed: Hive does not deterministically turn every natural-language goal into a dispatch.",
+      "sources": [{"path":"src/cli/team.ts","line":1254,"end_line":1291,"label":"team send invokes runtime HTTP"},{"path":"src/server/agent-run-bootstrap.ts","line":127,"end_line":138,"label":"Agent and project environment"},{"path":"src/server/agent-run-starter.ts","line":112,"end_line":143,"label":"Token injection and CLI startup"}]
+    },
+    {
+      "id": "team-ui", "type": "frontend", "label": "Team / Action Center",
+      "sublabel": "Activity, messages and report text", "pos": [40, 360], "size": [210, 78],
+      "explanation": "The Action Center polls the UI API every two seconds, with UI-token authentication on the server. Its summary is built from team state, dispatches and messages; this is separate from streaming terminal output.",
+      "sources": [{"path":"web/src/action-center/ActionCenterStrip.tsx","line":120,"end_line":165,"label":"Summary refresh loop"},{"path":"src/server/routes-action-center.ts","line":9,"end_line":28,"label":"Authenticated UI summary"},{"path":"src/server/action-center-summary.ts","line":27,"end_line":34,"label":"Dispatch status becomes activity"}]
+    },
+    {
+      "id": "worker", "type": "external", "label": "Worker CLI",
+      "sublabel": "Execute task in workspace cwd", "tag": "CLI process", "pos": [455, 360], "size": [220, 78],
+      "explanation": "A configured worker receives a dispatch envelope through its PTY. For structured progress it runs team message --dispatch <id> --to orchestrator --kind progress. It ends a responsibility with team report --dispatch <id> and optional artifact paths. Printing terminal output alone is not a team report.",
+      "sources": [{"path":"src/cli/team.ts","line":67,"end_line":87,"label":"Collaboration commands"},{"path":"src/server/dispatch-message-operations.ts","line":70,"end_line":95,"label":"Persist message then drain outbox"},{"path":"src/server/dispatch-message-outbox.ts","line":34,"end_line":61,"label":"Message delivery to recipient PTY"}]
+    },
+    {
+      "id": "control", "type": "backend", "label": "Team API + collaboration",
+      "sublabel": "Authorize; dispatch; record; deliver", "pos": [880, 360], "size": [220, 78],
+      "explanation": "CLI requests are authenticated and role-gated. Dispatches are recorded before a formatted prompt is written through the agent runtime. User-managed stopped workers remain queued until started; the first send can wake a never-started orchestrator-spawned worker. Reports close the matching open dispatch and enqueue an orchestrator envelope before delivery. Completion recording is distinct from delivery to the orchestrator.",
+      "sources": [{"path":"src/server/routes-team.ts","line":127,"end_line":170,"label":"Auth, role check and stopped-worker policy"},{"path":"src/server/team-operations.ts","line":604,"end_line":738,"label":"Create, queue, claim and write dispatch"},{"path":"src/server/team-operations.ts","line":978,"end_line":1132,"label":"Commit report and queue/deliver result"}]
+    },
+    {
+      "id": "database", "type": "database", "label": "Local runtime.sqlite",
+      "sublabel": "Dispatch ledger + message/report outboxes", "pos": [865, 650], "size": [250, 78],
+      "explanation": "The local runtime database stores dispatch lifecycle, report text and artifact path references. Dispatch messages and report envelopes have outboxes so recording does not depend on an active recipient PTY. These are local SQLite records, not an external queue service. Artifact paths are references, not evidence of an uploaded artifact store.",
+      "sources": [{"path":"src/server/runtime-database.ts","line":128,"end_line":144,"label":"Open local runtime.sqlite"},{"path":"src/server/dispatch-ledger-store.ts","line":8,"end_line":30,"label":"Dispatch state and report fields"},{"path":"src/server/team-operations.ts","line":1012,"end_line":1033,"label":"Report and outbox committed together"}]
+    }
+  ],
+  "boundaries": [
+    {"kind":"region","label":"Browser workbench","wraps":["terminal-ui","team-ui"],"pad":20},
+    {"kind":"region","label":"Hive server · terminal I/O","wraps":["bridge"],"pad":18},
+    {"kind":"region","label":"Hive server · team control","wraps":["control"],"pad":18},
+    {"kind":"region","label":"Local persistence","wraps":["database"],"pad":18}
+  ],
+  "connections": [
+    {"id":"browser-input","from":"terminal-ui","to":"bridge","label":"1 · WS input","variant":"emphasis"},
+    {"id":"browser-output","from":"bridge","to":"terminal-ui","label":"WS output","variant":"dashed"},
+    {"id":"goal-to-cli","from":"bridge","to":"orchestrator","label":"PTY input","variant":"emphasis"},
+    {"id":"orchestrator-output","from":"orchestrator","to":"bridge","label":"PTY output","variant":"dashed"},
+    {"id":"dispatch-request","from":"orchestrator","to":"control","label":"2 · HTTP team send","variant":"emphasis"},
+    {"id":"return-to-team","from":"control","to":"orchestrator","label":"5 · PTY progress / result","variant":"dashed"},
+    {"id":"deliver-dispatch","from":"control","to":"worker","label":"3 · PTY dispatch prompt","variant":"emphasis"},
+    {"id":"worker-report","from":"worker","to":"control","label":"4 · HTTP message / report","variant":"dashed","labelDy":25},
+    {"id":"worker-live","from":"worker","to":"bridge","label":"Live PTY output","variant":"dashed","fromSide":"top","toSide":"bottom"},
+    {"id":"record-state","from":"control","to":"database","label":"Read / commit state","fromSide":"bottom","toSide":"top"},
+    {"id":"team-visibility","from":"control","to":"team-ui","label":"HTTP poll response · every 2 s","variant":"dashed","fromSide":"left","toSide":"bottom","via":[[855,399],[855,550],[145,550]],"labelSegment":2}
+  ],
+  "cards": [
+    {"dot":"cyan","title":"Two return channels","items":["Live: PTY bytes → output bus → WebSocket terminals.","Structured: progress messages / final report → team state + orchestrator PTY."]},
+    {"dot":"amber","title":"Lifecycle and delivery gates","items":["Stopped user-managed worker: queue, then replay on start.","Report recorded ≠ delivered. Offline orchestrator leaves an outbox backlog; team list retries it."]},
+    {"dot":"slate","title":"Scope and limits","items":["Local team path; both Hive server boxes are one runtime. Remote relay and optional workflows omitted.",".hive/tasks.md is a separate task document, not an automatic dispatch queue. Agent command compliance is not guaranteed."]}
+  ]
+}

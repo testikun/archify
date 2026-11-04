@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a1aa3784-30eb-4020-a894-e47c37b7d6d5",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/mco-base/base.html",
+  "specification": {
+    "sha256": "495a319af685bf363fe45dc746970e508ffc3ba69325816e31b3d28225d03960",
+    "bytes": 11417
+  },
+  "artifact": {
+    "sha256": "ea94942b74848249408617f33c7cd6b15af72b1d02f84c9d6f9a7bb241794fc8",
+    "bytes": 885660
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/mco-org/mco",
+    "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+    "references": 21,
+    "linkMode": "local-only"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

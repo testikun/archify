@@ -1,0 +1,444 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1045,
+    521
+  ],
+  "components": [
+    {
+      "id": "parent",
+      "type": "external",
+      "label": "Caller · parent Pi agent",
+      "x": 40,
+      "y": 60,
+      "width": 205,
+      "height": 78,
+      "pos": [
+        40,
+        60
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Subagent tool boundary",
+      "x": 415,
+      "y": 60,
+      "width": 205,
+      "height": 78,
+      "pos": [
+        415,
+        60
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "SubagentManager",
+      "x": 790,
+      "y": 60,
+      "width": 215,
+      "height": 78,
+      "pos": [
+        790,
+        60
+      ]
+    },
+    {
+      "id": "backend",
+      "type": "backend",
+      "label": "Pi backend adapter",
+      "x": 790,
+      "y": 355,
+      "width": 215,
+      "height": 78,
+      "pos": [
+        790,
+        355
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Independent Pi session",
+      "x": 415,
+      "y": 355,
+      "width": 205,
+      "height": 78,
+      "pos": [
+        415,
+        355
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion delivery",
+      "x": 40,
+      "y": 355,
+      "width": 205,
+      "height": 78,
+      "pos": [
+        40,
+        355
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Separate session · same process",
+      "x": 391,
+      "y": 331,
+      "width": 253,
+      "height": 122,
+      "wraps": [
+        "child"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "parent",
+      "to": "tools",
+      "label": "spawn / check / wait",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          245,
+          90.95
+        ],
+        [
+          415,
+          90.95
+        ]
+      ],
+      "labelAt": [
+        330,
+        81
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "parent",
+      "label": "ID / status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          415,
+          106
+        ],
+        [
+          245,
+          106
+        ]
+      ],
+      "labelAt": [
+        330,
+        126
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "manager",
+      "label": "spawn / view / waitFor",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          620,
+          90.95
+        ],
+        [
+          790,
+          90.95
+        ]
+      ],
+      "labelAt": [
+        705,
+        81
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "tools",
+      "label": "snapshot / settlement",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          790,
+          106
+        ],
+        [
+          620,
+          106
+        ]
+      ],
+      "labelAt": [
+        705,
+        126
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "backend",
+      "label": "scoped spawn(task)",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          911.5,
+          138
+        ],
+        [
+          911.5,
+          355
+        ]
+      ],
+      "labelAt": [
+        966,
+        250
+      ]
+    },
+    {
+      "from": "backend",
+      "to": "manager",
+      "label": "activity + RunSettled",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          790,
+          373
+        ],
+        [
+          766,
+          373
+        ],
+        [
+          766,
+          120
+        ],
+        [
+          790,
+          120
+        ]
+      ],
+      "labelAt": [
+        705,
+        250
+      ]
+    },
+    {
+      "from": "backend",
+      "to": "child",
+      "label": "create + prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          790,
+          402.05
+        ],
+        [
+          620,
+          402.05
+        ]
+      ],
+      "labelAt": [
+        705,
+        422
+      ]
+    },
+    {
+      "from": "child",
+      "to": "backend",
+      "label": "Pi events + promise",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          620,
+          387
+        ],
+        [
+          790,
+          387
+        ]
+      ],
+      "labelAt": [
+        705,
+        377
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "delivery",
+      "label": "unconsumed settlement",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          883.5,
+          138
+        ],
+        [
+          883.5,
+          230.5
+        ],
+        [
+          149.5,
+          230.5
+        ],
+        [
+          149.5,
+          355
+        ]
+      ],
+      "labelAt": [
+        517,
+        221
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "parent",
+      "label": "followUp · wake parent",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          135.5,
+          355
+        ],
+        [
+          135.5,
+          138
+        ]
+      ],
+      "labelAt": [
+        72,
+        250
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "spawn / check / wait",
+      "x": 277,
+      "y": 71,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        330,
+        81
+      ]
+    },
+    {
+      "text": "ID / status / result",
+      "x": 277,
+      "y": 116,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        330,
+        126
+      ]
+    },
+    {
+      "text": "spawn / view / waitFor",
+      "x": 647,
+      "y": 71,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        705,
+        81
+      ]
+    },
+    {
+      "text": "snapshot / settlement",
+      "x": 650,
+      "y": 116,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        705,
+        126
+      ]
+    },
+    {
+      "text": "scoped spawn(task)",
+      "x": 918,
+      "y": 240,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        966,
+        250
+      ]
+    },
+    {
+      "text": "activity + RunSettled",
+      "x": 649,
+      "y": 240,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        705,
+        250
+      ]
+    },
+    {
+      "text": "create + prompt",
+      "x": 664,
+      "y": 412,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        705,
+        422
+      ]
+    },
+    {
+      "text": "Pi events + promise",
+      "x": 654,
+      "y": 367,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        705,
+        377
+      ]
+    },
+    {
+      "text": "unconsumed settlement",
+      "x": 461,
+      "y": 211,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        517,
+        221
+      ]
+    },
+    {
+      "text": "followUp · wake parent",
+      "x": 14,
+      "y": 240,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        72,
+        250
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1650 @@
+[
+  {
+    "run_id": "openpi-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html",
+    "artifactSha256": "94237cfbc7bfb857450d6f3f21f5f0d56714794d9d279c05994812aa5bb39a56",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 671,
+        "cardsPx": 0,
+        "viewBoxHeight": 521
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1045,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "spawn / check / wait",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "request",
+        "from": "parent",
+        "to": "tools"
+      },
+      "hasLegend": false,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1232,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1310,
+      "contentHeight": 1310,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "openpi-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html",
+    "artifactSha256": "edb40a62fe2a35c1b3d3e2ba3bc224bbb49e4b22ce44f812e04be3251ea85bbe",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 640,
+        "cardsPx": 0,
+        "viewBoxHeight": 548
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1152,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "spawn / check / wait",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "call-tools",
+        "from": "parent",
+        "to": "tools"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1113,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1192,
+      "contentHeight": 1192,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "hive-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.html",
+    "artifactSha256": "326ab430cd6c56dd93809cc1371c44f4552a33c5b6aa18e9c4727f2600991c3e",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 721,
+        "cardsPx": 0,
+        "viewBoxHeight": 786
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1087,
+      "diagramWidth": 1057,
+      "viewBoxWidth": 1153,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.333911535125759,
+      "minimumProjectedNonEdgeTextPx": 8.25065047701648,
+      "minimumProjectedEdgeTextPx": 7.333911535125759,
+      "minimumProjectedNodeText": "Goal HTTP / terminal input",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "goal-input",
+        "from": "workbench",
+        "to": "terminal-host"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1573,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1803,
+      "contentHeight": 1803,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [],
+      "labelRelations": [
+        {
+          "id": "goal-input",
+          "from": "workbench",
+          "to": "terminal-host",
+          "text": "Goal HTTP / terminal input",
+          "glyph": "translate(427.9 111) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "workbench",
+              "label": "Browser workbench"
+            },
+            "target": {
+              "id": "terminal-host",
+              "label": "PTY host + terminal hub"
+            },
+            "nodeIds": [
+              "workbench",
+              "terminal-host"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "goal-input",
+                "from": "workbench",
+                "to": "terminal-host",
+                "label": "Goal HTTP / terminal input"
+              }
+            ]
+          }
+        },
+        {
+          "id": "live-terminal",
+          "from": "terminal-host",
+          "to": "workbench",
+          "text": "Terminal WebSocket output",
+          "glyph": "translate(289.5 135) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "terminal-host",
+              "label": "PTY host + terminal hub"
+            },
+            "target": {
+              "id": "workbench",
+              "label": "Browser workbench"
+            },
+            "nodeIds": [
+              "terminal-host",
+              "workbench"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "1",
+                "id": "live-terminal",
+                "from": "terminal-host",
+                "to": "workbench",
+                "label": "Terminal WebSocket output"
+              }
+            ]
+          }
+        },
+        {
+          "id": "orch-input",
+          "from": "terminal-host",
+          "to": "orchestrator",
+          "text": "Goal → PTY stdin",
+          "glyph": "translate(823.9 111) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "terminal-host",
+              "label": "PTY host + terminal hub"
+            },
+            "target": {
+              "id": "orchestrator",
+              "label": "Orchestrator CLI"
+            },
+            "nodeIds": [
+              "terminal-host",
+              "orchestrator"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "2",
+                "id": "orch-input",
+                "from": "terminal-host",
+                "to": "orchestrator",
+                "label": "Goal → PTY stdin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "orch-output",
+          "from": "orchestrator",
+          "to": "terminal-host",
+          "text": "CLI terminal output",
+          "glyph": "translate(723.9 135) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "orchestrator",
+              "label": "Orchestrator CLI"
+            },
+            "target": {
+              "id": "terminal-host",
+              "label": "PTY host + terminal hub"
+            },
+            "nodeIds": [
+              "orchestrator",
+              "terminal-host"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "3",
+                "id": "orch-output",
+                "from": "orchestrator",
+                "to": "terminal-host",
+                "label": "CLI terminal output"
+              }
+            ]
+          }
+        },
+        {
+          "id": "task-edits",
+          "from": "workbench",
+          "to": "task-plan",
+          "text": "HTTP read / save",
+          "glyph": "translate(262.8 270.5) rotate(90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "workbench",
+              "label": "Browser workbench"
+            },
+            "target": {
+              "id": "task-plan",
+              "label": ".hive/tasks.md"
+            },
+            "nodeIds": [
+              "workbench",
+              "task-plan"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "4",
+                "id": "task-edits",
+                "from": "workbench",
+                "to": "task-plan",
+                "label": "HTTP read / save"
+              }
+            ]
+          }
+        },
+        {
+          "id": "task-updates",
+          "from": "task-plan",
+          "to": "workbench",
+          "text": "Tasks WebSocket updates",
+          "glyph": "translate(23.600000000000023 270.5) rotate(-90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "task-plan",
+              "label": ".hive/tasks.md"
+            },
+            "target": {
+              "id": "workbench",
+              "label": "Browser workbench"
+            },
+            "nodeIds": [
+              "task-plan",
+              "workbench"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "5",
+                "id": "task-updates",
+                "from": "task-plan",
+                "to": "workbench",
+                "label": "Tasks WebSocket updates"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dispatch-request",
+          "from": "orchestrator",
+          "to": "team-control",
+          "text": "team send · HTTP",
+          "glyph": "translate(1082.8000000000002 270.5) rotate(90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "orchestrator",
+              "label": "Orchestrator CLI"
+            },
+            "target": {
+              "id": "team-control",
+              "label": "Team API + delivery"
+            },
+            "nodeIds": [
+              "orchestrator",
+              "team-control"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "7",
+                "id": "dispatch-request",
+                "from": "orchestrator",
+                "to": "team-control",
+                "label": "team send · HTTP"
+              }
+            ]
+          }
+        },
+        {
+          "id": "report-return",
+          "from": "team-control",
+          "to": "orchestrator",
+          "text": "Final report · PTY stdin",
+          "glyph": "translate(838.8 270.5) rotate(-90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "team-control",
+              "label": "Team API + delivery"
+            },
+            "target": {
+              "id": "orchestrator",
+              "label": "Orchestrator CLI"
+            },
+            "nodeIds": [
+              "team-control",
+              "orchestrator"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "8",
+                "id": "report-return",
+                "from": "team-control",
+                "to": "orchestrator",
+                "label": "Final report · PTY stdin"
+              }
+            ]
+          }
+        },
+        {
+          "id": "dispatch-delivery",
+          "from": "team-control",
+          "to": "worker",
+          "text": "Dispatch · PTY paste + submit",
+          "glyph": "translate(699.9 430) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "team-control",
+              "label": "Team API + delivery"
+            },
+            "target": {
+              "id": "worker",
+              "label": "Worker CLI"
+            },
+            "nodeIds": [
+              "team-control",
+              "worker"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "9",
+                "id": "dispatch-delivery",
+                "from": "team-control",
+                "to": "worker",
+                "label": "Dispatch · PTY paste + submit"
+              }
+            ]
+          }
+        },
+        {
+          "id": "worker-tools",
+          "from": "worker",
+          "to": "team-control",
+          "text": "Progress / report · HTTP",
+          "glyph": "translate(843.1 406) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "worker",
+              "label": "Worker CLI"
+            },
+            "target": {
+              "id": "team-control",
+              "label": "Team API + delivery"
+            },
+            "nodeIds": [
+              "worker",
+              "team-control"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "10",
+                "id": "worker-tools",
+                "from": "worker",
+                "to": "team-control",
+                "label": "Progress / report · HTTP"
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        "Directed relationship",
+        "Label marker shows direction",
+        "Label marker shows direction"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "hive-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+    "artifactSha256": "0e98bf365e9bf46cdd068cf56925011161667bc11aee05b7652c386792329fb2",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 99,
+        "diagramChromePx": 78,
+        "svgPx": 698,
+        "cardsPx": 0,
+        "viewBoxHeight": 816
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1034,
+      "diagramWidth": 1004,
+      "viewBoxWidth": 1173,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 6.847399829497016,
+      "minimumProjectedNonEdgeTextPx": 7.703324808184143,
+      "minimumProjectedEdgeTextPx": 6.847399829497016,
+      "minimumProjectedNodeText": "1 · WS input",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "browser-input",
+        "from": "terminal-ui",
+        "to": "bridge"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1566,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1815,
+      "contentHeight": 1815,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "mco-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.html",
+    "artifactSha256": "c635873f78a1cd6f49329b7f01689e6ddb1a2303435a79a13c911ca0ecbd383f",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 99,
+        "diagramChromePx": 78,
+        "svgPx": 699,
+        "cardsPx": 0,
+        "viewBoxHeight": 722
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1017,
+      "diagramWidth": 987,
+      "viewBoxWidth": 1020,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.741176470588235,
+      "minimumProjectedNonEdgeTextPx": 8.708823529411765,
+      "minimumProjectedEdgeTextPx": 7.741176470588235,
+      "minimumProjectedNodeText": "args + config",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "cli-prepare",
+        "from": "cli",
+        "to": "prepare"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1476,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1741,
+      "contentHeight": 1741,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "mco-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.html",
+    "artifactSha256": "8bd008eff0ec703f26fe18f7df489f7db1922ffafb02248d4fa629029144f110",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 52,
+        "diagramChromePx": 78,
+        "svgPx": 635,
+        "cardsPx": 0,
+        "viewBoxHeight": 618
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1310,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Validated invocations",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "submit-review",
+        "from": "review-entry",
+        "to": "invocation-runtime"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1128,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1207,
+      "contentHeight": 1207,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [],
+      "labelRelations": [
+        {
+          "id": "submit-review",
+          "from": "review-entry",
+          "to": "invocation-runtime",
+          "text": "Validated invocations",
+          "glyph": "translate(463.4 178) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "review-entry",
+              "label": "Review entry points"
+            },
+            "target": {
+              "id": "invocation-runtime",
+              "label": "Invocation runtime"
+            },
+            "nodeIds": [
+              "review-entry",
+              "invocation-runtime"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "submit-review",
+                "from": "review-entry",
+                "to": "invocation-runtime",
+                "label": "Validated invocations"
+              }
+            ]
+          }
+        },
+        {
+          "id": "return-results",
+          "from": "invocation-runtime",
+          "to": "review-entry",
+          "text": "Individual outputs[]",
+          "glyph": "translate(349 202) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "invocation-runtime",
+              "label": "Invocation runtime"
+            },
+            "target": {
+              "id": "review-entry",
+              "label": "Review entry points"
+            },
+            "nodeIds": [
+              "invocation-runtime",
+              "review-entry"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "1",
+                "id": "return-results",
+                "from": "invocation-runtime",
+                "to": "review-entry",
+                "label": "Individual outputs[]"
+              }
+            ]
+          }
+        },
+        {
+          "id": "start-provider",
+          "from": "invocation-runtime",
+          "to": "provider-adapters",
+          "text": "TaskInput · run / poll",
+          "glyph": "translate(935.8 178) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "invocation-runtime",
+              "label": "Invocation runtime"
+            },
+            "target": {
+              "id": "provider-adapters",
+              "label": "Provider adapters"
+            },
+            "nodeIds": [
+              "invocation-runtime",
+              "provider-adapters"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "2",
+                "id": "start-provider",
+                "from": "invocation-runtime",
+                "to": "provider-adapters",
+                "label": "TaskInput · run / poll"
+              }
+            ]
+          }
+        },
+        {
+          "id": "decode-provider",
+          "from": "provider-adapters",
+          "to": "invocation-runtime",
+          "text": "Status + decoded answer",
+          "glyph": "translate(811.8 202) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "provider-adapters",
+              "label": "Provider adapters"
+            },
+            "target": {
+              "id": "invocation-runtime",
+              "label": "Invocation runtime"
+            },
+            "nodeIds": [
+              "provider-adapters",
+              "invocation-runtime"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "3",
+                "id": "decode-provider",
+                "from": "provider-adapters",
+                "to": "invocation-runtime",
+                "label": "Status + decoded answer"
+              }
+            ]
+          }
+        },
+        {
+          "id": "spawn-cli",
+          "from": "provider-adapters",
+          "to": "provider-processes",
+          "text": "Spawn command",
+          "glyph": "translate(1193.4 345) rotate(90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "provider-adapters",
+              "label": "Provider adapters"
+            },
+            "target": {
+              "id": "provider-processes",
+              "label": "Selected provider CLIs"
+            },
+            "nodeIds": [
+              "provider-adapters",
+              "provider-processes"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "4",
+                "id": "spawn-cli",
+                "from": "provider-adapters",
+                "to": "provider-processes",
+                "label": "Spawn command"
+              }
+            ]
+          }
+        },
+        {
+          "id": "capture-cli",
+          "from": "provider-processes",
+          "to": "provider-adapters",
+          "text": "Logs + exit status",
+          "glyph": "translate(992.5999999999999 345) rotate(-90)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "provider-processes",
+              "label": "Selected provider CLIs"
+            },
+            "target": {
+              "id": "provider-adapters",
+              "label": "Provider adapters"
+            },
+            "nodeIds": [
+              "provider-processes",
+              "provider-adapters"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "5",
+                "id": "capture-cli",
+                "from": "provider-processes",
+                "to": "provider-adapters",
+                "label": "Logs + exit status"
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        "Directed relationship",
+        "Label marker shows direction"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "squad-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.html",
+    "artifactSha256": "d1d46cf5675e81978ccb2d5969d81912ba11dc0e55c4cf3b7c59aa1a73f396f4",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 720,
+        "cardsPx": 0,
+        "viewBoxHeight": 740
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1101,
+      "diagramWidth": 1071,
+      "viewBoxWidth": 1100,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.789090909090909,
+      "minimumProjectedNonEdgeTextPx": 8.762727272727272,
+      "minimumProjectedEdgeTextPx": 7.789090909090909,
+      "minimumProjectedNodeText": "create / list / receive",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "manager-commands",
+        "from": "manager-agent",
+        "to": "squad-cli"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1331,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1525,
+      "contentHeight": 1525,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [],
+      "labelRelations": [
+        {
+          "id": "manager-commands",
+          "from": "manager-agent",
+          "to": "squad-cli",
+          "text": "create / list / receive",
+          "glyph": "translate(413.2 95.5) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "manager-agent",
+              "label": "Manager agent"
+            },
+            "target": {
+              "id": "squad-cli",
+              "label": "squad CLI"
+            },
+            "nodeIds": [
+              "manager-agent",
+              "squad-cli"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-commands",
+                "from": "manager-agent",
+                "to": "squad-cli",
+                "label": "create / list / receive"
+              }
+            ]
+          }
+        },
+        {
+          "id": "manager-output",
+          "from": "squad-cli",
+          "to": "manager-agent",
+          "text": "state / replies",
+          "glyph": "translate(306 119.5) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "squad-cli",
+              "label": "squad CLI"
+            },
+            "target": {
+              "id": "manager-agent",
+              "label": "Manager agent"
+            },
+            "nodeIds": [
+              "squad-cli",
+              "manager-agent"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "1",
+                "id": "manager-output",
+                "from": "squad-cli",
+                "to": "manager-agent",
+                "label": "state / replies"
+              }
+            ]
+          }
+        },
+        {
+          "id": "worker-commands",
+          "from": "worker-agent",
+          "to": "squad-cli",
+          "text": "ack / complete / send",
+          "glyph": "translate(691.6 119.5) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "worker-agent",
+              "label": "Worker agent"
+            },
+            "target": {
+              "id": "squad-cli",
+              "label": "squad CLI"
+            },
+            "nodeIds": [
+              "worker-agent",
+              "squad-cli"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "2",
+                "id": "worker-commands",
+                "from": "worker-agent",
+                "to": "squad-cli",
+                "label": "ack / complete / send"
+              }
+            ]
+          }
+        },
+        {
+          "id": "worker-output",
+          "from": "squad-cli",
+          "to": "worker-agent",
+          "text": "assignments / replies",
+          "glyph": "translate(808.4 95.5) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "squad-cli",
+              "label": "squad CLI"
+            },
+            "target": {
+              "id": "worker-agent",
+              "label": "Worker agent"
+            },
+            "nodeIds": [
+              "squad-cli",
+              "worker-agent"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "3",
+                "id": "worker-output",
+                "from": "squad-cli",
+                "to": "worker-agent",
+                "label": "assignments / replies"
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        "Directed relationship",
+        "Directed relationship",
+        "Label marker shows direction"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "squad-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.html",
+    "artifactSha256": "209ef8a0559f250c863043fae67cf074093387746162e12b1726e25011ba1306",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 555,
+        "cardsPx": 0,
+        "viewBoxHeight": 586
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1420,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.583098591549295,
+      "minimumProjectedNonEdgeTextPx": 8.530985915492957,
+      "minimumProjectedEdgeTextPx": 7.583098591549295,
+      "minimumProjectedNodeText": "create / list / send",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "manager-commands",
+        "from": "manager",
+        "to": "cli"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1183,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1263,
+      "contentHeight": 1263,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "skillroster-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "artifactSha256": "e44dd0e9e0a1f3dd4e8c3c51c883ab9b60dd4f0347a98cb1399867e2d272c72f",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 719,
+        "cardsPx": 0,
+        "viewBoxHeight": 636
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1190,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "read packages / links",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "read-installed",
+        "from": "inspection",
+        "to": "content"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1392,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1469,
+      "contentHeight": 1469,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "artifactSha256": "ff458a2cb03907576054bc43c3ed1f906febf4cc787463013ef033fe799978c0",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 99,
+        "diagramChromePx": 78,
+        "svgPx": 779,
+        "cardsPx": 0,
+        "viewBoxHeight": 934
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 969,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": "authored",
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 997,
+      "diagramWidth": 967,
+      "viewBoxWidth": 1160,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 6.6689655172413795,
+      "minimumProjectedNonEdgeTextPx": 7.502586206896552,
+      "minimumProjectedEdgeTextPx": 6.6689655172413795,
+      "minimumProjectedNodeText": "read roots + evidence",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "inspect-inputs",
+        "from": "inspection",
+        "to": "local-inputs"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1590,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1689,
+      "contentHeight": 1689,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "shared-messages-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.html",
+    "artifactSha256": "907025c01f461b12b07b994d5030655b07e3ad25e0d0bebd663a17dd416e44b2",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 588,
+        "cardsPx": 0,
+        "viewBoxHeight": 428
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 980,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Create purchase order · only after manager approval",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "approved-purchase-request",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 900,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 900,
+      "contentHeight": 900,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [],
+      "labelRelations": [
+        {
+          "id": "approved-purchase-request",
+          "from": "project-management",
+          "to": "erp",
+          "text": "Create purchase order · only after manager approval",
+          "glyph": "translate(640.4 73) rotate(0)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "project-management",
+              "label": "Project Management"
+            },
+            "target": {
+              "id": "erp",
+              "label": "ERP"
+            },
+            "nodeIds": [
+              "project-management",
+              "erp"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "approved-purchase-request",
+                "from": "project-management",
+                "to": "erp",
+                "label": "Create purchase order · only after manager approval"
+              }
+            ]
+          }
+        },
+        {
+          "id": "validated-purchase-decision",
+          "from": "erp",
+          "to": "project-management",
+          "text": "Accept / reject decision · after validation",
+          "glyph": "translate(398.8 97) rotate(180)",
+          "start": null,
+          "end": null,
+          "visible": "1",
+          "routeFound": true,
+          "route": {
+            "source": {
+              "id": "erp",
+              "label": "ERP"
+            },
+            "target": {
+              "id": "project-management",
+              "label": "Project Management"
+            },
+            "nodeIds": [
+              "erp",
+              "project-management"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "1",
+                "id": "validated-purchase-decision",
+                "from": "erp",
+                "to": "project-management",
+                "label": "Accept / reject decision · after validation"
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        "Directed relationship",
+        "Label marker shows direction"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "shared-messages-base",
+    "artifact": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.html",
+    "artifactSha256": "824f28791fb78326e2a6215d1b4cc36fcff44b051ef6c9e6c8aff4f58760e8d5",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 618,
+        "cardsPx": 0,
+        "viewBoxHeight": 418
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 910,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Create PO request · only after manager approval",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "approved-creation-request",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1024,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1090,
+      "contentHeight": 1090,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  }
+]

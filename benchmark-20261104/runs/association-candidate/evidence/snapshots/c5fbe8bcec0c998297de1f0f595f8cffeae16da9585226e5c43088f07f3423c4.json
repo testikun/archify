@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Shared opportunity identifiers",
+    "subtitle": "Business-level view from BUSINESS.md · Two independent reporting flows; no CRM–Project Management communication.",
+    "output": "output/shared-opportunity-identifiers.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "relation-forward": { "label": "Solid arrow: independently publishes summaries to Reporting" },
+        "relation-none": { "label": "Dashed, no arrows: same identifier; not communication or dependency" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "crm",
+      "type": "backend",
+      "label": "CRM",
+      "sublabel": "Stores opportunity identifier",
+      "pos": [40, 40],
+      "size": [220, 80]
+    },
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Stores opportunity identifier",
+      "pos": [40, 290],
+      "size": [220, 80]
+    },
+    {
+      "id": "reporting",
+      "type": "backend",
+      "label": "Reporting",
+      "sublabel": "Receives both summaries",
+      "pos": [470, 40],
+      "size": [180, 80]
+    }
+  ],
+  "connections": [
+    {
+      "id": "opportunity-identifier-correspondence",
+      "from": "crm",
+      "to": "project-management",
+      "direction": "none",
+      "label": "Same opportunity identifier",
+      "variant": "dashed"
+    },
+    {
+      "id": "sales-summary-reporting",
+      "from": "crm",
+      "to": "reporting",
+      "direction": "forward",
+      "label": "Publishes sales summaries",
+      "variant": "default"
+    },
+    {
+      "id": "delivery-summary-reporting",
+      "from": "project-management",
+      "to": "reporting",
+      "direction": "forward",
+      "label": "Publishes delivery summaries",
+      "variant": "default"
+    }
+  ]
+}

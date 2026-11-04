@@ -1,0 +1,125 @@
+TAP version 13
+# Subtest: mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+    # Subtest: reverse paths retain authored endpoints and unique IDs without inventing flow
+    not ok 1 - reverse paths retain authored endpoints and unique IDs without inventing flow
+      ---
+      duration_ms: 77.954458
+      location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction-browser.test.mjs:63:11'
+      failureType: 'testCodeFailure'
+      error: |-
+        changed directions invalidate an existing route
+        + actual - expected
+        
+        + {
+        +   edges: [
+        +     {
+        +       direction: 'none',
+        +       from: 'ppm',
+        +       id: 'status-sync',
+        +       key: '1',
+        +       label: 'Synchronize status',
+        +       to: 'erp'
+        +     },
+        +     {
+        +       direction: 'none',
+        +       from: 'crm',
+        +       id: 'shared-id',
+        +       key: '0',
+        +       label: 'Shared opportunity ID',
+        +       to: 'ppm'
+        +     }
+        +   ],
+        +   hops: 2,
+        +   nodeIds: [
+        +     'erp',
+        +     'ppm',
+        +     'crm'
+        +   ],
+        +   source: {
+        +     id: 'erp',
+        +     label: 'ERP'
+        +   },
+        +   target: {
+        +     id: 'crm',
+        +     label: 'CRM'
+        +   }
+        + }
+        - null
+      code: 'ERR_ASSERTION'
+      name: 'AssertionError'
+      expected: ~
+      actual:
+        source:
+          id: 'erp'
+          label: 'ERP'
+        target:
+          id: 'crm'
+          label: 'CRM'
+        nodeIds:
+          0: 'erp'
+          1: 'ppm'
+          2: 'crm'
+        hops: 2
+        edges:
+          0:
+            key: '1'
+            id: 'status-sync'
+            from: 'ppm'
+            to: 'erp'
+            direction: 'none'
+            label: 'Synchronize status'
+          1:
+            key: '0'
+            id: 'shared-id'
+            from: 'crm'
+            to: 'ppm'
+            direction: 'none'
+            label: 'Shared opportunity ID'
+      operator: 'strictEqual'
+      stack: |-
+        TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction-browser.test.mjs:84:12)
+        process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+        async Test.run (node:internal/test_runner/test:797:9)
+        async TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction-browser.test.mjs:63:3)
+        async Test.run (node:internal/test_runner/test:797:9)
+        async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+      ...
+    # Subtest: Reach counts structural relationships once in both directions and preserves exports
+    ok 2 - Reach counts structural relationships once in both directions and preserves exports
+      ---
+      duration_ms: 147.493625
+      ...
+    # Subtest: previews and semantic lenses leave structural relations static
+    ok 3 - previews and semantic lenses leave structural relations static
+      ---
+      duration_ms: 146.913625
+      ...
+    # Subtest: SVG and PNG exports retain the actual legend and arrowheads in both themes
+    ok 4 - SVG and PNG exports retain the actual legend and arrowheads in both themes
+      ---
+      duration_ms: 460.597584
+      ...
+    # Subtest: Story renders both new relationships statically without synthesizing an association arrow
+    ok 5 - Story renders both new relationships statically without synthesizing an association arrow
+      ---
+      duration_ms: 144.664666
+      ...
+    1..5
+not ok 1 - mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+  ---
+  duration_ms: 2649.670959
+  location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction-browser.test.mjs:13:1'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
+  ...
+1..1
+# tests 6
+# suites 0
+# pass 4
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2755.125584
+

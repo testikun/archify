@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "7669d7c2-057e-4ae8-9dc8-dee972cef360",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/squad-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"manager-commands\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/1 (id/label: \"manager-output\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/2 (id/label: \"worker-commands\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/3 (id/label: \"worker-output\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"manager-commands\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "manager-commands"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"manager-output\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "manager-output"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"worker-commands\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "worker-commands"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/3 (id/label: \"worker-output\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/3",
+        "identity": "worker-output"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

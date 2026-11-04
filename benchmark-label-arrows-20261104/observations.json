@@ -1,0 +1,1376 @@
+[
+  {
+    "run_id": "openpi-base",
+    "project_id": "openpi",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 414.29252825000003,
+    "usage": {
+      "input_tokens": 1984132,
+      "cached_input_tokens": 1910016,
+      "output_tokens": 9050,
+      "reasoning_output_tokens": 1956,
+      "uncached_input_tokens": 74116
+    },
+    "time_to_first_json_seconds_descriptive_only": 222.459157,
+    "time_to_first_cli_seconds_descriptive_only": 222.475887,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 25,
+    "failed_tool_commands": 0,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 8,
+    "repair_rounds": 3,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:33:10.688Z",
+        "pid": 69449,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5",
+        "snapshot": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json"
+      },
+      {
+        "at": "2026-11-04T07:34:21.462Z",
+        "pid": 70239,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192",
+        "snapshot": "snapshots/90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192.json"
+      },
+      {
+        "at": "2026-11-04T07:35:03.433Z",
+        "pid": 70957,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7",
+        "snapshot": "snapshots/904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7.json"
+      },
+      {
+        "at": "2026-11-04T07:35:31.050Z",
+        "pid": 71305,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-restored",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6",
+        "snapshot": "snapshots/45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6.json"
+      }
+    ],
+    "first_json": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json",
+    "first_submitted_json": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+    "final_json_sha256": "45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "677b4959108976b99fb63fb5029198b04aa51cb5",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "openpi-candidate",
+    "project_id": "openpi",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 360.4387594590007,
+    "usage": {
+      "input_tokens": 1639564,
+      "cached_input_tokens": 1536768,
+      "output_tokens": 7948,
+      "reasoning_output_tokens": 2048,
+      "uncached_input_tokens": 102796
+    },
+    "time_to_first_json_seconds_descriptive_only": 261.146898,
+    "time_to_first_cli_seconds_descriptive_only": 261.146898,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 25,
+    "failed_tool_commands": 0,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:33:49.359Z",
+        "pid": 69967,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagent.architecture.json",
+          "output/openpi-subagent.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+        "sha256": "0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad",
+        "snapshot": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json"
+      },
+      {
+        "at": "2026-11-04T07:34:31.527Z",
+        "pid": 70358,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagent.architecture.json",
+          "output/openpi-subagent.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+        "sha256": "fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c",
+        "snapshot": "snapshots/fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c.json"
+      }
+    ],
+    "first_json": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json",
+    "first_submitted_json": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+    "final_json_sha256": "fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 8,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "677b4959108976b99fb63fb5029198b04aa51cb5",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "hive-candidate",
+    "project_id": "hive",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 506.35178129199994,
+    "usage": {
+      "input_tokens": 2359889,
+      "cached_input_tokens": 2287360,
+      "output_tokens": 11328,
+      "reasoning_output_tokens": 3637,
+      "uncached_input_tokens": 72529
+    },
+    "time_to_first_json_seconds_descriptive_only": 337.550535,
+    "time_to_first_cli_seconds_descriptive_only": 337.567278,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 28,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 6,
+    "repair_rounds": 2,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:42:00.165Z",
+        "pid": 75789,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766",
+        "snapshot": "snapshots/eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766.json"
+      },
+      {
+        "at": "2026-11-04T07:43:35.274Z",
+        "pid": 76444,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json",
+          "--out-dir",
+          "output/review-2"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "1496252935efa0c866966144b0329844759c366f55aa1cec4ff9f8edcb495e6a",
+        "snapshot": "snapshots/1496252935efa0c866966144b0329844759c366f55aa1cec4ff9f8edcb495e6a.json"
+      },
+      {
+        "at": "2026-11-04T07:44:01.434Z",
+        "pid": 76876,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json",
+          "--out-dir",
+          "output/final-review"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9",
+        "snapshot": "snapshots/5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9.json"
+      }
+    ],
+    "first_json": "snapshots/eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766.json",
+    "first_submitted_json": "snapshots/eec4847ccdc02e6f3aa78fd71e7bbb9e71eeafa01979909670294f2aa1a7a766.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+    "final_json_sha256": "5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 12,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 10,
+    "source_status": "",
+    "source_commit_after": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "hive-base",
+    "project_id": "hive",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 510.8636543749999,
+    "usage": {
+      "input_tokens": 1950729,
+      "cached_input_tokens": 1868416,
+      "output_tokens": 11346,
+      "reasoning_output_tokens": 2352,
+      "uncached_input_tokens": 82313
+    },
+    "time_to_first_json_seconds_descriptive_only": 327.840642,
+    "time_to_first_cli_seconds_descriptive_only": 327.840642,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 26,
+    "failed_tool_commands": 2,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 6,
+    "repair_rounds": 2,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:41:50.438Z",
+        "pid": 75696,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0",
+        "snapshot": "snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json"
+      },
+      {
+        "at": "2026-11-04T07:42:11.493Z",
+        "pid": 75928,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b",
+        "snapshot": "snapshots/b19917b2a378b27e3c98123e6ea12dc0ac39dfa1ecc6c5b8142e6b33ac8c792b.json"
+      },
+      {
+        "at": "2026-11-04T07:42:26.885Z",
+        "pid": 75999,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/hive-task-path.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-3",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+        "sha256": "0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6",
+        "snapshot": "snapshots/0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6.json"
+      }
+    ],
+    "first_json": "snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json",
+    "first_submitted_json": "snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+    "final_json_sha256": "0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "mco-base",
+    "project_id": "mco",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 348.3396303339978,
+    "usage": {
+      "input_tokens": 1453434,
+      "cached_input_tokens": 1394176,
+      "output_tokens": 8012,
+      "reasoning_output_tokens": 1609,
+      "uncached_input_tokens": 59258
+    },
+    "time_to_first_json_seconds_descriptive_only": 247.829697,
+    "time_to_first_cli_seconds_descriptive_only": 247.838217,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 22,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:49:01.402Z",
+        "pid": 78648,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/mco-review.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.json",
+        "sha256": "b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe",
+        "snapshot": "snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json"
+      },
+      {
+        "at": "2026-11-04T07:49:35.881Z",
+        "pid": 78827,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/mco-review.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.json",
+        "sha256": "2cbd1024a90e5f6f4e7884b0deb75f821eda67d78c81ecf841ea8ec8765b591a",
+        "snapshot": "snapshots/2cbd1024a90e5f6f4e7884b0deb75f821eda67d78c81ecf841ea8ec8765b591a.json"
+      }
+    ],
+    "first_json": "snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json",
+    "first_submitted_json": "snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.json",
+    "final_json_sha256": "2cbd1024a90e5f6f4e7884b0deb75f821eda67d78c81ecf841ea8ec8765b591a",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/output/mco-review.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "mco-candidate",
+    "project_id": "mco",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 370.17701733300055,
+    "usage": {
+      "input_tokens": 1600141,
+      "cached_input_tokens": 1465728,
+      "output_tokens": 6881,
+      "reasoning_output_tokens": 1239,
+      "uncached_input_tokens": 134413
+    },
+    "time_to_first_json_seconds_descriptive_only": 217.370118,
+    "time_to_first_cli_seconds_descriptive_only": 229.260228,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 25,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:48:42.824Z",
+        "pid": 78549,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826",
+        "snapshot": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json"
+      },
+      {
+        "at": "2026-11-04T07:49:47.881Z",
+        "pid": 78906,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+        "sha256": "a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24",
+        "snapshot": "snapshots/a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24.json"
+      }
+    ],
+    "first_json": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json",
+    "first_submitted_json": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+    "final_json_sha256": "a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 7,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 6,
+    "source_status": "",
+    "source_commit_after": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "squad-candidate",
+    "project_id": "squad",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 310.2544903329981,
+    "usage": {
+      "input_tokens": 1051772,
+      "cached_input_tokens": 956032,
+      "output_tokens": 6950,
+      "reasoning_output_tokens": 1657,
+      "uncached_input_tokens": 95740
+    },
+    "time_to_first_json_seconds_descriptive_only": 191.093064,
+    "time_to_first_cli_seconds_descriptive_only": 191.10056,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 17,
+    "failed_tool_commands": 0,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:54:14.935Z",
+        "pid": 80241,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/squad-coordination.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+        "sha256": "df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534",
+        "snapshot": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json"
+      },
+      {
+        "at": "2026-11-04T07:55:07.518Z",
+        "pid": 80464,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/squad-coordination.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+        "sha256": "b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d",
+        "snapshot": "snapshots/b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d.json"
+      }
+    ],
+    "first_json": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+    "first_submitted_json": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+    "final_json_sha256": "b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 9,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 4,
+    "source_status": "",
+    "source_commit_after": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "squad-base",
+    "project_id": "squad",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 327.7163189169987,
+    "usage": {
+      "input_tokens": 1186633,
+      "cached_input_tokens": 1131520,
+      "output_tokens": 6565,
+      "reasoning_output_tokens": 1264,
+      "uncached_input_tokens": 55113
+    },
+    "time_to_first_json_seconds_descriptive_only": 210.597959,
+    "time_to_first_cli_seconds_descriptive_only": 210.59857,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 20,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T07:54:34.433Z",
+        "pid": 80342,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+        "sha256": "c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5",
+        "snapshot": "snapshots/c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5.json"
+      },
+      {
+        "at": "2026-11-04T07:55:23.862Z",
+        "pid": 80584,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+        "sha256": "ba9c4631b436b5d20c11ce20a339f20f3c2a12250a1ef042a666f1e26223e275",
+        "snapshot": "snapshots/ba9c4631b436b5d20c11ce20a339f20f3c2a12250a1ef042a666f1e26223e275.json"
+      }
+    ],
+    "first_json": "snapshots/c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5.json",
+    "first_submitted_json": "snapshots/c5a67f0f3d1e0bdc4931268ad972475e309b08f27e618a69d0f97e13c4d40fd5.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/candidate.json",
+    "final_json_sha256": "ba9c4631b436b5d20c11ce20a339f20f3c2a12250a1ef042a666f1e26223e275",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/workspace/output/squad-coordination.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "skillroster-base",
+    "project_id": "skillroster",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 518.1891964999995,
+    "usage": {
+      "input_tokens": 2087082,
+      "cached_input_tokens": 2001152,
+      "output_tokens": 9757,
+      "reasoning_output_tokens": 2280,
+      "uncached_input_tokens": 85930
+    },
+    "time_to_first_json_seconds_descriptive_only": 316.16733,
+    "time_to_first_cli_seconds_descriptive_only": 316.168671,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 29,
+    "failed_tool_commands": 2,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T08:01:47.832Z",
+        "pid": 82314,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/candidate.json",
+        "sha256": "9ac09203998529fdaf6e3d7c4dd439a430ff115995628ea7d7ff189cf37f3a1a",
+        "snapshot": "snapshots/9ac09203998529fdaf6e3d7c4dd439a430ff115995628ea7d7ff189cf37f3a1a.json"
+      },
+      {
+        "at": "2026-11-04T08:03:16.777Z",
+        "pid": 82626,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/candidate.json",
+        "sha256": "c9837239f9b67768a706b1910d11ea381dcbab75ba8fafc806fa37fb2ef6d121",
+        "snapshot": "snapshots/c9837239f9b67768a706b1910d11ea381dcbab75ba8fafc806fa37fb2ef6d121.json"
+      }
+    ],
+    "first_json": "snapshots/9ac09203998529fdaf6e3d7c4dd439a430ff115995628ea7d7ff189cf37f3a1a.json",
+    "first_submitted_json": "snapshots/9ac09203998529fdaf6e3d7c4dd439a430ff115995628ea7d7ff189cf37f3a1a.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/candidate.json",
+    "final_json_sha256": "c9837239f9b67768a706b1910d11ea381dcbab75ba8fafc806fa37fb2ef6d121",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 9,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "21d14c7cff25c66a016562e238e62d0538eb696f",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "project_id": "skillroster",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 654.7802104170005,
+    "usage": {
+      "input_tokens": 2409567,
+      "cached_input_tokens": 2322688,
+      "output_tokens": 12489,
+      "reasoning_output_tokens": 5009,
+      "uncached_input_tokens": 86879
+    },
+    "time_to_first_json_seconds_descriptive_only": 356.795696,
+    "time_to_first_cli_seconds_descriptive_only": 356.795696,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 30,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 6,
+    "repair_rounds": 2,
+    "attempts": [
+      {
+        "at": "2026-11-04T08:02:28.459Z",
+        "pid": 82489,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661",
+        "snapshot": "snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json"
+      },
+      {
+        "at": "2026-11-04T08:03:40.537Z",
+        "pid": 82789,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "bd1758a134072e83cae5e41e77bf541ee976aa7efa834e23b33572e1c5619781",
+        "snapshot": "snapshots/bd1758a134072e83cae5e41e77bf541ee976aa7efa834e23b33572e1c5619781.json"
+      },
+      {
+        "at": "2026-11-04T08:05:41.346Z",
+        "pid": 83031,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe",
+        "snapshot": "snapshots/1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe.json"
+      }
+    ],
+    "first_json": "snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json",
+    "first_submitted_json": "snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "final_json_sha256": "1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": "",
+    "source_commit_after": "21d14c7cff25c66a016562e238e62d0538eb696f",
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "shared-messages-candidate",
+    "project_id": "shared-messages",
+    "arm": "candidate",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 195.0932288340009,
+    "usage": {
+      "input_tokens": 637295,
+      "cached_input_tokens": 543488,
+      "output_tokens": 2691,
+      "reasoning_output_tokens": 388,
+      "uncached_input_tokens": 93807
+    },
+    "time_to_first_json_seconds_descriptive_only": 125.795617,
+    "time_to_first_cli_seconds_descriptive_only": 125.795617,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 12,
+    "failed_tool_commands": 1,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T08:09:32.275Z",
+        "pid": 84787,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-request.architecture.json",
+          "output/purchase-request.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json",
+        "sha256": "69cfdf5fcd6a453055841b316d1146507ec1353a4dce7b6750b48396bfcc2493",
+        "snapshot": "snapshots/69cfdf5fcd6a453055841b316d1146507ec1353a4dce7b6750b48396bfcc2493.json"
+      },
+      {
+        "at": "2026-11-04T08:10:03.069Z",
+        "pid": 84966,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-request.architecture.json",
+          "output/purchase-request.html",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/simplified-review",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json",
+        "sha256": "d038964dc99e7a6a24d120efa73c33472f829e0e2847afb7f1d4ccc43fc50b7b",
+        "snapshot": "snapshots/d038964dc99e7a6a24d120efa73c33472f829e0e2847afb7f1d4ccc43fc50b7b.json"
+      }
+    ],
+    "first_json": "snapshots/69cfdf5fcd6a453055841b316d1146507ec1353a4dce7b6750b48396bfcc2493.json",
+    "first_submitted_json": "snapshots/69cfdf5fcd6a453055841b316d1146507ec1353a4dce7b6750b48396bfcc2493.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json",
+    "final_json_sha256": "d038964dc99e7a6a24d120efa73c33472f829e0e2847afb7f1d4ccc43fc50b7b",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 2,
+    "source_status": null,
+    "source_commit_after": null,
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  },
+  {
+    "run_id": "shared-messages-base",
+    "project_id": "shared-messages",
+    "arm": "base",
+    "execution_exit_code": 0,
+    "timeout": false,
+    "wall_seconds_descriptive_only": 193.3690709170005,
+    "usage": {
+      "input_tokens": 580920,
+      "cached_input_tokens": 521216,
+      "output_tokens": 3489,
+      "reasoning_output_tokens": 647,
+      "uncached_input_tokens": 59704
+    },
+    "time_to_first_json_seconds_descriptive_only": 120.817902,
+    "time_to_first_cli_seconds_descriptive_only": 120.828615,
+    "cli_execution_seconds": null,
+    "queue_seconds": null,
+    "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "cost": null,
+    "cost_reason": "Cost accounting deferred by user.",
+    "tool_commands": 12,
+    "failed_tool_commands": 2,
+    "provider_error_events": 0,
+    "authoring_cli_invocations_including_nested_deliver": 4,
+    "repair_rounds": 1,
+    "attempts": [
+      {
+        "at": "2026-11-04T08:09:27.308Z",
+        "pid": 84661,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-order.architecture.json",
+          "output/purchase-order.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+        "sha256": "0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa",
+        "snapshot": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json"
+      },
+      {
+        "at": "2026-11-04T08:09:50.239Z",
+        "pid": 84912,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/purchase-order.architecture.json",
+          "output/purchase-order.html",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+        "sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+        "snapshot": "snapshots/bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0.json"
+      }
+    ],
+    "first_json": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json",
+    "first_submitted_json": "snapshots/0f6dfee87b4204563e887104cf89e3c25037fae8e0143b88216d904fdc0d72fa.json",
+    "precheck_revisions_observed": 0,
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.architecture.json",
+    "final_json_sha256": "bbf0684fac131acc535b04c27753990c33415b168638691abc0c33c56d184dd0",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.html"
+    ],
+    "delivery_receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.delivery.json"
+    ],
+    "delivery_receipt_integrity": [
+      {
+        "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/workspace/output/purchase-order.delivery.json",
+        "status": "current",
+        "matches_final_json": true,
+        "matches_artifact": true
+      }
+    ],
+    "delivery_verified": true,
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    },
+    "label_arrow_count": 0,
+    "source_status": null,
+    "source_commit_after": null,
+    "source_pin_matches": true,
+    "changed_package_files": [],
+    "added_package_files": [],
+    "semantics": "unverified",
+    "readability": "unreviewed",
+    "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-base/evidence/session.jsonl",
+    "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+  }
+]

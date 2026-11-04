@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/candidate.json",
+    "sha256": "764982bcc9c08e724cdd861b322cf2beb03bab7758ed3fa435889f72ed9b279b",
+    "bytes": 1984
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.html",
+    "sha256": "a5bc3e63612682e78b41c6b8982252fd068d780e1ae6d8056ee35f9c4f0ce001",
+    "bytes": 858920
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 1936,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

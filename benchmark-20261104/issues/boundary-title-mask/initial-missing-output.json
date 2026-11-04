@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {"title": "Boundary title covers opposing connections", "quality_profile": "showcase"},
+  "components": [
+    {"id": "manager", "type": "backend", "label": "Subagent manager", "sublabel": "Admission, snapshots, lifecycle", "pos": [815, 70], "size": [235, 80]},
+    {"id": "child-session", "type": "backend", "label": "Pi adapter + child session", "sublabel": "Own conversation; runs task prompt", "pos": [815, 355], "size": [235, 85]}
+  ],
+  "boundaries": [
+    {"kind": "security-group", "label": "Separate session · restricted tools, not an OS sandbox", "wraps": ["child-session"], "pad": 13}
+  ],
+  "connections": [
+    {"id": "start-child", "from": "manager", "to": "child-session", "label": "backend.spawn(task)", "variant": "emphasis"},
+    {"id": "child-events", "from": "child-session", "to": "manager", "label": "activity / RunSettled"}
+  ]
+}

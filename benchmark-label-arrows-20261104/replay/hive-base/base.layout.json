@@ -1,0 +1,519 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1173,
+    816
+  ],
+  "components": [
+    {
+      "id": "terminal-ui",
+      "type": "frontend",
+      "label": "Workbench terminals",
+      "x": 40,
+      "y": 70,
+      "width": 210,
+      "height": 78,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "bridge",
+      "type": "backend",
+      "label": "PTY runtime + stream hub",
+      "x": 455,
+      "y": 70,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        455,
+        70
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "x": 880,
+      "y": 70,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        880,
+        70
+      ]
+    },
+    {
+      "id": "team-ui",
+      "type": "frontend",
+      "label": "Team / Action Center",
+      "x": 40,
+      "y": 360,
+      "width": 210,
+      "height": 78,
+      "pos": [
+        40,
+        360
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "x": 455,
+      "y": 360,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        455,
+        360
+      ]
+    },
+    {
+      "id": "control",
+      "type": "backend",
+      "label": "Team API + collaboration",
+      "x": 880,
+      "y": 360,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        880,
+        360
+      ]
+    },
+    {
+      "id": "database",
+      "type": "database",
+      "label": "Local runtime.sqlite",
+      "x": 865,
+      "y": 650,
+      "width": 250,
+      "height": 78,
+      "pos": [
+        865,
+        650
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Browser workbench",
+      "x": 20,
+      "y": 46,
+      "width": 250,
+      "height": 412,
+      "wraps": [
+        "terminal-ui",
+        "team-ui"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Hive server · terminal I/O",
+      "x": 437,
+      "y": 46,
+      "width": 256,
+      "height": 122,
+      "wraps": [
+        "bridge"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Hive server · team control",
+      "x": 862,
+      "y": 336,
+      "width": 256,
+      "height": 122,
+      "wraps": [
+        "control"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "Local persistence",
+      "x": 847,
+      "y": 626,
+      "width": 286,
+      "height": 122,
+      "wraps": [
+        "database"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "terminal-ui",
+      "to": "bridge",
+      "label": "1 · WS input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          250,
+          100.95
+        ],
+        [
+          455,
+          100.95
+        ]
+      ],
+      "labelAt": [
+        353,
+        91
+      ]
+    },
+    {
+      "from": "bridge",
+      "to": "terminal-ui",
+      "label": "WS output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          455,
+          116
+        ],
+        [
+          250,
+          116
+        ]
+      ],
+      "labelAt": [
+        353,
+        136
+      ]
+    },
+    {
+      "from": "bridge",
+      "to": "orchestrator",
+      "label": "PTY input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          675,
+          100.95
+        ],
+        [
+          880,
+          100.95
+        ]
+      ],
+      "labelAt": [
+        778,
+        91
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "bridge",
+      "label": "PTY output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          880,
+          116
+        ],
+        [
+          675,
+          116
+        ]
+      ],
+      "labelAt": [
+        778,
+        136
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "control",
+      "label": "2 · HTTP team send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          981.95,
+          148
+        ],
+        [
+          981.95,
+          360
+        ]
+      ],
+      "labelAt": [
+        928,
+        257
+      ]
+    },
+    {
+      "from": "control",
+      "to": "orchestrator",
+      "label": "5 · PTY progress / result",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          997,
+          360
+        ],
+        [
+          997,
+          148
+        ]
+      ],
+      "labelAt": [
+        1068,
+        257
+      ]
+    },
+    {
+      "from": "control",
+      "to": "worker",
+      "label": "3 · PTY dispatch prompt",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          880,
+          390.95
+        ],
+        [
+          675,
+          390.95
+        ]
+      ],
+      "labelAt": [
+        778,
+        381
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "control",
+      "label": "4 · HTTP message / report",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          675,
+          406
+        ],
+        [
+          880,
+          406
+        ]
+      ],
+      "labelAt": [
+        778,
+        421
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "bridge",
+      "label": "Live PTY output",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          565,
+          360
+        ],
+        [
+          565,
+          148
+        ]
+      ],
+      "labelAt": [
+        565,
+        350
+      ]
+    },
+    {
+      "from": "control",
+      "to": "database",
+      "label": "Read / commit state",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          990,
+          438
+        ],
+        [
+          990,
+          650
+        ]
+      ],
+      "labelAt": [
+        933,
+        547
+      ]
+    },
+    {
+      "from": "control",
+      "to": "team-ui",
+      "label": "HTTP poll response · every 2 s",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          880,
+          399
+        ],
+        [
+          855,
+          399
+        ],
+        [
+          855,
+          550
+        ],
+        [
+          145,
+          550
+        ],
+        [
+          145,
+          438
+        ]
+      ],
+      "labelAt": [
+        500,
+        540
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "1 · WS input",
+      "x": 319,
+      "y": 81,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        353,
+        91
+      ]
+    },
+    {
+      "text": "WS output",
+      "x": 326,
+      "y": 126,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        353,
+        136
+      ]
+    },
+    {
+      "text": "PTY input",
+      "x": 751,
+      "y": 81,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        778,
+        91
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 749,
+      "y": 126,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        778,
+        136
+      ]
+    },
+    {
+      "text": "2 · HTTP team send",
+      "x": 880,
+      "y": 247,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        928,
+        257
+      ]
+    },
+    {
+      "text": "5 · PTY progress / result",
+      "x": 1003,
+      "y": 247,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        1068,
+        257
+      ]
+    },
+    {
+      "text": "3 · PTY dispatch prompt",
+      "x": 717,
+      "y": 371,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        778,
+        381
+      ]
+    },
+    {
+      "text": "4 · HTTP message / report",
+      "x": 713,
+      "y": 411,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        778,
+        421
+      ]
+    },
+    {
+      "text": "Live PTY output",
+      "x": 524,
+      "y": 340,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        565,
+        350
+      ]
+    },
+    {
+      "text": "Read / commit state",
+      "x": 883,
+      "y": 537,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        933,
+        547
+      ]
+    },
+    {
+      "text": "HTTP poll response · every 2 s",
+      "x": 423,
+      "y": 530,
+      "width": 154,
+      "height": 14,
+      "labelAt": [
+        500,
+        540
+      ]
+    }
+  ]
+}

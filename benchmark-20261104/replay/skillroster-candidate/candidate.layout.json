@@ -1,0 +1,492 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1340,
+    648
+  ],
+  "components": [
+    {
+      "id": "decision-owner",
+      "type": "external",
+      "label": "Agent / human caller",
+      "x": 16,
+      "y": 40,
+      "width": 230,
+      "height": 80,
+      "pos": [
+        16,
+        40
+      ]
+    },
+    {
+      "id": "command-coordinator",
+      "type": "backend",
+      "label": "CLI & state coordinator",
+      "x": 345,
+      "y": 40,
+      "width": 245,
+      "height": 80,
+      "pos": [
+        345,
+        40
+      ]
+    },
+    {
+      "id": "state-database",
+      "type": "database",
+      "label": "SQLite StateStore",
+      "x": 715,
+      "y": 40,
+      "width": 240,
+      "height": 80,
+      "pos": [
+        715,
+        40
+      ]
+    },
+    {
+      "id": "discovery",
+      "type": "backend",
+      "label": "Discovery & inspection",
+      "x": 40,
+      "y": 255,
+      "width": 230,
+      "height": 85,
+      "pos": [
+        40,
+        255
+      ]
+    },
+    {
+      "id": "plan-builder",
+      "type": "backend",
+      "label": "Declarative Plan builder",
+      "x": 345,
+      "y": 255,
+      "width": 245,
+      "height": 85,
+      "pos": [
+        345,
+        255
+      ]
+    },
+    {
+      "id": "change-engine",
+      "type": "backend",
+      "label": "Apply / undo engine",
+      "x": 680,
+      "y": 255,
+      "width": 240,
+      "height": 85,
+      "pos": [
+        680,
+        255
+      ]
+    },
+    {
+      "id": "installed-files",
+      "type": "database",
+      "label": "Skill trees & local evidence",
+      "x": 40,
+      "y": 475,
+      "width": 250,
+      "height": 85,
+      "pos": [
+        40,
+        475
+      ]
+    },
+    {
+      "id": "anchored-io",
+      "type": "security",
+      "label": "AnchoredFs & durable I/O",
+      "x": 680,
+      "y": 475,
+      "width": 240,
+      "height": 85,
+      "pos": [
+        680,
+        475
+      ]
+    },
+    {
+      "id": "receipt-journals",
+      "type": "database",
+      "label": "Receipt journals & backups",
+      "x": 1055,
+      "y": 475,
+      "width": 245,
+      "height": 85,
+      "pos": [
+        1055,
+        475
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "INSPECT / PREPARE · no Skill writes",
+      "x": 18,
+      "y": 231,
+      "width": 594,
+      "height": 129,
+      "wraps": [
+        "discovery",
+        "plan-builder"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "MUTATION · exclusive lock + approved paths",
+      "x": 658,
+      "y": 231,
+      "width": 284,
+      "height": 349,
+      "wraps": [
+        "change-engine",
+        "anchored-io"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "decision-owner",
+      "to": "command-coordinator",
+      "label": "CLI / Plan JSON",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          246,
+          71.95
+        ],
+        [
+          345,
+          71.95
+        ]
+      ],
+      "labelAt": [
+        296,
+        62
+      ]
+    },
+    {
+      "from": "command-coordinator",
+      "to": "state-database",
+      "label": "Read / persist state",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          590,
+          73
+        ],
+        [
+          715,
+          73
+        ]
+      ],
+      "labelAt": [
+        653,
+        63
+      ]
+    },
+    {
+      "from": "command-coordinator",
+      "to": "discovery",
+      "label": "Scan → Snapshot",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          345,
+          104
+        ],
+        [
+          254,
+          104
+        ],
+        [
+          254,
+          255
+        ]
+      ],
+      "labelAt": [
+        254,
+        170
+      ]
+    },
+    {
+      "from": "command-coordinator",
+      "to": "plan-builder",
+      "label": "Derive + prepare",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          467.5,
+          120
+        ],
+        [
+          467.5,
+          255
+        ]
+      ],
+      "labelAt": [
+        418,
+        191
+      ]
+    },
+    {
+      "from": "command-coordinator",
+      "to": "change-engine",
+      "label": "Ready Plan / Applied Receipt",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          590,
+          104
+        ],
+        [
+          696,
+          104
+        ],
+        [
+          696,
+          255
+        ]
+      ],
+      "labelAt": [
+        696,
+        170
+      ]
+    },
+    {
+      "from": "discovery",
+      "to": "installed-files",
+      "label": "Read packages + logs",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          155,
+          340
+        ],
+        [
+          155,
+          475
+        ]
+      ],
+      "labelAt": [
+        96,
+        411
+      ]
+    },
+    {
+      "from": "plan-builder",
+      "to": "installed-files",
+      "label": "Read preconditions",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          361,
+          340
+        ],
+        [
+          361,
+          491
+        ],
+        [
+          290,
+          491
+        ]
+      ],
+      "labelAt": [
+        307,
+        419
+      ]
+    },
+    {
+      "from": "change-engine",
+      "to": "anchored-io",
+      "label": "Execute / compensate",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          800,
+          340
+        ],
+        [
+          800,
+          475
+        ]
+      ],
+      "labelAt": [
+        741,
+        411
+      ]
+    },
+    {
+      "from": "anchored-io",
+      "to": "installed-files",
+      "label": "Approved Skill writes / guarded undo",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          680,
+          524.5
+        ],
+        [
+          290,
+          524.5
+        ]
+      ],
+      "labelAt": [
+        485,
+        515
+      ]
+    },
+    {
+      "from": "anchored-io",
+      "to": "receipt-journals",
+      "label": "Read / publish journal",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          517.5
+        ],
+        [
+          1055,
+          517.5
+        ]
+      ],
+      "labelAt": [
+        988,
+        508
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "CLI / Plan JSON",
+      "x": 255,
+      "y": 52,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        296,
+        62
+      ]
+    },
+    {
+      "text": "Read / persist state",
+      "x": 600,
+      "y": 53,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        653,
+        63
+      ]
+    },
+    {
+      "text": "Scan → Snapshot",
+      "x": 213,
+      "y": 160,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        254,
+        170
+      ]
+    },
+    {
+      "text": "Derive + prepare",
+      "x": 375,
+      "y": 181,
+      "width": 87,
+      "height": 14,
+      "labelAt": [
+        418,
+        191
+      ]
+    },
+    {
+      "text": "Ready Plan / Applied Receipt",
+      "x": 624,
+      "y": 160,
+      "width": 144,
+      "height": 14,
+      "labelAt": [
+        696,
+        170
+      ]
+    },
+    {
+      "text": "Read packages + logs",
+      "x": 43,
+      "y": 401,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        96,
+        411
+      ]
+    },
+    {
+      "text": "Read preconditions",
+      "x": 259,
+      "y": 409,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        307,
+        419
+      ]
+    },
+    {
+      "text": "Execute / compensate",
+      "x": 688,
+      "y": 401,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        741,
+        411
+      ]
+    },
+    {
+      "text": "Approved Skill writes / guarded undo",
+      "x": 394,
+      "y": 505,
+      "width": 183,
+      "height": 14,
+      "labelAt": [
+        485,
+        515
+      ]
+    },
+    {
+      "text": "Read / publish journal",
+      "x": 930,
+      "y": 498,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        988,
+        508
+      ]
+    }
+  ]
+}

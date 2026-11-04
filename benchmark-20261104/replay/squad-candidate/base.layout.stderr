@@ -1,0 +1,9 @@
+architecture schema validation failed:
+  /connections/0 (id/label: "manager-cli") must NOT have additional properties {"additionalProperty":"direction"}
+  /connections/1 (id/label: "worker-cli") must NOT have additional properties {"additionalProperty":"direction"}
+  /connections/2 (id/label: "cli-store") must NOT have additional properties {"additionalProperty":"direction"}
+  /connections/5 (id/label: "store-db") must NOT have additional properties {"additionalProperty":"direction"}
+[schema/additionalProperties] /connections/0 (id/label: "manager-cli") must NOT have additional properties Fix: remove unsupported property "direction".
+[schema/additionalProperties] /connections/1 (id/label: "worker-cli") must NOT have additional properties Fix: remove unsupported property "direction".
+[schema/additionalProperties] /connections/2 (id/label: "cli-store") must NOT have additional properties Fix: remove unsupported property "direction".
+[schema/additionalProperties] /connections/5 (id/label: "store-db") must NOT have additional properties Fix: remove unsupported property "direction".

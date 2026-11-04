@@ -1,0 +1,1301 @@
+{
+  "checks": [
+    {
+      "check": "All 12 scheduled sessions retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted d88eecabe6f5",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted 90ffca0a79be",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted 904478ff1a79",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: submitted 45559fd747ff",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: submitted 0e7c94ae253a",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: submitted fcddf35fa3ec",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "openpi-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: submitted eec4847ccdc0",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: submitted 1496252935ef",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: submitted 5624e40aeb8b",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label-arrow identities inspected",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route goal-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route live-terminal",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route orch-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route orch-output",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route task-edits",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route task-updates",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route dispatch-request",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route report-return",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route dispatch-delivery",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: label glyph and directed route worker-tools",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export label identities",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label goal-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label live-terminal",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label orch-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label orch-output",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label task-edits",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label task-updates",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label dispatch-request",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label report-return",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label dispatch-delivery",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light export direction and label worker-tools",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: light label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export label identities",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label goal-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label live-terminal",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label orch-input",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label orch-output",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label task-edits",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label task-updates",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label dispatch-request",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label report-return",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label dispatch-delivery",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark export direction and label worker-tools",
+      "pass": true
+    },
+    {
+      "check": "hive-candidate: dark label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "hive-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted 41b61068c1fc",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted b19917b2a378",
+      "pass": true
+    },
+    {
+      "check": "hive-base: submitted 0ad2946d45fe",
+      "pass": true
+    },
+    {
+      "check": "hive-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "hive-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "hive-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "hive-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "mco-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "mco-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-base: submitted b7b139abec7d",
+      "pass": true
+    },
+    {
+      "check": "mco-base: submitted 2cbd1024a90e",
+      "pass": true
+    },
+    {
+      "check": "mco-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "mco-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "mco-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "mco-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: submitted 4b9fb3ea0ac0",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: submitted a9072dfc4de2",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label-arrow identities inspected",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route submit-review",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route return-results",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route start-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route decode-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route spawn-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: label glyph and directed route capture-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export label identities",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label submit-review",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label return-results",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label start-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label decode-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label spawn-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light export direction and label capture-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: light label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export label identities",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label submit-review",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label return-results",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label start-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label decode-provider",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label spawn-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark export direction and label capture-cli",
+      "pass": true
+    },
+    {
+      "check": "mco-candidate: dark label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: submitted df259c1958d3",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: submitted b194a4411595",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: label-arrow identities inspected",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: label glyph and directed route manager-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: label glyph and directed route manager-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: label glyph and directed route worker-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: label glyph and directed route worker-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export label identities",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export direction and label manager-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export direction and label manager-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export direction and label worker-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light export direction and label worker-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: light label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export label identities",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export direction and label manager-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export direction and label manager-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export direction and label worker-commands",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark export direction and label worker-output",
+      "pass": true
+    },
+    {
+      "check": "squad-candidate: dark label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "squad-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "squad-base: submitted c5a67f0f3d1e",
+      "pass": true
+    },
+    {
+      "check": "squad-base: submitted ba9c4631b436",
+      "pass": true
+    },
+    {
+      "check": "squad-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "squad-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "squad-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "squad-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: submitted 9ac092039985",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: submitted c9837239f9b6",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-base: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted 760655b64411",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted bd1758a13407",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: submitted 1547fb0d3138",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "skillroster-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: submitted 69cfdf5fcd6a",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: submitted d038964dc99e",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: captured final artifact",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: label-arrow identities inspected",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: label glyph and directed route approved-purchase-request",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: label glyph and directed route validated-purchase-decision",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: light export label identities",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: light export direction and label approved-purchase-request",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: light export direction and label validated-purchase-decision",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: light label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: dark export label identities",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: dark export direction and label approved-purchase-request",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: dark export direction and label validated-purchase-decision",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-candidate: dark label-arrow PNG retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: source pin and package unchanged",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: semantic and visual review recorded",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: exact prompt retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: final JSON replayed unchanged",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: submitted 0f6dfee87b42",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: submitted bbf0684fac13",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: first complete JSON retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: settled native capture",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: 1440x900 primary PNG",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: full-page content retained",
+      "pass": true
+    },
+    {
+      "check": "shared-messages-base: captured final artifact",
+      "pass": true
+    }
+  ],
+  "passed": 224,
+  "failed": [],
+  "export_features": [
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "goal-input",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "live-terminal",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "orch-input",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "orch-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "task-edits",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "task-updates",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "dispatch-request",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "report-return",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "dispatch-delivery",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "light",
+      "id": "worker-tools",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "goal-input",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "live-terminal",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "orch-input",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "orch-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "task-edits",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "task-updates",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "dispatch-request",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "report-return",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "dispatch-delivery",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "hive-candidate",
+      "theme": "dark",
+      "id": "worker-tools",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "submit-review",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "return-results",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "start-provider",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "decode-provider",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "spawn-cli",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "light",
+      "id": "capture-cli",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "submit-review",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "return-results",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "start-provider",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "decode-provider",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "spawn-cli",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "mco-candidate",
+      "theme": "dark",
+      "id": "capture-cli",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "manager-commands",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "manager-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "worker-commands",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "light",
+      "id": "worker-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "manager-commands",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "manager-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "worker-commands",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "squad-candidate",
+      "theme": "dark",
+      "id": "worker-output",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "shared-messages-candidate",
+      "theme": "light",
+      "id": "approved-purchase-request",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "shared-messages-candidate",
+      "theme": "light",
+      "id": "validated-purchase-decision",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "shared-messages-candidate",
+      "theme": "dark",
+      "id": "approved-purchase-request",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    },
+    {
+      "run_id": "shared-messages-candidate",
+      "theme": "dark",
+      "id": "validated-purchase-decision",
+      "direction": "forward",
+      "arrow_position": "label",
+      "glyph_count": 1,
+      "label_retained": true
+    }
+  ],
+  "scope": "Evidence integrity and recorded feature behavior only. Does not score semantic correctness or visual quality."
+}

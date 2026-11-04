@@ -1,0 +1,475 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1020,
+    722
+  ],
+  "components": [
+    {
+      "id": "cli",
+      "type": "frontend",
+      "label": "CLI · mco review",
+      "x": 40,
+      "y": 40,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "mcp",
+      "type": "frontend",
+      "label": "MCP · mco_review",
+      "x": 40,
+      "y": 210,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        40,
+        210
+      ]
+    },
+    {
+      "id": "prepare",
+      "type": "security",
+      "label": "Validate & prepare",
+      "x": 400,
+      "y": 110,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        400,
+        110
+      ]
+    },
+    {
+      "id": "dispatch",
+      "type": "backend",
+      "label": "Invocation dispatcher",
+      "x": 760,
+      "y": 110,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        760,
+        110
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Per-invocation worker",
+      "x": 760,
+      "y": 330,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        760,
+        330
+      ]
+    },
+    {
+      "id": "adapters",
+      "type": "backend",
+      "label": "Selected shim adapter",
+      "x": 760,
+      "y": 550,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        760,
+        550
+      ]
+    },
+    {
+      "id": "processes",
+      "type": "external",
+      "label": "Provider CLI processes",
+      "x": 400,
+      "y": 550,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        400,
+        550
+      ]
+    },
+    {
+      "id": "collect",
+      "type": "backend",
+      "label": "Collect individual results",
+      "x": 400,
+      "y": 330,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        400,
+        330
+      ]
+    },
+    {
+      "id": "return",
+      "type": "frontend",
+      "label": "Return to the caller",
+      "x": 40,
+      "y": 380,
+      "width": 220,
+      "height": 84,
+      "pos": [
+        40,
+        380
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Child-process boundary",
+      "x": 370,
+      "y": 520,
+      "width": 280,
+      "height": 134,
+      "wraps": [
+        "processes"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "cli",
+      "to": "prepare",
+      "label": "args + config",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          244,
+          124
+        ],
+        [
+          244,
+          145
+        ],
+        [
+          400,
+          145
+        ]
+      ],
+      "labelAt": [
+        322,
+        135
+      ]
+    },
+    {
+      "from": "mcp",
+      "to": "prepare",
+      "label": "tool arguments",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          244,
+          210
+        ],
+        [
+          244,
+          178
+        ],
+        [
+          400,
+          178
+        ]
+      ],
+      "labelAt": [
+        322,
+        168
+      ]
+    },
+    {
+      "from": "prepare",
+      "to": "dispatch",
+      "label": "valid invocations",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          620,
+          152
+        ],
+        [
+          760,
+          152
+        ]
+      ],
+      "labelAt": [
+        690,
+        142
+      ]
+    },
+    {
+      "from": "dispatch",
+      "to": "worker",
+      "label": "submit each",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          870,
+          194
+        ],
+        [
+          870,
+          330
+        ]
+      ],
+      "labelAt": [
+        833,
+        265
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "adapters",
+      "label": "run / poll / cancel",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          877,
+          414
+        ],
+        [
+          877,
+          550
+        ]
+      ],
+      "labelAt": [
+        934,
+        485
+      ]
+    },
+    {
+      "from": "adapters",
+      "to": "worker",
+      "label": "status + decoded text",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          863,
+          550
+        ],
+        [
+          863,
+          414
+        ]
+      ],
+      "labelAt": [
+        802,
+        485
+      ]
+    },
+    {
+      "from": "adapters",
+      "to": "processes",
+      "label": "spawn command",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          585
+        ],
+        [
+          620,
+          585
+        ]
+      ],
+      "labelAt": [
+        690,
+        575
+      ]
+    },
+    {
+      "from": "processes",
+      "to": "adapters",
+      "label": "logs + exit status",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          620,
+          599
+        ],
+        [
+          760,
+          599
+        ]
+      ],
+      "labelAt": [
+        690,
+        619
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "collect",
+      "label": "result per invocation",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          372
+        ],
+        [
+          620,
+          372
+        ]
+      ],
+      "labelAt": [
+        690,
+        362
+      ]
+    },
+    {
+      "from": "collect",
+      "to": "return",
+      "label": "task payload",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          400,
+          396
+        ],
+        [
+          260,
+          396
+        ]
+      ],
+      "labelAt": [
+        330,
+        386
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "args + config",
+      "x": 286,
+      "y": 125,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        322,
+        135
+      ]
+    },
+    {
+      "text": "tool arguments",
+      "x": 283,
+      "y": 158,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        322,
+        168
+      ]
+    },
+    {
+      "text": "valid invocations",
+      "x": 644,
+      "y": 132,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        690,
+        142
+      ]
+    },
+    {
+      "text": "submit each",
+      "x": 801,
+      "y": 255,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        833,
+        265
+      ]
+    },
+    {
+      "text": "run / poll / cancel",
+      "x": 883,
+      "y": 475,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        934,
+        485
+      ]
+    },
+    {
+      "text": "status + decoded text",
+      "x": 746,
+      "y": 475,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        802,
+        485
+      ]
+    },
+    {
+      "text": "spawn command",
+      "x": 654,
+      "y": 565,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        690,
+        575
+      ]
+    },
+    {
+      "text": "logs + exit status",
+      "x": 642,
+      "y": 609,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        690,
+        619
+      ]
+    },
+    {
+      "text": "result per invocation",
+      "x": 635,
+      "y": 352,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        690,
+        362
+      ]
+    },
+    {
+      "text": "task payload",
+      "x": 296,
+      "y": 376,
+      "width": 68,
+      "height": 14,
+      "labelAt": [
+        330,
+        386
+      ]
+    }
+  ]
+}

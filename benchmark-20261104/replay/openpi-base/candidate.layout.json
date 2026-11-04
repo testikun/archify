@@ -1,0 +1,334 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1226,
+    564
+  ],
+  "components": [
+    {
+      "id": "caller",
+      "type": "external",
+      "label": "Caller · parent Pi agent",
+      "x": 40,
+      "y": 70,
+      "width": 220,
+      "height": 90,
+      "pos": [
+        40,
+        70
+      ]
+    },
+    {
+      "id": "tools",
+      "type": "backend",
+      "label": "Task & query tools",
+      "x": 450,
+      "y": 70,
+      "width": 240,
+      "height": 90,
+      "pos": [
+        450,
+        70
+      ]
+    },
+    {
+      "id": "manager",
+      "type": "backend",
+      "label": "SubagentManager",
+      "x": 920,
+      "y": 70,
+      "width": 240,
+      "height": 90,
+      "pos": [
+        920,
+        70
+      ]
+    },
+    {
+      "id": "child",
+      "type": "backend",
+      "label": "Pi backend + child session",
+      "x": 920,
+      "y": 370,
+      "width": 240,
+      "height": 106,
+      "pos": [
+        920,
+        370
+      ]
+    },
+    {
+      "id": "delivery",
+      "type": "messagebus",
+      "label": "Completion delivery",
+      "x": 450,
+      "y": 370,
+      "width": 240,
+      "height": 106,
+      "pos": [
+        450,
+        370
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "OpenPI extension runtime · in-process calls and events",
+      "x": 424,
+      "y": 44,
+      "width": 762,
+      "height": 452,
+      "wraps": [
+        "tools",
+        "manager",
+        "child",
+        "delivery"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "caller",
+      "to": "tools",
+      "label": "prompt / query",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          260,
+          99.95
+        ],
+        [
+          450,
+          99.95
+        ]
+      ],
+      "labelAt": [
+        355,
+        90
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "caller",
+      "label": "ID / status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          450,
+          122
+        ],
+        [
+          260,
+          122
+        ]
+      ],
+      "labelAt": [
+        355,
+        142
+      ]
+    },
+    {
+      "from": "tools",
+      "to": "manager",
+      "label": "spawn / view / waitFor",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          690,
+          106.95
+        ],
+        [
+          920,
+          106.95
+        ]
+      ],
+      "labelAt": [
+        805,
+        97
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "child",
+      "label": "scoped backend.spawn",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          1048.05,
+          160
+        ],
+        [
+          1048.05,
+          370
+        ]
+      ],
+      "labelAt": [
+        1107,
+        268
+      ]
+    },
+    {
+      "from": "child",
+      "to": "manager",
+      "label": "activity + RunSettled",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          1033,
+          370
+        ],
+        [
+          1033,
+          160
+        ]
+      ],
+      "labelAt": [
+        972,
+        268
+      ]
+    },
+    {
+      "from": "manager",
+      "to": "delivery",
+      "label": "onSettled · unless waited",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          920,
+          122
+        ],
+        [
+          805,
+          122
+        ],
+        [
+          805,
+          423
+        ],
+        [
+          690,
+          423
+        ]
+      ],
+      "labelAt": [
+        805,
+        263
+      ]
+    },
+    {
+      "from": "delivery",
+      "to": "caller",
+      "label": "followUp + triggerTurn",
+      "variant": "dashed",
+      "route": "auto",
+      "points": [
+        [
+          450,
+          423
+        ],
+        [
+          150,
+          423
+        ],
+        [
+          150,
+          160
+        ]
+      ],
+      "labelAt": [
+        150,
+        282
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "prompt / query",
+      "x": 316,
+      "y": 80,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        355,
+        90
+      ]
+    },
+    {
+      "text": "ID / status / result",
+      "x": 302,
+      "y": 132,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        355,
+        142
+      ]
+    },
+    {
+      "text": "spawn / view / waitFor",
+      "x": 747,
+      "y": 87,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        805,
+        97
+      ]
+    },
+    {
+      "text": "scoped backend.spawn",
+      "x": 1054,
+      "y": 258,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        1107,
+        268
+      ]
+    },
+    {
+      "text": "activity + RunSettled",
+      "x": 916,
+      "y": 258,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        972,
+        268
+      ]
+    },
+    {
+      "text": "onSettled · unless waited",
+      "x": 740,
+      "y": 253,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        805,
+        263
+      ]
+    },
+    {
+      "text": "followUp + triggerTurn",
+      "x": 92,
+      "y": 272,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        150,
+        282
+      ]
+    }
+  ]
+}

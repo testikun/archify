@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "7b97f4a3-3e37-41f9-87c3-871f6ba3d1b1",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/shared-messages-candidate/workspace/output/purchase-request.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/shared-messages-candidate/base.html"
+}

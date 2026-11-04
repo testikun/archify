@@ -1,0 +1,426 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1100,
+    740
+  ],
+  "components": [
+    {
+      "id": "manager-agent",
+      "type": "external",
+      "label": "Manager agent",
+      "x": 40,
+      "y": 65,
+      "width": 230,
+      "height": 85,
+      "pos": [
+        40,
+        65
+      ]
+    },
+    {
+      "id": "squad-cli",
+      "type": "backend",
+      "label": "squad CLI",
+      "x": 430,
+      "y": 65,
+      "width": 240,
+      "height": 85,
+      "pos": [
+        430,
+        65
+      ]
+    },
+    {
+      "id": "worker-agent",
+      "type": "external",
+      "label": "Worker agent",
+      "x": 830,
+      "y": 65,
+      "width": 230,
+      "height": 85,
+      "pos": [
+        830,
+        65
+      ]
+    },
+    {
+      "id": "task-operations",
+      "type": "backend",
+      "label": "Store · task operations",
+      "x": 40,
+      "y": 300,
+      "width": 250,
+      "height": 95,
+      "pos": [
+        40,
+        300
+      ]
+    },
+    {
+      "id": "inbox-operations",
+      "type": "backend",
+      "label": "Store · inbox operations",
+      "x": 810,
+      "y": 300,
+      "width": 250,
+      "height": 95,
+      "pos": [
+        810,
+        300
+      ]
+    },
+    {
+      "id": "session-files",
+      "type": "database",
+      "label": "Session token files",
+      "x": 430,
+      "y": 300,
+      "width": 240,
+      "height": 95,
+      "pos": [
+        430,
+        300
+      ]
+    },
+    {
+      "id": "sqlite-state",
+      "type": "database",
+      "label": "Shared SQLite database",
+      "x": 420,
+      "y": 525,
+      "width": 260,
+      "height": 105,
+      "pos": [
+        420,
+        525
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Workspace persistence · shared by CLI invocations",
+      "x": 390,
+      "y": 270,
+      "width": 320,
+      "height": 380,
+      "wraps": [
+        "session-files",
+        "sqlite-state"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager-agent",
+      "to": "squad-cli",
+      "label": "create / list / receive",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          270,
+          107.5
+        ],
+        [
+          430,
+          107.5
+        ]
+      ],
+      "labelAt": [
+        350,
+        99
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "manager-agent",
+      "label": "state / replies",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          430,
+          107.5
+        ],
+        [
+          270,
+          107.5
+        ]
+      ],
+      "labelAt": [
+        350,
+        123
+      ]
+    },
+    {
+      "from": "worker-agent",
+      "to": "squad-cli",
+      "label": "ack / complete / send",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          830,
+          107.5
+        ],
+        [
+          670,
+          107.5
+        ]
+      ],
+      "labelAt": [
+        750,
+        123
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "worker-agent",
+      "label": "assignments / replies",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          670,
+          107.5
+        ],
+        [
+          830,
+          107.5
+        ]
+      ],
+      "labelAt": [
+        750,
+        99
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "task-operations",
+      "label": "task commands",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          430,
+          134
+        ],
+        [
+          274,
+          134
+        ],
+        [
+          274,
+          300
+        ]
+      ],
+      "labelAt": [
+        274,
+        207
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "inbox-operations",
+      "label": "send / receive",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          670,
+          134
+        ],
+        [
+          826,
+          134
+        ],
+        [
+          826,
+          300
+        ]
+      ],
+      "labelAt": [
+        826,
+        207
+      ]
+    },
+    {
+      "from": "squad-cli",
+      "to": "session-files",
+      "label": "write / validate token",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          550,
+          150
+        ],
+        [
+          550,
+          300
+        ]
+      ],
+      "labelAt": [
+        486,
+        228
+      ]
+    },
+    {
+      "from": "task-operations",
+      "to": "sqlite-state",
+      "label": "task + assignment SQL",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          274,
+          395
+        ],
+        [
+          274,
+          541
+        ],
+        [
+          420,
+          541
+        ]
+      ],
+      "labelAt": [
+        347,
+        531
+      ]
+    },
+    {
+      "from": "inbox-operations",
+      "to": "sqlite-state",
+      "label": "insert / read + mark read",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          826,
+          395
+        ],
+        [
+          826,
+          541
+        ],
+        [
+          680,
+          541
+        ]
+      ],
+      "labelAt": [
+        753,
+        531
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "create / list / receive",
+      "x": 282,
+      "y": 89,
+      "width": 136,
+      "height": 14,
+      "labelAt": [
+        350,
+        99
+      ]
+    },
+    {
+      "text": "state / replies",
+      "x": 301,
+      "y": 113,
+      "width": 98,
+      "height": 14,
+      "labelAt": [
+        350,
+        123
+      ]
+    },
+    {
+      "text": "ack / complete / send",
+      "x": 687,
+      "y": 113,
+      "width": 127,
+      "height": 14,
+      "labelAt": [
+        750,
+        123
+      ]
+    },
+    {
+      "text": "assignments / replies",
+      "x": 687,
+      "y": 89,
+      "width": 127,
+      "height": 14,
+      "labelAt": [
+        750,
+        99
+      ]
+    },
+    {
+      "text": "task commands",
+      "x": 238,
+      "y": 197,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        274,
+        207
+      ]
+    },
+    {
+      "text": "send / receive",
+      "x": 787,
+      "y": 197,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        826,
+        207
+      ]
+    },
+    {
+      "text": "write / validate token",
+      "x": 428,
+      "y": 218,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        486,
+        228
+      ]
+    },
+    {
+      "text": "task + assignment SQL",
+      "x": 292,
+      "y": 521,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        347,
+        531
+      ]
+    },
+    {
+      "text": "insert / read + mark read",
+      "x": 688,
+      "y": 521,
+      "width": 130,
+      "height": 14,
+      "labelAt": [
+        753,
+        531
+      ]
+    }
+  ]
+}

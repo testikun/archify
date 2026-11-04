@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hive · browser task to CLI worker",
+    "subtitle": "Local PTY-based team path · task plans are not dispatches · source snapshot f8f1343",
+    "output": "output/hive-task-path.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/hive",
+      "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "workbench", "type": "frontend", "label": "Browser workbench",
+      "sublabel": "Task editor + agent terminals", "tag": "Browser",
+      "pos": [50, 80], "size": [220, 86],
+      "explanation": "The browser saves task Markdown over HTTP and subscribes to task snapshots. User goals can be submitted to the orchestrator through the user-input API; interactive terminal input and output use WebSockets. This is a UI, not the runtime that executes the CLI agents.",
+      "sources": [
+        {"path": "web/src/tasks/useTasksFile.ts", "line": 98, "end_line": 110, "label": "Task update subscription"},
+        {"path": "web/src/tasks/useTasksFile.ts", "line": 163, "end_line": 174, "label": "Save task edits"},
+        {"path": "web/src/api.ts", "line": 315, "end_line": 324, "label": "Submit user goal"}
+      ]
+    },
+    {
+      "id": "terminal-host", "type": "backend", "label": "PTY host + terminal hub",
+      "sublabel": "Spawn CLI · stream terminal output", "tag": "Local Node runtime",
+      "pos": [445, 80], "size": [245, 86],
+      "explanation": "AgentManager launches real CLI processes through node-pty in a configured working directory. The runtime owns their PTYs; xterm in the browser is a viewer/controller. The terminal hub subscribes to the PTY output bus and sends output to viewers, with restore and flow control. The user-input HTTP route requires a UI session and an active orchestrator, then delivers its prompt. Team delivery arrows elsewhere represent the stdin adapter writing these same owned PTYs, not a second process transport.",
+      "sources": [
+        {"path": "src/server/agent-manager.ts", "line": 153, "end_line": 178, "label": "Spawn and write PTY"},
+        {"path": "src/server/terminal-stream-hub.ts", "line": 147, "end_line": 158, "label": "PTY output to viewers"},
+        {"path": "src/server/routes-workspaces.ts", "line": 169, "end_line": 196, "label": "Authenticated user-input route"}
+      ]
+    },
+    {
+      "id": "orchestrator", "type": "external", "label": "Orchestrator CLI",
+      "sublabel": "Plan work · invoke team send", "tag": "PTY child process",
+      "pos": [865, 80], "size": [230, 86],
+      "explanation": "The orchestrator is itself a CLI agent, not a scheduler inside the browser. It can query runnable tasks with team next, choose a member and invoke team send. It reads recorded collaboration via team messages. Final reports are injected as incoming messages. Which task it chooses, what it implements, and the correctness of its synthesis depend on the CLI agent; this source implements transport and bookkeeping, not a deterministic planner.",
+      "sources": [
+        {"path": "src/cli/team.ts", "line": 1078, "end_line": 1098, "label": "team next queries task plan"},
+        {"path": "src/cli/team.ts", "line": 1223, "end_line": 1268, "label": "HTTP messages and team send"},
+        {"path": "src/server/hive-team-guidance.ts", "line": 14, "end_line": 28, "label": "Orchestrator guidance"}
+      ]
+    },
+    {
+      "id": "task-plan", "type": "database", "label": ".hive/tasks.md",
+      "sublabel": "Workspace plan · API + file watcher", "tag": "Workspace filesystem",
+      "pos": [50, 375], "size": [220, 86],
+      "explanation": "Task routes read and atomically write this workspace file through TasksFileService. A watcher reads changed bytes and emits updated content; the tasks WebSocket publishes snapshots back to the browser. team next is a planning query over this file. Saving this file does not dispatch a worker, and accepting team report does not automatically mark a Markdown checkbox complete.",
+      "sources": [
+        {"path": "src/server/routes-tasks.ts", "line": 7, "end_line": 79, "label": "Planning query and UI read/write"},
+        {"path": "src/server/tasks-file.ts", "line": 122, "end_line": 133, "label": "Actual task file I/O"},
+        {"path": "src/server/tasks-file-watcher.ts", "line": 184, "end_line": 195, "label": "Watcher reads changed content"}
+      ]
+    },
+    {
+      "id": "worker", "type": "external", "label": "Worker CLI",
+      "sublabel": "Execute task · invoke team tools", "tag": "PTY child process",
+      "pos": [445, 375], "size": [245, 86],
+      "explanation": "Receives a dispatch envelope containing dispatch_id, task text and required_seen_seq in PTY stdin. The worker invokes the team helper as a CLI subprocess, using HIVE_PORT, HIVE_PROJECT_ID, HIVE_AGENT_ID and HIVE_AGENT_TOKEN to call the loopback HTTP API. Task progress uses team message --kind progress --to orchestrator; completion uses team report with the dispatch and any required seen sequence. Artifact arguments are path references, not an artifact-byte upload in this command.",
+      "sources": [
+        {"path": "src/cli/team.ts", "line": 1223, "end_line": 1249, "label": "Progress via team message"},
+        {"path": "src/cli/team.ts", "line": 1557, "end_line": 1574, "label": "Final report HTTP payload"},
+        {"path": "src/server/agent-run-starter.ts", "line": 112, "end_line": 124, "label": "CLI launch environment"}
+      ]
+    },
+    {
+      "id": "team-control", "type": "backend", "label": "Team API + delivery",
+      "sublabel": "Authorize · ledger · stdin envelopes", "tag": "Local Node runtime",
+      "pos": [865, 375], "size": [230, 86],
+      "explanation": "The team routes authenticate agent tokens, workspace membership and role capabilities. Team operations persist a dispatch, claim it, and use the stdin dispatcher to paste/submit the task envelope. A stopped user-managed worker keeps a queued dispatch until started; a newly spawned, never-started worker may be auto-started. Reports require a reportable open dispatch and the current required seen sequence. The report and durable outbox entry are committed together, then delivery to the orchestrator is attempted. Progress is stored, not pushed into its PTY. HTTP 202 is acceptance, not proof that the agent has acted.",
+      "sources": [
+        {"path": "src/server/routes-team.ts", "line": 127, "end_line": 170, "label": "Authorized dispatch and parked work"},
+        {"path": "src/server/team-operations.ts", "line": 604, "end_line": 685, "label": "Ledger and worker stdin delivery"},
+        {"path": "src/server/team-operations.ts", "line": 978, "end_line": 1131, "label": "Commit report then deliver or queue"}
+      ]
+    },
+    {
+      "id": "team-state", "type": "database", "label": "Runtime SQLite",
+      "sublabel": "Dispatches · messages · report outbox", "tag": "Runtime persistence",
+      "pos": [865, 610], "size": [230, 86],
+      "explanation": "These stores share the runtime database. Dispatch state progresses from queued to submitted to reported (or cancelled). Progress messages get no delivery-outbox entry. The report mutation checks the owner's required inbound non-progress message sequence before writing report text and artifact paths. The report outbox is marked delivered only after the PTY write resolves; that still does not prove the orchestrator understood the result.",
+      "sources": [
+        {"path": "src/server/runtime-store-helpers.ts", "line": 161, "end_line": 175, "label": "Shared runtime database stores"},
+        {"path": "src/server/dispatch-message-store.ts", "line": 160, "end_line": 196, "label": "Progress recorded without push"},
+        {"path": "src/server/dispatch-ledger-store.ts", "line": 340, "end_line": 376, "label": "Seen-sequence gate and report write"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "Browser UI", "wraps": ["workbench"], "pad": 18},
+    {"kind": "region", "label": "CLI process · orchestrator", "wraps": ["orchestrator"], "pad": 18},
+    {"kind": "region", "label": "CLI process · worker", "wraps": ["worker"], "pad": 18}
+  ],
+  "connections": [
+    {"id": "goal-input", "from": "workbench", "to": "terminal-host", "label": "Goal HTTP / terminal input", "arrowPosition": "label", "route": "straight"},
+    {"id": "live-terminal", "from": "terminal-host", "to": "workbench", "label": "Terminal WebSocket output", "arrowPosition": "label", "route": "straight"},
+    {"id": "orch-input", "from": "terminal-host", "to": "orchestrator", "label": "Goal → PTY stdin", "arrowPosition": "label", "route": "straight"},
+    {"id": "orch-output", "from": "orchestrator", "to": "terminal-host", "label": "CLI terminal output", "arrowPosition": "label", "route": "straight"},
+    {"id": "task-edits", "from": "workbench", "to": "task-plan", "label": "HTTP read / save", "arrowPosition": "label", "route": "straight"},
+    {"id": "task-updates", "from": "task-plan", "to": "workbench", "label": "Tasks WebSocket updates", "arrowPosition": "label", "route": "straight"},
+    {"id": "worker-live", "from": "worker", "to": "terminal-host", "label": "PTY terminal output"},
+    {"id": "dispatch-request", "from": "orchestrator", "to": "team-control", "label": "team send · HTTP", "arrowPosition": "label", "route": "straight", "variant": "emphasis"},
+    {"id": "report-return", "from": "team-control", "to": "orchestrator", "label": "Final report · PTY stdin", "arrowPosition": "label", "route": "straight", "variant": "emphasis"},
+    {"id": "dispatch-delivery", "from": "team-control", "to": "worker", "label": "Dispatch · PTY paste + submit", "arrowPosition": "label", "route": "straight", "variant": "emphasis"},
+    {"id": "worker-tools", "from": "worker", "to": "team-control", "label": "Progress / report · HTTP", "arrowPosition": "label", "route": "straight", "variant": "emphasis"},
+    {"id": "state-mutations", "from": "team-control", "to": "team-state", "label": "SQL read / commit"}
+  ],
+  "cards": [
+    {"dot": "cyan", "title": "1 · Plan is not dispatch", "items": ["User goal → orchestrator CLI → team send → worker stdin.", "Task Markdown is a separate plan; team next queries runnable items.", "No automatic tasks.md → worker scheduler is established here."]},
+    {"dot": "amber", "title": "2 · Progress is not completion", "items": ["team message --kind progress records an update without waking the orchestrator.", "Read it through team messages or UI message history; terminal output is also live.", "team report closes the dispatch only after the current seen-sequence gate passes."]},
+    {"dot": "emerald", "title": "3 · Durable result, bounded guarantee", "items": ["Report text + artifact paths + outbox entry commit before PTY forwarding.", "If the orchestrator is down, the report waits; team list after restart drains it.", "PTY write success is not proof of agent understanding, task success or checkbox completion."]},
+    {"dot": "slate", "title": "Scope & boundaries", "items": ["Browser is only the UI; both agents are local CLI child processes with owned PTYs.", "Terminal host and team control are cooperating subsystems of one Node runtime.", "UI session vs agent token + workspace + role checks are distinct authorization boundaries.", "Local orchestrator path only: remote gateway, external controllers and workflow runner omitted."]}
+  ]
+}

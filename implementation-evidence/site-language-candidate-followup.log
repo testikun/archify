@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: site language runtime normalizes one entry parameter into one durable preference
+ok 1 - site language runtime normalizes one entry parameter into one durable preference
+  ---
+  duration_ms: 5.414125
+  type: 'test'
+  ...
+# Subtest: custom site builders emit every shared site asset and preserve entry, navigation, selection, and refresh state
+ok 2 - custom site builders emit every shared site asset and preserve entry, navigation, selection, and refresh state
+  ---
+  duration_ms: 3125.773916
+  type: 'test'
+  ...
+# Subtest: all site pages consume one language runtime and one navigation contract
+ok 3 - all site pages consume one language runtime and one navigation contract
+  ---
+  duration_ms: 3.554
+  type: 'test'
+  ...
+# Subtest: site page identity paths localize with the selected language
+ok 4 - site page identity paths localize with the selected language
+  ---
+  duration_ms: 0.876167
+  type: 'test'
+  ...
+# Subtest: proof gallery type filters localize with the selected language
+ok 5 - proof gallery type filters localize with the selected language
+  ---
+  duration_ms: 0.823958
+  type: 'test'
+  ...
+# Subtest: scenario guide type filters use consistent Chinese diagram names
+ok 6 - scenario guide type filters use consistent Chinese diagram names
+  ---
+  duration_ms: 0.373292
+  type: 'test'
+  ...
+# Subtest: real Chrome preserves language through entry, navigation, selection, refresh, and consistent navigation chrome
+ok 7 - real Chrome preserves language through entry, navigation, selection, refresh, and consistent navigation chrome
+  ---
+  duration_ms: 43028.425833
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 46279.717

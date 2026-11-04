@@ -1,0 +1,153 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1050,
+    482
+  ],
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "x": 40,
+      "y": 40,
+      "width": 250,
+      "height": 84,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "x": 760,
+      "y": 40,
+      "width": 250,
+      "height": 84,
+      "pos": [
+        760,
+        40
+      ]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "x": 760,
+      "y": 330,
+      "width": 250,
+      "height": 84,
+      "pos": [
+        760,
+        330
+      ]
+    }
+  ],
+  "boundaries": [],
+  "connections": [
+    {
+      "from": "project-management",
+      "to": "erp",
+      "label": "Create purchase order — only after manager approval",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          290,
+          75
+        ],
+        [
+          760,
+          75
+        ]
+      ],
+      "labelAt": [
+        525,
+        65
+      ]
+    },
+    {
+      "from": "erp",
+      "to": "project-management",
+      "label": "Acceptance or rejection decision — after validation",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          760,
+          89
+        ],
+        [
+          290,
+          89
+        ]
+      ],
+      "labelAt": [
+        525,
+        109
+      ]
+    },
+    {
+      "from": "erp",
+      "to": "order-storage",
+      "label": "Write order — only if accepted",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          885,
+          124
+        ],
+        [
+          885,
+          330
+        ]
+      ],
+      "labelAt": [
+        802,
+        230
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Create purchase order — only after manager approval",
+      "x": 398,
+      "y": 55,
+      "width": 255,
+      "height": 14,
+      "labelAt": [
+        525,
+        65
+      ]
+    },
+    {
+      "text": "Acceptance or rejection decision — after validation",
+      "x": 398,
+      "y": 99,
+      "width": 255,
+      "height": 14,
+      "labelAt": [
+        525,
+        109
+      ]
+    },
+    {
+      "text": "Write order — only if accepted",
+      "x": 725,
+      "y": 220,
+      "width": 154,
+      "height": 14,
+      "labelAt": [
+        802,
+        230
+      ]
+    }
+  ]
+}

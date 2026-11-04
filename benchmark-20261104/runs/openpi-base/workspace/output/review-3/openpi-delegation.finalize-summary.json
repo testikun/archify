@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/candidate.json",
+    "sha256": "00e1046a2ee3e3c6217cbaaef22779f3ce9abce46cc7c90682d98ad8f4356527",
+    "bytes": 8626
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/openpi-delegation.html",
+    "sha256": "730e6b9fe3f6364c9f2eafb991a00e47df6a71d6d62c9f070a1169ba0f1d7a6c",
+    "bytes": 875452
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/review-3/openpi-delegation.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/review-3/openpi-delegation.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/review-3/openpi-delegation.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2123,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "mco-base",
+  "project_id": "mco",
+  "project_commit": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "b2b5c0009e2832dab1477575fbf94230a959c6370dabe25d2158f1542e962292",
+    "substantive_sha256": "9e621b703e7baa913c91e16e96026bfb43d5e3c758ceec87fec7c3dd083ee974"
+  },
+  "session": {
+    "id": "01a1a464-d6bf-7e72-a71e-7cfe921f1915",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/78d12082bf3c336b0a1454a0d1c4c8373d7982c1875e778b16abb13c2b6bab4e.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:34:40.261Z",
+        "pid": 91125,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/mco-review.architecture.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+        "sha256": "78d12082bf3c336b0a1454a0d1c4c8373d7982c1875e778b16abb13c2b6bab4e",
+        "snapshot": "snapshots/78d12082bf3c336b0a1454a0d1c4c8373d7982c1875e778b16abb13c2b6bab4e.json"
+      },
+      {
+        "at": "2026-11-04T02:35:00.178Z",
+        "pid": 91221,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/mco-review.architecture.json",
+          "output/mco-review.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+        "sha256": "495a319af685bf363fe45dc746970e508ffc3ba69325816e31b3d28225d03960",
+        "snapshot": "snapshots/495a319af685bf363fe45dc746970e508ffc3ba69325816e31b3d28225d03960.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.architecture.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.delivery.json"
+    ],
+    "screenshots": [
+      "captures/mco-base/fullpage.light.png",
+      "captures/mco-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final JSON, pinned source, submitted-version diff and saved full-page screenshot; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Eight components describe the default CLI/built-in shim path without inventing hosted model services. Validation precedes the local thread-pool scheduler; workers call provider adapters, and adapters spawn external CLI processes. Return arrows summarize raw-log capture and decoding, which the explanations explicitly distinguish from an HTTP response.",
+      "Provider invocation failures, cancellation and timeouts remain individual results; completion order does not reorder outputs. The task status complete/partial/failed and exit codes match source. Input configuration errors are separately described at preflight. Optional chain/debate/synthesis and ACP are outside the default path, and read-only permissions are not overstated as universal isolation.",
+      "Streaming events reach the caller during execution, while the aggregate payload returns after collection. Persistent artifact modes and stdout-only temporary cleanup are correctly distinguished; default execution does not synthesize a merged answer.",
+      "First JSON passes validation. One voluntary revision removes a redundant local-thread boundary without changing nodes or relationships. No shell command failures occurred. Final review found no clipping, title-mask collision or ambiguous opposing arrows; the presentation has small secondary labels and generous spacing but remains readable.",
+      "All ten relationships use legacy forward semantics. Fixed-input replay is identical in layout and canonical SVG on both revisions; this run supports compatibility but does not exercise the new relationship types."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 26,
+    "usage": {
+      "input_tokens": 1789773,
+      "cached_input_tokens": 1723136,
+      "output_tokens": 7748,
+      "reasoning_output_tokens": 1360,
+      "uncached_input_tokens": 66637
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:30:34.214165+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:35:52.523724+00:00",
+    "wall_seconds": 318.30926587500016,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 236.327266,
+    "time_to_first_cli_seconds": 246.046835
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

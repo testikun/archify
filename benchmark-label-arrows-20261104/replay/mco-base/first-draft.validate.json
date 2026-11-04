@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "validate",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/evidence/snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json",
+  "candidate": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/evidence/snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json",
+    "sha256": "b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe",
+    "bytes": 11895
+  },
+  "candidateFrozen": true,
+  "nextAction": {
+    "command": "finalize",
+    "arguments": [
+      "architecture",
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/evidence/snapshots/b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe.json",
+      "<output.html>",
+      "--quality",
+      "showcase",
+      "--repo-root",
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-base/workspace/project",
+      "--candidate-sha256",
+      "b7b139abec7dbe394420c17e6ee32d1f69a17e0d955417efefac9f945b45ebbe",
+      "--json"
+    ]
+  },
+  "checks": [
+    {
+      "name": "single_svg",
+      "ok": true,
+      "details": [
+        "found 1 <svg> block(s)"
+      ]
+    },
+    {
+      "name": "finite_svg",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "orthogonal_arrows",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "label_route_clearance",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_crossings",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "relationship_corridors",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "container_border_runs",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "route_rhythm",
+      "ok": true,
+      "details": []
+    },
+    {
+      "name": "legend_clearance",
+      "ok": true,
+      "details": []
+    }
+  ],
+  "composition": {
+    "schemaVersion": 1,
+    "profile": "showcase",
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "metrics": {
+      "properCrossings": 0,
+      "resolvedCrossovers": 0,
+      "ambiguousCorridors": 0,
+      "arrowheadCollisions": 0,
+      "containerBorderRuns": 0,
+      "labelRouteClearanceIssues": 0,
+      "labelCanvasOverflowIssues": 0,
+      "minLabelRouteClearance": 13,
+      "desktopReadabilityIssues": 0,
+      "viewportHeightIssues": 0,
+      "minProjectedNodeTextPx": 7.085714285714285,
+      "maxBends": 1,
+      "routesOverSuggestedBends": 0,
+      "maxStretch": 1,
+      "routesOverSuggestedStretch": 0,
+      "minSegmentPx": 21,
+      "minInteriorSegmentPx": null,
+      "shortSegmentCount": 0,
+      "shortEndpointSegmentCount": 0,
+      "shortInteriorSegmentCount": 0,
+      "microSegmentCount": 0
+    },
+    "suggestedLimits": {
+      "bendsPerRelationship": 2,
+      "stretch": 1.35,
+      "segmentPx": 16,
+      "microSegmentPx": 8
+    },
+    "routeReview": {
+      "crossings": [],
+      "detours": []
+    },
+    "leadingSpace": {
+      "measured": true,
+      "emptyTopPx": 40,
+      "emptyTopRatio": 0.055,
+      "occupiedTop": 40,
+      "viewBoxTop": 0,
+      "canvasHeight": 722,
+      "typicalNodeHeight": 84,
+      "reviewSuggested": false
+    },
+    "desktopReadability": {
+      "budgetBasis": "legacy-930",
+      "readerContract": "declared-wide-v1",
+      "availableDiagramWidth": 930,
+      "actualBudgetPx": 930,
+      "limit": "legacy",
+      "requestedTargetPx": 7.5,
+      "requestedTargetMet": false,
+      "hardFloorPx": 6,
+      "hardFloorMet": true,
+      "minimumOwner": {
+        "kind": "edge",
+        "id": "cli-prepare",
+        "from": "cli",
+        "to": "prepare"
+      },
+      "minimumSourceTextPx": 8,
+      "minimumProjectedTextPx": 7.085714285714285,
+      "semanticTextCount": 30
+    },
+    "issues": []
+  }
+}

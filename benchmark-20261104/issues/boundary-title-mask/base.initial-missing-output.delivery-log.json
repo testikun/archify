@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "d85a1ac0-18b3-4680-833f-6d6109f1256d",
+  "stage": "prepare",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/issues/boundary-title-mask/minimal.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/issues/boundary-title-mask/base.html",
+  "error": "meta.output must be a portable POSIX-relative path.",
+  "diagnostics": [
+    {
+      "severity": "error",
+      "subject": {
+        "path": "/meta/output"
+      },
+      "evidence": {
+        "reason": "type"
+      },
+      "supportedFixes": [
+        "set meta.output to a portable relative .html path such as reports/diagram.html"
+      ],
+      "code": "output/meta-path-syntax",
+      "message": "meta.output must be a portable POSIX-relative path."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+    "sha256": "1496252935efa0c866966144b0329844759c366f55aa1cec4ff9f8edcb495e6a",
+    "bytes": 11511
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/hive-task-path.html",
+    "sha256": "ce904f88bf1c3d6a555739a6f1e1241f3ff5737c47f502c6886267de048fbff7",
+    "bytes": 894238
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2428,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

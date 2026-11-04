@@ -1,0 +1,379 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1070,
+    826
+  ],
+  "components": [
+    {
+      "id": "observed-files",
+      "type": "database",
+      "label": "Installed Skills + evidence",
+      "x": 40,
+      "y": 40,
+      "width": 205,
+      "height": 78,
+      "pos": [
+        40,
+        40
+      ]
+    },
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "Discovery + snapshot capture",
+      "x": 380,
+      "y": 40,
+      "width": 225,
+      "height": 78,
+      "pos": [
+        380,
+        40
+      ]
+    },
+    {
+      "id": "state-store",
+      "type": "database",
+      "label": "SQLite StateStore",
+      "x": 790,
+      "y": 40,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        790,
+        40
+      ]
+    },
+    {
+      "id": "planning",
+      "type": "backend",
+      "label": "Declarative Plan preparation",
+      "x": 380,
+      "y": 260,
+      "width": 225,
+      "height": 82,
+      "pos": [
+        380,
+        260
+      ]
+    },
+    {
+      "id": "mutation-control",
+      "type": "security",
+      "label": "Apply / Undo coordinator",
+      "x": 790,
+      "y": 260,
+      "width": 220,
+      "height": 82,
+      "pos": [
+        790,
+        260
+      ]
+    },
+    {
+      "id": "change-engine",
+      "type": "backend",
+      "label": "Change engine + anchored I/O",
+      "x": 790,
+      "y": 480,
+      "width": 220,
+      "height": 82,
+      "pos": [
+        790,
+        480
+      ]
+    },
+    {
+      "id": "journals",
+      "type": "database",
+      "label": "Durable journals + recovery",
+      "x": 380,
+      "y": 480,
+      "width": 225,
+      "height": 82,
+      "pos": [
+        380,
+        480
+      ]
+    },
+    {
+      "id": "write-targets",
+      "type": "database",
+      "label": "Approved mutable paths",
+      "x": 790,
+      "y": 680,
+      "width": 220,
+      "height": 78,
+      "pos": [
+        790,
+        680
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Inspection + preparation · no Skill-content mutation",
+      "x": 360,
+      "y": 16,
+      "width": 265,
+      "height": 346,
+      "wraps": [
+        "inspection",
+        "planning"
+      ]
+    },
+    {
+      "kind": "security-group",
+      "label": "Explicit mutation · exclusive StateLock",
+      "x": 770,
+      "y": 236,
+      "width": 260,
+      "height": 346,
+      "wraps": [
+        "mutation-control",
+        "change-engine"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "inspection",
+      "to": "observed-files",
+      "label": "read + hash",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          380,
+          79
+        ],
+        [
+          245,
+          79
+        ]
+      ],
+      "labelAt": [
+        313,
+        69
+      ]
+    },
+    {
+      "from": "inspection",
+      "to": "state-store",
+      "label": "save Snapshot",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          605,
+          69.9
+        ],
+        [
+          790,
+          69.9
+        ]
+      ],
+      "labelAt": [
+        698,
+        60
+      ]
+    },
+    {
+      "from": "planning",
+      "to": "state-store",
+      "label": "read facts / save Plan",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          605,
+          301
+        ],
+        [
+          697.5,
+          301
+        ],
+        [
+          697.5,
+          86
+        ],
+        [
+          790,
+          86
+        ]
+      ],
+      "labelAt": [
+        698,
+        184
+      ]
+    },
+    {
+      "from": "mutation-control",
+      "to": "state-store",
+      "label": "load / finalize state",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          260
+        ],
+        [
+          900,
+          118
+        ]
+      ],
+      "labelAt": [
+        839,
+        192
+      ]
+    },
+    {
+      "from": "mutation-control",
+      "to": "change-engine",
+      "label": "apply / undo locked",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          342
+        ],
+        [
+          900,
+          480
+        ]
+      ],
+      "labelAt": [
+        843,
+        414
+      ]
+    },
+    {
+      "from": "change-engine",
+      "to": "journals",
+      "label": "journal / compensate",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          790,
+          521
+        ],
+        [
+          605,
+          521
+        ]
+      ],
+      "labelAt": [
+        698,
+        511
+      ]
+    },
+    {
+      "from": "change-engine",
+      "to": "write-targets",
+      "label": "guarded file operations",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          562
+        ],
+        [
+          900,
+          680
+        ]
+      ],
+      "labelAt": [
+        834,
+        624
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "read + hash",
+      "x": 281,
+      "y": 59,
+      "width": 63,
+      "height": 14,
+      "labelAt": [
+        313,
+        69
+      ]
+    },
+    {
+      "text": "save Snapshot",
+      "x": 661,
+      "y": 50,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        698,
+        60
+      ]
+    },
+    {
+      "text": "read facts / save Plan",
+      "x": 640,
+      "y": 174,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        698,
+        184
+      ]
+    },
+    {
+      "text": "load / finalize state",
+      "x": 783,
+      "y": 182,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        839,
+        192
+      ]
+    },
+    {
+      "text": "apply / undo locked",
+      "x": 793,
+      "y": 404,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        843,
+        414
+      ]
+    },
+    {
+      "text": "journal / compensate",
+      "x": 645,
+      "y": 501,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        698,
+        511
+      ]
+    },
+    {
+      "text": "guarded file operations",
+      "x": 774,
+      "y": 614,
+      "width": 120,
+      "height": 14,
+      "labelAt": [
+        834,
+        624
+      ]
+    }
+  ]
+}

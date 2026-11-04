@@ -1,0 +1,10 @@
+architecture schema validation failed:
+  /meta/legend/entries must NOT have additional properties {"additionalProperty":"relation-forward"}
+  /meta/legend/entries must NOT have additional properties {"additionalProperty":"relation-none"}
+  /connections/0 (id/label: "opportunity-identifier-correspondence") must NOT have additional properties {"additionalProperty":"direction"}
+  /connections/1 (id/label: "sales-summary-reporting") must NOT have additional properties {"additionalProperty":"direction"}
+  /connections/2 (id/label: "delivery-summary-reporting") must NOT have additional properties {"additionalProperty":"direction"}
+[schema/additionalProperties] /meta/legend/entries must NOT have additional properties Fix: remove unsupported property "relation-forward".
+[schema/additionalProperties] /connections/0 (id/label: "opportunity-identifier-correspondence") must NOT have additional properties Fix: remove unsupported property "direction".
+[schema/additionalProperties] /connections/1 (id/label: "sales-summary-reporting") must NOT have additional properties Fix: remove unsupported property "direction".
+[schema/additionalProperties] /connections/2 (id/label: "delivery-summary-reporting") must NOT have additional properties Fix: remove unsupported property "direction".

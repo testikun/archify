@@ -1,0 +1,334 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1110,
+    720
+  ],
+  "components": [
+    {
+      "id": "manager",
+      "type": "external",
+      "label": "Manager terminal",
+      "x": 35,
+      "y": 85,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        35,
+        85
+      ]
+    },
+    {
+      "id": "cli",
+      "type": "backend",
+      "label": "squad CLI",
+      "x": 435,
+      "y": 85,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        435,
+        85
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker terminal",
+      "x": 835,
+      "y": 85,
+      "width": 235,
+      "height": 85,
+      "pos": [
+        835,
+        85
+      ]
+    },
+    {
+      "id": "roles",
+      "type": "database",
+      "label": "Role instructions",
+      "x": 35,
+      "y": 310,
+      "width": 235,
+      "height": 95,
+      "pos": [
+        35,
+        310
+      ]
+    },
+    {
+      "id": "store",
+      "type": "backend",
+      "label": "Store / SQL operations",
+      "x": 435,
+      "y": 310,
+      "width": 235,
+      "height": 95,
+      "pos": [
+        435,
+        310
+      ]
+    },
+    {
+      "id": "coord-files",
+      "type": "database",
+      "label": "Local coordination files",
+      "x": 835,
+      "y": 310,
+      "width": 235,
+      "height": 95,
+      "pos": [
+        835,
+        310
+      ]
+    },
+    {
+      "id": "db",
+      "type": "database",
+      "label": "SQLite: messages.db",
+      "x": 435,
+      "y": 535,
+      "width": 235,
+      "height": 95,
+      "pos": [
+        435,
+        535
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Squad process • Rust CLI + library",
+      "x": 405,
+      "y": 55,
+      "width": 295,
+      "height": 370,
+      "wraps": [
+        "cli",
+        "store"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "manager",
+      "to": "cli",
+      "label": "create / list / send",
+      "variant": "emphasis",
+      "direction": "both",
+      "route": "auto",
+      "points": [
+        [
+          270,
+          119.45
+        ],
+        [
+          435,
+          119.45
+        ]
+      ],
+      "labelAt": [
+        353,
+        109
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "cli",
+      "label": "receive / ack / complete",
+      "variant": "emphasis",
+      "direction": "both",
+      "route": "auto",
+      "points": [
+        [
+          835,
+          119.45
+        ],
+        [
+          670,
+          119.45
+        ]
+      ],
+      "labelAt": [
+        753,
+        109
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "store",
+      "label": "calls + records",
+      "variant": "default",
+      "direction": "both",
+      "route": "auto",
+      "points": [
+        [
+          552.5,
+          170
+        ],
+        [
+          552.5,
+          310
+        ]
+      ],
+      "labelAt": [
+        506,
+        243
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "roles",
+      "label": "join: read prompt",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          435,
+          134.5
+        ],
+        [
+          352.5,
+          134.5
+        ],
+        [
+          352.5,
+          357.5
+        ],
+        [
+          270,
+          357.5
+        ]
+      ],
+      "labelAt": [
+        353,
+        236
+      ]
+    },
+    {
+      "from": "cli",
+      "to": "coord-files",
+      "label": "tokens + wait lock",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          670,
+          134.5
+        ],
+        [
+          752.5,
+          134.5
+        ],
+        [
+          752.5,
+          357.5
+        ],
+        [
+          835,
+          357.5
+        ]
+      ],
+      "labelAt": [
+        753,
+        236
+      ]
+    },
+    {
+      "from": "store",
+      "to": "db",
+      "label": "SQL reads / writes",
+      "variant": "emphasis",
+      "direction": "both",
+      "route": "auto",
+      "points": [
+        [
+          552.5,
+          405
+        ],
+        [
+          552.5,
+          535
+        ]
+      ],
+      "labelAt": [
+        498,
+        473
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "create / list / send",
+      "x": 300,
+      "y": 99,
+      "width": 106,
+      "height": 14,
+      "labelAt": [
+        353,
+        109
+      ]
+    },
+    {
+      "text": "receive / ack / complete",
+      "x": 690,
+      "y": 99,
+      "width": 125,
+      "height": 14,
+      "labelAt": [
+        753,
+        109
+      ]
+    },
+    {
+      "text": "calls + records",
+      "x": 465,
+      "y": 233,
+      "width": 82,
+      "height": 14,
+      "labelAt": [
+        506,
+        243
+      ]
+    },
+    {
+      "text": "join: read prompt",
+      "x": 307,
+      "y": 226,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        353,
+        236
+      ]
+    },
+    {
+      "text": "tokens + wait lock",
+      "x": 704,
+      "y": 226,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        753,
+        236
+      ]
+    },
+    {
+      "text": "SQL reads / writes",
+      "x": 450,
+      "y": 463,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        498,
+        473
+      ]
+    }
+  ]
+}

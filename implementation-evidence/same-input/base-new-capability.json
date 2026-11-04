@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/implementation/test/fixtures/architecture-directions.json",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"shared-id\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/1 (id/label: \"status-sync\") must NOT have additional properties {\"additionalProperty\":\"direction\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"shared-id\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "shared-id"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"status-sync\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "status-sync"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    }
+  ]
+}

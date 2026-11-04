@@ -1,0 +1,164 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "squad-candidate",
+  "project_id": "squad",
+  "project_commit": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "48b111eff2671952888db63aa910929f6f220da13ab9f1836f097075778d69e4",
+    "substantive_sha256": "4471aca9e5e2b6b07ede08df1b6d0ed1efdc6cd6ab23d567b2b493f1cf358e0f"
+  },
+  "session": {
+    "id": "01a1a46e-0dba-7862-8d2d-ea78c94a15ee",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/7adb00507f87bf6bacc7ea0aae6c988614ff3dfc6cb936845ebab64faff5958c.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:43:13.790Z",
+        "pid": 93835,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/candidate.json",
+        "sha256": "7adb00507f87bf6bacc7ea0aae6c988614ff3dfc6cb936845ebab64faff5958c",
+        "snapshot": "snapshots/7adb00507f87bf6bacc7ea0aae6c988614ff3dfc6cb936845ebab64faff5958c.json"
+      },
+      {
+        "at": "2026-11-04T02:44:00.966Z",
+        "pid": 93972,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/squad-coordination.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/candidate.json",
+        "sha256": "f7bed3f87cae0824c907b7f344ee6a4b5bd0d4d3bb4e0d1b99d8a2b877858c03",
+        "snapshot": "snapshots/f7bed3f87cae0824c907b7f344ee6a4b5bd0d4d3bb4e0d1b99d8a2b877858c03.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/squad-coordination.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/squad-coordination.delivery.json"
+    ],
+    "screenshots": [
+      "captures/squad-candidate/fullpage.light.png",
+      "captures/squad-candidate/directions.light.png",
+      "captures/squad-candidate/export.dark.png",
+      "captures/squad-candidate/export.light.png",
+      "captures/squad-candidate/directions.dark.png",
+      "captures/squad-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "incorrect",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final and initial JSON, pinned source, native 1440x900 screenshots and Route/Reach/export observations; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "The candidate naturally authors four both relationships. At least Manager terminal ↔ squad CLI labeled create / list / send and Worker terminal ↔ squad CLI labeled receive / ack / complete combine distinct commands and returned output. Those commands do not hold in both directions. This conflicts with the candidate authoring contract, which reserves both for the same relationship in both directions and keeps distinct requests/results separate.",
+      "The first JSON explicitly describes its both legend as Command and returned output. One voluntary revision removes that custom legend but retains all four both edges. Automated validation passes on the initial and final bytes; it does not establish source-semantic correctness. The recorded semantic failure is preserved in ISSUES.md, item 2.",
+      "Other reviewed claims match source: task and initial assignment creation are transactional; receiving a message does not acknowledge a task; completion does not send a report; lease expiry is not enforced by complete; role prompts are not manager authorization; absent session-token files retain compatibility behavior.",
+      "The settled native screenshot is readable and the actual direction legend is visible. An earlier captureBeyondViewport screenshot caused transient layout changes; those harness captures are retained separately and excluded from product acceptance. All four new relationships pass reverse Route and Reach checks, retain unique IDs and remain static in Live mode. Native light/dark SVG and PNG exports are retained. Correct runtime behavior does not compensate for the incorrect authored semantics.",
+      "The base rejects the direction fields as unsupported. The unchanged candidate JSON passes on the candidate. This is a capability difference, not proof of baseline malfunction or improved authoring quality. One guessed example-path command fails; there is no generation-process timeout or provider failure."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 18,
+    "usage": {
+      "input_tokens": 1129568,
+      "cached_input_tokens": 1074432,
+      "output_tokens": 6377,
+      "reasoning_output_tokens": 1104,
+      "uncached_input_tokens": 55136
+    },
+    "first_draft_semantics": "incorrect: distinct command/output directions already combined as both",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary_legend_simplification": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:40:38.112050+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:44:33.433999+00:00",
+    "wall_seconds": 235.32034379200013,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 155.62885,
+    "time_to_first_cli_seconds": 155.67795
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

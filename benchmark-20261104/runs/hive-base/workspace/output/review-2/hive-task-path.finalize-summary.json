@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/candidate.json",
+    "sha256": "d9fc907b1d8de095618198cac0a89efb8d9d04af11fb1611e486240933e3d706",
+    "bytes": 9078
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+    "sha256": "1241b309652b29cf9cac9433095c0d90520c4c714e57efd09fe962a352aee006",
+    "bytes": 882614
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/review-2/hive-task-path.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2384,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 3,
+      "routesOverSuggestedBends": 1
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "orch-output",
+            "from": "orchestrator",
+            "to": "terminal",
+            "label": "PTY output",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team",
+            "label": "HTTP team send",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "point": [
+            750,
+            112.05000000000005
+          ],
+          "sharedNode": "orchestrator"
+        },
+        {
+          "left": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team",
+            "label": "HTTP team send",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal",
+            "label": "PTY output",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            750.0000000000001,
+            227.50000000000003
+          ]
+        },
+        {
+          "left": {
+            "id": "issuer-return",
+            "from": "team",
+            "to": "orchestrator",
+            "label": "stdin status / result",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "terminal",
+            "label": "PTY output",
+            "collectionIndex": 8,
+            "artifactIndex": 9
+          },
+          "point": [
+            809.6111111111111,
+            227.5
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "issuer-return",
+            "from": "team",
+            "to": "orchestrator",
+            "label": "stdin status / result",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "orchestrator → terminal and orchestrator → team cross next to orchestrator: move node terminal or team so the two reach orchestrator from different sides (for example one level with it, one directly above or below it).",
+      "orchestrator → team crosses worker → terminal: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "team → orchestrator crosses worker → terminal: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "team → orchestrator needs 3 bends: move node team or orchestrator so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

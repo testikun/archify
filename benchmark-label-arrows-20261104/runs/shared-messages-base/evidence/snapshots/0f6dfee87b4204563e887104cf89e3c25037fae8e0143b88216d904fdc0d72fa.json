@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Purchase request and decision",
+    "subtitle": "BUSINESS.md · synthetic business evidence · only the established systems and paths",
+    "output": "output/purchase-order.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Order persistence" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Requests purchase-order creation",
+      "pos": [40, 40],
+      "size": [220, 80]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Validates and returns a decision",
+      "pos": [650, 40],
+      "size": [220, 80]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "sublabel": "Rejected orders are not written",
+      "pos": [650, 270],
+      "size": [220, 80]
+    }
+  ],
+  "connections": [
+    {
+      "id": "approved-creation-request",
+      "from": "project-management",
+      "to": "erp",
+      "label": "Create PO request · only after manager approval"
+    },
+    {
+      "id": "validated-order-decision",
+      "from": "erp",
+      "to": "project-management",
+      "label": "Acceptance / rejection decision · after validation"
+    },
+    {
+      "id": "persist-accepted-order",
+      "from": "erp",
+      "to": "order-storage",
+      "label": "Write order · accepted only"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Relationship legend and presentation limit",
+      "items": [
+        "PO = purchase order. Each solid arrow is a distinct action; its endpoint arrowhead identifies the recipient.",
+        "The request requires manager approval; the returned decision follows ERP validation. Only accepted orders reach storage.",
+        "This installed Archify version uses separate directed paths. A single shared corridor with direction cues beside centered labels is not supported.",
+        "Evidence: selected BUSINESS.md only. No repository source links or additional systems are asserted."
+      ]
+    }
+  ]
+}

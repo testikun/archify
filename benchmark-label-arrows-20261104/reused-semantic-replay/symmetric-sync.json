@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Shared project status synchronization",
+    "subtitle": "Business relationships from BUSINESS.md — no runtime assumptions",
+    "locale": "en",
+    "output": "output/status-synchronization.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Audit storage" },
+        "relation-both": { "label": "Two-way: same status synchronization; either system initiates" },
+        "relation-forward": { "label": "One-way: audit summary to Audit Storage; no return updates" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "sublabel": "Can initiate status updates",
+      "pos": [40, 40],
+      "size": [210, 76]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Can initiate status updates",
+      "pos": [500, 40],
+      "size": [210, 76]
+    },
+    {
+      "id": "audit-storage",
+      "type": "database",
+      "label": "Audit Storage",
+      "sublabel": "Receives audit summaries only",
+      "pos": [270, 270],
+      "size": [210, 76]
+    }
+  ],
+  "connections": [
+    {
+      "id": "shared-status-sync",
+      "from": "project-management",
+      "to": "erp",
+      "direction": "both",
+      "label": "Project status synchronization"
+    },
+    {
+      "id": "project-management-audit",
+      "from": "project-management",
+      "to": "audit-storage",
+      "direction": "forward",
+      "label": "Audit summary"
+    },
+    {
+      "id": "erp-audit",
+      "from": "erp",
+      "to": "audit-storage",
+      "direction": "forward",
+      "label": "Audit summary"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "slate",
+      "title": "Evidence and scope",
+      "items": [
+        "Source: BUSINESS.md, a synthetic business brief; no software source links.",
+        "Both systems synchronize the same project status with identical meaning in either direction.",
+        "Audit Storage sends no updates back. Protocol, retries and timing are unspecified."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/candidate.json",
+    "sha256": "00c46cc7ca6b6f8113bafae1c5e52dad87feec336f54872b06a44415649ab5f0",
+    "bytes": 9475
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/hive-task-path.html",
+    "sha256": "73edc69f6e938a8dc0b5b3967596450a256a81232f7bbc6f7d916510daf5289d",
+    "bytes": 891851
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/review-2/hive-task-path.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2187,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 4,
+      "routesOverSuggestedBends": 4
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "orchestrator-output",
+            "from": "orchestrator",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "worker-input",
+            "from": "pty",
+            "to": "worker",
+            "label": "3 · Dispatch stdin",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "point": [
+            752.0666666666634,
+            115.95000000000013
+          ],
+          "sharedNode": "pty"
+        },
+        {
+          "left": {
+            "id": "orchestrator-output",
+            "from": "orchestrator",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            751.9999999999999,
+            131.00000000000006
+          ],
+          "sharedNode": "pty"
+        },
+        {
+          "left": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team",
+            "label": "2 · HTTP team send",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "worker-input",
+            "from": "pty",
+            "to": "worker",
+            "label": "3 · Dispatch stdin",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "point": [
+            796.5999999999998,
+            410
+          ]
+        },
+        {
+          "left": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team",
+            "label": "2 · HTTP team send",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "right": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "point": [
+            904,
+            255
+          ]
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "orchestrator-output",
+            "from": "orchestrator",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 3,
+            "artifactIndex": 4
+          },
+          "bends": 3,
+          "stretch": 1.125
+        },
+        {
+          "relationship": {
+            "id": "delegate",
+            "from": "orchestrator",
+            "to": "team",
+            "label": "2 · HTTP team send",
+            "collectionIndex": 4,
+            "artifactIndex": 5
+          },
+          "bends": 4,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "worker-output",
+            "from": "worker",
+            "to": "pty",
+            "label": "PTY output",
+            "collectionIndex": 7,
+            "artifactIndex": 8
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "browser-poll",
+            "from": "browser",
+            "to": "team",
+            "label": "GET reports / history",
+            "collectionIndex": 9,
+            "artifactIndex": 10
+          },
+          "bends": 3,
+          "stretch": 1
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "orchestrator → pty and pty → worker cross next to pty: move node orchestrator or worker so the two reach pty from different sides (for example one level with it, one directly above or below it).",
+      "orchestrator → pty and worker → pty cross next to pty: move node orchestrator or worker so the two reach pty from different sides (for example one level with it, one directly above or below it).",
+      "orchestrator → team crosses pty → worker: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "orchestrator → team crosses worker → pty: move the node of whichever is a branch, return, or second entrance to the other side of the main path, so that relationship runs through an empty corridor.",
+      "orchestrator → pty needs 3 bends: move node orchestrator or pty so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "orchestrator → team needs 4 bends: move node orchestrator or team so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "worker → pty needs 3 bends: move node worker or pty so they share a row or column with matching centers, or sit diagonally with a clear corner.",
+      "browser → team needs 3 bends: move node browser or team so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

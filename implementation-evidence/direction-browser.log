@@ -1,0 +1,41 @@
+
+> test:browser
+> node scripts/run-browser-tests.mjs test/architecture-relationship-direction-browser.test.mjs
+
+Browser tests: 1 files, concurrency 2
+TAP version 13
+# Subtest: mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+    # Subtest: reverse paths retain authored endpoints and unique IDs without inventing flow
+    ok 1 - reverse paths retain authored endpoints and unique IDs without inventing flow
+      ---
+      duration_ms: 170.124042
+      ...
+    # Subtest: Reach counts structural relationships once in both directions and preserves exports
+    ok 2 - Reach counts structural relationships once in both directions and preserves exports
+      ---
+      duration_ms: 208.612583
+      ...
+    # Subtest: previews and semantic lenses leave structural relations static
+    ok 3 - previews and semantic lenses leave structural relations static
+      ---
+      duration_ms: 144.081583
+      ...
+    # Subtest: SVG and PNG exports retain the actual legend and arrowheads in both themes
+    ok 4 - SVG and PNG exports retain the actual legend and arrowheads in both themes
+      ---
+      duration_ms: 605.799333
+      ...
+    1..4
+ok 1 - mixed Architecture relationships preserve direction, identity and static semantics through Viewer and exports
+  ---
+  duration_ms: 8835.855708
+  ...
+1..1
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8911.236166

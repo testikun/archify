@@ -1,0 +1,106 @@
+{
+  "run_id": "openpi-candidate",
+  "project_id": "openpi",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 360.4387594590007,
+  "usage": {
+    "input_tokens": 1639564,
+    "cached_input_tokens": 1536768,
+    "output_tokens": 7948,
+    "reasoning_output_tokens": 2048,
+    "uncached_input_tokens": 102796
+  },
+  "time_to_first_json_seconds_descriptive_only": 261.146898,
+  "time_to_first_cli_seconds_descriptive_only": 261.146898,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 25,
+  "failed_tool_commands": 0,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-04T07:33:49.359Z",
+      "pid": 69967,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagent.architecture.json",
+        "output/openpi-subagent.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+      "sha256": "0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad",
+      "snapshot": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json"
+    },
+    {
+      "at": "2026-11-04T07:34:31.527Z",
+      "pid": 70358,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/openpi-subagent.architecture.json",
+        "output/openpi-subagent.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+      "sha256": "fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c",
+      "snapshot": "snapshots/fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c.json"
+    }
+  ],
+  "first_json": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json",
+  "first_submitted_json": "snapshots/0e7c94ae253a39f69412c669fbe81f5d28ccd782427ce94338ee3723dd78f9ad.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+  "final_json_sha256": "fcddf35fa3ecd262e4630058d18e1fcc7de72d56c4ef269d512e22f78eabb97c",
+  "html": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 8,
+    "both": 0,
+    "none": 0
+  },
+  "label_arrow_count": 0,
+  "source_status": "",
+  "source_commit_after": "677b4959108976b99fb63fb5029198b04aa51cb5",
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

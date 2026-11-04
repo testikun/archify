@@ -1,0 +1,21 @@
+architecture schema validation failed:
+  /connections/0 (id/label: "goal-input") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/1 (id/label: "live-terminal") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/2 (id/label: "orch-input") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/3 (id/label: "orch-output") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/4 (id/label: "task-edits") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/5 (id/label: "task-updates") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/7 (id/label: "dispatch-request") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/8 (id/label: "report-return") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/9 (id/label: "dispatch-delivery") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/10 (id/label: "worker-tools") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+[schema/additionalProperties] /connections/0 (id/label: "goal-input") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/1 (id/label: "live-terminal") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/2 (id/label: "orch-input") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/3 (id/label: "orch-output") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/4 (id/label: "task-edits") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/5 (id/label: "task-updates") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/7 (id/label: "dispatch-request") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/8 (id/label: "report-return") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/9 (id/label: "dispatch-delivery") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/10 (id/label: "worker-tools") must NOT have additional properties Fix: remove unsupported property "arrowPosition".

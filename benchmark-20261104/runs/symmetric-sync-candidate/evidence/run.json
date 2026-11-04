@@ -1,0 +1,139 @@
+{
+  "template": false,
+  "suite_id": "synthetic-business-supplement",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "symmetric-sync-candidate",
+  "project_id": "symmetric-sync",
+  "project_commit": null,
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "bb3596a3ba04bb6920c75ef11f98deefc89f8adc7c730b419b2db771e79ec0de",
+    "substantive_sha256": "6b8e69028bd1383cb67b03e990b34a3a025d106ca20438b09032f61a63076116"
+  },
+  "session": {
+    "id": "01a1a48b-516c-7223-9278-89c15084686f",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:13:38.623Z",
+        "pid": 5353,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/status-synchronization.html",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+        "sha256": "6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165",
+        "snapshot": "snapshots/6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.delivery.json"
+    ],
+    "screenshots": [
+      "captures/symmetric-sync-candidate/fullpage.light.png",
+      "captures/symmetric-sync-candidate/directions.light.png",
+      "captures/symmetric-sync-candidate/export.dark.png",
+      "captures/symmetric-sync-candidate/export.light.png",
+      "captures/symmetric-sync-candidate/directions.dark.png",
+      "captures/symmetric-sync-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review against frozen synthetic BUSINESS.md, initial/final JSON, native screenshots, exports and Route/Reach observations; author-side inspection, not an official real-project case.",
+    "findings": [
+      "The graph matches [BUSINESS.md](runs/symmetric-sync-candidate/workspace/project/BUSINESS.md): one both relationship expresses the same project-status synchronization in either direction, while two independent forward audit arrows terminate at Audit Storage. No audit return, protocol, retry or timing behavior is invented.",
+      "The actual arrowheads and legend agree: the synchronization has two heads, and audit has one. The primary viewport is readable with all three relationships and both direction legend entries visible. The supplemental full-page image includes the evidence card under explicitly recorded capture conditions.",
+      "First and final submitted JSON are identical and pass validation. There are no repair rounds. Two shell commands fail on missing AGENTS.md search matches and a guessed Archify README path; neither is a failed diagram validation.",
+      "Reverse structural Route and Reach work with one relationship identity and no route-flow overlay in Live mode. Native light/dark SVG and PNG exports preserve the two-headed relationship and legend. Base replay rejects the new direction/legend fields as unsupported; candidate replay succeeds on unchanged bytes. This is a focused capability success, not evidence that arbitrary commands and replies should be merged into both."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 0,
+    "tool_calls": 11,
+    "usage": {
+      "input_tokens": 343891,
+      "cached_input_tokens": 308352,
+      "output_tokens": 2497,
+      "reasoning_output_tokens": 332,
+      "uncached_input_tokens": 35539
+    },
+    "first_draft_semantics": "correct: first and final submitted bytes are identical and reviewed",
+    "first_draft_visual": "readable: first and final submitted bytes are identical and reviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 0
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "one native bidirectional relationship with separate one-way audit flows"
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T03:12:35.903264+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:14:10.919075+00:00",
+    "wall_seconds": 95.0145081669998,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 52.618905,
+    "time_to_first_cli_seconds": 62.719736
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

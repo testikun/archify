@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/evidence/snapshots/41b61068c1fc15fbf1c822f905946eb8d455e773ee362e14f1e44dd979feb0a0.json",
+  "error": "Architecture layout validation failed:\n- [clean-flow/endpoint-side-direction] architecture connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" first segment 0 [880, 399] -> [760, 400] does not honor fromSide \"left\" — it must run horizontal leftward; keep automatic routing so the renderer can use a side-aware bridge, or set truthful fromSide/toSide with perpendicular via segments.\n- [composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[6] id \"deliver-dispatch\" \"control\" -> \"worker\" label \"3 · PTY dispatch prompt\" segment 0 [880, 391] -> [675, 391] (label rect [713, 386, 130, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.\n- [composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 0 [880, 399] -> [760, 400] (label rect [713, 386, 130, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+  "diagnostics": [
+    {
+      "code": "clean-flow/endpoint-side-direction",
+      "severity": "error",
+      "message": "[clean-flow/endpoint-side-direction] architecture connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" first segment 0 [880, 399] -> [760, 400] does not honor fromSide \"left\" — it must run horizontal leftward; keep automatic routing so the renderer can use a side-aware bridge, or set truthful fromSide/toSide with perpendicular via segments.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 10,
+        "id": "team-visibility",
+        "from": "control",
+        "to": "team-ui"
+      },
+      "evidence": {
+        "endpoint": "source",
+        "authoredField": "fromSide",
+        "sideOrigin": "authored",
+        "side": "left",
+        "segmentIndex": 0,
+        "from": [
+          880,
+          399
+        ],
+        "to": [
+          760,
+          400
+        ],
+        "expectedAxis": "horizontal",
+        "expectedDirection": "leftward"
+      },
+      "supportedFixes": [
+        "keep automatic routing so the renderer can use a side-aware bridge, or set truthful fromSide/toSide with perpendicular via segments"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[6] id \"deliver-dispatch\" \"control\" -> \"worker\" label \"3 · PTY dispatch prompt\" segment 0 [880, 391] -> [675, 391] (label rect [713, 386, 130, 14]; minimum 4px) — adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 7,
+        "id": "worker-report",
+        "from": "worker",
+        "to": "control"
+      },
+      "evidence": {
+        "label": "4 · HTTP message / report",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 6,
+          "id": "deliver-dispatch",
+          "from": "control",
+          "to": "worker"
+        },
+        "segmentIndex": 0,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "worker-report",
+            "from": "worker",
+            "to": "control",
+            "label": "4 · HTTP message / report",
+            "variant": "dashed"
+          },
+          "relationIndex": 7,
+          "label": "4 · HTTP message / report",
+          "x": 712.5,
+          "y": 386,
+          "width": 130,
+          "height": 14,
+          "lx": 777.5,
+          "ly": 396
+        },
+        "from": [
+          880,
+          390.95
+        ],
+        "to": [
+          675,
+          390.95
+        ]
+      },
+      "supportedFixes": [
+        "adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    },
+    {
+      "code": "composition/label-route-clearance",
+      "severity": "error",
+      "message": "[composition/label-route-clearance] showcase architecture label \"4 · HTTP message / report\" on connections[7] id \"worker-report\" \"worker\" -> \"control\" label \"4 · HTTP message / report\" is 0px from connections[10] id \"team-visibility\" \"control\" -> \"team-ui\" label \"HTTP poll response · every 2 s\" segment 0 [880, 399] -> [760, 400] (label rect [713, 386, 130, 14]; minimum 4px) — if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "index": 7,
+        "id": "worker-report",
+        "from": "worker",
+        "to": "control"
+      },
+      "evidence": {
+        "label": "4 · HTTP message / report",
+        "otherRelationship": {
+          "diagramType": "architecture",
+          "collection": "connections",
+          "index": 10,
+          "id": "team-visibility",
+          "from": "control",
+          "to": "team-ui"
+        },
+        "segmentIndex": 0,
+        "clearancePx": 0,
+        "minimumPx": 4,
+        "labelRect": {
+          "relation": {
+            "id": "worker-report",
+            "from": "worker",
+            "to": "control",
+            "label": "4 · HTTP message / report",
+            "variant": "dashed"
+          },
+          "relationIndex": 7,
+          "label": "4 · HTTP message / report",
+          "x": 712.5,
+          "y": 386,
+          "width": 130,
+          "height": 14,
+          "lx": 777.5,
+          "ly": 396
+        },
+        "from": [
+          880,
+          399
+        ],
+        "to": [
+          760,
+          400
+        ]
+      },
+      "supportedFixes": [
+        "if the authored via/fromSide/toSide are not required by the user, remove them so the renderer can re-plan; otherwise preserve that intent and adjust labelAt, labelDx, labelDy, or labelSegment; otherwise adjust the other relationship route/via/channel"
+      ]
+    }
+  ]
+}

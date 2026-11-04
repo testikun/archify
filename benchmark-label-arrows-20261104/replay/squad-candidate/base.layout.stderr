@@ -1,0 +1,9 @@
+architecture schema validation failed:
+  /connections/0 (id/label: "manager-commands") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/1 (id/label: "manager-output") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/2 (id/label: "worker-commands") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+  /connections/3 (id/label: "worker-output") must NOT have additional properties {"additionalProperty":"arrowPosition"}
+[schema/additionalProperties] /connections/0 (id/label: "manager-commands") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/1 (id/label: "manager-output") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/2 (id/label: "worker-commands") must NOT have additional properties Fix: remove unsupported property "arrowPosition".
+[schema/additionalProperties] /connections/3 (id/label: "worker-output") must NOT have additional properties Fix: remove unsupported property "arrowPosition".

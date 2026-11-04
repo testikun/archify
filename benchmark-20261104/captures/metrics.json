@@ -1,0 +1,1775 @@
+[
+  {
+    "run_id": "openpi-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/openpi-base/workspace/output/openpi-delegation.html",
+    "artifactSha256": "730e6b9fe3f6364c9f2eafb991a00e47df6a71d6d62c9f070a1169ba0f1d7a6c",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 52,
+        "diagramChromePx": 78,
+        "svgPx": 619,
+        "cardsPx": 0,
+        "viewBoxHeight": 564
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1226,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "prompt / query",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "task-in",
+        "from": "caller",
+        "to": "tools"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1154,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1254,
+      "contentHeight": 1254,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "openpi-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.html",
+    "artifactSha256": "1031c5b1387a9cf004ca9dfc58c599532de8f8a5af9263b4730a8fdcd03136e9",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 644,
+        "cardsPx": 0,
+        "viewBoxHeight": 528
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1103,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.5,
+      "minimumProjectedNonEdgeTextPx": 7.5,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Separate session · restricted tools, not an OS sandbox",
+      "minimumProjectedNodeTextDetail": "boundary",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "boundary",
+        "id": null
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1334,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1413,
+      "contentHeight": 1413,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "hive-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/hive-task-path.html",
+    "artifactSha256": "73edc69f6e938a8dc0b5b3967596450a256a81232f7bbc6f7d916510daf5289d",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 631,
+        "cardsPx": 0,
+        "viewBoxHeight": 593
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1264,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 8.7,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "1 · WS input",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "user-input",
+        "from": "browser",
+        "to": "pty"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1283,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1361,
+      "contentHeight": 1361,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "hive-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/hive-base/workspace/output/hive-task-path.html",
+    "artifactSha256": "a04bd2a81c6ece4d8c4a1491cb816b17ae0c48b026a866b59dee9b8e86a53d71",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 52,
+        "diagramChromePx": 78,
+        "svgPx": 746,
+        "cardsPx": 0,
+        "viewBoxHeight": 753
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1177,
+      "diagramWidth": 1147,
+      "viewBoxWidth": 1158,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.924006908462867,
+      "minimumProjectedNonEdgeTextPx": 8.914507772020725,
+      "minimumProjectedEdgeTextPx": 7.924006908462867,
+      "minimumProjectedNodeText": "WS input",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "user-input",
+        "from": "workbench",
+        "to": "terminal"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1445,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1629,
+      "contentHeight": 1629,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "mco-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/mco-base/workspace/output/mco-review.html",
+    "artifactSha256": "ea94942b74848249408617f33c7cd6b15af72b1d02f84c9d6f9a7bb241794fc8",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 720,
+        "cardsPx": 0,
+        "viewBoxHeight": 709
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1269,
+      "diagramWidth": 1239,
+      "viewBoxWidth": 1220,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "resolve request",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "cli-plan",
+        "from": "review-cli",
+        "to": "request-plan"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1367,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1485,
+      "contentHeight": 1485,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "mco-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/mco-candidate/workspace/output/mco-review.html",
+    "artifactSha256": "085565c290309353cab79908c8a4b4537f59b147a2c91517edd7e42d469f99ac",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 698,
+        "cardsPx": 0,
+        "viewBoxHeight": 718
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1385,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.774729241877257,
+      "minimumProjectedNonEdgeTextPx": 8.746570397111913,
+      "minimumProjectedEdgeTextPx": 7.774729241877257,
+      "minimumProjectedNodeText": "Validated invocations",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "accept-request",
+        "from": "review-entry",
+        "to": "invocation-runtime"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1305,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1382,
+      "contentHeight": 1382,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "squad-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/squad-candidate/workspace/output/squad-coordination.html",
+    "artifactSha256": "77a0cc328428e574e8ca00cab2146bab8ab1957c8dd001b7a4310a65f7e06f2c",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 720,
+        "cardsPx": 0,
+        "viewBoxHeight": 720
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1140,
+      "diagramWidth": 1110,
+      "viewBoxWidth": 1110,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "create / list / send",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "manager-cli",
+        "from": "manager",
+        "to": "cli"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1389,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1597,
+      "contentHeight": 1597,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [
+        {
+          "edge": {
+            "id": "manager-cli",
+            "from": "manager",
+            "to": "cli",
+            "direction": "both",
+            "start": "url(#arrowhead-emphasis-start)",
+            "end": "url(#arrowhead-emphasis)"
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "cli",
+              "label": "squad CLI"
+            },
+            "target": {
+              "id": "manager",
+              "label": "Manager terminal"
+            },
+            "nodeIds": [
+              "cli",
+              "manager"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-cli",
+                "from": "manager",
+                "to": "cli",
+                "direction": "both",
+                "label": "create / list / send"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "cli",
+              "label": "squad CLI"
+            },
+            "nodeIds": [
+              "cli",
+              "manager",
+              "worker",
+              "store",
+              "roles",
+              "coord-files",
+              "db"
+            ],
+            "depths": {
+              "cli": 0,
+              "manager": 1,
+              "worker": 1,
+              "store": 1,
+              "roles": 1,
+              "coord-files": 1,
+              "db": 2
+            },
+            "maxDepth": 2,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-cli",
+                "from": "manager",
+                "to": "cli",
+                "label": "create / list / send",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "1",
+                "id": "worker-cli",
+                "from": "worker",
+                "to": "cli",
+                "label": "receive / ack / complete",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "2",
+                "id": "cli-store",
+                "from": "cli",
+                "to": "store",
+                "label": "calls + records",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "3",
+                "id": "cli-roles",
+                "from": "cli",
+                "to": "roles",
+                "label": "join: read prompt",
+                "depth": 1
+              },
+              {
+                "key": "4",
+                "id": "cli-files",
+                "from": "cli",
+                "to": "coord-files",
+                "label": "tokens + wait lock",
+                "depth": 1
+              },
+              {
+                "key": "5",
+                "id": "store-db",
+                "from": "store",
+                "to": "db",
+                "label": "SQL reads / writes",
+                "direction": "both",
+                "depth": 2
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        },
+        {
+          "edge": {
+            "id": "worker-cli",
+            "from": "worker",
+            "to": "cli",
+            "direction": "both",
+            "start": "url(#arrowhead-emphasis-start)",
+            "end": "url(#arrowhead-emphasis)"
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "cli",
+              "label": "squad CLI"
+            },
+            "target": {
+              "id": "worker",
+              "label": "Worker terminal"
+            },
+            "nodeIds": [
+              "cli",
+              "worker"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "1",
+                "id": "worker-cli",
+                "from": "worker",
+                "to": "cli",
+                "direction": "both",
+                "label": "receive / ack / complete"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "cli",
+              "label": "squad CLI"
+            },
+            "nodeIds": [
+              "cli",
+              "manager",
+              "worker",
+              "store",
+              "roles",
+              "coord-files",
+              "db"
+            ],
+            "depths": {
+              "cli": 0,
+              "manager": 1,
+              "worker": 1,
+              "store": 1,
+              "roles": 1,
+              "coord-files": 1,
+              "db": 2
+            },
+            "maxDepth": 2,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-cli",
+                "from": "manager",
+                "to": "cli",
+                "label": "create / list / send",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "1",
+                "id": "worker-cli",
+                "from": "worker",
+                "to": "cli",
+                "label": "receive / ack / complete",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "2",
+                "id": "cli-store",
+                "from": "cli",
+                "to": "store",
+                "label": "calls + records",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "3",
+                "id": "cli-roles",
+                "from": "cli",
+                "to": "roles",
+                "label": "join: read prompt",
+                "depth": 1
+              },
+              {
+                "key": "4",
+                "id": "cli-files",
+                "from": "cli",
+                "to": "coord-files",
+                "label": "tokens + wait lock",
+                "depth": 1
+              },
+              {
+                "key": "5",
+                "id": "store-db",
+                "from": "store",
+                "to": "db",
+                "label": "SQL reads / writes",
+                "direction": "both",
+                "depth": 2
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        },
+        {
+          "edge": {
+            "id": "cli-store",
+            "from": "cli",
+            "to": "store",
+            "direction": "both",
+            "start": "url(#arrowhead-start)",
+            "end": "url(#arrowhead)"
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "store",
+              "label": "Store / SQL operations"
+            },
+            "target": {
+              "id": "cli",
+              "label": "squad CLI"
+            },
+            "nodeIds": [
+              "store",
+              "cli"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "2",
+                "id": "cli-store",
+                "from": "cli",
+                "to": "store",
+                "direction": "both",
+                "label": "calls + records"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "store",
+              "label": "Store / SQL operations"
+            },
+            "nodeIds": [
+              "store",
+              "cli",
+              "db",
+              "manager",
+              "worker",
+              "roles",
+              "coord-files"
+            ],
+            "depths": {
+              "store": 0,
+              "cli": 1,
+              "db": 1,
+              "manager": 2,
+              "worker": 2,
+              "roles": 2,
+              "coord-files": 2
+            },
+            "maxDepth": 2,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-cli",
+                "from": "manager",
+                "to": "cli",
+                "label": "create / list / send",
+                "direction": "both",
+                "depth": 2
+              },
+              {
+                "key": "1",
+                "id": "worker-cli",
+                "from": "worker",
+                "to": "cli",
+                "label": "receive / ack / complete",
+                "direction": "both",
+                "depth": 2
+              },
+              {
+                "key": "2",
+                "id": "cli-store",
+                "from": "cli",
+                "to": "store",
+                "label": "calls + records",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "3",
+                "id": "cli-roles",
+                "from": "cli",
+                "to": "roles",
+                "label": "join: read prompt",
+                "depth": 2
+              },
+              {
+                "key": "4",
+                "id": "cli-files",
+                "from": "cli",
+                "to": "coord-files",
+                "label": "tokens + wait lock",
+                "depth": 2
+              },
+              {
+                "key": "5",
+                "id": "store-db",
+                "from": "store",
+                "to": "db",
+                "label": "SQL reads / writes",
+                "direction": "both",
+                "depth": 1
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        },
+        {
+          "edge": {
+            "id": "store-db",
+            "from": "store",
+            "to": "db",
+            "direction": "both",
+            "start": "url(#arrowhead-emphasis-start)",
+            "end": "url(#arrowhead-emphasis)"
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "db",
+              "label": "SQLite: messages.db"
+            },
+            "target": {
+              "id": "store",
+              "label": "Store / SQL operations"
+            },
+            "nodeIds": [
+              "db",
+              "store"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "5",
+                "id": "store-db",
+                "from": "store",
+                "to": "db",
+                "direction": "both",
+                "label": "SQL reads / writes"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "db",
+              "label": "SQLite: messages.db"
+            },
+            "nodeIds": [
+              "db",
+              "store",
+              "cli",
+              "manager",
+              "worker",
+              "roles",
+              "coord-files"
+            ],
+            "depths": {
+              "db": 0,
+              "store": 1,
+              "cli": 2,
+              "manager": 3,
+              "worker": 3,
+              "roles": 3,
+              "coord-files": 3
+            },
+            "maxDepth": 3,
+            "edges": [
+              {
+                "key": "0",
+                "id": "manager-cli",
+                "from": "manager",
+                "to": "cli",
+                "label": "create / list / send",
+                "direction": "both",
+                "depth": 3
+              },
+              {
+                "key": "1",
+                "id": "worker-cli",
+                "from": "worker",
+                "to": "cli",
+                "label": "receive / ack / complete",
+                "direction": "both",
+                "depth": 3
+              },
+              {
+                "key": "2",
+                "id": "cli-store",
+                "from": "cli",
+                "to": "store",
+                "label": "calls + records",
+                "direction": "both",
+                "depth": 2
+              },
+              {
+                "key": "3",
+                "id": "cli-roles",
+                "from": "cli",
+                "to": "roles",
+                "label": "join: read prompt",
+                "depth": 3
+              },
+              {
+                "key": "4",
+                "id": "cli-files",
+                "from": "cli",
+                "to": "coord-files",
+                "label": "tokens + wait lock",
+                "depth": 3
+              },
+              {
+                "key": "5",
+                "id": "store-db",
+                "from": "store",
+                "to": "db",
+                "label": "SQL reads / writes",
+                "direction": "both",
+                "depth": 1
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        }
+      ],
+      "legend": [
+        "Directed relationship",
+        "Bidirectional relationship",
+        "Bidirectional relationship"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "squad-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/squad-base/workspace/output/squad-coordination.html",
+    "artifactSha256": "262f4b1201a8fa01f632425539d8b74215d9fac0b415a0978e9c45394a1c5bb1",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 719,
+        "cardsPx": 0,
+        "viewBoxHeight": 558
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1044,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "create / list / send / receive",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "manager-cli",
+        "from": "manager-session",
+        "to": "squad-cli"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1285,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1383,
+      "contentHeight": 1383,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "skillroster-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-base/workspace/output/skillroster-architecture.html",
+    "artifactSha256": "de9840ef169177d0b893f9180df22e5710d7158703f47216534aa99998dfd11d",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 99,
+        "diagramChromePx": 78,
+        "svgPx": 783,
+        "cardsPx": 0,
+        "viewBoxHeight": 826
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 973,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": "authored",
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1044,
+      "diagramWidth": 1014,
+      "viewBoxWidth": 1070,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 7.502336448598132,
+      "minimumProjectedNonEdgeTextPx": 7.502336448598132,
+      "minimumProjectedEdgeTextPx": 7.581308411214954,
+      "minimumProjectedNodeText": "Inspection + preparation · no Skill-content mutation",
+      "minimumProjectedNodeTextDetail": "boundary",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "boundary",
+        "id": null
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1555,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1821,
+      "contentHeight": 1821,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "artifactSha256": "3a5c6ad6dcc39e4439e5e305122313f3902f3d4489e8ee466f647760b9423977",
+    "captureVersion": 5,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 651,
+        "cardsPx": 0,
+        "viewBoxHeight": 648
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1340,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "CLI / Plan JSON",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "caller-cli",
+        "from": "decision-owner",
+        "to": "command-coordinator"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1297,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1376,
+      "contentHeight": 1376,
+      "complete": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "association-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/shared-opportunity-identifiers.html",
+    "artifactSha256": "51ed298baeaf1a7c439560684deaae400b422e024064eb5543d59a8b0daf70e9",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 99,
+        "diagramChromePx": 87,
+        "svgPx": 690,
+        "cardsPx": 0,
+        "viewBoxHeight": 460
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1075,
+      "diagramWidth": 1035,
+      "viewBoxWidth": 690,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Same opportunity identifier",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "opportunity-identifier-correspondence",
+        "from": "crm",
+        "to": "project-management"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10.3125,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 46,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1014,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1074,
+      "contentHeight": 1074,
+      "complete": true,
+      "frozenDiagramSize": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport. Diagram/SVG box sizes are temporarily fixed to their settled primary-viewport dimensions so viewport-filling diagrams do not indefinitely push cards below the capture. Original HTML is untouched."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [
+        {
+          "edge": {
+            "id": "opportunity-identifier-correspondence",
+            "from": "crm",
+            "to": "project-management",
+            "direction": "none",
+            "start": null,
+            "end": null
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "project-management",
+              "label": "Project Management"
+            },
+            "target": {
+              "id": "crm",
+              "label": "CRM"
+            },
+            "nodeIds": [
+              "project-management",
+              "crm"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "opportunity-identifier-correspondence",
+                "from": "crm",
+                "to": "project-management",
+                "direction": "none",
+                "label": "Same opportunity identifier"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "project-management",
+              "label": "Project Management"
+            },
+            "nodeIds": [
+              "project-management",
+              "crm",
+              "reporting"
+            ],
+            "depths": {
+              "project-management": 0,
+              "crm": 1,
+              "reporting": 1
+            },
+            "maxDepth": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "opportunity-identifier-correspondence",
+                "from": "crm",
+                "to": "project-management",
+                "label": "Same opportunity identifier",
+                "direction": "none",
+                "depth": 1
+              },
+              {
+                "key": "1",
+                "id": "sales-summary-reporting",
+                "from": "crm",
+                "to": "reporting",
+                "label": "Publishes sales summaries",
+                "depth": 1
+              },
+              {
+                "key": "2",
+                "id": "delivery-summary-reporting",
+                "from": "project-management",
+                "to": "reporting",
+                "label": "Publishes delivery summaries",
+                "depth": 1
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        }
+      ],
+      "legend": [
+        "Solid arrow: independently publishes summaries to Reporting",
+        "Dashed, no arrows: same identifier; not communication or dependency"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "association-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/association-base/workspace/output/shared-opportunity-identifiers.html",
+    "artifactSha256": "a5bc3e63612682e78b41c6b8982252fd068d780e1ae6d8056ee35f9c4f0ce001",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 40,
+        "headerPx": 84,
+        "diagramChromePx": 167,
+        "svgPx": 597,
+        "cardsPx": 0,
+        "viewBoxHeight": 398
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1358,
+      "diagramWidth": 1080,
+      "viewBoxWidth": 720,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Publishes sales summaries",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "sales-reporting",
+        "from": "crm",
+        "to": "reporting"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 24.65625,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 0,
+      "viewerChromeActive": false
+    },
+    "contentHeight": 1151,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1189,
+      "contentHeight": 1189,
+      "complete": true,
+      "frozenDiagramSize": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport. Diagram/SVG box sizes are temporarily fixed to their settled primary-viewport dimensions so viewport-filling diagrams do not indefinitely push cards below the capture. Original HTML is untouched."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "symmetric-sync-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-base/workspace/output/status-synchronization.html",
+    "artifactSha256": "29cd1a02171f50a4ea18ce5d98d7e8dbfacc46cbfd52a38978e0c2ba62b3be92",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 40,
+        "headerPx": 58,
+        "diagramChromePx": 220,
+        "svgPx": 570,
+        "cardsPx": 0,
+        "viewBoxHeight": 380
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1020,
+      "viewBoxWidth": 680,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "↔ Status sync",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "shared-status-sync",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 51,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 0,
+      "viewerChromeActive": false
+    },
+    "contentHeight": 1172,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1210,
+      "contentHeight": 1210,
+      "complete": true,
+      "frozenDiagramSize": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport. Diagram/SVG box sizes are temporarily fixed to their settled primary-viewport dimensions so viewport-filling diagrams do not indefinitely push cards below the capture. Original HTML is untouched."
+    },
+    "exports": [],
+    "featureObservations": null
+  },
+  {
+    "run_id": "symmetric-sync-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/status-synchronization.html",
+    "artifactSha256": "e0aa0e05164822067674d13dcb4ec3f2258886319544b4504fdcbe7e50ff0e52",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 111,
+        "svgPx": 687,
+        "cardsPx": 0,
+        "viewBoxHeight": 458
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1208,
+      "diagramWidth": 1125,
+      "viewBoxWidth": 750,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Project status synchronization",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "shared-status-sync",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 15.15625,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 31,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 1151,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1223,
+      "contentHeight": 1223,
+      "complete": true,
+      "frozenDiagramSize": true,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport. Diagram/SVG box sizes are temporarily fixed to their settled primary-viewport dimensions so viewport-filling diagrams do not indefinitely push cards below the capture. Original HTML is untouched."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [
+        {
+          "edge": {
+            "id": "shared-status-sync",
+            "from": "project-management",
+            "to": "erp",
+            "direction": "both",
+            "start": "url(#arrowhead-start)",
+            "end": "url(#arrowhead)"
+          },
+          "reverseRouteFound": true,
+          "route": {
+            "source": {
+              "id": "erp",
+              "label": "ERP"
+            },
+            "target": {
+              "id": "project-management",
+              "label": "Project Management"
+            },
+            "nodeIds": [
+              "erp",
+              "project-management"
+            ],
+            "hops": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "shared-status-sync",
+                "from": "project-management",
+                "to": "erp",
+                "direction": "both",
+                "label": "Project status synchronization"
+              }
+            ]
+          },
+          "routeFlows": 0,
+          "reachesOtherEndpoint": true,
+          "reach": {
+            "direction": "downstream",
+            "origin": {
+              "id": "erp",
+              "label": "ERP"
+            },
+            "nodeIds": [
+              "erp",
+              "project-management",
+              "audit-storage"
+            ],
+            "depths": {
+              "erp": 0,
+              "project-management": 1,
+              "audit-storage": 1
+            },
+            "maxDepth": 1,
+            "edges": [
+              {
+                "key": "0",
+                "id": "shared-status-sync",
+                "from": "project-management",
+                "to": "erp",
+                "label": "Project status synchronization",
+                "direction": "both",
+                "depth": 1
+              },
+              {
+                "key": "1",
+                "id": "project-management-audit",
+                "from": "project-management",
+                "to": "audit-storage",
+                "label": "Audit summary",
+                "depth": 1
+              },
+              {
+                "key": "2",
+                "id": "erp-audit",
+                "from": "erp",
+                "to": "audit-storage",
+                "label": "Audit summary",
+                "depth": 1
+              }
+            ]
+          },
+          "uniqueReachIds": true
+        }
+      ],
+      "legend": [
+        "One-way: audit summary to Audit Storage; no return updates",
+        "Two-way: same status synchronization; either system initiates"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "distinct-messages-candidate",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/purchase-request-decision.html",
+    "artifactSha256": "84255966fb10261cc73df03ad590503a600484628de8b49a80889286e3fcfb98",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 52,
+        "diagramChromePx": 78,
+        "svgPx": 618,
+        "cardsPx": 0,
+        "viewBoxHeight": 482
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 1050,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Create purchase order — only after manager approval",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "purchase-creation-request",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 900,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 900,
+      "contentHeight": 900,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [
+      "export.light.svg",
+      "export.light.png",
+      "export.dark.svg",
+      "export.dark.png"
+    ],
+    "featureObservations": {
+      "relations": [],
+      "legend": [
+        "Arrow: directed relationship; label states its condition"
+      ],
+      "mode": "live",
+      "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+    }
+  },
+  {
+    "run_id": "distinct-messages-base",
+    "artifact": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.html",
+    "artifactSha256": "b152d60fb0bf33c1124a782a038ce9f961b0c4dff0e9c67867c5b069f4f5ba5f",
+    "captureVersion": 6,
+    "authoredPreset": "classic",
+    "screenshotState": {
+      "preset": "classic",
+      "motion": "still",
+      "theme": "light",
+      "scale": 1,
+      "zoom": 1
+    },
+    "metrics": {
+      "pageComposition": {
+        "bodyPaddingPx": 12,
+        "headerPx": 78,
+        "diagramChromePx": 78,
+        "svgPx": 684,
+        "cardsPx": 0,
+        "viewBoxHeight": 478
+      },
+      "innerWidth": 1440,
+      "innerHeight": 900,
+      "scrollWidth": 1440,
+      "scrollHeight": 900,
+      "resolvedTheme": "light",
+      "readerLayout": "adaptive",
+      "readerOverflow": null,
+      "readerFit": "intrinsic-height",
+      "diagramType": null,
+      "documentScrollUnclipped": true,
+      "readerWidth": 1376,
+      "diagramWidth": 1346,
+      "viewBoxWidth": 940,
+      "workflowLanes": [],
+      "minimumProjectedNodeTextPx": 8,
+      "minimumProjectedNonEdgeTextPx": 9,
+      "minimumProjectedEdgeTextPx": 8,
+      "minimumProjectedNodeText": "Purchase-order creation request (manager-approved only)",
+      "minimumProjectedNodeTextDetail": "edge",
+      "minimumProjectedNodeTextOwner": {
+        "kind": "edge",
+        "id": "approved-purchase-request",
+        "from": "project-management",
+        "to": "erp"
+      },
+      "hasLegend": true,
+      "hasNavigationDock": true,
+      "legendDockIntersectionArea": 0,
+      "dockStageIntersectionArea": 0,
+      "dockStageGap": 10,
+      "viewerChromeRequiredGap": 10,
+      "viewerChromeReserve": 54,
+      "viewerChromeActive": true
+    },
+    "contentHeight": 979,
+    "fullpageViewport": {
+      "width": 1440,
+      "height": 1045,
+      "contentHeight": 1045,
+      "complete": true,
+      "frozenDiagramSize": false,
+      "method": "Native screenshot with captureBeyondViewport=false after explicit tall-viewport layout settles; may reflow compared with the primary 1440x900 viewport."
+    },
+    "exports": [],
+    "featureObservations": null
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "validate",
+  "stage": "check",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/evidence/snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json",
+  "error": "Final artifact check failed.",
+  "diagnostics": [
+    {
+      "code": "composition/desktop-readability",
+      "severity": "error",
+      "message": "Final artifact failed composition/desktop-readability.",
+      "subject": {
+        "check": "composition"
+      },
+      "evidence": {
+        "owner": {
+          "kind": "edge",
+          "id": "inspect-inputs",
+          "from": "inspection",
+          "to": "local-inputs"
+        },
+        "viewportWidth": 1440,
+        "viewportHeight": 900,
+        "availableDiagramWidth": 930,
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "requestedTargetPx": 7.5,
+        "requestedTargetMet": false,
+        "budgetLimit": "legacy",
+        "viewBoxWidth": 1360,
+        "scale": 0.6838235294117647,
+        "text": "read roots + evidence",
+        "detail": "edge",
+        "sourceFontPx": 8,
+        "projectedFontPx": 5.470588235294118,
+        "minimumProjectedFontPx": 6
+      },
+      "supportedFixes": [
+        "Preserve the semantic text and any supplied coordinates, routes, sides, channels, and labels. Compactly reflow automatic spacing and empty corridors so the complete viewBox width is at most 1240px (current 1360px; 8px source text at 930px desktop budget). If supplied geometry fixes that width, use a renderer-supported semantic text-size setting or renderer-level fix instead. Position-only label controls cannot repair its projection."
+      ]
+    }
+  ],
+  "checker": {
+    "ok": false,
+    "file": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/evidence/snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json",
+    "artifact": {
+      "sha256": "98b80903a35a6bd1ec84c6fc02624cffd260072fb9f7cd67ae4e73e04fc212d9",
+      "bytes": 898095
+    },
+    "checks": [
+      {
+        "name": "single_svg",
+        "ok": true,
+        "details": [
+          "found 1 <svg> block(s)"
+        ]
+      },
+      {
+        "name": "finite_svg",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "orthogonal_arrows",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "label_route_clearance",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "relationship_crossings",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "relationship_corridors",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "container_border_runs",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "route_rhythm",
+        "ok": true,
+        "details": []
+      },
+      {
+        "name": "legend_clearance",
+        "ok": true,
+        "details": []
+      }
+    ],
+    "composition": {
+      "schemaVersion": 1,
+      "profile": "showcase",
+      "status": "fail",
+      "summary": {
+        "errors": 1,
+        "warnings": 0
+      },
+      "metrics": {
+        "properCrossings": 0,
+        "resolvedCrossovers": 0,
+        "ambiguousCorridors": 0,
+        "arrowheadCollisions": 0,
+        "containerBorderRuns": 0,
+        "labelRouteClearanceIssues": 0,
+        "labelCanvasOverflowIssues": 0,
+        "minLabelRouteClearance": 42,
+        "desktopReadabilityIssues": 1,
+        "viewportHeightIssues": 0,
+        "minProjectedNodeTextPx": 5.470588235294118,
+        "maxBends": 3,
+        "routesOverSuggestedBends": 1,
+        "maxStretch": 1,
+        "routesOverSuggestedStretch": 0,
+        "minSegmentPx": 24,
+        "minInteriorSegmentPx": 158,
+        "shortSegmentCount": 0,
+        "shortEndpointSegmentCount": 0,
+        "shortInteriorSegmentCount": 0,
+        "microSegmentCount": 0
+      },
+      "suggestedLimits": {
+        "bendsPerRelationship": 2,
+        "stretch": 1.35,
+        "segmentPx": 16,
+        "microSegmentPx": 8
+      },
+      "routeReview": {
+        "crossings": [],
+        "detours": [
+          {
+            "relationship": {
+              "id": "snapshot-save",
+              "from": "inspection",
+              "to": "state",
+              "label": "save Snapshot / Findings",
+              "collectionIndex": 1,
+              "artifactIndex": 2
+            },
+            "bends": 3,
+            "stretch": 1
+          }
+        ]
+      },
+      "leadingSpace": {
+        "measured": true,
+        "emptyTopPx": 90,
+        "emptyTopRatio": 0.102,
+        "occupiedTop": 90,
+        "viewBoxTop": 0,
+        "canvasHeight": 884,
+        "typicalNodeHeight": 76,
+        "reviewSuggested": false
+      },
+      "desktopReadability": {
+        "budgetBasis": "legacy-930",
+        "readerContract": "declared-wide-v1",
+        "availableDiagramWidth": 930,
+        "actualBudgetPx": 930,
+        "limit": "legacy",
+        "requestedTargetPx": 7.5,
+        "requestedTargetMet": false,
+        "hardFloorPx": 6,
+        "hardFloorMet": false,
+        "minimumOwner": {
+          "kind": "edge",
+          "id": "inspect-inputs",
+          "from": "inspection",
+          "to": "local-inputs"
+        },
+        "minimumSourceTextPx": 8,
+        "minimumProjectedTextPx": 5.470588235294118,
+        "semanticTextCount": 32
+      },
+      "issues": [
+        {
+          "severity": "error",
+          "code": "composition/desktop-readability",
+          "owner": {
+            "kind": "edge",
+            "id": "inspect-inputs",
+            "from": "inspection",
+            "to": "local-inputs"
+          },
+          "viewportWidth": 1440,
+          "viewportHeight": 900,
+          "availableDiagramWidth": 930,
+          "budgetBasis": "legacy-930",
+          "readerContract": "declared-wide-v1",
+          "requestedTargetPx": 7.5,
+          "requestedTargetMet": false,
+          "budgetLimit": "legacy",
+          "viewBoxWidth": 1360,
+          "scale": 0.6838235294117647,
+          "text": "read roots + evidence",
+          "detail": "edge",
+          "sourceFontPx": 8,
+          "projectedFontPx": 5.470588235294118,
+          "minimumProjectedFontPx": 6
+        }
+      ]
+    }
+  }
+}

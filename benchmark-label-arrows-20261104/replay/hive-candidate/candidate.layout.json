@@ -1,0 +1,527 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1153,
+    786
+  ],
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "x": 50,
+      "y": 80,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        50,
+        80
+      ]
+    },
+    {
+      "id": "terminal-host",
+      "type": "backend",
+      "label": "PTY host + terminal hub",
+      "x": 445,
+      "y": 80,
+      "width": 245,
+      "height": 86,
+      "pos": [
+        445,
+        80
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "x": 865,
+      "y": 80,
+      "width": 230,
+      "height": 86,
+      "pos": [
+        865,
+        80
+      ]
+    },
+    {
+      "id": "task-plan",
+      "type": "database",
+      "label": ".hive/tasks.md",
+      "x": 50,
+      "y": 375,
+      "width": 220,
+      "height": 86,
+      "pos": [
+        50,
+        375
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "x": 445,
+      "y": 375,
+      "width": 245,
+      "height": 86,
+      "pos": [
+        445,
+        375
+      ]
+    },
+    {
+      "id": "team-control",
+      "type": "backend",
+      "label": "Team API + delivery",
+      "x": 865,
+      "y": 375,
+      "width": 230,
+      "height": 86,
+      "pos": [
+        865,
+        375
+      ]
+    },
+    {
+      "id": "team-state",
+      "type": "database",
+      "label": "Runtime SQLite",
+      "x": 865,
+      "y": 610,
+      "width": 230,
+      "height": 86,
+      "pos": [
+        865,
+        610
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Browser UI",
+      "x": 32,
+      "y": 56,
+      "width": 256,
+      "height": 130,
+      "wraps": [
+        "workbench"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "CLI process · orchestrator",
+      "x": 847,
+      "y": 56,
+      "width": 266,
+      "height": 130,
+      "wraps": [
+        "orchestrator"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "CLI process · worker",
+      "x": 427,
+      "y": 351,
+      "width": 281,
+      "height": 130,
+      "wraps": [
+        "worker"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "workbench",
+      "to": "terminal-host",
+      "label": "Goal HTTP / terminal input",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          270,
+          123
+        ],
+        [
+          445,
+          123
+        ]
+      ],
+      "labelAt": [
+        358,
+        114
+      ]
+    },
+    {
+      "from": "terminal-host",
+      "to": "workbench",
+      "label": "Terminal WebSocket output",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          445,
+          123
+        ],
+        [
+          270,
+          123
+        ]
+      ],
+      "labelAt": [
+        358,
+        138
+      ]
+    },
+    {
+      "from": "terminal-host",
+      "to": "orchestrator",
+      "label": "Goal → PTY stdin",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          690,
+          123
+        ],
+        [
+          865,
+          123
+        ]
+      ],
+      "labelAt": [
+        778,
+        114
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "terminal-host",
+      "label": "CLI terminal output",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          865,
+          123
+        ],
+        [
+          690,
+          123
+        ]
+      ],
+      "labelAt": [
+        778,
+        138
+      ]
+    },
+    {
+      "from": "workbench",
+      "to": "task-plan",
+      "label": "HTTP read / save",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          160,
+          166
+        ],
+        [
+          160,
+          375
+        ]
+      ],
+      "labelAt": [
+        216,
+        274
+      ]
+    },
+    {
+      "from": "task-plan",
+      "to": "workbench",
+      "label": "Tasks WebSocket updates",
+      "variant": "default",
+      "route": "straight",
+      "points": [
+        [
+          160,
+          375
+        ],
+        [
+          160,
+          166
+        ]
+      ],
+      "labelAt": [
+        87,
+        274
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "terminal-host",
+      "label": "PTY terminal output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          567.5,
+          375
+        ],
+        [
+          567.5,
+          166
+        ]
+      ],
+      "labelAt": [
+        511,
+        274
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "team-control",
+      "label": "team send · HTTP",
+      "variant": "emphasis",
+      "route": "straight",
+      "points": [
+        [
+          980,
+          166
+        ],
+        [
+          980,
+          375
+        ]
+      ],
+      "labelAt": [
+        1036,
+        274
+      ]
+    },
+    {
+      "from": "team-control",
+      "to": "orchestrator",
+      "label": "Final report · PTY stdin",
+      "variant": "emphasis",
+      "route": "straight",
+      "points": [
+        [
+          980,
+          375
+        ],
+        [
+          980,
+          166
+        ]
+      ],
+      "labelAt": [
+        904,
+        274
+      ]
+    },
+    {
+      "from": "team-control",
+      "to": "worker",
+      "label": "Dispatch · PTY paste + submit",
+      "variant": "emphasis",
+      "route": "straight",
+      "points": [
+        [
+          865,
+          418
+        ],
+        [
+          690,
+          418
+        ]
+      ],
+      "labelAt": [
+        778,
+        433
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "team-control",
+      "label": "Progress / report · HTTP",
+      "variant": "emphasis",
+      "route": "straight",
+      "points": [
+        [
+          690,
+          418
+        ],
+        [
+          865,
+          418
+        ]
+      ],
+      "labelAt": [
+        778,
+        409
+      ]
+    },
+    {
+      "from": "team-control",
+      "to": "team-state",
+      "label": "SQL read / commit",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          980,
+          461
+        ],
+        [
+          980,
+          610
+        ]
+      ],
+      "labelAt": [
+        928,
+        539
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "Goal HTTP / terminal input",
+      "x": 282,
+      "y": 104,
+      "width": 151,
+      "height": 14,
+      "labelAt": [
+        358,
+        114
+      ]
+    },
+    {
+      "text": "Terminal WebSocket output",
+      "x": 285,
+      "y": 128,
+      "width": 146,
+      "height": 14,
+      "labelAt": [
+        358,
+        138
+      ]
+    },
+    {
+      "text": "Goal → PTY stdin",
+      "x": 726,
+      "y": 104,
+      "width": 103,
+      "height": 14,
+      "labelAt": [
+        778,
+        114
+      ]
+    },
+    {
+      "text": "CLI terminal output",
+      "x": 719,
+      "y": 128,
+      "width": 117,
+      "height": 14,
+      "labelAt": [
+        778,
+        138
+      ]
+    },
+    {
+      "text": "HTTP read / save",
+      "x": 165,
+      "y": 264,
+      "width": 103,
+      "height": 14,
+      "labelAt": [
+        216,
+        274
+      ]
+    },
+    {
+      "text": "Tasks WebSocket updates",
+      "x": 19,
+      "y": 264,
+      "width": 136,
+      "height": 14,
+      "labelAt": [
+        87,
+        274
+      ]
+    },
+    {
+      "text": "PTY terminal output",
+      "x": 460,
+      "y": 264,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        511,
+        274
+      ]
+    },
+    {
+      "text": "team send · HTTP",
+      "x": 985,
+      "y": 264,
+      "width": 103,
+      "height": 14,
+      "labelAt": [
+        1036,
+        274
+      ]
+    },
+    {
+      "text": "Final report · PTY stdin",
+      "x": 834,
+      "y": 264,
+      "width": 141,
+      "height": 14,
+      "labelAt": [
+        904,
+        274
+      ]
+    },
+    {
+      "text": "Dispatch · PTY paste + submit",
+      "x": 695,
+      "y": 423,
+      "width": 165,
+      "height": 14,
+      "labelAt": [
+        778,
+        433
+      ]
+    },
+    {
+      "text": "Progress / report · HTTP",
+      "x": 707,
+      "y": 399,
+      "width": 141,
+      "height": 14,
+      "labelAt": [
+        778,
+        409
+      ]
+    },
+    {
+      "text": "SQL read / commit",
+      "x": 882,
+      "y": 529,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        928,
+        539
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "8a74693a-c8b6-4d02-bacb-94ee1939fb29",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/hive-candidate/candidate.html",
+  "specification": {
+    "sha256": "5624e40aeb8b6a1f78a32ee3ac97b382352ce677c4510b4a6e134e066f6e4ee9",
+    "bytes": 11425
+  },
+  "artifact": {
+    "sha256": "326ab430cd6c56dd93809cc1371c44f4552a33c5b6aa18e9c4727f2600991c3e",
+    "bytes": 894136
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "evidence": {
+    "verified": true,
+    "repository": "https://github.com/tt-a1i/hive",
+    "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+    "references": 21,
+    "linkMode": "local-only"
+  },
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

@@ -1,0 +1,115 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/readme-showcase.test.mjs
+
+Repository tests: 1 files, concurrency 4
+TAP version 13
+# Subtest: README motion proof is compact, looping, and backed by current gallery artifacts
+ok 1 - README motion proof is compact, looping, and backed by current gallery artifacts
+  ---
+  duration_ms: 4.563208
+  type: 'test'
+  ...
+# Subtest: Windows command lookup and ffmpeg launch keep their boundary diagnostics
+ok 2 - Windows command lookup and ffmpeg launch keep their boundary diagnostics
+  ---
+  duration_ms: 2.679
+  type: 'test'
+  ...
+# Subtest: showcase shutdown clears its timer and bounds a forced stop
+ok 3 - showcase shutdown clears its timer and bounds a forced stop
+  ---
+  duration_ms: 43.023958
+  type: 'test'
+  ...
+# To /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-star-history-I4h84U/remote.git
+#  * [new branch]      main -> main
+# Switched to a new branch 'star-history'
+# To /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-star-history-I4h84U/remote.git
+#  * [new branch]      HEAD -> star-history
+# Cloning into '/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-star-history-I4h84U/second'...
+# done.
+# HEAD is now at acbc93f chore: update star history chart
+# To /var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-star-history-I4h84U/remote.git
+#    acbc93f..89f5161  HEAD -> star-history
+# Subtest: showcase navigation failure cancels its unused load waiter
+ok 4 - showcase navigation failure cancels its unused load waiter
+  ---
+  duration_ms: 0.956333
+  type: 'test'
+  ...
+# Subtest: every README header links to the other languages
+ok 5 - every README header links to the other languages
+  ---
+  duration_ms: 3.437542
+  type: 'test'
+  ...
+# Subtest: all README languages show the brand mark and localized launch video
+ok 6 - all README languages show the brand mark and localized launch video
+  ---
+  duration_ms: 1.023083
+  type: 'test'
+  ...
+# Subtest: README installation tables contain a complete DeepSeek Harness row
+ok 7 - README installation tables contain a complete DeepSeek Harness row
+  ---
+  duration_ms: 0.700875
+  type: 'test'
+  ...
+# Subtest: README installation tables include Hermes Agent before DeepSeek Harness
+ok 8 - README installation tables include Hermes Agent before DeepSeek Harness
+  ---
+  duration_ms: 0.817083
+  type: 'test'
+  ...
+# Subtest: README demos use checked-in captures and live deep links below the existing hero
+ok 9 - README demos use checked-in captures and live deep links below the existing hero
+  ---
+  duration_ms: 2.305625
+  type: 'test'
+  ...
+# Subtest: README preserves the visual proof set and key content
+ok 10 - README preserves the visual proof set and key content
+  ---
+  duration_ms: 0.923042
+  type: 'test'
+  ...
+# Subtest: all README languages end with the self-hosted star history chart
+ok 11 - all README languages end with the self-hosted star history chart
+  ---
+  duration_ms: 1.015
+  type: 'test'
+  ...
+# Subtest: Windows Git Bash discovery ignores GIT_EXEC_PATH
+ok 12 - Windows Git Bash discovery ignores GIT_EXEC_PATH # SKIP
+  ---
+  duration_ms: 0.042958
+  type: 'test'
+  ...
+# Subtest: Star History publishing advances the data branch without a force push
+ok 13 - Star History publishing advances the data branch without a force push
+  ---
+  duration_ms: 805.748
+  type: 'test'
+  ...
+# Subtest: showcase CLI runs through a filesystem alias while imports remain inert
+ok 14 - showcase CLI runs through a filesystem alias while imports remain inert
+  ---
+  duration_ms: 107.326666
+  type: 'test'
+  ...
+# Subtest: outer capture cleanup retains a live Chrome profile and cleans ordinary failures
+ok 15 - outer capture cleanup retains a live Chrome profile and cleans ordinary failures
+  ---
+  duration_ms: 11.943459
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 1036.149833

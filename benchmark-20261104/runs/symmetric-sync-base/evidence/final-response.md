@@ -1,0 +1,3 @@
+Created [the architecture diagram](output/status-synchronization.html) and [source JSON](output/candidate.json), with a connection legend and separate one-way audit flows.
+
+Limitation: this Archify version cannot render a two-headed connection. Synchronization is kept as one relationship labeled “↔ Status sync,” but still has a generated one-way arrowhead. The exact bidirectional rendering remains unmet; no runtime details or source links were invented.

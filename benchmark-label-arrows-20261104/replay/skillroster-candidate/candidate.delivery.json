@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "748777cb-a0f4-4784-9ec8-0d7986910808",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/skillroster-candidate/candidate.html",
+  "specification": {
+    "sha256": "1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe",
+    "bytes": 11449
+  },
+  "artifact": {
+    "sha256": "ff458a2cb03907576054bc43c3ed1f906febf4cc787463013ef033fe799978c0",
+    "bytes": 897512
+  }
+}

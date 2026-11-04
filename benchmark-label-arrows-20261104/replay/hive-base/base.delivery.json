@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a617fafd-bfc9-4c50-ab62-50003e361ea9",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-base/workspace/output/hive-task-path.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/hive-base/base.html",
+  "specification": {
+    "sha256": "0ad2946d45fe041349195d9e29c53baccfb0d99c47a8b441efdcd194bca0c6f6",
+    "bytes": 9010
+  },
+  "artifact": {
+    "sha256": "0e98bf365e9bf46cdd068cf56925011161667bc11aee05b7652c386792329fb2",
+    "bytes": 883630
+  }
+}

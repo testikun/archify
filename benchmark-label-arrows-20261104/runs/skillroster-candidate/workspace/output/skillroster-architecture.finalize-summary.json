@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "sha256": "bd1758a134072e83cae5e41e77bf541ee976aa7efa834e23b33572e1c5619781",
+    "bytes": 11441
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "sha256": "bfd6ccaf7ad9adeb0164cb0aba05ab402cd8b5143d9b2799bc5099fc22f85a16",
+    "bytes": 897551
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2058,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  },
+  "visualReviewRecommendation": {
+    "action": "inspect-route-readability",
+    "signals": {
+      "resolvedCrossovers": 1,
+      "routesOverSuggestedBends": 2
+    },
+    "reason": "Automated gates passed, but crossings or detours still need perceptual review before claiming visual quality.",
+    "affectedRoutes": {
+      "crossings": [
+        {
+          "left": {
+            "id": "explicit-apply",
+            "from": "planner",
+            "to": "execution-gates",
+            "label": "explicit apply ID",
+            "collectionIndex": 5,
+            "artifactIndex": 6
+          },
+          "right": {
+            "id": "execution-state",
+            "from": "execution-gates",
+            "to": "state",
+            "label": "load / finalize state",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "point": [
+            937,
+            485
+          ],
+          "sharedNode": "execution-gates"
+        }
+      ],
+      "detours": [
+        {
+          "relationship": {
+            "id": "snapshot-save",
+            "from": "inspection",
+            "to": "state",
+            "label": "save Snapshot / Findings",
+            "collectionIndex": 1,
+            "artifactIndex": 2
+          },
+          "bends": 3,
+          "stretch": 1
+        },
+        {
+          "relationship": {
+            "id": "execution-state",
+            "from": "execution-gates",
+            "to": "state",
+            "label": "load / finalize state",
+            "collectionIndex": 6,
+            "artifactIndex": 7
+          },
+          "bends": 3,
+          "stretch": 1.087,
+          "directCorridorBlockers": [
+            {
+              "id": "planner",
+              "label": "Plan preparation",
+              "box": [
+                820,
+                310,
+                220,
+                76
+              ]
+            }
+          ]
+        }
+      ],
+      "truncated": false
+    },
+    "hints": [
+      "planner → execution-gates and execution-gates → state cross next to execution-gates: move node planner or state so the two reach execution-gates from different sides (for example one level with it, one directly above or below it).",
+      "inspection → state needs 3 bends: move node inspection or state so they share a row or column with matching centers, or sit diagonally with a clear corner."
+    ],
+    "repair": "Trace these relationships at the desktop viewport. For Architecture, use references/architecture-layout-repair.md: reflow a blocked main path or tangled connected scene, and repair an isolated defect locally only when the surrounding composition is accepted. Preserve all semantic content and user-fixed geometry. Rerun finalize once after the edit."
+  }
+}

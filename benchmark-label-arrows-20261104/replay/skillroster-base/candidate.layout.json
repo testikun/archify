@@ -1,0 +1,451 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1190,
+    636
+  ],
+  "components": [
+    {
+      "id": "inspection",
+      "type": "backend",
+      "label": "1 · Discover & inspect",
+      "x": 40,
+      "y": 48,
+      "width": 240,
+      "height": 86,
+      "pos": [
+        40,
+        48
+      ]
+    },
+    {
+      "id": "planning",
+      "type": "backend",
+      "label": "2 · Prepare immutable Plan",
+      "x": 440,
+      "y": 48,
+      "width": 270,
+      "height": 86,
+      "pos": [
+        440,
+        48
+      ]
+    },
+    {
+      "id": "gate",
+      "type": "security",
+      "label": "3 · Apply / Undo gate",
+      "x": 900,
+      "y": 48,
+      "width": 250,
+      "height": 86,
+      "pos": [
+        900,
+        48
+      ]
+    },
+    {
+      "id": "content",
+      "type": "database",
+      "label": "Agent & Library packages",
+      "x": 40,
+      "y": 274,
+      "width": 240,
+      "height": 80,
+      "pos": [
+        40,
+        274
+      ]
+    },
+    {
+      "id": "state",
+      "type": "database",
+      "label": "SQLite · StateStore",
+      "x": 440,
+      "y": 274,
+      "width": 270,
+      "height": 80,
+      "pos": [
+        440,
+        274
+      ]
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "4 · Reversible execution",
+      "x": 900,
+      "y": 274,
+      "width": 250,
+      "height": 80,
+      "pos": [
+        900,
+        274
+      ]
+    },
+    {
+      "id": "anchored",
+      "type": "security",
+      "label": "AnchoredFs + durability",
+      "x": 440,
+      "y": 488,
+      "width": 270,
+      "height": 80,
+      "pos": [
+        440,
+        488
+      ]
+    },
+    {
+      "id": "journals",
+      "type": "database",
+      "label": "Receipt journals & recovery",
+      "x": 40,
+      "y": 488,
+      "width": 240,
+      "height": 80,
+      "pos": [
+        40,
+        488
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Inspection & preparation · no Agent/Skill mutations",
+      "x": 22,
+      "y": 24,
+      "width": 706,
+      "height": 130,
+      "wraps": [
+        "inspection",
+        "planning"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "inspection",
+      "to": "content",
+      "label": "read packages / links",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          160,
+          134
+        ],
+        [
+          160,
+          274
+        ]
+      ],
+      "labelAt": [
+        99,
+        207
+      ]
+    },
+    {
+      "from": "inspection",
+      "to": "state",
+      "label": "save Snapshot",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          280,
+          91
+        ],
+        [
+          360,
+          91
+        ],
+        [
+          360,
+          314
+        ],
+        [
+          440,
+          314
+        ]
+      ],
+      "labelAt": [
+        360,
+        193
+      ]
+    },
+    {
+      "from": "planning",
+      "to": "state",
+      "label": "read facts / save Plan",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          575,
+          134
+        ],
+        [
+          575,
+          274
+        ]
+      ],
+      "labelAt": [
+        511,
+        207
+      ]
+    },
+    {
+      "from": "gate",
+      "to": "state",
+      "label": "load Plan / Receipt",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          91
+        ],
+        [
+          805,
+          91
+        ],
+        [
+          805,
+          307
+        ],
+        [
+          710,
+          307
+        ]
+      ],
+      "labelAt": [
+        805,
+        189
+      ]
+    },
+    {
+      "from": "gate",
+      "to": "engine",
+      "label": "only if checks pass",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          1025,
+          134
+        ],
+        [
+          1025,
+          274
+        ]
+      ],
+      "labelAt": [
+        968,
+        207
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "state",
+      "label": "app commits outcome",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          900,
+          321
+        ],
+        [
+          710,
+          321
+        ]
+      ],
+      "labelAt": [
+        805,
+        341
+      ]
+    },
+    {
+      "from": "engine",
+      "to": "anchored",
+      "label": "apply / compensate",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1025,
+          354
+        ],
+        [
+          1025,
+          528
+        ],
+        [
+          710,
+          528
+        ]
+      ],
+      "labelAt": [
+        868,
+        518
+      ]
+    },
+    {
+      "from": "anchored",
+      "to": "content",
+      "label": "validated targets only",
+      "variant": "security",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          521
+        ],
+        [
+          360,
+          521
+        ],
+        [
+          360,
+          314
+        ],
+        [
+          280,
+          314
+        ]
+      ],
+      "labelAt": [
+        360,
+        408
+      ]
+    },
+    {
+      "from": "anchored",
+      "to": "journals",
+      "label": "write / read recovery",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          535
+        ],
+        [
+          280,
+          535
+        ]
+      ],
+      "labelAt": [
+        360,
+        555
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "read packages / links",
+      "x": 43,
+      "y": 197,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        99,
+        207
+      ]
+    },
+    {
+      "text": "save Snapshot",
+      "x": 324,
+      "y": 183,
+      "width": 72,
+      "height": 14,
+      "labelAt": [
+        360,
+        193
+      ]
+    },
+    {
+      "text": "read facts / save Plan",
+      "x": 453,
+      "y": 197,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        511,
+        207
+      ]
+    },
+    {
+      "text": "load Plan / Receipt",
+      "x": 754,
+      "y": 179,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        805,
+        189
+      ]
+    },
+    {
+      "text": "only if checks pass",
+      "x": 918,
+      "y": 197,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        968,
+        207
+      ]
+    },
+    {
+      "text": "app commits outcome",
+      "x": 754,
+      "y": 331,
+      "width": 101,
+      "height": 14,
+      "labelAt": [
+        805,
+        341
+      ]
+    },
+    {
+      "text": "apply / compensate",
+      "x": 819,
+      "y": 508,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        868,
+        518
+      ]
+    },
+    {
+      "text": "validated targets only",
+      "x": 302,
+      "y": 398,
+      "width": 116,
+      "height": 14,
+      "labelAt": [
+        360,
+        408
+      ]
+    },
+    {
+      "text": "write / read recovery",
+      "x": 305,
+      "y": 545,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        360,
+        555
+      ]
+    }
+  ]
+}

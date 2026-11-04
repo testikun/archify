@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "f6e0520e-7701-4542-b1d9-bf82b6191616",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/symmetric-sync-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"relation-both\"}\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"relation-forward\"}\n  /connections/0 (id/label: \"shared-status-sync\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/1 (id/label: \"project-management-audit\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/2 (id/label: \"erp-audit\") must NOT have additional properties {\"additionalProperty\":\"direction\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/meta/legend/entries must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/meta/legend/entries"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "relation-both"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"relation-both\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"shared-status-sync\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "shared-status-sync"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"project-management-audit\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "project-management-audit"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"erp-audit\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "erp-audit"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

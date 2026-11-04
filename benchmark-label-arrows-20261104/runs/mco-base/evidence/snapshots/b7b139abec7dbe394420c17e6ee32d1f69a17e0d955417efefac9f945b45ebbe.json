@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "MCO · one review, individual provider results",
+    "subtitle": "Checked-out implementation · default parallel / shim path · CLI and MCP share the invocation engine",
+    "output": "output/mco-review.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/mco-org/mco",
+      "revision": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "cli",
+      "type": "frontend",
+      "label": "CLI · mco review",
+      "sublabel": "Prompt, providers, target paths",
+      "pos": [40, 40],
+      "size": [220, 84],
+      "explanation": "The CLI resolves configuration and prompt, validates selected providers and scope, builds invocations and an adapter map, and calls run_invocation_workflow. Review defaults to read_only, but configuration or an explicit execution mode can override it.",
+      "sources": [
+        {"path": "runtime/cli.py", "line": 2291, "end_line": 2344, "label": "Prepare selected invocations"},
+        {"path": "runtime/cli.py", "line": 2445, "end_line": 2489, "label": "Run workflow and print JSON"},
+        {"path": "runtime/cli.py", "line": 1522, "end_line": 1540, "label": "Review permission default"}
+      ]
+    },
+    {
+      "id": "mcp",
+      "type": "frontend",
+      "label": "MCP · mco_review",
+      "sublabel": "stdio tool → asyncio.to_thread",
+      "pos": [40, 210],
+      "size": [220, 84],
+      "explanation": "FastMCP exposes mco_review over stdio. The async tool runs _sync_review on a thread, with a progress callback. The sync handler validates the repository, explicit built-in provider selection and execution mode before invoking the shared workflow.",
+      "sources": [
+        {"path": "runtime/mcp_server.py", "line": 434, "end_line": 458, "label": "Review tool entry"},
+        {"path": "runtime/mcp_server.py", "line": 275, "end_line": 341, "label": "Validate and run review"},
+        {"path": "runtime/mcp_server.py", "line": 484, "end_line": 486, "label": "stdio server transport"}
+      ]
+    },
+    {
+      "id": "prepare",
+      "type": "security",
+      "label": "Validate & prepare",
+      "sublabel": "Scope, model, permission flags",
+      "pos": [400, 110],
+      "size": [220, 84],
+      "tag": "read_only by default",
+      "explanation": "Each selected provider becomes an AgentInvocation with an ID, model, declaration order and scope. Resolved target paths must stay inside the repository and allow_paths. Execution modes map to provider-specific permission settings; unsupported modes are rejected. This is request validation and flag preparation, not proof of an MCO-enforced OS sandbox.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 100, "end_line": 162, "label": "Invocation identity and scope"},
+        {"path": "runtime/execution_modes.py", "line": 6, "end_line": 68, "label": "Provider permission mappings"},
+        {"path": "runtime/mcp_server.py", "line": 295, "end_line": 337, "label": "Prepare and dispatch request"}
+      ]
+    },
+    {
+      "id": "dispatch",
+      "type": "backend",
+      "label": "Invocation dispatcher",
+      "sublabel": "Workflow → run_invocations",
+      "pos": [760, 110],
+      "size": [220, 84],
+      "explanation": "Without chain, debate or synthesis, run_invocation_workflow immediately calls run_invocations. It submits one _run_one_invocation per declaration using adapters[invocation.provider]. The thread pool defaults to one worker per invocation; max_provider_parallelism can cap it. A review-wide deadline sets the shared stop event and cancels pending futures.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 707, "end_line": 754, "label": "Default workflow branch"},
+        {"path": "runtime/invocation_runtime.py", "line": 465, "end_line": 548, "label": "Artifacts and thread-pool fan-out"}
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "backend",
+      "label": "Per-invocation worker",
+      "sublabel": "Run, poll, decode; track deadlines",
+      "pos": [760, 330],
+      "size": [220, 84],
+      "explanation": "One worker builds TaskInput with the prompt, repository, scope, model and permission metadata. It starts the selected adapter, polls its status, reads stdout logs, decodes provider transport into deltas and a final answer, and emits output_delta events. Startup, stall, hard and global deadlines constrain execution; cancellation and timeout call adapter.cancel. Each invocation returns its own identity, status, output and error.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 205, "end_line": 264, "label": "TaskInput and adapter start"},
+        {"path": "runtime/invocation_runtime.py", "line": 300, "end_line": 383, "label": "Result fields, polling and deltas"},
+        {"path": "runtime/invocation_runtime.py", "line": 386, "end_line": 435, "label": "Final decoding and timeout"}
+      ]
+    },
+    {
+      "id": "adapters",
+      "type": "backend",
+      "label": "Selected shim adapter",
+      "sublabel": "CLI flags + transport decoder",
+      "pos": [760, 550],
+      "size": [220, 84],
+      "explanation": "adapter_registry defaults to built-in shim adapters, such as Claude, Codex and Gemini; only the selected entries are executed. Provider classes construct commands and decode their output format. The shared shim creates raw stdout/stderr files, spawns the process with the repository as cwd, polls its exit status and terminates or kills on cancellation. Codex is a concrete example: provider permission metadata becomes sandbox / approval CLI flags and JSON events are decoded by decode_codex_events.",
+      "sources": [
+        {"path": "runtime/adapters/__init__.py", "line": 133, "end_line": 146, "label": "Default adapter registry"},
+        {"path": "runtime/adapters/shim.py", "line": 101, "end_line": 153, "label": "Spawn and capture provider process"},
+        {"path": "runtime/adapters/codex.py", "line": 38, "end_line": 85, "label": "Concrete flags and decoder"}
+      ]
+    },
+    {
+      "id": "processes",
+      "type": "external",
+      "label": "Provider CLI processes",
+      "sublabel": "Selected binaries · cwd = repo",
+      "pos": [400, 550],
+      "size": [220, 84],
+      "explanation": "The checked-out implementation launches locally installed provider binaries as subprocesses. Their stdout and stderr are redirected to per-run files. Remote model endpoints, credentials and internal provider execution are outside this source slice and are not inferred. Permission enforcement ultimately depends on the selected provider's implementation of the supplied flags.",
+      "sources": [
+        {"path": "runtime/adapters/shim.py", "line": 115, "end_line": 153, "label": "Local process boundary"},
+        {"path": "runtime/adapters/shim.py", "line": 167, "end_line": 201, "label": "Poll process and read logs"},
+        {"path": "runtime/adapters/shim.py", "line": 237, "end_line": 255, "label": "Cancellation terminates process"}
+      ]
+    },
+    {
+      "id": "collect",
+      "type": "backend",
+      "label": "Collect individual results",
+      "sublabel": "outputs[] in declaration order",
+      "pos": [400, 330],
+      "size": [220, 84],
+      "explanation": "Futures finish independently, but results are stored at the index of their original invocation. Exceptions and cancelled futures become per-invocation failed/cancelled/timeout records rather than replacing other answers. The payload contains task_id, status, outputs, exit_code and artifact_root. Overall status is complete if all succeed, partial if some succeed, otherwise failed. This is aggregation of records, not synthesis of answers.",
+      "sources": [
+        {"path": "runtime/invocation_runtime.py", "line": 549, "end_line": 598, "label": "Collect by original index"},
+        {"path": "runtime/invocation_runtime.py", "line": 599, "end_line": 641, "label": "Task status and outputs payload"}
+      ]
+    },
+    {
+      "id": "return",
+      "type": "frontend",
+      "label": "Return to the caller",
+      "sublabel": "CLI text / JSON · MCP envelope",
+      "pos": [40, 380],
+      "size": [220, 84],
+      "explanation": "The MCP sync handler returns {ok:true,data:payload} even when the task payload reports partial or failed execution; input/execution exceptions instead produce {ok:false,error:{code,message}}. The CLI streams provider-tagged answer deltas by default, supports JSONL events, and --json prints the payload after removing per-output stderr. The CLI exits with the task exit_code.",
+      "sources": [
+        {"path": "runtime/mcp_server.py", "line": 13, "end_line": 20, "label": "MCP result/error envelopes"},
+        {"path": "runtime/mcp_server.py", "line": 324, "end_line": 341, "label": "MCP wraps task result"},
+        {"path": "runtime/cli.py", "line": 2390, "end_line": 2489, "label": "CLI streaming, JSON and exit"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "Thread pool · concurrent invocations", "wraps": ["worker"]},
+    {"kind": "region", "label": "Child-process boundary", "wraps": ["processes"]}
+  ],
+  "connections": [
+    {"id": "cli-prepare", "from": "cli", "to": "prepare", "label": "args + config"},
+    {"id": "mcp-prepare", "from": "mcp", "to": "prepare", "label": "tool arguments"},
+    {"id": "prepare-dispatch", "from": "prepare", "to": "dispatch", "label": "valid invocations", "variant": "emphasis"},
+    {"id": "dispatch-worker", "from": "dispatch", "to": "worker", "label": "submit each", "variant": "emphasis"},
+    {"id": "worker-adapter", "from": "worker", "to": "adapters", "label": "run / poll / cancel"},
+    {"id": "adapter-worker", "from": "adapters", "to": "worker", "label": "status + decoded text"},
+    {"id": "adapter-process", "from": "adapters", "to": "processes", "label": "spawn command"},
+    {"id": "process-adapter", "from": "processes", "to": "adapters", "label": "logs + exit status"},
+    {"id": "worker-collect", "from": "worker", "to": "collect", "label": "result per invocation", "variant": "emphasis"},
+    {"id": "collect-return", "from": "collect", "to": "return", "label": "task payload", "variant": "emphasis"}
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "One request → N independent answers",
+      "items": [
+        "Each selected provider gets the review prompt and validated scope; configured models become invocation metadata.",
+        "Completion order may differ from declaration order. outputs[] retains invocation_id, provider, model, status, output and error.",
+        "Failures remain local to their result; task status summarizes all outcomes. No automatic consensus or findings merge."
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "Execution and artifact ownership",
+      "items": [
+        "The shim captures child stdout/stderr in raw files. The invocation worker reads those files, decodes answers and appends answer deltas.",
+        "run_invocations owns artifact setup and cleanup. MCP uses temporary artifacts; optional CLI persistence is outside the main path.",
+        "Read-only is the default permission profile, not an unconditional MCO sandbox. Provider flags and selected execution mode determine behavior."
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "Scope and uncertainty",
+      "items": [
+        "This overview shows the default parallel shim path. CLI ACP/custom adapters, chain, debate and synthesis are optional branches, not this path.",
+        "Provider-side model APIs, authentication and internal sandbox enforcement cannot be established here; no remote service is invented.",
+        "Evidence is pinned to 3cfce130362d. Select a component to inspect its repository-relative source references."
+      ]
+    }
+  ]
+}

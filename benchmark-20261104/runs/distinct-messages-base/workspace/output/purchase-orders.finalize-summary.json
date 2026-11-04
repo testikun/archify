@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.json",
+    "sha256": "bb1f19f78f3e95278e6f6d119b80a24dc65b34537d31f53cff98e0d7f4b3fdc9",
+    "bytes": 1982
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.html",
+    "sha256": "f2aca458a59392eb944fa1df38fdaf79e83e47aa8c645a967deff9c0bc331ef7",
+    "bytes": 860247
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-base/workspace/output/purchase-orders.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2188,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

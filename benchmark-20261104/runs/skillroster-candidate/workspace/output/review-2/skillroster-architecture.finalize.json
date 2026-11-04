@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "startedAt": "2026-11-04T03:04:36.963Z",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "sha256": "6102c7a381c2e28d63ca973588ee596ca1ba89f442c1ad6dfe42c13edbfa0ea9",
+    "bytes": 12797
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "sha256": "0bab616875590cce407ba709db5bb3b0f72a50c39b0f7f7480a75629d811e797",
+    "bytes": 896782
+  },
+  "stages": {
+    "validate": {
+      "status": "fail",
+      "exitCode": 1,
+      "durationMs": null,
+      "command": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+        "deliver",
+        "architecture",
+        "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+        "--quality",
+        "showcase",
+        "--repo-root",
+        "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/project",
+        "--json"
+      ],
+      "receipt": {
+        "schemaVersion": 1,
+        "ok": false,
+        "command": "deliver",
+        "receiptId": "86b9093c-11e3-4bdb-8460-d3973a38d736",
+        "stage": "render",
+        "type": "architecture",
+        "input": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "output": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+        "error": "Architecture layout validation failed:\n- Label \"CLI / Plan JSON\" has only 75px between \"decision-owner\" and \"command-coordinator\"; it needs at least 98px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.\n- Label \"Read / persist state\" has only 90px between \"command-coordinator\" and \"state-database\"; it needs at least 122px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.\n- Label \"Read / publish journal\" has only 80px between \"anchored-io\" and \"receipt-journals\"; it needs at least 132px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+        "diagnostics": [
+          {
+            "code": "composition/label-gap",
+            "severity": "error",
+            "message": "Label \"CLI / Plan JSON\" has only 75px between \"decision-owner\" and \"command-coordinator\"; it needs at least 98px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "id": "caller-cli",
+              "from": "decision-owner",
+              "to": "command-coordinator"
+            },
+            "evidence": {
+              "clearGapPx": 75,
+              "minimumGapPx": 98,
+              "labelWidthPx": 82,
+              "obstacles": [
+                "decision-owner",
+                "command-coordinator"
+              ]
+            },
+            "supportedFixes": [
+              "increase the clear gap between the connected nodes to at least 98px",
+              "reposition the connected nodes together while preserving the full relationship label"
+            ]
+          },
+          {
+            "code": "composition/label-gap",
+            "severity": "error",
+            "message": "Label \"Read / persist state\" has only 90px between \"command-coordinator\" and \"state-database\"; it needs at least 122px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "id": "state-access",
+              "from": "command-coordinator",
+              "to": "state-database"
+            },
+            "evidence": {
+              "clearGapPx": 90,
+              "minimumGapPx": 122,
+              "labelWidthPx": 106,
+              "obstacles": [
+                "command-coordinator",
+                "state-database"
+              ]
+            },
+            "supportedFixes": [
+              "increase the clear gap between the connected nodes to at least 122px",
+              "reposition the connected nodes together while preserving the full relationship label"
+            ]
+          },
+          {
+            "code": "composition/label-gap",
+            "severity": "error",
+            "message": "Label \"Read / publish journal\" has only 80px between \"anchored-io\" and \"receipt-journals\"; it needs at least 132px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+            "subject": {
+              "diagramType": "architecture",
+              "collection": "connections",
+              "id": "journal-write",
+              "from": "anchored-io",
+              "to": "receipt-journals"
+            },
+            "evidence": {
+              "clearGapPx": 80,
+              "minimumGapPx": 132,
+              "labelWidthPx": 115.6,
+              "obstacles": [
+                "anchored-io",
+                "receipt-journals"
+              ]
+            },
+            "supportedFixes": [
+              "increase the clear gap between the connected nodes to at least 132px",
+              "reposition the connected nodes together while preserving the full relationship label"
+            ]
+          }
+        ],
+        "provenance": "failed",
+        "update": {
+          "status": "unavailable",
+          "installedVersion": null,
+          "availableVersion": null,
+          "releaseNotes": null,
+          "checkedAt": null,
+          "source": null,
+          "noticeRequired": false,
+          "noticeText": null,
+          "reason": "disabled"
+        }
+      },
+      "execution": "embedded-in-deliver"
+    },
+    "deliver": {
+      "status": "not-run",
+      "execution": "blocked-by-validate"
+    }
+  },
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "diagnostics": [
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"CLI / Plan JSON\" has only 75px between \"decision-owner\" and \"command-coordinator\"; it needs at least 98px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "caller-cli",
+        "from": "decision-owner",
+        "to": "command-coordinator"
+      },
+      "evidence": {
+        "clearGapPx": 75,
+        "minimumGapPx": 98,
+        "labelWidthPx": 82,
+        "obstacles": [
+          "decision-owner",
+          "command-coordinator"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 98px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    },
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"Read / persist state\" has only 90px between \"command-coordinator\" and \"state-database\"; it needs at least 122px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "state-access",
+        "from": "command-coordinator",
+        "to": "state-database"
+      },
+      "evidence": {
+        "clearGapPx": 90,
+        "minimumGapPx": 122,
+        "labelWidthPx": 106,
+        "obstacles": [
+          "command-coordinator",
+          "state-database"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 122px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    },
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"Read / publish journal\" has only 80px between \"anchored-io\" and \"receipt-journals\"; it needs at least 132px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "journal-write",
+        "from": "anchored-io",
+        "to": "receipt-journals"
+      },
+      "evidence": {
+        "clearGapPx": 80,
+        "minimumGapPx": 132,
+        "labelWidthPx": 115.6,
+        "obstacles": [
+          "anchored-io",
+          "receipt-journals"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 132px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    }
+  ],
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/review-2/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/review-2/skillroster-architecture.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "failedStage": "validate",
+  "finishedAt": "2026-11-04T03:04:37.287Z",
+  "durationMs": 324,
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

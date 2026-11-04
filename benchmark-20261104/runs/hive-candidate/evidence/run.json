@@ -1,0 +1,162 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "hive-candidate",
+  "project_id": "hive",
+  "project_commit": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "5e5dc6c064ca6247978e0e94e19821991851e908710fc3f163578903b27ca184",
+    "substantive_sha256": "a32b13c9eac6bace68fccdb6da2feaa5e7531cf0808e408bfae937fa130aad07"
+  },
+  "session": {
+    "id": "01a1a452-04a6-7850-8519-cfa5f6aa56e3",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/c16672aaad562c05300c85162ec703d075fac18637e952077c2106181485deba.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T02:16:46.363Z",
+        "pid": 87409,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "c16672aaad562c05300c85162ec703d075fac18637e952077c2106181485deba",
+        "snapshot": "snapshots/c16672aaad562c05300c85162ec703d075fac18637e952077c2106181485deba.json"
+      },
+      {
+        "at": "2026-11-04T02:19:00.353Z",
+        "pid": 87717,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/hive-task-path.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/candidate.json",
+        "sha256": "00c46cc7ca6b6f8113bafae1c5e52dad87feec336f54872b06a44415649ab5f0",
+        "snapshot": "snapshots/00c46cc7ca6b6f8113bafae1c5e52dad87feec336f54872b06a44415649ab5f0.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/hive-task-path.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/hive-candidate/workspace/output/hive-task-path.delivery.json"
+    ],
+    "screenshots": [
+      "captures/hive-candidate/fullpage.light.png",
+      "captures/hive-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final JSON, pinned source and saved full-page screenshot; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Six components distinguish the browser, local PTY runtime, team protocol, CLI child processes and SQLite state. The browser's active xterm/WebSocket path is used; the unused sendWorkspaceUserInput helper is explicitly excluded from the primary UI path.",
+      "Delegation is an orchestrator decision, stdin delivery is separate from terminal output, and explicit report settlement is separate from output streaming. Progress messages are persisted without an orchestrator wake; optional status wakes without closing work. Report outbox delivery is acknowledged after a successful PTY write, not as proof of agent consumption.",
+      "Stopped-worker handling, CLI identity/roles and report seen-sequence checks match the source. The architecture omits detailed return arrows for SQL reads and HTTP polling but labels those relationships as reads/queries and explains returned results; it does not assert a separate transport or automatic completion.",
+      "First JSON passes validation. One voluntary simplification removes a redundant round-trip card while preserving nodes and all eleven relationships. One command exits with status 1 because a final rg query finds no update fields; this is not a generation or delivery failure.",
+      "The diagram and cards are readable. Several routes bend or cross in the center, but separation/halos keep them traceable; no observed node clipping or boundary-title masking. Secondary labels are small. All relationships remain forward, and fixed-input replay is identical across versions, so this run does not exercise the new direction fields."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 1,
+    "tool_calls": 34,
+    "usage": {
+      "input_tokens": 3154547,
+      "cached_input_tokens": 3062272,
+      "output_tokens": 16842,
+      "reasoning_output_tokens": 6453,
+      "uncached_input_tokens": 92275
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed",
+    "repair_rounds_by_reason": {
+      "validation_driven": 0,
+      "voluntary": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:10:00.835106+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T02:21:02.756059+00:00",
+    "wall_seconds": 661.9149030420003,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 405.44509,
+    "time_to_first_cli_seconds": 405.527894
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "922429e1-1548-413b-a218-6761dad10655",
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/reused-semantic-replay/association.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/reused-semantic-replay/association.html",
+  "specification": {
+    "sha256": "c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4",
+    "bytes": 1941
+  },
+  "artifact": {
+    "sha256": "ce5b2805355ab78159b8dbc92405a6f291b3b90f8a65fb74773ce0d4efef28ec",
+    "bytes": 868356
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "0fd3e730-1dc2-4e3f-a953-5b066bdfabf8",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/association-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"relation-forward\"}\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"relation-none\"}\n  /connections/0 (id/label: \"opportunity-identifier-correspondence\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/1 (id/label: \"sales-summary-reporting\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/2 (id/label: \"delivery-summary-reporting\") must NOT have additional properties {\"additionalProperty\":\"direction\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/meta/legend/entries must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/meta/legend/entries"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "relation-forward"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"relation-forward\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"opportunity-identifier-correspondence\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "opportunity-identifier-correspondence"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"sales-summary-reporting\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "sales-summary-reporting"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"delivery-summary-reporting\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "delivery-summary-reporting"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

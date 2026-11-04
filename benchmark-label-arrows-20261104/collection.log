@@ -1,0 +1,218 @@
+[
+  {
+    "run_id": "openpi-base",
+    "repair_rounds": 3,
+    "tool_commands": 25,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1984132,
+      "cached_input_tokens": 1910016,
+      "output_tokens": 9050,
+      "reasoning_output_tokens": 1956,
+      "uncached_input_tokens": 74116
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "openpi-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 25,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1639564,
+      "cached_input_tokens": 1536768,
+      "output_tokens": 7948,
+      "reasoning_output_tokens": 2048,
+      "uncached_input_tokens": 102796
+    },
+    "relationship_directions": {
+      "forward": 8,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "hive-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 28,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 2359889,
+      "cached_input_tokens": 2287360,
+      "output_tokens": 11328,
+      "reasoning_output_tokens": 3637,
+      "uncached_input_tokens": 72529
+    },
+    "relationship_directions": {
+      "forward": 12,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "hive-base",
+    "repair_rounds": 2,
+    "tool_commands": 26,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 1950729,
+      "cached_input_tokens": 1868416,
+      "output_tokens": 11346,
+      "reasoning_output_tokens": 2352,
+      "uncached_input_tokens": 82313
+    },
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "mco-base",
+    "repair_rounds": 1,
+    "tool_commands": 22,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1453434,
+      "cached_input_tokens": 1394176,
+      "output_tokens": 8012,
+      "reasoning_output_tokens": 1609,
+      "uncached_input_tokens": 59258
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "mco-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 25,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1600141,
+      "cached_input_tokens": 1465728,
+      "output_tokens": 6881,
+      "reasoning_output_tokens": 1239,
+      "uncached_input_tokens": 134413
+    },
+    "relationship_directions": {
+      "forward": 7,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "squad-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 17,
+    "failed_tool_commands": 0,
+    "usage": {
+      "input_tokens": 1051772,
+      "cached_input_tokens": 956032,
+      "output_tokens": 6950,
+      "reasoning_output_tokens": 1657,
+      "uncached_input_tokens": 95740
+    },
+    "relationship_directions": {
+      "forward": 9,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "squad-base",
+    "repair_rounds": 1,
+    "tool_commands": 20,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 1186633,
+      "cached_input_tokens": 1131520,
+      "output_tokens": 6565,
+      "reasoning_output_tokens": 1264,
+      "uncached_input_tokens": 55113
+    },
+    "relationship_directions": {
+      "forward": 10,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "skillroster-base",
+    "repair_rounds": 1,
+    "tool_commands": 29,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 2087082,
+      "cached_input_tokens": 2001152,
+      "output_tokens": 9757,
+      "reasoning_output_tokens": 2280,
+      "uncached_input_tokens": 85930
+    },
+    "relationship_directions": {
+      "forward": 9,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "skillroster-candidate",
+    "repair_rounds": 2,
+    "tool_commands": 30,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 2409567,
+      "cached_input_tokens": 2322688,
+      "output_tokens": 12489,
+      "reasoning_output_tokens": 5009,
+      "uncached_input_tokens": 86879
+    },
+    "relationship_directions": {
+      "forward": 11,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "shared-messages-candidate",
+    "repair_rounds": 1,
+    "tool_commands": 12,
+    "failed_tool_commands": 1,
+    "usage": {
+      "input_tokens": 637295,
+      "cached_input_tokens": 543488,
+      "output_tokens": 2691,
+      "reasoning_output_tokens": 388,
+      "uncached_input_tokens": 93807
+    },
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    }
+  },
+  {
+    "run_id": "shared-messages-base",
+    "repair_rounds": 1,
+    "tool_commands": 12,
+    "failed_tool_commands": 2,
+    "usage": {
+      "input_tokens": 580920,
+      "cached_input_tokens": 521216,
+      "output_tokens": 3489,
+      "reasoning_output_tokens": 647,
+      "uncached_input_tokens": 59704
+    },
+    "relationship_directions": {
+      "forward": 3,
+      "both": 0,
+      "none": 0
+    }
+  }
+]

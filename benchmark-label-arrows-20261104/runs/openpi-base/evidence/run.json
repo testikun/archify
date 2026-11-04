@@ -1,0 +1,203 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "openpi-base",
+  "project_id": "openpi",
+  "project_commit": "677b4959108976b99fb63fb5029198b04aa51cb5",
+  "diagram_type": "architecture",
+  "arm": "base",
+  "repetition": 1,
+  "archify": {
+    "commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+    "package_or_tree_sha256": "b8251d76355e41f93ddac9cb849c0104dcaa07713ee2e2d818ed5071b3fb9965",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "0bb1a3ce02fc77f56fc483b3a914ed9b5c3c4e1fcf6c1c2ca1aac496f95f81d6",
+    "substantive_sha256": "9ae34f407153a9accf4b779c84899d8a5793438c4bcc5fb92e41ae95e35a19ca"
+  },
+  "session": {
+    "id": "01a1a576-7e14-7cc2-8106-4f82dbec1c76",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T07:33:10.688Z",
+        "pid": 69449,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5",
+        "snapshot": "snapshots/d88eecabe6f50a775e90f914a62746a89182f1289d93ddad1c301fdac6b0edc5.json"
+      },
+      {
+        "at": "2026-11-04T07:34:21.462Z",
+        "pid": 70239,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-1",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192",
+        "snapshot": "snapshots/90ffca0a79bedf1d5b6da39320c1fb0cd30614e331667f3eee8b2703089bc192.json"
+      },
+      {
+        "at": "2026-11-04T07:35:03.433Z",
+        "pid": 70957,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7",
+        "snapshot": "snapshots/904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7.json"
+      },
+      {
+        "at": "2026-11-04T07:35:31.050Z",
+        "pid": 71305,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/openpi-subagents.json",
+          "output/openpi-subagents.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-restored",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+        "sha256": "45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6",
+        "snapshot": "snapshots/45559fd747ff9297b521caded3014305a019bee52c618bea199c10595e8c85f6.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.delivery.json"
+    ],
+    "screenshots": [
+      "captures/openpi-base/fullpage.light.png",
+      "captures/openpi-base/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "source-backed at overview scope",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side source, final JSON, native 1440x900 and full-page screenshot inspection; not maintainer approval.",
+    "findings": [
+      "Independent in-process Pi session, manager status snapshots, explicit wait versus one-shot follow-up delivery remain distinct. No OS worker or durable broker is invented.",
+      "The final diagram uses only ordinary forward relations and no label markers; this run does not exercise the new presentation.",
+      "Same final JSON delivers on both versions with identical canonical SVG and layout. Revision-count differences cannot be attributed to new markers."
+    ],
+    "first_draft_check": 0,
+    "repair_rounds": 3,
+    "tool_calls": 25,
+    "usage": {
+      "input_tokens": 1984132,
+      "cached_input_tokens": 1910016,
+      "output_tokens": 9050,
+      "reasoning_output_tokens": 1956,
+      "uncached_input_tokens": 74116
+    },
+    "first_draft_semantics": "unverified; first bytes retained",
+    "first_draft_visual": "unreviewed; validation pass is not visual acceptance",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 0,
+      "voluntary_visual_or_metadata": 3
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "not exercised",
+    "label_arrow_count": 0
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:29:28.212113+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T07:36:22.508288+00:00",
+    "wall_seconds": 414.29252825000003,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 222.459157,
+    "time_to_first_cli_seconds": 222.475887
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

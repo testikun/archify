@@ -1,0 +1,390 @@
+{
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "state": "uncommitted local candidate",
+  "files": [
+    {
+      "file": "archify.zip",
+      "sha256": "b678e256f4864bba308a28f0d187f596d85a757e64fab3f29f6aed010d42994d"
+    },
+    {
+      "file": "archify/assets/template.html",
+      "sha256": "01a5a846c07fdeebebea29a5af3e19af1c0349511b7991ab8274be6b4ef73347"
+    },
+    {
+      "file": "archify/delta/architecture-delta.mjs",
+      "sha256": "17694d427d29b24306f863e11f7c2f56ec7924468b2bbc889fa5c3d957f2fc23"
+    },
+    {
+      "file": "archify/examples/class-payment-processors-rendered.html",
+      "sha256": "5acebdbcd6db5b3f38f56fe26486b689589d4de98ddae5a654af36c4ff95db6e"
+    },
+    {
+      "file": "archify/examples/class-payments-rendered.html",
+      "sha256": "c4814efd6bbe5962e5bfd0810e4e3e1773fb99b9bbdb3f2ff61aa71fe38a15ed"
+    },
+    {
+      "file": "archify/examples/dataflow-product-analytics.html",
+      "sha256": "f419530c0093cea20129683ff39d74db04900248df4c2fc0a2064283890e708b"
+    },
+    {
+      "file": "archify/examples/drilldown-api-dataflow.html",
+      "sha256": "12acf20832f9db559116204b6482c12913da9c2ae531126db1ffc858bb9622e3"
+    },
+    {
+      "file": "archify/examples/drilldown-api-sequence.html",
+      "sha256": "02766b0a576253483da902ef374f02f00ec874374d9c8c6986cb47309f46e932"
+    },
+    {
+      "file": "archify/examples/drilldown-integrations.html",
+      "sha256": "342a996d14af48c72cf4d1942ef4a08c17e1bc5d6352a0beabe0bd8bcad0574d"
+    },
+    {
+      "file": "archify/examples/drilldown-overview.html",
+      "sha256": "24df01b7fafcb29f775c3c9e7e4a1329bccbc80ca47fbe4f5690df638df70790"
+    },
+    {
+      "file": "archify/examples/drilldown-platform.html",
+      "sha256": "e3847b88482b1a9ebbfcd7d0837b4d7e1b60a9a3252b1194ea01fd15ea7e84fb"
+    },
+    {
+      "file": "archify/examples/erd-orders-rendered.html",
+      "sha256": "7f12f21845d70c83f6be88ad9ec2890f2a260fdf43045114e58578477f09f1fb"
+    },
+    {
+      "file": "archify/examples/lifecycle-agent-run.html",
+      "sha256": "52536f0e2bc8ffc75c0af24386ac142179e5bd93bcdc24b584b39eaade9c24e0"
+    },
+    {
+      "file": "archify/examples/sequence-cache-miss-request.html",
+      "sha256": "5bba3a3f3fef5bedc56b8caa7305b060685937648889403205931f630d3edfc1"
+    },
+    {
+      "file": "archify/examples/subscription-billing-rendered.html",
+      "sha256": "e5f13b86e1ec65889a87e3be729cb01e75d9c0f2e95795e6dbfcc0d7b24fd24c"
+    },
+    {
+      "file": "archify/examples/timeline-archify-dev-activity-rendered.html",
+      "sha256": "c8be887ab1a777b1a390e7d7ae533341b6704ebb7885ac9c5d9b2453e39ba956"
+    },
+    {
+      "file": "archify/examples/timeline-payment-incident-rendered.html",
+      "sha256": "75b273d3ca9933742d64df3208064d252db90c9e4cd0a0139bb334a5f466e747"
+    },
+    {
+      "file": "archify/examples/tree-archify-repository-rendered.html",
+      "sha256": "22b49ab143d330ed030e1f9d4c37e0acbb0d4258f44e3e45347f625c22c0bbf2"
+    },
+    {
+      "file": "archify/examples/tree-payment-platform-rendered.html",
+      "sha256": "ff7fa0b22597cf837f80efe9c6623efb052ff4efffa448e979aeb8600d302318"
+    },
+    {
+      "file": "archify/examples/waterfall-checkout-request-rendered.html",
+      "sha256": "078a5e4676a7002a694bd71255e9e5db71ee62841aed6abb7d7d8632bc786949"
+    },
+    {
+      "file": "archify/examples/waterfall-example-rebuild-rendered.html",
+      "sha256": "5bb52196c17a1f467a4d65115a5cdc78ab78fbe24a9a2c964ea2bb9a8f578f1e"
+    },
+    {
+      "file": "archify/examples/web-app-rendered.html",
+      "sha256": "82e5c07775b3ef71ea6feba86e911f4d59e69362b6c8c6c7b15972839c7e67ad"
+    },
+    {
+      "file": "archify/examples/workflow-agent-tool-call-rendered.html",
+      "sha256": "7ddca298d7a650b5350c419c36bd288482ef647bd1cadb191baa48c29a71eacc"
+    },
+    {
+      "file": "archify/locales/ar.json",
+      "sha256": "b8b95b8e517a80deac474deed8ae28cc2740fd70dcc7023b184fb62487063c70"
+    },
+    {
+      "file": "archify/locales/en.json",
+      "sha256": "c9a1dfb61c4070fb0eb52be1697b65a1c2b0fa9ae9cafdfab866e6cd58a6f274"
+    },
+    {
+      "file": "archify/locales/es.json",
+      "sha256": "ee4dc1d3f3b744131fe39d2a847e73e102c1fc99d8292d356726b952634d402b"
+    },
+    {
+      "file": "archify/locales/ko.json",
+      "sha256": "9e4532688b617c7866e980a80c57a66bf9afb62419594179b89362b8dc99214c"
+    },
+    {
+      "file": "archify/locales/zh-CN.json",
+      "sha256": "f90979d5486291f4f1694061d7e1538d68648f4faccfcdecaa89f78f4111bdcf"
+    },
+    {
+      "file": "archify/locales/zh-TW.json",
+      "sha256": "eba1ce0c2235d36f6bdb5da6654723f4cf978668728d1f5c0a1a7edde38bca98"
+    },
+    {
+      "file": "archify/references/authoring-defaults.md",
+      "sha256": "dd638ed241f4b742c3bca992e5872380c93581c0782432b4a336bc630b7b5ef1"
+    },
+    {
+      "file": "archify/renderers/architecture/render-architecture.mjs",
+      "sha256": "859615aeccf5f68e4c378714838395f8f8c41b9b7cc809c3e16474c2a53b2c0e"
+    },
+    {
+      "file": "archify/renderers/shared/cli.mjs",
+      "sha256": "1c7801fcf22c2c0d79c2cd73a8d1b1a02d46c82de094abe595d99eaf7e16d8f3"
+    },
+    {
+      "file": "archify/renderers/shared/generated-validators.mjs",
+      "sha256": "74381f089c6af664ed1867c39aa03d5ba5d487759c808ddd4906685ed9a0077c"
+    },
+    {
+      "file": "archify/renderers/shared/geometry.mjs",
+      "sha256": "23e48cb14b31564947d9ed9de78a84cae45cf5e993ed83ed1166ef095820ecfa"
+    },
+    {
+      "file": "archify/renderers/shared/layout-report.mjs",
+      "sha256": "57878271dd5a4c6609c3945519b6eef18fc1ecff5e115e0858094354adef3324"
+    },
+    {
+      "file": "archify/schemas/architecture.schema.json",
+      "sha256": "0c6254602193b2e8fd0ae86c343bd035b491fe57531ff275962b58f865d2361b"
+    },
+    {
+      "file": "archify/story/story-plan.mjs",
+      "sha256": "46c97dd4d7cead40414edf1a7286e93c37004210491db6399dd42f7c884b5027"
+    },
+    {
+      "file": "archify/story/story.js",
+      "sha256": "d9313f8cdedcad87e81e29ccbf97f073f4b99fc75c2af780afef0264c1b58a20"
+    },
+    {
+      "file": "archify/story/tool.mjs",
+      "sha256": "f8c0f9a9694586f8cdc8ece66c45678a0b01a48911a0f540013792d2f8b7e977"
+    },
+    {
+      "file": "docs/assets/archify-live-proof.gif",
+      "sha256": "46aaacb2d93c0d781da4f7de8063ea0a8b08c59430cfe678258a20624ea4859b"
+    },
+    {
+      "file": "docs/assets/archify-live-proof.json",
+      "sha256": "dfb3684254d2c6845a3cb16670ae0c2ef3140bfc12c893cc0c3c02c111125773"
+    },
+    {
+      "file": "docs/gallery.html",
+      "sha256": "deed80f4e45be9fc75027128e259ddf30b16476a742cc8a467f8136eb28af8a6"
+    },
+    {
+      "file": "docs/gallery/artifacts/agent-run.lifecycle.html",
+      "sha256": "52536f0e2bc8ffc75c0af24386ac142179e5bd93bcdc24b584b39eaade9c24e0"
+    },
+    {
+      "file": "docs/gallery/artifacts/agent-tool-call.workflow.html",
+      "sha256": "7ddca298d7a650b5350c419c36bd288482ef647bd1cadb191baa48c29a71eacc"
+    },
+    {
+      "file": "docs/gallery/artifacts/async-job-roundtrip.sequence.html",
+      "sha256": "480b0902bde0869f710b6c20855f6b6381c3554fefa75063f3c975f7656ca18d"
+    },
+    {
+      "file": "docs/gallery/artifacts/cache-miss.sequence.html",
+      "sha256": "5bba3a3f3fef5bedc56b8caa7305b060685937648889403205931f630d3edfc1"
+    },
+    {
+      "file": "docs/gallery/artifacts/checkout-request.waterfall.html",
+      "sha256": "078a5e4676a7002a694bd71255e9e5db71ee62841aed6abb7d7d8632bc786949"
+    },
+    {
+      "file": "docs/gallery/artifacts/deployment-release.lifecycle.html",
+      "sha256": "31b21c85c3c1050b5c32544873e147e997b763a584464d51ab49ad1df3fc7a72"
+    },
+    {
+      "file": "docs/gallery/artifacts/event-stream.dataflow.html",
+      "sha256": "396ca1ce8179a4e8ecba119c75d1278f267d1bf596f522c56eb0d99627c343dd"
+    },
+    {
+      "file": "docs/gallery/artifacts/incident-response.workflow.html",
+      "sha256": "6b46c9e9d4cba48f8503d2857824638aec87cc35a65cf86658a3f7f8bc21ffca"
+    },
+    {
+      "file": "docs/gallery/artifacts/orders.erd.html",
+      "sha256": "7f12f21845d70c83f6be88ad9ec2890f2a260fdf43045114e58578477f09f1fb"
+    },
+    {
+      "file": "docs/gallery/artifacts/payment-incident.timeline.html",
+      "sha256": "75b273d3ca9933742d64df3208064d252db90c9e4cd0a0139bb334a5f466e747"
+    },
+    {
+      "file": "docs/gallery/artifacts/payment-platform.tree.html",
+      "sha256": "ff7fa0b22597cf837f80efe9c6623efb052ff4efffa448e979aeb8600d302318"
+    },
+    {
+      "file": "docs/gallery/artifacts/payments.class.html",
+      "sha256": "c4814efd6bbe5962e5bfd0810e4e3e1773fb99b9bbdb3f2ff61aa71fe38a15ed"
+    },
+    {
+      "file": "docs/gallery/artifacts/product-analytics.dataflow.html",
+      "sha256": "f419530c0093cea20129683ff39d74db04900248df4c2fc0a2064283890e708b"
+    },
+    {
+      "file": "docs/gallery/artifacts/production-deployment.architecture.html",
+      "sha256": "85d59af57268a117c1ff4652316a4360a26e18f9c8fbf2ccb5af2030ec90c3bc"
+    },
+    {
+      "file": "docs/gallery/artifacts/release-delivery.workflow.html",
+      "sha256": "5c36cd7b945d7e5bcaa8f4e10ba07dbd9abbc152ebf86a54f571b62747029adf"
+    },
+    {
+      "file": "docs/gallery/artifacts/web-app.architecture.html",
+      "sha256": "82e5c07775b3ef71ea6feba86e911f4d59e69362b6c8c6c7b15972839c7e67ad"
+    },
+    {
+      "file": "docs/gallery/manifest.json",
+      "sha256": "3a8eb9662b929ced957cb5b26fff4cf4336607f31516aebe51cc985019a61b40"
+    },
+    {
+      "file": "examples/checkout-platform-delta.html",
+      "sha256": "8d7206968b5a0be75a4a62f4a3681defa2e04249de748d7fe7ab764d67010686"
+    },
+    {
+      "file": "examples/checkout-platform-delta.receipt.json",
+      "sha256": "2ec4559595213d2c6caff0a74d5a1101afe10a8c536b36ac3a8b97b4dec808f2"
+    },
+    {
+      "file": "examples/class-payment-processors-rendered.html",
+      "sha256": "5acebdbcd6db5b3f38f56fe26486b689589d4de98ddae5a654af36c4ff95db6e"
+    },
+    {
+      "file": "examples/class-payments-rendered.html",
+      "sha256": "c4814efd6bbe5962e5bfd0810e4e3e1773fb99b9bbdb3f2ff61aa71fe38a15ed"
+    },
+    {
+      "file": "examples/dataflow-product-analytics.html",
+      "sha256": "f419530c0093cea20129683ff39d74db04900248df4c2fc0a2064283890e708b"
+    },
+    {
+      "file": "examples/drilldown-api-dataflow.html",
+      "sha256": "12acf20832f9db559116204b6482c12913da9c2ae531126db1ffc858bb9622e3"
+    },
+    {
+      "file": "examples/drilldown-api-sequence.html",
+      "sha256": "02766b0a576253483da902ef374f02f00ec874374d9c8c6986cb47309f46e932"
+    },
+    {
+      "file": "examples/drilldown-integrations.html",
+      "sha256": "342a996d14af48c72cf4d1942ef4a08c17e1bc5d6352a0beabe0bd8bcad0574d"
+    },
+    {
+      "file": "examples/drilldown-overview.html",
+      "sha256": "24df01b7fafcb29f775c3c9e7e4a1329bccbc80ca47fbe4f5690df638df70790"
+    },
+    {
+      "file": "examples/drilldown-platform.html",
+      "sha256": "e3847b88482b1a9ebbfcd7d0837b4d7e1b60a9a3252b1194ea01fd15ea7e84fb"
+    },
+    {
+      "file": "examples/erd-orders-rendered.html",
+      "sha256": "7f12f21845d70c83f6be88ad9ec2890f2a260fdf43045114e58578477f09f1fb"
+    },
+    {
+      "file": "examples/lifecycle-agent-run.html",
+      "sha256": "52536f0e2bc8ffc75c0af24386ac142179e5bd93bcdc24b584b39eaade9c24e0"
+    },
+    {
+      "file": "examples/sequence-cache-miss-request.html",
+      "sha256": "5bba3a3f3fef5bedc56b8caa7305b060685937648889403205931f630d3edfc1"
+    },
+    {
+      "file": "examples/subscription-billing-rendered.html",
+      "sha256": "e5f13b86e1ec65889a87e3be729cb01e75d9c0f2e95795e6dbfcc0d7b24fd24c"
+    },
+    {
+      "file": "examples/timeline-archify-dev-activity-rendered.html",
+      "sha256": "c8be887ab1a777b1a390e7d7ae533341b6704ebb7885ac9c5d9b2453e39ba956"
+    },
+    {
+      "file": "examples/timeline-payment-incident-rendered.html",
+      "sha256": "75b273d3ca9933742d64df3208064d252db90c9e4cd0a0139bb334a5f466e747"
+    },
+    {
+      "file": "examples/tree-archify-repository-rendered.html",
+      "sha256": "22b49ab143d330ed030e1f9d4c37e0acbb0d4258f44e3e45347f625c22c0bbf2"
+    },
+    {
+      "file": "examples/tree-payment-platform-rendered.html",
+      "sha256": "ff7fa0b22597cf837f80efe9c6623efb052ff4efffa448e979aeb8600d302318"
+    },
+    {
+      "file": "examples/waterfall-checkout-request-rendered.html",
+      "sha256": "078a5e4676a7002a694bd71255e9e5db71ee62841aed6abb7d7d8632bc786949"
+    },
+    {
+      "file": "examples/waterfall-example-rebuild-rendered.html",
+      "sha256": "5bb52196c17a1f467a4d65115a5cdc78ab78fbe24a9a2c964ea2bb9a8f578f1e"
+    },
+    {
+      "file": "examples/web-app-rendered.html",
+      "sha256": "82e5c07775b3ef71ea6feba86e911f4d59e69362b6c8c6c7b15972839c7e67ad"
+    },
+    {
+      "file": "examples/web-app.html",
+      "sha256": "82e5c07775b3ef71ea6feba86e911f4d59e69362b6c8c6c7b15972839c7e67ad"
+    },
+    {
+      "file": "examples/workflow-agent-tool-call-rendered.html",
+      "sha256": "7ddca298d7a650b5350c419c36bd288482ef647bd1cadb191baa48c29a71eacc"
+    },
+    {
+      "file": "scripts/browser-test-inventory.mjs",
+      "sha256": "3ef50a56c757b0f8f5029b9ee428d6e5d03b3871d742c13e8138d4a13a5f06d0"
+    },
+    {
+      "file": "test/architecture-relationship-direction-browser.test.mjs",
+      "sha256": "aa3d41d7fbc438e672bb290b28b766e54e0d3160d615f0cba8b6c55c92dc10ea"
+    },
+    {
+      "file": "test/architecture-relationship-direction.test.mjs",
+      "sha256": "47a3002f8dd3d439eb5c2a35de00ff064c710d8ec73a32b85bcf17f27e649f53"
+    },
+    {
+      "file": "test/authored-reachability.test.mjs",
+      "sha256": "04ca8321ee21659d66cbeb623e1568383f63cf8bfbceea8c81f38ff4da6392da"
+    },
+    {
+      "file": "test/fixtures/architecture-directions.json",
+      "sha256": "96a21e19c4e3897f0f01e826200b704630061618fc87f8893a6e84cf5b223d71"
+    },
+    {
+      "file": "test/legend-contract.test.mjs",
+      "sha256": "efbc63524b74a368c2c46e194d205c10e4005f01ddcf331540ecca9256a8da66"
+    },
+    {
+      "file": "test/route-share-card.test.mjs",
+      "sha256": "188099480eb95890c428bf831326f416506af4c08270469bdcf7c7ab4112dd02"
+    },
+    {
+      "file": "viewer/README.md",
+      "sha256": "c53623578187f4c96591f6b1b053129b27c199233bf3b85f7ba0969409dbf7be"
+    },
+    {
+      "file": "viewer/export.js",
+      "sha256": "66014b4b790293a74b2e94155cf948f1dbdd37c63980b846a85b74743c50a613"
+    },
+    {
+      "file": "viewer/focus.js",
+      "sha256": "c5cc9a83de243784d61714bceec72a3b74eedcbecdf384b4065028d1ed11897f"
+    },
+    {
+      "file": "viewer/intent-trace.js",
+      "sha256": "b90bc37f0f410a11a20eb048da4b0ef117da313ba2b06a5522183dcf19957975"
+    },
+    {
+      "file": "viewer/route-probe.js",
+      "sha256": "b22ef01a71febb7f10a4bf7e0901f7ba12ceee8a54141a5dc24bc5d8cd808c60"
+    },
+    {
+      "file": "viewer/semantic-lens.js",
+      "sha256": "c6814c810d8767bd5c77fc9361f07198cfc3d0295019db9fe05dd618e1de6563"
+    },
+    {
+      "file": "viewer/template.source.html",
+      "sha256": "23c943b9cf1bd0dcd0ab3fa41a943500a99a80a2e93e3ae6c51d57a4505c9496"
+    }
+  ]
+}

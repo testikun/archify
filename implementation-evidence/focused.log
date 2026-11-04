@@ -1,0 +1,372 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/architecture-relationship-direction.test.mjs test/legend-contract.test.mjs test/story.test.mjs test/route-share-card.test.mjs --concurrency=2
+
+Repository tests: 4 files, concurrency 2
+TAP version 13
+# Subtest: Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+not ok 1 - Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+  ---
+  duration_ms: 43.324583
+  location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:30:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "deliver",
+      "stage": "arguments",
+      "error": "Unknown diagram type \"/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-directions-BQ8QBt/input.json\". Expected one of: architecture, workflow, sequence, dataflow, lifecycle, erd, tree, class, timeline, waterfall, explainer",
+      "diagnostics": [
+        {
+          "code": "cli/unknown-diagram-type",
+          "severity": "error",
+          "message": "Unknown diagram type \"/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-directions-BQ8QBt/input.json\". Expected one of: architecture, workflow, sequence, dataflow, lifecycle, erd, tree, class, timeline, waterfall, explainer",
+          "subject": {
+            "command": "deliver",
+            "type": "/var/folders/xc/jmq8k72s4pb80455gls1by780000gn/T/archify-directions-BQ8QBt/input.json"
+          },
+          "evidence": {
+            "supportedTypes": [
+              "architecture",
+              "workflow",
+              "sequence",
+              "dataflow",
+              "lifecycle",
+              "erd",
+              "tree",
+              "class",
+              "timeline",
+              "waterfall",
+              "explainer"
+            ]
+          },
+          "supportedFixes": [
+            "use one of: architecture, workflow, sequence, dataflow, lifecycle, erd, tree, class, timeline, waterfall, explainer"
+          ]
+        }
+      ]
+    }
+    
+    
+    2 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 2
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:32:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    node:internal/test_runner/harness:255:12
+    node:internal/process/task_queues:140:7
+    AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    AsyncResource.runMicrotask (node:internal/process/task_queues:137:8)
+  ...
+# Subtest: explicit forward preserves legacy SVG and direction validation is Architecture-only
+not ok 2 - explicit forward preserves legacy SVG and direction validation is Architecture-only
+  ---
+  duration_ms: 74.793917
+  location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:49:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'slice')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:55:30)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: relationship legends honor hidden and custom labels without changing authored arrows
+not ok 3 - relationship legends honor hidden and custom labels without changing authored arrows
+  ---
+  duration_ms: 34.943458
+  location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:65:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    2 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 2
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:68:39)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: Delta normalizes default forward and identifies direction changes without duplicating relationships
+ok 4 - Delta normalizes default forward and identifies direction changes without duplicating relationships
+  ---
+  duration_ms: 1.436375
+  ...
+# Subtest: arrow clearance checks source arrowheads for both and excludes unmarked associations
+ok 5 - arrow clearance checks source arrowheads for both and excludes unmarked associations
+  ---
+  duration_ms: 0.29225
+  ...
+# Subtest: Story preserves structural identities, defaults to static actions and rejects directional transfer
+not ok 6 - Story preserves structural identities, defaults to static actions and rejects directional transfer
+  ---
+  duration_ms: 35.167458
+  location: '/evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:99:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    2 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 2
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///evidence/issue-1139/implementation/test/architecture-relationship-direction.test.mjs:101:10)
+    Test.runInAsyncScope (node:async_hooks:206:9)
+    Test.run (node:internal/test_runner/test:796:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:526:18)
+    Test.postRun (node:internal/test_runner/test:889:19)
+    Test.run (node:internal/test_runner/test:835:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:526:7)
+  ...
+# Subtest: public typed renderers default to auto and expose only authored semantic kinds
+ok 7 - public typed renderers default to auto and expose only authored semantic kinds
+  ---
+  duration_ms: 679.527916
+  ...
+# Subtest: Dataflow database node facts are interactive while flow variants stay visual-only
+ok 8 - Dataflow database node facts are interactive while flow variants stay visual-only
+  ---
+  duration_ms: 268.627958
+  ...
+# Subtest: Issue \#52 dataflow and lifecycle reproductions publish truthful default legends
+ok 9 - Issue \#52 dataflow and lifecycle reproductions publish truthful default legends
+  ---
+  duration_ms: 257.250625
+  ...
+# Subtest: all mode follows each renderer-owned stable catalog order
+ok 10 - all mode follows each renderer-owned stable catalog order
+  ---
+  duration_ms: 649.927209
+  ...
+# Subtest: hidden mode removes the complete legend and overrides visible true
+ok 11 - hidden mode removes the complete legend and overrides visible true
+  ---
+  duration_ms: 666.468625
+  ...
+# Subtest: visibility overrides apply after auto/all and empty legends leave no chrome
+ok 12 - visibility overrides apply after auto/all and empty legends leave no chrome
+  ---
+  duration_ms: 1493.158125
+  ...
+# Subtest: label overrides round-trip through all five public renderers
+ok 13 - label overrides round-trip through all five public renderers
+  ---
+  duration_ms: 643.578083
+  ...
+# Subtest: label overrides preserve stable kinds and exact Semantic Legend boundaries
+ok 14 - label overrides preserve stable kinds and exact Semantic Legend boundaries
+  ---
+  duration_ms: 642.68425
+  ...
+# Subtest: strict per-renderer schemas reject malformed legend contracts with path-prefixed errors
+ok 15 - strict per-renderer schemas reject malformed legend contracts with path-prefixed errors
+  ---
+  duration_ms: 3720.381209
+  ...
+# Subtest: measured legends fail explicitly instead of wrapping into diagram content
+ok 16 - measured legends fail explicitly instead of wrapping into diagram content
+  ---
+  duration_ms: 236.193833
+  ...
+# Subtest: explicit Architecture viewBox rejects legend title rectangles that overlap content
+ok 17 - explicit Architecture viewBox rejects legend title rectangles that overlap content
+  ---
+  duration_ms: 121.260417
+  ...
+# Subtest: a single unfit label fails with a path-specific width diagnostic
+ok 18 - a single unfit label fails with a path-specific width diagnostic
+  ---
+  duration_ms: 122.539583
+  ...
+# Subtest: measured legend rows share baselines and stay within the viewBox for localized labels
+ok 19 - measured legend rows share baselines and stay within the viewBox for localized labels
+  ---
+  duration_ms: 121.800792
+  ...
+# Subtest: legend entries reserve the width of their rendered label font
+ok 20 - legend entries reserve the width of their rendered label font
+  ---
+  duration_ms: 9.8815
+  ...
+# Subtest: all five renderers inherit one resolved-only Route Share Card Export item
+ok 21 - all five renderers inherit one resolved-only Route Share Card Export item
+  ---
+  duration_ms: 604.153458
+  ...
+# Subtest: Route Share Card menu lifecycle excludes hidden state from keyboard navigation
+ok 22 - Route Share Card menu lifecycle excludes hidden state from keyboard navigation
+  ---
+  duration_ms: 189.739
+  ...
+# Subtest: Route Share Card snapshots copy exact resolved node and relationship identity without rerouting
+ok 23 - Route Share Card snapshots copy exact resolved node and relationship identity without rerouting
+  ---
+  duration_ms: 116.406458
+  ...
+# Subtest: Route Share Card snapshot fails closed when the resolved DOM becomes stale or conflicting
+ok 24 - Route Share Card snapshot fails closed when the resolved DOM becomes stale or conflicting
+  ---
+  duration_ms: 188.699125
+  ...
+# Subtest: Route variant decorates only a finite canonical clone with dedicated static attributes
+ok 25 - Route variant decorates only a finite canonical clone with dedicated static attributes
+  ---
+  duration_ms: 112.910042
+  ...
+# Subtest: clone-only Route styling retains context and distinguishes start, middle, and end without motion
+ok 26 - clone-only Route styling retains context and distinguishes start, middle, and end without motion
+  ---
+  duration_ms: 112.261375
+  ...
+# Subtest: Route Share Card reuses one 1200x630 variant seam and publishes a truthful receipt
+ok 27 - Route Share Card reuses one 1200x630 variant seam and publishes a truthful receipt
+  ---
+  duration_ms: 115.702625
+  ...
+# Subtest: skill and READMEs describe the optional Export variant and show one real card without changing the hero
+ok 28 - skill and READMEs describe the optional Export variant and show one real card without changing the hero
+  ---
+  duration_ms: 4.620292
+  ...
+# Subtest: public story draft returns source identities and attach preserves the entire native document
+ok 29 - public story draft returns source identities and attach preserves the entire native document
+  ---
+  duration_ms: 518.765417
+  ...
+# Subtest: public story commands preserve inputs and prior output on bad IDs, paths and arguments
+ok 30 - public story commands preserve inputs and prior output on bad IDs, paths and arguments
+  ---
+  duration_ms: 724.02925
+  ...
+# Subtest: draft refuses existing files and scan fails closed on conflicting native metadata
+ok 31 - draft refuses existing files and scan fails closed on conflicting native metadata
+  ---
+  duration_ms: 367.260625
+  ...
+# Subtest: attachment uses the HTML body boundary instead of script or comment literals
+ok 32 - attachment uses the HTML body boundary instead of script or comment literals
+  ---
+  duration_ms: 393.980417
+  ...
+# Subtest: non-object briefs have actionable diagnostics and preserve existing output
+ok 33 - non-object briefs have actionable diagnostics and preserve existing output
+  ---
+  duration_ms: 564.988042
+  ...
+# Subtest: story accent accepts literal hex colors and rejects CSS declarations without replacing output
+ok 34 - story accent accepts literal hex colors and rejects CSS declarations without replacing output
+  ---
+  duration_ms: 2079.64525
+  ...
+# Subtest: the brief link remains a file URL for reserved characters and scheme-like filenames
+ok 35 - the brief link remains a file URL for reserved characters and scheme-like filenames
+  ---
+  duration_ms: 441.638875
+  ...
+# Subtest: a failed brief publication rolls back its owned source map so the draft can be retried
+ok 36 - a failed brief publication rolls back its owned source map so the draft can be retried
+  ---
+  duration_ms: 249.066666
+  ...
+# Subtest: companion rollback preserves a replacement or an in-place edit by another writer
+ok 37 - companion rollback preserves a replacement or an in-place edit by another writer
+  ---
+  duration_ms: 4.798542
+  ...
+# Subtest: draft failure retains its publication error when releasing the rollback handle fails
+ok 38 - draft failure retains its publication error when releasing the rollback handle fails
+  ---
+  duration_ms: 41.93175
+  ...
+# Subtest: a failed candidate close preserves the original error and removes the temporary file
+ok 39 - a failed candidate close preserves the original error and removes the temporary file
+  ---
+  duration_ms: 1.935875
+  ...
+# Subtest: draft rollback includes either file committed before a handle release fails
+    # Subtest: brief.source.json
+    ok 1 - brief.source.json
+      ---
+      duration_ms: 83.881375
+      ...
+    # Subtest: brief.json
+    ok 2 - brief.json
+      ---
+      duration_ms: 92.150583
+      ...
+    1..2
+ok 40 - draft rollback includes either file committed before a handle release fails
+  ---
+  duration_ms: 176.419792
+  ...
+# Subtest: committed publication warnings retain the new output and report cleanup and recovery state
+    # Subtest: release
+    ok 1 - release
+      ---
+      duration_ms: 11.627833
+      ...
+    # Subtest: backup
+    ok 2 - backup
+      ---
+      duration_ms: 12.934791
+      ...
+    1..2
+ok 41 - committed publication warnings retain the new output and report cleanup and recovery state
+  ---
+  duration_ms: 24.853833
+  ...
+# Subtest: streamed soundtrack blocks preserve samples and cues across a block boundary
+ok 42 - streamed soundtrack blocks preserve samples and cues across a block boundary
+  ---
+  duration_ms: 7069.689083
+  ...
+# Subtest: all ten native families retain their source notation and valid default actions
+ok 43 - all ten native families retain their source notation and valid default actions
+  ---
+  duration_ms: 1542.441167
+  ...
+# Subtest: authored figure captions and code references reach the presentation with pinned source ranges
+ok 44 - authored figure captions and code references reach the presentation with pinned source ranges
+  ---
+  duration_ms: 870.683292
+  ...
+# Subtest: a package-only copy runs the full story chain outside the repository without dependencies
+ok 45 - a package-only copy runs the full story chain outside the repository without dependencies
+  ---
+  duration_ms: 588.330041
+  ...
+1..45
+# tests 49
+# suites 0
+# pass 45
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17486.796667

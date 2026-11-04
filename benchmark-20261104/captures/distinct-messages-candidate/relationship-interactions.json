@@ -1,0 +1,8 @@
+{
+  "relations": [],
+  "legend": [
+    "Arrow: directed relationship; label states its condition"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

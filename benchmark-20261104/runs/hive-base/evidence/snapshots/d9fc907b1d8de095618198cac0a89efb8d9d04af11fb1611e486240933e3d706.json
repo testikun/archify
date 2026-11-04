@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Hive: browser task → CLI worker → team",
+    "locale": "en",
+    "output": "output/hive-task-path.html",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "https://github.com/tt-a1i/hive",
+      "revision": "f8f1343da6595a232f0baba7f0ea5b5a58fe0e9c",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "workbench", "type": "frontend", "label": "Browser workbench",
+      "sublabel": "xterm input + live output", "tag": "UI session", "pos": [40, 50], "size": [205, 80],
+      "explanation": "The user types into the orchestrator terminal. The terminal client sends input on its IO socket and renders returning output after restoring the terminal snapshot. Separately, report notifications poll committed dispatches every two seconds; the Action Center polls summaries. Editing a task-list checkbox is not itself a worker dispatch.",
+      "sources": [
+        {"path": "web/src/terminal/terminal-client.ts", "line": 144, "end_line": 205, "label": "Terminal input and output"},
+        {"path": "web/src/notifications/useReportNotifications.ts", "line": 36, "end_line": 94, "label": "Report notification polling"},
+        {"path": "web/src/action-center/ActionCenterStrip.tsx", "line": 123, "end_line": 153, "label": "Action Center summary reads"}
+      ]
+    },
+    {
+      "id": "terminal", "type": "backend", "label": "Terminal stream hub",
+      "sublabel": "Run IO, restore, flow control", "tag": "WebSocket + PTY bus", "pos": [440, 50], "size": [210, 80],
+      "explanation": "The local WebSocket server validates the UI session and run ID before attaching IO/control channels at /ws/terminal/:runId/{io,control}. The hub writes browser input through store.writeRunInput. Agent PTY onData publishes to the output bus; subscribed viewers receive live output. Both orchestrator and worker are terminal runs, not browser-hosted agent code.",
+      "sources": [
+        {"path": "src/server/terminal-ws-server.ts", "line": 87, "end_line": 130, "label": "Authenticated terminal upgrades"},
+        {"path": "src/server/terminal-stream-hub.ts", "line": 145, "end_line": 158, "label": "PTY output to viewers"},
+        {"path": "src/server/terminal-stream-hub.ts", "line": 300, "end_line": 316, "label": "Browser input to live run"}
+      ]
+    },
+    {
+      "id": "orchestrator", "type": "external", "label": "Orchestrator CLI",
+      "sublabel": "Plans work; invokes team send", "tag": "Separate PTY process", "pos": [850, 50], "size": [215, 80],
+      "explanation": "A CLI agent receives the user's terminal input and decides whether and how to delegate. Its team send subcommand POSTs the member name, task text, workspace ID, agent ID and token to the loopback runtime. Status and report text are subsequently injected back into this CLI's stdin. The external agent's reasoning, tool execution and adherence to prompts cannot be established from Hive source.",
+      "sources": [
+        {"path": "src/cli/team.ts", "line": 1255, "end_line": 1275, "label": "team send → runtime HTTP"},
+        {"path": "src/server/agent-manager.ts", "line": 125, "end_line": 159, "label": "Spawn CLI in a PTY"},
+        {"path": "src/server/team-operations.ts", "line": 298, "end_line": 323, "label": "Reports injected into issuer"}
+      ]
+    },
+    {
+      "id": "team", "type": "backend", "label": "Team protocol + dispatch",
+      "sublabel": "Auth, ledger, prompt injection", "tag": "Per-agent serial stdin", "pos": [440, 325], "size": [210, 90],
+      "explanation": "POST /api/team/send, /status and /report authenticate the agent in its workspace and check role permission. Team operations resolve the worker, create a dispatch and queue or submit it. The stdin dispatcher formats prompts, serializes writes per agent and waits for startup readiness. Progress is logged and forwarded without closing the dispatch. Reports settle the matching open responsibility and enqueue a durable return payload atomically; outbox delivery is acknowledged only after the PTY write resolves.",
+      "sources": [
+        {"path": "src/server/routes-team.ts", "line": 127, "end_line": 166, "label": "Send authentication and queue gate"},
+        {"path": "src/server/team-operations.ts", "line": 916, "end_line": 1132, "label": "Progress and durable report return"},
+        {"path": "src/server/agent-stdin-dispatcher.ts", "line": 164, "end_line": 204, "label": "Ready CLI input writer"}
+      ]
+    },
+    {
+      "id": "worker", "type": "external", "label": "Worker CLI",
+      "sublabel": "Executes task; status / report", "tag": "Separate PTY process", "pos": [850, 325], "size": [215, 90],
+      "explanation": "AgentManager uses node-pty to launch the configured CLI and writes to its process input. The launch environment includes HIVE_PROJECT_ID, HIVE_AGENT_ID, HIVE_PORT and HIVE_AGENT_TOKEN; the packaged team command is prepended to PATH. The worker explicitly invokes team status for interim progress and team report for completion, optionally supplying artifact paths. Raw terminal output is observable but does not itself settle a responsibility.",
+      "sources": [
+        {"path": "src/cli/team.ts", "line": 1538, "end_line": 1574, "label": "Worker status and report HTTP"},
+        {"path": "src/server/agent-run-bootstrap.ts", "line": 127, "end_line": 138, "label": "Identity and packaged team PATH"},
+        {"path": "src/server/agent-run-starter.ts", "line": 112, "end_line": 143, "label": "Port, token and CLI startup"}
+      ]
+    },
+    {
+      "id": "state", "type": "database", "label": "Local SQLite state",
+      "sublabel": "Dispatches, messages, report outbox", "tag": "runtime.sqlite", "pos": [440, 585], "size": [230, 80],
+      "explanation": "Runtime services wire the dispatch ledger, message log and report outbox into Team operations, using a database transaction for protocol writes. Completion requires a matching open dispatch and seen_seq equal to the latest required inbound message sequence; otherwise it is rejected with 409. A committed report is distinct from successful delivery into the orchestrator's terminal.",
+      "sources": [
+        {"path": "src/server/runtime-store-helpers.ts", "line": 414, "end_line": 438, "label": "Stores and transaction ownership"},
+        {"path": "src/server/dispatch-ledger-store.ts", "line": 340, "end_line": 376, "label": "Report acknowledgement gate"},
+        {"path": "src/server/runtime-database.ts", "line": 130, "end_line": 145, "label": "SQLite file backing"}
+      ]
+    }
+  ],
+  "boundaries": [
+    {"kind": "region", "label": "Local Node.js runtime", "wraps": ["terminal", "team", "state"], "pad": 22},
+    {"kind": "region", "label": "CLI child processes · workspace scoped", "wraps": ["orchestrator", "worker"], "pad": 22}
+  ],
+  "connections": [
+    {"id": "user-input", "from": "workbench", "to": "terminal", "label": "WS input", "variant": "emphasis"},
+    {"id": "visible-output", "from": "terminal", "to": "workbench", "label": "WS output"},
+    {"id": "orch-input", "from": "terminal", "to": "orchestrator", "label": "PTY input", "variant": "emphasis"},
+    {"id": "orch-output", "from": "orchestrator", "to": "terminal", "label": "PTY output"},
+    {"id": "delegate", "from": "orchestrator", "to": "team", "label": "HTTP team send", "variant": "emphasis"},
+    {"id": "worker-prompt", "from": "team", "to": "worker", "label": "Ready: stdin task", "variant": "emphasis"},
+    {"id": "worker-reply", "from": "worker", "to": "team", "label": "HTTP status / report"},
+    {"id": "issuer-return", "from": "team", "to": "orchestrator", "label": "stdin status / result"},
+    {"id": "worker-output", "from": "worker", "to": "terminal", "label": "PTY output"},
+    {"id": "persist", "from": "team", "to": "state", "label": "Commit / drain"},
+    {"id": "ui-poll", "from": "workbench", "to": "team", "label": "HTTP summary polls"}
+  ],
+  "cards": [
+    {"dot": "cyan", "title": "Dispatch is explicit", "items": [
+      "The orchestrator calls team send; the task-list editor does not launch a worker.",
+      "Stopped user-managed workers keep queued work until restarted. Only a never-started orchestrator-spawned worker auto-starts on team send."
+    ]},
+    {"dot": "emerald", "title": "Progress ≠ completion", "items": [
+      "team status logs and forwards progress but leaves the dispatch open; terminal output also streams independently.",
+      "team report requires the open dispatch and exact inbound seen_seq. The report, ledger change and outbox commit together."
+    ]},
+    {"dot": "amber", "title": "Return and scope", "items": [
+      "Reports survive an unavailable orchestrator in the outbox; team list drains them after restart. Status forwarding has no equivalent report-outbox retry.",
+      "Task-list file sync is separate: .hive/tasks.md → watcher → /ws/tasks. Agent reasoning and actual task success are external, not proven by a PTY write. Remote tunnels and experimental workflows are outside this local path."
+    ]}
+  ]
+}

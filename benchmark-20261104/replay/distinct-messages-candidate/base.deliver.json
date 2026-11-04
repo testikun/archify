@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "beffbe20-ef7a-4f45-9619-e8062d660be4",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/distinct-messages-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /meta/legend/entries must NOT have additional properties {\"additionalProperty\":\"relation-forward\"}\n  /connections/0 (id/label: \"purchase-creation-request\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/1 (id/label: \"validation-decision\") must NOT have additional properties {\"additionalProperty\":\"direction\"}\n  /connections/2 (id/label: \"persist-accepted-order\") must NOT have additional properties {\"additionalProperty\":\"direction\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/meta/legend/entries must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/meta/legend/entries"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "relation-forward"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"relation-forward\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"purchase-creation-request\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "purchase-creation-request"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"validation-decision\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "validation-decision"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"persist-accepted-order\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "persist-accepted-order"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "direction"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"direction\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

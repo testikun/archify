@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "deliver",
+  "receiptId": "208cc1f6-2961-499a-9b98-1276f77b99c9",
+  "stage": "render",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/hive-candidate/workspace/output/candidate.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/hive-candidate/base.html",
+  "error": "architecture schema validation failed:\n  /connections/0 (id/label: \"goal-input\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/1 (id/label: \"live-terminal\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/2 (id/label: \"orch-input\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/3 (id/label: \"orch-output\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/4 (id/label: \"task-edits\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/5 (id/label: \"task-updates\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/7 (id/label: \"dispatch-request\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/8 (id/label: \"report-return\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/9 (id/label: \"dispatch-delivery\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}\n  /connections/10 (id/label: \"worker-tools\") must NOT have additional properties {\"additionalProperty\":\"arrowPosition\"}",
+  "diagnostics": [
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/0 (id/label: \"goal-input\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/0",
+        "identity": "goal-input"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/1 (id/label: \"live-terminal\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/1",
+        "identity": "live-terminal"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/2 (id/label: \"orch-input\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/2",
+        "identity": "orch-input"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/3 (id/label: \"orch-output\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/3",
+        "identity": "orch-output"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/4 (id/label: \"task-edits\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/4",
+        "identity": "task-edits"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/5 (id/label: \"task-updates\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/5",
+        "identity": "task-updates"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/7 (id/label: \"dispatch-request\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/7",
+        "identity": "dispatch-request"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/8 (id/label: \"report-return\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/8",
+        "identity": "report-return"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/9 (id/label: \"dispatch-delivery\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/9",
+        "identity": "dispatch-delivery"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    },
+    {
+      "code": "schema/additionalProperties",
+      "severity": "error",
+      "message": "/connections/10 (id/label: \"worker-tools\") must NOT have additional properties",
+      "subject": {
+        "diagramType": "architecture",
+        "path": "/connections/10",
+        "identity": "worker-tools"
+      },
+      "evidence": {
+        "keyword": "additionalProperties",
+        "additionalProperty": "arrowPosition"
+      },
+      "supportedFixes": [
+        "remove unsupported property \"arrowPosition\""
+      ]
+    }
+  ],
+  "provenance": "absent",
+  "update": {
+    "status": "unavailable",
+    "installedVersion": null,
+    "availableVersion": null,
+    "releaseNotes": null,
+    "checkedAt": null,
+    "source": null,
+    "noticeRequired": false,
+    "noticeText": null,
+    "reason": "disabled"
+  }
+}

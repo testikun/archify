@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "sha256": "6102c7a381c2e28d63ca973588ee596ca1ba89f442c1ad6dfe42c13edbfa0ea9",
+    "bytes": 12797
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html",
+    "sha256": "0bab616875590cce407ba709db5bb3b0f72a50c39b0f7f7480a75629d811e797",
+    "bytes": 896782
+  },
+  "gates": {
+    "validate": "fail",
+    "deliver": "not-run",
+    "check": "not-run",
+    "browser-check": "not-run"
+  },
+  "failedStage": "validate",
+  "diagnostics": [
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"CLI / Plan JSON\" has only 75px between \"decision-owner\" and \"command-coordinator\"; it needs at least 98px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "caller-cli",
+        "from": "decision-owner",
+        "to": "command-coordinator"
+      },
+      "evidence": {
+        "clearGapPx": 75,
+        "minimumGapPx": 98,
+        "labelWidthPx": 82,
+        "obstacles": [
+          "decision-owner",
+          "command-coordinator"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 98px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    },
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"Read / persist state\" has only 90px between \"command-coordinator\" and \"state-database\"; it needs at least 122px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "state-access",
+        "from": "command-coordinator",
+        "to": "state-database"
+      },
+      "evidence": {
+        "clearGapPx": 90,
+        "minimumGapPx": 122,
+        "labelWidthPx": 106,
+        "obstacles": [
+          "command-coordinator",
+          "state-database"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 122px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    },
+    {
+      "code": "composition/label-gap",
+      "severity": "error",
+      "message": "Label \"Read / publish journal\" has only 80px between \"anchored-io\" and \"receipt-journals\"; it needs at least 132px to stay beside its route — increase that clear gap or place the connected nodes on another readable row, preserving the label.",
+      "subject": {
+        "diagramType": "architecture",
+        "collection": "connections",
+        "id": "journal-write",
+        "from": "anchored-io",
+        "to": "receipt-journals"
+      },
+      "evidence": {
+        "clearGapPx": 80,
+        "minimumGapPx": 132,
+        "labelWidthPx": 115.6,
+        "obstacles": [
+          "anchored-io",
+          "receipt-journals"
+        ]
+      },
+      "supportedFixes": [
+        "increase the clear gap between the connected nodes to at least 132px",
+        "reposition the connected nodes together while preserving the full relationship label"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 3,
+    "shown": 3,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/review-2/skillroster-architecture.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/review-2/skillroster-architecture.finalize-summary.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 324,
+  "browserCheck": {
+    "requested": true,
+    "ran": false
+  },
+  "nextAction": {
+    "action": "edit-in-place",
+    "candidate": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "constraint": "Preserve unaffected semantics and geometry; apply each diagnostic's supportedFixes, or the fix its message names, and do not replace the whole candidate.",
+    "then": "finalize-once"
+  }
+}

@@ -1,0 +1,221 @@
+{
+  "relations": [],
+  "labelRelations": [
+    {
+      "id": "submit-review",
+      "from": "review-entry",
+      "to": "invocation-runtime",
+      "text": "Validated invocations",
+      "glyph": "translate(463.4 178) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "review-entry",
+          "label": "Review entry points"
+        },
+        "target": {
+          "id": "invocation-runtime",
+          "label": "Invocation runtime"
+        },
+        "nodeIds": [
+          "review-entry",
+          "invocation-runtime"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "submit-review",
+            "from": "review-entry",
+            "to": "invocation-runtime",
+            "label": "Validated invocations"
+          }
+        ]
+      }
+    },
+    {
+      "id": "return-results",
+      "from": "invocation-runtime",
+      "to": "review-entry",
+      "text": "Individual outputs[]",
+      "glyph": "translate(349 202) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "invocation-runtime",
+          "label": "Invocation runtime"
+        },
+        "target": {
+          "id": "review-entry",
+          "label": "Review entry points"
+        },
+        "nodeIds": [
+          "invocation-runtime",
+          "review-entry"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "1",
+            "id": "return-results",
+            "from": "invocation-runtime",
+            "to": "review-entry",
+            "label": "Individual outputs[]"
+          }
+        ]
+      }
+    },
+    {
+      "id": "start-provider",
+      "from": "invocation-runtime",
+      "to": "provider-adapters",
+      "text": "TaskInput · run / poll",
+      "glyph": "translate(935.8 178) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "invocation-runtime",
+          "label": "Invocation runtime"
+        },
+        "target": {
+          "id": "provider-adapters",
+          "label": "Provider adapters"
+        },
+        "nodeIds": [
+          "invocation-runtime",
+          "provider-adapters"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "2",
+            "id": "start-provider",
+            "from": "invocation-runtime",
+            "to": "provider-adapters",
+            "label": "TaskInput · run / poll"
+          }
+        ]
+      }
+    },
+    {
+      "id": "decode-provider",
+      "from": "provider-adapters",
+      "to": "invocation-runtime",
+      "text": "Status + decoded answer",
+      "glyph": "translate(811.8 202) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "provider-adapters",
+          "label": "Provider adapters"
+        },
+        "target": {
+          "id": "invocation-runtime",
+          "label": "Invocation runtime"
+        },
+        "nodeIds": [
+          "provider-adapters",
+          "invocation-runtime"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "3",
+            "id": "decode-provider",
+            "from": "provider-adapters",
+            "to": "invocation-runtime",
+            "label": "Status + decoded answer"
+          }
+        ]
+      }
+    },
+    {
+      "id": "spawn-cli",
+      "from": "provider-adapters",
+      "to": "provider-processes",
+      "text": "Spawn command",
+      "glyph": "translate(1193.4 345) rotate(90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "provider-adapters",
+          "label": "Provider adapters"
+        },
+        "target": {
+          "id": "provider-processes",
+          "label": "Selected provider CLIs"
+        },
+        "nodeIds": [
+          "provider-adapters",
+          "provider-processes"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "4",
+            "id": "spawn-cli",
+            "from": "provider-adapters",
+            "to": "provider-processes",
+            "label": "Spawn command"
+          }
+        ]
+      }
+    },
+    {
+      "id": "capture-cli",
+      "from": "provider-processes",
+      "to": "provider-adapters",
+      "text": "Logs + exit status",
+      "glyph": "translate(992.5999999999999 345) rotate(-90)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "provider-processes",
+          "label": "Selected provider CLIs"
+        },
+        "target": {
+          "id": "provider-adapters",
+          "label": "Provider adapters"
+        },
+        "nodeIds": [
+          "provider-processes",
+          "provider-adapters"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "5",
+            "id": "capture-cli",
+            "from": "provider-processes",
+            "to": "provider-adapters",
+            "label": "Logs + exit status"
+          }
+        ]
+      }
+    }
+  ],
+  "legend": [
+    "Directed relationship",
+    "Label marker shows direction"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

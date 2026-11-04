@@ -1,0 +1,81 @@
+{
+  "relations": [],
+  "labelRelations": [
+    {
+      "id": "approved-purchase-request",
+      "from": "project-management",
+      "to": "erp",
+      "text": "Create purchase order · only after manager approval",
+      "glyph": "translate(640.4 73) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "project-management",
+          "label": "Project Management"
+        },
+        "target": {
+          "id": "erp",
+          "label": "ERP"
+        },
+        "nodeIds": [
+          "project-management",
+          "erp"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "approved-purchase-request",
+            "from": "project-management",
+            "to": "erp",
+            "label": "Create purchase order · only after manager approval"
+          }
+        ]
+      }
+    },
+    {
+      "id": "validated-purchase-decision",
+      "from": "erp",
+      "to": "project-management",
+      "text": "Accept / reject decision · after validation",
+      "glyph": "translate(398.8 97) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "erp",
+          "label": "ERP"
+        },
+        "target": {
+          "id": "project-management",
+          "label": "Project Management"
+        },
+        "nodeIds": [
+          "erp",
+          "project-management"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "1",
+            "id": "validated-purchase-decision",
+            "from": "erp",
+            "to": "project-management",
+            "label": "Accept / reject decision · after validation"
+          }
+        ]
+      }
+    }
+  ],
+  "legend": [
+    "Directed relationship",
+    "Label marker shows direction"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

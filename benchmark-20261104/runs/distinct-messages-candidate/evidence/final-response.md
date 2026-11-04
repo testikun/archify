@@ -1,0 +1,3 @@
+Created [Purchase request and decision diagram](/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/purchase-request-decision.html) and its [source JSON](/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json).
+
+The diagram preserves separate request and decision arrows, their conditions, and accepted-only storage, with a legend explaining direction. Archify validation and browser checks passed.

@@ -1,0 +1,152 @@
+{
+  "relations": [],
+  "labelRelations": [
+    {
+      "id": "manager-commands",
+      "from": "manager-agent",
+      "to": "squad-cli",
+      "text": "create / list / receive",
+      "glyph": "translate(413.2 95.5) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "manager-agent",
+          "label": "Manager agent"
+        },
+        "target": {
+          "id": "squad-cli",
+          "label": "squad CLI"
+        },
+        "nodeIds": [
+          "manager-agent",
+          "squad-cli"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "manager-commands",
+            "from": "manager-agent",
+            "to": "squad-cli",
+            "label": "create / list / receive"
+          }
+        ]
+      }
+    },
+    {
+      "id": "manager-output",
+      "from": "squad-cli",
+      "to": "manager-agent",
+      "text": "state / replies",
+      "glyph": "translate(306 119.5) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "squad-cli",
+          "label": "squad CLI"
+        },
+        "target": {
+          "id": "manager-agent",
+          "label": "Manager agent"
+        },
+        "nodeIds": [
+          "squad-cli",
+          "manager-agent"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "1",
+            "id": "manager-output",
+            "from": "squad-cli",
+            "to": "manager-agent",
+            "label": "state / replies"
+          }
+        ]
+      }
+    },
+    {
+      "id": "worker-commands",
+      "from": "worker-agent",
+      "to": "squad-cli",
+      "text": "ack / complete / send",
+      "glyph": "translate(691.6 119.5) rotate(180)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "worker-agent",
+          "label": "Worker agent"
+        },
+        "target": {
+          "id": "squad-cli",
+          "label": "squad CLI"
+        },
+        "nodeIds": [
+          "worker-agent",
+          "squad-cli"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "2",
+            "id": "worker-commands",
+            "from": "worker-agent",
+            "to": "squad-cli",
+            "label": "ack / complete / send"
+          }
+        ]
+      }
+    },
+    {
+      "id": "worker-output",
+      "from": "squad-cli",
+      "to": "worker-agent",
+      "text": "assignments / replies",
+      "glyph": "translate(808.4 95.5) rotate(0)",
+      "start": null,
+      "end": null,
+      "visible": "1",
+      "routeFound": true,
+      "route": {
+        "source": {
+          "id": "squad-cli",
+          "label": "squad CLI"
+        },
+        "target": {
+          "id": "worker-agent",
+          "label": "Worker agent"
+        },
+        "nodeIds": [
+          "squad-cli",
+          "worker-agent"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "3",
+            "id": "worker-output",
+            "from": "squad-cli",
+            "to": "worker-agent",
+            "label": "assignments / replies"
+          }
+        ]
+      }
+    }
+  ],
+  "legend": [
+    "Directed relationship",
+    "Directed relationship",
+    "Label marker shows direction"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

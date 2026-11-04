@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "command": "deliver",
+  "status": "pending",
+  "receiptId": "7669d7c2-057e-4ae8-9dc8-dee972cef360",
+  "input": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+  "output": "/evidence/issue-1139/benchmark-label-arrows-20261104/replay/squad-candidate/base.html"
+}

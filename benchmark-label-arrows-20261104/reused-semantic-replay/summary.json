@@ -1,0 +1,29 @@
+[
+  {
+    "original_run": "association-candidate",
+    "original_candidate": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "input_sha256": "c5fbe8bcec0c998297de1f0f595f8cffeae16da9585226e5c43088f07f3423c4",
+    "input": "/evidence/issue-1139/benchmark-20261104/runs/association-candidate/workspace/output/candidate.json",
+    "current_candidate": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "delivery_exit": 0,
+    "identical_to_original_canonical_svg": true
+  },
+  {
+    "original_run": "symmetric-sync-candidate",
+    "original_candidate": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "input_sha256": "6223a1305762edfb064db175dc2ec6c7371416e84cd2979105fa5c2b94a78165",
+    "input": "/evidence/issue-1139/benchmark-20261104/runs/symmetric-sync-candidate/workspace/output/candidate.json",
+    "current_candidate": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "delivery_exit": 0,
+    "identical_to_original_canonical_svg": true
+  },
+  {
+    "original_run": "distinct-messages-candidate",
+    "original_candidate": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "input_sha256": "9447dc4468d1ece6d7bbc57d77876d5c033405459ac724f6c7c000df19304c60",
+    "input": "/evidence/issue-1139/benchmark-20261104/runs/distinct-messages-candidate/workspace/output/candidate.json",
+    "current_candidate": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "delivery_exit": 0,
+    "identical_to_original_canonical_svg": true
+  }
+]

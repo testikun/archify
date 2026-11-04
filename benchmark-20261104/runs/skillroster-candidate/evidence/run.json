@@ -1,0 +1,224 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "skillroster-candidate",
+  "project_id": "skillroster",
+  "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "7ee304c5d939f1e2194c9bbbffdf86d4d7683117",
+    "package_or_tree_sha256": "e65fb6ea9f7ff467390b1a98acff4b48072bc68bb630cb49aefa5c88501bf603",
+    "preparation_log": "../../../preparation.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 1,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "5102288895c177288f15670293140434e87798592682ce8c086cc47766a60947",
+    "substantive_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+  },
+  "session": {
+    "id": "01a1a47e-ade4-75b1-ac18-e5ce6054e1b5",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/b62e5ae7e07493c50fb4e7f2e9ccb84c0f5a7af27c4c97cfee3204a7346cb498.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T03:02:28.308Z",
+        "pid": 653,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "b62e5ae7e07493c50fb4e7f2e9ccb84c0f5a7af27c4c97cfee3204a7346cb498",
+        "snapshot": "snapshots/b62e5ae7e07493c50fb4e7f2e9ccb84c0f5a7af27c4c97cfee3204a7346cb498.json"
+      },
+      {
+        "at": "2026-11-04T03:02:53.845Z",
+        "pid": 803,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "ed1ee4ed9ee0dd8806f2ea3113e71ec888ab7eb018423d048ba5a59c9db1d28f",
+        "snapshot": "snapshots/ed1ee4ed9ee0dd8806f2ea3113e71ec888ab7eb018423d048ba5a59c9db1d28f.json"
+      },
+      {
+        "at": "2026-11-04T03:03:13.187Z",
+        "pid": 967,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "4a08666d907bf8d75317e84364025c0c8a3aa4afe3930545084006e519b3c552",
+        "snapshot": "snapshots/4a08666d907bf8d75317e84364025c0c8a3aa4afe3930545084006e519b3c552.json"
+      },
+      {
+        "at": "2026-11-04T03:04:36.899Z",
+        "pid": 1534,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "6102c7a381c2e28d63ca973588ee596ca1ba89f442c1ad6dfe42c13edbfa0ea9",
+        "snapshot": "snapshots/6102c7a381c2e28d63ca973588ee596ca1ba89f442c1ad6dfe42c13edbfa0ea9.json"
+      },
+      {
+        "at": "2026-11-04T03:04:58.330Z",
+        "pid": 1648,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-3",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "becc66d0298630ddefa586797c34864c415c9c96dbb2c21dad53efa2c8a728ba",
+        "snapshot": "snapshots/becc66d0298630ddefa586797c34864c415c9c96dbb2c21dad53efa2c8a728ba.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json"
+    ],
+    "screenshots": [
+      "captures/skillroster-candidate/fullpage.light.png",
+      "captures/skillroster-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "correct",
+    "readability": "readable",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Maintenance Codex review of final JSON, pinned source, all submitted-version diffs, original diagnostic output and native screenshots; author-side inspection, not human maintainer acceptance.",
+    "findings": [
+      "Nine components separate caller intent, CLI/state coordination, SQLite, discovery, trusted planning, the Apply/Undo engine, observed Skill/evidence files, anchored filesystem capability and receipt/recovery files. These are grouped in-process responsibilities, not invented services or an OS sandbox. Read-only inspection is correctly scoped to Skill content, while local snapshots and Plans are persisted.",
+      "The diagram preserves explicit Apply/Undo commands, non-JSON confirmation, current Snapshot/Evidence and governance guards, approved-path mutation, journaling before changes, verification and reverse-order drift-checked compensation. SQLite finalization remains distinct from durable filesystem journals. Provider-managed observation roots are not automatically mutation targets, and recovery limits are stated.",
+      "The first captured JSON fails on an unsupported security-line legend key and an overlong source label. The next candidate exposes an out-of-range AGENTS.md reference. After those two diagnostic repairs, validation passes. A voluntary route/card simplification then triggers three label-gap diagnostics, repaired by increasing node spacing. All five submitted versions and original diagnostic outputs are retained: four revisions total, three diagnostic-driven and one voluntary.",
+      "Four shell commands fail: one guessed example path and three finalize attempts. The final drawing is readable, with distinct inspection/mutation boundaries and no observed boundary-title masking or clipping. Fine secondary text and empty right-side space remain presentation caveats. The richer graph and extra rework are not evidence of a causal patch regression from one generation pair.",
+      "All ten connections use forward semantics. The final frozen JSON has identical layout and canonical SVG on both versions. This input does not exercise the new direction feature; its existing validation/repair behavior is recorded without attributing the repairs to both/none."
+    ],
+    "first_draft_check": 1,
+    "repair_rounds": 4,
+    "tool_calls": 33,
+    "usage": {
+      "input_tokens": 2529209,
+      "cached_input_tokens": 2457344,
+      "output_tokens": 10394,
+      "reasoning_output_tokens": 1912,
+      "uncached_input_tokens": 71865
+    },
+    "first_draft_semantics": "unverified; schema and repository-reference errors prevent first-draft acceptance",
+    "first_draft_visual": "unreviewed; first draft does not deliver",
+    "repair_rounds_by_reason": {
+      "schema_diagnostics": 1,
+      "source_reference_diagnostic": 1,
+      "voluntary_route_and_card_simplification": 1,
+      "label_gap_diagnostics": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": null
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T02:58:47.627364+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T03:06:01.339068+00:00",
+    "wall_seconds": 433.7090072910005,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 220.580064,
+    "time_to_first_cli_seconds": 220.680636
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

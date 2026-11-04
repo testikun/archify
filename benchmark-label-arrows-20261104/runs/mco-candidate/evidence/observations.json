@@ -1,0 +1,106 @@
+{
+  "run_id": "mco-candidate",
+  "project_id": "mco",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 370.17701733300055,
+  "usage": {
+    "input_tokens": 1600141,
+    "cached_input_tokens": 1465728,
+    "output_tokens": 6881,
+    "reasoning_output_tokens": 1239,
+    "uncached_input_tokens": 134413
+  },
+  "time_to_first_json_seconds_descriptive_only": 217.370118,
+  "time_to_first_cli_seconds_descriptive_only": 229.260228,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 25,
+  "failed_tool_commands": 1,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-04T07:48:42.824Z",
+      "pid": 78549,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826",
+      "snapshot": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json"
+    },
+    {
+      "at": "2026-11-04T07:49:47.881Z",
+      "pid": 78906,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/candidate.json",
+        "output/mco-review.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-2",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+      "sha256": "a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24",
+      "snapshot": "snapshots/a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24.json"
+    }
+  ],
+  "first_json": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json",
+  "first_submitted_json": "snapshots/4b9fb3ea0ac096131e9c3088d54182001842a4e046d2f8e4f07db50a8e5e3826.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/candidate.json",
+  "final_json_sha256": "a9072dfc4de29b635bc5f9bd96d83ee29a51fcb74fb8cae96adae2549a287a24",
+  "html": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/workspace/output/mco-review.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 7,
+    "both": 0,
+    "none": 0
+  },
+  "label_arrow_count": 6,
+  "source_status": "",
+  "source_commit_after": "3cfce130362dbcc2aedda6170d1a31e39cf67d3e",
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/mco-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

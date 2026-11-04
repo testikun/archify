@@ -1,0 +1,506 @@
+{
+  "ok": true,
+  "diagram_type": "architecture",
+  "layout": {
+    "mode": "free"
+  },
+  "viewBox": [
+    1158,
+    753
+  ],
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "Browser workbench",
+      "x": 40,
+      "y": 50,
+      "width": 205,
+      "height": 80,
+      "pos": [
+        40,
+        50
+      ]
+    },
+    {
+      "id": "terminal",
+      "type": "backend",
+      "label": "Terminal stream hub",
+      "x": 440,
+      "y": 50,
+      "width": 210,
+      "height": 80,
+      "pos": [
+        440,
+        50
+      ]
+    },
+    {
+      "id": "orchestrator",
+      "type": "external",
+      "label": "Orchestrator CLI",
+      "x": 850,
+      "y": 50,
+      "width": 215,
+      "height": 80,
+      "pos": [
+        850,
+        50
+      ]
+    },
+    {
+      "id": "team",
+      "type": "backend",
+      "label": "Team protocol + dispatch",
+      "x": 440,
+      "y": 325,
+      "width": 210,
+      "height": 90,
+      "pos": [
+        440,
+        325
+      ]
+    },
+    {
+      "id": "worker",
+      "type": "external",
+      "label": "Worker CLI",
+      "x": 850,
+      "y": 325,
+      "width": 215,
+      "height": 90,
+      "pos": [
+        850,
+        325
+      ]
+    },
+    {
+      "id": "state",
+      "type": "database",
+      "label": "Local SQLite state",
+      "x": 440,
+      "y": 585,
+      "width": 230,
+      "height": 80,
+      "pos": [
+        440,
+        585
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "Local Node.js runtime",
+      "x": 418,
+      "y": 26,
+      "width": 274,
+      "height": 659,
+      "wraps": [
+        "terminal",
+        "team",
+        "state"
+      ]
+    },
+    {
+      "kind": "region",
+      "label": "CLI child processes · workspace scoped",
+      "x": 828,
+      "y": 26,
+      "width": 259,
+      "height": 409,
+      "wraps": [
+        "orchestrator",
+        "worker"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "workbench",
+      "to": "terminal",
+      "label": "WS input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          245,
+          74.95
+        ],
+        [
+          440,
+          74.95
+        ]
+      ],
+      "labelAt": [
+        343,
+        65
+      ]
+    },
+    {
+      "from": "terminal",
+      "to": "workbench",
+      "label": "WS output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          440,
+          97
+        ],
+        [
+          245,
+          97
+        ]
+      ],
+      "labelAt": [
+        343,
+        117
+      ]
+    },
+    {
+      "from": "terminal",
+      "to": "orchestrator",
+      "label": "PTY input",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          650,
+          81.95
+        ],
+        [
+          850,
+          81.95
+        ]
+      ],
+      "labelAt": [
+        750,
+        72
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "terminal",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          850,
+          97
+        ],
+        [
+          650,
+          97
+        ]
+      ],
+      "labelAt": [
+        750,
+        117
+      ]
+    },
+    {
+      "from": "orchestrator",
+      "to": "team",
+      "label": "HTTP team send",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          942.45,
+          130
+        ],
+        [
+          942.45,
+          227.5
+        ],
+        [
+          545,
+          227.5
+        ],
+        [
+          545,
+          325
+        ]
+      ],
+      "labelAt": [
+        744,
+        218
+      ]
+    },
+    {
+      "from": "team",
+      "to": "worker",
+      "label": "Ready: stdin task",
+      "variant": "emphasis",
+      "route": "auto",
+      "points": [
+        [
+          650,
+          361.95
+        ],
+        [
+          850,
+          361.95
+        ]
+      ],
+      "labelAt": [
+        750,
+        352
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "team",
+      "label": "HTTP updates / report",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          850,
+          377
+        ],
+        [
+          650,
+          377
+        ]
+      ],
+      "labelAt": [
+        750,
+        397
+      ]
+    },
+    {
+      "from": "team",
+      "to": "orchestrator",
+      "label": "stdin status / result",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          560.05,
+          325
+        ],
+        [
+          560.05,
+          301
+        ],
+        [
+          971.5,
+          301
+        ],
+        [
+          971.5,
+          130
+        ]
+      ],
+      "labelAt": [
+        766,
+        291
+      ]
+    },
+    {
+      "from": "worker",
+      "to": "terminal",
+      "label": "PTY output",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          1065,
+          370
+        ],
+        [
+          1089,
+          370
+        ],
+        [
+          1089,
+          18
+        ],
+        [
+          545,
+          18
+        ],
+        [
+          545,
+          50
+        ]
+      ],
+      "labelAt": [
+        1089,
+        184
+      ]
+    },
+    {
+      "from": "team",
+      "to": "state",
+      "label": "Commit / drain",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          545,
+          415
+        ],
+        [
+          545,
+          585
+        ]
+      ],
+      "labelAt": [
+        500,
+        503
+      ]
+    },
+    {
+      "from": "workbench",
+      "to": "team",
+      "label": "HTTP summary polls",
+      "variant": "default",
+      "route": "auto",
+      "points": [
+        [
+          142.5,
+          130
+        ],
+        [
+          142.5,
+          370
+        ],
+        [
+          440,
+          370
+        ]
+      ],
+      "labelAt": [
+        291,
+        360
+      ]
+    }
+  ],
+  "labels": [
+    {
+      "text": "WS input",
+      "x": 318,
+      "y": 55,
+      "width": 48,
+      "height": 14,
+      "labelAt": [
+        343,
+        65
+      ]
+    },
+    {
+      "text": "WS output",
+      "x": 316,
+      "y": 107,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        343,
+        117
+      ]
+    },
+    {
+      "text": "PTY input",
+      "x": 723,
+      "y": 62,
+      "width": 53,
+      "height": 14,
+      "labelAt": [
+        750,
+        72
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 721,
+      "y": 107,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        750,
+        117
+      ]
+    },
+    {
+      "text": "HTTP team send",
+      "x": 705,
+      "y": 208,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        744,
+        218
+      ]
+    },
+    {
+      "text": "Ready: stdin task",
+      "x": 704,
+      "y": 342,
+      "width": 92,
+      "height": 14,
+      "labelAt": [
+        750,
+        352
+      ]
+    },
+    {
+      "text": "HTTP updates / report",
+      "x": 695,
+      "y": 387,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        750,
+        397
+      ]
+    },
+    {
+      "text": "stdin status / result",
+      "x": 710,
+      "y": 281,
+      "width": 111,
+      "height": 14,
+      "labelAt": [
+        766,
+        291
+      ]
+    },
+    {
+      "text": "PTY output",
+      "x": 1060,
+      "y": 174,
+      "width": 58,
+      "height": 14,
+      "labelAt": [
+        1089,
+        184
+      ]
+    },
+    {
+      "text": "Commit / drain",
+      "x": 462,
+      "y": 493,
+      "width": 77,
+      "height": 14,
+      "labelAt": [
+        500,
+        503
+      ]
+    },
+    {
+      "text": "HTTP summary polls",
+      "x": 243,
+      "y": 350,
+      "width": 96,
+      "height": 14,
+      "labelAt": [
+        291,
+        360
+      ]
+    }
+  ]
+}

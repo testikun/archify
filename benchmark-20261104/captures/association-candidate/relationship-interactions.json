@@ -1,0 +1,94 @@
+{
+  "relations": [
+    {
+      "edge": {
+        "id": "opportunity-identifier-correspondence",
+        "from": "crm",
+        "to": "project-management",
+        "direction": "none",
+        "start": null,
+        "end": null
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "project-management",
+          "label": "Project Management"
+        },
+        "target": {
+          "id": "crm",
+          "label": "CRM"
+        },
+        "nodeIds": [
+          "project-management",
+          "crm"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "opportunity-identifier-correspondence",
+            "from": "crm",
+            "to": "project-management",
+            "direction": "none",
+            "label": "Same opportunity identifier"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "project-management",
+          "label": "Project Management"
+        },
+        "nodeIds": [
+          "project-management",
+          "crm",
+          "reporting"
+        ],
+        "depths": {
+          "project-management": 0,
+          "crm": 1,
+          "reporting": 1
+        },
+        "maxDepth": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "opportunity-identifier-correspondence",
+            "from": "crm",
+            "to": "project-management",
+            "label": "Same opportunity identifier",
+            "direction": "none",
+            "depth": 1
+          },
+          {
+            "key": "1",
+            "id": "sales-summary-reporting",
+            "from": "crm",
+            "to": "reporting",
+            "label": "Publishes sales summaries",
+            "depth": 1
+          },
+          {
+            "key": "2",
+            "id": "delivery-summary-reporting",
+            "from": "project-management",
+            "to": "reporting",
+            "label": "Publishes delivery summaries",
+            "depth": 1
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    }
+  ],
+  "legend": [
+    "Solid arrow: independently publishes summaries to Reporting",
+    "Dashed, no arrows: same identifier; not communication or dependency"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

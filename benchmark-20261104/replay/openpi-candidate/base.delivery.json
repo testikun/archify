@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "add7ca80-5a0e-4a59-80a1-5f6b939c5253",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/evidence/issue-1139/benchmark-20261104/runs/openpi-candidate/workspace/output/openpi-subagent.architecture.json",
+  "output": "/evidence/issue-1139/benchmark-20261104/replay/openpi-candidate/base.html",
+  "specification": {
+    "sha256": "6f1950231b0894d05a6e8c74c423862441ae4ba5b735695a140ccfabc3b558a9",
+    "bytes": 10437
+  },
+  "artifact": {
+    "sha256": "ea29cbaf66c171cc98fdf522d5ba467254175105adc102a43f7e47b117f81839",
+    "bytes": 881191
+  }
+}

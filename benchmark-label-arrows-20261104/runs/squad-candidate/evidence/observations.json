@@ -1,0 +1,106 @@
+{
+  "run_id": "squad-candidate",
+  "project_id": "squad",
+  "arm": "candidate",
+  "execution_exit_code": 0,
+  "timeout": false,
+  "wall_seconds_descriptive_only": 310.2544903329981,
+  "usage": {
+    "input_tokens": 1051772,
+    "cached_input_tokens": 956032,
+    "output_tokens": 6950,
+    "reasoning_output_tokens": 1657,
+    "uncached_input_tokens": 95740
+  },
+  "time_to_first_json_seconds_descriptive_only": 191.093064,
+  "time_to_first_cli_seconds_descriptive_only": 191.10056,
+  "cli_execution_seconds": null,
+  "queue_seconds": null,
+  "unavailable_timing_reason": "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+  "cost": null,
+  "cost_reason": "Cost accounting deferred by user.",
+  "tool_commands": 17,
+  "failed_tool_commands": 0,
+  "provider_error_events": 0,
+  "authoring_cli_invocations_including_nested_deliver": 4,
+  "repair_rounds": 1,
+  "attempts": [
+    {
+      "at": "2026-11-04T07:54:14.935Z",
+      "pid": 80241,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/squad-coordination.json",
+        "output/squad-coordination.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+      "sha256": "df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534",
+      "snapshot": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json"
+    },
+    {
+      "at": "2026-11-04T07:55:07.518Z",
+      "pid": 80464,
+      "argv": [
+        "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+        "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/archify/bin/archify.mjs",
+        "finalize",
+        "architecture",
+        "output/squad-coordination.json",
+        "output/squad-coordination.html",
+        "--repo-root",
+        "project",
+        "--quality",
+        "showcase",
+        "--out-dir",
+        "output/review-1",
+        "--json"
+      ],
+      "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+      "sha256": "b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d",
+      "snapshot": "snapshots/b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d.json"
+    }
+  ],
+  "first_json": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+  "first_submitted_json": "snapshots/df259c1958d3c93abfcfe5125d36a53c55f1936a15325b89842cf207198a9534.json",
+  "precheck_revisions_observed": 0,
+  "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.json",
+  "final_json_sha256": "b194a441159518aa176eb6065fcfb36da0e177146afc0e07013168d55acd7a9d",
+  "html": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.html"
+  ],
+  "delivery_receipts": [
+    "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.delivery.json"
+  ],
+  "delivery_receipt_integrity": [
+    {
+      "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/workspace/output/squad-coordination.delivery.json",
+      "status": "current",
+      "matches_final_json": true,
+      "matches_artifact": true
+    }
+  ],
+  "delivery_verified": true,
+  "relationship_directions": {
+    "forward": 9,
+    "both": 0,
+    "none": 0
+  },
+  "label_arrow_count": 4,
+  "source_status": "",
+  "source_commit_after": "8146bcc1c38c439aedaf3ff44548c830654c8621",
+  "source_pin_matches": true,
+  "changed_package_files": [],
+  "added_package_files": [],
+  "semantics": "unverified",
+  "readability": "unreviewed",
+  "session_export": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/squad-candidate/evidence/session.jsonl",
+  "capture_limits": "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed."
+}

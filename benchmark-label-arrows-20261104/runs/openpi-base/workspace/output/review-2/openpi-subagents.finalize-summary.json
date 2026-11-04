@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "finalize",
+  "status": "pass",
+  "type": "architecture",
+  "quality": "showcase",
+  "specification": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.json",
+    "sha256": "904478ff1a799c0e0afc2d97704f7ea5500c919a95881faee26103fbe19cb5f7",
+    "bytes": 9265
+  },
+  "artifact": {
+    "path": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/openpi-subagents.html",
+    "sha256": "8ff43a0d93ba3a9981dbfdb81971023c1fe1939debd7188ffba249bcb32b30f8",
+    "bytes": 879486
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "pass"
+  },
+  "diagnostics": [],
+  "diagnosticSummary": {
+    "total": 0,
+    "shown": 0,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-2/openpi-subagents.finalize.json",
+    "summaryReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-2/openpi-subagents.finalize-summary.json",
+    "browserCheckReceipt": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/openpi-base/workspace/output/review-2/openpi-subagents.browser-check.json"
+  },
+  "visualReview": "not-requested",
+  "durationMs": 2142,
+  "browserCheck": {
+    "requested": true,
+    "ran": true
+  }
+}

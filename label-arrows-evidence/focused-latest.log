@@ -1,0 +1,65 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/architecture-relationship-direction.test.mjs
+
+Repository tests: 1 files, concurrency 4
+TAP version 13
+# Subtest: label arrows deliver shared paths with two directed identities and attributable labels
+ok 1 - label arrows deliver shared paths with two directed identities and attributable labels
+  ---
+  duration_ms: 343.279041
+  ...
+# Subtest: label arrows follow vertical paths and preserve pinned label coordinates
+ok 2 - label arrows follow vertical paths and preserve pinned label coordinates
+  ---
+  duration_ms: 305.544584
+  ...
+# Subtest: label arrow opt-in rejects lost or contradictory direction information
+ok 3 - label arrow opt-in rejects lost or contradictory direction information
+  ---
+  duration_ms: 1295.75475
+  ...
+# Subtest: reversed bent paths keep their labels centered on the same segment
+ok 4 - reversed bent paths keep their labels centered on the same segment
+  ---
+  duration_ms: 326.17625
+  ...
+# Subtest: Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+ok 5 - Architecture delivers one identity per relation, accurate arrowheads and actual-style legends
+  ---
+  duration_ms: 348.826167
+  ...
+# Subtest: explicit forward preserves legacy SVG and direction validation is Architecture-only
+ok 6 - explicit forward preserves legacy SVG and direction validation is Architecture-only
+  ---
+  duration_ms: 996.521417
+  ...
+# Subtest: relationship legends honor hidden and custom labels without changing authored arrows
+ok 7 - relationship legends honor hidden and custom labels without changing authored arrows
+  ---
+  duration_ms: 451.179417
+  ...
+# Subtest: Delta normalizes default forward and identifies direction changes without duplicating relationships
+ok 8 - Delta normalizes default forward and identifies direction changes without duplicating relationships
+  ---
+  duration_ms: 0.808167
+  ...
+# Subtest: arrow clearance checks source arrowheads for both and excludes unmarked associations
+ok 9 - arrow clearance checks source arrowheads for both and excludes unmarked associations
+  ---
+  duration_ms: 0.452542
+  ...
+# Subtest: Story preserves structural identities, defaults to static actions and rejects directional transfer
+ok 10 - Story preserves structural identities, defaults to static actions and rejects directional transfer
+  ---
+  duration_ms: 299.845
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4536.702875

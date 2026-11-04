@@ -1,0 +1,94 @@
+{
+  "relations": [
+    {
+      "edge": {
+        "id": "shared-status-sync",
+        "from": "project-management",
+        "to": "erp",
+        "direction": "both",
+        "start": "url(#arrowhead-start)",
+        "end": "url(#arrowhead)"
+      },
+      "reverseRouteFound": true,
+      "route": {
+        "source": {
+          "id": "erp",
+          "label": "ERP"
+        },
+        "target": {
+          "id": "project-management",
+          "label": "Project Management"
+        },
+        "nodeIds": [
+          "erp",
+          "project-management"
+        ],
+        "hops": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "shared-status-sync",
+            "from": "project-management",
+            "to": "erp",
+            "direction": "both",
+            "label": "Project status synchronization"
+          }
+        ]
+      },
+      "routeFlows": 0,
+      "reachesOtherEndpoint": true,
+      "reach": {
+        "direction": "downstream",
+        "origin": {
+          "id": "erp",
+          "label": "ERP"
+        },
+        "nodeIds": [
+          "erp",
+          "project-management",
+          "audit-storage"
+        ],
+        "depths": {
+          "erp": 0,
+          "project-management": 1,
+          "audit-storage": 1
+        },
+        "maxDepth": 1,
+        "edges": [
+          {
+            "key": "0",
+            "id": "shared-status-sync",
+            "from": "project-management",
+            "to": "erp",
+            "label": "Project status synchronization",
+            "direction": "both",
+            "depth": 1
+          },
+          {
+            "key": "1",
+            "id": "project-management-audit",
+            "from": "project-management",
+            "to": "audit-storage",
+            "label": "Audit summary",
+            "depth": 1
+          },
+          {
+            "key": "2",
+            "id": "erp-audit",
+            "from": "erp",
+            "to": "audit-storage",
+            "label": "Audit summary",
+            "depth": 1
+          }
+        ]
+      },
+      "uniqueReachIds": true
+    }
+  ],
+  "legend": [
+    "One-way: audit summary to Audit Storage; no return updates",
+    "Two-way: same status synchronization; either system initiates"
+  ],
+  "mode": "live",
+  "interpretation": "Structural reachability; no runtime-flow claim. Inspect routes and metadata in the saved observation."
+}

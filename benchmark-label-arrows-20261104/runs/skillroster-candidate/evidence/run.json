@@ -1,0 +1,181 @@
+{
+  "template": false,
+  "suite_id": "real-repo-generation-v1",
+  "suite_commit": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "run_id": "skillroster-candidate",
+  "project_id": "skillroster",
+  "project_commit": "21d14c7cff25c66a016562e238e62d0538eb696f",
+  "diagram_type": "architecture",
+  "arm": "candidate",
+  "repetition": 1,
+  "archify": {
+    "commit": "c4f28b89e6ee39edb1e0a09db96998bda27670f1",
+    "package_or_tree_sha256": "dc2d2fb2503f08cc0119e2705f6b04f5c718d8a494d9582221a6572f7316d1d6",
+    "preparation_log": "../../../setup.log"
+  },
+  "agent": {
+    "client": "codex-cli",
+    "version": "codex-cli 0.144.0",
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "memory": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain.",
+    "tools": [
+      "exec_command",
+      "apply_patch",
+      "view_image and ordinary Codex client tools; actual calls preserved in session"
+    ],
+    "memory_policy": "Fresh ephemeral exec per run; ignore-user-config; no maintenance conversation or cross-run messages; ordinary same-host instructions may remain."
+  },
+  "environment": {
+    "concurrency": 2,
+    "time_limit_seconds": 1200,
+    "os": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "node": "v20.20.2",
+    "browser": "Google Chrome 156.0.8078.80",
+    "viewport": [
+      1440,
+      900
+    ],
+    "device_scale": 1
+  },
+  "prompt": {
+    "path": "../prompt.txt",
+    "sha256": "302e77b3eab379654fc5642d0b59cd88e4d94d5a27bc0fc7fc952db9992decf6",
+    "substantive_sha256": "49d7b1490dc40caf157e7c5139cfc8e4648e2a2cbad443828207fbbeb2898b6a"
+  },
+  "session": {
+    "id": "01a1a58f-4274-7230-ac3b-97b334b4d5b0",
+    "export": "session.jsonl",
+    "capture_method": "Native Codex JSONL events plus timed copies; preload snapshots before CLI entry and 50ms polling for complete output JSON revisions. Transient unsubmitted drafts between polls are not guaranteed.",
+    "child_exports": [],
+    "redactions": [],
+    "completeness": "Native JSONL stream through process exit; tool output truncation, if any, remains visible; private reasoning is not requested."
+  },
+  "artifacts": {
+    "first_json": "snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json",
+    "attempted_json_versions": [
+      {
+        "at": "2026-11-04T08:02:28.459Z",
+        "pid": 82489,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661",
+        "snapshot": "snapshots/760655b64411cb2dfa3ba0ceda5c18ba69084aebc1ec4fa4c2159cef0684b661.json"
+      },
+      {
+        "at": "2026-11-04T08:03:40.537Z",
+        "pid": 82789,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "bd1758a134072e83cae5e41e77bf541ee976aa7efa834e23b33572e1c5619781",
+        "snapshot": "snapshots/bd1758a134072e83cae5e41e77bf541ee976aa7efa834e23b33572e1c5619781.json"
+      },
+      {
+        "at": "2026-11-04T08:05:41.346Z",
+        "pid": 83031,
+        "argv": [
+          "/opt/homebrew/Cellar/node@20/20.20.2/bin/node",
+          "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/archify/bin/archify.mjs",
+          "finalize",
+          "architecture",
+          "output/candidate.json",
+          "output/skillroster-architecture.html",
+          "--repo-root",
+          "project",
+          "--quality",
+          "showcase",
+          "--out-dir",
+          "output/review-2",
+          "--json"
+        ],
+        "source": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+        "sha256": "1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe",
+        "snapshot": "snapshots/1547fb0d3138280167c34f44c48247dee157b13f8a15188aefb90e98ed51effe.json"
+      }
+    ],
+    "final_json": "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/candidate.json",
+    "html": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.html"
+    ],
+    "receipts": [
+      "/evidence/issue-1139/benchmark-label-arrows-20261104/runs/skillroster-candidate/workspace/output/skillroster-architecture.delivery.json"
+    ],
+    "screenshots": [
+      "captures/skillroster-candidate/fullpage.light.png",
+      "captures/skillroster-candidate/viewport.light.png"
+    ]
+  },
+  "observations": {
+    "delivery": "delivered",
+    "semantics": "source-backed at overview scope",
+    "readability": "small context labels at native viewport; no material overlap observed",
+    "reviewer": "Maintenance Codex",
+    "review_origin": "Author-side pinned-source and final JSON review plus native 1440x900 and explicitly taller full-page capture inspection.",
+    "findings": [
+      "The overview retains inspection versus Skill-content mutation, latest-Snapshot/evidence validation, independent Apply/Undo commands and receipt-based reversal.",
+      "The Plan-to-gate arrow is explicitly labeled apply ID and the node/card state a separate invocation; it does not establish an automatic apply step.",
+      "The first submitted input failed the projected-text floor at 5.47px. One diagnostic-driven revision compacted it; a later voluntary revision clarified Apply/Undo IDs and moved the state route endpoint.",
+      "Final native context labels are approximately 6.67px: above the 6px failure floor but below the preferred 7.5px target. The taller full-page image reflows larger and is not evidence of better 1440x900 readability; see ISSUES.md.",
+      "No new direction or label-arrow field was used. Unchanged final bytes deliver with identical layout and SVG on both versions."
+    ],
+    "first_draft_check": 1,
+    "repair_rounds": 2,
+    "tool_calls": 30,
+    "usage": {
+      "input_tokens": 2409567,
+      "cached_input_tokens": 2322688,
+      "output_tokens": 12489,
+      "reasoning_output_tokens": 5009,
+      "uncached_input_tokens": 86879
+    },
+    "first_draft_semantics": "unverified",
+    "first_draft_visual": "unreviewed; captured check fails projected-text floor",
+    "repair_rounds_by_reason": {
+      "diagnostic_driven": 1,
+      "voluntary_visual_or_metadata": 1
+    },
+    "tool_count_definition": "Completed shell command-execution items; compound shell subcommands are not counted independently. Native sessions retain their output and failures.",
+    "capability_result": "not exercised; ordinary forward arrows",
+    "label_arrow_count": 0
+  },
+  "timing": {
+    "dispatched_at": "2026-11-04T07:56:31.663304+00:00",
+    "first_json_at": null,
+    "finished_at": "2026-11-04T08:07:26.380773+00:00",
+    "wall_seconds": 654.7802104170005,
+    "cli_work_seconds": null,
+    "queue_wait_seconds": null,
+    "time_to_first_json_seconds": 356.795696,
+    "time_to_first_cli_seconds": 356.795696
+  },
+  "unavailable": [
+    "Native client events do not isolate CLI runtime or provider queue/network waits; event arrival timestamps are retained without treating them as CPU time.",
+    "Cost accounting deferred by user.",
+    "Pre-entry snapshots prove attempted candidate history. Polling also captures unvalidated drafts; transient complete unsubmitted drafts between 50 ms polls are not guaranteed.",
+    "No human maintainer or external independent acceptance is claimed."
+  ]
+}

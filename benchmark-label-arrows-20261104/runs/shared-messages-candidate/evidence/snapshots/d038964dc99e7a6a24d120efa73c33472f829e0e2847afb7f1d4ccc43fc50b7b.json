@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Purchase request and decision",
+    "subtitle": "Synthetic business evidence: BUSINESS.md. Rejected orders are not stored.",
+    "output": "output/purchase-request.html",
+    "quality_profile": "showcase",
+    "legend": {
+      "mode": "auto",
+      "entries": {
+        "backend": { "label": "Business system" },
+        "database": { "label": "Order storage" }
+      }
+    }
+  },
+  "components": [
+    {
+      "id": "project-management",
+      "type": "backend",
+      "label": "Project Management",
+      "pos": [40, 40],
+      "size": [220, 90]
+    },
+    {
+      "id": "erp",
+      "type": "backend",
+      "label": "ERP",
+      "sublabel": "Validates purchase orders",
+      "pos": [760, 40],
+      "size": [180, 90]
+    },
+    {
+      "id": "order-storage",
+      "type": "database",
+      "label": "Order Storage",
+      "sublabel": "Accepted orders only",
+      "pos": [760, 280],
+      "size": [180, 80]
+    }
+  ],
+  "connections": [
+    {
+      "id": "approved-purchase-request",
+      "from": "project-management",
+      "to": "erp",
+      "label": "Create purchase order · only after manager approval",
+      "arrowPosition": "label",
+      "route": "straight"
+    },
+    {
+      "id": "validated-purchase-decision",
+      "from": "erp",
+      "to": "project-management",
+      "label": "Accept / reject decision · after validation",
+      "arrowPosition": "label",
+      "route": "straight"
+    },
+    {
+      "id": "accepted-order-write",
+      "from": "erp",
+      "to": "order-storage",
+      "label": "Write order · only if accepted"
+    }
+  ]
+}
