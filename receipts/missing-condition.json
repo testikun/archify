@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d70ea5b8-bad3-423e-8ff1-5519ac3b09ff",
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "<workspace>/issue-312-investigation/implementation/inputs/missing-condition.json",
+  "output": "<workspace>/issue-312-investigation/implementation/artifacts/missing-condition.html",
+  "specification": {
+    "sha256": "fc24ec49baa18328e3e538d5f5f27e18d17e9ed289016213225caab961e42522",
+    "bytes": 860
+  },
+  "artifact": {
+    "sha256": "24fbe72af579aeabcf892bb1ad0ec077cd8b09b77418cb5eb9f942e10df54aac",
+    "bytes": 854998
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "diagnostics": [
+    {
+      "code": "workflow/missing-branch-condition",
+      "severity": "warning",
+      "message": "Decision \"budget\" has an outgoing edge \"remaining\" without an explicit condition.",
+      "subject": {
+        "diagramType": "workflow",
+        "edge": "remaining",
+        "from": "budget",
+        "to": "again",
+        "path": "/edges/0/condition"
+      },
+      "evidence": {
+        "decision": true,
+        "label": "retry request"
+      },
+      "supportedFixes": [
+        "add condition.value to /edges/0 describing when this branch is taken; label may retain its action or relationship text"
+      ]
+    }
+  ],
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

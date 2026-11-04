@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "d2326ee0-1cb9-40e7-8c07-ec5b1228f8ed",
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "<workspace>/issue-312-investigation/implementation/inputs/chinese.json",
+  "output": "<workspace>/issue-312-investigation/implementation/artifacts/chinese.html",
+  "specification": {
+    "sha256": "eb3ec0873c46cd938c26a5fc93fcd133c7ca4b61c1188c01f90052e3ee144eed",
+    "bytes": 1468
+  },
+  "artifact": {
+    "sha256": "7891e29e1415997051baf0555050a333c30693e4bae305790d66aafac01cdaef",
+    "bytes": 857468
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

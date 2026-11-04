@@ -1,0 +1,203 @@
+TAP version 13
+# Subtest: decision identity preserves type; conditions use the existing visible and accessible label path
+not ok 1 - decision identity preserves type; conditions use the existing visible and accessible label path
+  ---
+  duration_ms: 4.314875
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:33:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"code":"schema/additionalProperties","severity":"error","message":"/nodes/0 (id/label: \"gate\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/nodes/0","identity":"gate"},"evidence":{"keyword":"additionalProperties","additionalProperty":"decision"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/0 (id/label: \"yes\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/0","identity":"yes"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/1 (id/label: \"no\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/1","identity":"no"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]}]
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    compile (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:29:10)
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:36:28)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.start (node:internal/test_runner/test:944:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:296:17)
+  ...
+# Subtest: condition and action text share measured geometry without swallowing or duplicating author text
+not ok 2 - condition and action text share measured geometry without swallowing or duplicating author text
+  ---
+  duration_ms: 1.482666
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:49:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"code":"schema/additionalProperties","severity":"error","message":"/nodes/0 (id/label: \"gate\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/nodes/0","identity":"gate"},"evidence":{"keyword":"additionalProperties","additionalProperty":"decision"},"supportedFixes":[]}]
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    compile (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:29:10)
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:65:20)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+not ok 3 - missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+  ---
+  duration_ms: 0.220375
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:75:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"code":"schema/additionalProperties","severity":"error","message":"/nodes/0 (id/label: \"gate\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/nodes/0","identity":"gate"},"evidence":{"keyword":"additionalProperties","additionalProperty":"decision"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/0 (id/label: \"no\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/0","identity":"no"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]}]
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    compile (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:29:10)
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:82:22)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: explicit icons remain authoritative; decorative icons and branch count never imply a decision
+not ok 4 - explicit icons remain authoritative; decorative icons and branch count never imply a decision
+  ---
+  duration_ms: 1.944625
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:96:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"code":"schema/additionalProperties","severity":"error","message":"/nodes/0 (id/label: \"gate\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/nodes/0","identity":"gate"},"evidence":{"keyword":"additionalProperties","additionalProperty":"decision"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/0 (id/label: \"yes\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/0","identity":"yes"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/1 (id/label: \"no\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/1","identity":"no"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]}]
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    compile (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:29:10)
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:101:16)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: optional authoring fields work in v1 and v2 without inferring condition logic
+not ok 5 - optional authoring fields work in v1 and v2 without inferring condition logic
+  ---
+  duration_ms: 0.245208
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:114:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    [{"code":"schema/additionalProperties","severity":"error","message":"/nodes/0 (id/label: \"gate\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/nodes/0","identity":"gate"},"evidence":{"keyword":"additionalProperties","additionalProperty":"decision"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/0 (id/label: \"yes\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/0","identity":"yes"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]},{"code":"schema/additionalProperties","severity":"error","message":"/edges/1 (id/label: \"no\") must NOT have additional properties","subject":{"diagramType":"workflow","path":"/edges/1","identity":"no"},"evidence":{"keyword":"additionalProperties","additionalProperty":"condition"},"supportedFixes":[]}]
+    
+    false !== true
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: 'strictEqual'
+  stack: |-
+    compile (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:29:10)
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:122:22)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: invalid condition shapes fail schema validation, independently of a missing-condition warning
+ok 6 - invalid condition shapes fail schema validation, independently of a missing-condition warning
+  ---
+  duration_ms: 0.405042
+  type: 'test'
+  ...
+# Subtest: public validate and deliver expose the same warning and still deliver a partial showcase
+not ok 7 - public validate and deliver expose the same warning and still deliver a partial showcase
+  ---
+  duration_ms: 125.778833
+  type: 'test'
+  location: '<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:140:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    {
+      "schemaVersion": 1,
+      "ok": false,
+      "command": "validate",
+      "stage": "render",
+      "type": "workflow",
+      "input": "<temporary-path>",
+      "error": "workflow schema validation failed:\n  /nodes/0 (id/label: \"gate\") must NOT have additional properties {\"additionalProperty\":\"decision\"}",
+      "diagnostics": [
+        {
+          "code": "schema/additionalProperties",
+          "severity": "error",
+          "message": "/nodes/0 (id/label: \"gate\") must NOT have additional properties",
+          "subject": {
+            "diagramType": "workflow",
+            "path": "/nodes/0",
+            "identity": "gate"
+          },
+          "evidence": {
+            "keyword": "additionalProperties",
+            "additionalProperty": "decision"
+          },
+          "supportedFixes": [
+            "remove unsupported property \"decision\""
+          ]
+        }
+      ]
+    }
+    
+    
+    1 !== 0
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file://<workspace>/issue-312-investigation/implementation/source/test/workflow-decision.test.mjs:151:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 1
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 256.770875

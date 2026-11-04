@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "重试决策",
+    "subtitle": "条件和动作一起显示，保留原有类型",
+    "output": "retry.html",
+    "quality_profile": "showcase",
+    "visual_preset": "classic",
+    "locale": "zh-CN"
+  },
+  "lanes": [
+    {
+      "id": "attempt",
+      "label": "Request handling"
+    },
+    {
+      "id": "fallback",
+      "label": "Fallback",
+      "variant": "exception"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "budget",
+      "lane": "attempt",
+      "col": 0,
+      "type": "backend",
+      "decision": true,
+      "label": "重试策略",
+      "sublabel": "检查剩余次数",
+      "width": 170
+    },
+    {
+      "id": "again",
+      "lane": "attempt",
+      "col": 3,
+      "type": "backend",
+      "label": "再次请求",
+      "width": 150
+    },
+    {
+      "id": "fallback",
+      "lane": "fallback",
+      "col": 3,
+      "type": "external",
+      "label": "人工处理",
+      "width": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "remaining",
+      "from": "budget",
+      "to": "again",
+      "condition": {
+        "value": "剩余重试次数大于零"
+      },
+      "label": "再次发送请求"
+    },
+    {
+      "id": "exhausted",
+      "from": "budget",
+      "to": "fallback",
+      "condition": {
+        "value": "已用完所有重试次数"
+      },
+      "label": "交给人工处理",
+      "role": "error",
+      "variant": "security"
+    }
+  ]
+}

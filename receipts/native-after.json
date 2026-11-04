@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b64849d8-e30c-4de6-85cb-8f7ec3689f40",
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "<workspace>/issue-312-investigation/implementation/inputs/native-after.json",
+  "output": "<workspace>/issue-312-investigation/implementation/artifacts/native-after.html",
+  "specification": {
+    "sha256": "4a9f5b37c5da1fd6fdae88b2f284da18f0a6ed54a348ac6f03fff6b7a461b5a7",
+    "bytes": 6388
+  },
+  "artifact": {
+    "sha256": "977ddf05915763184f85290c0ba526af88b7afef3d63b6d646f33e6c3b662465",
+    "bytes": 881444
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

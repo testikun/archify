@@ -1,0 +1,543 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/workflow-decision.test.mjs test/workflow-compiler.test.mjs test/workflow-migration.test.mjs
+
+Repository tests: 3 files, concurrency 4
+TAP version 13
+# Subtest: fixed-v1 preserves baseline geometry and content through presentation changes
+ok 1 - fixed-v1 preserves baseline geometry and content through presentation changes
+  ---
+  duration_ms: 12.455833
+  type: 'test'
+  ...
+# Subtest: fixed-v1 compiler preserves the exact 700x400 compatibility geometry
+ok 2 - fixed-v1 compiler preserves the exact 700x400 compatibility geometry
+  ---
+  duration_ms: 3.568875
+  type: 'test'
+  ...
+# Subtest: readable-v2 separates approval branches in the checked-in workflow example
+ok 3 - readable-v2 separates approval branches in the checked-in workflow example
+  ---
+  duration_ms: 96.706541
+  type: 'test'
+  ...
+# Subtest: fixed-v1 keeps valid phase and group spans independent of label measurement
+ok 4 - fixed-v1 keeps valid phase and group spans independent of label measurement
+  ---
+  duration_ms: 0.397125
+  type: 'test'
+  ...
+# Subtest: issue \#250: fixed-v1 keeps rejecting the original vertical stack unchanged
+ok 5 - issue \#250: fixed-v1 keeps rejecting the original vertical stack unchanged
+  ---
+  duration_ms: 0.492583
+  type: 'test'
+  ...
+# Subtest: workflow lane.height remains outside the public schema
+ok 6 - workflow lane.height remains outside the public schema
+  ---
+  duration_ms: 0.459958
+  type: 'test'
+  ...
+# Subtest: issue \#250: implicit readable-v2 measures a stacked lane independently
+ok 7 - issue \#250: implicit readable-v2 measures a stacked lane independently
+  ---
+  duration_ms: 1.441584
+  type: 'test'
+  ...
+# Subtest: route presets remain compiler-owned during independent lane measurement
+ok 8 - route presets remain compiler-owned during independent lane measurement
+  ---
+  duration_ms: 1.059083
+  type: 'test'
+  ...
+# Subtest: explicit viewBox retains shared-height readable-v2 geometry
+ok 9 - explicit viewBox retains shared-height readable-v2 geometry
+  ---
+  duration_ms: 0.63675
+  type: 'test'
+  ...
+# Subtest: absolute route pins retain shared-height readable-v2 geometry
+ok 10 - absolute route pins retain shared-height readable-v2 geometry
+  ---
+  duration_ms: 2.087875
+  type: 'test'
+  ...
+# Subtest: an automatic readable-v2 vertical stack opts into width-first reader fitting
+ok 11 - an automatic readable-v2 vertical stack opts into width-first reader fitting
+  ---
+  duration_ms: 0.656625
+  type: 'test'
+  ...
+# Subtest: a readable-v2 node without an authored width grows to fit its label
+ok 12 - a readable-v2 node without an authored width grows to fit its label
+  ---
+  duration_ms: 3.9695
+  type: 'test'
+  ...
+# Subtest: automatic widths are recomputed after editing the same workflow object
+ok 13 - automatic widths are recomputed after editing the same workflow object
+  ---
+  duration_ms: 8.880875
+  type: 'test'
+  ...
+# Subtest: switching an edited document to fixed-v1 does not reuse automatic widths
+ok 14 - switching an edited document to fixed-v1 does not reuse automatic widths
+  ---
+  duration_ms: 2.549708
+  type: 'test'
+  ...
+# Subtest: authored canvases and standard workflows preserve bounded sublabel fonts
+ok 15 - authored canvases and standard workflows preserve bounded sublabel fonts
+  ---
+  duration_ms: 10.1
+  type: 'test'
+  ...
+# Subtest: readable-v2 sublabels must fit at the size that stays readable on the final canvas
+ok 16 - readable-v2 sublabels must fit at the size that stays readable on the final canvas
+  ---
+  duration_ms: 4.135791
+  type: 'test'
+  ...
+# Subtest: automatic showcase rejects a sublabel floor above the fixed row font budget
+ok 17 - automatic showcase rejects a sublabel floor above the fixed row font budget
+  ---
+  duration_ms: 6.571125
+  type: 'test'
+  ...
+# Subtest: an automatic readable-v2 canvas too tall for the desktop page reads at page width
+ok 18 - an automatic readable-v2 canvas too tall for the desktop page reads at page width
+  ---
+  duration_ms: 16.834417
+  type: 'test'
+  ...
+# Subtest: stack reader fitting stays off for authored canvases, fixed-v1, and workflows without a vertical stack
+ok 19 - stack reader fitting stays off for authored canvases, fixed-v1, and workflows without a vertical stack
+  ---
+  duration_ms: 4.484542
+  type: 'test'
+  ...
+# Subtest: independent lane measurement keeps a negative-offset member clear of its group label
+ok 20 - independent lane measurement keeps a negative-offset member clear of its group label
+  ---
+  duration_ms: 0.447042
+  type: 'test'
+  ...
+# Subtest: structural identity errors remain primary over derivative group containment
+ok 21 - structural identity errors remain primary over derivative group containment
+  ---
+  duration_ms: 0.269417
+  type: 'test'
+  ...
+# Subtest: fixed-v1 reports one causal column-capacity diagnostic for issue \#126
+ok 22 - fixed-v1 reports one causal column-capacity diagnostic for issue \#126
+  ---
+  duration_ms: 6.293833
+  type: 'test'
+  ...
+# Subtest: fixed-v1 verifies the real coordinate migration before advertising it
+ok 23 - fixed-v1 verifies the real coordinate migration before advertising it
+  ---
+  duration_ms: 3.153833
+  type: 'test'
+  ...
+# Subtest: readable-v2 supports every adjacent rank with and without a semantic label
+ok 24 - readable-v2 supports every adjacent rank with and without a semantic label
+  ---
+  duration_ms: 76.448083
+  type: 'test'
+  ...
+# Subtest: readable-v2 satisfies the complete adjacent-rank acceptance matrix
+ok 25 - readable-v2 satisfies the complete adjacent-rank acceptance matrix
+  ---
+  duration_ms: 254.934542
+  type: 'test'
+  ...
+# Subtest: readable-v2 phase and group frames derive from solved ranks without moving the core geometry
+ok 26 - readable-v2 phase and group frames derive from solved ranks without moving the core geometry
+  ---
+  duration_ms: 37.927292
+  type: 'test'
+  ...
+# Subtest: readable-v2 treats the phase header mask as a routing obstacle
+ok 27 - readable-v2 treats the phase header mask as a routing obstacle
+  ---
+  duration_ms: 0.993542
+  type: 'test'
+  ...
+# Subtest: readable-v2 never routes through a single-rank group label
+ok 28 - readable-v2 never routes through a single-rank group label
+  ---
+  duration_ms: 7.706709
+  type: 'test'
+  ...
+# Subtest: readable-v2 shifts top-side routes beyond lane header text deterministically
+ok 29 - readable-v2 shifts top-side routes beyond lane header text deterministically
+  ---
+  duration_ms: 1.435791
+  type: 'test'
+  ...
+# Subtest: an authored historical workflow canvas retains its valid rank plan
+ok 30 - an authored historical workflow canvas retains its valid rank plan
+  ---
+  duration_ms: 58.305
+  type: 'test'
+  ...
+# Subtest: explicit viewBox width is containment capacity and never stretches its historical readable-v2 geometry
+ok 31 - explicit viewBox width is containment capacity and never stretches its historical readable-v2 geometry
+  ---
+  duration_ms: 136.877583
+  type: 'test'
+  ...
+# Subtest: capacity-only viewBox failures preserve historical routes, labels, and requirement
+ok 32 - capacity-only viewBox failures preserve historical routes, labels, and requirement
+  ---
+  duration_ms: 21.755333
+  type: 'test'
+  ...
+# Subtest: explicit viewBox capacity names the rank and label constraints that require more width
+ok 33 - explicit viewBox capacity names the rank and label constraints that require more width
+  ---
+  duration_ms: 5.70225
+  type: 'test'
+  ...
+# Subtest: explicit viewBox capacity names the rank and authored node widths that require more width
+ok 34 - explicit viewBox capacity names the rank and authored node widths that require more width
+  ---
+  duration_ms: 5.95525
+  type: 'test'
+  ...
+# Subtest: explicit viewBox height capacity names the authored tall node without naming a hidden legend
+ok 35 - explicit viewBox height capacity names the authored tall node without naming a hidden legend
+  ---
+  duration_ms: 0.608375
+  type: 'test'
+  ...
+# Subtest: readable-v2 measures asymmetric custom widths and CJK edge labels
+ok 36 - readable-v2 measures asymmetric custom widths and CJK edge labels
+  ---
+  duration_ms: 8.603416
+  type: 'test'
+  ...
+# Subtest: readable-v2 compares long-label gutter growth with a legal automatic channel
+ok 37 - readable-v2 compares long-label gutter growth with a legal automatic channel
+  ---
+  duration_ms: 9.352541
+  type: 'test'
+  ...
+# Subtest: readable-v2 property matrix satisfies every adjacent rank across supported representative widths
+ok 38 - readable-v2 property matrix satisfies every adjacent rank across supported representative widths
+  ---
+  duration_ms: 447.056583
+  type: 'test'
+  ...
+# Subtest: readable-v2 expands rank spans for measured phase and group label capacity
+ok 39 - readable-v2 expands rank spans for measured phase and group label capacity
+  ---
+  duration_ms: 1.698875
+  type: 'test'
+  ...
+# Subtest: readable-v2 contains a long single-rank group label in its frame and intrinsic canvas
+ok 40 - readable-v2 contains a long single-rank group label in its frame and intrinsic canvas
+  ---
+  duration_ms: 0.406291
+  type: 'test'
+  ...
+# Subtest: readable-v2 group frames contain custom-width member rectangles on every side
+ok 41 - readable-v2 group frames contain custom-width member rectangles on every side
+  ---
+  duration_ms: 0.2175
+  type: 'test'
+  ...
+# Subtest: readable-v2 group frames contain tagged and tall members away from the label rail
+ok 42 - readable-v2 group frames contain tagged and tall members away from the label rail
+  ---
+  duration_ms: 0.436
+  type: 'test'
+  ...
+# Subtest: readable-v2 keeps a first-rank group label mask clear of its lane header mask
+ok 43 - readable-v2 keeps a first-rank group label mask clear of its lane header mask
+  ---
+  duration_ms: 0.162459
+  type: 'test'
+  ...
+# Subtest: readable-v2 measures multi-row legends into intrinsic and explicit viewBox capacity
+ok 44 - readable-v2 measures multi-row legends into intrinsic and explicit viewBox capacity
+  ---
+  duration_ms: 17.900583
+  type: 'test'
+  ...
+# Subtest: a wide node in an unrelated lane does not expand the adjacent-rank gap
+ok 45 - a wide node in an unrelated lane does not expand the adjacent-rank gap
+  ---
+  duration_ms: 3.2535
+  type: 'test'
+  ...
+# Subtest: explicit labelAt participates in readable-v2 viewBox containment
+ok 46 - explicit labelAt participates in readable-v2 viewBox containment
+  ---
+  duration_ms: 6.639625
+  type: 'test'
+  ...
+# Subtest: sanitized downstream fixtures cover labels, explicit routes, custom widths, and explicit viewBoxes
+ok 47 - sanitized downstream fixtures cover labels, explicit routes, custom widths, and explicit viewBoxes
+  ---
+  duration_ms: 7.652209
+  type: 'test'
+  ...
+# Subtest: readable-v2 SVG and receipt bytes are deterministic across repeated and reordered input
+ok 48 - readable-v2 SVG and receipt bytes are deterministic across repeated and reordered input
+  ---
+  duration_ms: 22.786
+  type: 'test'
+  ...
+# Subtest: CLI validate workflow --layout-json prints the stable compiler receipt
+ok 49 - CLI validate workflow --layout-json prints the stable compiler receipt
+  ---
+  duration_ms: 147.149875
+  type: 'test'
+  ...
+# Subtest: CLI validate workflow --layout-json returns only the causal compiler failure receipt
+ok 50 - CLI validate workflow --layout-json returns only the causal compiler failure receipt
+  ---
+  duration_ms: 154.362625
+  type: 'test'
+  ...
+# Subtest: a dense automatic first draft routes between columns without crossings
+ok 51 - a dense automatic first draft routes between columns without crossings
+  ---
+  duration_ms: 74.987875
+  type: 'test'
+  ...
+# Subtest: decision identity preserves type; conditions use the existing visible and accessible label path
+ok 52 - decision identity preserves type; conditions use the existing visible and accessible label path
+  ---
+  duration_ms: 54.200333
+  type: 'test'
+  ...
+# Subtest: condition and action text share measured geometry without swallowing or duplicating author text
+ok 53 - condition and action text share measured geometry without swallowing or duplicating author text
+  ---
+  duration_ms: 98.199875
+  type: 'test'
+  ...
+# Subtest: missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+ok 54 - missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+  ---
+  duration_ms: 25.492
+  type: 'test'
+  ...
+# Subtest: explicit icons remain authoritative; decorative icons and branch count never imply a decision
+ok 55 - explicit icons remain authoritative; decorative icons and branch count never imply a decision
+  ---
+  duration_ms: 29.168042
+  type: 'test'
+  ...
+# Subtest: optional authoring fields work in v1 and v2 without inferring condition logic
+ok 56 - optional authoring fields work in v1 and v2 without inferring condition logic
+  ---
+  duration_ms: 47.057209
+  type: 'test'
+  ...
+# Subtest: invalid condition shapes fail schema validation, independently of a missing-condition warning
+ok 57 - invalid condition shapes fail schema validation, independently of a missing-condition warning
+  ---
+  duration_ms: 0.714542
+  type: 'test'
+  ...
+# Subtest: public validate and deliver expose the same warning and still deliver a partial showcase
+ok 58 - public validate and deliver expose the same warning and still deliver a partial showcase
+  ---
+  duration_ms: 1368.909375
+  type: 'test'
+  ...
+# Subtest: migration geometry helpers construct mapped v2 candidates without mutating the source
+ok 59 - migration geometry helpers construct mapped v2 candidates without mutating the source
+  ---
+  duration_ms: 1.362917
+  type: 'test'
+  ...
+# Subtest: document migration treats a legacy explicit viewBox as capacity and expands it monotonically
+ok 60 - document migration treats a legacy explicit viewBox as capacity and expands it monotonically
+  ---
+  duration_ms: 14.106167
+  type: 'test'
+  ...
+# Subtest: CLI atomically commits a capacity-expanded migration and preserves source bytes
+ok 61 - CLI atomically commits a capacity-expanded migration and preserves source bytes
+  ---
+  duration_ms: 338.438958
+  type: 'test'
+  ...
+# Subtest: CLI migration can repair a missing legacy output only in the v2 destination
+ok 62 - CLI migration can repair a missing legacy output only in the v2 destination
+  ---
+  duration_ms: 462.061042
+  type: 'test'
+  ...
+# Subtest: CLI migration repairs an invalid legacy output only with an explicit portable replacement
+ok 63 - CLI migration repairs an invalid legacy output only with an explicit portable replacement
+  ---
+  duration_ms: 348.192167
+  type: 'test'
+  ...
+# Subtest: CLI migration replacement does not hide malformed non-output schema errors
+ok 64 - CLI migration replacement does not hide malformed non-output schema errors
+  ---
+  duration_ms: 81.763917
+  type: 'test'
+  ...
+# Subtest: column-capacity diagnostics do not advertise migration across a quality-profile divergence
+ok 65 - column-capacity diagnostics do not advertise migration across a quality-profile divergence
+  ---
+  duration_ms: 87.116583
+  type: 'test'
+  ...
+# Subtest: document migration uses the authored profile and returns an independently compilable document
+ok 66 - document migration uses the authored profile and returns an independently compilable document
+  ---
+  duration_ms: 24.48725
+  type: 'test'
+  ...
+# Subtest: document migration defaults an omitted profile to standard
+ok 67 - document migration defaults an omitted profile to standard
+  ---
+  duration_ms: 26.573125
+  type: 'test'
+  ...
+# Subtest: CLI migration ignores ambient standard for an authored showcase workflow
+ok 68 - CLI migration ignores ambient standard for an authored showcase workflow
+  ---
+  duration_ms: 179.261792
+  type: 'test'
+  ...
+# Subtest: CLI migration ignores ambient showcase for an authored standard workflow
+ok 69 - CLI migration ignores ambient showcase for an authored standard workflow
+  ---
+  duration_ms: 332.757458
+  type: 'test'
+  ...
+# Subtest: CLI migration makes the blocking new-schema diagnostic primary over pre-existing findings
+ok 70 - CLI migration makes the blocking new-schema diagnostic primary over pre-existing findings
+  ---
+  duration_ms: 169.497875
+  type: 'test'
+  ...
+# Subtest: workflow migration remaps absolute x coordinates, expands only the constrained viewBox axis, and reports hashes
+ok 71 - workflow migration remaps absolute x coordinates, expands only the constrained viewBox axis, and reports hashes
+  ---
+  duration_ms: 298.075083
+  type: 'test'
+  ...
+# Subtest: workflow migration never shrinks an already spacious explicit viewBox
+ok 72 - workflow migration never shrinks an already spacious explicit viewBox
+  ---
+  duration_ms: 282.473125
+  type: 'test'
+  ...
+# Subtest: workflow migration reports the measured legacy requirement separately from authored capacity
+ok 73 - workflow migration reports the measured legacy requirement separately from authored capacity
+  ---
+  duration_ms: 0.681625
+  type: 'test'
+  ...
+# Subtest: workflow migration staging never aliases a destination named like its verification artifact
+ok 74 - workflow migration staging never aliases a destination named like its verification artifact
+  ---
+  duration_ms: 295.615917
+  type: 'test'
+  ...
+# Subtest: workflow migration cleanup failure warns without reversing a successful commit
+ok 75 - workflow migration cleanup failure warns without reversing a successful commit
+  ---
+  duration_ms: 292.354459
+  type: 'test'
+  ...
+# Subtest: workflow migration cleanup preserves an unexpected claimant in its private staging directory
+ok 76 - workflow migration cleanup preserves an unexpected claimant in its private staging directory
+  ---
+  duration_ms: 1394.955667
+  type: 'test'
+  ...
+# Subtest: workflow migration is idempotent when its v2 destination is migrated again
+ok 77 - workflow migration is idempotent when its v2 destination is migrated again
+  ---
+  duration_ms: 585.282958
+  type: 'test'
+  ...
+# Subtest: fallback planning preserves straight-edge rank constraints when mapping absolute pins
+ok 78 - fallback planning preserves straight-edge rank constraints when mapping absolute pins
+  ---
+  duration_ms: 262.783
+  type: 'test'
+  ...
+# Subtest: workflow migration preserves causal route diagnostics for packaged incident-response.workflow.json
+ok 79 - workflow migration preserves causal route diagnostics for packaged incident-response.workflow.json
+  ---
+  duration_ms: 405.8095
+  type: 'test'
+  ...
+# Subtest: workflow migration preserves causal route diagnostics for packaged release-delivery.workflow.json
+ok 80 - workflow migration preserves causal route diagnostics for packaged release-delivery.workflow.json
+  ---
+  duration_ms: 617.114458
+  type: 'test'
+  ...
+# Subtest: workflow migration rejects the source path as its destination without changing the file
+ok 81 - workflow migration rejects the source path as its destination without changing the file
+  ---
+  duration_ms: 38.904458
+  type: 'test'
+  ...
+# Subtest: workflow migration reports a cyclic-symlink destination as structured JSON
+ok 82 - workflow migration reports a cyclic-symlink destination as structured JSON
+  ---
+  duration_ms: 41.583208
+  type: 'test'
+  ...
+# Subtest: workflow migration rejects a dangling destination symlink without touching it
+ok 83 - workflow migration rejects a dangling destination symlink without touching it
+  ---
+  duration_ms: 113.713917
+  type: 'test'
+  ...
+# Subtest: workflow migration preserves a destination claimant created before final verification
+ok 84 - workflow migration preserves a destination claimant created before final verification
+  ---
+  duration_ms: 290.861583
+  type: 'test'
+  ...
+# Subtest: workflow migration preserves candidate and destination claimants introduced in the publish window
+ok 85 - workflow migration preserves candidate and destination claimants introduced in the publish window
+  ---
+  duration_ms: 1398.656875
+  type: 'test'
+  ...
+# Subtest: workflow migration verifies the final published binding and preserves a last-window target claimant
+ok 86 - workflow migration verifies the final published binding and preserves a last-window target claimant
+  ---
+  duration_ms: 334.201458
+  type: 'test'
+  ...
+# Subtest: workflow migration preserves an existing destination replaced during candidate mode finalization
+ok 87 - workflow migration preserves an existing destination replaced during candidate mode finalization
+  ---
+  duration_ms: 301.875584
+  type: 'test'
+  ...
+# Subtest: failed workflow migration emits diagnostics and never writes its destination
+ok 88 - failed workflow migration emits diagnostics and never writes its destination
+  ---
+  duration_ms: 163.053667
+  type: 'test'
+  ...
+1..88
+# tests 88
+# suites 0
+# pass 88
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9318.011292

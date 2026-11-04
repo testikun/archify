@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "c955ce81-04a4-4a5e-a2fd-72e152dee766",
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "<workspace>/issue-312-investigation/implementation/inputs/long-condition.json",
+  "output": "<workspace>/issue-312-investigation/implementation/artifacts/long-condition.html",
+  "specification": {
+    "sha256": "378a9f52fbaae926c337324415bcced0db91dc51243d4585a27067a245cc3289",
+    "bytes": 968
+  },
+  "artifact": {
+    "sha256": "ef997fc7c0d6f826c226a839493be0c41b49c79a6fd880d54d8de49c17b30442",
+    "bytes": 855258
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

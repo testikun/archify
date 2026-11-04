@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-04T07:42:41.830911+00:00",
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "branch": "codex/issue-312-decision-conditions",
+  "committed": false,
+  "files": {
+    "archify.zip": "4703f4e7aa8b529e7da2182cd2013048147beffd02989cd1636b8f70ed52f130",
+    "archify/bin/archify.mjs": "79160bcdee8a9fa8282b383786b5b81cb30b9ed52aab85bfff9359a858744c0f",
+    "archify/examples/agent-tool-call.workflow.json": "8bed8d8500749de9fb9acb6d2b0dde8fb9dd16db04db61a4278c77032b7092e0",
+    "archify/examples/workflow-agent-tool-call-rendered.html": "977ddf05915763184f85290c0ba526af88b7afef3d63b6d646f33e6c3b662465",
+    "archify/references/authoring-contract.md": "0d361ccf4ba8347ea53be0ea7825c15276dc71d6e3ff2dd0406c73d69d9ccc98",
+    "archify/renderers/shared/generated-validators.mjs": "35477aaa89205894396230b0dbcda471bcaa4a34b8bb8bcfbd6487b3774557a5",
+    "archify/renderers/workflow/README.md": "916f92597a7e5ee3cd79be1e7c0520f8f50be5f943c88f8bdfffef9c410d5d35",
+    "archify/renderers/workflow/render-workflow.mjs": "4047ed2bad0b1ee73b14dc6d37ec008e1d773c567e61069854570488cb3131db",
+    "archify/renderers/workflow/workflow-compiler.mjs": "8ac0faa4d9b49ddc42a6592408a0cf79c8c3fb5762648fe404876880780b999d",
+    "archify/renderers/workflow/workflow-decisions.mjs": "b46849fa9021ab577483caea0ee9e913fdeebacf1b98218c15502bc7caa24632",
+    "archify/renderers/workflow/workflow-migration-geometry.mjs": "099336c9d948caa34e198dd8130b32414445b0c3cd84817d8122e4d111b8cb9d",
+    "archify/schemas/workflow.schema.json": "e9d6c9a1c943b101c91a4db9ed6e65ed266fac9fee0a4021e7ed726a9250fb74",
+    "docs/assets/archify-live-proof.gif": "eaf911eb9d90b536ded291a650eb7a0f5411a5687f8d25ca202501e29e547cd2",
+    "docs/assets/archify-live-proof.json": "36b1b907f1eae5a5b55246e6bcfe6b832271191cf10192ddf93e1e3448e7494d",
+    "docs/gallery.html": "73d420d5c38781b6f416d3d513aac457c372c159bc9f7090df7dcc3dfb629309",
+    "docs/gallery/artifacts/agent-tool-call.workflow.html": "977ddf05915763184f85290c0ba526af88b7afef3d63b6d646f33e6c3b662465",
+    "docs/gallery/manifest.json": "334c17548ce92d56f14cb6671367c2a27a1ae3b02bb590cae99d6f454131b347",
+    "docs/gallery/sources/agent-tool-call.workflow.json": "8bed8d8500749de9fb9acb6d2b0dde8fb9dd16db04db61a4278c77032b7092e0",
+    "examples/workflow-agent-tool-call-rendered.html": "977ddf05915763184f85290c0ba526af88b7afef3d63b6d646f33e6c3b662465",
+    "scripts/browser-test-inventory.mjs": "bb3a5d7b21fa26a0296cf5617900959815b00ccb7ad6e8ba256630da2b4d9f8b",
+    "test/workflow-decision-browser.test.mjs": "aee6cd5865b0e070b54311cae02cd654105ea815ce0531efd23aa064ebf65aac",
+    "test/workflow-decision.test.mjs": "884a0254f53ecef33bcd8b9be0fd99e296c719a5306a1966ce639e03d5b01e03"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "fcc05dc1-85bf-411b-97b4-ada2d9cc78bb",
+  "ok": true,
+  "command": "deliver",
+  "type": "workflow",
+  "input": "<workspace>/issue-312-investigation/implementation/inputs/partial.json",
+  "output": "<workspace>/issue-312-investigation/implementation/artifacts/partial.html",
+  "specification": {
+    "sha256": "9ba96e40f93dafd410831580568bc498c6faf5f885cb70b24705e331c1ea64e3",
+    "bytes": 926
+  },
+  "artifact": {
+    "sha256": "97b8f1a70b10c903e060405686dceab4628e2e96e3ca5a33e283975d3a3a5cf1",
+    "bytes": 855059
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.2.1-dev.1",
+    "availableVersion": "3.2.0",
+    "releaseNotes": null,
+    "checkedAt": "2026-11-03T07:18:10.070Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  }
+}

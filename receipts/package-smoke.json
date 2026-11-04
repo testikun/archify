@@ -1,0 +1,45 @@
+{
+  "zipSha256": "4703f4e7aa8b529e7da2182cd2013048147beffd02989cd1636b8f70ed52f130",
+  "outsideRepository": true,
+  "node": "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+  "records": [
+    {
+      "case": "native-after",
+      "exit": 0,
+      "warnings": [],
+      "artifactChecks": null
+    },
+    {
+      "case": "retry",
+      "exit": 0,
+      "warnings": [],
+      "artifactChecks": null
+    },
+    {
+      "case": "missing-condition",
+      "exit": 0,
+      "warnings": [
+        {
+          "code": "workflow/missing-branch-condition",
+          "severity": "warning",
+          "message": "Decision \"budget\" has an outgoing edge \"remaining\" without an explicit condition.",
+          "subject": {
+            "diagramType": "workflow",
+            "edge": "remaining",
+            "from": "budget",
+            "to": "again",
+            "path": "/edges/0/condition"
+          },
+          "evidence": {
+            "decision": true,
+            "label": "retry request"
+          },
+          "supportedFixes": [
+            "add condition.value to /edges/0 describing when this branch is taken; label may retain its action or relationship text"
+          ]
+        }
+      ],
+      "artifactChecks": null
+    }
+  ]
+}

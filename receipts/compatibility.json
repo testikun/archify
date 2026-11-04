@@ -1,0 +1,137 @@
+{
+  "baseline": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "records": [
+    {
+      "file": "archify/examples/agent-tool-call.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    },
+    {
+      "file": "archify/examples/holiday-planning.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    },
+    {
+      "file": "archify/examples/incident-response.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    },
+    {
+      "file": "archify/examples/release-delivery.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    },
+    {
+      "file": "test/fixtures/v1-baseline/agent-tool-call.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    },
+    {
+      "file": "test/fixtures/v1-workflow-explicit-coordinates.workflow.json",
+      "ok": true,
+      "svgBytesEqual": true,
+      "receiptEqual": true
+    }
+  ],
+  "nativeBeforeAfter": {
+    "nodeGeometryUnchanged": true,
+    "routesUnchanged": true,
+    "beforeLabels": [
+      {
+        "edge": "approval-check",
+        "label": "needs approval?",
+        "x": 618.2,
+        "y": 292,
+        "width": 82,
+        "height": 14
+      },
+      {
+        "edge": "approval-denied",
+        "label": "denied",
+        "x": 748.6,
+        "y": 377,
+        "width": 38.8,
+        "height": 14
+      },
+      {
+        "edge": "plan-request",
+        "label": "plan",
+        "x": 353.6,
+        "y": 243,
+        "width": 30,
+        "height": 14
+      },
+      {
+        "edge": "record-result",
+        "label": "record result",
+        "x": 748.6,
+        "y": 569,
+        "width": 72.4,
+        "height": 14
+      },
+      {
+        "edge": "write-trace-memory",
+        "label": "trace + memory",
+        "x": 386.6,
+        "y": 511,
+        "width": 77.2,
+        "height": 14
+      }
+    ],
+    "afterLabels": [
+      {
+        "edge": "approval-check",
+        "label": "needs approval?",
+        "x": 618.2,
+        "y": 292,
+        "width": 82,
+        "height": 14
+      },
+      {
+        "edge": "approval-denied",
+        "label": "denied",
+        "x": 748.6,
+        "y": 377,
+        "width": 38.8,
+        "height": 14
+      },
+      {
+        "edge": "approved-tool",
+        "label": "approved",
+        "x": 715.6,
+        "y": 511,
+        "width": 48.4,
+        "height": 14
+      },
+      {
+        "edge": "plan-request",
+        "label": "plan",
+        "x": 353.6,
+        "y": 243,
+        "width": 30,
+        "height": 14
+      },
+      {
+        "edge": "record-result",
+        "label": "record result",
+        "x": 748.6,
+        "y": 569,
+        "width": 72.4,
+        "height": 14
+      },
+      {
+        "edge": "write-trace-memory",
+        "label": "trace + memory",
+        "x": 386.6,
+        "y": 511,
+        "width": 77.2,
+        "height": 14
+      }
+    ]
+  }
+}

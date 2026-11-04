@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "Retry policy",
+    "subtitle": "A branch explains when the next action is taken",
+    "output": "retry.html",
+    "quality_profile": "showcase",
+    "visual_preset": "classic"
+  },
+  "lanes": [
+    {
+      "id": "attempt",
+      "label": "Request handling"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "budget",
+      "lane": "attempt",
+      "col": 0,
+      "type": "backend",
+      "decision": true,
+      "label": "Retry policy",
+      "sublabel": "remaining attempts",
+      "width": 170
+    },
+    {
+      "id": "again",
+      "lane": "attempt",
+      "col": 3,
+      "type": "backend",
+      "label": "Try again",
+      "width": 150
+    }
+  ],
+  "edges": [
+    {
+      "id": "remaining",
+      "from": "budget",
+      "to": "again",
+      "condition": {
+        "value": "Budget remaining"
+      },
+      "label": "retry request"
+    }
+  ]
+}

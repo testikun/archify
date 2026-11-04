@@ -1,0 +1,128 @@
+[
+  {
+    "case": "native-before",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/recheck-20261103/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/native-before.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/native-before.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "72cc1aa11728c295e3513c86abfa8661a025ba2ef34a678d3b7e03573082f578"
+  },
+  {
+    "case": "native-after",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/native-after.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/native-after.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "4a9f5b37c5da1fd6fdae88b2f284da18f0a6ed54a348ac6f03fff6b7a461b5a7"
+  },
+  {
+    "case": "retry",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/retry.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/retry.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "d2f23398e5217d47a84fdb1ba00ffa07fcdfe3d9cbc7b5d603521a4c06f62913"
+  },
+  {
+    "case": "chinese",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/chinese.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/chinese.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "eb3ec0873c46cd938c26a5fc93fcd133c7ca4b61c1188c01f90052e3ee144eed"
+  },
+  {
+    "case": "partial",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/partial.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/partial.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "9ba96e40f93dafd410831580568bc498c6faf5f885cb70b24705e331c1ea64e3"
+  },
+  {
+    "case": "missing-condition",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/missing-condition.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/missing-condition.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "fc24ec49baa18328e3e538d5f5f27e18d17e9ed289016213225caab961e42522"
+  },
+  {
+    "case": "long-condition",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/long-condition.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/long-condition.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "378a9f52fbaae926c337324415bcced0db91dc51243d4585a27067a245cc3289"
+  },
+  {
+    "case": "legacy-v1",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/legacy-v1.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/legacy-v1.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "49b0bffd050821d629a246d1b509163f02490e016f81f35ad84ed613c42afef0"
+  },
+  {
+    "case": "legacy-v2",
+    "command": [
+      "<workspace>/issue-452-investigation/implementation/toolchain/node-v22.23.2-darwin-arm64/bin/node",
+      "<workspace>/issue-312-investigation/implementation/source/archify/bin/archify.mjs",
+      "deliver",
+      "workflow",
+      "<workspace>/issue-312-investigation/implementation/inputs/legacy-v2.json",
+      "<workspace>/issue-312-investigation/implementation/artifacts/legacy-v2.html",
+      "--json"
+    ],
+    "exit": 0,
+    "inputSha256": "72cc1aa11728c295e3513c86abfa8661a025ba2ef34a678d3b7e03573082f578"
+  }
+]

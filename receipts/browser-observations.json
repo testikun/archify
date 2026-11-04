@@ -1,0 +1,1117 @@
+[
+  {
+    "key": "native-before-light-1440-still",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "approval-check",
+        "text": "needs approval?",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 752.1915283203125,
+        "screenY": 431.1092224121094,
+        "maskFits": true
+      },
+      {
+        "id": "approval-denied",
+        "text": "denied",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 925.5748291015625,
+        "screenY": 528.075927734375,
+        "maskFits": true
+      },
+      {
+        "id": "plan-request",
+        "text": "plan",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 480.44140625,
+        "screenY": 375.21075439453125,
+        "maskFits": true
+      },
+      {
+        "id": "record-result",
+        "text": "record result",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12.00006103515625,
+        "screenX": 906.4264526367188,
+        "screenY": 747.1065673828125,
+        "maskFits": true
+      },
+      {
+        "id": "write-trace-memory",
+        "text": "trace + memory",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 490.7279052734375,
+        "screenY": 680.9411010742188,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "kind": "external",
+        "context": "User Interface › Intake",
+        "aria": "Focus User, asks for work, User Interface › Intake",
+        "sigil": "external"
+      },
+      {
+        "id": "chat",
+        "kind": "frontend",
+        "context": "User Interface › Intake",
+        "aria": "Focus Chat Surface, thread + files, User Interface › Intake",
+        "sigil": "frontend"
+      },
+      {
+        "id": "final",
+        "kind": "backend",
+        "context": "User Interface › Execute + report",
+        "aria": "Focus Final Reply, answer + changes, User Interface › Execute + report",
+        "sigil": "backend"
+      },
+      {
+        "id": "planner",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Agent Planner, plan next step, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "router",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Tool Router, choose capability, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "approval",
+        "kind": "security",
+        "context": "Policy & Recovery › Human or policy stop › Plan + route",
+        "aria": "Focus Approval Gate, scope + consent, Policy & Recovery › Human or policy stop › Plan + route",
+        "sigil": "security"
+      },
+      {
+        "id": "blocked",
+        "kind": "security",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Blocked, wait or reject, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "security"
+      },
+      {
+        "id": "retry",
+        "kind": "messagebus",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Retry Path, revise request, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "store",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Intake",
+        "aria": "Focus Context Store, repo + memory, Tool Execution & Evidence › Evidence path › Intake",
+        "sigil": "database"
+      },
+      {
+        "id": "trace",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Plan + route",
+        "aria": "Focus Trace Log, events + output, Tool Execution & Evidence › Evidence path › Plan + route",
+        "sigil": "database"
+      },
+      {
+        "id": "tool",
+        "kind": "messagebus",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus Tool Call, shell / browser / MCP, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "external",
+        "kind": "cloud",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus External API, network service, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "cloud"
+      },
+      {
+        "id": "user",
+        "aria": "Focus User, 1 related connection"
+      },
+      {
+        "id": "chat",
+        "aria": "Focus Chat Surface, 2 related connections"
+      },
+      {
+        "id": "final",
+        "aria": "Focus Final Reply, 1 related connection"
+      },
+      {
+        "id": "planner",
+        "aria": "Focus Agent Planner, 2 related connections"
+      },
+      {
+        "id": "router",
+        "aria": "Focus Tool Router, 2 related connections"
+      },
+      {
+        "id": "approval",
+        "aria": "Focus Approval Gate, 3 related connections"
+      },
+      {
+        "id": "blocked",
+        "aria": "Focus Blocked, 2 related connections"
+      },
+      {
+        "id": "retry",
+        "aria": "Focus Retry Path, 1 related connection"
+      },
+      {
+        "id": "store",
+        "aria": "Focus Context Store, 1 related connection"
+      },
+      {
+        "id": "trace",
+        "aria": "Focus Trace Log, 2 related connections"
+      },
+      {
+        "id": "tool",
+        "aria": "Focus Tool Call, 2 related connections"
+      },
+      {
+        "id": "external",
+        "aria": "Focus External API, 3 related connections"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440
+  },
+  {
+    "key": "native-after-light-1440-still",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "approval-check",
+        "text": "needs approval?",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 752.1915283203125,
+        "screenY": 431.1092224121094,
+        "maskFits": true
+      },
+      {
+        "id": "approval-denied",
+        "text": "denied",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 925.5748291015625,
+        "screenY": 528.075927734375,
+        "maskFits": true
+      },
+      {
+        "id": "approved-tool",
+        "text": "approved",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 882.460205078125,
+        "screenY": 680.9411010742188,
+        "maskFits": true
+      },
+      {
+        "id": "plan-request",
+        "text": "plan",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 480.44140625,
+        "screenY": 375.21075439453125,
+        "maskFits": true
+      },
+      {
+        "id": "record-result",
+        "text": "record result",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12.00006103515625,
+        "screenX": 906.4264526367188,
+        "screenY": 747.1065673828125,
+        "maskFits": true
+      },
+      {
+        "id": "write-trace-memory",
+        "text": "trace + memory",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 490.7279052734375,
+        "screenY": 680.9411010742188,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "kind": "external",
+        "context": "User Interface › Intake",
+        "aria": "Focus User, asks for work, User Interface › Intake",
+        "sigil": "external"
+      },
+      {
+        "id": "chat",
+        "kind": "frontend",
+        "context": "User Interface › Intake",
+        "aria": "Focus Chat Surface, thread + files, User Interface › Intake",
+        "sigil": "frontend"
+      },
+      {
+        "id": "final",
+        "kind": "backend",
+        "context": "User Interface › Execute + report",
+        "aria": "Focus Final Reply, answer + changes, User Interface › Execute + report",
+        "sigil": "backend"
+      },
+      {
+        "id": "planner",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Agent Planner, plan next step, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "router",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Tool Router, choose capability, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "approval",
+        "kind": "security",
+        "context": "Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "aria": "Focus Approval Gate, scope + consent, Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "sigil": "decision"
+      },
+      {
+        "id": "blocked",
+        "kind": "security",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Blocked, wait or reject, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "security"
+      },
+      {
+        "id": "retry",
+        "kind": "messagebus",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Retry Path, revise request, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "store",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Intake",
+        "aria": "Focus Context Store, repo + memory, Tool Execution & Evidence › Evidence path › Intake",
+        "sigil": "database"
+      },
+      {
+        "id": "trace",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Plan + route",
+        "aria": "Focus Trace Log, events + output, Tool Execution & Evidence › Evidence path › Plan + route",
+        "sigil": "database"
+      },
+      {
+        "id": "tool",
+        "kind": "messagebus",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus Tool Call, shell / browser / MCP, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "external",
+        "kind": "cloud",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus External API, network service, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "cloud"
+      },
+      {
+        "id": "user",
+        "aria": "Focus User, 1 related connection"
+      },
+      {
+        "id": "chat",
+        "aria": "Focus Chat Surface, 2 related connections"
+      },
+      {
+        "id": "final",
+        "aria": "Focus Final Reply, 1 related connection"
+      },
+      {
+        "id": "planner",
+        "aria": "Focus Agent Planner, 2 related connections"
+      },
+      {
+        "id": "router",
+        "aria": "Focus Tool Router, 2 related connections"
+      },
+      {
+        "id": "approval",
+        "aria": "Focus Approval Gate, 3 related connections"
+      },
+      {
+        "id": "blocked",
+        "aria": "Focus Blocked, 2 related connections"
+      },
+      {
+        "id": "retry",
+        "aria": "Focus Retry Path, 1 related connection"
+      },
+      {
+        "id": "store",
+        "aria": "Focus Context Store, 1 related connection"
+      },
+      {
+        "id": "trace",
+        "aria": "Focus Trace Log, 2 related connections"
+      },
+      {
+        "id": "tool",
+        "aria": "Focus Tool Call, 2 related connections"
+      },
+      {
+        "id": "external",
+        "aria": "Focus External API, 3 related connections"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "passport": {
+      "text": "SEMANTIC PASSPORT\nApproval Gate\nscope + consent\nSECURITY\nDecision · Policy & Recovery › Human or policy stop › Plan + route\nblock risky ops\napproval\n2 outgoing · 1 incoming\nAUTHORED REACH\nUpstream\n4\nDownstream\n6\n×\nCopy link\nOUTGOING · 2\nOUT →\nBlocked\ndenied\nOUT →\nTool Call\napproved\nINCOMING · 1\n← IN\nTool Router\nneeds approval?",
+      "hidden": false
+    },
+    "exportContainsLabels": true
+  },
+  {
+    "key": "native-after-dark-1440-reduced",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "approval-check",
+        "text": "needs approval?",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 752.1915283203125,
+        "screenY": 431.1092224121094,
+        "maskFits": true
+      },
+      {
+        "id": "approval-denied",
+        "text": "denied",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 925.5748291015625,
+        "screenY": 528.075927734375,
+        "maskFits": true
+      },
+      {
+        "id": "approved-tool",
+        "text": "approved",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 882.460205078125,
+        "screenY": 680.9411010742188,
+        "maskFits": true
+      },
+      {
+        "id": "plan-request",
+        "text": "plan",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 480.44140625,
+        "screenY": 375.21075439453125,
+        "maskFits": true
+      },
+      {
+        "id": "record-result",
+        "text": "record result",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12.00006103515625,
+        "screenX": 906.4264526367188,
+        "screenY": 747.1065673828125,
+        "maskFits": true
+      },
+      {
+        "id": "write-trace-memory",
+        "text": "trace + memory",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 12,
+        "screenX": 490.7279052734375,
+        "screenY": 680.9411010742188,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "kind": "external",
+        "context": "User Interface › Intake",
+        "aria": "Focus User, asks for work, User Interface › Intake",
+        "sigil": "external"
+      },
+      {
+        "id": "chat",
+        "kind": "frontend",
+        "context": "User Interface › Intake",
+        "aria": "Focus Chat Surface, thread + files, User Interface › Intake",
+        "sigil": "frontend"
+      },
+      {
+        "id": "final",
+        "kind": "backend",
+        "context": "User Interface › Execute + report",
+        "aria": "Focus Final Reply, answer + changes, User Interface › Execute + report",
+        "sigil": "backend"
+      },
+      {
+        "id": "planner",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Agent Planner, plan next step, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "router",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Tool Router, choose capability, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "approval",
+        "kind": "security",
+        "context": "Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "aria": "Focus Approval Gate, scope + consent, Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "sigil": "decision"
+      },
+      {
+        "id": "blocked",
+        "kind": "security",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Blocked, wait or reject, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "security"
+      },
+      {
+        "id": "retry",
+        "kind": "messagebus",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Retry Path, revise request, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "store",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Intake",
+        "aria": "Focus Context Store, repo + memory, Tool Execution & Evidence › Evidence path › Intake",
+        "sigil": "database"
+      },
+      {
+        "id": "trace",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Plan + route",
+        "aria": "Focus Trace Log, events + output, Tool Execution & Evidence › Evidence path › Plan + route",
+        "sigil": "database"
+      },
+      {
+        "id": "tool",
+        "kind": "messagebus",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus Tool Call, shell / browser / MCP, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "external",
+        "kind": "cloud",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus External API, network service, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "cloud"
+      },
+      {
+        "id": "user",
+        "aria": "Focus User, 1 related connection"
+      },
+      {
+        "id": "chat",
+        "aria": "Focus Chat Surface, 2 related connections"
+      },
+      {
+        "id": "final",
+        "aria": "Focus Final Reply, 1 related connection"
+      },
+      {
+        "id": "planner",
+        "aria": "Focus Agent Planner, 2 related connections"
+      },
+      {
+        "id": "router",
+        "aria": "Focus Tool Router, 2 related connections"
+      },
+      {
+        "id": "approval",
+        "aria": "Focus Approval Gate, 3 related connections"
+      },
+      {
+        "id": "blocked",
+        "aria": "Focus Blocked, 2 related connections"
+      },
+      {
+        "id": "retry",
+        "aria": "Focus Retry Path, 1 related connection"
+      },
+      {
+        "id": "store",
+        "aria": "Focus Context Store, 1 related connection"
+      },
+      {
+        "id": "trace",
+        "aria": "Focus Trace Log, 2 related connections"
+      },
+      {
+        "id": "tool",
+        "aria": "Focus Tool Call, 2 related connections"
+      },
+      {
+        "id": "external",
+        "aria": "Focus External API, 3 related connections"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "passport": {
+      "text": "SEMANTIC PASSPORT\nApproval Gate\nscope + consent\nSECURITY\nDecision · Policy & Recovery › Human or policy stop › Plan + route\nblock risky ops\napproval\n2 outgoing · 1 incoming\nAUTHORED REACH\nUpstream\n4\nDownstream\n6\n×\nCopy link\nOUTGOING · 2\nOUT →\nBlocked\ndenied\nOUT →\nTool Call\napproved\nINCOMING · 1\n← IN\nTool Router\nneeds approval?",
+      "hidden": false
+    },
+    "exportContainsLabels": true
+  },
+  {
+    "key": "retry-light-1440-still",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "exhausted",
+        "text": "Budget exhausted · escalate",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18.000030517578125,
+        "screenX": 461.0011291503906,
+        "screenY": 378.8785400390625,
+        "maskFits": true
+      },
+      {
+        "id": "remaining",
+        "text": "Budget remaining · retry request",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18,
+        "screenX": 449.324951171875,
+        "screenY": 300.4876708984375,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "budget",
+        "kind": "backend",
+        "context": "Decision · Request handling",
+        "aria": "Focus Retry policy, remaining attempts, Decision · Request handling",
+        "sigil": "decision"
+      },
+      {
+        "id": "again",
+        "kind": "backend",
+        "context": "Request handling",
+        "aria": "Focus Try again, Request handling",
+        "sigil": "backend"
+      },
+      {
+        "id": "fallback",
+        "kind": "external",
+        "context": "Fallback",
+        "aria": "Focus Ask operator, Fallback",
+        "sigil": "external"
+      },
+      {
+        "id": "budget",
+        "aria": "Focus Retry policy, 2 related connections"
+      },
+      {
+        "id": "again",
+        "aria": "Focus Try again, 1 related connection"
+      },
+      {
+        "id": "fallback",
+        "aria": "Focus Ask operator, 1 related connection"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "passport": {
+      "text": "SEMANTIC PASSPORT\nRetry policy\nremaining attempts\nBACKEND\nDecision · Request handling\nbudget\n2 outgoing · 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n2\n×\nCopy link\nOUTGOING · 2\nOUT →\nAsk operator\nBudget exhausted · escalate\nOUT →\nTry again\nBudget remaining · retry request",
+      "hidden": false
+    },
+    "exportContainsLabels": true
+  },
+  {
+    "key": "chinese-light-1440-reduced",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "exhausted",
+        "text": "已用完所有重试次数 · 交给人工处理",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18.000030517578125,
+        "screenX": 456.9933166503906,
+        "screenY": 378.8785400390625,
+        "maskFits": true
+      },
+      {
+        "id": "remaining",
+        "text": "剩余重试次数大于零 · 再次发送请求",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18,
+        "screenX": 465.3327941894531,
+        "screenY": 300.4876708984375,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "budget",
+        "kind": "backend",
+        "context": "决策 · Request handling",
+        "aria": "聚焦重试策略，检查剩余次数, 决策 · Request handling",
+        "sigil": "decision"
+      },
+      {
+        "id": "again",
+        "kind": "backend",
+        "context": "Request handling",
+        "aria": "聚焦再次请求，Request handling",
+        "sigil": "backend"
+      },
+      {
+        "id": "fallback",
+        "kind": "external",
+        "context": "Fallback",
+        "aria": "聚焦人工处理，Fallback",
+        "sigil": "external"
+      },
+      {
+        "id": "budget",
+        "aria": "聚焦重试策略，2 条相关连接"
+      },
+      {
+        "id": "again",
+        "aria": "聚焦再次请求，1 条相关连接"
+      },
+      {
+        "id": "fallback",
+        "aria": "聚焦人工处理，1 条相关连接"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "exportContainsLabels": true
+  },
+  {
+    "key": "long-condition-light-1440-still",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "remaining",
+        "text": "Request failed and the retry budget has not been exhausted · retry request",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18,
+        "screenX": 272.9105224609375,
+        "screenY": 388.88037109375,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "budget",
+        "kind": "backend",
+        "context": "Decision · Request handling",
+        "aria": "Focus Retry policy, remaining attempts, Decision · Request handling",
+        "sigil": "decision"
+      },
+      {
+        "id": "again",
+        "kind": "backend",
+        "context": "Request handling",
+        "aria": "Focus Try again, Request handling",
+        "sigil": "backend"
+      },
+      {
+        "id": "budget",
+        "aria": "Focus Retry policy, 1 related connection"
+      },
+      {
+        "id": "again",
+        "aria": "Focus Try again, 1 related connection"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "exportContainsLabels": true
+  },
+  {
+    "key": "partial-dark-1440-reduced",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "remaining",
+        "text": "Budget remaining · retry request",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 18,
+        "screenX": 449.3279113769531,
+        "screenY": 300.48394775390625,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "budget",
+        "kind": "backend",
+        "context": "Decision · Request handling",
+        "aria": "Focus Retry policy, remaining attempts, Decision · Request handling",
+        "sigil": "decision"
+      },
+      {
+        "id": "again",
+        "kind": "backend",
+        "context": "Request handling",
+        "aria": "Focus Try again, Request handling",
+        "sigil": "backend"
+      },
+      {
+        "id": "budget",
+        "aria": "Focus Retry policy, 1 related connection"
+      },
+      {
+        "id": "again",
+        "aria": "Focus Try again, 1 related connection"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 1440,
+    "viewport": 1440,
+    "exportContainsLabels": true
+  },
+  {
+    "key": "native-after-light-390-reduced",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "approval-check",
+        "text": "needs approval?",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 407.35833740234375,
+        "screenY": 353.68145751953125,
+        "maskFits": true
+      },
+      {
+        "id": "approval-denied",
+        "text": "denied",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 506.10888671875,
+        "screenY": 408.9151611328125,
+        "maskFits": true
+      },
+      {
+        "id": "approved-tool",
+        "text": "approved",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 481.54803466796875,
+        "screenY": 495.98944091796875,
+        "maskFits": true
+      },
+      {
+        "id": "plan-request",
+        "text": "plan",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 252.54408264160156,
+        "screenY": 321.84088134765625,
+        "maskFits": true
+      },
+      {
+        "id": "record-result",
+        "text": "record result",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 495.2104797363281,
+        "screenY": 533.6783447265625,
+        "maskFits": true
+      },
+      {
+        "id": "write-trace-memory",
+        "text": "trace + memory",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 7,
+        "screenX": 258.4174499511719,
+        "screenY": 495.98944091796875,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "user",
+        "kind": "external",
+        "context": "User Interface › Intake",
+        "aria": "Focus User, asks for work, User Interface › Intake",
+        "sigil": "external"
+      },
+      {
+        "id": "chat",
+        "kind": "frontend",
+        "context": "User Interface › Intake",
+        "aria": "Focus Chat Surface, thread + files, User Interface › Intake",
+        "sigil": "frontend"
+      },
+      {
+        "id": "final",
+        "kind": "backend",
+        "context": "User Interface › Execute + report",
+        "aria": "Focus Final Reply, answer + changes, User Interface › Execute + report",
+        "sigil": "backend"
+      },
+      {
+        "id": "planner",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Agent Planner, plan next step, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "router",
+        "kind": "backend",
+        "context": "Agent Runtime › Planning loop › Plan + route",
+        "aria": "Focus Tool Router, choose capability, Agent Runtime › Planning loop › Plan + route",
+        "sigil": "backend"
+      },
+      {
+        "id": "approval",
+        "kind": "security",
+        "context": "Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "aria": "Focus Approval Gate, scope + consent, Decision · Policy & Recovery › Human or policy stop › Plan + route",
+        "sigil": "decision"
+      },
+      {
+        "id": "blocked",
+        "kind": "security",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Blocked, wait or reject, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "security"
+      },
+      {
+        "id": "retry",
+        "kind": "messagebus",
+        "context": "Policy & Recovery › Human or policy stop › Execute + report",
+        "aria": "Focus Retry Path, revise request, Policy & Recovery › Human or policy stop › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "store",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Intake",
+        "aria": "Focus Context Store, repo + memory, Tool Execution & Evidence › Evidence path › Intake",
+        "sigil": "database"
+      },
+      {
+        "id": "trace",
+        "kind": "database",
+        "context": "Tool Execution & Evidence › Evidence path › Plan + route",
+        "aria": "Focus Trace Log, events + output, Tool Execution & Evidence › Evidence path › Plan + route",
+        "sigil": "database"
+      },
+      {
+        "id": "tool",
+        "kind": "messagebus",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus Tool Call, shell / browser / MCP, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "messagebus"
+      },
+      {
+        "id": "external",
+        "kind": "cloud",
+        "context": "Tool Execution & Evidence › Tool work › Execute + report",
+        "aria": "Focus External API, network service, Tool Execution & Evidence › Tool work › Execute + report",
+        "sigil": "cloud"
+      },
+      {
+        "id": "user",
+        "aria": "Focus User, 1 related connection"
+      },
+      {
+        "id": "chat",
+        "aria": "Focus Chat Surface, 2 related connections"
+      },
+      {
+        "id": "final",
+        "aria": "Focus Final Reply, 1 related connection"
+      },
+      {
+        "id": "planner",
+        "aria": "Focus Agent Planner, 2 related connections"
+      },
+      {
+        "id": "router",
+        "aria": "Focus Tool Router, 2 related connections"
+      },
+      {
+        "id": "approval",
+        "aria": "Focus Approval Gate, 3 related connections"
+      },
+      {
+        "id": "blocked",
+        "aria": "Focus Blocked, 2 related connections"
+      },
+      {
+        "id": "retry",
+        "aria": "Focus Retry Path, 1 related connection"
+      },
+      {
+        "id": "store",
+        "aria": "Focus Context Store, 1 related connection"
+      },
+      {
+        "id": "trace",
+        "aria": "Focus Trace Log, 2 related connections"
+      },
+      {
+        "id": "tool",
+        "aria": "Focus Tool Call, 2 related connections"
+      },
+      {
+        "id": "external",
+        "aria": "Focus External API, 3 related connections"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "passport": {
+      "text": "SEMANTIC PASSPORT\nApproval Gate\nscope + consent\nSECURITY\nDecision · Policy & Recovery › Human or policy stop › Plan + route\nblock risky ops\napproval\n2 outgoing · 1 incoming\nAUTHORED REACH\nUpstream\n4\nDownstream\n6\n×\nCopy link\n3 relations\nOUTGOING · 2\nOUT →\nBlocked\ndenied\nOUT →\nTool Call\napproved\nINCOMING · 1\n← IN\nTool Router\nneeds approval?",
+      "hidden": false
+    }
+  },
+  {
+    "key": "retry-dark-390-reduced",
+    "motion": "still",
+    "detail": "read",
+    "labels": [
+      {
+        "id": "exhausted",
+        "text": "Budget exhausted · escalate",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 9,
+        "screenX": 250.50062561035156,
+        "screenY": 309.3194580078125,
+        "maskFits": true
+      },
+      {
+        "id": "remaining",
+        "text": "Budget remaining · retry request",
+        "visible": true,
+        "opacity": 1,
+        "screenHeight": 9,
+        "screenX": 244.2661590576172,
+        "screenY": 267.38739013671875,
+        "maskFits": true
+      }
+    ],
+    "nodes": [
+      {
+        "id": "budget",
+        "kind": "backend",
+        "context": "Decision · Request handling",
+        "aria": "Focus Retry policy, remaining attempts, Decision · Request handling",
+        "sigil": "decision"
+      },
+      {
+        "id": "again",
+        "kind": "backend",
+        "context": "Request handling",
+        "aria": "Focus Try again, Request handling",
+        "sigil": "backend"
+      },
+      {
+        "id": "fallback",
+        "kind": "external",
+        "context": "Fallback",
+        "aria": "Focus Ask operator, Fallback",
+        "sigil": "external"
+      },
+      {
+        "id": "budget",
+        "aria": "Focus Retry policy, 2 related connections"
+      },
+      {
+        "id": "again",
+        "aria": "Focus Try again, 1 related connection"
+      },
+      {
+        "id": "fallback",
+        "aria": "Focus Ask operator, 1 related connection"
+      }
+    ],
+    "errors": [],
+    "scrollWidth": 390,
+    "viewport": 390,
+    "passport": {
+      "text": "SEMANTIC PASSPORT\nRetry policy\nremaining attempts\nBACKEND\nDecision · Request handling\nbudget\n2 outgoing · 0 incoming\nAUTHORED REACH\nUpstream\n0\nDownstream\n2\n×\nCopy link\n2 relations\nOUTGOING · 2\nOUT →\nAsk operator\nBudget exhausted · escalate\nOUT →\nTry again\nBudget remaining · retry request",
+      "hidden": false
+    }
+  }
+]

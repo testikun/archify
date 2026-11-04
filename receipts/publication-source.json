@@ -1,0 +1,7 @@
+{
+  "base": "63c9263e84bd3993cab8e09b3d69888857858635",
+  "head": "fa80584a7db102a6abe2df0b2ed91fccc2a89643",
+  "branch": "codex/issue-312-decision-conditions",
+  "testedFilesMatchCommittedFiles": true,
+  "humanReviewConfirmed": true
+}

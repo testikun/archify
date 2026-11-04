@@ -1,0 +1,219 @@
+
+> test:focus
+> node scripts/run-tests.mjs --require-files test/workflow-decision.test.mjs test/renderer-diagnostic-boundary.test.mjs test/render-failure-diagnostics.test.mjs
+
+Repository tests: 3 files, concurrency 4
+TAP version 13
+# Subtest: render architecture: input read/parse and output failures name the failing operation
+ok 1 - render architecture: input read/parse and output failures name the failing operation
+  ---
+  duration_ms: 571.733875
+  type: 'test'
+  ...
+# Subtest: render architecture: successful direct and public rendering retain the output contract
+ok 2 - render architecture: successful direct and public rendering retain the output contract
+  ---
+  duration_ms: 285.748917
+  type: 'test'
+  ...
+# Subtest: render workflow: input read/parse and output failures name the failing operation
+ok 3 - render workflow: input read/parse and output failures name the failing operation
+  ---
+  duration_ms: 645.721917
+  type: 'test'
+  ...
+# Subtest: render workflow: successful direct and public rendering retain the output contract
+ok 4 - render workflow: successful direct and public rendering retain the output contract
+  ---
+  duration_ms: 402.758625
+  type: 'test'
+  ...
+# Subtest: render sequence: input read/parse and output failures name the failing operation
+ok 5 - render sequence: input read/parse and output failures name the failing operation
+  ---
+  duration_ms: 486.948
+  type: 'test'
+  ...
+# Subtest: render sequence: successful direct and public rendering retain the output contract
+ok 6 - render sequence: successful direct and public rendering retain the output contract
+  ---
+  duration_ms: 267.709541
+  type: 'test'
+  ...
+# Subtest: render dataflow: input read/parse and output failures name the failing operation
+ok 7 - render dataflow: input read/parse and output failures name the failing operation
+  ---
+  duration_ms: 520.440833
+  type: 'test'
+  ...
+# Subtest: render dataflow: successful direct and public rendering retain the output contract
+ok 8 - render dataflow: successful direct and public rendering retain the output contract
+  ---
+  duration_ms: 254.332875
+  type: 'test'
+  ...
+# Subtest: render lifecycle: input read/parse and output failures name the failing operation
+ok 9 - render lifecycle: input read/parse and output failures name the failing operation
+  ---
+  duration_ms: 474.900584
+  type: 'test'
+  ...
+# Subtest: render lifecycle: successful direct and public rendering retain the output contract
+ok 10 - render lifecycle: successful direct and public rendering retain the output contract
+  ---
+  duration_ms: 237.564792
+  type: 'test'
+  ...
+# Subtest: render layout rejection exposes the existing diagnostic and preserves an existing artifact
+ok 11 - render layout rejection exposes the existing diagnostic and preserves an existing artifact
+  ---
+  duration_ms: 749.677459
+  type: 'test'
+  ...
+# Subtest: locale warnings cannot classify an unrelated native renderer error
+ok 12 - locale warnings cannot classify an unrelated native renderer error
+  ---
+  duration_ms: 134.764041
+  type: 'test'
+  ...
+# Subtest: direct renderer warning modes preserve the successful artifact contract
+ok 13 - direct renderer warning modes preserve the successful artifact contract
+  ---
+  duration_ms: 228.287125
+  type: 'test'
+  ...
+# Subtest: public post-render checker failures retain the locale warning once
+ok 14 - public post-render checker failures retain the locale warning once
+  ---
+  duration_ms: 477.907708
+  type: 'test'
+  ...
+# Subtest: unexpected renderer exceptions keep native debugging information and are not relabelled as input errors
+ok 15 - unexpected renderer exceptions keep native debugging information and are not relabelled as input errors
+  ---
+  duration_ms: 123.326458
+  type: 'test'
+  ...
+# Subtest: a recorded layout diagnostic cannot hide a later unclassified exception
+ok 16 - a recorded layout diagnostic cannot hide a later unclassified exception
+  ---
+  duration_ms: 93.059541
+  type: 'test'
+  ...
+# Subtest: isolated diagnostic work preserves typed lookup without polluting later failures
+ok 17 - isolated diagnostic work preserves typed lookup without polluting later failures
+  ---
+  duration_ms: 30.757875
+  type: 'test'
+  ...
+# Subtest: nested isolated diagnostics restore each caller and retain earlier plus terminal failures
+ok 18 - nested isolated diagnostics restore each caller and retain earlier plus terminal failures
+  ---
+  duration_ms: 30.859
+  type: 'test'
+  ...
+# Subtest: isolated diagnostic exceptions restore recording and preserve error identity
+ok 19 - isolated diagnostic exceptions restore recording and preserve error identity
+  ---
+  duration_ms: 31.317125
+  type: 'test'
+  ...
+# Subtest: isolated diagnostic scopes compose with recording suppression in either order
+ok 20 - isolated diagnostic scopes compose with recording suppression in either order
+  ---
+  duration_ms: 61.859833
+  type: 'test'
+  ...
+# Subtest: repeated problem messages keep their own subject and evidence
+ok 21 - repeated problem messages keep their own subject and evidence
+  ---
+  duration_ms: 29.617584
+  type: 'test'
+  ...
+# Subtest: invalid output arguments keep their implementation error instead of a filesystem repair
+ok 22 - invalid output arguments keep their implementation error instead of a filesystem repair
+  ---
+  duration_ms: 132.736125
+  type: 'test'
+  ...
+# Subtest: renderer and standalone CLI format the same diagnostics consistently
+ok 23 - renderer and standalone CLI format the same diagnostics consistently
+  ---
+  duration_ms: 2.245584
+  type: 'test'
+  ...
+# Subtest: the renderer boundary delivers a receipt larger than the pipe buffer
+ok 24 - the renderer boundary delivers a receipt larger than the pipe buffer
+  ---
+  duration_ms: 62.103084
+  type: 'test'
+  ...
+# Subtest: the renderer boundary waits for a stalled reader instead of truncating
+ok 25 - the renderer boundary waits for a stalled reader instead of truncating
+  ---
+  duration_ms: 311.036958
+  type: 'test'
+  ...
+# Subtest: the renderer boundary keeps delivering receipts that fit in one write
+ok 26 - the renderer boundary keeps delivering receipts that fit in one write
+  ---
+  duration_ms: 31.795917
+  type: 'test'
+  ...
+# Subtest: decision identity preserves type; conditions use the existing visible and accessible label path
+ok 27 - decision identity preserves type; conditions use the existing visible and accessible label path
+  ---
+  duration_ms: 66.654666
+  type: 'test'
+  ...
+# Subtest: condition and action text share measured geometry without swallowing or duplicating author text
+ok 28 - condition and action text share measured geometry without swallowing or duplicating author text
+  ---
+  duration_ms: 86.603584
+  type: 'test'
+  ...
+# Subtest: missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+ok 29 - missing conditions warn on authored outgoing edges even in showcase; partial and terminal views stay valid
+  ---
+  duration_ms: 22.046916
+  type: 'test'
+  ...
+# Subtest: explicit icons remain authoritative; decorative icons and branch count never imply a decision
+ok 30 - explicit icons remain authoritative; decorative icons and branch count never imply a decision
+  ---
+  duration_ms: 23.601041
+  type: 'test'
+  ...
+# Subtest: optional authoring fields work in v1 and v2 without inferring condition logic
+ok 31 - optional authoring fields work in v1 and v2 without inferring condition logic
+  ---
+  duration_ms: 30.519958
+  type: 'test'
+  ...
+# Subtest: invalid condition shapes fail schema validation, independently of a missing-condition warning
+ok 32 - invalid condition shapes fail schema validation, independently of a missing-condition warning
+  ---
+  duration_ms: 0.767375
+  type: 'test'
+  ...
+# Subtest: migration keeps authored conditions and reserves their text in its automatic rank plan
+ok 33 - migration keeps authored conditions and reserves their text in its automatic rank plan
+  ---
+  duration_ms: 23.250916
+  type: 'test'
+  ...
+# Subtest: public validate and deliver expose the same warning and still deliver a partial showcase
+ok 34 - public validate and deliver expose the same warning and still deliver a partial showcase
+  ---
+  duration_ms: 1425.722917
+  type: 'test'
+  ...
+1..34
+# tests 34
+# suites 0
+# pass 34
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6335.601667
