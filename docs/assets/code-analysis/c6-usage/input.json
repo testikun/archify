@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Duplicate code · usage example",
+    "output": "base.html",
+    "subtitle": "Controlled source example · jscpd 5.4.3 · default 50 tokens / 5 lines"
+  },
+  "components": [
+    {
+      "id": "orders",
+      "type": "backend",
+      "label": "orders/",
+      "tag": "source directory",
+      "pos": [
+        80,
+        160
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "reports",
+      "type": "backend",
+      "label": "reports/",
+      "tag": "source directory",
+      "pos": [
+        420,
+        160
+      ],
+      "size": [
+        220,
+        80
+      ]
+    }
+  ],
+  "connections": []
+}

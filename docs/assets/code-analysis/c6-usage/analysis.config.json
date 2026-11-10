@@ -1,0 +1,6 @@
+{
+  "duplicates": {
+    "enabled": true,
+    "executable": "/absolute/path/to/jscpd"
+  }
+}
